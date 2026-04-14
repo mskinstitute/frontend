@@ -1,0 +1,5981 @@
+[
+  {
+    "status": "PUBLISH",
+    "title": "Python for Beginners",
+    "featured_image_url": "https://drive.google.com/thumbnail?id=1AXwGPZPx7EeEGJiANSxXYAIxoFua_clU&sz=w1000",
+    "sort_description": "Kickstart your coding career with MSK Institute's Python Programming Course. Learn Python step by step—from variables, loops, and functions to file handling—designed to build a strong foundation for beginners.",
+    "categories": [
+      "Programming",
+      "Python"
+    ],
+    "level": "Beginner",
+    "language": [
+      "English",
+      "Hindi"
+    ],
+    "duration": 1,
+    "price": 1999.0,
+    "certificate": true,
+    "mode": "ONLINE",
+    "course_type": "SINGLE",
+    "chapters": [
+      {
+        "title": "1: Introduction and Setup",
+        "topics": [
+          {
+            "title": "Python Introduction"
+          },
+          {
+            "title": "VS Code Setup"
+          },
+          {
+            "title": "Python Setup"
+          },
+          {
+            "title": "Syntax & Code Structure"
+          },
+          {
+            "title": "Comments & Best Practices"
+          }
+        ]
+      },
+      {
+        "title": "2: Variables",
+        "topics": [
+          {
+            "title": "Variables Introduction and Rules"
+          },
+          {
+            "title": "Creating a Variable"
+          },
+          {
+            "title": "Output Variables & Printing Techniques"
+          },
+          {
+            "title": "Multiple Assignments"
+          },
+          {
+            "title": "Constants (Python Convention)"
+          }
+        ]
+      },
+      {
+        "title": "3: Data Types",
+        "topics": [
+          {
+            "title": "Data Types Overview"
+          },
+          {
+            "title": "Type Conversion (Casting & type())"
+          },
+          {
+            "title": "Checking Data Types (isinstance)"
+          }
+        ]
+      },
+      {
+        "title": "4: Numbers",
+        "topics": [
+          {
+            "title": "Integer, Float, Complex"
+          },
+          {
+            "title": "Mathematical Operations"
+          },
+          {
+            "title": "Math Module (math, random)"
+          }
+        ]
+      },
+      {
+        "title": "5: Strings",
+        "topics": [
+          {
+            "title": "String Introduction"
+          },
+          {
+            "title": "Slicing & Indexing"
+          },
+          {
+            "title": "Modifying Strings"
+          },
+          {
+            "title": "Concatenation & Formatting (f-string, format, %)"
+          },
+          {
+            "title": "Escape Characters"
+          },
+          {
+            "title": "String Methods"
+          }
+        ]
+      },
+      {
+        "title": "6: Operators",
+        "topics": [
+          {
+            "title": "Arithmetic Operators"
+          },
+          {
+            "title": "Assignment Operators"
+          },
+          {
+            "title": "Comparison Operators"
+          },
+          {
+            "title": "Logical Operators"
+          },
+          {
+            "title": "Identity & Membership Operators"
+          },
+          {
+            "title": "Bitwise Operators"
+          }
+        ]
+      },
+      {
+        "title": "7: Casting",
+        "topics": [
+          {
+            "title": "Implicit Casting"
+          },
+          {
+            "title": "Explicit Casting (int(), float(), str())"
+          },
+          {
+            "title": "Common Pitfalls"
+          }
+        ]
+      },
+      {
+        "title": "8: Lists",
+        "topics": [
+          {
+            "title": "List Introduction"
+          },
+          {
+            "title": "Create & Access Lists"
+          },
+          {
+            "title": "Add & Remove Items"
+          },
+          {
+            "title": "Update Items"
+          },
+          {
+            "title": "List Methods"
+          },
+          {
+            "title": "Nested Lists"
+          }
+        ]
+      },
+      {
+        "title": "9: Tuples",
+        "topics": [
+          {
+            "title": "Tuple Introduction"
+          },
+          {
+            "title": "Accessing Items"
+          },
+          {
+            "title": "Updating & Unpacking Tuples"
+          },
+          {
+            "title": "Join Tuples"
+          },
+          {
+            "title": "Tuple Methods"
+          },
+          {
+            "title": "Nested Tuples"
+          }
+        ]
+      },
+      {
+        "title": "10: Sets",
+        "topics": [
+          {
+            "title": "Sets Introduction"
+          },
+          {
+            "title": "Adding & Removing Items"
+          },
+          {
+            "title": "Set Operations"
+          },
+          {
+            "title": "Set Methods"
+          },
+          {
+            "title": "Nested Sets"
+          }
+        ]
+      },
+      {
+        "title": "11: Dictionaries",
+        "topics": [
+          {
+            "title": "Dictionaries Introduction"
+          },
+          {
+            "title": "Accessing & Updating Items"
+          },
+          {
+            "title": "Adding & Removing Items"
+          },
+          {
+            "title": "Copying Dictionaries"
+          },
+          {
+            "title": "Dictionary Methods"
+          },
+          {
+            "title": "Nested Dictionaries"
+          },
+          {
+            "title": "Project: Student Records"
+          }
+        ]
+      },
+      {
+        "title": "12: Conditional Statements",
+        "topics": [
+          {
+            "title": "If, Elif, Else"
+          },
+          {
+            "title": "Nested Conditions"
+          },
+          {
+            "title": "Short-hand If Statements"
+          },
+          {
+            "title": "Ternary Operators"
+          },
+          {
+            "title": "Project: Grading System"
+          }
+        ]
+      },
+      {
+        "title": "13: Loops",
+        "topics": [
+          {
+            "title": "While Loop"
+          },
+          {
+            "title": "For Loop"
+          },
+          {
+            "title": "Nested Loops"
+          },
+          {
+            "title": "Break, Continue, Pass"
+          },
+          {
+            "title": "Loops with Else"
+          },
+          {
+            "title": "Iterating with Loops"
+          },
+          {
+            "title": "List Comprehension"
+          },
+          {
+            "title": "Set Comprehension"
+          },
+          {
+            "title": "Project: Multiplication Table Generator"
+          }
+        ]
+      },
+      {
+        "title": "14: Functions",
+        "topics": [
+          {
+            "title": "Defining & Calling Functions"
+          },
+          {
+            "title": "Arguments: Positional, Keyword"
+          },
+          {
+            "title": "Arguments: Default, *args, **kwargs"
+          },
+          {
+            "title": "Return Values"
+          },
+          {
+            "title": "Lambda Functions"
+          },
+          {
+            "title": "Recursion"
+          },
+          {
+            "title": "Scope of Variables in Functions"
+          },
+          {
+            "title": "Project: Calculator"
+          }
+        ]
+      },
+      {
+        "title": "15: File Handling",
+        "topics": [
+          {
+            "title": "Opening & Closing Files"
+          },
+          {
+            "title": "Reading & Writing Files"
+          },
+          {
+            "title": "Working with open()"
+          },
+          {
+            "title": "File Methods (read, readline, write)"
+          }
+        ]
+      },
+      {
+        "title": "16: Projects",
+        "topics": [
+          {
+            "title": "Contact Book"
+          },
+          {
+            "title": "Quiz Application"
+          },
+          {
+            "title": "Expense Tracker"
+          },
+          {
+            "title": "Basic Student Management System"
+          }
+        ]
+      }
+    ],
+    "id": 1,
+    "slug": "python-for-beginners"
+  },
+  {
+    "status": "PUBLISH",
+    "title": "Python for Intermediate",
+    "sort_description": "Enhance your Python skills with intermediate-level concepts: advanced data structures, OOP, modules, error handling, APIs, databases, and practical projects.",
+    "categories": [
+      "Programming",
+      "Python"
+    ],
+    "level": "Intermediate",
+    "language": [
+      "English",
+      "Hindi"
+    ],
+    "duration": 1,
+    "price": 2999.0,
+    "certificate": true,
+    "mode": "ONLINE",
+    "course_type": "SINGLE",
+    "chapters": [
+      {
+        "title": "1: Advanced Data Types & Comprehensions",
+        "topics": [
+          {
+            "title": "List Comprehensions Advanced"
+          },
+          {
+            "title": "Set Comprehensions"
+          },
+          {
+            "title": "Dictionary Comprehensions"
+          },
+          {
+            "title": "Nested Comprehensions"
+          },
+          {
+            "title": "Project: Data Filtering with Comprehensions"
+          }
+        ]
+      },
+      {
+        "title": "2: Functions Deep Dive",
+        "topics": [
+          {
+            "title": "Arguments Recap (*args, **kwargs)"
+          },
+          {
+            "title": "Default vs Keyword Arguments"
+          },
+          {
+            "title": "Closures"
+          },
+          {
+            "title": "Decorators Basics"
+          },
+          {
+            "title": "Project: Function Decorator Example"
+          }
+        ]
+      },
+      {
+        "title": "3: Modules and Packages",
+        "topics": [
+          {
+            "title": "Creating and Importing Modules"
+          },
+          {
+            "title": "Using __name__ == '__main__'"
+          },
+          {
+            "title": "Package Structure and __init__.py"
+          },
+          {
+            "title": "Popular Python Modules Overview"
+          },
+          {
+            "title": "Project: Custom Utility Package"
+          }
+        ]
+      },
+      {
+        "title": "4: File Handling Advanced",
+        "topics": [
+          {
+            "title": "Working with Context Managers (with statement)"
+          },
+          {
+            "title": "Reading & Writing CSV Files"
+          },
+          {
+            "title": "Working with JSON Files"
+          },
+          {
+            "title": "File Exceptions and Error Handling"
+          },
+          {
+            "title": "Project: CSV Contact Manager"
+          }
+        ]
+      },
+      {
+        "title": "5: Object-Oriented Programming (Intermediate)",
+        "topics": [
+          {
+            "title": "Creating Classes & Objects (Review)"
+          },
+          {
+            "title": "Inheritance & Method Overriding"
+          },
+          {
+            "title": "Polymorphism Basics"
+          },
+          {
+            "title": "Encapsulation and Abstraction"
+          },
+          {
+            "title": "Project: Bank Account Class System"
+          }
+        ]
+      },
+      {
+        "title": "6: Exception Handling",
+        "topics": [
+          {
+            "title": "Types of Exceptions"
+          },
+          {
+            "title": "Try-Except-Else-Finally"
+          },
+          {
+            "title": "Raising Exceptions"
+          },
+          {
+            "title": "Creating Custom Exceptions"
+          },
+          {
+            "title": "Project: Error-Handled Calculator"
+          }
+        ]
+      },
+      {
+        "title": "7: Iterators and Generators",
+        "topics": [
+          {
+            "title": "Understanding Iterators"
+          },
+          {
+            "title": "Custom Iterators"
+          },
+          {
+            "title": "Using Generators with yield"
+          },
+          {
+            "title": "Generator Expressions"
+          },
+          {
+            "title": "Project: Infinite Sequence Generator"
+          }
+        ]
+      },
+      {
+        "title": "8: Working with APIs",
+        "topics": [
+          {
+            "title": "HTTP Requests using requests"
+          },
+          {
+            "title": "GET & POST Methods"
+          },
+          {
+            "title": "Parsing JSON Data"
+          },
+          {
+            "title": "Practical API Example"
+          },
+          {
+            "title": "Project: Weather Data Fetcher"
+          }
+        ]
+      },
+      {
+        "title": "9: Debugging and Logging",
+        "topics": [
+          {
+            "title": "Using print vs logging"
+          },
+          {
+            "title": "Logging Levels"
+          },
+          {
+            "title": "Basic Debugging with pdb"
+          },
+          {
+            "title": "Assertions"
+          },
+          {
+            "title": "Project: Debugging a Student Grading App"
+          }
+        ]
+      },
+      {
+        "title": "10: Python Standard Libraries",
+        "topics": [
+          {
+            "title": "Math and Random Module"
+          },
+          {
+            "title": "Datetime Module"
+          },
+          {
+            "title": "Collections Module"
+          },
+          {
+            "title": "OS and Sys Modules"
+          },
+          {
+            "title": "Project: File & Directory Utility Tool"
+          }
+        ]
+      },
+      {
+        "title": "11: Database Basics with SQLite",
+        "topics": [
+          {
+            "title": "Introduction to Databases"
+          },
+          {
+            "title": "SQLite Installation & Setup"
+          },
+          {
+            "title": "Connecting Python with SQLite"
+          },
+          {
+            "title": "CRUD Operations"
+          },
+          {
+            "title": "Project: Student Records Database"
+          }
+        ]
+      },
+      {
+        "title": "12: Virtual Environments & Pip",
+        "topics": [
+          {
+            "title": "Why Use Virtual Environments"
+          },
+          {
+            "title": "Creating Virtual Environments"
+          },
+          {
+            "title": "Using pip for Package Management"
+          },
+          {
+            "title": "Requirements.txt"
+          },
+          {
+            "title": "Project: Package-Ready Mini App"
+          }
+        ]
+      },
+      {
+        "title": "13: Data Visualization Basics",
+        "topics": [
+          {
+            "title": "Introduction to Matplotlib"
+          },
+          {
+            "title": "Line, Bar and Pie Charts"
+          },
+          {
+            "title": "Customizing Graphs"
+          },
+          {
+            "title": "Seaborn Basics"
+          },
+          {
+            "title": "Project: Visualizing Sales Data"
+          }
+        ]
+      },
+      {
+        "title": "14: Intermediate Projects",
+        "topics": [
+          {
+            "title": "Project 1: Expense Tracker with CSV"
+          },
+          {
+            "title": "Project 2: API-based Dictionary App"
+          },
+          {
+            "title": "Project 3: CLI-based To-do App"
+          }
+        ]
+      },
+      {
+        "title": "15: Capstone Project",
+        "topics": [
+          {
+            "title": "Library Management System"
+          },
+          {
+            "title": "Student Report Card Generator"
+          }
+        ]
+      }
+    ],
+    "id": 2,
+    "slug": "python-for-intermediate"
+  },
+  {
+    "status": "PUBLISH",
+    "title": "Python for Advanced",
+    "sort_description": "Master advanced Python concepts including decorators, context managers, multithreading, multiprocessing, networking, databases, testing, and real-world projects.",
+    "categories": [
+      "Programming",
+      "Python"
+    ],
+    "level": "Advanced",
+    "language": [
+      "English",
+      "Hindi"
+    ],
+    "duration": 1,
+    "price": 3999.0,
+    "certificate": true,
+    "mode": "ONLINE",
+    "course_type": "SINGLE",
+    "chapters": [
+      {
+        "title": "1: Advanced OOP Concepts",
+        "topics": [
+          {
+            "title": "Class and Static Methods Advanced"
+          },
+          {
+            "title": "Property Decorator"
+          },
+          {
+            "title": "Method Resolution Order (MRO)"
+          },
+          {
+            "title": "Multiple Inheritance"
+          },
+          {
+            "title": "Project: Employee Management System"
+          }
+        ]
+      },
+      {
+        "title": "2: Magic Methods & Operator Overloading",
+        "topics": [
+          {
+            "title": "Introduction to Dunder Methods"
+          },
+          {
+            "title": "__str__, __repr__, __len__"
+          },
+          {
+            "title": "Operator Overloading"
+          },
+          {
+            "title": "Customizing Classes with Magic Methods"
+          },
+          {
+            "title": "Project: Vector Class with Overloaded Operators"
+          }
+        ]
+      },
+      {
+        "title": "3: Advanced Decorators and Context Managers",
+        "topics": [
+          {
+            "title": "Function Decorators Deep Dive"
+          },
+          {
+            "title": "Class Decorators"
+          },
+          {
+            "title": "Context Managers with __enter__ and __exit__"
+          },
+          {
+            "title": "Using contextlib"
+          },
+          {
+            "title": "Project: Resource Manager with Context Manager"
+          }
+        ]
+      },
+      {
+        "title": "4: Itertools and Functools",
+        "topics": [
+          {
+            "title": "Itertools for Iteration Tools"
+          },
+          {
+            "title": "functools for Higher-Order Functions"
+          },
+          {
+            "title": "lru_cache and Partial Functions"
+          },
+          {
+            "title": "Project: Data Pipeline with Itertools"
+          }
+        ]
+      },
+      {
+        "title": "5: Generators & Coroutines",
+        "topics": [
+          {
+            "title": "Advanced Generator Patterns"
+          },
+          {
+            "title": "Yield from Expression"
+          },
+          {
+            "title": "Coroutines with send()"
+          },
+          {
+            "title": "Project: Stream Data Processor"
+          }
+        ]
+      },
+      {
+        "title": "6: Multithreading in Python",
+        "topics": [
+          {
+            "title": "Threading Module Basics"
+          },
+          {
+            "title": "Thread Synchronization"
+          },
+          {
+            "title": "Daemon vs Non-Daemon Threads"
+          },
+          {
+            "title": "Project: Multithreaded Downloader"
+          }
+        ]
+      },
+      {
+        "title": "7: Multiprocessing in Python",
+        "topics": [
+          {
+            "title": "Multiprocessing Basics"
+          },
+          {
+            "title": "Process vs Thread"
+          },
+          {
+            "title": "Shared Memory & Queues"
+          },
+          {
+            "title": "Project: Parallel File Processor"
+          }
+        ]
+      },
+      {
+        "title": "8: Asynchronous Programming (Asyncio)",
+        "topics": [
+          {
+            "title": "Introduction to Asyncio"
+          },
+          {
+            "title": "Async and Await Syntax"
+          },
+          {
+            "title": "Creating and Managing Tasks"
+          },
+          {
+            "title": "Project: Async Web Scraper"
+          }
+        ]
+      },
+      {
+        "title": "9: Advanced Database Handling",
+        "topics": [
+          {
+            "title": "SQLAlchemy ORM Basics"
+          },
+          {
+            "title": "Relationships in Databases"
+          },
+          {
+            "title": "Transactions and Rollbacks"
+          },
+          {
+            "title": "Project: Blogging Platform Database"
+          }
+        ]
+      },
+      {
+        "title": "10: Networking with Python",
+        "topics": [
+          {
+            "title": "Socket Programming Basics"
+          },
+          {
+            "title": "TCP vs UDP"
+          },
+          {
+            "title": "Building a Chat Server"
+          },
+          {
+            "title": "Project: Simple Client-Server Application"
+          }
+        ]
+      },
+      {
+        "title": "11: Regular Expressions Advanced",
+        "topics": [
+          {
+            "title": "Regex Patterns and Groups"
+          },
+          {
+            "title": "Greedy vs Non-Greedy Matching"
+          },
+          {
+            "title": "Substitution and Splitting"
+          },
+          {
+            "title": "Project: Log File Analyzer"
+          }
+        ]
+      },
+      {
+        "title": "12: Data Serialization & File Formats",
+        "topics": [
+          {
+            "title": "Pickle Module"
+          },
+          {
+            "title": "Working with JSON"
+          },
+          {
+            "title": "Working with YAML"
+          },
+          {
+            "title": "Project: Config File Manager"
+          }
+        ]
+      },
+      {
+        "title": "13: Testing & Best Practices",
+        "topics": [
+          {
+            "title": "Unit Testing with unittest"
+          },
+          {
+            "title": "Pytest for Advanced Testing"
+          },
+          {
+            "title": "Mocking and Fixtures"
+          },
+          {
+            "title": "Test-Driven Development"
+          },
+          {
+            "title": "Project: Tested Calculator Application"
+          }
+        ]
+      },
+      {
+        "title": "14: GUI Development with Tkinter",
+        "topics": [
+          {
+            "title": "Tkinter Basics"
+          },
+          {
+            "title": "Common Widgets"
+          },
+          {
+            "title": "Event Handling"
+          },
+          {
+            "title": "Project: GUI-based To-Do App"
+          }
+        ]
+      },
+      {
+        "title": "15: Final Capstone Projects",
+        "topics": [
+          {
+            "title": "Project 1: Inventory Management System"
+          },
+          {
+            "title": "Project 2: API-based Weather Dashboard"
+          },
+          {
+            "title": "Project 3: Personal Finance Tracker with Database"
+          }
+        ]
+      }
+    ],
+    "id": 3,
+    "slug": "python-for-advanced"
+  },
+  {
+    "status": "PUBLISH",
+    "title": "JavaScript for Beginners",
+    "sort_description": "Learn JavaScript from scratch: variables, loops, functions, DOM basics, events, and beginner-friendly projects.",
+    "categories": [
+      "Web Development",
+      "Frontend",
+      "JavaScript"
+    ],
+    "level": "Beginner",
+    "language": [
+      "English",
+      "Hindi"
+    ],
+    "duration": 1,
+    "price": 1999.0,
+    "certificate": true,
+    "mode": "ONLINE",
+    "course_type": "SINGLE",
+    "chapters": [
+      {
+        "title": "Chapter 1: Introduction to JavaScript",
+        "topics": [
+          {
+            "title": "What is JavaScript?"
+          },
+          {
+            "title": "How JavaScript Works in Browser"
+          },
+          {
+            "title": "Setting up Environment: VSCode, Live Server"
+          }
+        ]
+      },
+      {
+        "title": "Chapter 2: Basics of JavaScript",
+        "topics": [
+          {
+            "title": "Variables: var, let, const"
+          },
+          {
+            "title": "Data Types"
+          },
+          {
+            "title": "Comments and Best Practices"
+          }
+        ]
+      },
+      {
+        "title": "Chapter 3: Operators in JavaScript",
+        "topics": [
+          {
+            "title": "Arithmetic Operators"
+          },
+          {
+            "title": "Comparison Operators"
+          },
+          {
+            "title": "Logical Operators"
+          },
+          {
+            "title": "Assignment & Ternary Operator"
+          }
+        ]
+      },
+      {
+        "title": "Chapter 4: Control Flow",
+        "topics": [
+          {
+            "title": "Conditional Statements: if, else if, else"
+          },
+          {
+            "title": "Switch Statements"
+          },
+          {
+            "title": "Truthy & Falsy Values"
+          }
+        ]
+      },
+      {
+        "title": "Chapter 5: Loops",
+        "topics": [
+          {
+            "title": "For Loop"
+          },
+          {
+            "title": "While and Do-While Loops"
+          },
+          {
+            "title": "Loop Control: break, continue"
+          }
+        ]
+      },
+      {
+        "title": "Chapter 6: Strings and Template Literals",
+        "topics": [
+          {
+            "title": "String Basics"
+          },
+          {
+            "title": "Common String Methods"
+          },
+          {
+            "title": "Template Literals (Basics)"
+          }
+        ]
+      },
+      {
+        "title": "Chapter 7: Functions",
+        "topics": [
+          {
+            "title": "Defining and Calling Functions"
+          },
+          {
+            "title": "Function Parameters and Return Values"
+          },
+          {
+            "title": "Arrow Functions (Basic)"
+          }
+        ]
+      },
+      {
+        "title": "Chapter 8: Arrays and Objects",
+        "topics": [
+          {
+            "title": "Array Basics and Methods"
+          },
+          {
+            "title": "Object Basics and Properties"
+          },
+          {
+            "title": "Iterating over Arrays and Objects"
+          }
+        ]
+      },
+      {
+        "title": "Chapter 9: Date, Math & Built-in Objects",
+        "topics": [
+          {
+            "title": "Working with Date Object"
+          },
+          {
+            "title": "Math Object Basics"
+          },
+          {
+            "title": "Random Numbers Example"
+          }
+        ]
+      },
+      {
+        "title": "Chapter 10: DOM Basics",
+        "topics": [
+          {
+            "title": "Selecting Elements: getElementById, querySelector"
+          },
+          {
+            "title": "Changing Content and Style"
+          },
+          {
+            "title": "Handling Events: click, input, submit"
+          }
+        ]
+      },
+      {
+        "title": "Chapter 11: Debugging & Best Practices",
+        "topics": [
+          {
+            "title": "Using console.log()"
+          },
+          {
+            "title": "Common Errors and Fixes"
+          },
+          {
+            "title": "Clean Code Practices"
+          }
+        ]
+      },
+      {
+        "title": "Chapter 12: Beginner Projects",
+        "topics": [
+          {
+            "title": "Interactive Button Click Counter"
+          },
+          {
+            "title": "Simple Form Validation"
+          },
+          {
+            "title": "Image Slider (Basic)"
+          },
+          {
+            "title": "Final Mini Project: To-Do List Application"
+          }
+        ]
+      }
+    ],
+    "id": 4,
+    "slug": "javascript-for-beginners"
+  },
+  {
+    "status": "PUBLISH",
+    "title": "JavaScript for Intermediate",
+    "sort_description": "Advance your JavaScript skills: ES6+ features, advanced DOM, events, fetch API, async programming, error handling, and real-world projects.",
+    "categories": [
+      "Web Development",
+      "Frontend",
+      "JavaScript"
+    ],
+    "level": "Intermediate",
+    "language": [
+      "English",
+      "Hindi"
+    ],
+    "duration": 1,
+    "price": 2499.0,
+    "certificate": true,
+    "mode": "ONLINE",
+    "course_type": "SINGLE",
+    "chapters": [
+      {
+        "title": "Chapter 1: ES6+ Deep Dive",
+        "topics": [
+          {
+            "title": "Block Scope with let & const"
+          },
+          {
+            "title": "Template Literals"
+          },
+          {
+            "title": "Destructuring Arrays and Objects"
+          },
+          {
+            "title": "Default Parameters"
+          },
+          {
+            "title": "Enhanced Object Literals"
+          }
+        ]
+      },
+      {
+        "title": "Chapter 2: Functions Advanced",
+        "topics": [
+          {
+            "title": "Arrow Functions Advanced"
+          },
+          {
+            "title": "Rest & Spread Operators"
+          },
+          {
+            "title": "Closures Introduction"
+          },
+          {
+            "title": "Immediately Invoked Functions (IIFE)"
+          }
+        ]
+      },
+      {
+        "title": "Chapter 3: DOM Advanced",
+        "topics": [
+          {
+            "title": "querySelectorAll & forEach"
+          },
+          {
+            "title": "Traversing DOM Nodes"
+          },
+          {
+            "title": "Dynamic Element Creation & Removal"
+          },
+          {
+            "title": "Styling with classList"
+          }
+        ]
+      },
+      {
+        "title": "Chapter 4: Events in Depth",
+        "topics": [
+          {
+            "title": "Event Listeners"
+          },
+          {
+            "title": "Event Bubbling & Capturing"
+          },
+          {
+            "title": "Keyboard & Mouse Events"
+          },
+          {
+            "title": "Form Events and Validation"
+          }
+        ]
+      },
+      {
+        "title": "Chapter 5: Arrays Advanced",
+        "topics": [
+          {
+            "title": "map, filter, reduce"
+          },
+          {
+            "title": "find, some, every"
+          },
+          {
+            "title": "Array.from & Array.of"
+          },
+          {
+            "title": "Deep Copy vs Shallow Copy"
+          }
+        ]
+      },
+      {
+        "title": "Chapter 6: Objects Advanced",
+        "topics": [
+          {
+            "title": "Object.keys, Object.values, Object.entries"
+          },
+          {
+            "title": "Object.assign()"
+          },
+          {
+            "title": "Spread in Objects"
+          },
+          {
+            "title": "Object Destructuring in Depth"
+          }
+        ]
+      },
+      {
+        "title": "Chapter 7: Asynchronous JavaScript",
+        "topics": [
+          {
+            "title": "Callbacks"
+          },
+          {
+            "title": "Promises Basics"
+          },
+          {
+            "title": "Promise Chaining"
+          },
+          {
+            "title": "Intro to Async/Await"
+          }
+        ]
+      },
+      {
+        "title": "Chapter 8: Fetch API",
+        "topics": [
+          {
+            "title": "Fetching Data from APIs"
+          },
+          {
+            "title": "Handling JSON Responses"
+          },
+          {
+            "title": "GET vs POST Requests"
+          },
+          {
+            "title": "Mini Project: Random Joke Generator"
+          }
+        ]
+      },
+      {
+        "title": "Chapter 9: Error Handling",
+        "topics": [
+          {
+            "title": "try...catch"
+          },
+          {
+            "title": "finally block"
+          },
+          {
+            "title": "Throwing Custom Errors"
+          },
+          {
+            "title": "Error Handling in Async Code"
+          }
+        ]
+      },
+      {
+        "title": "Chapter 10: Modules Introduction",
+        "topics": [
+          {
+            "title": "What are Modules?"
+          },
+          {
+            "title": "import & export"
+          },
+          {
+            "title": "Organizing Code with Modules"
+          }
+        ]
+      },
+      {
+        "title": "Chapter 11: Browser Storage",
+        "topics": [
+          {
+            "title": "LocalStorage"
+          },
+          {
+            "title": "SessionStorage"
+          },
+          {
+            "title": "Practical Use Cases"
+          }
+        ]
+      },
+      {
+        "title": "Chapter 12: Iterators & Generators",
+        "topics": [
+          {
+            "title": "Understanding Iterators"
+          },
+          {
+            "title": "Creating Custom Iterators"
+          },
+          {
+            "title": "Generators with function*"
+          }
+        ]
+      },
+      {
+        "title": "Chapter 13: Debugging & Tools",
+        "topics": [
+          {
+            "title": "Using console methods"
+          },
+          {
+            "title": "Breakpoints in DevTools"
+          },
+          {
+            "title": "Network Tab for API Calls"
+          }
+        ]
+      },
+      {
+        "title": "Chapter 14: Mini Projects",
+        "topics": [
+          {
+            "title": "Quiz App"
+          },
+          {
+            "title": "To-Do List with Local Storage"
+          },
+          {
+            "title": "Product Filter App"
+          }
+        ]
+      },
+      {
+        "title": "Chapter 15: Final Project",
+        "topics": [
+          {
+            "title": "Weather App using Fetch API & Async/Await"
+          }
+        ]
+      }
+    ],
+    "id": 5,
+    "slug": "javascript-for-intermediate"
+  },
+  {
+    "status": "PUBLISH",
+    "title": "JavaScript for Advanced",
+    "sort_description": "Master advanced JavaScript concepts: classes, modules, async patterns, storage, debugging, design patterns, and build real-world projects.",
+    "categories": [
+      "Web Development",
+      "Frontend",
+      "JavaScript"
+    ],
+    "level": "Advanced",
+    "language": [
+      "English",
+      "Hindi"
+    ],
+    "duration": 1,
+    "price": 2999.0,
+    "certificate": true,
+    "mode": "ONLINE",
+    "course_type": "SINGLE",
+    "chapters": [
+      {
+        "title": "Chapter 1: Advanced Functions",
+        "topics": [
+          "Closures Deep Dive",
+          "Currying and Partial Application",
+          "Memoization for Performance",
+          "Higher-Order Functions Advanced",
+          "Project: Custom Debounce and Throttle Utility"
+        ]
+      },
+      {
+        "title": "Chapter 2: ES6+ Classes & Inheritance",
+        "topics": [
+          "Creating Classes and Constructors",
+          "Inheritance and Method Overriding",
+          "Static Methods and Properties",
+          "Getters and Setters",
+          "Project: OOP-based Library Management System"
+        ]
+      },
+      {
+        "title": "Chapter 3: JavaScript Modules",
+        "topics": [
+          "Import and Export Syntax",
+          "Default vs Named Exports",
+          "Organizing Code with Modules",
+          "Project: Modularized To-Do App"
+        ]
+      },
+      {
+        "title": "Chapter 4: Advanced Asynchronous Patterns",
+        "topics": [
+          "Promise.all, Promise.race, Promise.any",
+          "Error Handling with Async/Await",
+          "Chaining Promises for Complex Workflows",
+          "Project: Multi-API Data Fetching Dashboard"
+        ]
+      },
+      {
+        "title": "Chapter 5: Error Handling & Debugging",
+        "topics": [
+          "Advanced Try...Catch Techniques",
+          "Custom Error Classes",
+          "Using Console and Breakpoints",
+          "Debugging with Chrome DevTools",
+          "Project: Debug and Fix a Broken Application"
+        ]
+      },
+      {
+        "title": "Chapter 6: Advanced DOM Manipulation",
+        "topics": [
+          "Event Delegation Patterns",
+          "Dynamic Element Generation",
+          "Drag & Drop Functionality",
+          "Animating DOM Elements",
+          "Project: Interactive Kanban Board"
+        ]
+      },
+      {
+        "title": "Chapter 7: Browser Storage",
+        "topics": [
+          "Local Storage and Session Storage",
+          "Storing and Retrieving JSON Data",
+          "Limitations and Security Considerations",
+          "Project: Expense Tracker with Persistent Storage"
+        ]
+      },
+      {
+        "title": "Chapter 8: Advanced Event Handling",
+        "topics": [
+          "Event Bubbling and Capturing Revisited",
+          "Custom Events",
+          "Throttling and Debouncing Events",
+          "Project: Real-time Search with Debouncing"
+        ]
+      },
+      {
+        "title": "Chapter 9: Design Patterns in JavaScript",
+        "topics": [
+          "Module Pattern",
+          "Singleton Pattern",
+          "Observer Pattern",
+          "Factory Pattern",
+          "Project: Notification System using Observer Pattern"
+        ]
+      },
+      {
+        "title": "Chapter 10: Advanced Array & Object Techniques",
+        "topics": [
+          "Deep Cloning Objects",
+          "Destructuring with Defaults and Nesting",
+          "Array Methods Chaining",
+          "Project: Data Transformation Pipeline"
+        ]
+      },
+      {
+        "title": "Chapter 11: Working with APIs in Depth",
+        "topics": [
+          "REST APIs Advanced Concepts",
+          "Error Handling in API Calls",
+          "Chaining Multiple API Calls",
+          "Project: Movie Search App with Pagination"
+        ]
+      },
+      {
+        "title": "Chapter 12: JavaScript and JSON",
+        "topics": [
+          "Parsing and Stringifying JSON",
+          "Deeply Nested JSON Handling",
+          "Working with Large JSON Data",
+          "Project: News Feed Reader using JSON Data"
+        ]
+      },
+      {
+        "title": "Chapter 13: Performance Optimization",
+        "topics": [
+          "Memory Management in JavaScript",
+          "Optimizing Loops and DOM Access",
+          "Lazy Loading and Code Splitting",
+          "Project: Optimized Image Gallery"
+        ]
+      },
+      {
+        "title": "Chapter 14: Regular Expressions Advanced",
+        "topics": [
+          "Lookaheads and Lookbehinds",
+          "Regex for Form Validation",
+          "Complex Pattern Matching",
+          "Project: Custom Regex-based Form Validator"
+        ]
+      },
+      {
+        "title": "Chapter 15: JavaScript and the Browser",
+        "topics": [
+          "Understanding Event Loop in Depth",
+          "Microtasks vs Macrotasks",
+          "Rendering Optimization",
+          "Project: Animation Framework with requestAnimationFrame"
+        ]
+      },
+      {
+        "title": "Chapter 16: Error Monitoring in Applications",
+        "topics": [
+          "Window.onerror and Global Error Handling",
+          "Handling Unhandled Promise Rejections",
+          "Logging Errors to Server",
+          "Project: Error Logging Utility for Apps"
+        ]
+      },
+      {
+        "title": "Chapter 17: Advanced Patterns with ES6+",
+        "topics": [
+          "Spread and Rest in Nested Structures",
+          "Advanced Template Literals",
+          "Optional Chaining and Nullish Coalescing",
+          "Project: Nested Data Viewer Application"
+        ]
+      },
+      {
+        "title": "Chapter 18: Capstone Project",
+        "topics": [
+          "E-Commerce Frontend with Cart System",
+          "API Integration with Fetch/Async-Await",
+          "Persistent Storage for User Data",
+          "Project: Fully Functional Shopping Cart App"
+        ]
+      }
+    ],
+    "id": 6,
+    "slug": "javascript-for-advanced"
+  },
+  {
+    "status": "PUBLISH",
+    "title": "React.js for Beginners",
+    "sort_description": "Learn React.js from scratch: JSX, components, props, state, hooks, event handling, and build real-world mini projects like counter and to-do apps.",
+    "categories": [
+      "Web Development",
+      "Frontend",
+      "React.js"
+    ],
+    "level": "Beginner",
+    "language": [
+      "English",
+      "Hindi"
+    ],
+    "duration": 1,
+    "price": 2999.0,
+    "certificate": true,
+    "mode": "ONLINE",
+    "course_type": "SINGLE",
+    "chapters": [
+      {
+        "title": "Chapter 1: Introduction to React",
+        "topics": [
+          "What is React.js?",
+          "Setting up React Environment (Vite/Create React App)",
+          "React Folder Structure",
+          "Project: Setup and Run Your First React App"
+        ]
+      },
+      {
+        "title": "Chapter 2: JSX Basics",
+        "topics": [
+          "JSX Syntax & Rules",
+          "Embedding Expressions",
+          "JSX vs HTML",
+          "Project: Build a Simple JSX-based Greeting Component"
+        ]
+      },
+      {
+        "title": "Chapter 3: Components",
+        "topics": [
+          "Functional Components",
+          "Props in Components",
+          "Component Reusability",
+          "Project: Create a Reusable Card Component"
+        ]
+      },
+      {
+        "title": "Chapter 4: State Management",
+        "topics": [
+          "useState Hook Basics",
+          "Updating State Dynamically",
+          "State vs Props",
+          "Project: Build a Click Counter App"
+        ]
+      },
+      {
+        "title": "Chapter 5: Event Handling",
+        "topics": [
+          "Handling Click & Input Events",
+          "Form Handling in React",
+          "Passing Events as Props",
+          "Project: Form with Validation"
+        ]
+      },
+      {
+        "title": "Chapter 6: Lists & Keys",
+        "topics": [
+          "Rendering Lists",
+          "Keys in Lists",
+          "Dynamic List Rendering",
+          "Project: Dynamic Student List App"
+        ]
+      },
+      {
+        "title": "Chapter 7: Conditional Rendering",
+        "topics": [
+          "if-else in JSX",
+          "Ternary Operators",
+          "Logical && Operator",
+          "Project: Conditional Login/Logout UI"
+        ]
+      },
+      {
+        "title": "Chapter 8: Hooks Basics",
+        "topics": [
+          "What are React Hooks?",
+          "Using Multiple useState Hooks",
+          "Basic Introduction to useEffect",
+          "Project: Auto-Updating Clock App"
+        ]
+      },
+      {
+        "title": "Chapter 9: Styling in React",
+        "topics": [
+          "Inline Styling",
+          "CSS Modules",
+          "Styled Components (Basics)",
+          "Project: Styled Profile Card"
+        ]
+      },
+      {
+        "title": "Chapter 10: Mini Projects",
+        "topics": [
+          "Counter App",
+          "To-Do List App",
+          "Simple Calculator"
+        ]
+      },
+      {
+        "title": "Chapter 11: Debugging in React",
+        "topics": [
+          "Using React Developer Tools",
+          "Console Logging in React",
+          "Common Beginner Errors",
+          "Project: Fix Errors in a Broken React App"
+        ]
+      },
+      {
+        "title": "Chapter 12: Final Project",
+        "topics": [
+          "Interactive Quiz App"
+        ]
+      }
+    ],
+    "id": 7,
+    "slug": "react-js-for-beginners"
+  },
+  {
+    "status": "PUBLISH",
+    "title": "React.js for Intermediate",
+    "sort_description": "Advance your React.js skills with hooks, context API, routing, forms, API integration, performance optimization, and real-world projects.",
+    "categories": [
+      "Web Development",
+      "Frontend",
+      "React.js"
+    ],
+    "level": "Intermediate",
+    "language": [
+      "English",
+      "Hindi"
+    ],
+    "duration": 1,
+    "price": 3999.0,
+    "certificate": true,
+    "mode": "ONLINE",
+    "course_type": "SINGLE",
+    "chapters": [
+      {
+        "title": "Chapter 1: Advanced JSX & Components",
+        "topics": [
+          "Fragment Usage",
+          "Dynamic Props",
+          "Default Props & PropTypes",
+          "Project: Reusable Button Component with Props Validation"
+        ]
+      },
+      {
+        "title": "Chapter 2: State & useEffect Hook in Depth",
+        "topics": [
+          "Advanced useState Usage",
+          "useEffect with Dependencies",
+          "Cleanup Functions",
+          "Project: Build a Timer with Start/Stop/Reset"
+        ]
+      },
+      {
+        "title": "Chapter 3: Handling Forms",
+        "topics": [
+          "Controlled vs Uncontrolled Components",
+          "Form Validation in React",
+          "Handling Multiple Inputs",
+          "Project: Signup Form with Validation"
+        ]
+      },
+      {
+        "title": "Chapter 4: React Router Basics",
+        "topics": [
+          "What is React Router?",
+          "Setting up Routes",
+          "Route Parameters",
+          "Project: Multi-Page React App with Navigation"
+        ]
+      },
+      {
+        "title": "Chapter 5: Context API",
+        "topics": [
+          "What is Context?",
+          "Creating and Using Context",
+          "Avoiding Prop Drilling",
+          "Project: Dark/Light Theme Switcher"
+        ]
+      },
+      {
+        "title": "Chapter 6: useReducer Hook",
+        "topics": [
+          "Reducer Function Basics",
+          "useReducer vs useState",
+          "Complex State Management",
+          "Project: Todo App with useReducer"
+        ]
+      },
+      {
+        "title": "Chapter 7: API Integration",
+        "topics": [
+          "Fetching Data with Fetch API",
+          "Fetching Data with Axios",
+          "Loading and Error States",
+          "Project: Weather App with API"
+        ]
+      },
+      {
+        "title": "Chapter 8: Performance Optimization",
+        "topics": [
+          "React.memo",
+          "useCallback Hook",
+          "useMemo Hook",
+          "Project: Performance Optimized Search Filter"
+        ]
+      },
+      {
+        "title": "Chapter 9: Custom Hooks",
+        "topics": [
+          "Why Create Custom Hooks?",
+          "Creating Reusable Hooks",
+          "Project: Custom useLocalStorage Hook"
+        ]
+      },
+      {
+        "title": "Chapter 10: Error Handling",
+        "topics": [
+          "Error Boundaries",
+          "Try/Catch with Async Code",
+          "Project: Error Boundary Wrapper for App"
+        ]
+      },
+      {
+        "title": "Chapter 11: React Portals",
+        "topics": [
+          "What are Portals?",
+          "Modal with Portals",
+          "Project: Create a Reusable Modal Component"
+        ]
+      },
+      {
+        "title": "Chapter 12: Prop Drilling Alternatives",
+        "topics": [
+          "When Prop Drilling is Problematic",
+          "Using Context Instead",
+          "Project: Nested Components with Shared State"
+        ]
+      },
+      {
+        "title": "Chapter 13: Testing Basics",
+        "topics": [
+          "Introduction to Testing Library",
+          "Writing Unit Tests",
+          "Project: Testing a Simple Counter App"
+        ]
+      },
+      {
+        "title": "Chapter 14: Debugging Advanced",
+        "topics": [
+          "React DevTools Profiler",
+          "Tracking Render Issues",
+          "Project: Debugging and Fixing Slow Component"
+        ]
+      },
+      {
+        "title": "Chapter 15: Final Project",
+        "topics": [
+          "Build a Task Management App with Routing, API Integration, and Context API"
+        ]
+      }
+    ],
+    "id": 8,
+    "slug": "react-js-for-intermediate"
+  },
+  {
+    "status": "PUBLISH",
+    "title": "React.js for Advanced",
+    "sort_description": "Master advanced React.js concepts like Redux, advanced routing, TypeScript integration, testing, performance optimization, SSR, and scalable architecture with real-world projects.",
+    "categories": [
+      "Web Development",
+      "Frontend",
+      "React.js"
+    ],
+    "level": "Advanced",
+    "language": [
+      "English",
+      "Hindi"
+    ],
+    "duration": 1,
+    "price": 4999.0,
+    "certificate": true,
+    "mode": "ONLINE",
+    "course_type": "SINGLE",
+    "chapters": [
+      {
+        "title": "Chapter 1: Advanced React Patterns",
+        "topics": [
+          "Render Props",
+          "Higher-Order Components",
+          "Compound Components",
+          "Project: Build a Reusable Dropdown Component with Advanced Patterns"
+        ]
+      },
+      {
+        "title": "Chapter 2: Advanced State Management",
+        "topics": [
+          "Introduction to Redux",
+          "Redux Toolkit",
+          "Async Thunks",
+          "Project: Todo App with Redux Toolkit"
+        ]
+      },
+      {
+        "title": "Chapter 3: Advanced Context API",
+        "topics": [
+          "Multiple Contexts",
+          "Context Performance Optimization",
+          "Project: Theme + Language Switcher with Context API"
+        ]
+      },
+      {
+        "title": "Chapter 4: Advanced React Router",
+        "topics": [
+          "Nested Routes",
+          "Protected Routes",
+          "Lazy Loading Routes",
+          "Project: Authenticated Dashboard App"
+        ]
+      },
+      {
+        "title": "Chapter 5: Server-Side Rendering (SSR)",
+        "topics": [
+          "What is SSR?",
+          "Next.js Basics",
+          "Static vs Server Rendering",
+          "Project: Blog App with Next.js SSR"
+        ]
+      },
+      {
+        "title": "Chapter 6: Code Splitting & Lazy Loading",
+        "topics": [
+          "Dynamic Imports",
+          "React.lazy and Suspense",
+          "Bundle Optimization",
+          "Project: Optimize Large React App with Lazy Loading"
+        ]
+      },
+      {
+        "title": "Chapter 7: Advanced Hooks",
+        "topics": [
+          "useLayoutEffect",
+          "useImperativeHandle",
+          "Forwarding Refs",
+          "Project: Build a Custom Carousel Component"
+        ]
+      },
+      {
+        "title": "Chapter 8: Performance Optimization Deep Dive",
+        "topics": [
+          "Virtualization with react-window",
+          "Code Memoization Strategies",
+          "React Profiler Advanced",
+          "Project: Large Data Table with Virtual Scrolling"
+        ]
+      },
+      {
+        "title": "Chapter 9: TypeScript with React",
+        "topics": [
+          "Introduction to TypeScript in React",
+          "Typing Props and State",
+          "Generics in Components",
+          "Project: Type-Safe Todo App"
+        ]
+      },
+      {
+        "title": "Chapter 10: Authentication & Authorization",
+        "topics": [
+          "JWT Authentication",
+          "OAuth Basics",
+          "Role-based Access Control",
+          "Project: Secure Login & Role-Based Dashboard"
+        ]
+      },
+      {
+        "title": "Chapter 11: Testing in Depth",
+        "topics": [
+          "Jest Advanced Features",
+          "Mocking APIs",
+          "Integration Testing",
+          "Project: Testing an E-Commerce Cart"
+        ]
+      },
+      {
+        "title": "Chapter 12: Advanced Forms with Formik & Yup",
+        "topics": [
+          "Formik for Form Handling",
+          "Yup for Validation",
+          "Dynamic Form Fields",
+          "Project: Multi-Step Registration Form"
+        ]
+      },
+      {
+        "title": "Chapter 13: GraphQL with React",
+        "topics": [
+          "Introduction to GraphQL",
+          "Apollo Client Setup",
+          "Fetching Data with Queries and Mutations",
+          "Project: Blog with GraphQL API"
+        ]
+      },
+      {
+        "title": "Chapter 14: Real-Time Applications",
+        "topics": [
+          "WebSockets in React",
+          "Using Socket.io",
+          "Project: Real-Time Chat App"
+        ]
+      },
+      {
+        "title": "Chapter 15: Internationalization (i18n)",
+        "topics": [
+          "Why i18n is Important",
+          "Using react-i18next",
+          "Project: Multi-Language Portfolio App"
+        ]
+      },
+      {
+        "title": "Chapter 16: React with Micro-Frontends",
+        "topics": [
+          "What are Micro-Frontends?",
+          "Module Federation Basics",
+          "Project: Micro-Frontend Based Dashboard"
+        ]
+      },
+      {
+        "title": "Chapter 17: Deployment & CI/CD",
+        "topics": [
+          "Building React App for Production",
+          "CI/CD with GitHub Actions",
+          "Deployment on Vercel/Netlify",
+          "Project: Deploy a Full React App with CI/CD Pipeline"
+        ]
+      },
+      {
+        "title": "Chapter 18: Final Capstone Project",
+        "topics": [
+          "Build a Full-Featured E-Commerce Application with Authentication, Routing, API Integration, Redux, Testing, and Deployment"
+        ]
+      }
+    ],
+    "id": 9,
+    "slug": "react-js-for-advanced"
+  },
+  {
+    "status": "PUBLISH",
+    "title": "HTML Complete Course",
+    "sort_description": "Learn HTML step-by-step: structure pages, semantic tags, forms, media, accessibility, and SEO. Build real pages and mini projects for hands-on practice.",
+    "categories": [
+      "Web Development",
+      "Frontend",
+      "HTML"
+    ],
+    "level": "Beginner",
+    "language": [
+      "English",
+      "Hindi"
+    ],
+    "duration": 1,
+    "price": 999.0,
+    "certificate": true,
+    "mode": "ONLINE",
+    "course_type": "SINGLE",
+    "chapters": [
+      {
+        "title": "Chapter 1: Introduction to the Web and HTML",
+        "topics": [
+          "How the Web Works (Client, Server, Browser)",
+          "What is HTML? History and Role in Web Development",
+          "Setting Up Environment: Editors, Live Server"
+        ]
+      },
+      {
+        "title": "Chapter 2: Basic HTML Structure & Elements",
+        "topics": [
+          "DOCTYPE, html, head, body",
+          "Headings, Paragraphs, and Text Content",
+          "Comments and Best Practices"
+        ]
+      },
+      {
+        "title": "Chapter 3: Text Formatting & Quotations",
+        "topics": [
+          "Bold, Italic, Underline, Subscript, Superscript",
+          "Blockquote, q, cite",
+          "Code snippets and preformatted text"
+        ]
+      },
+      {
+        "title": "Chapter 4: Links, Images and Multimedia",
+        "topics": [
+          "Anchor Tags, Relative vs Absolute URLs",
+          "Images: img tag, alt attribute, srcset basics",
+          "Embedding Audio and Video"
+        ]
+      },
+      {
+        "title": "Chapter 5: Lists, Tables and Semantic Grouping",
+        "topics": [
+          "Ordered, Unordered and Description Lists",
+          "Table Structure: table, thead, tbody, tr, td, th",
+          "Semantic Elements: section, article, nav, aside, footer"
+        ]
+      },
+      {
+        "title": "Chapter 6: Forms and User Input",
+        "topics": [
+          "Form Elements: input, textarea, select, button",
+          "Form Attributes and Validation (HTML5)",
+          "Form Submission: GET vs POST (conceptual)"
+        ]
+      },
+      {
+        "title": "Chapter 7: Attributes, Metadata and Head Elements",
+        "topics": [
+          "Global Attributes: id, class, title, data-*",
+          "Meta tags: charset, viewport, description",
+          "Favicons and Linking CSS/JavaScript Files"
+        ]
+      },
+      {
+        "title": "Chapter 8: HTML5 APIs Basics",
+        "topics": [
+          "Geolocation API",
+          "Drag and Drop API",
+          "Local Storage and Session Storage"
+        ]
+      },
+      {
+        "title": "Chapter 9: Accessibility and Semantic Markup",
+        "topics": [
+          "Importance of Accessibility (a11y)",
+          "ARIA basics and using alt, role and aria-* attributes",
+          "Keyboard navigation and screen-reader friendly markup"
+        ]
+      },
+      {
+        "title": "Chapter 10: Responsive HTML Concepts",
+        "topics": [
+          "Viewport meta and Mobile-first Concept",
+          "Responsive images with srcset and picture element",
+          "Progressive enhancement and graceful degradation"
+        ]
+      },
+      {
+        "title": "Chapter 11: SEO and Best Practices",
+        "topics": [
+          "Semantic tags for SEO",
+          "Heading hierarchy and content structure",
+          "Schema.org basics for rich snippets"
+        ]
+      },
+      {
+        "title": "Chapter 12: Final Projects",
+        "topics": [
+          "Project 1: Personal Profile Page",
+          "Project 2: Multi-page Portfolio Website",
+          "Project 3: Blog Layout with Forms and Media"
+        ]
+      }
+    ],
+    "id": 10,
+    "slug": "html-complete-course"
+  },
+  {
+    "status": "PUBLISH",
+    "title": "CSS for Beginners",
+    "sort_description": "Learn CSS step-by-step: selectors, colors, box model, typography, backgrounds, and basic layouts. Build mini projects to practice styling web pages.",
+    "categories": [
+      "Web Development",
+      "Frontend",
+      "CSS"
+    ],
+    "level": "Beginner",
+    "language": [
+      "English",
+      "Hindi"
+    ],
+    "duration": 1,
+    "price": 1499.0,
+    "certificate": true,
+    "mode": "ONLINE",
+    "course_type": "SINGLE",
+    "chapters": [
+      {
+        "title": "Chapter 1: Introduction to CSS",
+        "topics": [
+          {
+            "title": "What is CSS and Why it Matters"
+          },
+          {
+            "title": "How CSS Works with HTML"
+          },
+          {
+            "title": "Inline, Internal, External CSS"
+          }
+        ]
+      },
+      {
+        "title": "Chapter 2: CSS Syntax & Selectors Basics",
+        "topics": [
+          {
+            "title": "CSS Syntax: Selectors, Properties, Values"
+          },
+          {
+            "title": "Basic Selectors: element, class, id"
+          },
+          {
+            "title": "Grouping & Combining Selectors"
+          }
+        ]
+      },
+      {
+        "title": "Chapter 3: Colors and Backgrounds",
+        "topics": [
+          {
+            "title": "Color Formats: Names, HEX, RGB, HSL"
+          },
+          {
+            "title": "Background Color, Image, Position"
+          },
+          {
+            "title": "Gradients (linear, radial)"
+          }
+        ]
+      },
+      {
+        "title": "Chapter 4: The CSS Box Model",
+        "topics": [
+          {
+            "title": "Content, Padding, Border, Margin"
+          },
+          {
+            "title": "Width, Height, Max/Min Values"
+          },
+          {
+            "title": "Box-Sizing Property"
+          }
+        ]
+      },
+      {
+        "title": "Chapter 5: Text and Fonts",
+        "topics": [
+          {
+            "title": "Font Families and Web-safe Fonts"
+          },
+          {
+            "title": "Font Size, Weight, Style"
+          },
+          {
+            "title": "Text Alignment, Decoration, Transform"
+          }
+        ]
+      },
+      {
+        "title": "Chapter 6: CSS Units and Measurements",
+        "topics": [
+          {
+            "title": "Absolute Units: px, pt"
+          },
+          {
+            "title": "Relative Units: %, em, rem, vh, vw"
+          },
+          {
+            "title": "Best Practices for Responsive Units"
+          }
+        ]
+      },
+      {
+        "title": "Chapter 7: Borders, Shadows and Rounded Corners",
+        "topics": [
+          {
+            "title": "Border Styles and Shorthand"
+          },
+          {
+            "title": "Box Shadows and Text Shadows"
+          },
+          {
+            "title": "Border Radius and Rounded Elements"
+          }
+        ]
+      },
+      {
+        "title": "Chapter 8: Links, Lists and Tables Styling",
+        "topics": [
+          {
+            "title": "Styling Links with Pseudo-classes"
+          },
+          {
+            "title": "Styling Ordered and Unordered Lists"
+          },
+          {
+            "title": "Styling Tables: Borders, Striping"
+          }
+        ]
+      },
+      {
+        "title": "Chapter 9: Display and Visibility",
+        "topics": [
+          {
+            "title": "Block vs Inline vs Inline-Block"
+          },
+          {
+            "title": "Display: none vs Visibility: hidden"
+          },
+          {
+            "title": "Overflow Property (scroll, hidden, auto)"
+          }
+        ]
+      },
+      {
+        "title": "Chapter 10: Introduction to Positioning",
+        "topics": [
+          {
+            "title": "Static, Relative, Absolute Positioning"
+          },
+          {
+            "title": "Fixed and Sticky Positioning"
+          },
+          {
+            "title": "z-index Basics"
+          }
+        ]
+      },
+      {
+        "title": "Chapter 11: Basic Layout Techniques",
+        "topics": [
+          {
+            "title": "Float and Clear Basics"
+          },
+          {
+            "title": "Aligning Elements with Text-align and Margin"
+          },
+          {
+            "title": "Intro to Flexbox (concept only)"
+          }
+        ]
+      },
+      {
+        "title": "Chapter 12: Beginner Projects",
+        "topics": [
+          {
+            "title": "Styled Profile Card"
+          },
+          {
+            "title": "Simple Landing Page Layout"
+          },
+          {
+            "title": "Navigation Bar Styling"
+          }
+        ]
+      }
+    ],
+    "id": 11,
+    "slug": "css-for-beginners"
+  },
+  {
+    "status": "PUBLISH",
+    "title": "CSS for Intermediate",
+    "sort_description": "Master modern CSS: flexbox, grid, responsive design, transitions, animations, and practical layouts. Build interactive, mobile-friendly web pages.",
+    "categories": [
+      "Web Development",
+      "Frontend",
+      "CSS"
+    ],
+    "level": "Intermediate",
+    "language": [
+      "English",
+      "Hindi"
+    ],
+    "duration": 1,
+    "price": 1999.0,
+    "certificate": true,
+    "mode": "ONLINE",
+    "course_type": "SINGLE",
+    "chapters": [
+      {
+        "title": "Chapter 1: Advanced Selectors",
+        "topics": [
+          {
+            "title": "Attribute Selectors ([attr], ^=, $=, *=)"
+          },
+          {
+            "title": "Child, Descendant, Sibling Selectors"
+          },
+          {
+            "title": "Pseudo-classes and Pseudo-elements"
+          }
+        ]
+      },
+      {
+        "title": "Chapter 2: Combinators and Specificity",
+        "topics": [
+          {
+            "title": "Understanding Combinators (>, +, ~)"
+          },
+          {
+            "title": "CSS Specificity Rules"
+          },
+          {
+            "title": "Using !important carefully"
+          }
+        ]
+      },
+      {
+        "title": "Chapter 3: Advanced Colors and Gradients",
+        "topics": [
+          {
+            "title": "Opacity and RGBA/HSLA colors"
+          },
+          {
+            "title": "Linear and Radial Gradients (advanced)"
+          },
+          {
+            "title": "Background Blend Modes"
+          }
+        ]
+      },
+      {
+        "title": "Chapter 4: Flexbox Fundamentals",
+        "topics": [
+          {
+            "title": "Flex Container and Flex Items"
+          },
+          {
+            "title": "Justify-content, Align-items, Align-self"
+          },
+          {
+            "title": "Flex-grow, Flex-shrink, Flex-basis"
+          }
+        ]
+      },
+      {
+        "title": "Chapter 5: Flexbox Layouts",
+        "topics": [
+          {
+            "title": "Row vs Column Direction"
+          },
+          {
+            "title": "Wrapping and Nested Flexbox"
+          },
+          {
+            "title": "Building a Responsive Navbar with Flexbox"
+          }
+        ]
+      },
+      {
+        "title": "Chapter 6: Introduction to CSS Grid",
+        "topics": [
+          {
+            "title": "Grid Container and Grid Items"
+          },
+          {
+            "title": "Grid Template Columns & Rows"
+          },
+          {
+            "title": "Gap, Fractional Units (fr), Repeat()"
+          }
+        ]
+      },
+      {
+        "title": "Chapter 7: Advanced CSS Grid",
+        "topics": [
+          {
+            "title": "Grid Areas and Named Lines"
+          },
+          {
+            "title": "Auto-fit and Auto-fill Concepts"
+          },
+          {
+            "title": "Building Page Layouts with Grid"
+          }
+        ]
+      },
+      {
+        "title": "Chapter 8: Responsive Design with Media Queries",
+        "topics": [
+          {
+            "title": "Min-width, Max-width Queries"
+          },
+          {
+            "title": "Mobile-first vs Desktop-first"
+          },
+          {
+            "title": "Breakpoints and Best Practices"
+          }
+        ]
+      },
+      {
+        "title": "Chapter 9: Transitions and Animations",
+        "topics": [
+          {
+            "title": "CSS Transitions (hover, focus effects)"
+          },
+          {
+            "title": "CSS Animations and @keyframes"
+          },
+          {
+            "title": "Practical Button Hover Effects"
+          }
+        ]
+      },
+      {
+        "title": "Chapter 10: CSS Variables and Custom Properties",
+        "topics": [
+          {
+            "title": "Declaring and Using Variables"
+          },
+          {
+            "title": "The :root Selector"
+          },
+          {
+            "title": "Theme Switching with CSS Variables"
+          }
+        ]
+      },
+      {
+        "title": "Chapter 11: Shadows, Filters, and Advanced Effects",
+        "topics": [
+          {
+            "title": "Box-shadow and Text-shadow Tricks"
+          },
+          {
+            "title": "CSS Filters (blur, brightness, grayscale)"
+          },
+          {
+            "title": "Glassmorphism and Neumorphism Basics"
+          }
+        ]
+      },
+      {
+        "title": "Chapter 12: Intermediate Projects",
+        "topics": [
+          {
+            "title": "Project 1: Responsive Landing Page with Flexbox"
+          },
+          {
+            "title": "Project 2: Blog Layout using CSS Grid"
+          },
+          {
+            "title": "Project 3: Animated Pricing Table"
+          }
+        ]
+      }
+    ],
+    "id": 12,
+    "slug": "css-for-intermediate"
+  },
+  {
+    "status": "PUBLISH",
+    "title": "CSS for Advanced",
+    "sort_description": "Advance your CSS skills: 3D transforms, keyframe animations, CSS variables, SASS, advanced responsive techniques, and modern UI/UX design projects.",
+    "categories": [
+      "Web Development",
+      "Frontend",
+      "CSS"
+    ],
+    "level": "Advanced",
+    "language": [
+      "English",
+      "Hindi"
+    ],
+    "duration": 1,
+    "price": 2499.0,
+    "certificate": true,
+    "mode": "ONLINE",
+    "course_type": "SINGLE",
+    "chapters": [
+      {
+        "title": "Chapter 1: Advanced CSS Functions",
+        "topics": [
+          {
+            "title": "calc(), min(), max(), clamp()"
+          },
+          {
+            "title": "Advanced nth-child and nth-of-type patterns"
+          },
+          {
+            "title": "Custom properties with fallback values"
+          }
+        ]
+      },
+      {
+        "title": "Chapter 2: 2D and 3D Transforms",
+        "topics": [
+          {
+            "title": "2D Transforms: translate, rotate, scale, skew"
+          },
+          {
+            "title": "3D Transforms: perspective, rotateX, rotateY"
+          },
+          {
+            "title": "Combining transforms for advanced effects"
+          }
+        ]
+      },
+      {
+        "title": "Chapter 3: Mastering Animations",
+        "topics": [
+          {
+            "title": "@keyframes deep dive"
+          },
+          {
+            "title": "Chaining animations and delays"
+          },
+          {
+            "title": "CSS Animation Performance Optimization"
+          }
+        ]
+      },
+      {
+        "title": "Chapter 4: CSS Shapes and Advanced Layouts",
+        "topics": [
+          {
+            "title": "CSS Shapes for text wrapping (circle, polygon)"
+          },
+          {
+            "title": "Multi-column layouts"
+          },
+          {
+            "title": "Advanced responsive layouts with Grid + Flexbox"
+          }
+        ]
+      },
+      {
+        "title": "Chapter 5: CSS Filters and Blend Modes",
+        "topics": [
+          {
+            "title": "Image effects with CSS filters"
+          },
+          {
+            "title": "Mix-blend-mode and background-blend-mode"
+          },
+          {
+            "title": "Creative UI effects with filters + gradients"
+          }
+        ]
+      },
+      {
+        "title": "Chapter 6: CSS Variables (Advanced Usage)",
+        "topics": [
+          {
+            "title": "Dynamic theming with CSS variables"
+          },
+          {
+            "title": "Dark/Light Mode Implementation"
+          },
+          {
+            "title": "Scoped variables and performance considerations"
+          }
+        ]
+      },
+      {
+        "title": "Chapter 7: Introduction to Preprocessors (SASS/SCSS)",
+        "topics": [
+          {
+            "title": "Variables, Nesting, and Partials"
+          },
+          {
+            "title": "Mixins, Functions, and Inheritance"
+          },
+          {
+            "title": "Compiling and Organizing SCSS files"
+          }
+        ]
+      },
+      {
+        "title": "Chapter 8: Advanced Responsive Design",
+        "topics": [
+          {
+            "title": "Fluid typography and responsive units (vw, vh, rem)"
+          },
+          {
+            "title": "Container Queries (modern CSS)"
+          },
+          {
+            "title": "Best Practices for Multi-device Testing"
+          }
+        ]
+      },
+      {
+        "title": "Chapter 9: CSS Architecture and Best Practices",
+        "topics": [
+          {
+            "title": "BEM Methodology (Block, Element, Modifier)"
+          },
+          {
+            "title": "Utility-first vs Component-based CSS"
+          },
+          {
+            "title": "Writing Maintainable and Scalable CSS"
+          }
+        ]
+      },
+      {
+        "title": "Chapter 10: Advanced UI/UX Effects",
+        "topics": [
+          {
+            "title": "Glassmorphism and Neumorphism Designs"
+          },
+          {
+            "title": "CSS Parallax Scrolling Effects"
+          },
+          {
+            "title": "Modern Loading Spinners and Skeleton Screens"
+          }
+        ]
+      },
+      {
+        "title": "Chapter 11: Optimization and Performance",
+        "topics": [
+          {
+            "title": "Critical CSS and Render Blocking"
+          },
+          {
+            "title": "Minification and Purging unused CSS"
+          },
+          {
+            "title": "Improving Lighthouse CSS Scores"
+          }
+        ]
+      },
+      {
+        "title": "Chapter 12: Final Projects",
+        "topics": [
+          {
+            "title": "Project 1: Interactive Dashboard UI"
+          },
+          {
+            "title": "Project 2: Portfolio Website with Dark/Light Theme"
+          },
+          {
+            "title": "Project 3: Responsive E-commerce Product Page"
+          }
+        ]
+      }
+    ],
+    "id": 13,
+    "slug": "css-for-advanced"
+  },
+  {
+    "status": "PUBLISH",
+    "title": "CCC",
+    "sort_description": "Become digitally literate with the complete CCC program. Learn computer fundamentals, MS Office tools, Internet, Email, Digital Payments, Cyber Security, and Future Skills.",
+    "categories": [
+      "Computer Literacy",
+      "Digital Skills",
+      "Office Productivity"
+    ],
+    "level": "Beginner",
+    "language": [
+      "English",
+      "Hindi"
+    ],
+    "duration": 3,
+    "price": 2999.0,
+    "certificate": true,
+    "mode": "ONLINE",
+    "course_type": "SINGLE",
+    "chapters": [
+      {
+        "title": "Chapter 1: Introduction to Computer",
+        "topics": [
+          {
+            "title": "Evolution of Computers and IT Gadgets"
+          },
+          {
+            "title": "Applications of Computers in Daily Life"
+          },
+          {
+            "title": "Basics of Hardware and Software"
+          },
+          {
+            "title": "CPU, Memory, Storage, Input & Output Devices"
+          },
+          {
+            "title": "Types of Software: Application, System, Utility"
+          },
+          {
+            "title": "Open Source vs Proprietary Software"
+          },
+          {
+            "title": "Introduction to Mobile Applications"
+          }
+        ]
+      },
+      {
+        "title": "Chapter 2: Introduction to Operating System",
+        "topics": [
+          {
+            "title": "Basics and Types of Operating Systems"
+          },
+          {
+            "title": "Operating Systems for Desktop, Laptop, and Mobile"
+          },
+          {
+            "title": "Desktop Interface: Taskbar, Icons, Shortcuts"
+          },
+          {
+            "title": "Running and Managing Applications"
+          },
+          {
+            "title": "System Settings: Date, Time, Display, Mouse"
+          },
+          {
+            "title": "Add/Remove Programs, Printers, and Features"
+          },
+          {
+            "title": "File and Folder Management"
+          },
+          {
+            "title": "Common File Extensions"
+          }
+        ]
+      },
+      {
+        "title": "Chapter 3: Word Processing (MS Word / LibreOffice Writer)",
+        "topics": [
+          {
+            "title": "Introduction and Interface Overview"
+          },
+          {
+            "title": "Creating, Opening, Saving, and Printing Documents"
+          },
+          {
+            "title": "Text Editing: Cut, Copy, Paste, Undo, Redo"
+          },
+          {
+            "title": "Formatting Text: Font, Color, Size, Alignment"
+          },
+          {
+            "title": "Spelling Check, Find and Replace, AutoCorrect"
+          },
+          {
+            "title": "Page Setup, Header, Footer, and Page Numbering"
+          },
+          {
+            "title": "Table Insertion and Manipulation"
+          },
+          {
+            "title": "Mail Merge: Creating Bulk Letters and Labels"
+          }
+        ]
+      },
+      {
+        "title": "Chapter 4: Spreadsheet (MS Excel / LibreOffice Calc)",
+        "topics": [
+          {
+            "title": "Introduction to Spreadsheets and Interface"
+          },
+          {
+            "title": "Creating and Saving Worksheets"
+          },
+          {
+            "title": "Cell Addressing and Data Entry"
+          },
+          {
+            "title": "Editing, Formatting Cells, Rows, and Columns"
+          },
+          {
+            "title": "Basic Formulas and Functions (SUM, AVG, MAX, MIN)"
+          },
+          {
+            "title": "Sorting, Filtering, and Freezing Panes"
+          },
+          {
+            "title": "Charts and Graphs (Bar, Pie, Line)"
+          },
+          {
+            "title": "Printing and Page Setup for Sheets"
+          }
+        ]
+      },
+      {
+        "title": "Chapter 5: Presentation (MS PowerPoint / LibreOffice Impress)",
+        "topics": [
+          {
+            "title": "Creating a New Presentation (Template / Blank)"
+          },
+          {
+            "title": "Adding and Editing Text on Slides"
+          },
+          {
+            "title": "Inserting Tables, Images, and Media"
+          },
+          {
+            "title": "Slide Layouts and Master Slide"
+          },
+          {
+            "title": "Transitions, Animations, and Slide Timings"
+          },
+          {
+            "title": "Running Slide Shows and Printing Handouts"
+          },
+          {
+            "title": "Enhancing Presentation with Design and Color Themes"
+          }
+        ]
+      },
+      {
+        "title": "Chapter 6: Introduction to Internet and WWW",
+        "topics": [
+          {
+            "title": "Basics of Computer Networks (LAN, WAN, Topology)"
+          },
+          {
+            "title": "Concept of Internet, WWW, and IP Address"
+          },
+          {
+            "title": "Modes of Internet Connection (WiFi, Broadband, Mobile)"
+          },
+          {
+            "title": "Web Browsers: Chrome, Firefox, Edge, Opera"
+          },
+          {
+            "title": "Using Search Engines and Surfing Websites"
+          },
+          {
+            "title": "Downloading and Printing Web Pages"
+          },
+          {
+            "title": "Understanding URLs and Website Navigation"
+          }
+        ]
+      },
+      {
+        "title": "Chapter 7: Email, Social Networking, and e-Governance",
+        "topics": [
+          {
+            "title": "Creating and Managing an Email Account"
+          },
+          {
+            "title": "Composing, Sending, and Attaching Files in Email"
+          },
+          {
+            "title": "Social Media Basics: Facebook, Instagram, LinkedIn, X"
+          },
+          {
+            "title": "Instant Messaging: WhatsApp, Telegram, Messenger"
+          },
+          {
+            "title": "Introduction to Blogs and Netiquettes"
+          },
+          {
+            "title": "e-Governance Applications: Passport, Railway, eHospital"
+          },
+          {
+            "title": "Using UMANG App and Digital Locker"
+          }
+        ]
+      },
+      {
+        "title": "Chapter 8: Digital Financial Tools and Applications",
+        "topics": [
+          {
+            "title": "Introduction to OTP and QR Code"
+          },
+          {
+            "title": "UPI, AEPS, and eWallet Concepts"
+          },
+          {
+            "title": "Internet Banking: NEFT, RTGS, IMPS"
+          },
+          {
+            "title": "Online Bill Payment and Recharge"
+          },
+          {
+            "title": "Using PoS Devices and Secure Transactions"
+          },
+          {
+            "title": "Government Financial Schemes and Awareness"
+          }
+        ]
+      },
+      {
+        "title": "Chapter 9: Overview of Cyber Security",
+        "topics": [
+          {
+            "title": "Introduction to Cyber Security and its Need"
+          },
+          {
+            "title": "Securing PC, Browsers, and Emails"
+          },
+          {
+            "title": "Social Media Safety and Password Protection"
+          },
+          {
+            "title": "Safe Practices for Mobile Devices"
+          },
+          {
+            "title": "Recognizing Online Fraud and Phishing"
+          }
+        ]
+      },
+      {
+        "title": "Chapter 10: Future Skills and Artificial Intelligence",
+        "topics": [
+          {
+            "title": "Introduction to Future Technologies"
+          },
+          {
+            "title": "Internet of Things (IoT) and Big Data Analytics"
+          },
+          {
+            "title": "Cloud Computing and Virtual Reality"
+          },
+          {
+            "title": "Artificial Intelligence: Concept, Goals, and Ethics"
+          },
+          {
+            "title": "Applications of AI in Daily Life"
+          },
+          {
+            "title": "Robotic Process Automation and 3D Printing"
+          },
+          {
+            "title": "Future Trends in ICT and AI-driven Innovation"
+          }
+        ]
+      }
+    ],
+    "id": 14,
+    "slug": "ccc"
+  },
+  {
+    "status": "PUBLISH",
+    "title": "Bootstrap for Beginner",
+    "sort_description": "Learn Bootstrap from scratch: grid system, utilities, components, forms, and responsive layouts. Build mini projects like a portfolio and landing page.",
+    "categories": [
+      "Web Development",
+      "Frontend",
+      "Bootstrap"
+    ],
+    "level": "Beginner",
+    "language": [
+      "English",
+      "Hindi"
+    ],
+    "duration": 1,
+    "price": 1499.0,
+    "certificate": true,
+    "mode": "ONLINE",
+    "course_type": "SINGLE",
+    "chapters": [
+      {
+        "title": "Chapter 1: Introduction to Bootstrap",
+        "topics": [
+          {
+            "title": "What is Bootstrap and Why Use It?"
+          },
+          {
+            "title": "Bootstrap Versions Overview (v4 vs v5)"
+          },
+          {
+            "title": "Setting Up Bootstrap (CDN vs Local)"
+          }
+        ]
+      },
+      {
+        "title": "Chapter 2: Bootstrap Container and Grid System",
+        "topics": [
+          {
+            "title": "Container, Container-fluid"
+          },
+          {
+            "title": "Rows and Columns Basics"
+          },
+          {
+            "title": "Responsive Breakpoints (sm, md, lg, xl)"
+          }
+        ]
+      },
+      {
+        "title": "Chapter 3: Typography and Text Utilities",
+        "topics": [
+          {
+            "title": "Headings, Paragraphs, and Display Classes"
+          },
+          {
+            "title": "Text Alignment, Transformation, and Colors"
+          },
+          {
+            "title": "Blockquotes and Inline Text Utilities"
+          }
+        ]
+      },
+      {
+        "title": "Chapter 4: Colors, Backgrounds, and Spacing",
+        "topics": [
+          {
+            "title": "Bootstrap Color Utility Classes"
+          },
+          {
+            "title": "Background Utilities"
+          },
+          {
+            "title": "Spacing (Margin and Padding Classes)"
+          }
+        ]
+      },
+      {
+        "title": "Chapter 5: Buttons and Badges",
+        "topics": [
+          {
+            "title": "Bootstrap Button Styles and Sizes"
+          },
+          {
+            "title": "Button Groups and Dropdown Buttons"
+          },
+          {
+            "title": "Using Badges with Buttons and Headings"
+          }
+        ]
+      },
+      {
+        "title": "Chapter 6: Images and Media Objects",
+        "topics": [
+          {
+            "title": "Responsive Images and Thumbnails"
+          },
+          {
+            "title": "Image Shapes: Rounded, Circle, Thumbnail"
+          },
+          {
+            "title": "Media Object Component"
+          }
+        ]
+      },
+      {
+        "title": "Chapter 7: Navigation and Navbar",
+        "topics": [
+          {
+            "title": "Basic Nav and Navbar"
+          },
+          {
+            "title": "Navbar with Branding, Links, and Toggler"
+          },
+          {
+            "title": "Responsive Navbar with Collapse"
+          }
+        ]
+      },
+      {
+        "title": "Chapter 8: Cards and Layout Components",
+        "topics": [
+          {
+            "title": "Introduction to Cards"
+          },
+          {
+            "title": "Card Groups and Decks"
+          },
+          {
+            "title": "Card with Images and Buttons"
+          }
+        ]
+      },
+      {
+        "title": "Chapter 9: Forms Basics",
+        "topics": [
+          {
+            "title": "Bootstrap Form Controls"
+          },
+          {
+            "title": "Form Layouts: Inline, Horizontal, Vertical"
+          },
+          {
+            "title": "Checkboxes, Radios, and Switches"
+          }
+        ]
+      },
+      {
+        "title": "Chapter 10: Tables and Alerts",
+        "topics": [
+          {
+            "title": "Bootstrap Table Styling"
+          },
+          {
+            "title": "Striped, Bordered, and Hoverable Tables"
+          },
+          {
+            "title": "Alerts with Colors and Dismissible Alerts"
+          }
+        ]
+      },
+      {
+        "title": "Chapter 11: Bootstrap Utilities",
+        "topics": [
+          {
+            "title": "Display and Visibility Classes"
+          },
+          {
+            "title": "Float and Position Utilities"
+          },
+          {
+            "title": "Flexbox Utilities Basics"
+          }
+        ]
+      },
+      {
+        "title": "Chapter 12: Mini Projects",
+        "topics": [
+          {
+            "title": "Project 1: Personal Portfolio Page"
+          },
+          {
+            "title": "Project 2: Simple Landing Page"
+          },
+          {
+            "title": "Project 3: Multi-section Homepage"
+          }
+        ]
+      }
+    ],
+    "id": 15,
+    "slug": "bootstrap-for-beginner"
+  },
+  {
+    "status": "PUBLISH",
+    "title": "Bootstrap for Advanced",
+    "sort_description": "Master Bootstrap with advanced components, responsive utilities, customization, and real-world projects like an e-commerce template and admin dashboard.",
+    "categories": [
+      "Web Development",
+      "Frontend",
+      "Bootstrap"
+    ],
+    "level": "Advanced",
+    "language": [
+      "English",
+      "Hindi"
+    ],
+    "duration": 1,
+    "price": 1999.0,
+    "certificate": true,
+    "mode": "ONLINE",
+    "course_type": "SINGLE",
+    "chapters": [
+      {
+        "title": "Chapter 1: Advanced Grid System",
+        "topics": [
+          {
+            "title": "Nested Grids and Column Wrapping"
+          },
+          {
+            "title": "Column Offsets and Ordering"
+          },
+          {
+            "title": "Responsive Design Patterns with Grid"
+          }
+        ]
+      },
+      {
+        "title": "Chapter 2: Advanced Flexbox Utilities",
+        "topics": [
+          {
+            "title": "Flex Direction, Justify, and Align Classes"
+          },
+          {
+            "title": "Responsive Flexbox Utilities"
+          },
+          {
+            "title": "Practical Flexbox Layouts in Bootstrap"
+          }
+        ]
+      },
+      {
+        "title": "Chapter 3: Advanced Forms",
+        "topics": [
+          {
+            "title": "Form Validation with Bootstrap Classes"
+          },
+          {
+            "title": "Custom Form Controls (File Upload, Range Sliders)"
+          },
+          {
+            "title": "Floating Labels and Input Groups"
+          }
+        ]
+      },
+      {
+        "title": "Chapter 4: Advanced Tables",
+        "topics": [
+          {
+            "title": "Responsive Tables"
+          },
+          {
+            "title": "Table Dark Mode and Styling"
+          },
+          {
+            "title": "Combining Tables with Utilities"
+          }
+        ]
+      },
+      {
+        "title": "Chapter 5: JavaScript Components Basics",
+        "topics": [
+          {
+            "title": "Bootstrap JS Setup (CDN & Bundle)"
+          },
+          {
+            "title": "Introduction to Bootstrap JS Plugins"
+          },
+          {
+            "title": "Event Handling with Data Attributes"
+          }
+        ]
+      },
+      {
+        "title": "Chapter 6: Modals and Popups",
+        "topics": [
+          {
+            "title": "Creating and Customizing Modals"
+          },
+          {
+            "title": "Modal Sizes and Options"
+          },
+          {
+            "title": "Interactive Modals with Forms"
+          }
+        ]
+      },
+      {
+        "title": "Chapter 7: Carousels and Sliders",
+        "topics": [
+          {
+            "title": "Bootstrap Carousel Basics"
+          },
+          {
+            "title": "Carousel with Controls and Indicators"
+          },
+          {
+            "title": "Customizing Carousel with Captions"
+          }
+        ]
+      },
+      {
+        "title": "Chapter 8: Accordions, Collapse, and Tabs",
+        "topics": [
+          {
+            "title": "Accordion Component Basics"
+          },
+          {
+            "title": "Collapse for Hidden Content"
+          },
+          {
+            "title": "Tabs and Pills Navigation"
+          }
+        ]
+      },
+      {
+        "title": "Chapter 9: Tooltips and Popovers",
+        "topics": [
+          {
+            "title": "Enabling Tooltips with Data Attributes"
+          },
+          {
+            "title": "Customizing Tooltip Position and Styles"
+          },
+          {
+            "title": "Using Popovers for Extra Information"
+          }
+        ]
+      },
+      {
+        "title": "Chapter 10: Toasts and Spinners",
+        "topics": [
+          {
+            "title": "Bootstrap Toast Notifications"
+          },
+          {
+            "title": "Customizing Toasts (Colors, Positions)"
+          },
+          {
+            "title": "Loading Spinners for UI Feedback"
+          }
+        ]
+      },
+      {
+        "title": "Chapter 11: Customizing Bootstrap",
+        "topics": [
+          {
+            "title": "Overriding Bootstrap with Custom CSS"
+          },
+          {
+            "title": "Using Bootstrap Variables (SCSS)"
+          },
+          {
+            "title": "Building Custom Themes"
+          }
+        ]
+      },
+      {
+        "title": "Chapter 12: Advanced Utilities",
+        "topics": [
+          {
+            "title": "Responsive Display Utilities"
+          },
+          {
+            "title": "Shadow, Border, and Overflow Classes"
+          },
+          {
+            "title": "Z-index and Position Utilities"
+          }
+        ]
+      },
+      {
+        "title": "Chapter 13: Integration with JavaScript",
+        "topics": [
+          {
+            "title": "Bootstrap with Vanilla JavaScript"
+          },
+          {
+            "title": "Bootstrap with jQuery (Legacy)"
+          },
+          {
+            "title": "Practical JS + Bootstrap UI Enhancements"
+          }
+        ]
+      },
+      {
+        "title": "Chapter 14: Final Projects",
+        "topics": [
+          {
+            "title": "Project 1: E-commerce Homepage Template"
+          },
+          {
+            "title": "Project 2: Admin Dashboard Layout"
+          },
+          {
+            "title": "Project 3: Blogging Website Frontend"
+          }
+        ]
+      }
+    ],
+    "id": 16,
+    "slug": "bootstrap-for-advanced"
+  },
+  {
+    "status": "PUBLISH",
+    "title": "SQL for Beginners",
+    "sort_description": "Learn SQL from scratch: database fundamentals, queries, joins, aggregate functions, keys, constraints, normalization, and hands-on mini projects.",
+    "categories": [
+      "Web Development",
+      "Database",
+      "SQL"
+    ],
+    "level": "Beginner",
+    "language": [
+      "English",
+      "Hindi"
+    ],
+    "duration": 1,
+    "price": 1999.0,
+    "certificate": true,
+    "mode": "ONLINE",
+    "course_type": "SINGLE",
+    "chapters": [
+      {
+        "title": "Chapter 1: Introduction to Databases",
+        "topics": [
+          {
+            "title": "What is a Database?"
+          },
+          {
+            "title": "Relational Database Concepts"
+          },
+          {
+            "title": "Tables, Rows, Columns"
+          }
+        ]
+      },
+      {
+        "title": "Chapter 2: Basic SQL Queries",
+        "topics": [
+          {
+            "title": "SELECT Statement"
+          },
+          {
+            "title": "Filtering Data with WHERE"
+          },
+          {
+            "title": "Sorting Data with ORDER BY"
+          }
+        ]
+      },
+      {
+        "title": "Chapter 3: SQL Functions",
+        "topics": [
+          {
+            "title": "Aggregate Functions: COUNT, SUM, AVG"
+          },
+          {
+            "title": "MIN & MAX Functions"
+          },
+          {
+            "title": "String Functions in SQL"
+          }
+        ]
+      },
+      {
+        "title": "Chapter 4: Data Manipulation",
+        "topics": [
+          {
+            "title": "INSERT INTO"
+          },
+          {
+            "title": "UPDATE Statement"
+          },
+          {
+            "title": "DELETE Statement"
+          }
+        ]
+      },
+      {
+        "title": "Chapter 5: Table Constraints & Keys",
+        "topics": [
+          {
+            "title": "Primary Key & Foreign Key"
+          },
+          {
+            "title": "Unique, Not Null, Default"
+          },
+          {
+            "title": "Auto Increment & Index"
+          }
+        ]
+      },
+      {
+        "title": "Chapter 6: Joins",
+        "topics": [
+          {
+            "title": "INNER JOIN"
+          },
+          {
+            "title": "LEFT, RIGHT & FULL JOIN"
+          },
+          {
+            "title": "Self Join & Cross Join"
+          }
+        ]
+      },
+      {
+        "title": "Chapter 7: Grouping Data",
+        "topics": [
+          {
+            "title": "GROUP BY Clause"
+          },
+          {
+            "title": "HAVING Clause"
+          },
+          {
+            "title": "Combining GROUP BY with Functions"
+          }
+        ]
+      },
+      {
+        "title": "Chapter 8: Normalization",
+        "topics": [
+          {
+            "title": "Introduction to Normalization"
+          },
+          {
+            "title": "1NF, 2NF, 3NF Explained"
+          },
+          {
+            "title": "Designing Efficient Tables"
+          }
+        ]
+      },
+      {
+        "title": "Chapter 9: Mini Projects",
+        "topics": [
+          {
+            "title": "Student Management Database"
+          },
+          {
+            "title": "Inventory Management Database"
+          },
+          {
+            "title": "Simple Blog Database"
+          }
+        ]
+      }
+    ],
+    "id": 17,
+    "slug": "sql-for-beginners"
+  },
+  {
+    "status": "PUBLISH",
+    "title": "SQL for Advanced",
+    "sort_description": "Advance your SQL skills: complex joins, subqueries, views, triggers, stored procedures, transactions, and build real-world database projects.",
+    "categories": [
+      "Web Development",
+      "Database",
+      "SQL"
+    ],
+    "level": "Advanced",
+    "language": [
+      "English",
+      "Hindi"
+    ],
+    "duration": 1,
+    "price": 2999.0,
+    "certificate": true,
+    "mode": "ONLINE",
+    "course_type": "SINGLE",
+    "chapters": [
+      {
+        "title": "Chapter 1: Complex Joins",
+        "topics": [
+          {
+            "title": "Self Join & Multi-table Joins"
+          },
+          {
+            "title": "Cross Joins & Natural Joins"
+          },
+          {
+            "title": "Combining Joins with Subqueries"
+          }
+        ]
+      },
+      {
+        "title": "Chapter 2: Subqueries",
+        "topics": [
+          {
+            "title": "Scalar & Correlated Subqueries"
+          },
+          {
+            "title": "Nested Subqueries"
+          },
+          {
+            "title": "Using Subqueries with Joins"
+          }
+        ]
+      },
+      {
+        "title": "Chapter 3: Views",
+        "topics": [
+          {
+            "title": "Creating Views"
+          },
+          {
+            "title": "Updating Views"
+          },
+          {
+            "title": "Using Views in Queries"
+          }
+        ]
+      },
+      {
+        "title": "Chapter 4: Stored Procedures",
+        "topics": [
+          {
+            "title": "Creating Stored Procedures"
+          },
+          {
+            "title": "Parameters & Return Values"
+          },
+          {
+            "title": "Executing Stored Procedures"
+          }
+        ]
+      },
+      {
+        "title": "Chapter 5: Triggers",
+        "topics": [
+          {
+            "title": "Introduction to Triggers"
+          },
+          {
+            "title": "Creating Before & After Triggers"
+          },
+          {
+            "title": "Trigger Use Cases"
+          }
+        ]
+      },
+      {
+        "title": "Chapter 6: Transactions",
+        "topics": [
+          {
+            "title": "BEGIN, COMMIT & ROLLBACK"
+          },
+          {
+            "title": "Transaction Isolation Levels"
+          },
+          {
+            "title": "Handling Concurrency"
+          }
+        ]
+      },
+      {
+        "title": "Chapter 7: Indexing & Optimization",
+        "topics": [
+          {
+            "title": "Creating Indexes"
+          },
+          {
+            "title": "Query Optimization Techniques"
+          },
+          {
+            "title": "Using EXPLAIN for Query Analysis"
+          }
+        ]
+      },
+      {
+        "title": "Chapter 8: Advanced Constraints",
+        "topics": [
+          {
+            "title": "CHECK Constraints"
+          },
+          {
+            "title": "Composite Keys"
+          },
+          {
+            "title": "Enforcing Data Integrity"
+          }
+        ]
+      },
+      {
+        "title": "Chapter 9: Mini Projects",
+        "topics": [
+          {
+            "title": "Inventory Management System"
+          },
+          {
+            "title": "E-commerce Database"
+          },
+          {
+            "title": "Student Management System"
+          }
+        ]
+      },
+      {
+        "title": "Chapter 10: Final Project",
+        "topics": [
+          {
+            "title": "Complete Real-world Database Design"
+          }
+        ]
+      }
+    ],
+    "id": 18,
+    "slug": "sql-for-advanced"
+  },
+  {
+    "status": "PUBLISH",
+    "title": "MS Word for Beginners",
+    "sort_description": "Learn MS Word from scratch: interface, text & paragraph formatting, tables, images, page layout, shortcuts, tips, and hands-on mini projects like resumes and reports.",
+    "categories": [
+      "Computer Basics",
+      "MS Office",
+      "Word Processing"
+    ],
+    "level": "Beginner",
+    "language": [
+      "English",
+      "Hindi"
+    ],
+    "duration": 1,
+    "price": 1499.0,
+    "certificate": true,
+    "mode": "ONLINE",
+    "course_type": "SINGLE",
+    "chapters": [
+      {
+        "title": "Chapter 1: Introduction to MS Word",
+        "topics": [
+          {
+            "title": "MS Word Interface Overview"
+          },
+          {
+            "title": "Ribbons, Tabs & Quick Access Toolbar"
+          },
+          {
+            "title": "Creating & Saving Documents"
+          }
+        ]
+      },
+      {
+        "title": "Chapter 2: Text Formatting",
+        "topics": [
+          {
+            "title": "Font Style, Size & Color"
+          },
+          {
+            "title": "Bold, Italic, Underline & Effects"
+          },
+          {
+            "title": "Clear Formatting & Styles"
+          }
+        ]
+      },
+      {
+        "title": "Chapter 3: Paragraph Formatting",
+        "topics": [
+          {
+            "title": "Alignment & Indentation"
+          },
+          {
+            "title": "Line & Paragraph Spacing"
+          },
+          {
+            "title": "Bullets & Numbering"
+          }
+        ]
+      },
+      {
+        "title": "Chapter 4: Working with Tables",
+        "topics": [
+          {
+            "title": "Creating & Formatting Tables"
+          },
+          {
+            "title": "Merging & Splitting Cells"
+          },
+          {
+            "title": "Table Styles & Design"
+          }
+        ]
+      },
+      {
+        "title": "Chapter 5: Images, Shapes & SmartArt",
+        "topics": [
+          {
+            "title": "Inserting & Formatting Images"
+          },
+          {
+            "title": "Adding Shapes & Icons"
+          },
+          {
+            "title": "SmartArt Graphics & Design"
+          }
+        ]
+      },
+      {
+        "title": "Chapter 6: Page Layout",
+        "topics": [
+          {
+            "title": "Margins, Orientation & Size"
+          },
+          {
+            "title": "Columns & Page Breaks"
+          },
+          {
+            "title": "Headers, Footers & Page Numbers"
+          }
+        ]
+      },
+      {
+        "title": "Chapter 7: References & Review",
+        "topics": [
+          {
+            "title": "Inserting Footnotes & Endnotes"
+          },
+          {
+            "title": "Adding Table of Contents"
+          },
+          {
+            "title": "Track Changes & Comments"
+          }
+        ]
+      },
+      {
+        "title": "Chapter 8: Shortcuts & Productivity Tips",
+        "topics": [
+          {
+            "title": "Essential Keyboard Shortcuts"
+          },
+          {
+            "title": "Quick Formatting Tricks"
+          },
+          {
+            "title": "Efficiency Tips for Documents"
+          }
+        ]
+      },
+      {
+        "title": "Chapter 9: Mini Projects",
+        "topics": [
+          {
+            "title": "Creating a Resume"
+          },
+          {
+            "title": "Designing a Report"
+          },
+          {
+            "title": "Invitation Card & Certificate"
+          }
+        ]
+      }
+    ],
+    "id": 19,
+    "slug": "ms-word-for-beginners"
+  },
+  {
+    "status": "PUBLISH",
+    "title": "MS Word for Advanced",
+    "sort_description": "Master advanced MS Word skills: Mail Merge, Macros, advanced tables, templates, collaboration tools, advanced formatting, and hands-on projects.",
+    "categories": [
+      "Computer Basics",
+      "MS Office",
+      "Word Processing"
+    ],
+    "level": "Advanced",
+    "language": [
+      "English",
+      "Hindi"
+    ],
+    "duration": 1,
+    "price": 1999.0,
+    "certificate": true,
+    "mode": "ONLINE",
+    "course_type": "SINGLE",
+    "chapters": [
+      {
+        "title": "Chapter 1: Advanced Tables",
+        "topics": [
+          {
+            "title": "Nested Tables & Formatting"
+          },
+          {
+            "title": "Formulas in Tables"
+          },
+          {
+            "title": "Table Styles & Design"
+          }
+        ]
+      },
+      {
+        "title": "Chapter 2: Mail Merge",
+        "topics": [
+          {
+            "title": "Introduction to Mail Merge"
+          },
+          {
+            "title": "Using Data Sources"
+          },
+          {
+            "title": "Generating Letters, Labels, Envelopes"
+          }
+        ]
+      },
+      {
+        "title": "Chapter 3: Macros",
+        "topics": [
+          {
+            "title": "Recording & Running Macros"
+          },
+          {
+            "title": "Assigning Macros to Buttons"
+          },
+          {
+            "title": "Practical Macro Examples"
+          }
+        ]
+      },
+      {
+        "title": "Chapter 4: Templates & Styles",
+        "topics": [
+          {
+            "title": "Creating & Using Templates"
+          },
+          {
+            "title": "Custom Styles & Themes"
+          },
+          {
+            "title": "Consistent Document Formatting"
+          }
+        ]
+      },
+      {
+        "title": "Chapter 5: Collaboration Tools",
+        "topics": [
+          {
+            "title": "Track Changes & Comments"
+          },
+          {
+            "title": "Compare & Combine Documents"
+          },
+          {
+            "title": "Sharing & Protecting Documents"
+          }
+        ]
+      },
+      {
+        "title": "Chapter 6: Advanced Text & Paragraph Formatting",
+        "topics": [
+          {
+            "title": "Custom Bullets & Numbering"
+          },
+          {
+            "title": "Advanced Indentation & Spacing"
+          },
+          {
+            "title": "Drop Caps & Special Effects"
+          }
+        ]
+      },
+      {
+        "title": "Chapter 7: Graphics & Objects",
+        "topics": [
+          {
+            "title": "Advanced SmartArt & Charts"
+          },
+          {
+            "title": "Watermarks, Backgrounds & Page Borders"
+          },
+          {
+            "title": "Linking & Embedding Objects"
+          }
+        ]
+      },
+      {
+        "title": "Chapter 8: Productivity Tips",
+        "topics": [
+          {
+            "title": "Keyboard Shortcuts & Quick Access"
+          },
+          {
+            "title": "Document Navigation & Search Tips"
+          },
+          {
+            "title": "Automation Techniques"
+          }
+        ]
+      },
+      {
+        "title": "Chapter 9: Mini Projects",
+        "topics": [
+          {
+            "title": "Automated Invoice using Mail Merge"
+          },
+          {
+            "title": "Professional Report Template"
+          },
+          {
+            "title": "Certificate & Invitation Template"
+          }
+        ]
+      }
+    ],
+    "id": 20,
+    "slug": "ms-word-for-advanced"
+  },
+  {
+    "status": "PUBLISH",
+    "title": "Git & GitHub Basics",
+    "sort_description": "Learn version control with Git and GitHub. Understand repositories, commits, branches, merges, pull requests, and collaboration workflows with real-world practice.",
+    "categories": [
+      "Version Control",
+      "Tools"
+    ],
+    "level": "Beginner",
+    "language": [
+      "English",
+      "Hindi"
+    ],
+    "duration": 1,
+    "price": 1499.0,
+    "certificate": true,
+    "mode": "ONLINE",
+    "course_type": "SINGLE",
+    "chapters": [
+      {
+        "title": "Introduction to Version Control",
+        "topics": [
+          "What is Version Control?",
+          "Why use Git?",
+          "Difference between Git and GitHub",
+          "Installing Git on your system"
+        ]
+      },
+      {
+        "title": "Getting Started with Git",
+        "topics": [
+          "Initializing a Repository",
+          "Basic Git Commands: git init, git status, git add, git commit",
+          "Understanding .git folder"
+        ]
+      },
+      {
+        "title": "Working with Repositories",
+        "topics": [
+          "Cloning a Repository",
+          "Exploring git log",
+          "Understanding HEAD and commits"
+        ]
+      },
+      {
+        "title": "Branching and Merging",
+        "topics": [
+          "Creating Branches",
+          "Switching Branches",
+          "Merging Branches",
+          "Resolving Merge Conflicts"
+        ]
+      },
+      {
+        "title": "Introduction to GitHub",
+        "topics": [
+          "Creating a GitHub Account",
+          "Creating Repositories on GitHub",
+          "Pushing local repo to GitHub",
+          "Cloning from GitHub"
+        ]
+      },
+      {
+        "title": "Collaboration with GitHub",
+        "topics": [
+          "Understanding Forking",
+          "Pull Requests",
+          "Code Reviews",
+          "Collaborating in Teams"
+        ]
+      },
+      {
+        "title": "Advanced Git Basics",
+        "topics": [
+          "Undoing Changes",
+          "Reverting vs Resetting",
+          "Stashing Changes",
+          "Gitignore File"
+        ]
+      },
+      {
+        "title": "GitHub Essentials",
+        "topics": [
+          "GitHub Issues and Discussions",
+          "Using GitHub Projects",
+          "Basic GitHub Actions overview"
+        ]
+      },
+      {
+        "title": "Mini Project",
+        "topics": [
+          "Creating and Collaborating on a Sample Project",
+          "Branching Strategy Implementation",
+          "Pull Request Workflow"
+        ]
+      }
+    ],
+    "id": 21,
+    "slug": "git--github-basics"
+  },
+  {
+    "status": "PUBLISH",
+    "title": "MS PowerPoint for Beginners",
+    "sort_description": "Learn to create professional presentations with Microsoft PowerPoint. Master slides, themes, animations, transitions, and presentation skills in 1 month.",
+    "categories": [
+      "Productivity Tools",
+      "MS Office"
+    ],
+    "level": "Beginner",
+    "language": [
+      "English",
+      "Hindi"
+    ],
+    "duration": 1,
+    "price": 999.0,
+    "certificate": true,
+    "mode": "OFFLINE",
+    "course_type": "SINGLE",
+    "chapters": [
+      {
+        "title": "Introduction to PowerPoint",
+        "topics": [
+          "Overview of PowerPoint",
+          "Understanding the Interface",
+          "Creating Your First Presentation"
+        ]
+      },
+      {
+        "title": "Working with Slides",
+        "topics": [
+          "Adding and Deleting Slides",
+          "Slide Layouts and Designs",
+          "Using Slide Master"
+        ]
+      },
+      {
+        "title": "Text and Formatting",
+        "topics": [
+          "Adding Text to Slides",
+          "Text Formatting Options",
+          "Bullet Points and Numbering"
+        ]
+      },
+      {
+        "title": "Working with Images and Media",
+        "topics": [
+          "Inserting Pictures and Icons",
+          "Adding Audio and Video",
+          "Using SmartArt and Charts"
+        ]
+      },
+      {
+        "title": "Design and Themes",
+        "topics": [
+          "Applying Themes and Variants",
+          "Customizing Slide Backgrounds",
+          "Using Design Ideas"
+        ]
+      },
+      {
+        "title": "Animations and Transitions",
+        "topics": [
+          "Applying Slide Transitions",
+          "Adding Animations to Objects",
+          "Animation Pane and Timings"
+        ]
+      },
+      {
+        "title": "Advanced Presentation Features",
+        "topics": [
+          "Hyperlinks and Action Buttons",
+          "Using Slide Show Tools",
+          "Presenter View and Notes"
+        ]
+      },
+      {
+        "title": "Collaboration and Sharing",
+        "topics": [
+          "Sharing Presentations",
+          "Exporting to PDF and Video",
+          "Co-authoring with Others"
+        ]
+      },
+      {
+        "title": "Final Project",
+        "topics": [
+          "Create a Professional Presentation",
+          "Apply Design, Animations, and Transitions",
+          "Delivering the Presentation"
+        ]
+      }
+    ],
+    "id": 22,
+    "slug": "ms-powerpoint-for-beginners"
+  },
+  {
+    "status": "PUBLISH",
+    "title": "MS Excel for Beginners",
+    "sort_description": "Learn the basics of Microsoft Excel, including spreadsheets, formatting, simple formulas, and basic charts. Perfect for students and beginners.",
+    "categories": [
+      "Productivity Tools",
+      "MS Office"
+    ],
+    "level": "Beginner",
+    "language": [
+      "English",
+      "Hindi"
+    ],
+    "duration": 1,
+    "price": 999.0,
+    "certificate": true,
+    "mode": "OFFLINE",
+    "course_type": "SINGLE",
+    "chapters": [
+      {
+        "title": "Introduction to Excel",
+        "topics": [
+          "Excel Interface Overview",
+          "Understanding Workbooks and Worksheets",
+          "Basic Navigation in Excel"
+        ]
+      },
+      {
+        "title": "Data Entry and Editing",
+        "topics": [
+          "Entering Data in Cells",
+          "Editing and Deleting Data",
+          "Undo and Redo"
+        ]
+      },
+      {
+        "title": "Formatting Basics",
+        "topics": [
+          "Cell Formatting (Fonts, Colors, Borders)",
+          "Number Formats",
+          "Adjusting Rows and Columns"
+        ]
+      },
+      {
+        "title": "Basic Formulas",
+        "topics": [
+          "Understanding Formula Bar",
+          "Simple Calculations (+, -, *, /)",
+          "AutoSum Function"
+        ]
+      },
+      {
+        "title": "Introduction to Functions",
+        "topics": [
+          "SUM, AVERAGE, MIN, MAX",
+          "Basic Text Functions (CONCATENATE)",
+          "AutoFill with Functions"
+        ]
+      },
+      {
+        "title": "Working with Worksheets",
+        "topics": [
+          "Adding and Renaming Sheets",
+          "Copying and Moving Sheets",
+          "Deleting Sheets"
+        ]
+      },
+      {
+        "title": "Basic Charts",
+        "topics": [
+          "Creating a Column Chart",
+          "Creating a Pie Chart",
+          "Customizing Chart Elements"
+        ]
+      },
+      {
+        "title": "Printing and Page Setup",
+        "topics": [
+          "Setting Print Area",
+          "Page Layout and Orientation",
+          "Exporting as PDF"
+        ]
+      },
+      {
+        "title": "Mini Project",
+        "topics": [
+          "Creating a Student Report Card",
+          "Applying Formulas and Formatting",
+          "Visualizing with a Chart"
+        ]
+      }
+    ],
+    "id": 23,
+    "slug": "ms-excel-for-beginners"
+  },
+  {
+    "status": "PUBLISH",
+    "title": "MS Excel for Intermediate",
+    "sort_description": "Upgrade your Excel skills with intermediate-level functions, conditional formatting, tables, pivot tables, and data handling techniques.",
+    "categories": [
+      "Productivity Tools",
+      "MS Office"
+    ],
+    "level": "Intermediate",
+    "language": [
+      "English",
+      "Hindi"
+    ],
+    "duration": 2,
+    "price": 1499.0,
+    "certificate": true,
+    "mode": "OFFLINE",
+    "course_type": "SINGLE",
+    "chapters": [
+      {
+        "title": "Review of Basics",
+        "topics": [
+          "Quick Recap of Formulas",
+          "Using AutoFill Efficiently",
+          "Shortcuts for Speed"
+        ]
+      },
+      {
+        "title": "Working with Large Data",
+        "topics": [
+          "Sorting Data (Single and Multi-Level)",
+          "Filtering Data",
+          "Advanced Filter Options"
+        ]
+      },
+      {
+        "title": "Tables and Data Management",
+        "topics": [
+          "Creating and Formatting Tables",
+          "Structured References",
+          "Using Table Styles"
+        ]
+      },
+      {
+        "title": "Conditional Formatting",
+        "topics": [
+          "Highlighting Cells Based on Rules",
+          "Using Formulas in Conditional Formatting",
+          "Data Bars, Color Scales, Icon Sets"
+        ]
+      },
+      {
+        "title": "Intermediate Formulas",
+        "topics": [
+          "Text Functions (LEFT, RIGHT, MID, TRIM)",
+          "Date & Time Functions (TODAY, NOW, DATEDIF)",
+          "Logical Functions (IF, AND, OR, NOT)"
+        ]
+      },
+      {
+        "title": "Lookup Functions",
+        "topics": [
+          "VLOOKUP Basics",
+          "HLOOKUP Basics",
+          "Nested Lookup Functions"
+        ]
+      },
+      {
+        "title": "Pivot Tables Basics",
+        "topics": [
+          "Creating Pivot Tables",
+          "Sorting and Filtering in Pivot Tables",
+          "Summarizing Data with Pivot Tables"
+        ]
+      },
+      {
+        "title": "Charts and Visualization",
+        "topics": [
+          "Clustered Column and Bar Charts",
+          "Line and Area Charts",
+          "Combination Charts"
+        ]
+      },
+      {
+        "title": "Data Validation",
+        "topics": [
+          "Restricting Data Entry",
+          "Dropdown Lists",
+          "Custom Validation Rules"
+        ]
+      },
+      {
+        "title": "Mini Project",
+        "topics": [
+          "Create an Employee Attendance Tracker",
+          "Use Formulas and Conditional Formatting",
+          "Summarize with a Pivot Table"
+        ]
+      }
+    ],
+    "id": 24,
+    "slug": "ms-excel-for-intermediate"
+  },
+  {
+    "status": "PUBLISH",
+    "title": "MS Excel for Advanced",
+    "sort_description": "Master advanced Excel features including advanced formulas, nested functions, macros, dashboards, and automation techniques.",
+    "categories": [
+      "Productivity Tools",
+      "MS Office"
+    ],
+    "level": "Advanced",
+    "language": [
+      "English",
+      "Hindi"
+    ],
+    "duration": 2,
+    "price": 1999.0,
+    "certificate": true,
+    "mode": "OFFLINE",
+    "course_type": "SINGLE",
+    "chapters": [
+      {
+        "title": "Advanced Formula Mastery",
+        "topics": [
+          "Nested IFs and Complex Conditions",
+          "INDEX & MATCH for Dynamic Lookups",
+          "XLOOKUP Function",
+          "Array Formulas & Dynamic Arrays"
+        ]
+      },
+      {
+        "title": "Advanced Pivot Tables",
+        "topics": [
+          "Grouping Data in Pivot Tables",
+          "Calculated Fields and Items",
+          "Pivot Charts Integration",
+          "Slicers and Timelines"
+        ]
+      },
+      {
+        "title": "What-If Analysis",
+        "topics": [
+          "Scenario Manager",
+          "Goal Seek",
+          "Data Tables (One/Two Variable)"
+        ]
+      },
+      {
+        "title": "Advanced Data Tools",
+        "topics": [
+          "Remove Duplicates",
+          "Flash Fill Tricks",
+          "Advanced Text to Columns",
+          "Data Consolidation"
+        ]
+      },
+      {
+        "title": "Power Query Basics",
+        "topics": [
+          "Importing Data from Different Sources",
+          "Data Cleaning with Power Query",
+          "Merging and Appending Queries"
+        ]
+      },
+      {
+        "title": "Power Pivot Introduction",
+        "topics": [
+          "Creating Data Models",
+          "Using Relationships",
+          "DAX Basics (SUMX, CALCULATE)"
+        ]
+      },
+      {
+        "title": "Macros and VBA Basics",
+        "topics": [
+          "Recording Macros",
+          "Assigning Macros to Buttons",
+          "Introduction to VBA Editor",
+          "Writing Simple VBA Codes"
+        ]
+      },
+      {
+        "title": "Dashboard Creation",
+        "topics": [
+          "Design Principles for Dashboards",
+          "Combining Pivot Tables and Charts",
+          "Using Slicers for Interactivity",
+          "Building a Sales Dashboard"
+        ]
+      },
+      {
+        "title": "Collaboration & Security",
+        "topics": [
+          "Protecting Worksheets & Workbooks",
+          "Sharing and Tracking Changes",
+          "Excel Online & Co-Authoring"
+        ]
+      },
+      {
+        "title": "Capstone Project",
+        "topics": [
+          "Build a Business Performance Dashboard",
+          "Use Advanced Formulas and Charts",
+          "Apply Power Query, Pivot, and Macros"
+        ]
+      }
+    ],
+    "id": 25,
+    "slug": "ms-excel-for-advanced"
+  },
+  {
+    "status": "PUBLISH",
+    "title": "Power BI for Beginners",
+    "sort_description": "Learn Power BI from scratch: data import, modeling, DAX basics, interactive visualizations, and dashboards.",
+    "categories": [
+      "Data Analytics",
+      "Business Intelligence"
+    ],
+    "level": "Beginner",
+    "language": [
+      "English",
+      "Hindi"
+    ],
+    "duration": 1,
+    "price": 4999.0,
+    "certificate": true,
+    "mode": "OFFLINE",
+    "course_type": "SINGLE",
+    "chapters": [
+      {
+        "title": "Introduction to Power BI",
+        "topics": [
+          "What is Power BI?",
+          "Power BI Desktop vs Service",
+          "Power BI Workflow Overview"
+        ]
+      },
+      {
+        "title": "Getting Started with Power BI Desktop",
+        "topics": [
+          "Installation & Setup",
+          "Power BI Interface Tour",
+          "Basic Settings"
+        ]
+      },
+      {
+        "title": "Data Import and Transformation",
+        "topics": [
+          "Connecting to Excel, CSV, and Databases",
+          "Power Query Editor Basics",
+          "Cleaning and Transforming Data"
+        ]
+      },
+      {
+        "title": "Data Modeling Fundamentals",
+        "topics": [
+          "Relationships between Tables",
+          "Star vs Snowflake Schema",
+          "Calculated Columns"
+        ]
+      },
+      {
+        "title": "Introduction to DAX",
+        "topics": [
+          "What is DAX?",
+          "Basic Functions (SUM, AVERAGE, COUNT)",
+          "Calculated Measures"
+        ]
+      },
+      {
+        "title": "Creating Visualizations",
+        "topics": [
+          "Bar, Line, and Pie Charts",
+          "Tables and Matrices",
+          "Cards and KPIs"
+        ]
+      },
+      {
+        "title": "Advanced Visuals",
+        "topics": [
+          "Maps and Geospatial Visuals",
+          "Slicers and Filters",
+          "Custom Visuals from Marketplace"
+        ]
+      },
+      {
+        "title": "Designing Dashboards",
+        "topics": [
+          "Combining Multiple Visuals",
+          "Using Themes and Formatting",
+          "Best Practices for Dashboards"
+        ]
+      },
+      {
+        "title": "Publishing and Sharing",
+        "topics": [
+          "Publishing Reports to Power BI Service",
+          "Sharing Dashboards with Team",
+          "Exporting to PDF/PowerPoint"
+        ]
+      },
+      {
+        "title": "Capstone Project",
+        "topics": [
+          "Build an Interactive Sales Dashboard",
+          "Use DAX Measures",
+          "Apply Filters, Slicers, and KPIs"
+        ]
+      }
+    ],
+    "id": 26,
+    "slug": "power-bi-for-beginners"
+  },
+  {
+    "status": "PUBLISH",
+    "title": "Power BI for Intermediate",
+    "sort_description": "Master advanced Power BI skills: DAX functions, data modeling, row-level security, advanced visualizations, and real-world dashboards.",
+    "categories": [
+      "Data Analytics",
+      "Business Intelligence"
+    ],
+    "level": "Intermediate",
+    "language": [
+      "English",
+      "Hindi"
+    ],
+    "duration": 1,
+    "price": 3999.0,
+    "certificate": true,
+    "mode": "OFFLINE",
+    "course_type": "SINGLE",
+    "chapters": [
+      {
+        "title": "Review of Power BI Basics",
+        "topics": [
+          "Quick recap of Import, Modeling, DAX",
+          "Project requirements for Intermediate Level"
+        ]
+      },
+      {
+        "title": "Advanced DAX Concepts",
+        "topics": [
+          "Time Intelligence Functions",
+          "Iterators (SUMX, AVERAGEX)",
+          "CALCULATE and FILTER Functions"
+        ]
+      },
+      {
+        "title": "Data Modeling Techniques",
+        "topics": [
+          "Many-to-Many Relationships",
+          "Role-Playing Dimensions",
+          "Composite Models"
+        ]
+      },
+      {
+        "title": "Row-Level Security (RLS)",
+        "topics": [
+          "What is RLS?",
+          "Creating Roles and Filters",
+          "Testing Security"
+        ]
+      },
+      {
+        "title": "Advanced Visualization Techniques",
+        "topics": [
+          "Drillthrough Reports",
+          "Tooltips and Bookmarks",
+          "Advanced Slicers and Filters"
+        ]
+      },
+      {
+        "title": "Performance Optimization",
+        "topics": [
+          "Optimizing Data Models",
+          "Query Diagnostics",
+          "Best Practices for Report Performance"
+        ]
+      },
+      {
+        "title": "Power BI Service Deep Dive",
+        "topics": [
+          "Workspaces and Apps",
+          "Dataflows and Scheduled Refresh",
+          "Collaboration Features"
+        ]
+      },
+      {
+        "title": "Power BI Mobile and Embedded",
+        "topics": [
+          "Creating Mobile Views",
+          "Introduction to Power BI Embedded",
+          "Use Cases"
+        ]
+      },
+      {
+        "title": "Real-World Case Study",
+        "topics": [
+          "Finance Dashboard",
+          "HR Analytics Dashboard",
+          "Sales Performance Dashboard"
+        ]
+      },
+      {
+        "title": "Capstone Project",
+        "topics": [
+          "End-to-End Project with Real Dataset",
+          "Data Modeling, DAX, Visualization",
+          "Publishing and Sharing Reports"
+        ]
+      }
+    ],
+    "id": 27,
+    "slug": "power-bi-for-intermediate"
+  },
+  {
+    "status": "PUBLISH",
+    "title": "Power BI for Advanced",
+    "sort_description": "Learn enterprise-level Power BI: advanced DAX, security, performance optimization, deployment pipelines, paginated reports, AI visuals, and Azure integration.",
+    "categories": [
+      "Data Analytics",
+      "Business Intelligence"
+    ],
+    "level": "Advanced",
+    "language": [
+      "English",
+      "Hindi"
+    ],
+    "duration": 1,
+    "price": 4999.0,
+    "certificate": true,
+    "mode": "OFFLINE",
+    "course_type": "SINGLE",
+    "chapters": [
+      {
+        "title": "Review of Intermediate Concepts",
+        "topics": [
+          "Quick recap of DAX, Modeling, and RLS",
+          "Enterprise requirements in Power BI"
+        ]
+      },
+      {
+        "title": "Advanced DAX Techniques",
+        "topics": [
+          "Context Transition in DAX",
+          "Advanced Time Intelligence",
+          "Parent-Child Hierarchies"
+        ]
+      },
+      {
+        "title": "Security in Power BI",
+        "topics": [
+          "Row-Level Security (Advanced)",
+          "Object-Level Security",
+          "Dynamic Security Implementation"
+        ]
+      },
+      {
+        "title": "Performance Tuning & Optimization",
+        "topics": [
+          "Optimizing DAX Queries",
+          "Aggregations and Incremental Refresh",
+          "Performance Analyzer Tool"
+        ]
+      },
+      {
+        "title": "Deployment Pipelines",
+        "topics": [
+          "What are Deployment Pipelines?",
+          "Dev-Test-Prod Lifecycle",
+          "Best Practices for Version Control"
+        ]
+      },
+      {
+        "title": "Paginated Reports",
+        "topics": [
+          "Introduction to Paginated Reports",
+          "SSRS and Power BI Integration",
+          "Creating Pixel-Perfect Reports"
+        ]
+      },
+      {
+        "title": "AI and Advanced Analytics",
+        "topics": [
+          "AI Visuals in Power BI",
+          "Q&A Visual (Natural Language Queries)",
+          "Cognitive Services Integration"
+        ]
+      },
+      {
+        "title": "Integration with Azure",
+        "topics": [
+          "Connecting to Azure SQL Database",
+          "Azure Synapse Analytics",
+          "Power BI and Azure Machine Learning"
+        ]
+      },
+      {
+        "title": "Collaboration and Governance",
+        "topics": [
+          "Workspace Roles & Governance",
+          "Data Lineage & Impact Analysis",
+          "Enterprise Deployment Strategies"
+        ]
+      },
+      {
+        "title": "Real-World Advanced Projects",
+        "topics": [
+          "Enterprise Financial Reporting",
+          "Customer Segmentation Dashboard",
+          "Supply Chain & Inventory Dashboard"
+        ]
+      },
+      {
+        "title": "Capstone Project",
+        "topics": [
+          "Full Enterprise BI Solution",
+          "Advanced DAX + Security + Azure Integration",
+          "Deployment Pipeline Implementation"
+        ]
+      }
+    ],
+    "id": 28,
+    "slug": "power-bi-for-advanced"
+  },
+  {
+    "status": "PUBLISH",
+    "title": "Data Analysis - Basics & Pandas",
+    "sort_description": "Learn Python for data analysis with Jupyter Notebook, NumPy, and Pandas basics. Focus on data manipulation and exploratory data analysis.",
+    "categories": [
+      "Programming",
+      "Data Analysis",
+      "Python"
+    ],
+    "level": "Beginner",
+    "language": [
+      "English",
+      "Hindi"
+    ],
+    "duration": 1,
+    "price": 1499.0,
+    "certificate": true,
+    "mode": "OFFLINE",
+    "course_type": "SINGLE",
+    "chapters": [
+      {
+        "title": "Introduction & Setup",
+        "topics": [
+          "Installing Python & Anaconda",
+          "Jupyter Notebook Overview",
+          "Python Basics Recap"
+        ]
+      },
+      {
+        "title": "NumPy Basics",
+        "topics": [
+          "Arrays & Operations",
+          "Indexing & Slicing",
+          "Mathematical Functions"
+        ]
+      },
+      {
+        "title": "Pandas Introduction",
+        "topics": [
+          "Series & DataFrames",
+          "Reading/Writing CSV, Excel",
+          "Basic Data Inspection"
+        ]
+      },
+      {
+        "title": "Data Cleaning & Transformation",
+        "topics": [
+          "Handling Missing Values",
+          "Renaming Columns",
+          "Filtering & Sorting Data"
+        ]
+      },
+      {
+        "title": "Exploratory Data Analysis",
+        "topics": [
+          "Descriptive Statistics",
+          "Basic Aggregations",
+          "Grouping Data"
+        ]
+      },
+      {
+        "title": "Mini Project",
+        "topics": [
+          "Analyze Sales Dataset",
+          "Perform Cleaning & Summary",
+          "Generate Insights"
+        ]
+      }
+    ],
+    "id": 29,
+    "slug": "data-analysis--basics--pandas"
+  },
+  {
+    "status": "PUBLISH",
+    "title": "Data Analysis - Visualization & Statistics",
+    "sort_description": "Learn data visualization in Python using Matplotlib & Seaborn, and apply basic statistical concepts for data analysis.",
+    "categories": [
+      "Programming",
+      "Data Analysis",
+      "Python"
+    ],
+    "level": "Intermediate",
+    "language": [
+      "English",
+      "Hindi"
+    ],
+    "duration": 1,
+    "price": 1499.0,
+    "certificate": true,
+    "mode": "OFFLINE",
+    "course_type": "SINGLE",
+    "chapters": [
+      {
+        "title": "Review of Pandas & NumPy",
+        "topics": [
+          "Recap of DataFrames & Arrays",
+          "Basic Data Manipulation"
+        ]
+      },
+      {
+        "title": "Matplotlib Basics",
+        "topics": [
+          "Line, Bar, and Scatter Plots",
+          "Customizing Charts",
+          "Subplots & Figure Size"
+        ]
+      },
+      {
+        "title": "Seaborn for Data Visualization",
+        "topics": [
+          "Distribution Plots",
+          "Categorical Plots",
+          "Heatmaps & Pairplots"
+        ]
+      },
+      {
+        "title": "Data Cleaning Recap & Advanced Techniques",
+        "topics": [
+          "Handling Duplicates",
+          "Dealing with Outliers",
+          "Feature Engineering Basics"
+        ]
+      },
+      {
+        "title": "Statistics for Data Analysis",
+        "topics": [
+          "Descriptive Statistics",
+          "Correlation & Covariance",
+          "Introduction to Probability"
+        ]
+      },
+      {
+        "title": "Mini Project",
+        "topics": [
+          "Visualize Sales Dataset",
+          "Apply Descriptive Stats & Charts",
+          "Prepare Insights Report"
+        ]
+      }
+    ],
+    "id": 30,
+    "slug": "data-analysis--visualization--statistics"
+  },
+  {
+    "status": "PUBLISH",
+    "title": "Data Analysis - Advanced Pandas & ML Basics",
+    "sort_description": "Learn advanced data manipulation in Pandas, and get introduced to machine learning concepts with scikit-learn.",
+    "categories": [
+      "Programming",
+      "Data Analysis",
+      "Python"
+    ],
+    "level": "Advanced",
+    "language": [
+      "English",
+      "Hindi"
+    ],
+    "duration": 1,
+    "price": 1499.0,
+    "certificate": true,
+    "mode": "OFFLINE",
+    "course_type": "SINGLE",
+    "chapters": [
+      {
+        "title": "Advanced Pandas Techniques",
+        "topics": [
+          "MultiIndex DataFrames",
+          "Pivot Tables & Crosstabs",
+          "Merging, Joining, Concatenation"
+        ]
+      },
+      {
+        "title": "Time Series Data",
+        "topics": [
+          "DateTime Index",
+          "Resampling & Frequency Conversion",
+          "Time Series Plotting"
+        ]
+      },
+      {
+        "title": "Introduction to Machine Learning",
+        "topics": [
+          "What is Machine Learning?",
+          "Supervised vs Unsupervised Learning",
+          "Data Preparation for ML"
+        ]
+      },
+      {
+        "title": "Scikit-Learn Basics",
+        "topics": [
+          "Train/Test Split",
+          "Linear Regression",
+          "Evaluation Metrics"
+        ]
+      },
+      {
+        "title": "Feature Engineering & Scaling",
+        "topics": [
+          "Encoding Categorical Variables",
+          "Feature Scaling (Standardization, Normalization)",
+          "Handling Missing Data"
+        ]
+      },
+      {
+        "title": "Capstone Project",
+        "topics": [
+          "Analyze Real Dataset",
+          "Data Cleaning & Transformation",
+          "Visualization & Simple ML Model"
+        ]
+      }
+    ],
+    "id": 31,
+    "slug": "data-analysis--advanced-pandas--ml-basics"
+  },
+  {
+    "status": "PUBLISH",
+    "title": "Tableau for Beginners",
+    "sort_description": "Learn Tableau from scratch: connect to data, create visualizations, dashboards, and interactive reports.",
+    "categories": [
+      "Data Analytics",
+      "Business Intelligence"
+    ],
+    "level": "Beginner",
+    "language": [
+      "English",
+      "Hindi"
+    ],
+    "duration": 1,
+    "price": 2999.0,
+    "certificate": true,
+    "mode": "OFFLINE",
+    "course_type": "SINGLE",
+    "chapters": [
+      {
+        "title": "Introduction to Tableau",
+        "topics": [
+          "What is Tableau?",
+          "Installing Tableau Desktop",
+          "Tableau Interface Overview"
+        ]
+      },
+      {
+        "title": "Connecting to Data Sources",
+        "topics": [
+          "Connecting Excel, CSV, SQL Databases",
+          "Data Types and Data Roles",
+          "Importing and Refreshing Data"
+        ]
+      },
+      {
+        "title": "Basic Visualizations",
+        "topics": [
+          "Bar, Line, Pie Charts",
+          "Tables and Text Tables",
+          "Highlighting & Sorting"
+        ]
+      },
+      {
+        "title": "Advanced Visualizations",
+        "topics": [
+          "Maps and Geospatial Visuals",
+          "Heatmaps & Tree Maps",
+          "Scatter Plots & Bullet Charts"
+        ]
+      },
+      {
+        "title": "Filters, Groups, and Sets",
+        "topics": [
+          "Applying Filters",
+          "Creating Groups",
+          "Using Sets"
+        ]
+      },
+      {
+        "title": "Calculated Fields & Parameters",
+        "topics": [
+          "Creating Calculated Fields",
+          "Using Parameters for Interactivity",
+          "Basic Calculations"
+        ]
+      },
+      {
+        "title": "Dashboards and Stories",
+        "topics": [
+          "Creating Dashboards",
+          "Adding Sheets to Dashboard",
+          "Interactive Actions and Layout"
+        ]
+      },
+      {
+        "title": "Publishing and Sharing",
+        "topics": [
+          "Publishing to Tableau Server / Online",
+          "Sharing Dashboards",
+          "Exporting to PDF/PowerPoint"
+        ]
+      },
+      {
+        "title": "Capstone Project",
+        "topics": [
+          "Create a Sales Dashboard",
+          "Apply Filters, Sets, and Calculations",
+          "Design an Interactive Story"
+        ]
+      }
+    ],
+    "id": 32,
+    "slug": "tableau-for-beginners"
+  },
+  {
+    "status": "PUBLISH",
+    "title": "Django for Backend Development",
+    "sort_description": "Learn backend development with Python Django using the latest version. Build web apps, REST APIs, implement authentication, and deploy projects.",
+    "categories": [
+      "Programming",
+      "Web Development",
+      "Backend Development",
+      "Python",
+      "Django"
+    ],
+    "level": "Intermediate",
+    "language": [
+      "English",
+      "Hindi"
+    ],
+    "duration": 2,
+    "price": 5999.0,
+    "certificate": true,
+    "mode": "BOTH",
+    "course_type": "SINGLE",
+    "chapters": [
+      {
+        "title": "Introduction to Django",
+        "topics": [
+          "Installing Django & Environment Setup",
+          "Django Project Structure",
+          "Creating First Django App"
+        ]
+      },
+      {
+        "title": "Models & Database",
+        "topics": [
+          "Creating Models",
+          "Field Types & Relationships",
+          "Migrations & ORM Queries"
+        ]
+      },
+      {
+        "title": "Admin & Authentication",
+        "topics": [
+          "Django Admin Site",
+          "User Model & Permissions",
+          "Groups and Roles"
+        ]
+      },
+      {
+        "title": "Django Forms & Templates",
+        "topics": [
+          "Django Forms & Validation",
+          "Template Engine Basics",
+          "Template Inheritance"
+        ]
+      },
+      {
+        "title": "Views & URL Routing",
+        "topics": [
+          "Function-Based Views (FBV)",
+          "Class-Based Views (CBV)",
+          "URL Dispatcher and Routing"
+        ]
+      },
+      {
+        "title": "Django REST Framework Basics",
+        "topics": [
+          "Serializers",
+          "APIView & ViewSet",
+          "Routing APIs with DRF"
+        ]
+      },
+      {
+        "title": "Middleware & Security",
+        "topics": [
+          "Custom Middleware",
+          "CSRF Protection",
+          "Security Best Practices"
+        ]
+      },
+      {
+        "title": "Advanced Django Features",
+        "topics": [
+          "Signals & Model Managers",
+          "Query Optimization",
+          "Django Template Filters & Tags"
+        ]
+      },
+      {
+        "title": "Testing & Debugging",
+        "topics": [
+          "Unit Testing",
+          "Debugging Tips",
+          "Django Debug Toolbar"
+        ]
+      },
+      {
+        "title": "Deployment",
+        "topics": [
+          "Deploying to Heroku",
+          "Static & Media Files",
+          "Environment Variables & Secrets"
+        ]
+      },
+      {
+        "title": "Capstone Project",
+        "topics": [
+          "Full Web Application",
+          "CRUD Operations",
+          "Authentication & API Integration"
+        ]
+      }
+    ],
+    "id": 33,
+    "slug": "django-for-backend-development"
+  },
+  {
+    "status": "PUBLISH",
+    "title": "ORM Concepts for Backend Development",
+    "sort_description": "Master Django ORM and understand SQLAlchemy basics. Learn models, relationships, advanced queries, and database optimization for backend applications.",
+    "categories": [
+      "Programming",
+      "Web Development",
+      "Backend Development",
+      "Python",
+      "Django"
+    ],
+    "level": "Intermediate",
+    "language": [
+      "English",
+      "Hindi"
+    ],
+    "duration": 1,
+    "price": 2999.0,
+    "certificate": true,
+    "mode": "BOTH",
+    "course_type": "SINGLE",
+    "chapters": [
+      {
+        "title": "Introduction to ORM",
+        "topics": [
+          "What is ORM?",
+          "Benefits of ORM",
+          "Overview of Django ORM and SQLAlchemy"
+        ]
+      },
+      {
+        "title": "Django Models & Fields",
+        "topics": [
+          "Creating Models",
+          "Field Types and Options",
+          "Migrations and Database Sync"
+        ]
+      },
+      {
+        "title": "Database Relationships",
+        "topics": [
+          "One-to-One Relationship",
+          "One-to-Many Relationship",
+          "Many-to-Many Relationship"
+        ]
+      },
+      {
+        "title": "Querying Data",
+        "topics": [
+          "Filtering & Ordering",
+          "Get, Create, Update, Delete",
+          "Chaining Queries"
+        ]
+      },
+      {
+        "title": "Advanced Queries",
+        "topics": [
+          "Aggregation & Annotation",
+          "Q Objects & Complex Lookups",
+          "Raw SQL Queries"
+        ]
+      },
+      {
+        "title": "Query Optimization",
+        "topics": [
+          "Select_related & Prefetch_related",
+          "Reducing Database Hits",
+          "Efficient Query Patterns"
+        ]
+      },
+      {
+        "title": "Transactions & Atomic Operations",
+        "topics": [
+          "Atomic Decorator",
+          "Handling Rollbacks",
+          "Best Practices"
+        ]
+      },
+      {
+        "title": "SQLAlchemy Basics (Optional)",
+        "topics": [
+          "Creating Models",
+          "Session & Queries",
+          "Comparing with Django ORM"
+        ]
+      },
+      {
+        "title": "Capstone Project",
+        "topics": [
+          "Database Modeling for Backend App",
+          "Implementing Relationships",
+          "Advanced Queries & Optimization"
+        ]
+      }
+    ],
+    "id": 34,
+    "slug": "orm-concepts-for-backend-development"
+  },
+  {
+    "status": "PUBLISH",
+    "title": "REST API Development with Django",
+    "sort_description": "Learn to build RESTful APIs using Django REST Framework. Master serializers, authentication, permissions, filtering, and deploy production-ready APIs.",
+    "categories": [
+      "Programming",
+      "Web Development",
+      "Backend Development",
+      "Python",
+      "Django",
+      "REST API"
+    ],
+    "level": "Intermediate",
+    "language": [
+      "English",
+      "Hindi"
+    ],
+    "duration": 1,
+    "price": 3999.0,
+    "certificate": true,
+    "mode": "BOTH",
+    "course_type": "SINGLE",
+    "chapters": [
+      {
+        "title": "Introduction to REST APIs",
+        "topics": [
+          "REST Principles",
+          "HTTP Methods Overview",
+          "Status Codes"
+        ]
+      },
+      {
+        "title": "Django REST Framework Basics",
+        "topics": [
+          "Installing DRF",
+          "Serializers Overview",
+          "Function-Based Views & Class-Based Views"
+        ]
+      },
+      {
+        "title": "CRUD Operations",
+        "topics": [
+          "Create, Retrieve, Update, Delete APIs",
+          "Endpoints for Models",
+          "URL Routing"
+        ]
+      },
+      {
+        "title": "Authentication & Permissions",
+        "topics": [
+          "Token Authentication",
+          "JWT Authentication",
+          "Custom Permissions"
+        ]
+      },
+      {
+        "title": "Filtering, Searching, Pagination",
+        "topics": [
+          "Filtering API results",
+          "Search & Query Parameters",
+          "Pagination Techniques"
+        ]
+      },
+      {
+        "title": "Nested Serializers & Relations",
+        "topics": [
+          "One-to-One, One-to-Many, Many-to-Many",
+          "Nested Serializers",
+          "Handling Related Objects"
+        ]
+      },
+      {
+        "title": "Versioning & Throttling",
+        "topics": [
+          "API Versioning Strategies",
+          "Rate Limiting & Throttling",
+          "Best Practices"
+        ]
+      },
+      {
+        "title": "Testing APIs",
+        "topics": [
+          "Unit Testing API Endpoints",
+          "Using Django Test Client",
+          "Automated API Tests"
+        ]
+      },
+      {
+        "title": "API Documentation",
+        "topics": [
+          "Swagger UI Integration",
+          "Redoc Documentation",
+          "Documenting API Endpoints"
+        ]
+      },
+      {
+        "title": "Capstone Project",
+        "topics": [
+          "Build REST API for E-commerce App",
+          "CRUD, Authentication, Filtering, Pagination",
+          "Test & Document API"
+        ]
+      }
+    ],
+    "id": 35,
+    "slug": "rest-api-development-with-django"
+  },
+  {
+    "status": "PUBLISH",
+    "title": "Authentication & Authorization for Backend",
+    "sort_description": "Learn Django authentication and authorization techniques including JWT, OAuth2, session-based auth, and role-based access control for secure backend development.",
+    "categories": [
+      "Programming",
+      "Web Development",
+      "Backend Development",
+      "Python",
+      "Django",
+      "Security"
+    ],
+    "level": "Intermediate",
+    "language": [
+      "English",
+      "Hindi"
+    ],
+    "duration": 1,
+    "price": 3499.0,
+    "certificate": true,
+    "mode": "BOTH",
+    "course_type": "SINGLE",
+    "chapters": [
+      {
+        "title": "Introduction to Auth Systems",
+        "topics": [
+          "Authentication vs Authorization",
+          "Security Concepts Overview",
+          "Common Threats and Best Practices"
+        ]
+      },
+      {
+        "title": "Django Built-in Auth",
+        "topics": [
+          "User Model",
+          "Groups and Permissions",
+          "Custom User Model"
+        ]
+      },
+      {
+        "title": "Session-based Authentication",
+        "topics": [
+          "Login & Logout",
+          "Session Management",
+          "Remember Me & Timeout"
+        ]
+      },
+      {
+        "title": "Token-based Authentication",
+        "topics": [
+          "Generating Tokens",
+          "Token Validation",
+          "Securing API Endpoints"
+        ]
+      },
+      {
+        "title": "JWT Authentication",
+        "topics": [
+          "JWT Structure",
+          "Encoding & Decoding Tokens",
+          "Integrating JWT with Django REST Framework"
+        ]
+      },
+      {
+        "title": "OAuth2 Basics",
+        "topics": [
+          "OAuth2 Protocol Overview",
+          "Authorization Code Flow",
+          "Integrating OAuth2 Providers"
+        ]
+      },
+      {
+        "title": "Role-based Access Control (RBAC)",
+        "topics": [
+          "Defining Roles & Permissions",
+          "Restricting Access to Views/API",
+          "Dynamic Permission Checks"
+        ]
+      },
+      {
+        "title": "Security Best Practices",
+        "topics": [
+          "Password Hashing & Storage",
+          "CSRF & XSS Protection",
+          "API Rate Limiting & Monitoring"
+        ]
+      },
+      {
+        "title": "Capstone Project",
+        "topics": [
+          "Build Secure Login System",
+          "JWT & Session-based Auth",
+          "Protect API Endpoints with Roles"
+        ]
+      }
+    ],
+    "id": 36,
+    "slug": "authentication--authorization-for-backend"
+  },
+  {
+    "status": "PUBLISH",
+    "title": "Deployment & Hosting for Backend",
+    "sort_description": "Learn how to deploy Python Django backend applications to production using Heroku, AWS, or Digital Ocean. Manage databases, static files, security, and monitoring.",
+    "categories": [
+      "Programming",
+      "Web Development",
+      "Backend Development",
+      "Python",
+      "Django",
+      "Deployment"
+    ],
+    "level": "Intermediate",
+    "language": [
+      "English",
+      "Hindi"
+    ],
+    "duration": 1,
+    "price": 2999.0,
+    "certificate": true,
+    "mode": "BOTH",
+    "course_type": "SINGLE",
+    "chapters": [
+      {
+        "title": "Introduction to Deployment",
+        "topics": [
+          "Development vs Production",
+          "Deployment Concepts",
+          "Choosing Hosting Platform"
+        ]
+      },
+      {
+        "title": "Environment Setup",
+        "topics": [
+          "Virtual Environments",
+          "Requirements.txt & Dependency Management",
+          "Environment Variables"
+        ]
+      },
+      {
+        "title": "Web Servers Overview",
+        "topics": [
+          "Gunicorn Basics",
+          "Nginx Basics",
+          "Connecting Web Server to Django"
+        ]
+      },
+      {
+        "title": "Hosting Platforms",
+        "topics": [
+          "Deploying on Heroku",
+          "Deploying on AWS",
+          "Deploying on Digital Ocean"
+        ]
+      },
+      {
+        "title": "Database Configuration",
+        "topics": [
+          "Production Database Setup",
+          "Migrations on Production",
+          "Database Backup & Restore"
+        ]
+      },
+      {
+        "title": "Static & Media Files",
+        "topics": [
+          "Serving Static Files",
+          "Serving Media Files",
+          "Storage Options"
+        ]
+      },
+      {
+        "title": "Security & Optimization",
+        "topics": [
+          "SSL Certificates",
+          "Debug Mode Off",
+          "Logging & Error Tracking"
+        ]
+      },
+      {
+        "title": "Monitoring & Maintenance",
+        "topics": [
+          "Application Monitoring Tools",
+          "Scheduled Tasks & Cron Jobs",
+          "Regular Backups"
+        ]
+      },
+      {
+        "title": "Capstone Project",
+        "topics": [
+          "Deploy Full Django Backend Project",
+          "Connect Database & Static Files",
+          "Secure & Optimize Production Application"
+        ]
+      }
+    ],
+    "id": 37,
+    "slug": "deployment--hosting-for-backend"
+  },
+  {
+    "status": "PUBLISH",
+    "title": "Advanced Backend Concepts",
+    "sort_description": "Master advanced backend concepts including middleware, caching, logging, performance optimization, asynchronous tasks, security, and scalability in Django.",
+    "categories": [
+      "Programming",
+      "Web Development",
+      "Backend Development",
+      "Python",
+      "Django",
+      "Advanced"
+    ],
+    "level": "Advanced",
+    "language": [
+      "English",
+      "Hindi"
+    ],
+    "duration": 1,
+    "price": 3499.0,
+    "certificate": true,
+    "mode": "BOTH",
+    "course_type": "SINGLE",
+    "chapters": [
+      {
+        "title": "Custom Middleware",
+        "topics": [
+          "Understanding Middleware in Django",
+          "Creating Custom Middleware",
+          "Request & Response Processing"
+        ]
+      },
+      {
+        "title": "Caching Strategies",
+        "topics": [
+          "Query Caching",
+          "View Caching",
+          "Using Redis for Cache"
+        ]
+      },
+      {
+        "title": "Logging & Monitoring",
+        "topics": [
+          "Django Logging Configuration",
+          "Error Tracking with Sentry",
+          "Monitoring Production App"
+        ]
+      },
+      {
+        "title": "Performance Optimization",
+        "topics": [
+          "Optimizing Queries",
+          "select_related & prefetch_related",
+          "Reducing Database Hits"
+        ]
+      },
+      {
+        "title": "Asynchronous Tasks",
+        "topics": [
+          "Introduction to Celery",
+          "Background Jobs",
+          "Task Scheduling & Queues"
+        ]
+      },
+      {
+        "title": "Security Best Practices",
+        "topics": [
+          "HTTPS & Secure Headers",
+          "Input Validation",
+          "Preventing Common Attacks"
+        ]
+      },
+      {
+        "title": "Scalability Concepts",
+        "topics": [
+          "Load Balancing",
+          "Database Optimization",
+          "Horizontal & Vertical Scaling"
+        ]
+      },
+      {
+        "title": "Advanced Testing & Debugging",
+        "topics": [
+          "Profiling Django Applications",
+          "Unit & Integration Testing",
+          "Debugging Tips & Tools"
+        ]
+      },
+      {
+        "title": "Capstone Project",
+        "topics": [
+          "Optimize a Django Backend Project",
+          "Implement Caching & Logging",
+          "Add Asynchronous Tasks & Security Measures"
+        ]
+      }
+    ],
+    "id": 38,
+    "slug": "advanced-backend-concepts"
+  },
+  {
+    "status": "PUBLISH",
+    "title": "MS Office - 4 Months",
+    "sort_description": "Complete MS Office course covering MS Word, MS PowerPoint, and MS Excel. Learn essential office productivity tools with hands-on projects.",
+    "categories": [
+      "Productivity Tools",
+      "MS Office"
+    ],
+    "level": "Beginner to Intermediate",
+    "language": [
+      "English",
+      "Hindi"
+    ],
+    "duration": 4,
+    "price": 2999.0,
+    "certificate": true,
+    "mode": "OFFLINE",
+    "course_type": "COMBO",
+    "id": 39,
+    "slug": "ms-office--4-months"
+  },
+  {
+    "status": "PUBLISH",
+    "title": "Web Designing Complete Pathway - 4 Months",
+    "sort_description": "Master web designing from basics to advanced: HTML, CSS, Responsive Design, and Bootstrap. Build modern, responsive, and professional websites with hands-on projects.",
+    "categories": [
+      "Web Development",
+      "Frontend"
+    ],
+    "level": "Beginner",
+    "language": [
+      "English",
+      "Hindi"
+    ],
+    "duration": 4,
+    "price": 4999.0,
+    "certificate": true,
+    "mode": "ONLINE",
+    "course_type": "COMBO",
+    "id": 40,
+    "slug": "web-designing-complete-pathway--4-months"
+  },
+  {
+    "status": "PUBLISH",
+    "title": "MS Word Complete Pathway (Beginner to Advanced) - 2 Months",
+    "sort_description": "Learn MS Word from basics to advanced: interface, formatting, tables, images, page layout, mail merge, macros, templates, collaboration tools, and real-world projects.",
+    "categories": [
+      "Computer Basics",
+      "MS Office",
+      "Word Processing"
+    ],
+    "level": "Intermediate",
+    "language": [
+      "English",
+      "Hindi"
+    ],
+    "duration": 2,
+    "price": 3498.0,
+    "certificate": true,
+    "mode": "ONLINE",
+    "course_type": "COMBO",
+    "id": 41,
+    "slug": "ms-word-complete-pathway-beginner-to-advanced--2-months"
+  },
+  {
+    "status": "PUBLISH",
+    "title": "Python Backend Development Mastery Combo - 8 Months",
+    "sort_description": "Become a professional Python Backend Developer with this 8-month program covering Django, ORM, REST APIs, Authentication, Deployment, and Advanced Backend Concepts.",
+    "categories": [
+      "Programming",
+      "Web Development",
+      "Backend Development",
+      "Python",
+      "Django"
+    ],
+    "level": "Advanced",
+    "language": [
+      "English",
+      "Hindi"
+    ],
+    "duration": 8,
+    "price": 39999.0,
+    "certificate": true,
+    "mode": "BOTH",
+    "course_type": "COMBO",
+    "id": 42,
+    "slug": "python-backend-development-mastery-combo--8-months"
+  },
+  {
+    "status": "PUBLISH",
+    "title": "Data Analysis Mastery Combo Course - 12 Months",
+    "sort_description": "Become a professional Data Analyst with this complete 12-month program covering Python, Excel, SQL, Power BI, and Tableau. Hands-on projects, real datasets, and industry-ready skills included.",
+    "categories": [
+      "Data Analytics",
+      "Business Intelligence",
+      "Python",
+      "SQL",
+      "Excel",
+      "Power BI",
+      "Tableau"
+    ],
+    "level": "Advanced",
+    "language": [
+      "English",
+      "Hindi"
+    ],
+    "duration": 12,
+    "price": 32999.0,
+    "certificate": true,
+    "mode": "BOTH",
+    "course_type": "COMBO",
+    "id": 43,
+    "slug": "data-analysis-mastery-combo-course--12-months"
+  },
+  {
+    "status": "PUBLISH",
+    "title": "Power BI Mastery (Beginner to Advanced) - 3 Months",
+    "sort_description": "Become a Power BI expert with this complete package covering Beginners, Intermediate, and Advanced levels. Learn DAX, data modeling, dashboards, security, and enterprise BI solutions.",
+    "categories": [
+      "Data Analytics",
+      "Business Intelligence"
+    ],
+    "level": "Beginner to Advanced",
+    "language": [
+      "English",
+      "Hindi"
+    ],
+    "duration": 1,
+    "price": 9999.0,
+    "certificate": true,
+    "mode": "OFFLINE",
+    "course_type": "COMBO",
+    "id": 44,
+    "slug": "power-bi-mastery-beginner-to-advanced--3-months"
+  },
+  {
+    "status": "PUBLISH",
+    "title": "MS Excel (Beginners to Advanced) - 6 Months",
+    "sort_description": "A complete Excel learning pathway from basics to advanced features including formulas, pivot tables, dashboards, and automation.",
+    "categories": [
+      "Productivity Tools",
+      "MS Office"
+    ],
+    "level": "Beginners to Advanced",
+    "language": [
+      "English",
+      "Hindi"
+    ],
+    "duration": 6,
+    "price": 3999.0,
+    "certificate": true,
+    "mode": "OFFLINE",
+    "course_type": "COMBO",
+    "id": 45,
+    "slug": "ms-excel-beginners-to-advanced--6-months"
+  },
+  {
+    "status": "PUBLISH",
+    "title": "Frontend Development - 8 Months",
+    "sort_description": "Master Frontend Development from scratch to advanced level. Learn HTML, CSS, Responsive Design, JavaScript, Bootstrap, React, and GitHub for real-world projects.",
+    "categories": [
+      "Web Development",
+      "Frontend",
+      "JavaScript",
+      "React.js"
+    ],
+    "level": "Beginner to Advanced",
+    "language": [
+      "English",
+      "Hindi"
+    ],
+    "duration": 8,
+    "price": 9999.0,
+    "certificate": true,
+    "mode": "BOTH",
+    "course_type": "COMBO",
+    "id": 46,
+    "slug": "frontend-development--8-months"
+  }
+]

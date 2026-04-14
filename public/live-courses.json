@@ -1,0 +1,120 @@
+[
+  {
+    "id": 1,
+    "title": "Live Python Bootcamp",
+    "slug": "live-python-bootcamp",
+    "sort_description": "A hands-on, live instructor-led Python course designed for beginners who want to learn coding fast.",
+    "description": "Build a complete understanding of Python through live sessions, real projects, and Q&amp;A support.",
+    "instructor_name": "MSK Instructor",
+    "featured_image_url": "https://placehold.co/600x400/0f172a/ffffff?text=Live+Python+Bootcamp",
+    "price": 1499,
+    "discount": 20,
+    "mode": "ONLINE",
+    "level": "Beginner",
+    "duration": 1,
+    "class_duration": 2,
+    "has_certificate": true,
+    "course_type": "SINGLE",
+    "live_status": "upcoming",
+    "start_time": "2026-05-10T18:00:00Z",
+    "end_time": "2026-06-10T20:00:00Z",
+    "next_batch": {
+      "start_datetime": "2026-05-10T18:00:00Z",
+      "end_datetime": "2026-06-10T20:00:00Z"
+    },
+    "chapters": [
+      {
+        "title": "Day 1: Setup & Fundamentals",
+        "topics": [
+          { "title": "Python installation" },
+          { "title": "Syntax and variables" },
+          { "title": "Basic data types" }
+        ]
+      },
+      {
+        "title": "Day 2: Control Flow",
+        "topics": [
+          { "title": "If statements" },
+          { "title": "Loops" },
+          { "title": "Functions" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Live Full-Stack Web Development",
+    "slug": "live-full-stack-web-development",
+    "sort_description": "Learn front-end and back-end development in a live batch with real project work.",
+    "description": "Cover HTML, CSS, JavaScript, React, Node.js, and deployment over a structured live session series.",
+    "instructor_name": "MSK Full-Stack Team",
+    "featured_image_url": "https://placehold.co/600x400/0f172a/ffffff?text=Live+Full+Stack",
+    "price": 1999,
+    "discount": 15,
+    "mode": "ONLINE",
+    "level": "Intermediate",
+    "duration": 2,
+    "class_duration": 3,
+    "has_certificate": true,
+    "course_type": "SINGLE",
+    "live_status": "open",
+    "start_time": "2026-05-15T17:00:00Z",
+    "end_time": "2026-07-15T20:00:00Z",
+    "next_batch": {
+      "start_datetime": "2026-05-15T17:00:00Z",
+      "end_datetime": "2026-07-15T20:00:00Z"
+    },
+    "chapters": [
+      {
+        "title": "Week 1: Front-end Basics",
+        "topics": [
+          { "title": "HTML structure" },
+          { "title": "CSS layout" },
+          { "title": "Responsive design" }
+        ]
+      },
+      {
+        "title": "Week 2: React and APIs",
+        "topics": [
+          { "title": "React components" },
+          { "title": "State & props" },
+          { "title": "API integration" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Live UI/UX Design Sprint",
+    "slug": "live-ui-ux-design-sprint",
+    "sort_description": "Join a live classroom focused on modern UI design, prototyping, and portfolio-ready projects.",
+    "description": "Learn design thinking, Figma workflows, and branding through interactive live sessions and guided critiques.",
+    "instructor_name": "MSK Design Studio",
+    "featured_image_url": "https://placehold.co/600x400/0f172a/ffffff?text=Live+UI+UX",
+    "price": 1299,
+    "discount": 10,
+    "mode": "ONLINE",
+    "level": "Beginner",
+    "duration": 1,
+    "class_duration": 2,
+    "has_certificate": true,
+    "course_type": "SINGLE",
+    "live_status": "starting_soon",
+    "start_time": "2026-06-01T19:00:00Z",
+    "end_time": "2026-07-01T21:00:00Z",
+    "next_batch": {
+      "start_datetime": "2026-06-01T19:00:00Z",
+      "end_datetime": "2026-07-01T21:00:00Z"
+    },
+    "chapters": [
+      {
+        "title": "Session 1: Fundamentals of Design",
+        "topics": [
+          { "title": "User research" },
+          { "title": "Wireframing" },
+          { "title": "Visual hierarchy" }
+        ]
+      }
+    ]
+  }
+]
