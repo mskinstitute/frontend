@@ -1,11 +1,8 @@
-// src/main.jsx
 import './index.css';
 import App from './App';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { ThemeProvider } from './context/ThemeContext';
-import { AuthProvider } from './context/AuthContext';
-import { BackendStatusProvider } from './context/BackendStatusContext';
 import { BrowserRouter } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import ScrollToTop from './components/ScrollToTop';
@@ -18,13 +15,9 @@ if (rootElement) {
       <HelmetProvider>
         <BrowserRouter>
           <ScrollToTop />
-          <AuthProvider>
-            <BackendStatusProvider>
-              <ThemeProvider>
-                <App />
-              </ThemeProvider>
-            </BackendStatusProvider>
-          </AuthProvider>
+          <ThemeProvider>
+            <App />
+          </ThemeProvider>
         </BrowserRouter>
       </HelmetProvider>
     </React.StrictMode>

@@ -3,7 +3,6 @@ import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { Rocket, BookOpenCheck, GraduationCap, ArrowRight, Play, Users, Award, BookOpen, Radio, ChevronRight } from "lucide-react";
 import { ThemeContext } from '../context/ThemeContext';
-import Reviews from '../components/Reviews';
 import InstallPWAButton from '../components/InstallPWAButton';
 import codingImage from '../assets/laptop.webp';
 
@@ -268,13 +267,13 @@ const Home = () => {
             {/* View All Link */}
             <div className="text-center mt-12">
               <Link
-                to="/live-courses"
+                to="/courses"
                 className={`inline-flex items-center gap-2 px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 ${theme === 'dark'
                   ? 'bg-blue-600 hover:bg-blue-700 text-white shadow-lg hover:shadow-blue-500/25'
                   : 'bg-blue-600 hover:bg-blue-700 text-white shadow-lg hover:shadow-blue-500/25'
                   }`}
               >
-                View All Live Courses
+                Explore All Courses
                 <ChevronRight className="w-5 h-5" />
               </Link>
             </div>
@@ -435,13 +434,13 @@ const Home = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
               <Link
-                to="/register"
+                to="/courses"
                 className={`inline-flex items-center justify-center px-10 py-5 rounded-xl text-xl font-bold transition-all duration-300 transform hover:scale-105 shadow-xl min-w-[200px] ${theme === 'dark'
                   ? 'bg-white hover:bg-gray-50 text-slate-900 hover:text-slate-800 shadow-slate-900/40 hover:shadow-slate-900/60'
                   : 'bg-slate-900 hover:bg-slate-800 text-white hover:text-gray-100 shadow-slate-900/30 hover:shadow-slate-900/50'
                   }`}
               >
-                Register Now
+                Explore Courses
                 <ArrowRight className="w-6 h-6 ml-3" />
               </Link>
               <Link
