@@ -52,23 +52,28 @@ const Header = () => {
         </button>
       </div>
 
-      <div className={`md:hidden ${themeClasses}`}>
-        <div className="flex justify-around items-center py-3">
-          <Link to="/" className={`flex flex-col items-center gap-1 ${hoverTextClass}`}>
+      {/* Fixed Bottom Navigation - Mobile Only */}
+      <div className={`md:hidden fixed bottom-0 left-0 right-0 z-50 ${themeClasses} border-t shadow-[0_-4px_6px_-1px_rgba(0,0,0,0.1)]`}>
+        <div className="flex justify-around items-center py-2 pb-safe">
+          <Link to="/" className={`flex flex-col items-center gap-0.5 px-3 py-1 ${hoverTextClass}`}>
             <House className="h-5 w-5" />
-            <span className="text-xs">Home</span>
+            <span className="text-[10px]">Home</span>
           </Link>
-          <Link to="/courses" className={`flex flex-col items-center gap-1 ${hoverTextClass}`}>
+          <Link to="/courses" className={`flex flex-col items-center gap-0.5 px-3 py-1 ${hoverTextClass}`}>
             <GraduationCap className="h-5 w-5" />
-            <span className="text-xs">Courses</span>
+            <span className="text-[10px]">Courses</span>
           </Link>
-          <Link to="/about" className={`flex flex-col items-center gap-1 ${hoverTextClass}`}>
+          <Link to="/notes" className={`flex flex-col items-center gap-0.5 px-3 py-1 ${hoverTextClass}`}>
+            <Notebook className="h-5 w-5" />
+            <span className="text-[10px]">Notes</span>
+          </Link>
+          <Link to="/about" className={`flex flex-col items-center gap-0.5 px-3 py-1 ${hoverTextClass}`}>
             <Info className="h-5 w-5" />
-            <span className="text-xs">About</span>
+            <span className="text-[10px]">About</span>
           </Link>
-          <Link to="/contact" className={`flex flex-col items-center gap-1 ${hoverTextClass}`}>
+          <Link to="/contact" className={`flex flex-col items-center gap-0.5 px-3 py-1 ${hoverTextClass}`}>
             <Mail className="h-5 w-5" />
-            <span className="text-xs">Contact</span>
+            <span className="text-[10px]">Contact</span>
           </Link>
         </div>
       </div>

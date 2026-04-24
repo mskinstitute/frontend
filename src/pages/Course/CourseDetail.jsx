@@ -605,7 +605,7 @@ const CourseDetail = () => {
                     setActiveTab(tab);
                   }}
                   disabled={tab === 'overview' && !hasReadmeLink}
-                  className={`flex-1 py-4 px-6 text-sm font-medium tracking-wide transition-colors
+                  className={`flex-1 py-3 px-3 sm:py-4 sm:px-6 text-xs sm:text-sm font-medium tracking-wide transition-colors
                     ${tab === 'overview' && !hasReadmeLink
                       ? 'bg-gray-700 text-gray-500 cursor-not-allowed'
                       : activeTab === tab
@@ -619,7 +619,7 @@ const CourseDetail = () => {
             </div>
 
             {/* Tab Content */}
-            <div className="p-6">
+            <div className="p-3 sm:p-4 lg:p-6">
               {/* Overview Tab */}
               {activeTab === 'overview' && hasReadmeLink && (
                 <div className="space-y-8">

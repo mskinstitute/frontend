@@ -12,7 +12,7 @@ const App = () => {
     <div className="min-h-screen flex flex-col transition-colors duration-300">
       <Header />
 
-      <main className="flex-1">
+      <main className="flex-1 pb-16 md:pb-0">
         <Suspense fallback={<div className="min-h-screen flex items-center justify-center">Loading...</div>}>
           <Routes>
             {routes.map(({ path, element, children }) => (

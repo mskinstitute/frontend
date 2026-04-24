@@ -313,12 +313,12 @@ const LiveCourseDetailsNew = () => {
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Upcoming Batches */}
-        <div className="bg-gray-800 rounded-xl overflow-hidden shadow-xl p-6 mb-6">
-          <h2 className="text-2xl font-bold mb-4">Upcoming Batches</h2>
+        <div className="bg-gray-800 rounded-xl overflow-hidden shadow-xl p-4 sm:p-6 mb-6">
+          <h2 className="text-xl sm:text-2xl font-bold mb-4">Upcoming Batches</h2>
           <div className="space-y-4">
             {course.upcoming_batches && course.upcoming_batches.length > 0 ? (
               course.upcoming_batches.map((b) => (
-                <div key={b.id} className="flex items-center justify-between p-4 bg-gray-700/30 rounded-lg">
+                <div key={b.id} className="flex flex-col sm:flex-row sm:items-center justify-between p-4 bg-gray-700/30 rounded-lg gap-2">
                   <div>
                     <div className="font-medium">{b.batch_name || 'Batch'}</div>
                     <div className="text-sm text-gray-400">{b.start_datetime ? new Date(b.start_datetime).toLocaleString() : (b.start_date || 'TBA')}</div>
@@ -334,8 +334,8 @@ const LiveCourseDetailsNew = () => {
           </div>
         </div>
 
-        <div className="bg-gray-800 rounded-xl overflow-hidden shadow-xl p-6">
-          <h2 className="text-2xl font-bold mb-4">Course Curriculum</h2>
+        <div className="bg-gray-800 rounded-xl overflow-hidden shadow-xl p-4 sm:p-6">
+          <h2 className="text-xl sm:text-2xl font-bold mb-4">Course Curriculum</h2>
           <div className="space-y-4">
             {course.curriculum && course.curriculum.length > 0 ? (
               course.curriculum.map((chapter, idx) => (

@@ -232,7 +232,7 @@ const LiveCourseDetails = () => {
                       Price
                     </p>
                     <div className="flex items-center gap-3 mb-2">
-                      <span className={`text-4xl font-bold ${
+                      <span className={`text-3xl sm:text-4xl font-bold ${
                         theme === 'dark' ? 'text-green-400' : 'text-green-600'
                       }`}>
                         {discountedPrice}
@@ -467,7 +467,7 @@ const LiveCourseDetails = () => {
                 <button
                   key={tab}
                   onClick={() => setActiveTab(tab)}
-                  className={`flex-1 py-4 px-6 text-sm font-medium tracking-wide transition-colors duration-200 ${
+                  className={`flex-1 py-3 px-3 sm:py-4 sm:px-6 text-xs sm:text-sm font-medium tracking-wide transition-colors duration-200 ${
                     activeTab === tab
                       ? `bg-indigo-600 text-white`
                       : theme === 'dark'
@@ -481,7 +481,7 @@ const LiveCourseDetails = () => {
             </div>
 
             {/* Tab Content */}
-            <div className="p-8">
+            <div className="p-4 sm:p-6 lg:p-8">
               {activeTab === 'overview' && (
                 <div className="space-y-10">
                   {/* About Course */}
