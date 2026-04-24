@@ -75,6 +75,45 @@ export const getRelativeTime = (date, isFuture = true) => {
 };
 
 /**
+ * Get the next upcoming demo class date.
+ * Demo classes are held on Monday, Wednesday, and Friday at 11:00 AM.
+ * If today is a demo day and current time is before 11:00 AM, return today 11:00 AM.
+ * Otherwise, return the next demo day at 11:00 AM.
+ * @returns {Date} Next demo class date
+ */
+export const getNextDemoDate = () => {
+  const now = new Date();
+  const demoDays = [1, 3, 5]; // Monday, Wednesday, Friday
+  const demoHour = 11;
+  const demoMinute = 0;
+
+  // Find next demo day
+  for (let i = 0; i < 7; i++) {
+    const checkDate = new Date(now);
+    checkDate.setDate(now.getDate() + i);
+    const dayOfWeek = checkDate.getDay();
+
+    if (demoDays.includes(dayOfWeek)) {
+      const candidate = new Date(checkDate);
+      candidate.setHours(demoHour, demoMinute, 0, 0);
+
+      // If it's the same day, ensure it's in the future
+      if (i === 0 && candidate <= now) {
+        continue; // Skip to next demo day
+      }
+      return candidate;
+    }
+  }
+
+  // Fallback: return next Monday
+  const nextMonday = new Date(now);
+  const daysUntilMonday = (8 - now.getDay()) % 7 || 7;
+  nextMonday.setDate(now.getDate() + daysUntilMonday);
+  nextMonday.setHours(demoHour, demoMinute, 0, 0);
+  return nextMonday;
+};
+
+/**
  * Convert 24-hour time format to 12-hour format with AM/PM
  * Handles both "HH:MM:SS" and "HH:MM" formats
  * @param {string} time24 - Time in 24-hour format (e.g., "14:30" or "14:30:00")

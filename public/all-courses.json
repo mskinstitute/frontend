@@ -14,7 +14,7 @@
       "Hindi"
     ],
     "duration": 1,
-    "price": 1999.0,
+    "price": 299,
     "certificate": true,
     "mode": "ONLINE",
     "course_type": "SINGLE",
@@ -356,7 +356,8 @@
       }
     ],
     "id": 1,
-    "slug": "python-for-beginners"
+    "slug": "python-for-beginners",
+    "demo_date": "2026-05-01T11:00:00+05:30"
   },
   {
     "status": "PUBLISH",
@@ -372,7 +373,7 @@
       "Hindi"
     ],
     "duration": 1,
-    "price": 2999.0,
+    "price": 2999,
     "certificate": true,
     "mode": "ONLINE",
     "course_type": "SINGLE",
@@ -664,7 +665,8 @@
       }
     ],
     "id": 2,
-    "slug": "python-for-intermediate"
+    "slug": "python-for-intermediate",
+    "demo_date": "2026-08-13T11:00:00+05:30"
   },
   {
     "status": "PUBLISH",
@@ -680,7 +682,7 @@
       "Hindi"
     ],
     "duration": 1,
-    "price": 3999.0,
+    "price": 3999,
     "certificate": true,
     "mode": "ONLINE",
     "course_type": "SINGLE",
@@ -951,7 +953,8 @@
       }
     ],
     "id": 3,
-    "slug": "python-for-advanced"
+    "slug": "python-for-advanced",
+    "demo_date": "2026-08-13T11:00:00+05:30"
   },
   {
     "status": "PUBLISH",
@@ -968,7 +971,7 @@
       "Hindi"
     ],
     "duration": 1,
-    "price": 1999.0,
+    "price": 1999,
     "certificate": true,
     "mode": "ONLINE",
     "course_type": "SINGLE",
@@ -1149,7 +1152,8 @@
       }
     ],
     "id": 4,
-    "slug": "javascript-for-beginners"
+    "slug": "javascript-for-beginners",
+    "demo_date": "2026-08-13T11:00:00+05:30"
   },
   {
     "status": "PUBLISH",
@@ -1166,7 +1170,7 @@
       "Hindi"
     ],
     "duration": 1,
-    "price": 2499.0,
+    "price": 2499,
     "certificate": true,
     "mode": "ONLINE",
     "course_type": "SINGLE",
@@ -1407,7 +1411,8 @@
       }
     ],
     "id": 5,
-    "slug": "javascript-for-intermediate"
+    "slug": "javascript-for-intermediate",
+    "demo_date": "2026-08-13T11:00:00+05:30"
   },
   {
     "status": "PUBLISH",
@@ -1424,7 +1429,7 @@
       "Hindi"
     ],
     "duration": 1,
-    "price": 2999.0,
+    "price": 2999,
     "certificate": true,
     "mode": "ONLINE",
     "course_type": "SINGLE",
@@ -1598,7 +1603,8 @@
       }
     ],
     "id": 6,
-    "slug": "javascript-for-advanced"
+    "slug": "javascript-for-advanced",
+    "demo_date": "2026-08-13T11:00:00+05:30"
   },
   {
     "status": "PUBLISH",
@@ -1615,7 +1621,7 @@
       "Hindi"
     ],
     "duration": 1,
-    "price": 2999.0,
+    "price": 2999,
     "certificate": true,
     "mode": "ONLINE",
     "course_type": "SINGLE",
@@ -1726,7 +1732,8 @@
       }
     ],
     "id": 7,
-    "slug": "react-js-for-beginners"
+    "slug": "react-js-for-beginners",
+    "demo_date": "2026-08-13T11:00:00+05:30"
   },
   {
     "status": "PUBLISH",
@@ -1743,7 +1750,7 @@
       "Hindi"
     ],
     "duration": 1,
-    "price": 3999.0,
+    "price": 3999,
     "certificate": true,
     "mode": "ONLINE",
     "course_type": "SINGLE",
@@ -1876,7 +1883,8 @@
       }
     ],
     "id": 8,
-    "slug": "react-js-for-intermediate"
+    "slug": "react-js-for-intermediate",
+    "demo_date": "2026-08-13T11:00:00+05:30"
   },
   {
     "status": "PUBLISH",
@@ -1893,7 +1901,7 @@
       "Hindi"
     ],
     "duration": 1,
-    "price": 4999.0,
+    "price": 4999,
     "certificate": true,
     "mode": "ONLINE",
     "course_type": "SINGLE",
@@ -2055,7 +2063,8 @@
       }
     ],
     "id": 9,
-    "slug": "react-js-for-advanced"
+    "slug": "react-js-for-advanced",
+    "demo_date": "2026-08-13T11:00:00+05:30"
   },
   {
     "status": "PUBLISH",
@@ -2072,7 +2081,7 @@
       "Hindi"
     ],
     "duration": 1,
-    "price": 999.0,
+    "price": 999,
     "certificate": true,
     "mode": "ONLINE",
     "course_type": "SINGLE",
@@ -2175,7 +2184,8 @@
       }
     ],
     "id": 10,
-    "slug": "html-complete-course"
+    "slug": "html-complete-course",
+    "demo_date": "2026-08-13T11:00:00+05:30"
   },
   {
     "status": "PUBLISH",
@@ -2192,7 +2202,7 @@
       "Hindi"
     ],
     "duration": 1,
-    "price": 1499.0,
+    "price": 1499,
     "certificate": true,
     "mode": "ONLINE",
     "course_type": "SINGLE",
@@ -2367,7 +2377,8 @@
       }
     ],
     "id": 11,
-    "slug": "css-for-beginners"
+    "slug": "css-for-beginners",
+    "demo_date": "2026-08-13T11:00:00+05:30"
   },
   {
     "status": "PUBLISH",
@@ -2384,7 +2395,7 @@
       "Hindi"
     ],
     "duration": 1,
-    "price": 1999.0,
+    "price": 1999,
     "certificate": true,
     "mode": "ONLINE",
     "course_type": "SINGLE",
@@ -2559,7 +2570,8 @@
       }
     ],
     "id": 12,
-    "slug": "css-for-intermediate"
+    "slug": "css-for-intermediate",
+    "demo_date": "2026-08-13T11:00:00+05:30"
   },
   {
     "status": "PUBLISH",
@@ -2576,7 +2588,7 @@
       "Hindi"
     ],
     "duration": 1,
-    "price": 2499.0,
+    "price": 2499,
     "certificate": true,
     "mode": "ONLINE",
     "course_type": "SINGLE",
@@ -2751,7 +2763,8 @@
       }
     ],
     "id": 13,
-    "slug": "css-for-advanced"
+    "slug": "css-for-advanced",
+    "demo_date": "2026-08-13T11:00:00+05:30"
   },
   {
     "status": "PUBLISH",
@@ -2768,7 +2781,7 @@
       "Hindi"
     ],
     "duration": 3,
-    "price": 2999.0,
+    "price": 2999,
     "certificate": true,
     "mode": "ONLINE",
     "course_type": "SINGLE",
@@ -3035,7 +3048,8 @@
       }
     ],
     "id": 14,
-    "slug": "ccc"
+    "slug": "ccc",
+    "demo_date": "2026-08-13T11:00:00+05:30"
   },
   {
     "status": "PUBLISH",
@@ -3052,7 +3066,7 @@
       "Hindi"
     ],
     "duration": 1,
-    "price": 1499.0,
+    "price": 1499,
     "certificate": true,
     "mode": "ONLINE",
     "course_type": "SINGLE",
@@ -3227,7 +3241,8 @@
       }
     ],
     "id": 15,
-    "slug": "bootstrap-for-beginner"
+    "slug": "bootstrap-for-beginner",
+    "demo_date": "2026-08-13T11:00:00+05:30"
   },
   {
     "status": "PUBLISH",
@@ -3244,7 +3259,7 @@
       "Hindi"
     ],
     "duration": 1,
-    "price": 1999.0,
+    "price": 1999,
     "certificate": true,
     "mode": "ONLINE",
     "course_type": "SINGLE",
@@ -3447,7 +3462,8 @@
       }
     ],
     "id": 16,
-    "slug": "bootstrap-for-advanced"
+    "slug": "bootstrap-for-advanced",
+    "demo_date": "2026-08-13T11:00:00+05:30"
   },
   {
     "status": "PUBLISH",
@@ -3464,7 +3480,7 @@
       "Hindi"
     ],
     "duration": 1,
-    "price": 1999.0,
+    "price": 1999,
     "certificate": true,
     "mode": "ONLINE",
     "course_type": "SINGLE",
@@ -3597,7 +3613,8 @@
       }
     ],
     "id": 17,
-    "slug": "sql-for-beginners"
+    "slug": "sql-for-beginners",
+    "demo_date": "2026-08-13T11:00:00+05:30"
   },
   {
     "status": "PUBLISH",
@@ -3614,7 +3631,7 @@
       "Hindi"
     ],
     "duration": 1,
-    "price": 2999.0,
+    "price": 2999,
     "certificate": true,
     "mode": "ONLINE",
     "course_type": "SINGLE",
@@ -3755,7 +3772,8 @@
       }
     ],
     "id": 18,
-    "slug": "sql-for-advanced"
+    "slug": "sql-for-advanced",
+    "demo_date": "2026-08-13T11:00:00+05:30"
   },
   {
     "status": "PUBLISH",
@@ -3772,7 +3790,7 @@
       "Hindi"
     ],
     "duration": 1,
-    "price": 1499.0,
+    "price": 1499,
     "certificate": true,
     "mode": "ONLINE",
     "course_type": "SINGLE",
@@ -3905,7 +3923,8 @@
       }
     ],
     "id": 19,
-    "slug": "ms-word-for-beginners"
+    "slug": "ms-word-for-beginners",
+    "demo_date": "2026-08-13T11:00:00+05:30"
   },
   {
     "status": "PUBLISH",
@@ -3922,7 +3941,7 @@
       "Hindi"
     ],
     "duration": 1,
-    "price": 1999.0,
+    "price": 1999,
     "certificate": true,
     "mode": "ONLINE",
     "course_type": "SINGLE",
@@ -4055,7 +4074,8 @@
       }
     ],
     "id": 20,
-    "slug": "ms-word-for-advanced"
+    "slug": "ms-word-for-advanced",
+    "demo_date": "2026-08-13T11:00:00+05:30"
   },
   {
     "status": "PUBLISH",
@@ -4071,7 +4091,7 @@
       "Hindi"
     ],
     "duration": 1,
-    "price": 1499.0,
+    "price": 1499,
     "certificate": true,
     "mode": "ONLINE",
     "course_type": "SINGLE",
@@ -4155,7 +4175,8 @@
       }
     ],
     "id": 21,
-    "slug": "git--github-basics"
+    "slug": "git--github-basics",
+    "demo_date": "2026-08-13T11:00:00+05:30"
   },
   {
     "status": "PUBLISH",
@@ -4171,7 +4192,7 @@
       "Hindi"
     ],
     "duration": 1,
-    "price": 999.0,
+    "price": 999,
     "certificate": true,
     "mode": "OFFLINE",
     "course_type": "SINGLE",
@@ -4250,7 +4271,8 @@
       }
     ],
     "id": 22,
-    "slug": "ms-powerpoint-for-beginners"
+    "slug": "ms-powerpoint-for-beginners",
+    "demo_date": "2026-08-13T11:00:00+05:30"
   },
   {
     "status": "PUBLISH",
@@ -4266,7 +4288,7 @@
       "Hindi"
     ],
     "duration": 1,
-    "price": 999.0,
+    "price": 999,
     "certificate": true,
     "mode": "OFFLINE",
     "course_type": "SINGLE",
@@ -4345,7 +4367,8 @@
       }
     ],
     "id": 23,
-    "slug": "ms-excel-for-beginners"
+    "slug": "ms-excel-for-beginners",
+    "demo_date": "2026-08-13T11:00:00+05:30"
   },
   {
     "status": "PUBLISH",
@@ -4361,7 +4384,7 @@
       "Hindi"
     ],
     "duration": 2,
-    "price": 1499.0,
+    "price": 1499,
     "certificate": true,
     "mode": "OFFLINE",
     "course_type": "SINGLE",
@@ -4448,7 +4471,8 @@
       }
     ],
     "id": 24,
-    "slug": "ms-excel-for-intermediate"
+    "slug": "ms-excel-for-intermediate",
+    "demo_date": "2026-08-13T11:00:00+05:30"
   },
   {
     "status": "PUBLISH",
@@ -4464,7 +4488,7 @@
       "Hindi"
     ],
     "duration": 2,
-    "price": 1999.0,
+    "price": 1999,
     "certificate": true,
     "mode": "OFFLINE",
     "course_type": "SINGLE",
@@ -4556,7 +4580,8 @@
       }
     ],
     "id": 25,
-    "slug": "ms-excel-for-advanced"
+    "slug": "ms-excel-for-advanced",
+    "demo_date": "2026-08-13T11:00:00+05:30"
   },
   {
     "status": "PUBLISH",
@@ -4572,7 +4597,7 @@
       "Hindi"
     ],
     "duration": 1,
-    "price": 4999.0,
+    "price": 4999,
     "certificate": true,
     "mode": "OFFLINE",
     "course_type": "SINGLE",
@@ -4659,7 +4684,8 @@
       }
     ],
     "id": 26,
-    "slug": "power-bi-for-beginners"
+    "slug": "power-bi-for-beginners",
+    "demo_date": "2026-08-13T11:00:00+05:30"
   },
   {
     "status": "PUBLISH",
@@ -4675,7 +4701,7 @@
       "Hindi"
     ],
     "duration": 1,
-    "price": 3999.0,
+    "price": 3999,
     "certificate": true,
     "mode": "OFFLINE",
     "course_type": "SINGLE",
@@ -4761,7 +4787,8 @@
       }
     ],
     "id": 27,
-    "slug": "power-bi-for-intermediate"
+    "slug": "power-bi-for-intermediate",
+    "demo_date": "2026-08-13T11:00:00+05:30"
   },
   {
     "status": "PUBLISH",
@@ -4777,7 +4804,7 @@
       "Hindi"
     ],
     "duration": 1,
-    "price": 4999.0,
+    "price": 4999,
     "certificate": true,
     "mode": "OFFLINE",
     "course_type": "SINGLE",
@@ -4871,7 +4898,8 @@
       }
     ],
     "id": 28,
-    "slug": "power-bi-for-advanced"
+    "slug": "power-bi-for-advanced",
+    "demo_date": "2026-08-13T11:00:00+05:30"
   },
   {
     "status": "PUBLISH",
@@ -4888,7 +4916,7 @@
       "Hindi"
     ],
     "duration": 1,
-    "price": 1499.0,
+    "price": 1499,
     "certificate": true,
     "mode": "OFFLINE",
     "course_type": "SINGLE",
@@ -4943,7 +4971,8 @@
       }
     ],
     "id": 29,
-    "slug": "data-analysis--basics--pandas"
+    "slug": "data-analysis--basics--pandas",
+    "demo_date": "2026-08-13T11:00:00+05:30"
   },
   {
     "status": "PUBLISH",
@@ -4960,7 +4989,7 @@
       "Hindi"
     ],
     "duration": 1,
-    "price": 1499.0,
+    "price": 1499,
     "certificate": true,
     "mode": "OFFLINE",
     "course_type": "SINGLE",
@@ -5014,7 +5043,8 @@
       }
     ],
     "id": 30,
-    "slug": "data-analysis--visualization--statistics"
+    "slug": "data-analysis--visualization--statistics",
+    "demo_date": "2026-08-13T11:00:00+05:30"
   },
   {
     "status": "PUBLISH",
@@ -5031,7 +5061,7 @@
       "Hindi"
     ],
     "duration": 1,
-    "price": 1499.0,
+    "price": 1499,
     "certificate": true,
     "mode": "OFFLINE",
     "course_type": "SINGLE",
@@ -5086,7 +5116,8 @@
       }
     ],
     "id": 31,
-    "slug": "data-analysis--advanced-pandas--ml-basics"
+    "slug": "data-analysis--advanced-pandas--ml-basics",
+    "demo_date": "2026-08-13T11:00:00+05:30"
   },
   {
     "status": "PUBLISH",
@@ -5102,7 +5133,7 @@
       "Hindi"
     ],
     "duration": 1,
-    "price": 2999.0,
+    "price": 2999,
     "certificate": true,
     "mode": "OFFLINE",
     "course_type": "SINGLE",
@@ -5181,7 +5212,8 @@
       }
     ],
     "id": 32,
-    "slug": "tableau-for-beginners"
+    "slug": "tableau-for-beginners",
+    "demo_date": "2026-08-13T11:00:00+05:30"
   },
   {
     "status": "PUBLISH",
@@ -5200,7 +5232,7 @@
       "Hindi"
     ],
     "duration": 2,
-    "price": 5999.0,
+    "price": 5999,
     "certificate": true,
     "mode": "BOTH",
     "course_type": "SINGLE",
@@ -5295,7 +5327,8 @@
       }
     ],
     "id": 33,
-    "slug": "django-for-backend-development"
+    "slug": "django-for-backend-development",
+    "demo_date": "2026-08-13T11:00:00+05:30"
   },
   {
     "status": "PUBLISH",
@@ -5314,7 +5347,7 @@
       "Hindi"
     ],
     "duration": 1,
-    "price": 2999.0,
+    "price": 2999,
     "certificate": true,
     "mode": "BOTH",
     "course_type": "SINGLE",
@@ -5393,7 +5426,8 @@
       }
     ],
     "id": 34,
-    "slug": "orm-concepts-for-backend-development"
+    "slug": "orm-concepts-for-backend-development",
+    "demo_date": "2026-08-13T11:00:00+05:30"
   },
   {
     "status": "PUBLISH",
@@ -5413,7 +5447,7 @@
       "Hindi"
     ],
     "duration": 1,
-    "price": 3999.0,
+    "price": 3999,
     "certificate": true,
     "mode": "BOTH",
     "course_type": "SINGLE",
@@ -5500,7 +5534,8 @@
       }
     ],
     "id": 35,
-    "slug": "rest-api-development-with-django"
+    "slug": "rest-api-development-with-django",
+    "demo_date": "2026-08-13T11:00:00+05:30"
   },
   {
     "status": "PUBLISH",
@@ -5520,7 +5555,7 @@
       "Hindi"
     ],
     "duration": 1,
-    "price": 3499.0,
+    "price": 3499,
     "certificate": true,
     "mode": "BOTH",
     "course_type": "SINGLE",
@@ -5599,7 +5634,8 @@
       }
     ],
     "id": 36,
-    "slug": "authentication--authorization-for-backend"
+    "slug": "authentication--authorization-for-backend",
+    "demo_date": "2026-08-13T11:00:00+05:30"
   },
   {
     "status": "PUBLISH",
@@ -5619,7 +5655,7 @@
       "Hindi"
     ],
     "duration": 1,
-    "price": 2999.0,
+    "price": 2999,
     "certificate": true,
     "mode": "BOTH",
     "course_type": "SINGLE",
@@ -5698,7 +5734,8 @@
       }
     ],
     "id": 37,
-    "slug": "deployment--hosting-for-backend"
+    "slug": "deployment--hosting-for-backend",
+    "demo_date": "2026-08-13T11:00:00+05:30"
   },
   {
     "status": "PUBLISH",
@@ -5718,7 +5755,7 @@
       "Hindi"
     ],
     "duration": 1,
-    "price": 3499.0,
+    "price": 3499,
     "certificate": true,
     "mode": "BOTH",
     "course_type": "SINGLE",
@@ -5797,7 +5834,8 @@
       }
     ],
     "id": 38,
-    "slug": "advanced-backend-concepts"
+    "slug": "advanced-backend-concepts",
+    "demo_date": "2026-08-13T11:00:00+05:30"
   },
   {
     "status": "PUBLISH",
@@ -5813,12 +5851,13 @@
       "Hindi"
     ],
     "duration": 4,
-    "price": 2999.0,
+    "price": 2999,
     "certificate": true,
     "mode": "OFFLINE",
     "course_type": "COMBO",
     "id": 39,
-    "slug": "ms-office--4-months"
+    "slug": "ms-office--4-months",
+    "demo_date": "2026-08-13T11:00:00+05:30"
   },
   {
     "status": "PUBLISH",
@@ -5834,12 +5873,13 @@
       "Hindi"
     ],
     "duration": 4,
-    "price": 4999.0,
+    "price": 4999,
     "certificate": true,
     "mode": "ONLINE",
     "course_type": "COMBO",
     "id": 40,
-    "slug": "web-designing-complete-pathway--4-months"
+    "slug": "web-designing-complete-pathway--4-months",
+    "demo_date": "2026-08-13T11:00:00+05:30"
   },
   {
     "status": "PUBLISH",
@@ -5856,12 +5896,13 @@
       "Hindi"
     ],
     "duration": 2,
-    "price": 3498.0,
+    "price": 3498,
     "certificate": true,
     "mode": "ONLINE",
     "course_type": "COMBO",
     "id": 41,
-    "slug": "ms-word-complete-pathway-beginner-to-advanced--2-months"
+    "slug": "ms-word-complete-pathway-beginner-to-advanced--2-months",
+    "demo_date": "2026-08-13T11:00:00+05:30"
   },
   {
     "status": "PUBLISH",
@@ -5880,12 +5921,13 @@
       "Hindi"
     ],
     "duration": 8,
-    "price": 39999.0,
+    "price": 39999,
     "certificate": true,
     "mode": "BOTH",
     "course_type": "COMBO",
     "id": 42,
-    "slug": "python-backend-development-mastery-combo--8-months"
+    "slug": "python-backend-development-mastery-combo--8-months",
+    "demo_date": "2026-08-13T11:00:00+05:30"
   },
   {
     "status": "PUBLISH",
@@ -5906,12 +5948,13 @@
       "Hindi"
     ],
     "duration": 12,
-    "price": 32999.0,
+    "price": 32999,
     "certificate": true,
     "mode": "BOTH",
     "course_type": "COMBO",
     "id": 43,
-    "slug": "data-analysis-mastery-combo-course--12-months"
+    "slug": "data-analysis-mastery-combo-course--12-months",
+    "demo_date": "2026-08-13T11:00:00+05:30"
   },
   {
     "status": "PUBLISH",
@@ -5927,12 +5970,13 @@
       "Hindi"
     ],
     "duration": 1,
-    "price": 9999.0,
+    "price": 9999,
     "certificate": true,
     "mode": "OFFLINE",
     "course_type": "COMBO",
     "id": 44,
-    "slug": "power-bi-mastery-beginner-to-advanced--3-months"
+    "slug": "power-bi-mastery-beginner-to-advanced--3-months",
+    "demo_date": "2026-08-13T11:00:00+05:30"
   },
   {
     "status": "PUBLISH",
@@ -5948,12 +5992,13 @@
       "Hindi"
     ],
     "duration": 6,
-    "price": 3999.0,
+    "price": 3999,
     "certificate": true,
     "mode": "OFFLINE",
     "course_type": "COMBO",
     "id": 45,
-    "slug": "ms-excel-beginners-to-advanced--6-months"
+    "slug": "ms-excel-beginners-to-advanced--6-months",
+    "demo_date": "2026-08-13T11:00:00+05:30"
   },
   {
     "status": "PUBLISH",
@@ -5971,11 +6016,15 @@
       "Hindi"
     ],
     "duration": 8,
-    "price": 9999.0,
+    "price": 9999,
     "certificate": true,
     "mode": "BOTH",
     "course_type": "COMBO",
     "id": 46,
-    "slug": "frontend-development--8-months"
+    "slug": "frontend-development--8-months",
+    "demo_date": "2026-08-13T11:00:00+05:30"
   }
 ]
+
+
+

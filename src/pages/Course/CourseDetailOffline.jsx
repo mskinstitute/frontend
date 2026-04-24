@@ -9,6 +9,8 @@ import {
   BookOpen, PlayCircle, FileText, GraduationCap, Loader2
 } from 'lucide-react';
 import LoadingSkeleton from './LoadingSkeleton';
+import ClassCountdown from '../../components/course/ClassCountdown';
+import DemoRequestModal from '../../components/course/DemoRequestModal';
 
 const CourseDetailOffline = () => {
   const { slug } = useParams();
@@ -17,6 +19,9 @@ const CourseDetailOffline = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [openChapter, setOpenChapter] = useState(null);
+  const [showDemoModal, setShowDemoModal] = useState(false);
+  const [demoTimestamp, setDemoTimestamp] = useState(null);
+  const nextDemoDate = course?.demo_date ? new Date(course.demo_date) : null;
 
   const loadCourse = useCallback(async () => {
     try {
@@ -66,8 +71,9 @@ const CourseDetailOffline = () => {
     ? `₹ ${Math.round(course.price * (1 - (course.discount || 0) / 100))}`
     : 'Free';
 
-  const handleEnroll = () => {
-    toast.success('Contact MSK Institute to enroll in this course!');
+  const handleBookDemo = () => {
+    setDemoTimestamp(new Date().toISOString());
+    setShowDemoModal(true);
   };
 
   const toggleChapter = (chapterId) => {
@@ -155,12 +161,19 @@ const CourseDetailOffline = () => {
                       </div>
                     )}
                   </div>
+                  {/* Countdown */}
+                  {nextDemoDate && (
+                    <div className="mb-4">
+                      <ClassCountdown targetDate={nextDemoDate} />
+                    </div>
+                  )}
+
                   <button
-                    onClick={handleEnroll}
-                    className="w-full bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white font-bold py-3 sm:py-4 lg:py-5 px-4 sm:px-6 lg:px-8 rounded-2xl text-base sm:text-lg shadow-xl transform hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-2 sm:gap-3"
+                    onClick={handleBookDemo}
+                    className="w-full bg-gradient-to-r from-green-600 to-emerald-600 hover:from-green-700 hover:to-emerald-700 text-white font-bold py-3 sm:py-4 lg:py-5 px-4 sm:px-6 lg:px-8 rounded-2xl text-base sm:text-lg shadow-xl transform hover:-translate-y-1 transition-all duration-300 flex items-center justify-center gap-2 sm:gap-3"
                   >
-                    <GraduationCap className="w-5 h-5 sm:w-6 sm:h-6" />
-                    Enroll Now & Start Learning
+                    <CalendarDays className="w-5 h-5 sm:w-6 sm:h-6" />
+                    Book 3 Days Demo Class for Free
                   </button>
                 </div>
               </div>
@@ -315,6 +328,13 @@ const CourseDetailOffline = () => {
           </div>
         </div>
       </div>
+      {/* Demo Request Modal */}
+      <DemoRequestModal
+        isOpen={showDemoModal}
+        onClose={() => setShowDemoModal(false)}
+        course={course}
+        timestamp={demoTimestamp}
+      />
     </>
   );
 };

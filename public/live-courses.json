@@ -26,20 +26,34 @@
       {
         "title": "Day 1: Setup & Fundamentals",
         "topics": [
-          { "title": "Python installation" },
-          { "title": "Syntax and variables" },
-          { "title": "Basic data types" }
+          {
+            "title": "Python installation"
+          },
+          {
+            "title": "Syntax and variables"
+          },
+          {
+            "title": "Basic data types"
+          }
         ]
       },
       {
         "title": "Day 2: Control Flow",
         "topics": [
-          { "title": "If statements" },
-          { "title": "Loops" },
-          { "title": "Functions" }
+          {
+            "title": "If statements"
+          },
+          {
+            "title": "Loops"
+          },
+          {
+            "title": "Functions"
+          }
         ]
       }
-    ]
+    ],
+    "demo_date": "2026-08-13T11:00:00+05:30",
+    "next_demo_date": "2026-08-13T11:00:00+05:30"
   },
   {
     "id": 2,
@@ -68,20 +82,34 @@
       {
         "title": "Week 1: Front-end Basics",
         "topics": [
-          { "title": "HTML structure" },
-          { "title": "CSS layout" },
-          { "title": "Responsive design" }
+          {
+            "title": "HTML structure"
+          },
+          {
+            "title": "CSS layout"
+          },
+          {
+            "title": "Responsive design"
+          }
         ]
       },
       {
         "title": "Week 2: React and APIs",
         "topics": [
-          { "title": "React components" },
-          { "title": "State & props" },
-          { "title": "API integration" }
+          {
+            "title": "React components"
+          },
+          {
+            "title": "State & props"
+          },
+          {
+            "title": "API integration"
+          }
         ]
       }
-    ]
+    ],
+    "demo_date": "2026-08-13T11:00:00+05:30",
+    "next_demo_date": "2026-08-13T11:00:00+05:30"
   },
   {
     "id": 3,
@@ -110,11 +138,19 @@
       {
         "title": "Session 1: Fundamentals of Design",
         "topics": [
-          { "title": "User research" },
-          { "title": "Wireframing" },
-          { "title": "Visual hierarchy" }
+          {
+            "title": "User research"
+          },
+          {
+            "title": "Wireframing"
+          },
+          {
+            "title": "Visual hierarchy"
+          }
         ]
       }
-    ]
+    ],
+    "demo_date": "2026-08-13T11:00:00+05:30",
+    "next_demo_date": "2026-08-13T11:00:00+05:30"
   }
 ]

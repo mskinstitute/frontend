@@ -58,6 +58,8 @@ const DemoBookingModal = ({ isOpen, onClose, course }) => {
         studentEmail: formData.email.trim().toLowerCase(),
         studentPhone: formData.phone.replace(/\s+/g, ''),
         message: formData.message.trim(),
+        demoDate: course.demo_date || '',
+        nextDemoDate: course.next_demo_date || '',
         source: 'offline_demo_booking'
       };
 
