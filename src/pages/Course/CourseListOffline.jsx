@@ -1,8 +1,7 @@
 import React, { useEffect, useMemo, useState, useContext } from 'react';
-import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { ThemeContext } from '../../context/ThemeContext';
-import { slugify } from '../../utils/slugify';
+import CourseCard from '../../components/course/CourseCard';
 
 const PAGE_SIZE = 12;
 
@@ -114,38 +113,9 @@ const CourseListOffline = () => {
           </div>
         ) : (
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {pageCourses.map((course) => {
-              const courseSlug = course.slug || slugify(course.title || String(course.id || 'course'));
-              const priceValue = Number(course.price || course.amount || 0);
-              const discountValue = Number(course.discount || 0);
-              const finalPrice = priceValue > 0 ? `₹ ${Math.round(priceValue * (1 - discountValue / 100))}` : 'Free';
-
-              return (
-                <Link
-                  key={course.id || courseSlug}
-                  to={`/courses/${courseSlug}`}
-                  className="rounded-3xl border border-gray-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-lg dark:border-gray-700 dark:bg-gray-900"
-                >
-                  <div className="mb-4 h-40 overflow-hidden rounded-3xl bg-gray-100 dark:bg-gray-800">
-                    <img
-                      src={course.featured_image_url || course.featured_image || `https://placehold.co/600x400/0f172a/ffffff?text=${encodeURIComponent(course.title || 'Course')}`}
-                      alt={course.title}
-                      className="h-full w-full object-cover"
-                    />
-                  </div>
-                  <div className="space-y-3">
-                    <h2 className="text-lg font-semibold leading-tight">{course.title || 'Untitled course'}</h2>
-                    <p className="text-sm text-gray-600 dark:text-gray-300 line-clamp-3">
-                      {course.sort_description || course.description || 'No description available.'}
-                    </p>
-                    <div className="flex items-center justify-between text-sm text-gray-500 dark:text-gray-400">
-                      <span>{finalPrice}</span>
-                      <span>{course.level?.name || course.level || 'All Levels'}</span>
-                    </div>
-                  </div>
-                </Link>
-              );
-            })}
+            {pageCourses.map((course) => (
+              <CourseCard key={course.id || course.slug} course={course} />
+            ))}
           </div>
         )}
 

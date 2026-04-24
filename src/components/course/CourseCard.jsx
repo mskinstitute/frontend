@@ -1,129 +1,14 @@
-import React, { useContext, useState, useEffect } from "react";
-import { Link, useNavigate } from "react-router-dom";
-import { Star, Clock, Users, BookOpen, Heart, Radio, CalendarDays } from "lucide-react";
+import React, { useContext } from "react";
+import { Link } from "react-router-dom";
+import { Star, Clock, Users, BookOpen, Radio, CalendarDays } from "lucide-react";
 import { ThemeContext } from "../../context/ThemeContext";
-import { AuthContext } from "../../context/AuthContext";
-import { useBackendStatus } from "../../context/BackendStatusContext";
-import OptimizedImage from "../common/OptimizedImage";
 import LiveBadge from "./LiveBadge";
 import LiveTimeInfo from "./LiveTimeInfo";
-import DemoBookingModal from "./DemoBookingModal";
-import axios from "../../api/axios";
-import { toast } from "react-hot-toast";
+import DemoCountdownCompact from "./DemoCountdownCompact";
 import { slugify } from "../../utils/slugify";
 
 const CourseCard = ({ course }) => {
   const { theme } = useContext(ThemeContext);
-  const { isAuthenticated } = useContext(AuthContext);
-  const navigate = useNavigate();
-  const [isWishlisted, setIsWishlisted] = useState(false);
-  const [isBooking, setIsBooking] = useState(false);
-  const [checkingWishlist, setCheckingWishlist] = useState(false);
-  const [isDemoBooked, setIsDemoBooked] = useState(false);
-  const [checkingDemo, setCheckingDemo] = useState(false);
-  const [totalDemoBookings, setTotalDemoBookings] = useState(0);
-  const [showDemoModal, setShowDemoModal] = useState(false);
-
-  // Check wishlist and demo booking status on mount
-  useEffect(() => {
-    if (isAuthenticated) {
-      checkWishlistStatus();
-      checkDemoBookingStatus();
-    }
-  }, [isAuthenticated, course.id]);
-
-  const checkWishlistStatus = async () => {
-    try {
-      setCheckingWishlist(true);
-      const response = await axios.get('/courses/wishlists/check/', {
-        params: { course_id: course.id }
-      });
-      setIsWishlisted(response.data.is_wishlisted);
-    } catch (error) {
-      console.error('Failed to check wishlist status:', error);
-    } finally {
-      setCheckingWishlist(false);
-    }
-  };
-
-  const checkDemoBookingStatus = async () => {
-    try {
-      setCheckingDemo(true);
-      const response = await axios.get('/courses/demo-bookings/check/', {
-        params: { course_id: course.id }
-      });
-      setIsDemoBooked(response.data.is_booked);
-
-      // Also get total demo bookings count
-      const totalResponse = await axios.get('/courses/demo-bookings/');
-      setTotalDemoBookings(totalResponse.data.length);
-    } catch (error) {
-      console.error('Failed to check demo booking status:', error);
-    } finally {
-      setCheckingDemo(false);
-    }
-  };
-
-  const handleWishlistToggle = async (e) => {
-    e.preventDefault();
-    e.stopPropagation();
-
-    if (!isAuthenticated) {
-      toast.error("Please login to add to wishlist");
-      navigate('/auth/login');
-      return;
-    }
-
-    try {
-      const response = await axios.post('/courses/wishlists/toggle/', {
-        course_id: course.id
-      });
-      setIsWishlisted(response.data.is_wishlisted);
-      toast.success(response.data.message);
-    } catch (error) {
-      toast.error(error?.response?.data?.error || "Failed to update wishlist");
-    }
-  };
-
-  const handleBookDemo = async (e) => {
-    e.preventDefault();
-    e.stopPropagation();
-
-    if (!isBackendAvailable) {
-      setShowDemoModal(true);
-      return;
-    }
-
-    if (!isAuthenticated) {
-      toast.error("Please login to book demo class");
-      navigate('/auth/login');
-      return;
-    }
-
-    if (isDemoBooked) {
-      toast.info("You have already booked the demo class for this course");
-      return;
-    }
-
-    if (totalDemoBookings >= 3) {
-      toast.error("You have reached the maximum limit of 3 demo bookings");
-      return;
-    }
-
-    try {
-      setIsBooking(true);
-      const response = await axios.post('/courses/demo-bookings/book_demo/', {
-        course_id: course.id
-      });
-      setIsDemoBooked(true);
-      setTotalDemoBookings(prev => prev + 1);
-      toast.success("Demo class booked successfully! Check your email for details.");
-    } catch (error) {
-      toast.error(error?.response?.data?.error || "Failed to book demo class");
-    } finally {
-      setIsBooking(false);
-    }
-  };
 
   const courseSlug = course.slug || slugify(course.title);
   const coursePrice = Number(course.price ?? 0);
@@ -140,13 +25,11 @@ const CourseCard = ({ course }) => {
     if (typeof img === 'object' && img.url) return img.url;
     return String(img);
   };
-  
+
   // Check if image URL is valid (not a Google Drive view link or invalid URL)
   const isValidImageUrl = (url) => {
     if (!url) return false;
-    // Reject Google Drive view links (they don't work as image sources)
     if (url.includes('drive.google.com') && url.includes('/view')) return false;
-    // Basic URL validation
     try {
       new URL(url);
       return true;
@@ -154,10 +37,10 @@ const CourseCard = ({ course }) => {
       return false;
     }
   };
-  
+
   const imageUrl = isDefaultImage
     ? `https://placehold.co/600x400/0f172a/ffffff?text=${encodeURIComponent(course.title?.slice(0, 30) || 'Course')}`
-    : (isValidImageUrl(resolveImg(course.featured_image_url)) ? resolveImg(course.featured_image_url) : 
+    : (isValidImageUrl(resolveImg(course.featured_image_url)) ? resolveImg(course.featured_image_url) :
        isValidImageUrl(resolveImg(course.featured_image)) ? resolveImg(course.featured_image) :
        `https://placehold.co/600x400/0f172a/ffffff?text=${encodeURIComponent(course.title?.slice(0, 30) || 'Course')}`);
 
@@ -166,76 +49,39 @@ const CourseCard = ({ course }) => {
       ? 'Free'
       : `₹ ${Math.round(coursePrice * (1 - courseDiscount / 100))}`;
 
-  const { isBackendAvailable } = useBackendStatus();
-  const detailsDisabled = !isBackendAvailable;
-
-
+  // Demo date logic
+  const nextDemoDate = course?.demo_date ? new Date(course.demo_date) : null;
+  const hasUpcomingDemo = nextDemoDate && nextDemoDate > new Date();
 
   return (
-    <div className={`relative rounded-2xl overflow-hidden shadow-lg border group transition-all duration-300 hover:scale-[1.02] hover:shadow-xl ${theme === 'dark'
+    <div className={`relative rounded-2xl overflow-hidden shadow-lg border group transition-all duration-300 hover:scale-[1.02] hover:shadow-xl ${hasUpcomingDemo ? 'border-t-4 border-t-indigo-500' : ''} ${theme === 'dark'
       ? 'bg-gray-900 border-gray-700 hover:border-blue-600'
       : 'bg-white border-gray-200 hover:border-blue-300'
       }`}>
 
+      <Link to={`/courses/${courseSlug}`} className="block relative">
+        {/* Live Course Badge */}
+        {course.is_live_course && (
+          <LiveBadge status={course.live_status} theme={theme} />
+        )}
 
+        <img
+          src={imageUrl}
+          alt={course.title}
+          className="w-full h-48 object-cover"
+          loading="lazy"
+          onError={(e) => {
+            e.target.src = `https://placehold.co/600x400/0f172a/ffffff?text=${encodeURIComponent(course.title?.slice(0, 30) || 'Course')}`;
+          }}
+        />
 
-
-      {detailsDisabled ? (
-        <div className="block relative cursor-not-allowed opacity-90">
-          <OptimizedImage
-            src={imageUrl}
-            alt={course.title}
-            className="w-full h-48"
-            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-            fallbackSrc={`https://placehold.co/600x400/0f172a/ffffff?text=${encodeURIComponent("Loading...")}`}
-          />
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-start p-4">
+          <span className="text-white text-sm font-medium">
+            Click to view details
+          </span>
         </div>
-      ) : (
-        <>
-
-          <button
-            onClick={handleWishlistToggle}
-            disabled={checkingWishlist}
-            className={`absolute top-3 right-3 z-10 p-2 rounded-full transition-all duration-300 ${theme === 'dark'
-              ? 'bg-gray-800/80 hover:bg-gray-700'
-              : 'bg-white/80 hover:bg-gray-100'
-              } ${checkingWishlist ? 'opacity-50 cursor-not-allowed' : ''}`}
-          >
-            <Heart
-              className={`w-5 h-5 transition-colors duration-300 ${isWishlisted
-                ? 'fill-red-500 stroke-red-500'
-                : theme === 'dark'
-                  ? 'stroke-gray-300'
-                  : 'stroke-gray-600'
-                }`}
-            />
-          </button>
-
-
-          <Link to={`/courses/${courseSlug}`} className="block relative">
-            {/* Live Course Badge */}
-            {course.is_live_course && (
-              <LiveBadge status={course.live_status} theme={theme} />
-            )}
-
-            <OptimizedImage
-              src={imageUrl}
-              alt={course.title}
-              className="w-full h-48"
-              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-              fallbackSrc={`https://placehold.co/600x400/0f172a/ffffff?text=${encodeURIComponent("Loading...")}`}
-            />
-
-            {/* Overlay */}
-            <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-start p-4">
-              <span className="text-white text-sm font-medium">
-                Click to view details
-              </span>
-            </div>
-          </Link>
-        </>
-
-      )}
+      </Link>
 
       <div className="p-5 space-y-3">
         <h3 className={`text-lg font-semibold truncate ${theme === 'dark' ? 'text-white' : 'text-gray-900'
@@ -265,12 +111,7 @@ const CourseCard = ({ course }) => {
               />
             ) : (
               <>
-                {/* Agar combo course hai to Courses icon, warna Chapters icon */}
-                {course.course_type === "COMBO" ? (
-                  <BookOpen className="w-4 h-4" />
-                ) : (
-                  <BookOpen className="w-4 h-4" />
-                )}
+                <BookOpen className="w-4 h-4" />
                 <span className="text-sm">
                   {course.course_type === "COMBO"
                     ? `${course.single_courses?.length || course.chapters?.length || 0} Courses`
@@ -365,71 +206,26 @@ const CourseCard = ({ course }) => {
           )}
         </div>
 
-        {/* Book Demo Button */}
-        <button
-          onClick={handleBookDemo}
-          disabled={isBooking || isDemoBooked || totalDemoBookings >= 3}
-          className={`block mt-4 w-full text-center py-2.5 text-white font-semibold rounded-lg transition-colors duration-200 ${isDemoBooked || totalDemoBookings >= 3
-            ? 'bg-gray-500 cursor-not-allowed'
-            : isBooking
-              ? 'bg-gray-500 cursor-not-allowed'
-              : theme === 'dark'
-                ? 'bg-green-600 hover:bg-green-700'
-                : 'bg-green-600 hover:bg-green-700'
-            }`}
-        >
-          {isDemoBooked
-            ? 'Demo Already Booked'
-            : totalDemoBookings >= 3
-              ? 'Demo Limit Reached (3/3)'
-              : isBooking
-                ? 'Booking...'
-                : 'Book Free 3 Days Demo'
-          }
-          <CalendarDays className="w-4 h-4 ml-2 inline" />
-        </button>
-
-        {detailsDisabled ? (
-          <>
-          </>
-        ) : (
-          <Link
-            to={`/courses/${course.slug}`}
-            className={`block mt-2 w-full text-center py-2.5 text-white font-semibold rounded-lg transition-colors duration-200 ${theme === 'dark'
-              ? 'bg-blue-500 hover:bg-blue-600'
-              : 'bg-blue-600 hover:bg-blue-700'
-              }`}
-          >
-            Explore Course <BookOpen className="w-4 h-4 ml-2 inline" />
-          </Link>
-        )}
-
-        <DemoBookingModal
-          isOpen={showDemoModal}
-          onClose={() => setShowDemoModal(false)}
-          course={course}
-        />
-
-        {/* Course Progress (if enrolled) */}
-        {course.is_enrolled && (
-          <div className="mt-4">
-            <div className="flex justify-between text-sm mb-1">
-              <span className={theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}>Progress</span>
-              <span className={theme === 'dark' ? 'text-gray-300' : 'text-gray-700'}>
-                {course.progress || 0}%
-              </span>
-            </div>
-            <div className={`h-2 rounded-full ${theme === 'dark' ? 'bg-gray-700' : 'bg-gray-200'}`}>
-              <div
-                className="h-full rounded-full bg-green-500 transition-all duration-300"
-                style={{ width: `${course.progress || 0}%` }}
-              ></div>
-            </div>
+        {/* Demo Countdown */}
+        {hasUpcomingDemo && (
+          <div className="mt-3">
+            <DemoCountdownCompact targetDate={nextDemoDate} theme={theme} />
           </div>
         )}
+
+        <Link
+          to={`/courses/${courseSlug}`}
+          className={`block mt-2 w-full text-center py-2.5 text-white font-semibold rounded-lg transition-colors duration-200 ${theme === 'dark'
+            ? 'bg-blue-500 hover:bg-blue-600'
+            : 'bg-blue-600 hover:bg-blue-700'
+            }`}
+        >
+          Explore Course <BookOpen className="w-4 h-4 ml-2 inline" />
+        </Link>
       </div>
     </div>
   );
 };
 
 export default CourseCard;
+

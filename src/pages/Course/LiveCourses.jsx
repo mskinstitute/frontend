@@ -1,14 +1,11 @@
 import React, { useEffect, useState, useContext, useRef } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Search } from 'lucide-react';
-import api from '../../api/axios';
 import LiveCourseGrid from '../../components/course/LiveCourseGrid';
 import { ThemeContext } from '../../context/ThemeContext';
-import { useBackendStatus } from '../../context/BackendStatusContext';
 
 const LiveCourses = () => {
   const { theme } = useContext(ThemeContext);
-  const { setBackendAvailable } = useBackendStatus();
   const [courses, setCourses] = useState([]);
   const staticLiveCoursesCacheRef = useRef(null);
   const liveSearchDebounceRef = useRef(null);
@@ -40,68 +37,11 @@ const LiveCourses = () => {
               );
             });
 
-        setBackendAvailable(false);
         setCourses(filtered);
-        setError(filtered.length === 0 ? 'No live courses found in local fallback content.' : null);
+        setError(filtered.length === 0 ? 'No live courses found in local content.' : null);
       } catch (fallbackError) {
-        console.error('Failed to load live course fallback', fallbackError);
-        setError('Unable to load live courses from local fallback content.');
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    const fetchLive = async () => {
-      setLoading(true);
-      setError(null);
-      try {
-        const params = searchQuery ? { search: searchQuery } : {};
-        const res = await api.get('/courses/live-courses/', { params });
-        const items = res.data.results || res.data || [];
-
-        const normalized = items.map((i) => ({
-          ...i,
-          id: i.id,
-          title: i.title,
-          featured_image_url:
-            i.featured_image_url ||
-            (i.featured_image && (i.featured_image.url || i.featured_image)) ||
-            (i.course && (i.course.featured_image_url || i.course.featured_image)) ||
-            null,
-          price: i.price,
-          discount: i.discount,
-          instructor_name:
-            i.instructor_name ||
-            (i.created_by && i.created_by.username) ||
-            (i.instructor && i.instructor.username) ||
-            null,
-          start_time:
-            i.start_time || i.start_date ||
-            (i.next_batch && i.next_batch.start_datetime) ||
-            null,
-          end_time:
-            i.end_time || i.end_date ||
-            (i.next_batch && i.next_batch.end_datetime) ||
-            null,
-          mode: i.mode || null,
-          sort_description:
-            i.description || i.sort_description ||
-            (i.course && i.course.sort_description) ||
-            null,
-          course: i.course || null,
-          next_batch: i.next_batch || null,
-        }));
-
-        setBackendAvailable(true);
-        setCourses(normalized);
-      } catch (err) {
-        console.error('Failed to fetch live courses', err);
-        const shouldFallback = !err.response || (err.response.status >= 500 && err.response.status < 600);
-        if (shouldFallback) {
-          await loadLiveCoursesFromStatic();
-          return;
-        }
-        setError(err.response?.data?.detail || err.message || 'Failed to fetch live courses');
+        console.error('Failed to load live course content', fallbackError);
+        setError('Unable to load live courses from local content.');
       } finally {
         setLoading(false);
       }
@@ -111,7 +51,7 @@ const LiveCourses = () => {
       clearTimeout(liveSearchDebounceRef.current);
     }
     liveSearchDebounceRef.current = setTimeout(() => {
-      fetchLive();
+      loadLiveCoursesFromStatic();
     }, 400);
 
     return () => {
@@ -119,7 +59,7 @@ const LiveCourses = () => {
         clearTimeout(liveSearchDebounceRef.current);
       }
     };
-  }, [searchQuery, setBackendAvailable]);
+  }, [searchQuery]);
 
   return (
     <div className={`min-h-screen transition-colors duration-300 ${theme === 'dark' ? 'bg-gray-900 text-white' : 'bg-gray-50 text-gray-900'}`}>
@@ -182,3 +122,4 @@ const LiveCourses = () => {
 };
 
 export default LiveCourses;
+

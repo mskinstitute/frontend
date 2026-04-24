@@ -1,15 +1,9 @@
-// src/pages/Course/CourseList.jsx
-import React, { useEffect, useState, useContext, useCallback, useRef } from 'react';
+import React, { useEffect, useState, useContext, useRef, useCallback } from 'react';
 import { Helmet } from "react-helmet-async";
-import axios from "../../api/axios";
 import { Radio } from "lucide-react";
 import { Link } from 'react-router-dom';
 import { ThemeContext } from '../../context/ThemeContext';
-import { useBackendStatus } from '../../context/BackendStatusContext';
 import SearchBar from '../../components/course/SearchBar';
-import useUrlParams from '../../hooks/useUrlParams';
-import ErrorBoundary from '../../components/common/ErrorBoundary';
-import CourseGridFallback from '../../components/course/CourseGridFallback';
 import CourseGrid from '../../components/course/CourseGrid';
 import CourseGridPlaceholder from '../../components/course/CourseGridPlaceholder';
 import Pagination from '../../components/course/Pagination';
@@ -17,23 +11,9 @@ import Pagination from '../../components/course/Pagination';
 const CourseList = () => {
   const { theme } = useContext(ThemeContext);
 
-  // URL params
-  const { getInitialValues, updateUrl, resetParams } = useUrlParams({
-    search: '',
-    page: '1'
-  });
-
-  // Initialize state from URL
-  const initialValues = getInitialValues();
-
-  // Additional filters
-  // live-course filter removed — handled on dedicated Live Courses page
-
   // State
   const [courses, setCourses] = useState([]);
-  const [searchTerm, setSearchTerm] = useState(initialValues.search);
-  const [isFallbackMode, setIsFallbackMode] = useState(false);
-  
+  const [searchTerm, setSearchTerm] = useState('');
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
@@ -45,7 +25,6 @@ const CourseList = () => {
 
   const staticCoursesCacheRef = useRef(null);
   const searchDebounceRef = useRef(null);
-  const { setBackendAvailable } = useBackendStatus();
 
   const COURSE_PAGE_SIZE = 12;
 
@@ -87,91 +66,34 @@ const CourseList = () => {
       const safePage = Math.min(Math.max(1, page), totalPages);
       const pageItems = filtered.slice((safePage - 1) * COURSE_PAGE_SIZE, safePage * COURSE_PAGE_SIZE);
 
-      setBackendAvailable(false);
-      setIsFallbackMode(true);
       setCourses(pageItems);
       setPagination({
         next: safePage < totalPages ? safePage + 1 : null,
         previous: safePage > 1 ? safePage - 1 : null,
         current: safePage,
       });
-      setError(filtered.length === 0 ? 'No courses found in local fallback content.' : null);
+      setError(filtered.length === 0 ? 'No courses found in local content.' : null);
     } catch (fallbackError) {
-      console.error('Failed to load fallback courses', fallbackError);
+      console.error('Failed to load local courses', fallbackError);
       setCourses([]);
       setPagination({ next: null, previous: null, current: 1 });
-      setError('Unable to load courses from local fallback content.');
+      setError('Unable to load courses from local content.');
     } finally {
       setLoading(false);
     }
   };
 
-  // Ref to manage cancellation
-  const cancelTokenRef = useRef(null);
-
-  // Build query string for filters/search
-  const buildQueryParams = useCallback(() => {
-    const params = new URLSearchParams();
-
-    // Basic filters
-    if (searchTerm.trim()) params.append('search', searchTerm.trim());
-
-    return params.toString();
-  }, [searchTerm]);
-
   // Fetch courses
   const fetchCourses = async (page = 1) => {
-    // Cancel previous request
-    if (cancelTokenRef.current) cancelTokenRef.current.abort();
-    const controller = new AbortController();
-    cancelTokenRef.current = controller;
-
     try {
       setLoading(true);
       setError(null);
-      setIsFallbackMode(false);
-
-      const query = buildQueryParams();
-      const url = `/courses/courses/?page=${page}${query ? `&${query}` : ''}`;
-      
-      const res = await axios.get(url, {
-        signal: controller.signal,
-      });
-
-      if (!controller.signal.aborted) {
-        setBackendAvailable(true);
-        setCourses(res.data.results || []);
-        setPagination({
-          next: res.data.next,
-          previous: res.data.previous,
-          current: page,
-        });
-      }
+      await loadCoursesFromStatic(page);
     } catch (err) {
-      // Only update state if request wasn't cancelled
-      if (!controller.signal.aborted) {
-        const shouldFallback =
-          !err.response || (err.response.status >= 500 && err.response.status < 600);
-
-        if (shouldFallback) {
-          await loadCoursesFromStatic(page);
-          return;
-        }
-
-        if (err.name !== 'CanceledError') {
-          setCourses([]);
-          const errorMessage =
-            err.response?.data?.detail ||
-            err.response?.data?.message ||
-            "Failed to load courses. Please try again later.";
-          setError(errorMessage);
-        }
-      }
+      setCourses([]);
+      setError('Failed to load courses. Please try again later.');
     } finally {
-      // Only update loading state if request wasn't cancelled
-      if (!controller.signal.aborted && !isFallbackMode) {
-        setLoading(false);
-      }
+      setLoading(false);
     }
   };
 
@@ -179,17 +101,6 @@ const CourseList = () => {
   useEffect(() => {
     fetchCourses(1);
   }, []);
-
-  // Update URL when filters/search change (debounced)
-  useEffect(() => {
-    const handler = setTimeout(() => {
-      updateUrl({
-        search: searchTerm,
-        page: pagination.current.toString()
-      });
-    }, 400);
-    return () => clearTimeout(handler);
-  }, [searchTerm, pagination.current, updateUrl]);
 
   // Re-fetch courses when the search term changes, with debounce.
   useEffect(() => {
@@ -206,13 +117,10 @@ const CourseList = () => {
     };
   }, [searchTerm]);
 
-  console.log(courses)
-
   return (
     <>
       <Helmet>
         <title>Courses - MSK Institute</title>
-        {/* Meta tags omitted for brevity */}
       </Helmet>
 
       <div className={`min-h-screen transition-colors duration-300 ${theme === 'dark' ? 'bg-gray-950 text-white' : 'bg-gray-50 text-gray-900'}`}>
@@ -255,16 +163,14 @@ const CourseList = () => {
         {/* Courses Grid */}
         <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           {error && <div className="text-red-500 text-center py-4">{error}</div>}
-          <ErrorBoundary fallback={error => <CourseGridFallback error={error} />}>
-            {loading ? (
-              <CourseGridPlaceholder />
-            ) : (
-              <CourseGrid 
-                courses={courses}
-                loading={loading}
-              />
-            )}
-          </ErrorBoundary>
+          {loading ? (
+            <CourseGridPlaceholder />
+          ) : (
+            <CourseGrid 
+              courses={courses}
+              loading={loading}
+            />
+          )}
           {!loading && <Pagination pagination={pagination} onPageChange={fetchCourses} />}
         </main>
       </div>
@@ -273,3 +179,4 @@ const CourseList = () => {
 };
 
 export default CourseList;
+
