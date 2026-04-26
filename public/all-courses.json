@@ -373,7 +373,7 @@
       "Hindi"
     ],
     "duration": 1,
-    "price": 2999,
+    "price": 299,
     "certificate": true,
     "mode": "ONLINE",
     "course_type": "SINGLE",
@@ -666,7 +666,7 @@
     ],
     "id": 2,
     "slug": "python-for-intermediate",
-    "demo_date": "2026-08-13T11:00:00+05:30"
+    "demo_date": "2026-05-01T12:00:00+05:30"
   },
   {
     "status": "PUBLISH",
@@ -971,7 +971,7 @@
       "Hindi"
     ],
     "duration": 1,
-    "price": 1999,
+    "price": 599,
     "certificate": true,
     "mode": "ONLINE",
     "course_type": "SINGLE",
@@ -1153,7 +1153,7 @@
     ],
     "id": 4,
     "slug": "javascript-for-beginners",
-    "demo_date": "2026-08-13T11:00:00+05:30"
+    "demo_date": "2026-05-01T13:00:00+05:30"
   },
   {
     "status": "PUBLISH",
@@ -1621,7 +1621,7 @@
       "Hindi"
     ],
     "duration": 1,
-    "price": 2999,
+    "price": 499,
     "certificate": true,
     "mode": "ONLINE",
     "course_type": "SINGLE",
@@ -2202,7 +2202,7 @@
       "Hindi"
     ],
     "duration": 1,
-    "price": 1499,
+    "price": 399,
     "certificate": true,
     "mode": "ONLINE",
     "course_type": "SINGLE",
@@ -2781,7 +2781,7 @@
       "Hindi"
     ],
     "duration": 3,
-    "price": 2999,
+    "price": 1599,
     "certificate": true,
     "mode": "ONLINE",
     "course_type": "SINGLE",
@@ -3049,7 +3049,7 @@
     ],
     "id": 14,
     "slug": "ccc",
-    "demo_date": "2026-08-13T11:00:00+05:30"
+    "demo_date": "2026-05-01T15:00:00+05:30"
   },
   {
     "status": "PUBLISH",
@@ -3066,7 +3066,7 @@
       "Hindi"
     ],
     "duration": 1,
-    "price": 1499,
+    "price": 299,
     "certificate": true,
     "mode": "ONLINE",
     "course_type": "SINGLE",
@@ -3480,7 +3480,7 @@
       "Hindi"
     ],
     "duration": 1,
-    "price": 1999,
+    "price": 299,
     "certificate": true,
     "mode": "ONLINE",
     "course_type": "SINGLE",
@@ -3614,7 +3614,7 @@
     ],
     "id": 17,
     "slug": "sql-for-beginners",
-    "demo_date": "2026-08-13T11:00:00+05:30"
+    "demo_date": "2026-05-01T14:00:00+05:30"
   },
   {
     "status": "PUBLISH",
@@ -3790,7 +3790,7 @@
       "Hindi"
     ],
     "duration": 1,
-    "price": 1499,
+    "price": 499,
     "certificate": true,
     "mode": "ONLINE",
     "course_type": "SINGLE",
@@ -4192,7 +4192,7 @@
       "Hindi"
     ],
     "duration": 1,
-    "price": 999,
+    "price": 499,
     "certificate": true,
     "mode": "OFFLINE",
     "course_type": "SINGLE",
@@ -4288,7 +4288,7 @@
       "Hindi"
     ],
     "duration": 1,
-    "price": 999,
+    "price": 499,
     "certificate": true,
     "mode": "OFFLINE",
     "course_type": "SINGLE",
@@ -4597,7 +4597,7 @@
       "Hindi"
     ],
     "duration": 1,
-    "price": 4999,
+    "price": 499,
     "certificate": true,
     "mode": "OFFLINE",
     "course_type": "SINGLE",
