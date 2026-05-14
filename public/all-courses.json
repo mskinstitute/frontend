@@ -14,7 +14,7 @@
       "Hindi"
     ],
     "duration": 1,
-    "price": 299,
+    "price": 499,
     "certificate": true,
     "mode": "ONLINE",
     "course_type": "SINGLE",
@@ -357,11 +357,12 @@
     ],
     "id": 1,
     "slug": "python-for-beginners",
-    "demo_date": "2026-05-01T11:00:00+05:30"
+    "demo_date": "2026-05-20T11:00:00+05:30"
   },
   {
     "status": "PUBLISH",
     "title": "Python for Intermediate",
+    "featured_image_url": "https://drive.google.com/thumbnail?id=1AXwGPZPx7EeEGJiANSxXYAIxoFua_clU&sz=w1000",
     "sort_description": "Enhance your Python skills with intermediate-level concepts: advanced data structures, OOP, modules, error handling, APIs, databases, and practical projects.",
     "categories": [
       "Programming",
@@ -373,7 +374,7 @@
       "Hindi"
     ],
     "duration": 1,
-    "price": 299,
+    "price": 999,
     "certificate": true,
     "mode": "ONLINE",
     "course_type": "SINGLE",
@@ -666,11 +667,12 @@
     ],
     "id": 2,
     "slug": "python-for-intermediate",
-    "demo_date": "2026-05-01T12:00:00+05:30"
+    "demo_date": "2026-05-20T12:00:00+05:30"
   },
   {
     "status": "PUBLISH",
     "title": "Python for Advanced",
+    "featured_image_url": "https://drive.google.com/thumbnail?id=1AXwGPZPx7EeEGJiANSxXYAIxoFua_clU&sz=w1000",
     "sort_description": "Master advanced Python concepts including decorators, context managers, multithreading, multiprocessing, networking, databases, testing, and real-world projects.",
     "categories": [
       "Programming",
@@ -682,7 +684,7 @@
       "Hindi"
     ],
     "duration": 1,
-    "price": 3999,
+    "price": 1999,
     "certificate": true,
     "mode": "ONLINE",
     "course_type": "SINGLE",
@@ -954,7 +956,7 @@
     ],
     "id": 3,
     "slug": "python-for-advanced",
-    "demo_date": "2026-08-13T11:00:00+05:30"
+    "demo_date": "2026-05-20T11:00:00+05:30"
   },
   {
     "status": "PUBLISH",
@@ -971,7 +973,7 @@
       "Hindi"
     ],
     "duration": 1,
-    "price": 599,
+    "price": 499,
     "certificate": true,
     "mode": "ONLINE",
     "course_type": "SINGLE",
@@ -1153,7 +1155,7 @@
     ],
     "id": 4,
     "slug": "javascript-for-beginners",
-    "demo_date": "2026-05-01T13:00:00+05:30"
+    "demo_date": "2026-05-20T13:00:00+05:30"
   },
   {
     "status": "PUBLISH",
@@ -1170,7 +1172,7 @@
       "Hindi"
     ],
     "duration": 1,
-    "price": 2499,
+    "price": 999,
     "certificate": true,
     "mode": "ONLINE",
     "course_type": "SINGLE",
@@ -1412,7 +1414,7 @@
     ],
     "id": 5,
     "slug": "javascript-for-intermediate",
-    "demo_date": "2026-08-13T11:00:00+05:30"
+    "demo_date": "2026-05-20T11:00:00+05:30"
   },
   {
     "status": "PUBLISH",
@@ -1429,7 +1431,7 @@
       "Hindi"
     ],
     "duration": 1,
-    "price": 2999,
+    "price": 1999,
     "certificate": true,
     "mode": "ONLINE",
     "course_type": "SINGLE",
@@ -1604,7 +1606,7 @@
     ],
     "id": 6,
     "slug": "javascript-for-advanced",
-    "demo_date": "2026-08-13T11:00:00+05:30"
+    "demo_date": "2026-05-20T11:00:00+05:30"
   },
   {
     "status": "PUBLISH",
@@ -1621,7 +1623,7 @@
       "Hindi"
     ],
     "duration": 1,
-    "price": 499,
+    "price": 999,
     "certificate": true,
     "mode": "ONLINE",
     "course_type": "SINGLE",
@@ -1733,7 +1735,7 @@
     ],
     "id": 7,
     "slug": "react-js-for-beginners",
-    "demo_date": "2026-08-13T11:00:00+05:30"
+    "demo_date": "2026-05-20T11:00:00+05:30"
   },
   {
     "status": "PUBLISH",
@@ -2081,7 +2083,7 @@
       "Hindi"
     ],
     "duration": 1,
-    "price": 999,
+    "price": 499,
     "certificate": true,
     "mode": "ONLINE",
     "course_type": "SINGLE",
@@ -2185,7 +2187,7 @@
     ],
     "id": 10,
     "slug": "html-complete-course",
-    "demo_date": "2026-08-13T11:00:00+05:30"
+    "demo_date": "2026-05-20T11:00:00+05:30"
   },
   {
     "status": "PUBLISH",
@@ -2202,7 +2204,7 @@
       "Hindi"
     ],
     "duration": 1,
-    "price": 399,
+    "price": 499,
     "certificate": true,
     "mode": "ONLINE",
     "course_type": "SINGLE",
@@ -2378,7 +2380,7 @@
     ],
     "id": 11,
     "slug": "css-for-beginners",
-    "demo_date": "2026-08-13T11:00:00+05:30"
+    "demo_date": "2026-05-20T11:00:00+05:30"
   },
   {
     "status": "PUBLISH",
@@ -2395,7 +2397,7 @@
       "Hindi"
     ],
     "duration": 1,
-    "price": 1999,
+    "price": 999,
     "certificate": true,
     "mode": "ONLINE",
     "course_type": "SINGLE",
@@ -2571,7 +2573,7 @@
     ],
     "id": 12,
     "slug": "css-for-intermediate",
-    "demo_date": "2026-08-13T11:00:00+05:30"
+    "demo_date": "2026-05-20T11:00:00+05:30"
   },
   {
     "status": "PUBLISH",
@@ -2588,7 +2590,7 @@
       "Hindi"
     ],
     "duration": 1,
-    "price": 2499,
+    "price": 1499,
     "certificate": true,
     "mode": "ONLINE",
     "course_type": "SINGLE",
@@ -2764,7 +2766,7 @@
     ],
     "id": 13,
     "slug": "css-for-advanced",
-    "demo_date": "2026-08-13T11:00:00+05:30"
+    "demo_date": "2026-05-20T11:00:00+05:30"
   },
   {
     "status": "PUBLISH",
@@ -2781,7 +2783,7 @@
       "Hindi"
     ],
     "duration": 3,
-    "price": 1599,
+    "price": 1499,
     "certificate": true,
     "mode": "ONLINE",
     "course_type": "SINGLE",
@@ -3049,7 +3051,7 @@
     ],
     "id": 14,
     "slug": "ccc",
-    "demo_date": "2026-05-01T15:00:00+05:30"
+    "demo_date": "2026-05-20T15:00:00+05:30"
   },
   {
     "status": "PUBLISH",
@@ -3066,7 +3068,7 @@
       "Hindi"
     ],
     "duration": 1,
-    "price": 299,
+    "price": 499,
     "certificate": true,
     "mode": "ONLINE",
     "course_type": "SINGLE",
@@ -3242,7 +3244,7 @@
     ],
     "id": 15,
     "slug": "bootstrap-for-beginner",
-    "demo_date": "2026-08-13T11:00:00+05:30"
+    "demo_date": "2026-05-20T11:00:00+05:30"
   },
   {
     "status": "PUBLISH",
@@ -3259,7 +3261,7 @@
       "Hindi"
     ],
     "duration": 1,
-    "price": 1999,
+    "price": 999,
     "certificate": true,
     "mode": "ONLINE",
     "course_type": "SINGLE",
@@ -3463,7 +3465,7 @@
     ],
     "id": 16,
     "slug": "bootstrap-for-advanced",
-    "demo_date": "2026-08-13T11:00:00+05:30"
+    "demo_date": "2026-05-20T11:00:00+05:30"
   },
   {
     "status": "PUBLISH",
