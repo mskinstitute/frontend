@@ -67,7 +67,7 @@ const CourseDetailOffline = () => {
     loadCourse();
   }, [loadCourse]);
 
-  const discountedPrice = course?.price && course.price > 0 
+  const discountedPrice = course?.price && course.price > 0
     ? `₹ ${Math.round(course.price * (1 - (course.discount || 0) / 100))}`
     : 'Free';
 
@@ -135,8 +135,8 @@ const CourseDetailOffline = () => {
               {/* Left: Image + Price */}
               <div className="space-y-6">
                 <div className="aspect-[16/9] rounded-2xl lg:rounded-3xl overflow-hidden shadow-2xl bg-gray-800 relative group">
-                  <img 
-                    src={course.featured_image_url || `https://placehold.co/900x506/1e293b/ffffff?text=${course.title.substring(0,20)}...`}
+                  <img
+                    src={course.featured_image_url || `https://placehold.co/900x506/1e293b/ffffff?text=${course.title.substring(0, 20)}...`}
                     alt={course.title}
                     className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
                   />
@@ -157,7 +157,7 @@ const CourseDetailOffline = () => {
                     </div>
                     {course.discount > 0 && (
                       <div className="bg-gradient-to-r from-yellow-500/20 to-orange-500/20 text-yellow-300 px-3 sm:px-6 py-1.5 sm:py-3 rounded-xl sm:rounded-2xl font-bold border border-yellow-500/30 shadow-lg text-sm sm:text-base">
-                        −{course.discount}% 
+                        −{course.discount}%
                       </div>
                     )}
                   </div>
@@ -240,7 +240,7 @@ const CourseDetailOffline = () => {
         </div>
 
         {/* Curriculum */}
-        <div className="max-w-6xl mx-auto px-4 mb-20">
+        <div className="max-w-6xl mx-auto py-6 mb-20">
           <div className="bg-gray-800/40 backdrop-blur-xl rounded-2xl lg:rounded-3xl p-4 sm:p-6 lg:p-12 border border-gray-700 shadow-2xl">
             <div className="flex items-center gap-3 sm:gap-4 mb-6 sm:mb-8 lg:mb-12">
               <div className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 bg-gradient-to-br from-indigo-500 to-purple-600 rounded-2xl lg:rounded-3xl flex items-center justify-center shadow-xl">
@@ -254,69 +254,125 @@ const CourseDetailOffline = () => {
               </div>
             </div>
 
-            <div className="space-y-4 pr-4 -mr-4 scrollbar-thin scrollbar-thumb-gray-600 scrollbar-track-gray-900">
-              {course.chapters?.map((chapter) => (
-                <div key={chapter.id} className="group">
-                  <button
-                    onClick={() => toggleChapter(chapter.id)}
-                    className="w-full flex items-center justify-between p-4 sm:p-5 lg:p-8 bg-gradient-to-r from-gray-900/50 to-gray-800/50 hover:from-gray-800/70 hover:to-gray-700/70 rounded-2xl lg:rounded-3xl border border-gray-700/50 shadow-xl transition-all duration-300 hover:shadow-2xl hover:-translate-y-1"
-                  >
-                    <div className="flex items-center gap-3 sm:gap-4 lg:gap-6">
-                      <div className="w-10 h-10 sm:w-12 sm:h-12 lg:w-16 lg:h-16 bg-gradient-to-br from-indigo-500/30 to-blue-500/30 rounded-xl sm:rounded-2xl flex items-center justify-center flex-shrink-0 shadow-lg">
-                        <BookOpen className="w-5 h-5 sm:w-6 sm:h-6 lg:w-7 lg:h-7 text-indigo-300" />
+            <div className="space-y-4 pr-2 sm:pr-4 -mr-2 sm:-mr-4 scrollbar-thin scrollbar-thumb-gray-600 scrollbar-track-gray-900 overflow-x-hidden">
+
+
+              <div>
+                <div className="space-y-4">
+                  {/* <h4>{course.course_type}</h4> */}
+                  {course.course_type === 'COMBO' ? (
+                    // Display courses for combo type
+                    course.single_courses?.length > 0 ? (
+                      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        {course.single_courses?.map((includedCourse) => (
+                          <CourseCard
+                            key={includedCourse.id}
+                            course={{
+                              ...includedCourse,
+                              featured_image_url: includedCourse.featured_image_url || null,
+                              language: includedCourse.language || []
+                            }}
+                          />
+                        )) || (
+                            <div className="text-gray-500">No courses available.</div>
+                          )}
                       </div>
-                      <div>
-                        <h3 className="text-lg sm:text-xl lg:text-2xl font-bold text-white mb-1">{chapter.title}</h3>
-                        <p className="text-sm sm:text-base text-indigo-300 font-semibold">{chapter.topics?.length || 0} Topics</p>
+                    ) : (
+                      <div className="text-center py-8">
+                        <GraduationCap className="w-12 h-12 text-gray-600 mx-auto mb-3" />
+                        <p className="text-gray-400">No courses added to this combo yet</p>
                       </div>
-                    </div>
-                    <ChevronDown className={`w-6 h-6 sm:w-7 sm:h-7 lg:w-8 lg:h-8 text-gray-400 transition-transform duration-300 ${openChapter === chapter.id ? 'rotate-180 scale-110' : ''}`} />
-                  </button>
-                  
-                  {openChapter === chapter.id && (
-                    <div className="mt-4 pl-4 sm:pl-8 lg:pl-24 pr-4 lg:pr-8 pb-4 lg:pb-8 space-y-3 animate-in slide-in-from-top-4 duration-300">
-                      {chapter.topics && chapter.topics.length > 0 ? (
-                        chapter.topics.map((topic) => (
-                          <div key={topic.id} className="group/topic flex items-start justify-between p-3 sm:p-4 lg:p-6 bg-gray-800/40 hover:bg-gray-700/60 rounded-xl sm:rounded-2xl border border-gray-600/50 transition-all cursor-pointer hover:shadow-lg hover:-translate-y-1">
-                            <span className="flex-1 text-gray-200 font-medium text-sm sm:text-base lg:text-lg group-hover/topic:text-white pr-4 leading-relaxed">
-                              {topic.title}
-                            </span>
-                            <div className="flex items-center gap-2 opacity-60 group-hover/topic:opacity-100 transition-opacity">
-                              {topic.video_url && (
-                                <a 
-                                  href={topic.video_url} 
-                                  target="_blank" 
-                                  rel="noopener noreferrer"
-                                  className="p-2 sm:p-3 bg-gradient-to-r from-indigo-500/20 to-blue-500/20 text-indigo-300 hover:from-indigo-500/40 hover:to-blue-500/40 hover:text-indigo-200 rounded-xl sm:rounded-2xl transition-all shadow-md hover:shadow-lg hover:scale-105 flex items-center justify-center w-9 h-9 sm:w-10 sm:h-10 lg:w-12 lg:h-12"
-                                  title="Watch Video"
-                                >
-                                  <PlayCircle className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6" />
-                                </a>
-                              )}
-                              {topic.notes_url && (
-                                <a 
-                                  href={topic.notes_url} 
-                                  target="_blank" 
-                                  rel="noopener noreferrer"
-                                  className="p-2 sm:p-3 bg-gradient-to-r from-emerald-500/20 to-teal-500/20 text-emerald-300 hover:from-emerald-500/40 hover:to-teal-500/40 hover:text-emerald-200 rounded-xl sm:rounded-2xl transition-all shadow-md hover:shadow-lg hover:scale-105 flex items-center justify-center w-9 h-9 sm:w-10 sm:h-10 lg:w-12 lg:h-12"
-                                  title="View Notes"
-                                >
-                                  <FileText className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6" />
-                                </a>
+                    )
+                  ) : (
+                    // Display chapters for regular course
+                    course.chapters?.length > 0 ? (
+                      course.chapters.map((chapter) => (
+                        <div
+                          key={chapter.id}
+                          className="bg-gray-700/30 rounded-xl overflow-hidden"
+                        >
+                          <button
+                            onClick={() => toggleChapter(chapter.id)}
+                            className="w-full flex items-center justify-between p-4 text-left hover:bg-gray-700/50 transition-colors"
+                          >
+                            <div className="flex items-center gap-3">
+                              <div className="flex-shrink-0 w-8 h-8 rounded-lg bg-indigo-600/10 flex items-center justify-center">
+                                <BookOpen className="w-5 h-5 text-indigo-400" />
+                              </div>
+                              <div>
+                                <h3 className="font-medium text-gray-100">{chapter.title}</h3>
+                                {chapter.topics?.length > 0 && (
+                                  <p className="text-sm text-gray-400">{chapter.topics.length} topics</p>
+                                )}
+                              </div>
+                            </div>
+                            <ChevronDown
+                              className={`w-5 h-5 text-gray-400 transform transition-transform duration-200 ${openChapter === chapter.id ? 'rotate-180' : ''
+                                }`}
+                            />
+                          </button>
+
+                          {openChapter === chapter.id && (
+                            <div className="border-t border-gray-600/50">
+                              {chapter.topics?.length > 0 ? (
+                                <div className="p-4 space-y-2">
+                                  {chapter.topics.map((topic) => (
+                                    <div
+                                      key={topic.id}
+                                      className="flex items-center justify-between p-3 rounded-lg hover:bg-gray-600/30 transition-colors group"
+                                    >
+                                      <span className="text-gray-300 text-sm group-hover:text-white transition-colors">
+                                        {topic.id
+                                          .split("-")
+                                          .slice(1)
+                                          .join(".")}{" "}
+                                        - {topic.title}
+                                      </span>
+                                      <div className="flex items-center gap-2">
+                                        {topic.video_url && (
+                                          <a
+                                            href={topic.video_url}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="text-indigo-400 hover:text-indigo-300 transition-colors p-1 rounded-full hover:bg-gray-700"
+                                            title="Watch Video"
+                                          >
+                                            <PlayCircle className="w-4 h-4" />
+                                          </a>
+                                        )}
+                                        {topic.notes_url && (
+                                          <a
+                                            href={topic.notes_url}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="text-indigo-400 hover:text-indigo-300 transition-colors p-1 rounded-full hover:bg-gray-700"
+                                            title="View Notes"
+                                          >
+                                            <FileText className="w-4 h-4" />
+                                          </a>
+                                        )}
+                                      </div>
+                                    </div>
+                                  ))}
+                                </div>
+                              ) : (
+                                <p className="p-4 text-sm text-gray-400">No topics available yet</p>
                               )}
                             </div>
-                          </div>
-                        ))
-                      ) : (
-                        <div className="p-4 sm:p-6 lg:p-8 text-center py-8 sm:py-10 lg:py-12 bg-gray-800/30 rounded-xl sm:rounded-2xl border-2 border-dashed border-gray-600">
-                          <GraduationCap className="w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 text-gray-500 mx-auto mb-4" />
-                          <p className="text-gray-400 text-base sm:text-lg">Topics for this chapter coming soon...</p>
+                          )}
                         </div>
-                      )}
-                    </div>
+                      ))
+                    ) : (
+                      <div className="text-center py-8">
+                        <GraduationCap className="w-12 h-12 text-gray-600 mx-auto mb-3" />
+                        <p className="text-gray-400">Course curriculum coming soon...</p>
+                      </div>
+                    )
                   )}
                 </div>
-              ))}
+              </div>
+
+
               {(!course.chapters || course.chapters.length === 0) && (
                 <div className="p-8 sm:p-12 lg:p-16 text-center bg-gray-800/30 rounded-2xl lg:rounded-3xl border-2 border-dashed border-gray-600">
                   <BookOpen className="w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24 text-gray-500 mx-auto mb-4 sm:mb-6 opacity-50" />
