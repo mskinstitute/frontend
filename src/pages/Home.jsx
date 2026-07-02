@@ -1,13 +1,96 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect, useMemo, useState } from 'react';
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { Rocket, BookOpenCheck, GraduationCap, ArrowRight, Play, Users, Award, BookOpen, Radio, ChevronRight } from "lucide-react";
 import { ThemeContext } from '../context/ThemeContext';
 import InstallPWAButton from '../components/InstallPWAButton';
-import codingImage from '../assets/laptop.webp';
+import LiveCourseGrid from '../components/course/LiveCourseGrid';import CourseCard from '../components/course/CourseCard';import codingImage from '../assets/laptop.webp';
+
 
 const Home = () => {
   const { theme } = useContext(ThemeContext);
+  const [liveCourses, setLiveCourses] = useState([]);
+  const [allCourses, setAllCourses] = useState([]);
+  const [loadingLiveCourses, setLoadingLiveCourses] = useState(true);
+  const [loadingAllCourses, setLoadingAllCourses] = useState(true);
+
+  useEffect(() => {
+    const loadLiveCourses = async () => {
+      try {
+        const response = await fetch('/live-courses.json');
+        const data = await response.json();
+        setLiveCourses(data || []);
+      } catch (error) {
+        console.error('Failed to load live courses for homepage', error);
+        setLiveCourses([]);
+      } finally {
+        setLoadingLiveCourses(false);
+      }
+    };
+
+    const loadAllCourses = async () => {
+      try {
+        const response = await fetch('/all-courses.json');
+        const data = await response.json();
+        const items = Array.isArray(data)
+          ? data
+          : Array.isArray(data.results)
+          ? data.results
+          : [];
+        setAllCourses(items);
+      } catch (error) {
+        console.error('Failed to load all courses for homepage', error);
+        setAllCourses([]);
+      } finally {
+        setLoadingAllCourses(false);
+      }
+    };
+
+    loadLiveCourses();
+    loadAllCourses();
+  }, []);
+
+  const popularCourseSlugs = useMemo(
+    () => [
+      'frontend-development--8-months',
+      'python-for-beginners',
+      'react-js-for-beginners',
+      'data-analysis-mastery-combo-course--12-months',
+      'python-backend-development-mastery-combo--8-months',
+      'ccc',
+      'html-complete-course',
+      'ms-word-for-beginners',
+    ],
+    [],
+  );
+
+  const recommendedCourseSlugs = useMemo(
+    () => [
+      'python-for-beginners',
+      'frontend-development--8-months',
+      'python-backend-development-mastery-combo--8-months',
+      'react-js-for-beginners',
+      'data-analysis-mastery-combo-course--12-months',
+      'ccc',
+      'ms-word-for-beginners',
+      'web-designing-complete-pathway--4-months',
+    ],
+    [],
+  );
+
+  const popularCourses = useMemo(
+    () => popularCourseSlugs
+      .map((slug) => allCourses.find((course) => course.slug === slug))
+      .filter(Boolean),
+    [allCourses, popularCourseSlugs],
+  );
+
+  const recommendedCourses = useMemo(
+    () => recommendedCourseSlugs
+      .map((slug) => allCourses.find((course) => course.slug === slug))
+      .filter(Boolean),
+    [allCourses, recommendedCourseSlugs],
+  );
 
   return (
     <>
@@ -261,9 +344,13 @@ const Home = () => {
             </div>
 
             {/* Live Courses Grid - Will be populated from API */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-              {/* Live course cards will be rendered here */}
-            </div>
+            {loadingLiveCourses ? (
+              <div className="py-10 text-center text-gray-500">Loading live courses...</div>
+            ) : liveCourses.length > 0 ? (
+              <LiveCourseGrid courses={liveCourses.slice(0, 3)} />
+            ) : (
+              <div className="py-10 text-center text-gray-500">No live courses are available at the moment.</div>
+            )}
 
             {/* View All Link */}
             <div className="text-center mt-12">
@@ -280,6 +367,63 @@ const Home = () => {
             </div>
           </div>
         </section>
+
+        {/* Popular Courses */}
+        <section className={`py-20 transition-colors duration-300 ${theme === 'dark' ? 'bg-gray-900' : 'bg-gray-50'}`}>
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className={`text-3xl lg:text-4xl font-bold mb-4 transition-colors duration-300 ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
+                Popular Courses
+              </h2>
+              <p className={`text-lg max-w-2xl mx-auto transition-colors duration-300 ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>
+                Explore the most enrolled and trending courses at MSK Institute, built for students looking to upskill quickly.
+              </p>
+            </div>
+
+            {loadingAllCourses ? (
+              <div className="py-10 text-center text-gray-500">Loading popular courses...</div>
+            ) : popularCourses.length > 0 ? (
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                {popularCourses.map((course) => (
+                  <CourseCard key={course.id || course.slug} course={course} />
+                ))}
+              </div>
+            ) : (
+              <div className="rounded-3xl border border-gray-200 bg-white p-6 shadow-sm text-gray-700 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300">
+                No popular courses are available right now.
+              </div>
+            )}
+          </div>
+        </section>
+
+        {/* Recommended Courses */}
+        <section className={`py-20 transition-colors duration-300 ${theme === 'dark' ? 'bg-gray-950' : 'bg-white'}`}>
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-12">
+              <h2 className={`text-3xl lg:text-4xl font-bold mb-4 transition-colors duration-300 ${theme === 'dark' ? 'text-white' : 'text-gray-900'}`}>
+                Recommended Courses
+              </h2>
+              <p className={`text-lg max-w-2xl mx-auto transition-colors duration-300 ${theme === 'dark' ? 'text-gray-400' : 'text-gray-600'}`}>
+                Recommended for beginners and students who want career-ready courses aligned to current industry demand.
+              </p>
+            </div>
+
+            {loadingAllCourses ? (
+              <div className="py-10 text-center text-gray-500">Loading recommended courses...</div>
+            ) : recommendedCourses.length > 0 ? (
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                {recommendedCourses.map((course) => (
+                  <CourseCard key={course.id || course.slug} course={course} />
+                ))}
+              </div>
+            ) : (
+              <div className="rounded-3xl border border-gray-200 bg-white p-6 shadow-sm text-gray-700 dark:border-gray-700 dark:bg-gray-900 dark:text-gray-300">
+                No recommended courses are available right now.
+              </div>
+            )}
+          </div>
+        </section>
+
 
         {/* Features Section */}
         <section className={`py-20 transition-colors duration-300 ${theme === 'dark' ? 'bg-gray-900' : 'bg-gray-50'
@@ -456,6 +600,7 @@ const Home = () => {
             </div>
           </div>
         </section>
+
       </div>
     </>
   );

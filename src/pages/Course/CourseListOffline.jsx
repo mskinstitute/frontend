@@ -11,6 +11,9 @@ const CourseListOffline = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [search, setSearch] = useState('');
+  const [categoryFilter, setCategoryFilter] = useState('All');
+  const [levelFilter, setLevelFilter] = useState('All');
+  const [modeFilter, setModeFilter] = useState('All');
   const [page, setPage] = useState(1);
 
   useEffect(() => {
@@ -44,19 +47,55 @@ const CourseListOffline = () => {
     };
   }, []);
 
+  const categoryOptions = useMemo(() => {
+    const options = new Set(['All']);
+    courses.forEach((course) => {
+      if (Array.isArray(course.categories)) {
+        course.categories.forEach((category) => options.add(category));
+      } else if (course.categories) {
+        options.add(String(course.categories));
+      }
+    });
+    return Array.from(options);
+  }, [courses]);
+
+  const levelOptions = useMemo(() => {
+    const options = new Set(['All']);
+    courses.forEach((course) => {
+      if (course.level) {
+        options.add(String(course.level));
+      }
+    });
+    return Array.from(options);
+  }, [courses]);
+
+  const modeOptions = useMemo(() => {
+    const options = new Set(['All']);
+    courses.forEach((course) => {
+      if (course.mode) {
+        options.add(String(course.mode));
+      }
+    });
+    return Array.from(options);
+  }, [courses]);
+
   const filteredCourses = useMemo(() => {
     const query = search.trim().toLowerCase();
-    if (!query) return courses;
-
     return courses.filter((course) => {
       const title = String(course.title || course.name || '').toLowerCase();
       const description = String(course.sort_description || course.description || '').toLowerCase();
       const categories = Array.isArray(course.categories)
         ? course.categories.join(' ').toLowerCase()
         : String(course.categories || '').toLowerCase();
-      return title.includes(query) || description.includes(query) || categories.includes(query);
+
+      const matchesSearch = !query || title.includes(query) || description.includes(query) || categories.includes(query);
+      const matchesCategory = categoryFilter === 'All' || categories.includes(categoryFilter.toLowerCase());
+      const matchesLevel = levelFilter === 'All' || String(course.level).toLowerCase() === levelFilter.toLowerCase();
+      const matchesMode = modeFilter === 'All' || String(course.mode).toLowerCase() === modeFilter.toLowerCase();
+
+      return matchesSearch && matchesCategory && matchesLevel && matchesMode;
     });
-  }, [courses, search]);
+  }, [courses, search, categoryFilter, levelFilter, modeFilter]);
 
   const totalPages = Math.max(1, Math.ceil(filteredCourses.length / PAGE_SIZE));
   const currentPage = Math.min(page, totalPages);
@@ -84,7 +123,7 @@ const CourseListOffline = () => {
             Explore available courses offline. Search by title, description, or category.
           </p>
 
-          <div className="flex flex-col md:flex-row gap-3 items-center justify-between">
+          <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
             <input
               value={search}
               onChange={(event) => {
@@ -92,8 +131,52 @@ const CourseListOffline = () => {
                 setPage(1);
               }}
               placeholder="Search courses..."
-              className="w-full md:max-w-xl rounded-lg border px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              className="w-full lg:w-1/2 rounded-lg border px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
             />
+            <div className="grid grid-cols-1 gap-3 sm:grid-cols-3 lg:grid-cols-3 w-full lg:w-auto">
+              <select
+                value={categoryFilter}
+                onChange={(event) => {
+                  setCategoryFilter(event.target.value);
+                  setPage(1);
+                }}
+                className="w-full dark:bg-gray-900 rounded-lg border px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              >
+                {categoryOptions.map((category) => (
+                  <option key={category} value={category}>
+                    {category}
+                  </option>
+                ))}
+              </select>
+              <select
+                value={levelFilter}
+                onChange={(event) => {
+                  setLevelFilter(event.target.value);
+                  setPage(1);
+                }}
+                className="w-full dark:bg-gray-900 rounded-lg border px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              >
+                {levelOptions.map((level) => (
+                  <option key={level} value={level}>
+                    {level}
+                  </option>
+                ))}
+              </select>
+              <select
+                value={modeFilter}
+                onChange={(event) => {
+                  setModeFilter(event.target.value);
+                  setPage(1);
+                }}
+                className="w-full dark:bg-gray-900 rounded-lg border px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
+              >
+                {modeOptions.map((mode) => (
+                  <option key={mode} value={mode}>
+                    {mode}
+                  </option>
+                ))}
+              </select>
+            </div>
           </div>
         </div>
 

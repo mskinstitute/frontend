@@ -1,0 +1,22 @@
+{
+  "popular": [
+    "Python Programming",
+    "Full Stack Web Development",
+    "Data Analytics",
+    "Artificial Intelligence (AI)",
+    "Machine Learning (ML)",
+    "Cyber Security",
+    "O Level",
+    "ADCA (Advanced Diploma in Computer Applications)"
+  ],
+  "recommended": [
+    "CCC (Basic Course)",
+    "Python for Beginners",
+    "Frontend Development",
+    "Backend Development with Python",
+    "Backend Development with Node.js",
+    "React.js Development",
+    "JavaScript Mastery",
+    "Tally Prime with GST"
+  ]
+}

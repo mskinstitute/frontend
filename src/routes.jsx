@@ -5,6 +5,8 @@ const About = React.lazy(() => import('./pages/About.jsx'));
 const Contact = React.lazy(() => import('./pages/Contact.jsx'));
 const CourseListOffline = React.lazy(() => import('./pages/Course/CourseListOffline.jsx'));
 const CourseDetailOffline = React.lazy(() => import('./pages/Course/CourseDetailOffline.jsx'));
+const LiveCourses = React.lazy(() => import('./pages/Course/LiveCourses.jsx'));
+const LiveCourseDetails = React.lazy(() => import('./pages/Course/LiveCourseDetails.jsx'));
 const Notes = React.lazy(() => import('./pages/Notes.jsx'));
 const NotFound = React.lazy(() => import('./pages/NotFound.jsx'));
 const Terms = React.lazy(() => import('./pages/Terms.jsx'));
@@ -21,5 +23,7 @@ export const routes = [
   { path: '/notes', element: <Notes /> },
   { path: '/courses', element: <CourseListOffline /> },
   { path: '/courses/:slug', element: <CourseDetailOffline /> },
+  { path: '/live-courses', element: <LiveCourses /> },
+  { path: '/live-courses/:id', element: <LiveCourseDetails /> },
   { path: '*', element: <NotFound /> },
 ];
