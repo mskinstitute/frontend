@@ -130,6 +130,7 @@ const CourseListOffline = () => {
                 setSearch(event.target.value);
                 setPage(1);
               }}
+              autoFocus
               placeholder="Search courses..."
               className="w-full lg:w-1/2 rounded-lg border px-4 py-3 focus:outline-none focus:ring-2 focus:ring-blue-500"
             />

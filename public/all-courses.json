@@ -357,7 +357,7 @@
     ],
     "id": 1,
     "slug": "python-for-beginners",
-    "demo_date": "2026-05-20T11:00:00+05:30"
+    "demo_date": "2026-07-10T10:00:00+05:30"
   },
   {
     "status": "PUBLISH",
@@ -667,7 +667,7 @@
     ],
     "id": 2,
     "slug": "python-for-intermediate",
-    "demo_date": "2026-05-20T12:00:00+05:30"
+    "demo_date": "2026-07-10T10:00:00+05:30"
   },
   {
     "status": "PUBLISH",
@@ -956,7 +956,7 @@
     ],
     "id": 3,
     "slug": "python-for-advanced",
-    "demo_date": "2026-05-20T11:00:00+05:30"
+    "demo_date": "2026-07-10T10:00:00+05:30"
   },
   {
     "status": "PUBLISH",
@@ -1155,7 +1155,7 @@
     ],
     "id": 4,
     "slug": "javascript-for-beginners",
-    "demo_date": "2026-05-20T13:00:00+05:30"
+    "demo_date": "2026-07-10T10:00:00+05:30"
   },
   {
     "status": "PUBLISH",
@@ -1414,7 +1414,7 @@
     ],
     "id": 5,
     "slug": "javascript-for-intermediate",
-    "demo_date": "2026-05-20T11:00:00+05:30"
+    "demo_date": "2026-07-10T10:00:00+05:30"
   },
   {
     "status": "PUBLISH",
@@ -1606,7 +1606,7 @@
     ],
     "id": 6,
     "slug": "javascript-for-advanced",
-    "demo_date": "2026-05-20T11:00:00+05:30"
+    "demo_date": "2026-07-10T10:00:00+05:30"
   },
   {
     "status": "PUBLISH",
@@ -1735,7 +1735,7 @@
     ],
     "id": 7,
     "slug": "react-js-for-beginners",
-    "demo_date": "2026-05-20T11:00:00+05:30"
+    "demo_date": "2026-07-10T10:00:00+05:30"
   },
   {
     "status": "PUBLISH",
@@ -1886,7 +1886,7 @@
     ],
     "id": 8,
     "slug": "react-js-for-intermediate",
-    "demo_date": "2026-08-13T11:00:00+05:30"
+    "demo_date": "2026-07-10T10:00:00+05:30"
   },
   {
     "status": "PUBLISH",
@@ -2066,7 +2066,7 @@
     ],
     "id": 9,
     "slug": "react-js-for-advanced",
-    "demo_date": "2026-08-13T11:00:00+05:30"
+    "demo_date": "2026-07-10T10:00:00+05:30"
   },
   {
     "status": "PUBLISH",
@@ -2187,7 +2187,7 @@
     ],
     "id": 10,
     "slug": "html-complete-course",
-    "demo_date": "2026-05-20T11:00:00+05:30"
+    "demo_date": "2026-07-10T10:00:00+05:30"
   },
   {
     "status": "PUBLISH",
@@ -2380,7 +2380,7 @@
     ],
     "id": 11,
     "slug": "css-for-beginners",
-    "demo_date": "2026-05-20T11:00:00+05:30"
+    "demo_date": "2026-07-10T10:00:00+05:30"
   },
   {
     "status": "PUBLISH",
@@ -2573,7 +2573,7 @@
     ],
     "id": 12,
     "slug": "css-for-intermediate",
-    "demo_date": "2026-05-20T11:00:00+05:30"
+    "demo_date": "2026-07-10T10:00:00+05:30"
   },
   {
     "status": "PUBLISH",
@@ -2766,7 +2766,7 @@
     ],
     "id": 13,
     "slug": "css-for-advanced",
-    "demo_date": "2026-05-20T11:00:00+05:30"
+    "demo_date": "2026-07-10T10:00:00+05:30"
   },
   {
     "status": "PUBLISH",
@@ -3051,7 +3051,7 @@
     ],
     "id": 14,
     "slug": "ccc",
-    "demo_date": "2026-05-20T15:00:00+05:30"
+    "demo_date": "2026-07-10T10:00:00+05:30"
   },
   {
     "status": "PUBLISH",
@@ -3244,7 +3244,7 @@
     ],
     "id": 15,
     "slug": "bootstrap-for-beginner",
-    "demo_date": "2026-05-20T11:00:00+05:30"
+    "demo_date": "2026-07-10T10:00:00+05:30"
   },
   {
     "status": "PUBLISH",
@@ -3465,7 +3465,7 @@
     ],
     "id": 16,
     "slug": "bootstrap-for-advanced",
-    "demo_date": "2026-05-20T11:00:00+05:30"
+    "demo_date": "2026-07-10T10:00:00+05:30"
   },
   {
     "status": "PUBLISH",
@@ -3616,7 +3616,7 @@
     ],
     "id": 17,
     "slug": "sql-for-beginners",
-    "demo_date": "2026-05-01T14:00:00+05:30"
+    "demo_date": "2026-07-10T10:00:00+05:30"
   },
   {
     "status": "PUBLISH",
@@ -3775,7 +3775,7 @@
     ],
     "id": 18,
     "slug": "sql-for-advanced",
-    "demo_date": "2026-08-13T11:00:00+05:30"
+    "demo_date": "2026-07-10T10:00:00+05:30"
   },
   {
     "status": "PUBLISH",
@@ -3926,7 +3926,7 @@
     ],
     "id": 19,
     "slug": "ms-word-for-beginners",
-    "demo_date": "2026-08-13T11:00:00+05:30"
+    "demo_date": "2026-07-10T10:00:00+05:30"
   },
   {
     "status": "PUBLISH",
@@ -4077,7 +4077,7 @@
     ],
     "id": 20,
     "slug": "ms-word-for-advanced",
-    "demo_date": "2026-08-13T11:00:00+05:30"
+    "demo_date": "2026-07-10T10:00:00+05:30"
   },
   {
     "status": "PUBLISH",
@@ -4178,7 +4178,7 @@
     ],
     "id": 21,
     "slug": "git--github-basics",
-    "demo_date": "2026-08-13T11:00:00+05:30"
+    "demo_date": "2026-07-10T10:00:00+05:30"
   },
   {
     "status": "PUBLISH",
@@ -4274,7 +4274,7 @@
     ],
     "id": 22,
     "slug": "ms-powerpoint-for-beginners",
-    "demo_date": "2026-08-13T11:00:00+05:30"
+    "demo_date": "2026-07-10T10:00:00+05:30"
   },
   {
     "status": "PUBLISH",
@@ -4370,7 +4370,7 @@
     ],
     "id": 23,
     "slug": "ms-excel-for-beginners",
-    "demo_date": "2026-08-13T11:00:00+05:30"
+    "demo_date": "2026-07-10T10:00:00+05:30"
   },
   {
     "status": "PUBLISH",
@@ -4474,7 +4474,7 @@
     ],
     "id": 24,
     "slug": "ms-excel-for-intermediate",
-    "demo_date": "2026-08-13T11:00:00+05:30"
+    "demo_date": "2026-07-10T10:00:00+05:30"
   },
   {
     "status": "PUBLISH",
@@ -4583,7 +4583,7 @@
     ],
     "id": 25,
     "slug": "ms-excel-for-advanced",
-    "demo_date": "2026-08-13T11:00:00+05:30"
+    "demo_date": "2026-07-10T10:00:00+05:30"
   },
   {
     "status": "PUBLISH",
@@ -4687,7 +4687,7 @@
     ],
     "id": 26,
     "slug": "power-bi-for-beginners",
-    "demo_date": "2026-08-13T11:00:00+05:30"
+    "demo_date": "2026-07-10T10:00:00+05:30"
   },
   {
     "status": "PUBLISH",
@@ -4790,7 +4790,7 @@
     ],
     "id": 27,
     "slug": "power-bi-for-intermediate",
-    "demo_date": "2026-08-13T11:00:00+05:30"
+    "demo_date": "2026-07-10T10:00:00+05:30"
   },
   {
     "status": "PUBLISH",
@@ -4901,7 +4901,7 @@
     ],
     "id": 28,
     "slug": "power-bi-for-advanced",
-    "demo_date": "2026-08-13T11:00:00+05:30"
+    "demo_date": "2026-07-10T10:00:00+05:30"
   },
   {
     "status": "PUBLISH",
@@ -4974,7 +4974,7 @@
     ],
     "id": 29,
     "slug": "data-analysis--basics--pandas",
-    "demo_date": "2026-08-13T11:00:00+05:30"
+    "demo_date": "2026-07-10T10:00:00+05:30"
   },
   {
     "status": "PUBLISH",
@@ -5046,7 +5046,7 @@
     ],
     "id": 30,
     "slug": "data-analysis--visualization--statistics",
-    "demo_date": "2026-08-13T11:00:00+05:30"
+    "demo_date": "2026-07-10T10:00:00+05:30"
   },
   {
     "status": "PUBLISH",
@@ -5119,7 +5119,7 @@
     ],
     "id": 31,
     "slug": "data-analysis--advanced-pandas--ml-basics",
-    "demo_date": "2026-08-13T11:00:00+05:30"
+    "demo_date": "2026-07-10T10:00:00+05:30"
   },
   {
     "status": "PUBLISH",
@@ -5215,7 +5215,7 @@
     ],
     "id": 32,
     "slug": "tableau-for-beginners",
-    "demo_date": "2026-08-13T11:00:00+05:30"
+    "demo_date": "2026-07-10T10:00:00+05:30"
   },
   {
     "status": "PUBLISH",
@@ -5330,7 +5330,7 @@
     ],
     "id": 33,
     "slug": "django-for-backend-development",
-    "demo_date": "2026-08-13T11:00:00+05:30"
+    "demo_date": "2026-07-10T10:00:00+05:30"
   },
   {
     "status": "PUBLISH",
@@ -5429,7 +5429,7 @@
     ],
     "id": 34,
     "slug": "orm-concepts-for-backend-development",
-    "demo_date": "2026-08-13T11:00:00+05:30"
+    "demo_date": "2026-07-10T10:00:00+05:30"
   },
   {
     "status": "PUBLISH",
@@ -5537,7 +5537,7 @@
     ],
     "id": 35,
     "slug": "rest-api-development-with-django",
-    "demo_date": "2026-08-13T11:00:00+05:30"
+    "demo_date": "2026-07-10T10:00:00+05:30"
   },
   {
     "status": "PUBLISH",
@@ -5637,7 +5637,7 @@
     ],
     "id": 36,
     "slug": "authentication--authorization-for-backend",
-    "demo_date": "2026-08-13T11:00:00+05:30"
+    "demo_date": "2026-07-10T10:00:00+05:30"
   },
   {
     "status": "PUBLISH",
@@ -5737,7 +5737,7 @@
     ],
     "id": 37,
     "slug": "deployment--hosting-for-backend",
-    "demo_date": "2026-08-13T11:00:00+05:30"
+    "demo_date": "2026-07-10T10:00:00+05:30"
   },
   {
     "status": "PUBLISH",
@@ -5837,7 +5837,7 @@
     ],
     "id": 38,
     "slug": "advanced-backend-concepts",
-    "demo_date": "2026-08-13T11:00:00+05:30"
+    "demo_date": "2026-07-10T10:00:00+05:30"
   },
   {
     "status": "PUBLISH",
@@ -5859,7 +5859,7 @@
     "course_type": "COMBO",
     "id": 39,
     "slug": "ms-office--4-months",
-    "demo_date": "2026-08-13T11:00:00+05:30"
+    "demo_date": "2026-07-10T10:00:00+05:30"
   },
   {
     "status": "PUBLISH",
@@ -5881,7 +5881,7 @@
     "course_type": "COMBO",
     "id": 40,
     "slug": "web-designing-complete-pathway--4-months",
-    "demo_date": "2026-08-13T11:00:00+05:30"
+    "demo_date": "2026-07-10T10:00:00+05:30"
   },
   {
     "status": "PUBLISH",
@@ -5904,7 +5904,7 @@
     "course_type": "COMBO",
     "id": 41,
     "slug": "ms-word-complete-pathway-beginner-to-advanced--2-months",
-    "demo_date": "2026-08-13T11:00:00+05:30"
+    "demo_date": "2026-07-10T10:00:00+05:30"
   },
   {
     "status": "PUBLISH",
@@ -5929,7 +5929,7 @@
     "course_type": "COMBO",
     "id": 42,
     "slug": "python-backend-development-mastery-combo--8-months",
-    "demo_date": "2026-08-13T11:00:00+05:30"
+    "demo_date": "2026-07-10T10:00:00+05:30"
   },
   {
     "status": "PUBLISH",
@@ -5956,7 +5956,7 @@
     "course_type": "COMBO",
     "id": 43,
     "slug": "data-analysis-mastery-combo-course--12-months",
-    "demo_date": "2026-08-13T11:00:00+05:30"
+    "demo_date": "2026-07-10T10:00:00+05:30"
   },
   {
     "status": "PUBLISH",
@@ -5978,7 +5978,7 @@
     "course_type": "COMBO",
     "id": 44,
     "slug": "power-bi-mastery-beginner-to-advanced--3-months",
-    "demo_date": "2026-08-13T11:00:00+05:30"
+    "demo_date": "2026-07-10T10:00:00+05:30"
   },
   {
     "status": "PUBLISH",
@@ -6000,7 +6000,7 @@
     "course_type": "COMBO",
     "id": 45,
     "slug": "ms-excel-beginners-to-advanced--6-months",
-    "demo_date": "2026-08-13T11:00:00+05:30"
+    "demo_date": "2026-07-10T10:00:00+05:30"
   },
   {
     "status": "PUBLISH",
@@ -6024,9 +6024,434 @@
     "course_type": "COMBO",
     "id": 46,
     "slug": "frontend-development--8-months",
-    "demo_date": "2026-08-13T11:00:00+05:30"
+    "demo_date": "2026-07-10T10:00:00+05:30"
+  },
+  {
+    "status": "PUBLISH",
+    "title": "ADCA - Advance Diploma in Computer Applications",
+    "sort_description": "Master Advanced Diploma in Computer Applications (ADCA). Learn MS Office, Internet, Email, Cyber Security, Digital Payments, and modern computer applications with hands-on projects.",
+    "categories": [
+      "Computer Literacy",
+      "Digital Skills",
+      "Office Productivity",
+      "ADCA"
+    ],
+    "level": "Intermediate",
+    "language": [
+      "English",
+      "Hindi"
+    ],
+    "duration": 6,
+    "price": 8000,
+    "certificate": true,
+    "mode": "BOTH",
+    "course_type": "SINGLE",
+    "chapters": [
+      {
+        "title": "Module 1: Fundamentals of Computer Systems",
+        "topics": [
+          {
+            "title": "Computer Hardware and Architecture"
+          },
+          {
+            "title": "Operating Systems"
+          },
+          {
+            "title": "Computer Networks and Internet"
+          },
+          {
+            "title": "Data Security and Cyber Threats"
+          }
+        ]
+      },
+      {
+        "title": "Module 2: Advanced MS Word",
+        "topics": [
+          {
+            "title": "Advanced Formatting and Styles"
+          },
+          {
+            "title": "Mail Merge and Automation"
+          },
+          {
+            "title": "Collaborative Document Editing"
+          },
+          {
+            "title": "Professional Document Creation"
+          }
+        ]
+      },
+      {
+        "title": "Module 3: Advanced MS Excel",
+        "topics": [
+          {
+            "title": "Advanced Formulas and Functions"
+          },
+          {
+            "title": "Pivot Tables and Data Analysis"
+          },
+          {
+            "title": "Data Visualization with Charts"
+          },
+          {
+            "title": "Macros and Automation"
+          }
+        ]
+      },
+      {
+        "title": "Module 4: MS PowerPoint",
+        "topics": [
+          {
+            "title": "Creating Professional Presentations"
+          },
+          {
+            "title": "Animations and Transitions"
+          },
+          {
+            "title": "Multimedia Integration"
+          },
+          {
+            "title": "Presentation Delivery Skills"
+          }
+        ]
+      },
+      {
+        "title": "Module 5: Internet and Web Technologies",
+        "topics": [
+          {
+            "title": "Web Browsers and Search Engines"
+          },
+          {
+            "title": "Email Management"
+          },
+          {
+            "title": "Cloud Computing Basics"
+          },
+          {
+            "title": "Introduction to Web Development"
+          }
+        ]
+      },
+      {
+        "title": "Module 6: Digital Financial Literacy",
+        "topics": [
+          {
+            "title": "Online Banking and Transactions"
+          },
+          {
+            "title": "Digital Payment Systems"
+          },
+          {
+            "title": "E-commerce Basics"
+          },
+          {
+            "title": "Financial Cybersecurity"
+          }
+        ]
+      },
+      {
+        "title": "Module 7: Cyber Security and Safety",
+        "topics": [
+          {
+            "title": "Internet Security Threats"
+          },
+          {
+            "title": "Protecting Personal Data"
+          },
+          {
+            "title": "Safe Online Practices"
+          },
+          {
+            "title": "Privacy and Data Protection"
+          }
+        ]
+      },
+      {
+        "title": "Module 8: Capstone Project",
+        "topics": [
+          {
+            "title": "Real-World Application Development"
+          },
+          {
+            "title": "Integration of Learned Skills"
+          },
+          {
+            "title": "Project Presentation and Evaluation"
+          }
+        ]
+      }
+    ],
+    "id": 47,
+    "slug": "adca",
+    "demo_date": "2026-07-10T10:00:00+05:30"
+  },
+  {
+    "status": "PUBLISH",
+    "title": "O Level - Information Technology",
+    "sort_description": "Master O Level Information Technology. Learn computer fundamentals, programming, databases, networking, and web technologies with practical assessments aligned to international standards.",
+    "categories": [
+      "Computer Literacy",
+      "Programming",
+      "Information Technology",
+      "O Level"
+    ],
+    "level": "Intermediate",
+    "language": [
+      "English",
+      "Hindi"
+    ],
+    "duration": 6,
+    "price": 18000,
+    "certificate": true,
+    "mode": "BOTH",
+    "course_type": "SINGLE",
+    "chapters": [
+      {
+        "title": "Unit 1: Computer Systems and Organization",
+        "topics": [
+          {
+            "title": "Hardware Components and Architecture"
+          },
+          {
+            "title": "Memory and Storage Devices"
+          },
+          {
+            "title": "System Software and Operating Systems"
+          },
+          {
+            "title": "User Interface and Usability"
+          }
+        ]
+      },
+      {
+        "title": "Unit 2: Data Representation and Digital Logic",
+        "topics": [
+          {
+            "title": "Binary, Hexadecimal, and Octal Systems"
+          },
+          {
+            "title": "Data Encoding and Compression"
+          },
+          {
+            "title": "Error Detection and Correction"
+          },
+          {
+            "title": "Boolean Logic and Logic Gates"
+          }
+        ]
+      },
+      {
+        "title": "Unit 3: Fundamental Programming Concepts",
+        "topics": [
+          {
+            "title": "Algorithm Design and Flowcharts"
+          },
+          {
+            "title": "Variables, Data Types, and Operators"
+          },
+          {
+            "title": "Control Structures (if, loops)"
+          },
+          {
+            "title": "Functions and Modular Programming"
+          }
+        ]
+      },
+      {
+        "title": "Unit 4: Data Structures and Databases",
+        "topics": [
+          {
+            "title": "Arrays, Lists, and Stacks"
+          },
+          {
+            "title": "Queues and Trees"
+          },
+          {
+            "title": "Database Concepts and SQL"
+          },
+          {
+            "title": "Database Design and Normalization"
+          }
+        ]
+      },
+      {
+        "title": "Unit 5: Computer Networks",
+        "topics": [
+          {
+            "title": "Network Types and Topologies"
+          },
+          {
+            "title": "Network Protocols and TCP/IP"
+          },
+          {
+            "title": "Internet and World Wide Web"
+          },
+          {
+            "title": "Network Security and Encryption"
+          }
+        ]
+      },
+      {
+        "title": "Unit 6: Web Development and Internet Technologies",
+        "topics": [
+          {
+            "title": "HTML and Web Page Design"
+          },
+          {
+            "title": "CSS and Responsive Design"
+          },
+          {
+            "title": "Client-Side Programming with JavaScript"
+          },
+          {
+            "title": "Server-Side Programming Basics"
+          }
+        ]
+      },
+      {
+        "title": "Unit 7: Cyber Security and Ethics",
+        "topics": [
+          {
+            "title": "Threats, Vulnerabilities, and Controls"
+          },
+          {
+            "title": "Malware and Security Attacks"
+          },
+          {
+            "title": "Cybersecurity Best Practices"
+          },
+          {
+            "title": "Ethics in ICT and Data Privacy"
+          }
+        ]
+      },
+      {
+        "title": "Unit 8: System Development and Project Work",
+        "topics": [
+          {
+            "title": "Software Development Lifecycle"
+          },
+          {
+            "title": "Testing and Debugging"
+          },
+          {
+            "title": "Documentation and Maintenance"
+          },
+          {
+            "title": "Capstone Project Practical Assessment"
+          }
+        ]
+      }
+    ],
+    "id": 48,
+    "slug": "o-level",
+    "demo_date": "2026-07-10T10:00:00+05:30"
+  },
+  {
+    "status": "PUBLISH",
+    "title": "Full Stack Development - Complete 12 Months",
+    "sort_description": "Become a professional Full Stack Developer in 12 months. Master Frontend (HTML, CSS, JavaScript, React), Backend (Python, Django, REST APIs), Databases (SQL), and Deployment. Build real-world projects and land high-paying jobs.",
+    "categories": [
+      "Web Development",
+      "Frontend",
+      "Backend Development",
+      "Full Stack"
+    ],
+    "level": "Beginner to Advanced",
+    "language": [
+      "English",
+      "Hindi"
+    ],
+    "duration": 12,
+    "price": 22000,
+    "certificate": true,
+    "mode": "BOTH",
+    "course_type": "COMBO",
+    "chapters": [
+      {
+        "title": "Phase 1: Frontend Fundamentals (Month 1-2)",
+        "topics": [
+          "HTML Complete Course",
+          "CSS for Beginners & Intermediate",
+          "Introduction to Responsive Design",
+          "Project: Build a Responsive Website"
+        ]
+      },
+      {
+        "title": "Phase 2: Frontend Advanced (Month 3-4)",
+        "topics": [
+          "JavaScript for Beginners & Intermediate",
+          "DOM Manipulation & Events",
+          "Bootstrap Framework",
+          "Project: Interactive Web Application"
+        ]
+      },
+      {
+        "title": "Phase 3: Modern Frontend (Month 5-6)",
+        "topics": [
+          "ES6+ Advanced JavaScript",
+          "React.js Fundamentals",
+          "State Management & Hooks",
+          "React Routing & API Integration",
+          "Project: Full React Application"
+        ]
+      },
+      {
+        "title": "Phase 4: Backend Basics (Month 7)",
+        "topics": [
+          "Python Fundamentals",
+          "Object-Oriented Programming",
+          "Introduction to Databases",
+          "SQL Basics & Queries"
+        ]
+      },
+      {
+        "title": "Phase 5: Backend Framework (Month 8-9)",
+        "topics": [
+          "Django Introduction & Setup",
+          "Models & Database Management",
+          "Views, URLs & Templates",
+          "Authentication & Permissions",
+          "Project: Django Web Application"
+        ]
+      },
+      {
+        "title": "Phase 6: REST APIs (Month 10)",
+        "topics": [
+          "Django REST Framework",
+          "API Design & Best Practices",
+          "Authentication & Authorization",
+          "API Testing & Documentation",
+          "Project: Build REST API"
+        ]
+      },
+      {
+        "title": "Phase 7: Advanced Backend (Month 11)",
+        "topics": [
+          "Advanced ORM Concepts",
+          "Caching & Performance Optimization",
+          "Deployment & Hosting",
+          "Security Best Practices",
+          "Project: Production-Ready Backend"
+        ]
+      },
+      {
+        "title": "Phase 8: Full Stack Integration & Capstone (Month 12)",
+        "topics": [
+          "Integrating Frontend & Backend",
+          "Version Control with Git & GitHub",
+          "CI/CD Pipelines",
+          "Real-World Project Development",
+          "Portfolio Building & Interview Prep"
+        ]
+      }
+    ],
+    "id": 49,
+    "slug": "full-stack-development",
+    "demo_date": "2026-07-10T10:00:00+05:30"
   }
 ]
+
 
 
 
