@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="480" viewBox="0 0 800 480" fill="none" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  <defs>
+    <linearGradient id="pptOrange" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D24726"/>
+      <stop offset="100%" stop-color="#A23218"/>
+    </linearGradient>
+    <linearGradient id="ribbonBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#F8FAFC"/>
+      <stop offset="100%" stop-color="#EEF2F6"/>
+    </linearGradient>
+    <linearGradient id="slideBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#F8FAFC"/>
+    </linearGradient>
+    <filter id="shadow" x="-5" y="-3" width="810" height="490" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="#000000" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <!-- Outer Window Frame -->
+  <rect width="800" height="480" rx="10" fill="#FFFFFF"/>
+  <rect width="800" height="480" rx="10" stroke="#CBD5E1" stroke-width="1.5"/>
+
+  <!-- Title Bar -->
+  <path d="M 0 10 C 0 4.477 4.477 0 10 0 L 790 0 C 795.523 0 800 4.477 800 10 L 800 38 L 0 38 Z" fill="url(#pptOrange)"/>
+  
+  <!-- Window Controls -->
+  <circle cx="18" cy="19" r="5" fill="#FF5F56"/>
+  <circle cx="34" cy="19" r="5" fill="#FFBD2E"/>
+  <circle cx="50" cy="19" r="5" fill="#27C93F"/>
+
+  <!-- PowerPoint Icon Badge -->
+  <rect x="68" y="8" width="22" height="22" rx="4" fill="#8F2510"/>
+  <text x="79" y="24" fill="#FFFFFF" font-size="14" font-weight="900" text-anchor="middle">P</text>
+
+  <!-- Presentation Title & Search -->
+  <text x="400" y="24" fill="#FFFFFF" font-size="13" font-weight="600" text-anchor="middle" letter-spacing="0.2">Themes, Variants & Format Background - Microsoft PowerPoint</text>
+
+  <!-- Quick Save / Undo icons placeholder -->
+  <rect x="670" y="9" width="120" height="20" rx="4" fill="rgba(255,255,255,0.15)"/>
+  <text x="730" y="23" fill="#FFFFFF" font-size="11" text-anchor="middle">AutoSave: On</text>
+
+  
+  <!-- Top Banner -->
+  <rect x="0" y="38" width="800" height="38" fill="#F8FAFC"/>
+  <line x1="0" y1="76" x2="800" y2="76" stroke="#E2E8F0"/>
+  <text x="24" y="61" fill="#0F172A" font-size="13" font-weight="bold">Design Tab &gt; Themes Gallery &amp; Color Variants</text>
+
+  <!-- Left: Theme Gallery Preview Cards -->
+  <text x="30" y="100" fill="#1E293B" font-size="12" font-weight="bold">Office Themes</text>
+  
+  <!-- Theme 1: Slate Modern -->
+  <g transform="translate(30, 112)">
+    <rect width="130" height="85" rx="6" fill="#0F172A" stroke="#CBD5E1"/>
+    <rect x="10" y="12" width="60" height="10" rx="1" fill="#38BDF8"/>
+    <rect x="10" y="28" width="110" height="4" rx="1" fill="#94A3B8"/>
+    <rect x="10" y="36" width="90" height="4" rx="1" fill="#94A3B8"/>
+    <text x="65" y="70" fill="#FFFFFF" font-size="10" font-weight="bold" text-anchor="middle">Slate Dark</text>
+  </g>
+
+  <!-- Theme 2: Minimalist Warm -->
+  <g transform="translate(175, 112)">
+    <rect width="130" height="85" rx="6" fill="#FFFBEB" stroke="#D24726" stroke-width="2"/>
+    <rect x="10" y="12" width="60" height="10" rx="1" fill="#D97706"/>
+    <rect x="10" y="28" width="110" height="4" rx="1" fill="#78350F"/>
+    <rect x="10" y="36" width="80" height="4" rx="1" fill="#78350F"/>
+    <text x="65" y="70" fill="#92400E" font-size="10" font-weight="bold" text-anchor="middle">Warm Executive</text>
+  </g>
+
+  <!-- Theme 3: Corporate Blue -->
+  <g transform="translate(320, 112)">
+    <rect width="130" height="85" rx="6" fill="#FFFFFF" stroke="#CBD5E1"/>
+    <rect x="0" y="0" width="130" height="24" rx="6 6 0 0" fill="#1E40AF"/>
+    <text x="10" y="16" fill="#FFFFFF" font-size="9" font-weight="bold">Corporate</text>
+    <rect x="10" y="35" width="110" height="4" rx="1" fill="#64748B"/>
+    <rect x="10" y="43" width="85" height="4" rx="1" fill="#64748B"/>
+    <text x="65" y="70" fill="#1E293B" font-size="10" font-weight="bold" text-anchor="middle">Tech Blue</text>
+  </g>
+
+  <!-- Variants Palette -->
+  <g transform="translate(30, 215)">
+    <rect width="420" height="60" rx="6" fill="#F8FAFC" stroke="#E2E8F0"/>
+    <text x="15" y="20" fill="#0F172A" font-size="11" font-weight="bold">Color Variants (Customize Palettes):</text>
+    <circle cx="30" cy="42" r="10" fill="#D24726"/>
+    <circle cx="55" cy="42" r="10" fill="#EA580C"/>
+    <circle cx="80" cy="42" r="10" fill="#F59E0B"/>
+    <circle cx="105" cy="42" r="10" fill="#10B981"/>
+    <circle cx="130" cy="42" r="10" fill="#2563EB"/>
+    <circle cx="155" cy="42" r="10" fill="#7C3AED"/>
+    <text x="180" y="46" fill="#64748B" font-size="10">Variants change accents without altering layout</text>
+  </g>
+
+  <!-- Right: Format Background Sidebar Pane -->
+  <g transform="translate(470, 95)">
+    <rect width="300" height="355" rx="8" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5"/>
+    <rect x="0" y="0" width="300" height="36" rx="8 8 0 0" fill="#F1F5F9"/>
+    <text x="15" y="23" fill="#0F172A" font-size="12" font-weight="bold">Format Background</text>
+    <text x="275" y="23" fill="#94A3B8" font-size="13" text-anchor="end">✕</text>
+
+    <!-- Radio Options -->
+    <circle cx="25" cy="58" r="5" fill="#D24726"/>
+    <text x="40" y="62" fill="#1E293B" font-size="11" font-weight="bold">Solid fill</text>
+
+    <circle cx="25" cy="85" r="5" fill="none" stroke="#94A3B8" stroke-width="1.5"/>
+    <text x="40" y="89" fill="#1E293B" font-size="11">Gradient fill</text>
+
+    <circle cx="25" cy="112" r="5" fill="none" stroke="#94A3B8" stroke-width="1.5"/>
+    <text x="40" y="116" fill="#1E293B" font-size="11">Picture or texture fill</text>
+
+    <circle cx="25" cy="139" r="5" fill="none" stroke="#94A3B8" stroke-width="1.5"/>
+    <text x="40" y="143" fill="#1E293B" font-size="11">Pattern fill</text>
+
+    <line x1="15" y1="160" x2="285" y2="160" stroke="#E2E8F0"/>
+
+    <!-- Fill Controls -->
+    <text x="20" y="185" fill="#475569" font-size="11">Color:</text>
+    <rect x="65" y="170" width="30" height="20" rx="3" fill="#0F172A" stroke="#94A3B8"/>
+
+    <text x="20" y="215" fill="#475569" font-size="11">Transparency:</text>
+    <line x1="110" y1="212" x2="240" y2="212" stroke="#CBD5E1" stroke-width="3"/>
+    <circle cx="140" cy="212" r="6" fill="#D24726"/>
+    <text x="255" y="216" fill="#64748B" font-size="11">20%</text>
+
+    <rect x="20" y="240" width="16" height="16" rx="2" fill="none" stroke="#CBD5E1"/>
+    <text x="45" y="253" fill="#334155" font-size="11">Hide Background Graphics</text>
+
+    <!-- Buttons -->
+    <rect x="20" y="295" width="125" height="34" rx="4" fill="#D24726"/>
+    <text x="82" y="316" fill="#FFFFFF" font-size="11" font-weight="bold" text-anchor="middle">Apply to All</text>
+
+    <rect x="155" y="295" width="125" height="34" rx="4" fill="#F1F5F9" stroke="#CBD5E1"/>
+    <text x="217" y="316" fill="#475569" font-size="11" font-weight="bold" text-anchor="middle">Reset Background</text>
+  </g>
+
+  <!-- Slide Dimensions Box -->
+  <g transform="translate(30, 290)">
+    <rect width="420" height="160" rx="6" fill="#EFF6FF" stroke="#BFDBFE"/>
+    <text x="15" y="24" fill="#1E3A8A" font-size="12" font-weight="bold">Slide Size Aspect Ratio Standards:</text>
+    <text x="15" y="50" fill="#1D4ED8" font-size="11">• Widescreen 16:9 (Default): Perfect for modern monitors, projectors, Zoom &amp; Teams.</text>
+    <text x="15" y="74" fill="#1D4ED8" font-size="11">• Standard 4:3 (Legacy): Traditional square monitors and iPad portrait viewing.</text>
+    <text x="15" y="98" fill="#1D4ED8" font-size="11">• Custom Slide Size: A4 Paper, Banner, Vertical Instagram/TikTok Presentation (9:16).</text>
+    <text x="15" y="130" fill="#1E40AF" font-size="10" font-weight="600">Design &gt; Slide Size &gt; Custom Slide Size... (Always set size BEFORE adding content)</text>
+  </g>
+
+</svg>

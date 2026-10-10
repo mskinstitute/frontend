@@ -1,0 +1,38 @@
+[
+  {
+    "id": "notes-python",
+    "title": "Python Core Programming Notes",
+    "category": "Python",
+    "description": "Comprehensive reference guide covering basic syntax, data structures, OOP concepts, file handling, and exceptions.",
+    "tier": "free",
+    "downloadUrl": "https://github.com/msk-institute/python-notes-pdf",
+    "topicsCovered": ["Syntax & Data Types", "Control Flow", "Functions & Modules", "OOP Principles"]
+  },
+  {
+    "id": "notes-html-css",
+    "title": "HTML5 & CSS3 Responsive Styling Guide",
+    "category": "HTML/CSS",
+    "description": "Learn semantic layout design, CSS Grid, Flexbox, media queries, and utility-first styling with Tailwind CSS.",
+    "tier": "free",
+    "downloadUrl": "https://github.com/msk-institute/html-css-notes",
+    "topicsCovered": ["Semantic Tags", "Flexbox & Grid Layouts", "Responsive Media Queries", "CSS Animations"]
+  },
+  {
+    "id": "notes-js-dom",
+    "title": "JavaScript DOM & Modern ES6+ Notes",
+    "category": "JavaScript",
+    "description": "Complete guide to DOM manipulation, event handling, async functions, promises, and modern ES6 array functions.",
+    "tier": "paid",
+    "price": "₹149",
+    "topicsCovered": ["ES6 Syntactic Sugar", "DOM Selection & Manipulation", "Event Bubbling & Capturing", "Fetch API & Promises"]
+  },
+  {
+    "id": "notes-ms-office",
+    "title": "MS Excel & Word Office Automation Notes",
+    "category": "MS Office",
+    "description": "Master advanced formulas, pivot tables, data tools in Excel, and professional document formatting, mail merge in Word.",
+    "tier": "paid",
+    "price": "₹99",
+    "topicsCovered": ["Excel Formulas & Pivot Tables", "Word Formatting & Page Layouts", "Mail Merge Integration", "Keyboard Shortcuts Cheatsheet"]
+  }
+]

@@ -1,0 +1,2725 @@
+[
+  {
+    "id": "cheat-html5-complete",
+    "type": "cheatsheet",
+    "title": "HTML5 Complete Course: Master Tags, Semantics & Forms Cheatsheet",
+    "slug": "html5-complete-syntax-cheatsheet",
+    "category": "Web Development",
+    "level": "Beginner",
+    "description": "The ultimate quick-reference cheatsheet for HTML5: boilerplate structure, semantic layout elements, modern form inputs & validations, tables, responsive media (audio, video, picture), interactive tags (details, dialog), and essential accessibility ARIA attributes.",
+    "tier": "free",
+    "downloadUrl": "https://github.com/msk-institute/html5-complete-course-cheatsheet",
+    "topicsCovered": [
+      "Boilerplate & Meta",
+      "Semantic Layouts",
+      "Forms & Validations",
+      "Tables & Lists",
+      "Audio, Video & Media",
+      "ARIA & Accessibility"
+    ],
+    "readTime": "5 min lookup",
+    "pages": 4,
+    "featured": true,
+    "updatedAt": "2026-09-13",
+    "cheatsheetContent": {
+      "sections": [
+        {
+          "categoryTitle": "1. Boilerplate & Document Head",
+          "items": [
+            {
+              "commandOrSyntax": "<!DOCTYPE html>",
+              "explanation": "HTML5 standard doctype declaration informing the browser to render in standard mode",
+              "example": "<!DOCTYPE html>"
+            },
+            {
+              "commandOrSyntax": "<html lang=\"en\"> ... </html>",
+              "explanation": "Root element of the document; lang attribute declares the natural language for SEO & screen readers",
+              "example": "<html lang=\"en\" dir=\"ltr\">"
+            },
+            {
+              "commandOrSyntax": "<meta charset=\"UTF-8\">",
+              "explanation": "Specifies UTF-8 character encoding to correctly display all global characters & symbols",
+              "example": "<meta charset=\"UTF-8\">"
+            },
+            {
+              "commandOrSyntax": "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">",
+              "explanation": "Configures responsive viewport scaling for mobile and tablet screens",
+              "example": "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">"
+            },
+            {
+              "commandOrSyntax": "<title>Page Title</title>",
+              "explanation": "Specifies page title shown on browser tab and search engine results",
+              "example": "<title>MSK Institute | Computer Courses</title>"
+            },
+            {
+              "commandOrSyntax": "<link rel=\"stylesheet\" href=\"style.css\">",
+              "explanation": "Links external CSS stylesheet inside the <head> section",
+              "example": "<link rel=\"stylesheet\" href=\"/styles/main.css\">"
+            }
+          ]
+        },
+        {
+          "categoryTitle": "2. Headings, Paragraphs & Text Flow",
+          "items": [
+            {
+              "commandOrSyntax": "<h1>Title</h1> ... <h6>Sub-heading</h6>",
+              "explanation": "Six levels of semantic section headings; h1 is highest importance (one per page recommended)",
+              "example": "<h1>HTML5 Complete Course</h1>\\n<h2>1: Introduction</h2>"
+            },
+            {
+              "commandOrSyntax": "<p>This is a paragraph of text.</p>",
+              "explanation": "Standard block-level paragraph with automatic browser top/bottom margin",
+              "example": "<p>Welcome to MSK Institute, Shikohabad.</p>"
+            },
+            {
+              "commandOrSyntax": "<br>",
+              "explanation": "Void (self-closing) element that inserts a single physical line break inside text flow",
+              "example": "First line<br>Second line"
+            },
+            {
+              "commandOrSyntax": "<hr>",
+              "explanation": "Thematic break or horizontal dividing line separating content shifts",
+              "example": "<p>Section 1</p><hr><p>Section 2</p>"
+            }
+          ]
+        },
+        {
+          "categoryTitle": "3. Text Formatting & Inline Elements",
+          "items": [
+            {
+              "commandOrSyntax": "<strong>Important</strong> / <em>Emphasis</em>",
+              "explanation": "Semantic importance (bold by default) and emphasized stress (italics by default)",
+              "example": "<strong>Note:</strong> Always add <em>alt</em> text to images."
+            },
+            {
+              "commandOrSyntax": "<mark>Highlighted Text</mark>",
+              "explanation": "Highlights text with default yellow background for visual reference or search matches",
+              "example": "<mark>Admission Open 2026</mark>"
+            },
+            {
+              "commandOrSyntax": "<del>Original</del> <ins>Updated</ins>",
+              "explanation": "Strikethrough deleted content paired with newly inserted text",
+              "example": "Course Fee: <del>₹1500</del> <ins>₹999</ins>"
+            },
+            {
+              "commandOrSyntax": "<sub>Subscript</sub> / <sup>Superscript</sup>",
+              "explanation": "Subscript (chemical formulas, footnotes) and superscript (exponents, math powers)",
+              "example": "Water is H<sub>2</sub>O and 10<sup>2</sup> = 100"
+            },
+            {
+              "commandOrSyntax": "<code>let x = 10;</code> / <pre>Preserved text</pre>",
+              "explanation": "Inline monospace code snippet / block preserving exact whitespace and indents",
+              "example": "<pre><code>function hello() {\\n  return true;\\n}</code></pre>"
+            }
+          ]
+        },
+        {
+          "categoryTitle": "4. Links & Navigation Anchors",
+          "items": [
+            {
+              "commandOrSyntax": "<a href=\"https://mskinstitute.in\" target=\"_blank\" rel=\"noopener noreferrer\">Link</a>",
+              "explanation": "Opens external web page in a new secure tab preventing tab-nabbing security risks",
+              "example": "<a href=\"https://mskinstitute.in\" target=\"_blank\" rel=\"noopener noreferrer\">Visit MSK</a>"
+            },
+            {
+              "commandOrSyntax": "<a href=\"#syllabus\">Jump to Syllabus</a>",
+              "explanation": "Internal page jump linking directly to an element with id=\"syllabus\"",
+              "example": "<a href=\"#contact-section\">Jump to Contact</a>"
+            },
+            {
+              "commandOrSyntax": "<a href=\"mailto:info@mskinstitute.in\">Send Email</a>",
+              "explanation": "Launches the user's default email application pre-addressed to the recipient",
+              "example": "<a href=\"mailto:support@mskinstitute.in\">Email Support</a>"
+            },
+            {
+              "commandOrSyntax": "<a href=\"tel:+918393042166\">Call +91 8393042166</a>",
+              "explanation": "Triggers phone dialer directly on smartphones and supported desktop softphones",
+              "example": "<a href=\"tel:+918393042166\">Helpline: +91 8393042166</a>"
+            }
+          ]
+        },
+        {
+          "categoryTitle": "5. Lists (Unordered, Ordered, Description)",
+          "items": [
+            {
+              "commandOrSyntax": "<ul> <li>Item 1</li> <li>Item 2</li> </ul>",
+              "explanation": "Unordered bulleted list container with list items (<li>)",
+              "example": "<ul>\\n  <li>Python</li>\\n  <li>HTML5</li>\\n</ul>"
+            },
+            {
+              "commandOrSyntax": "<ol type=\"1|A|a|I|i\" start=\"1\"> <li>First</li> </ol>",
+              "explanation": "Numbered ordered sequence; type controls numbering style (numbers, letters, Roman)",
+              "example": "<ol type=\"A\">\\n  <li>HTML Basics</li>\\n  <li>Forms</li>\\n</ol>"
+            },
+            {
+              "commandOrSyntax": "<dl> <dt>Term</dt> <dd>Definition</dd> </dl>",
+              "explanation": "Description list pairing defined terms (<dt>) with detailed definitions (<dd>)",
+              "example": "<dl>\\n  <dt>HTML5</dt>\\n  <dd>Modern Web Markup Standard</dd>\\n</dl>"
+            }
+          ]
+        },
+        {
+          "categoryTitle": "6. Images & Responsive Media",
+          "items": [
+            {
+              "commandOrSyntax": "<img src=\"logo.png\" alt=\"MSK Logo\" loading=\"lazy\" width=\"200\" height=\"80\">",
+              "explanation": "Embeds image with mandatory alt text for accessibility and native lazy loading for performance",
+              "example": "<img src=\"/brand/logo.png\" alt=\"MSK Institute Logo\" loading=\"lazy\">"
+            },
+            {
+              "commandOrSyntax": "<figure> <img src=\"lab.jpg\" alt=\"Lab\"> <figcaption>Caption</figcaption> </figure>",
+              "explanation": "Semantic figure block pairing illustrations, charts, or images with an explanatory caption",
+              "example": "<figure>\\n  <img src=\"lab.jpg\" alt=\"Computer Lab\">\\n  <figcaption>Offline Lab at Shikohabad</figcaption>\\n</figure>"
+            },
+            {
+              "commandOrSyntax": "<picture> <source media=\"(min-width: 768px)\" srcset=\"large.jpg\"> <img src=\"small.jpg\" alt=\"...\"> </picture>",
+              "explanation": "Responsive art direction serving optimized image files based on device screen widths",
+              "example": "<picture>\\n  <source media=\"(min-width: 640px)\" srcset=\"desktop.webp\">\\n  <img src=\"mobile.webp\" alt=\"Hero\">\\n</picture>"
+            }
+          ]
+        },
+        {
+          "categoryTitle": "7. Tables & Structured Tabular Data",
+          "items": [
+            {
+              "commandOrSyntax": "<table> <thead> <tbody> <tfoot>",
+              "explanation": "Semantic table structure separating header columns, data body rows, and summary footer rows",
+              "example": "<table>\\n  <thead><tr><th>Course</th><th>Fee</th></tr></thead>\\n  <tbody><tr><td>HTML5</td><td>Free</td></tr></tbody>\\n</table>"
+            },
+            {
+              "commandOrSyntax": "<tr> <th scope=\"col\">Header</th> <td>Data Cell</td> </tr>",
+              "explanation": "Table rows with header cells (<th>, bold/centered) and standard data cells (<td>)",
+              "example": "<tr><th scope=\"row\">Student</th><td>Sumit Kumar</td></tr>"
+            },
+            {
+              "commandOrSyntax": "<td colspan=\"2\">Merged across 2 columns</td>",
+              "explanation": "Expands a cell horizontally to span multiple adjacent columns",
+              "example": "<td colspan=\"2\">Total Marks: 98</td>"
+            },
+            {
+              "commandOrSyntax": "<td rowspan=\"2\">Merged across 2 rows</td>",
+              "explanation": "Expands a cell vertically to span multiple stacked table rows",
+              "example": "<td rowspan=\"2\">Full-Stack Batch</td>"
+            }
+          ]
+        },
+        {
+          "categoryTitle": "8. Block, Inline & Structural Containers",
+          "items": [
+            {
+              "commandOrSyntax": "<div class=\"card\"> ... </div>",
+              "explanation": "Generic non-semantic block-level container taking 100% width; used for CSS styling layout",
+              "example": "<div className=\"p-4 rounded-xl bg-white shadow-md\">...</div>"
+            },
+            {
+              "commandOrSyntax": "<span class=\"badge\">Text</span>",
+              "explanation": "Generic inline container taking only required content width; used to target text segments",
+              "example": "<span className=\"text-purple-600 font-bold\">Verified</span>"
+            },
+            {
+              "commandOrSyntax": "<address>Contact info</address>",
+              "explanation": "Represents contact information (physical address, phone, email) for article author or organisation",
+              "example": "<address>MSK Institute, Station Road, Shikohabad, UP</address>"
+            }
+          ]
+        },
+        {
+          "categoryTitle": "9. HTML5 Semantic Layout Elements",
+          "items": [
+            {
+              "commandOrSyntax": "<header> ... </header>",
+              "explanation": "Introductory banner containing logo, main site title, or top page navigation",
+              "example": "<header>\\n  <h1>MSK Institute</h1>\\n  <nav>...</nav>\\n</header>"
+            },
+            {
+              "commandOrSyntax": "<nav aria-label=\"Main Navigation\"> ... </nav>",
+              "explanation": "Landmark section dedicated to primary site navigation menus and link lists",
+              "example": "<nav>\\n  <a href=\"/\">Home</a>\\n  <a href=\"/courses\">Courses</a>\\n</nav>"
+            },
+            {
+              "commandOrSyntax": "<main> ... </main>",
+              "explanation": "The central unique dominant content of the page (strictly once per HTML document)",
+              "example": "<main>\\n  <article>...</article>\\n</main>"
+            },
+            {
+              "commandOrSyntax": "<article> ... </article>",
+              "explanation": "Self-contained, independently reusable unit (e.g. blog post, lesson, forum message)",
+              "example": "<article>\\n  <h2>Lesson 1: Introduction</h2>\\n  <p>Content...</p>\\n</article>"
+            },
+            {
+              "commandOrSyntax": "<section> ... </section>",
+              "explanation": "Thematic content block grouping related information, almost always preceded by a heading",
+              "example": "<section>\\n  <h2>Course Syllabus</h2>\\n  <p>Topics...</p>\\n</section>"
+            },
+            {
+              "commandOrSyntax": "<aside> ... </aside>",
+              "explanation": "Indirectly related side content (sidebar widgets, related tutorials, author bios, callouts)",
+              "example": "<aside>\\n  <h3>Download Cheatsheet</h3>\\n</aside>"
+            },
+            {
+              "commandOrSyntax": "<footer> ... </footer>",
+              "explanation": "Footer for nearest section or page containing copyright, sitemap, legal notes, contact",
+              "example": "<footer>\\n  <p>© 2026 MSK Institute. All rights reserved.</p>\\n</footer>"
+            }
+          ]
+        },
+        {
+          "categoryTitle": "10. Forms & Core Input Types",
+          "items": [
+            {
+              "commandOrSyntax": "<form action=\"/api/submit\" method=\"POST\"> ... </form>",
+              "explanation": "Form container defining HTTP endpoint URL and transmission method (GET / POST)",
+              "example": "<form action=\"/api/leads\" method=\"POST\">\\n  ...\\n</form>"
+            },
+            {
+              "commandOrSyntax": "<label for=\"email-input\">Email:</label> <input id=\"email-input\">",
+              "explanation": "Accessible label explicitly bound to input via id attribute; clicking label focuses input",
+              "example": "<label for=\"email\">Email</label>\\n<input id=\"email\" type=\"email\">"
+            },
+            {
+              "commandOrSyntax": "<input type=\"text | email | password | number | tel | url\">",
+              "explanation": "Single-line inputs optimized with contextual virtual keyboards on mobile phones",
+              "example": "<input type=\"tel\" placeholder=\"+91 8393042166\">"
+            },
+            {
+              "commandOrSyntax": "<input type=\"checkbox\" id=\"agree\"> / <input type=\"radio\" name=\"course\">",
+              "explanation": "Checkbox for multiple binary selections / Radio buttons sharing 'name' for single choice",
+              "example": "<input type=\"radio\" name=\"batch\" value=\"offline\"> Offline Lab"
+            },
+            {
+              "commandOrSyntax": "<input type=\"date | time | color | file\">",
+              "explanation": "Native browser calendar pickers, clock selectors, color pickers, and file upload dialogs",
+              "example": "<input type=\"file\" accept=\".pdf,.png\" multiple>"
+            }
+          ]
+        },
+        {
+          "categoryTitle": "11. Advanced Form Controls & Validations",
+          "items": [
+            {
+              "commandOrSyntax": "<select name=\"course\"> <option value=\"html\">HTML5</option> </select>",
+              "explanation": "Dropdown menu allowing single or multiple (with multiple attr) selections",
+              "example": "<select name=\"level\">\\n  <option value=\"beg\">Beginner</option>\\n</select>"
+            },
+            {
+              "commandOrSyntax": "<textarea rows=\"4\" cols=\"50\" placeholder=\"Enter query...\"></textarea>",
+              "explanation": "Multi-line expandable text input area for messages, addresses, and comments",
+              "example": "<textarea rows=\"4\" placeholder=\"Write your message...\"></textarea>"
+            },
+            {
+              "commandOrSyntax": "<input list=\"courses\"> <datalist id=\"courses\"> <option value=\"Python\"> ... </datalist>",
+              "explanation": "Combines free-form text input with pre-filled autocomplete dropdown suggestions",
+              "example": "<input list=\"courses\">\\n<datalist id=\"courses\"><option value=\"Python\"><option value=\"HTML5\"></datalist>"
+            },
+            {
+              "commandOrSyntax": "<fieldset> <legend>Student Details</legend> ... </fieldset>",
+              "explanation": "Visually and semantically groups related form controls with a border and legend caption",
+              "example": "<fieldset>\\n  <legend>Contact Information</legend>\\n</fieldset>"
+            },
+            {
+              "commandOrSyntax": "required, minlength=\"3\", pattern=\"[0-9]{10}\", min=\"1\" max=\"100\"",
+              "explanation": "Client-side HTML5 constraint validation executed automatically by browser before submit",
+              "example": "<input type=\"tel\" required pattern=\"[0-9]{10}\" placeholder=\"10-digit mobile\">"
+            }
+          ]
+        },
+        {
+          "categoryTitle": "12. HTML5 Media: Audio & Video",
+          "items": [
+            {
+              "commandOrSyntax": "<video controls poster=\"thumb.jpg\" width=\"640\"> <source src=\"video.mp4\" type=\"video/mp4\"> </video>",
+              "explanation": "Native embedded video player with play/pause/volume controls and initial poster image",
+              "example": "<video controls autoplay muted loop>\\n  <source src=\"intro.mp4\" type=\"video/mp4\">\\n</video>"
+            },
+            {
+              "commandOrSyntax": "<audio controls preload=\"metadata\"> <source src=\"song.mp3\" type=\"audio/mpeg\"> </audio>",
+              "explanation": "Native embedded audio player supporting MP3, WAV, and OGG audio streams",
+              "example": "<audio controls>\\n  <source src=\"podcast.mp3\" type=\"audio/mpeg\">\\n</audio>"
+            },
+            {
+              "commandOrSyntax": "<track src=\"subtitles.vtt\" kind=\"subtitles\" srclang=\"en\" label=\"English\">",
+              "explanation": "Integrates WebVTT subtitles, closed captions, and chapter titles to media elements",
+              "example": "<track src=\"subs-hi.vtt\" kind=\"subtitles\" srclang=\"hi\" label=\"Hindi\">"
+            }
+          ]
+        },
+        {
+          "categoryTitle": "13. Iframes & Web Embeds",
+          "items": [
+            {
+              "commandOrSyntax": "<iframe src=\"url\" title=\"Description\" width=\"100%\" height=\"400\" loading=\"lazy\"></iframe>",
+              "explanation": "Embeds external web pages, YouTube video players, or Google Maps with lazy loading",
+              "example": "<iframe src=\"https://www.youtube.com/embed/...\" title=\"Video\" allowfullscreen></iframe>"
+            },
+            {
+              "commandOrSyntax": "sandbox=\"allow-scripts allow-same-origin\"",
+              "explanation": "Applies security restrictions to embedded iframes preventing malicious scripts or redirects",
+              "example": "<iframe src=\"embed.html\" sandbox=\"allow-scripts\" title=\"Widget\"></iframe>"
+            }
+          ]
+        },
+        {
+          "categoryTitle": "14. Interactive HTML5 Elements",
+          "items": [
+            {
+              "commandOrSyntax": "<details> <summary>Click to view FAQ</summary> <p>Hidden answer...</p> </details>",
+              "explanation": "Native expandable disclosure accordion widget; expands/collapses without JavaScript",
+              "example": "<details>\\n  <summary>Who can enroll in HTML5?</summary>\\n  <p>Anyone with basic computer skills.</p>\\n</details>"
+            },
+            {
+              "commandOrSyntax": "<dialog id=\"modal\"> <p>Modal Window</p> <button>Close</button> </dialog>",
+              "explanation": "Native modal or popup dialog opened using dialog.showModal() and closed via dialog.close()",
+              "example": "<dialog id=\"infoModal\">\\n  <p>Registration successful!</p>\\n</dialog>"
+            },
+            {
+              "commandOrSyntax": "<progress value=\"75\" max=\"100\">75%</progress>",
+              "explanation": "Visual progress bar showing current completion percentage of an active task",
+              "example": "<progress value=\"80\" max=\"100\">80%</progress>"
+            },
+            {
+              "commandOrSyntax": "<meter min=\"0\" max=\"100\" low=\"30\" high=\"80\" optimum=\"90\" value=\"85\">85%</meter>",
+              "explanation": "Scalar measurement gauge within a known range (disk space, battery, test score)",
+              "example": "<meter min=\"0\" max=\"100\" value=\"90\">90%</meter>"
+            }
+          ]
+        },
+        {
+          "categoryTitle": "15. HTML5 Graphics: SVG & Canvas",
+          "items": [
+            {
+              "commandOrSyntax": "<svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\"> <circle cx=\"12\" cy=\"12\" r=\"10\" fill=\"#F97316\" /> </svg>",
+              "explanation": "Scalable Vector Graphics for ultra-crisp, resolution-independent vector icons and shapes",
+              "example": "<svg viewBox=\"0 0 24 24\"><path d=\"M12 2L2 22h20L12 2z\" fill=\"currentColor\"/></svg>"
+            },
+            {
+              "commandOrSyntax": "<canvas id=\"myCanvas\" width=\"400\" height=\"300\"></canvas>",
+              "explanation": "Bitmap drawing canvas allowing dynamic scriptable 2D/3D graphics, charts, and games via JavaScript",
+              "example": "<canvas id=\"signaturePad\" width=\"300\" height=\"150\"></canvas>"
+            }
+          ]
+        },
+        {
+          "categoryTitle": "16. Accessibility (A11y) & ARIA Essentials",
+          "items": [
+            {
+              "commandOrSyntax": "aria-label=\"Close modal dialogue\"",
+              "explanation": "Defines an explicit accessible name for screen readers when an element has no visible text",
+              "example": "<button aria-label=\"Close dialog\"><X /></button>"
+            },
+            {
+              "commandOrSyntax": "aria-hidden=\"true\"",
+              "explanation": "Hides purely decorative visual icons or graphics from assistive screen reading technologies",
+              "example": "<svg aria-hidden=\"true\">...</svg>"
+            },
+            {
+              "commandOrSyntax": "role=\"button | navigation | banner | alert\"",
+              "explanation": "Communicates semantic widget purpose to accessibility tree when generic elements are used",
+              "example": "<div role=\"alert\">Form submitted successfully!</div>"
+            },
+            {
+              "commandOrSyntax": "aria-expanded=\"true | false\"",
+              "explanation": "Informs screen readers whether an associated collapsible menu or dropdown is expanded or collapsed",
+              "example": "<button aria-expanded=\"false\" aria-controls=\"nav-menu\">Menu</button>"
+            },
+            {
+              "commandOrSyntax": "tabindex=\"0 | -1\"",
+              "explanation": "Controls keyboard navigation order (0 makes item focusable in natural tab flow; -1 programmatic focus)",
+              "example": "<div tabindex=\"0\" role=\"button\">Clickable Card</div>"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "cheat-python-beginners",
+    "type": "cheatsheet",
+    "title": "Python for Beginners: Complete Syntax & Operations Cheatsheet",
+    "slug": "python-for-beginners-syntax-cheatsheet",
+    "category": "Python",
+    "level": "Beginner",
+    "description": "Essential quick-reference revision cheatsheet covering Python 3 fundamental syntax, variables, data types, numbers, string manipulation, list/tuple/set/dictionary operations, conditional branching, loops, functions, and safe file handling.",
+    "tier": "free",
+    "downloadUrl": "https://github.com/msk-institute/python-for-beginners-cheatsheet",
+    "topicsCovered": [
+      "Variables & Casting",
+      "Strings & Slicing",
+      "Lists, Tuples & Sets",
+      "Dictionaries & Keys",
+      "Loops & Logic",
+      "Functions & File I/O"
+    ],
+    "readTime": "5 min lookup",
+    "pages": 4,
+    "featured": true,
+    "updatedAt": "2026-09-13",
+    "cheatsheetContent": {
+      "sections": [
+        {
+          "categoryTitle": "1. Python Fundamentals & I/O",
+          "items": [
+            {
+              "commandOrSyntax": "print(\"Hello, World!\", end=\"\\n\", sep=\" \")",
+              "explanation": "Outputs message to console with custom ending and separator",
+              "example": "print(\"Python\", \"is\", \"fun\", sep=\"-\")  # Python-is-fun"
+            },
+            {
+              "commandOrSyntax": "user_input = input(\"Enter your name: \")",
+              "explanation": "Takes user input from standard console (always returns string)",
+              "example": "age = int(input(\"Enter age: \"))"
+            },
+            {
+              "commandOrSyntax": "# Single line comment\\n\"\"\"Multi-line docstring\"\"\"",
+              "explanation": "Comment lines ignored by interpreter or used for documentation",
+              "example": "# TODO: calculate average score"
+            }
+          ]
+        },
+        {
+          "categoryTitle": "2. Variables & Multiple Assignment",
+          "items": [
+            {
+              "commandOrSyntax": "x, y, z = 10, 20, 30",
+              "explanation": "Unpack and assign multiple values in a single statement",
+              "example": "name, score = \"Rahul\", 95"
+            },
+            {
+              "commandOrSyntax": "a, b = b, a",
+              "explanation": "Swap values of two variables in-place without a temp variable",
+              "example": "x, y = 5, 10; x, y = y, x  # x=10, y=5"
+            },
+            {
+              "commandOrSyntax": "MAX_CONNECTIONS = 100",
+              "explanation": "Constant naming convention: ALL_CAPS denotes constant values",
+              "example": "PI = 3.14159; TIMEOUT = 30"
+            }
+          ]
+        },
+        {
+          "categoryTitle": "3. Data Types & Type Conversion",
+          "items": [
+            {
+              "commandOrSyntax": "type(variable)",
+              "explanation": "Returns the dynamic runtime class type of the variable",
+              "example": "type(3.14)  # <class 'float'>"
+            },
+            {
+              "commandOrSyntax": "isinstance(value, (int, float))",
+              "explanation": "Check if an object belongs to a class or tuple of classes",
+              "example": "isinstance(100, int)  # True"
+            },
+            {
+              "commandOrSyntax": "int(\"42\"), float(\"3.14\"), str(100), bool(1)",
+              "explanation": "Explicit type casting between numbers, strings, and booleans",
+              "example": "price = float(\"19.99\"); flag = bool(0)  # False"
+            }
+          ]
+        },
+        {
+          "categoryTitle": "4. Numbers & Arithmetic Operations",
+          "items": [
+            {
+              "commandOrSyntax": "+, -, *, /, //, %, **",
+              "explanation": "Basic math: addition, subtraction, multiplication, float division, floor division, modulus, power",
+              "example": "7 // 2  # 3 | 7 % 2  # 1 | 2 ** 3  # 8"
+            },
+            {
+              "commandOrSyntax": "round(number, ndigits) / abs(x)",
+              "explanation": "Round to decimal places / get absolute non-negative value",
+              "example": "round(3.14159, 2)  # 3.14 | abs(-50)  # 50"
+            },
+            {
+              "commandOrSyntax": "import math; math.sqrt(16), math.ceil(4.2)",
+              "explanation": "Math module: square root, ceiling, floor, factorial",
+              "example": "math.ceil(4.2)  # 5 | math.sqrt(25)  # 5.0"
+            }
+          ]
+        },
+        {
+          "categoryTitle": "5. Comparison, Logical & Identity Operators",
+          "items": [
+            {
+              "commandOrSyntax": "==, !=, >, <, >=, <=",
+              "explanation": "Comparison operators return boolean True or False",
+              "example": "5 != 3  # True | 10 >= 10  # True"
+            },
+            {
+              "commandOrSyntax": "and, or, not",
+              "explanation": "Logical operators for compound boolean expressions",
+              "example": "age >= 18 and has_id"
+            },
+            {
+              "commandOrSyntax": "item in collection / item not in collection",
+              "explanation": "Membership operator checking existence in sequence or dict keys",
+              "example": "\"admin\" in [\"guest\", \"admin\", \"staff\"]  # True"
+            },
+            {
+              "commandOrSyntax": "a is None / a is not None",
+              "explanation": "Identity comparison checking memory address (standard for None)",
+              "example": "result is None"
+            }
+          ]
+        },
+        {
+          "categoryTitle": "6. Strings, Slicing & Formatting",
+          "items": [
+            {
+              "commandOrSyntax": "f\"Name: {name}, Total: {price * qty:.2f}\"",
+              "explanation": "f-Strings (formatted string literals) with inline expression evaluation",
+              "example": "f\"{student_name.title()} scored {pct:.1f}%\""
+            },
+            {
+              "commandOrSyntax": "s[start:stop:step]",
+              "explanation": "Slicing string from start index up to (excluding) stop index",
+              "example": "\"Python\"[0:4]  # \"Pyth\" | \"Hello\"[::-1]  # \"olleH\" (reversed)"
+            },
+            {
+              "commandOrSyntax": "len(text)",
+              "explanation": "Returns total count of characters in string",
+              "example": "len(\"MSK Institute\")  # 13"
+            },
+            {
+              "commandOrSyntax": "\"Line 1\\nLine 2\\tIndented \\\"Quotes\\\"\"",
+              "explanation": "Escape sequences for newline (\\n), tab (\\t), and quotes (\\\")",
+              "example": "print(\"C:\\\\Users\\\\Admin\\\\file.txt\")"
+            }
+          ]
+        },
+        {
+          "categoryTitle": "7. String Methods",
+          "items": [
+            {
+              "commandOrSyntax": "s.strip() / s.lstrip() / s.rstrip()",
+              "explanation": "Remove leading and trailing whitespaces or specific characters",
+              "example": "\"  clean text  \".strip()  # \"clean text\""
+            },
+            {
+              "commandOrSyntax": "s.lower(), s.upper(), s.title(), s.capitalize()",
+              "explanation": "Change letter casing across the string",
+              "example": "\"python course\".title()  # \"Python Course\""
+            },
+            {
+              "commandOrSyntax": "s.replace(old, new, count)",
+              "explanation": "Replace occurrences of substring with a new substring",
+              "example": "\"I like Java\".replace(\"Java\", \"Python\")"
+            },
+            {
+              "commandOrSyntax": "s.split(delimiter) / delimiter.join(list)",
+              "explanation": "Split string into list / join list items into a single string",
+              "example": "\", \".join([\"Delhi\", \"Agra\", \"Shikohabad\"])"
+            },
+            {
+              "commandOrSyntax": "s.startswith(prefix) / s.endswith(suffix)",
+              "explanation": "Check if string starts or ends with specific substring",
+              "example": "\"photo.png\".endswith((\".png\", \".jpg\"))  # True"
+            }
+          ]
+        },
+        {
+          "categoryTitle": "8. Lists - Creation, Mutation & Methods",
+          "items": [
+            {
+              "commandOrSyntax": "nums = [10, 20, 30, 40]; first = nums[0]; last = nums[-1]",
+              "explanation": "Ordered, mutable collection accessible by positive & negative index",
+              "example": "nums[1] = 25  # update item in-place"
+            },
+            {
+              "commandOrSyntax": "lst.append(item) / lst.insert(index, item)",
+              "explanation": "Add item to the end of list / insert at specific index",
+              "example": "courses.append(\"Python\") | courses.insert(0, \"CCC\")"
+            },
+            {
+              "commandOrSyntax": "lst.extend(iterable)",
+              "explanation": "Append all items from an iterable to the end of the list",
+              "example": "[1, 2].extend([3, 4])  # [1, 2, 3, 4]"
+            },
+            {
+              "commandOrSyntax": "lst.pop(index=-1) / lst.remove(value)",
+              "explanation": "Remove and return item at index (default last) / remove first matching value",
+              "example": "last = tasks.pop() | tasks.remove(\"completed\")"
+            },
+            {
+              "commandOrSyntax": "lst.sort(reverse=False) / sorted(iterable)",
+              "explanation": "Sort list in-place / return a new sorted copy without mutating original",
+              "example": "nums.sort(reverse=True) | top3 = sorted(scores)[-3:]"
+            }
+          ]
+        },
+        {
+          "categoryTitle": "9. List Comprehension",
+          "items": [
+            {
+              "commandOrSyntax": "[expression for item in iterable]",
+              "explanation": "Concise syntax to generate a transformed list from an iterable",
+              "example": "squares = [x**2 for x in range(1, 6)]  # [1, 4, 9, 16, 25]"
+            },
+            {
+              "commandOrSyntax": "[item for item in iterable if condition]",
+              "explanation": "List comprehension with conditional filtering",
+              "example": "evens = [n for n in numbers if n % 2 == 0]"
+            },
+            {
+              "commandOrSyntax": "[x if condition else y for x in iterable]",
+              "explanation": "Ternary transformation inside list comprehension",
+              "example": "labels = [\"Pass\" if s >= 40 else \"Fail\" for s in marks]"
+            }
+          ]
+        },
+        {
+          "categoryTitle": "10. Tuples & Unpacking",
+          "items": [
+            {
+              "commandOrSyntax": "coords = (10, 20); x, y = coords",
+              "explanation": "Ordered, immutable sequence; elements unpacked into variables",
+              "example": "name, roll, marks = (\"Sumit\", 101, 92)"
+            },
+            {
+              "commandOrSyntax": "single_tuple = (42,)",
+              "explanation": "Single-element tuple requires trailing comma to prevent being parsed as integer",
+              "example": "type((5))  # int vs type((5,))  # tuple"
+            },
+            {
+              "commandOrSyntax": "t.count(value) / t.index(value)",
+              "explanation": "Count occurrences of item / return index of first occurrence",
+              "example": "(1, 2, 2, 3).count(2)  # 2"
+            }
+          ]
+        },
+        {
+          "categoryTitle": "11. Sets & Set Operations",
+          "items": [
+            {
+              "commandOrSyntax": "unique_nums = set([1, 2, 2, 3, 3, 4])",
+              "explanation": "Unordered collection of unique, hashable elements (removes duplicates)",
+              "example": "tags = {\"python\", \"coding\", \"backend\"}"
+            },
+            {
+              "commandOrSyntax": "s.add(item) / s.discard(item)",
+              "explanation": "Add item to set / remove item without throwing KeyError if not found",
+              "example": "visited.add(\"home\") | visited.discard(\"login\")"
+            },
+            {
+              "commandOrSyntax": "a | b, a & b, a - b, a ^ b",
+              "explanation": "Set operations: union (|), intersection (&), difference (-), symmetric difference (^)",
+              "example": "common = set(skills_required) & set(candidate_skills)"
+            }
+          ]
+        },
+        {
+          "categoryTitle": "12. Dictionaries - Key-Value Store",
+          "items": [
+            {
+              "commandOrSyntax": "student = {\"name\": \"Ankit\", \"course\": \"Python\", \"fees\": 2500}",
+              "explanation": "Mapping of unique keys to values (preserves insertion order in Python 3.7+)",
+              "example": "student[\"grade\"] = \"A\"  # add or update key"
+            },
+            {
+              "commandOrSyntax": "d.get(key, default_value)",
+              "explanation": "Safe key lookup returning default value if key is not found",
+              "example": "role = user.get(\"role\", \"student\")"
+            },
+            {
+              "commandOrSyntax": "d.keys(), d.values(), d.items()",
+              "explanation": "View objects for keys, values, and (key, value) pairs",
+              "example": "for k, v in student.items(): print(f\"{k}: {v}\")"
+            },
+            {
+              "commandOrSyntax": "d.update({key: new_val}) / d.pop(key)",
+              "explanation": "Merge another dictionary / remove key and return its value",
+              "example": "student.update({\"status\": \"Enrolled\"})"
+            }
+          ]
+        },
+        {
+          "categoryTitle": "13. Conditional Statements (if-elif-else)",
+          "items": [
+            {
+              "commandOrSyntax": "if condition1:\\n    # code\\nelif condition2:\\n    # code\\nelse:\\n    # fallback",
+              "explanation": "Branching logic with indentation-based code blocks",
+              "example": "if score >= 90: grade = 'A'\\nelif score >= 75: grade = 'B'\\nelse: grade = 'C'"
+            },
+            {
+              "commandOrSyntax": "result = value_if_true if condition else value_if_false",
+              "explanation": "Ternary operator for one-line conditional assignment",
+              "example": "status = \"Adult\" if age >= 18 else \"Minor\""
+            }
+          ]
+        },
+        {
+          "categoryTitle": "14. Loops - For & While",
+          "items": [
+            {
+              "commandOrSyntax": "for i in range(start, stop, step):",
+              "explanation": "Iterate through numeric sequence generated by range()",
+              "example": "for n in range(1, 11, 2): print(n)  # 1, 3, 5, 7, 9"
+            },
+            {
+              "commandOrSyntax": "for index, item in enumerate(iterable, start=0):",
+              "explanation": "Provides both current 0-based index and item in each iteration",
+              "example": "for idx, name in enumerate(students, 1): print(f\"{idx}. {name}\")"
+            },
+            {
+              "commandOrSyntax": "while condition:",
+              "explanation": "Repeat execution block as long as condition remains True",
+              "example": "while attempts < 3: attempts += 1"
+            },
+            {
+              "commandOrSyntax": "break, continue, pass",
+              "explanation": "Exit loop immediately (break) / skip to next iteration (continue) / null placeholder (pass)",
+              "example": "if val == target: break"
+            }
+          ]
+        },
+        {
+          "categoryTitle": "15. Functions & Parameters",
+          "items": [
+            {
+              "commandOrSyntax": "def function_name(param1, param2=\"default\") -> return_type:\\n    \"\"\"Docstring\"\"\"\\n    return result",
+              "explanation": "Reusable code block with positional parameters and default arguments",
+              "example": "def calculate_discount(price, pct=10):\\n    return price * (1 - pct/100)"
+            },
+            {
+              "commandOrSyntax": "def func(*args, **kwargs):",
+              "explanation": "*args collects variable positional arguments as tuple; **kwargs collects keyword args as dict",
+              "example": "def sum_all(*numbers): return sum(numbers)"
+            },
+            {
+              "commandOrSyntax": "square = lambda x: x ** 2",
+              "explanation": "Anonymous inline one-expression function",
+              "example": "sorted(students, key=lambda s: s[\"score\"], reverse=True)"
+            }
+          ]
+        },
+        {
+          "categoryTitle": "16. File Handling & Safe Context Management",
+          "items": [
+            {
+              "commandOrSyntax": "with open(\"filename.txt\", \"r\", encoding=\"utf-8\") as f:\\n    content = f.read()",
+              "explanation": "Context manager auto-closes file on exit; 'r' mode reads entire content",
+              "example": "with open(\"data.txt\", \"r\") as f: lines = f.readlines()"
+            },
+            {
+              "commandOrSyntax": "with open(\"output.txt\", \"w\", encoding=\"utf-8\") as f:\\n    f.write(\"Hello\\n\")",
+              "explanation": "'w' mode overwrites/creates file and writes text strings",
+              "example": "with open(\"report.txt\", \"w\") as f: f.write(report_data)"
+            },
+            {
+              "commandOrSyntax": "with open(\"log.txt\", \"a\", encoding=\"utf-8\") as f:\\n    f.write(\"New entry\\n\")",
+              "explanation": "'a' mode appends content to the end of file without truncating existing data",
+              "example": "with open(\"activity.log\", \"a\") as f: f.write(f\"{timestamp}: {action}\\n\")"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "cheat-css-flex-grid",
+    "type": "cheatsheet",
+    "title": "Modern CSS Flexbox & CSS Grid Visual Cheatsheet",
+    "slug": "css-flexbox-grid-visual-cheatsheet",
+    "category": "Web Development",
+    "level": "Intermediate",
+    "description": "Visual reference for flex direction, justify-content, align-items, grid template columns, fr units, minmax, and auto-fit layouts.",
+    "tier": "free",
+    "downloadUrl": "https://github.com/msk-institute/css-flex-grid-cheatsheet",
+    "topicsCovered": [
+      "CSS Flexbox",
+      "CSS Grid",
+      "Responsive Layouts",
+      "Tailwind Equivalence"
+    ],
+    "readTime": "4 min lookup",
+    "pages": 3,
+    "featured": true,
+    "updatedAt": "2026-08-22",
+    "cheatsheetContent": {
+      "sections": [
+        {
+          "categoryTitle": "Flexbox Alignment Properties",
+          "items": [
+            {
+              "commandOrSyntax": "display: flex; flex-direction: row | column;",
+              "explanation": "Establishes main axis direction",
+              "example": "flex flex-col (Tailwind)"
+            },
+            {
+              "commandOrSyntax": "justify-content: center | space-between | space-around;",
+              "explanation": "Aligns child elements along the main axis",
+              "example": "justify-between"
+            },
+            {
+              "commandOrSyntax": "align-items: center | stretch | flex-start;",
+              "explanation": "Aligns child elements along the cross axis",
+              "example": "items-center"
+            },
+            {
+              "commandOrSyntax": "gap: 1rem; flex-wrap: wrap;",
+              "explanation": "Even gutter spacing without negative margins",
+              "example": "gap-4 flex-wrap"
+            }
+          ]
+        },
+        {
+          "categoryTitle": "CSS Grid Essentials",
+          "items": [
+            {
+              "commandOrSyntax": "grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));",
+              "explanation": "Fully responsive card grid without media queries",
+              "example": "grid grid-cols-[repeat(auto-fit,minmax(280px,1fr))]"
+            },
+            {
+              "commandOrSyntax": "grid-column: span 2 / span 2;",
+              "explanation": "Make an item stretch across multiple grid tracks",
+              "example": "col-span-2"
+            },
+            {
+              "commandOrSyntax": "place-items: center;",
+              "explanation": "Perfect horizontal and vertical centering in 1 line",
+              "example": "place-items-center"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "cheat-git-commands",
+    "type": "cheatsheet",
+    "title": "Git & GitHub Everyday Workflow Cheatsheet",
+    "slug": "git-github-workflow-cheatsheet",
+    "category": "Web Development",
+    "level": "Beginner",
+    "description": "All essential git commands: init, branch switching, merge conflicts, stash, interactive rebase, and remote origin management.",
+    "tier": "free",
+    "downloadUrl": "https://github.com/msk-institute/git-cheatsheet",
+    "topicsCovered": [
+      "Git Branches",
+      "Commit Standards",
+      "Remote Repositories",
+      "Undo & Stash"
+    ],
+    "readTime": "3 min lookup",
+    "pages": 2,
+    "featured": false,
+    "updatedAt": "2026-08-25",
+    "cheatsheetContent": {
+      "sections": [
+        {
+          "categoryTitle": "Branching & Syncing",
+          "items": [
+            {
+              "commandOrSyntax": "git switch -c <branch-name>",
+              "explanation": "Create and switch to a new branch modern way",
+              "example": "git switch -c feature/login"
+            },
+            {
+              "commandOrSyntax": "git pull origin main --rebase",
+              "explanation": "Pull latest updates keeping linear commit history",
+              "example": "git pull origin main"
+            },
+            {
+              "commandOrSyntax": "git stash push -m \"wip\" / git stash pop",
+              "explanation": "Temporarily save dirty workspace state",
+              "example": "git stash && git pull"
+            }
+          ]
+        },
+        {
+          "categoryTitle": "Inspection & Undos",
+          "items": [
+            {
+              "commandOrSyntax": "git log --oneline --graph --decorate",
+              "explanation": "Compact visual tree of branch commits",
+              "example": "git log --oneline -n 10"
+            },
+            {
+              "commandOrSyntax": "git restore --staged <file>",
+              "explanation": "Unstage changes without losing file edits",
+              "example": "git restore --staged index.html"
+            },
+            {
+              "commandOrSyntax": "git commit --amend --no-edit",
+              "explanation": "Add staged changes to the previous commit directly",
+              "example": "git commit --amend"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "cheat-excel-top50",
+    "type": "cheatsheet",
+    "title": "MS Excel Top 50 Formulas & Shortcuts Cheatsheet",
+    "slug": "excel-top-50-formulas-cheatsheet",
+    "category": "MS Office",
+    "level": "Beginner",
+    "description": "Quick lookup for XLOOKUP, VLOOKUP, INDEX-MATCH, SUMIFS, COUNTIFS, conditional formatting, and 20+ Windows keyboard shortcuts.",
+    "tier": "free",
+    "downloadUrl": "https://github.com/msk-institute/excel-shortcuts-cheatsheet",
+    "topicsCovered": [
+      "XLOOKUP / VLOOKUP",
+      "SUMIFS & COUNTIFS",
+      "Pivot Shortcuts",
+      "F4 Absolute Referencing"
+    ],
+    "readTime": "4 min lookup",
+    "pages": 3,
+    "featured": false,
+    "updatedAt": "2026-08-29",
+    "cheatsheetContent": {
+      "sections": [
+        {
+          "categoryTitle": "Formulas",
+          "items": [
+            {
+              "commandOrSyntax": "=XLOOKUP(lookup_val, lookup_array, return_array, \"Not Found\")",
+              "explanation": "Modern two-way search replacing VLOOKUP & HLOOKUP",
+              "example": "=XLOOKUP(A2, Employees!A:A, Employees!C:C)"
+            },
+            {
+              "commandOrSyntax": "=SUMIFS(sum_range, criteria_range1, criteria1, ...)",
+              "explanation": "Sum numbers meeting multiple criteria",
+              "example": "=SUMIFS(D:D, B:B, \"Shikohabad\", C:C, \">1000\")"
+            },
+            {
+              "commandOrSyntax": "=TEXT(date, \"DD-MMM-YYYY\")",
+              "explanation": "Format date and numerical strings easily",
+              "example": "=TEXT(TODAY(), \"DD-MM-YYYY\")"
+            }
+          ]
+        },
+        {
+          "categoryTitle": "High-Speed Shortcuts",
+          "items": [
+            {
+              "commandOrSyntax": "Ctrl + Shift + L",
+              "explanation": "Toggle AutoFilter on active table",
+              "example": "Filters headers immediately"
+            },
+            {
+              "commandOrSyntax": "Alt + = (Equals)",
+              "explanation": "AutoSum selected numbers instantly",
+              "example": "Sum column in 1 keystroke"
+            },
+            {
+              "commandOrSyntax": "F4 (while typing formula)",
+              "explanation": "Cycle absolute cell references ($A$1, A$1, $A1)",
+              "example": "Locks row or column"
+            },
+            {
+              "commandOrSyntax": "Ctrl + ` (Backtick)",
+              "explanation": "Toggle Show All Formulas mode",
+              "example": "Inspect formula errors easily"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "notes-python-core",
+    "type": "note",
+    "title": "Python Core Programming Notes & PDF Guide",
+    "slug": "python-core-programming-pdf-notes",
+    "category": "Python",
+    "level": "Beginner",
+    "description": "Comprehensive reference guide covering basic syntax, data structures, OOP concepts, file handling, and exception handling.",
+    "tier": "free",
+    "downloadUrl": "https://github.com/msk-institute/python-notes-pdf",
+    "topicsCovered": [
+      "Syntax & Data Types",
+      "Control Flow",
+      "Functions & Modules",
+      "OOP Principles"
+    ],
+    "readTime": "45 min study",
+    "pages": 64,
+    "featured": true,
+    "updatedAt": "2026-08-15"
+  },
+  {
+    "id": "notes-html-css-guide",
+    "type": "note",
+    "title": "HTML5 & CSS3 Responsive Styling Guide",
+    "slug": "html5-css3-responsive-styling-guide",
+    "category": "Web Development",
+    "level": "Beginner",
+    "description": "Learn semantic layout design, CSS Grid, Flexbox, media queries, and utility-first styling with modern frameworks.",
+    "tier": "free",
+    "downloadUrl": "https://github.com/msk-institute/html-css-notes",
+    "topicsCovered": [
+      "Semantic Tags",
+      "Flexbox & Grid Layouts",
+      "Responsive Media Queries",
+      "CSS Animations"
+    ],
+    "readTime": "35 min study",
+    "pages": 52,
+    "featured": false,
+    "updatedAt": "2026-08-18"
+  },
+  {
+    "id": "notes-js-dom-es6",
+    "type": "note",
+    "title": "JavaScript DOM & Modern ES6+ Notes",
+    "slug": "javascript-dom-modern-es6-notes",
+    "category": "JavaScript",
+    "level": "Intermediate",
+    "description": "Complete guide to DOM manipulation, event handling, async functions, promises, and modern ES6 array functions.",
+    "tier": "paid",
+    "price": "₹149",
+    "topicsCovered": [
+      "ES6 Syntactic Sugar",
+      "DOM Selection & Manipulation",
+      "Event Bubbling & Capturing",
+      "Fetch API & Promises"
+    ],
+    "readTime": "60 min study",
+    "pages": 88,
+    "featured": true,
+    "updatedAt": "2026-08-20"
+  },
+  {
+    "id": "notes-ms-office-automation",
+    "type": "note",
+    "title": "MS Excel & Word Office Automation Notes",
+    "slug": "ms-excel-word-office-automation-notes",
+    "category": "MS Office",
+    "level": "Beginner",
+    "description": "Master advanced formulas, pivot tables, data tools in Excel, and professional document formatting, mail merge in Word.",
+    "tier": "paid",
+    "price": "₹99",
+    "topicsCovered": [
+      "Excel Formulas & Pivot Tables",
+      "Word Formatting & Page Layouts",
+      "Mail Merge Integration",
+      "Keyboard Shortcuts"
+    ],
+    "readTime": "50 min study",
+    "pages": 76,
+    "featured": false,
+    "updatedAt": "2026-08-21"
+  },
+  {
+    "id": "notes-cyber-security",
+    "type": "note",
+    "title": "Cyber Security & Ethical Hacking Essentials Notes",
+    "slug": "cyber-security-ethical-hacking-notes",
+    "category": "Cyber Security",
+    "level": "Intermediate",
+    "description": "Essential network security protocols, port scanning basics, Kali Linux tools, OWASP Top 10 web vulnerabilities, and password auditing.",
+    "tier": "paid",
+    "price": "₹199",
+    "topicsCovered": [
+      "Network Protocols & OSI",
+      "Nmap & Wireshark Basics",
+      "OWASP Top 10 Web Bugs",
+      "Defensive Hardening"
+    ],
+    "readTime": "55 min study",
+    "pages": 92,
+    "featured": false,
+    "updatedAt": "2026-08-24"
+  },
+  {
+    "id": "hb-fullstack-dev",
+    "type": "handbook",
+    "title": "Full-Stack Web Developer Handbook (2026 Edition)",
+    "slug": "fullstack-web-developer-handbook-2026",
+    "category": "Web Development",
+    "level": "Intermediate",
+    "description": "The definitive blueprint to modern full-stack development. Covers Next.js App Router, Tailwind CSS, PostgreSQL, REST/GraphQL APIs, and cloud deployment.",
+    "tier": "free",
+    "downloadUrl": "https://github.com/msk-institute/fullstack-developer-handbook",
+    "topicsCovered": [
+      "Next.js & React 19",
+      "Node.js Architecture",
+      "PostgreSQL & Prisma",
+      "CI/CD & Docker Basics"
+    ],
+    "readTime": "2 hours deep read",
+    "pages": 140,
+    "featured": true,
+    "updatedAt": "2026-08-31",
+    "handbookContent": {
+      "chapters": [
+        {
+          "number": 1,
+          "title": "The Modern Web Architecture (Client, Server & Edge)",
+          "summary": "Understanding client rendering vs server components, SSR, and Edge computing."
+        },
+        {
+          "number": 2,
+          "title": "Styling & Design Systems with Tailwind CSS v4",
+          "summary": "Configuring modern themes, variables, and rapid UI component patterns."
+        },
+        {
+          "number": 3,
+          "title": "API Engineering with Node.js & Express",
+          "summary": "Building resilient endpoints, JWT authentication, and rate limiting."
+        },
+        {
+          "number": 4,
+          "title": "Relational Databases & Indexing Strategies",
+          "summary": "Designing clean schemas in PostgreSQL and utilizing Prisma ORM."
+        },
+        {
+          "number": 5,
+          "title": "Deployment, Monitoring & Production Hardening",
+          "summary": "Deploying to Vercel/VPS, handling SSL, and configuring logging."
+        }
+      ],
+      "highlights": [
+        "End-to-end full-stack code examples with real database queries.",
+        "Production-grade security checklist for web APIs.",
+        "Interview prep questions asked by leading tech employers."
+      ]
+    }
+  },
+  {
+    "id": "hb-python-pro",
+    "type": "handbook",
+    "title": "Python Programming: Zero to Industry Pro Handbook",
+    "slug": "python-programming-zero-to-pro-handbook",
+    "category": "Python",
+    "level": "Intermediate",
+    "description": "Complete reference manual from basic syntax up to writing Pythonic scripts, generators, decorators, unit testing, and packaging.",
+    "tier": "free",
+    "downloadUrl": "https://github.com/msk-institute/python-pro-handbook",
+    "topicsCovered": [
+      "Generators & Decorators",
+      "Context Managers",
+      "pytest Framework",
+      "Virtual Environments"
+    ],
+    "readTime": "1.5 hours deep read",
+    "pages": 110,
+    "featured": false,
+    "updatedAt": "2026-08-25",
+    "handbookContent": {
+      "chapters": [
+        {
+          "number": 1,
+          "title": "Pythonic Coding Principles & PEP 8",
+          "summary": "Writing clean, readable code and leveraging type hints."
+        },
+        {
+          "number": 2,
+          "title": "Advanced OOP: Metaclasses & Magic Methods",
+          "summary": "Implementing custom operators, __repr__, and property decorators."
+        },
+        {
+          "number": 3,
+          "title": "Async IO & Multithreading",
+          "summary": "Concurrent programming with asyncio and ThreadPoolExecutor."
+        },
+        {
+          "number": 4,
+          "title": "Testing & Test Driven Development (TDD)",
+          "summary": "Writing unit tests with pytest and mocking external API services."
+        }
+      ],
+      "highlights": [
+        "Detailed comparison of iterative vs functional approaches.",
+        "Memory management and garbage collection insights."
+      ]
+    }
+  },
+  {
+    "id": "hb-ccc-exam",
+    "type": "handbook",
+    "title": "NIELIT CCC & Computer Literacy Official Handbook",
+    "slug": "nielit-ccc-computer-literacy-handbook",
+    "category": "MS Office",
+    "level": "Beginner",
+    "description": "Curriculum-aligned handbook for students preparing for the NIELIT CCC exam in Uttar Pradesh. Includes 300+ sample questions and practical exercises.",
+    "tier": "free",
+    "downloadUrl": "https://github.com/msk-institute/ccc-official-handbook",
+    "topicsCovered": [
+      "Computer Hardware & OS",
+      "LibreOffice Writer & Calc",
+      "Digital Financial Services",
+      "Cyber Ethics"
+    ],
+    "readTime": "2.5 hours read",
+    "pages": 156,
+    "featured": true,
+    "updatedAt": "2026-09-01",
+    "handbookContent": {
+      "chapters": [
+        {
+          "number": 1,
+          "title": "Introduction to Computers and Operating Systems",
+          "summary": "Hardware architectures, CPU, memory, and Windows/Linux desktops."
+        },
+        {
+          "number": 2,
+          "title": "Word Processing (LibreOffice Writer & MS Word)",
+          "summary": "Document formatting, tables, shapes, and mail merge."
+        },
+        {
+          "number": 3,
+          "title": "Spreadsheets (LibreOffice Calc & MS Excel)",
+          "summary": "Formulas, cell addressing, charts, and data sorting."
+        },
+        {
+          "number": 4,
+          "title": "Internet, WWW and Web Browsers",
+          "summary": "IP addressing, DNS, email protocol, search engines, and social media."
+        },
+        {
+          "number": 5,
+          "title": "Digital Financial Services & Cyber Security",
+          "summary": "UPI, AEPS, net banking, OTP security, and phishing avoidance."
+        }
+      ],
+      "highlights": [
+        "100% mapped to the latest NIELIT 2026 syllabus.",
+        "Includes 5 full-length practice mock test question sets."
+      ]
+    }
+  },
+  {
+    "id": "cheat-markdown-syntax",
+    "type": "cheatsheet",
+    "title": "Markdown & GitHub Flavored Markdown (GFM) Complete Cheatsheet",
+    "slug": "markdown-syntax-gfm-cheatsheet",
+    "category": "Web Development",
+    "level": "Beginner to Advanced",
+    "description": "Comprehensive quick-reference revision cheatsheet covering Standard Markdown, GitHub Flavored Markdown (GFM), tables, task lists, GFM alerts, math notation, Mermaid diagrams, and YAML frontmatter.",
+    "tier": "free",
+    "downloadUrl": "https://github.com/msk-institute/markdown-cheatsheet",
+    "topicsCovered": [
+      "Headings & Formatting",
+      "Lists & Task Checkboxes",
+      "Links & Images",
+      "Code Blocks & Languages",
+      "GFM Tables & Alignment",
+      "GitHub Alerts & Callouts",
+      "LaTeX Math ($ & $$)",
+      "Mermaid Diagrams"
+    ],
+    "readTime": "3 min lookup",
+    "pages": 3,
+    "featured": true,
+    "updatedAt": "2026-09-13",
+    "cheatsheetContent": {
+      "sections": [
+        {
+          "categoryTitle": "Headings & Document Structure",
+          "items": [
+            {
+              "commandOrSyntax": "# Heading 1\n## Heading 2\n### Heading 3",
+              "explanation": "ATX style headings from H1 (largest) down to H6",
+              "example": "# Project Title"
+            },
+            {
+              "commandOrSyntax": "Heading 1\n=========\nHeading 2\n---------",
+              "explanation": "Setext style headings using equal signs (H1) or hyphens (H2)",
+              "example": "Overview\n--------"
+            },
+            {
+              "commandOrSyntax": "---\n***\n___",
+              "explanation": "Horizontal divider / thematic break (requires 3+ symbols)",
+              "example": "---"
+            }
+          ]
+        },
+        {
+          "categoryTitle": "Text Formatting & Emphasis",
+          "items": [
+            {
+              "commandOrSyntax": "**Bold Text** or __Bold Text__",
+              "explanation": "Double asterisks or underscores for strong emphasis",
+              "example": "**Crucial Step**"
+            },
+            {
+              "commandOrSyntax": "*Italic Text* or _Italic Text_",
+              "explanation": "Single asterisk or underscore for light emphasis",
+              "example": "*Note:* Check log"
+            },
+            {
+              "commandOrSyntax": "~~Strikethrough~~",
+              "explanation": "GFM strikethrough using double tildes",
+              "example": "~~Old Price: $50~~"
+            },
+            {
+              "commandOrSyntax": "==Highlight==",
+              "explanation": "Text highlight in supported markdown extensions",
+              "example": "==Key Takeaway=="
+            },
+            {
+              "commandOrSyntax": "> Quoted text\n>> Nested quote",
+              "explanation": "Blockquotes and multi-level quotes using greater-than sign",
+              "example": "> Logic will get you from A to B."
+            }
+          ]
+        },
+        {
+          "categoryTitle": "Lists & Task Checkboxes",
+          "items": [
+            {
+              "commandOrSyntax": "- Item A\n- Item B\n  - Sub-item B1",
+              "explanation": "Unordered bulleted list (dashes, asterisks, or plus signs)",
+              "example": "- Apple\n- Banana"
+            },
+            {
+              "commandOrSyntax": "1. First\n2. Second\n3. Third",
+              "explanation": "Ordered numbered list (numbers auto-increment on render)",
+              "example": "1. Download\n2. Install"
+            },
+            {
+              "commandOrSyntax": "- [ ] Incomplete task\n- [x] Completed task",
+              "explanation": "GFM task list with interactive clickable checkboxes in GitHub",
+              "example": "- [x] Write tests"
+            }
+          ]
+        },
+        {
+          "categoryTitle": "Links, Images & Raw HTML",
+          "items": [
+            {
+              "commandOrSyntax": "[Link Title](https://example.com)",
+              "explanation": "Standard inline clickable hyperlink",
+              "example": "[MSK Institute](https://mskinstitute.in)"
+            },
+            {
+              "commandOrSyntax": "[Reference Link][id]\n\n[id]: https://example.com",
+              "explanation": "Reference-style link for clean, uncluttered markdown",
+              "example": "[Documentation][docs]"
+            },
+            {
+              "commandOrSyntax": "![Alt text for screen readers](image.png)",
+              "explanation": "Embed image with accessible description",
+              "example": "![Architecture](/images/arch.png)"
+            },
+            {
+              "commandOrSyntax": "<img src=\"logo.png\" width=\"200\" alt=\"Logo\" />",
+              "explanation": "Raw HTML image tag for custom width/height sizing",
+              "example": "<img src=\"logo.png\" width=\"120\" />"
+            },
+            {
+              "commandOrSyntax": "<details><summary>Click to view</summary>Content</details>",
+              "explanation": "Collapsible disclosure toggle accordion",
+              "example": "<details><summary>Hint</summary>Use SUM</details>"
+            }
+          ]
+        },
+        {
+          "categoryTitle": "Code Blocks & Syntax Highlighting",
+          "items": [
+            {
+              "commandOrSyntax": "`const x = 10;`",
+              "explanation": "Inline code formatting using single backticks",
+              "example": "Run `npm run build`"
+            },
+            {
+              "commandOrSyntax": "``Use `backticks` here``",
+              "explanation": "Double backticks escape a literal backtick inside inline code",
+              "example": "`` `git commit` ``"
+            },
+            {
+              "commandOrSyntax": "```javascript\nfunction hello() {\n  console.log('Hi');\n}\n```",
+              "explanation": "Fenced code block with programming language syntax highlighting",
+              "example": "```python\nprint('Hello')\n```"
+            },
+            {
+              "commandOrSyntax": "$E = mc^2$\n\n$$\\int_0^\\infty x dx$$",
+              "explanation": "KaTeX / LaTeX inline and block mathematical equations",
+              "example": "$\\sum_{i=1}^n i$"
+            }
+          ]
+        },
+        {
+          "categoryTitle": "GFM Tables & Column Alignment",
+          "items": [
+            {
+              "commandOrSyntax": "| Header 1 | Header 2 |\n| :--- | :---: |\n| Left | Center |",
+              "explanation": "GFM table with pipe borders and alignment colons",
+              "example": "| Col A | Col B |\n| :--- | ---: |\n| 10 | 20 |"
+            },
+            {
+              "commandOrSyntax": ":--- (Left) | :---: (Center) | ---: (Right)",
+              "explanation": "Alignment colons inside header divider row",
+              "example": ":---: for centered text"
+            }
+          ]
+        },
+        {
+          "categoryTitle": "GitHub Alerts, Footnotes & Mermaid",
+          "items": [
+            {
+              "commandOrSyntax": "> [!NOTE]\n> Highlights helpful background info.",
+              "explanation": "GitHub blue Note callout box",
+              "example": "> [!NOTE]\n> Requires Node 18+"
+            },
+            {
+              "commandOrSyntax": "> [!TIP]\n> Helpful advice or quick shortcuts.",
+              "explanation": "GitHub green Tip callout box",
+              "example": "> [!TIP]\n> Use shortcut Ctrl+P"
+            },
+            {
+              "commandOrSyntax": "> [!IMPORTANT]\n> Crucial instructions users must know.",
+              "explanation": "GitHub purple Important callout box",
+              "example": "> [!IMPORTANT]\n> Save before exit"
+            },
+            {
+              "commandOrSyntax": "> [!WARNING]\n> Potential breaking changes or issues.",
+              "explanation": "GitHub orange Warning callout box",
+              "example": "> [!WARNING]\n> Overwrites files"
+            },
+            {
+              "commandOrSyntax": "> [!CAUTION]\n> Negative consequences or data loss.",
+              "explanation": "GitHub red Caution callout box",
+              "example": "> [!CAUTION]\n> Destructive action"
+            },
+            {
+              "commandOrSyntax": "Here is a note[^1].\n\n[^1]: Reference detail.",
+              "explanation": "GFM footnotes linked to the bottom of the page",
+              "example": "[^1]: RFC 7763 standard"
+            },
+            {
+              "commandOrSyntax": "```mermaid\ngraph TD;\nA-->B;\n```",
+              "explanation": "Mermaid.js flowchart and sequence diagram renderer",
+              "example": "```mermaid\ngraph LR; Start-->Done\n```"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "cheat-sql-data-analytics",
+    "type": "cheatsheet",
+    "title": "SQL for Data Analytics & Business Intelligence Cheatsheet",
+    "slug": "sql-data-analytics-cheatsheet",
+    "category": "Data Analytics",
+    "level": "Beginner to Advanced",
+    "description": "Essential SQL query syntax for data analysts: SELECT, WHERE, GROUP BY, HAVING, INNER/LEFT/FULL JOINs, Window Functions (ROW_NUMBER, RANK, DENSE_RANK, LAG, LEAD), and CTEs.",
+    "tier": "free",
+    "downloadUrl": "https://github.com/msk-institute/sql-data-analytics-cheatsheet",
+    "topicsCovered": [
+      "Aggregations & Group By",
+      "Multi-Table Joins",
+      "Window Functions (OVER / PARTITION BY)",
+      "Common Table Expressions (WITH CTE)"
+    ],
+    "readTime": "5 min lookup",
+    "pages": 4,
+    "featured": true,
+    "updatedAt": "2026-09-15",
+    "cheatsheetContent": {
+      "sections": [
+        {
+          "categoryTitle": "Query Fundamentals",
+          "items": [
+            {
+              "commandOrSyntax": "SELECT DISTINCT col1, col2 FROM table_name;",
+              "explanation": "Retrieve unique deduplicated values across specified columns",
+              "example": "SELECT DISTINCT department, job_title FROM employees;"
+            },
+            {
+              "commandOrSyntax": "WHERE col IN ('val1', 'val2') AND num_col BETWEEN 10 AND 50;",
+              "explanation": "Filter rows matching multiple discrete values or continuous ranges",
+              "example": "SELECT * FROM orders WHERE status IN ('Shipped', 'Delivered') AND total_amount BETWEEN 500 AND 2000;"
+            },
+            {
+              "commandOrSyntax": "COALESCE(val1, val2, fallback_val)",
+              "explanation": "Return the first non-NULL expression from left to right",
+              "example": "SELECT customer_name, COALESCE(phone, mobile, 'No Phone') AS contact FROM customers;"
+            }
+          ]
+        },
+        {
+          "categoryTitle": "Aggregation & Grouping",
+          "items": [
+            {
+              "commandOrSyntax": "SELECT dept, COUNT(*), AVG(salary) FROM emp GROUP BY dept HAVING AVG(salary) > 50000;",
+              "explanation": "Group rows and filter aggregated metrics using HAVING (WHERE cannot filter aggregates)",
+              "example": "SELECT category, SUM(revenue) FROM sales GROUP BY category HAVING SUM(revenue) >= 100000;"
+            },
+            {
+              "commandOrSyntax": "COUNT(DISTINCT customer_id)",
+              "explanation": "Count unique occurrences rather than total records",
+              "example": "SELECT region, COUNT(DISTINCT customer_id) AS active_buyers FROM orders GROUP BY region;"
+            }
+          ]
+        },
+        {
+          "categoryTitle": "Multi-Table Joins",
+          "items": [
+            {
+              "commandOrSyntax": "FROM table_a a INNER JOIN table_b b ON a.id = b.a_id",
+              "explanation": "Returns records having matching keys in both tables",
+              "example": "SELECT o.order_id, c.customer_name FROM orders o INNER JOIN customers c ON o.customer_id = c.id;"
+            },
+            {
+              "commandOrSyntax": "FROM customers c LEFT JOIN orders o ON c.id = o.customer_id WHERE o.id IS NULL;",
+              "explanation": "Anti-join pattern: Identify customers who have never placed an order",
+              "example": "SELECT c.name FROM customers c LEFT JOIN orders o ON c.id = o.cust_id WHERE o.cust_id IS NULL;"
+            }
+          ]
+        },
+        {
+          "categoryTitle": "Window Functions & CTEs",
+          "items": [
+            {
+              "commandOrSyntax": "ROW_NUMBER() OVER(PARTITION BY category ORDER BY sales DESC)",
+              "explanation": "Assign sequential unique rank 1..N within each partitioned subset",
+              "example": "SELECT product, category, sales, ROW_NUMBER() OVER(PARTITION BY category ORDER BY sales DESC) as rank_in_cat FROM products;"
+            },
+            {
+              "commandOrSyntax": "LAG(revenue, 1) OVER(ORDER BY order_date)",
+              "explanation": "Access metric from previous row to compute period-over-period growth",
+              "example": "SELECT order_date, revenue, (revenue - LAG(revenue, 1) OVER(ORDER BY order_date)) AS daily_diff FROM daily_sales;"
+            },
+            {
+              "commandOrSyntax": "WITH TopCustomers AS (SELECT cust_id, SUM(amt) as spent FROM orders GROUP BY cust_id) SELECT * FROM TopCustomers WHERE spent > 10000;",
+              "explanation": "Common Table Expression (CTE) creates reusable modular temporary result set",
+              "example": "WITH MonthlyRevenue AS (SELECT DATE_TRUNC('month', order_date) AS m, SUM(amount) AS rev FROM sales GROUP BY 1) SELECT * FROM MonthlyRevenue;"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "cheat-pandas-data-science",
+    "type": "cheatsheet",
+    "title": "Pandas & NumPy Data Wrangling Cheatsheet for Analysts",
+    "slug": "pandas-numpy-data-wrangling-cheatsheet",
+    "category": "Data Analytics",
+    "level": "Beginner to Advanced",
+    "description": "Quick reference for Pandas DataFrame manipulations: indexing, filtering, groupby, pivoting, missing value imputation, string methods, and method chaining for production pipelines.",
+    "tier": "free",
+    "downloadUrl": "https://github.com/msk-institute/pandas-data-wrangling-cheatsheet",
+    "topicsCovered": [
+      "DataFrame Indexing & Querying",
+      "Data Cleaning & Imputation",
+      "Advanced GroupBy & Aggregations",
+      "Reshaping: Pivot Tables & Melt"
+    ],
+    "readTime": "5 min lookup",
+    "pages": 4,
+    "featured": true,
+    "updatedAt": "2026-09-15",
+    "cheatsheetContent": {
+      "sections": [
+        {
+          "categoryTitle": "Inspection & Memory Optimization",
+          "items": [
+            {
+              "commandOrSyntax": "df.info(memory_usage='deep')",
+              "explanation": "Inspect true memory consumption including Python heap string pointers",
+              "example": "print(df.info(memory_usage='deep'))"
+            },
+            {
+              "commandOrSyntax": "df[col] = pd.to_numeric(df[col], downcast='integer')",
+              "explanation": "Automatically downcast int64 to int8/int16/int32 to reduce RAM usage by up to 80%",
+              "example": "df['age'] = pd.to_numeric(df['age'], downcast='unsigned')"
+            },
+            {
+              "commandOrSyntax": "df[col] = df[col].astype('category')",
+              "explanation": "Convert low-cardinality repetitive strings to integer lookup codes",
+              "example": "df['country'] = df['country'].astype('category')"
+            }
+          ]
+        },
+        {
+          "categoryTitle": "Filtering & Querying",
+          "items": [
+            {
+              "commandOrSyntax": "df.query('revenue > 1000 and status == \"Delivered\"')",
+              "explanation": "Clean boolean string expression filtering without repeating DataFrame names",
+              "example": "high_value_df = df.query('age >= 21 and score > 85')"
+            },
+            {
+              "commandOrSyntax": "df.loc[row_indexer, ['col1', 'col2']]",
+              "explanation": "Label-based slicing for both rows and columns simultaneously",
+              "example": "df.loc[df['salary'] > 60000, ['name', 'department']]"
+            },
+            {
+              "commandOrSyntax": "df['col'].isin(['Val1', 'Val2'])",
+              "explanation": "Vectorized membership test across lists or sets",
+              "example": "active_orders = df[df['status'].isin(['Pending', 'Shipped'])]"
+            }
+          ]
+        },
+        {
+          "categoryTitle": "GroupBy & Multi-Aggregations",
+          "items": [
+            {
+              "commandOrSyntax": "df.groupby('cat').agg(total_sales=('amt', 'sum'), avg_rating=('rating', 'mean'))",
+              "explanation": "Named aggregations yielding clean, unnested column headers",
+              "example": "summary = df.groupby('store_id').agg(revenue=('sales', 'sum'), orders=('id', 'count'))"
+            },
+            {
+              "commandOrSyntax": "df['rolling_7d'] = df['sales'].rolling(window=7, min_periods=1).mean()",
+              "explanation": "Compute rolling moving averages across temporal windows",
+              "example": "df['sales_sma_7'] = df['sales'].rolling(7).mean()"
+            }
+          ]
+        },
+        {
+          "categoryTitle": "Reshaping & Method Chaining",
+          "items": [
+            {
+              "commandOrSyntax": "df.pivot_table(index='store', columns='year', values='revenue', aggfunc='sum', fill_value=0)",
+              "explanation": "Transform long data into cross-tabulated wide matrix format",
+              "example": "matrix = df.pivot_table(index='region', columns='quarter', values='sales', aggfunc='mean')"
+            },
+            {
+              "commandOrSyntax": "df.melt(id_vars=['id'], value_vars=['Q1', 'Q2'], var_name='quarter', value_name='sales')",
+              "explanation": "Unpivot wide tabular columns into tidy normalized long-form records",
+              "example": "tidy_df = wide_df.melt(id_vars=['product'], var_name='month', value_name='units')"
+            },
+            {
+              "commandOrSyntax": "df.assign(margin=lambda x: x['rev'] - x['cost']).pipe(clean_func)",
+              "explanation": "Functional declarative pipeline without intermediate temporary variables",
+              "example": "clean_df = (raw_df.dropna().assign(total=lambda x: x['q'] * x['p']).query('total > 100'))"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "cheat-tailwind-css-mastery",
+    "type": "cheatsheet",
+    "title": "Tailwind CSS & Modern UI Engineering Cheatsheet",
+    "slug": "tailwind-css-mastery-cheatsheet",
+    "category": "Web Development",
+    "level": "All Levels",
+    "description": "Essential quick-reference cheatsheet for Tailwind CSS: layout containers, flexbox alignments, grid template layouts, typography scales, responsive breakpoints, pseudo-class variants, dark mode, and custom theme extensions.",
+    "tier": "free",
+    "downloadUrl": "https://github.com/msk-institute/tailwind-css-cheatsheet",
+    "topicsCovered": [
+      "Flexbox & Grid",
+      "Spacing & Sizing",
+      "Typography & Colors",
+      "Breakpoints (sm, md, lg, xl)",
+      "Hover, Focus & Active States",
+      "Dark Mode & Themes"
+    ],
+    "readTime": "6 min lookup",
+    "pages": 5,
+    "featured": true,
+    "updatedAt": "2026-09-15",
+    "cheatsheetContent": {
+      "sections": [
+        {
+          "categoryTitle": "1. Layout & Flexbox",
+          "items": [
+            {
+              "commandOrSyntax": "flex items-center justify-between",
+              "explanation": "Creates a flex container with centered vertical items and space distributed between elements",
+              "example": "<div class=\"flex items-center justify-between p-4\">...</div>"
+            },
+            {
+              "commandOrSyntax": "flex-col gap-4",
+              "explanation": "Stacks flex children vertically with 1rem (16px) gap between them",
+              "example": "<div class=\"flex flex-col gap-4\">...</div>"
+            },
+            {
+              "commandOrSyntax": "grid grid-cols-1 md:grid-cols-3 gap-6",
+              "explanation": "1-column grid on mobile, automatically expands to 3 columns on tablet/desktop (md: 768px+)",
+              "example": "<div class=\"grid grid-cols-1 md:grid-cols-3 gap-6\">...</div>"
+            }
+          ]
+        },
+        {
+          "categoryTitle": "2. Spacing, Sizing & Box Model",
+          "items": [
+            {
+              "commandOrSyntax": "p-4 / px-6 / py-3",
+              "explanation": "Padding: p-4 = 1rem all sides; px-6 = 1.5rem horizontal; py-3 = 0.75rem vertical",
+              "example": "<div class=\"px-6 py-3\">...</div>"
+            },
+            {
+              "commandOrSyntax": "w-full max-w-4xl mx-auto",
+              "explanation": "Full width constrained to max 56rem (896px) and horizontally centered with auto margins",
+              "example": "<div class=\"w-full max-w-4xl mx-auto\">...</div>"
+            },
+            {
+              "commandOrSyntax": "rounded-xl shadow-lg border border-slate-200",
+              "explanation": "Modern card container with 0.75rem border radius, elevation shadow, and subtle boundary border",
+              "example": "<div class=\"rounded-xl shadow-lg border border-slate-200\">...</div>"
+            }
+          ]
+        },
+        {
+          "categoryTitle": "3. Responsive Variants & Dark Mode",
+          "items": [
+            {
+              "commandOrSyntax": "sm: / md: / lg: / xl: / 2xl:",
+              "explanation": "Mobile-first responsive prefixes: sm (640px), md (768px), lg (1024px), xl (1280px), 2xl (1536px)",
+              "example": "<h1 class=\"text-xl md:text-3xl lg:text-5xl font-bold\">...</h1>"
+            },
+            {
+              "commandOrSyntax": "dark:bg-slate-900 dark:text-white",
+              "explanation": "Applies alternate dark theme styles when HTML has class=\"dark\"",
+              "example": "<div class=\"bg-white text-slate-900 dark:bg-slate-900 dark:text-white\">...</div>"
+            },
+            {
+              "commandOrSyntax": "hover:bg-blue-700 transition-all duration-300",
+              "explanation": "Smooth interactive transition on hover state with 300ms easing",
+              "example": "<button class=\"bg-blue-600 hover:bg-blue-700 transition-all duration-300\">Click</button>"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "cheat-nodejs-express-backend",
+    "type": "cheatsheet",
+    "title": "Node.js & Express.js Backend Architecture Cheatsheet",
+    "slug": "nodejs-express-backend-cheatsheet",
+    "category": "Web Development",
+    "level": "Intermediate",
+    "description": "Production-ready quick-reference for Node.js and Express: Event loop lifecycle, fs/promises, stream pipelines, routing verbs, middleware chaining, JWT cookie authentication, Bcrypt password hashing, and Helmet/CORS security hardening.",
+    "tier": "free",
+    "downloadUrl": "https://github.com/msk-institute/nodejs-express-cheatsheet",
+    "topicsCovered": [
+      "Event Loop & Async",
+      "Express Routing & Controllers",
+      "Middleware & Next()",
+      "JWT Authentication & Cookies",
+      "Bcrypt Hashing & RBAC",
+      "Security (Helmet, CORS, RateLimit)"
+    ],
+    "readTime": "7 min lookup",
+    "pages": 6,
+    "featured": true,
+    "updatedAt": "2026-09-15",
+    "cheatsheetContent": {
+      "sections": [
+        {
+          "categoryTitle": "1. Express App Setup & Middleware",
+          "items": [
+            {
+              "commandOrSyntax": "app.use(express.json({ limit: '10kb' }))",
+              "explanation": "Parses incoming requests with JSON payloads and prevents body flood attacks",
+              "example": "app.use(express.json({ limit: '10kb' }));"
+            },
+            {
+              "commandOrSyntax": "app.use((req, res, next) => { ... next(); })",
+              "explanation": "Custom application-level middleware executing in sequence for every matching request",
+              "example": "app.use((req, res, next) => { req.requestTime = Date.now(); next(); });"
+            },
+            {
+              "commandOrSyntax": "app.use((err, req, res, next) => { ... })",
+              "explanation": "Centralized global error-handling middleware recognized by its 4-parameter arity",
+              "example": "app.use((err, req, res, next) => res.status(err.statusCode || 500).json({ error: err.message }));"
+            }
+          ]
+        },
+        {
+          "categoryTitle": "2. Routing & Request Extraction",
+          "items": [
+            {
+              "commandOrSyntax": "req.params / req.query / req.body",
+              "explanation": "Extracts dynamic URL path parameters (:id), search queries (?page=1), and POST bodies",
+              "example": "const { id } = req.params; const { sort } = req.query; const { name } = req.body;"
+            },
+            {
+              "commandOrSyntax": "res.status(201).json({ status: 'success', data })",
+              "explanation": "Sends a 201 Created status with serialized JSON payload and correct headers",
+              "example": "res.status(201).json({ status: 'success', data: newCourse });"
+            },
+            {
+              "commandOrSyntax": "res.status(204).send()",
+              "explanation": "Sends a 204 No Content response indicating successful deletion without response payload",
+              "example": "res.status(204).send();"
+            }
+          ]
+        },
+        {
+          "categoryTitle": "3. Authentication & Security Hardening",
+          "items": [
+            {
+              "commandOrSyntax": "jwt.sign(payload, secret, { expiresIn: '1d' })",
+              "explanation": "Generates a signed JSON Web Token with expiration claim",
+              "example": "const token = jwt.sign({ id: user._id, role: user.role }, process.env.JWT_SECRET, { expiresIn: '1d' });"
+            },
+            {
+              "commandOrSyntax": "res.cookie('token', token, { httpOnly: True, secure: true })",
+              "explanation": "Transmits JWT in an HTTP-Only cookie to prevent client-side XSS credential theft",
+              "example": "res.cookie('token', token, { httpOnly: True, secure: True, sameSite: 'strict' });"
+            },
+            {
+              "commandOrSyntax": "await bcrypt.hash(password, 12)",
+              "explanation": "Hashes plain password with cryptographic salt using 12 cost work rounds",
+              "example": "const hashedPassword = await bcrypt.hash(plainPassword, 12);"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "cheat-mongodb-mongoose-database",
+    "type": "cheatsheet",
+    "title": "MongoDB & Mongoose NoSQL Database Cheatsheet",
+    "slug": "mongodb-mongoose-database-cheatsheet",
+    "category": "Web Development",
+    "level": "Intermediate",
+    "description": "Comprehensive reference for MongoDB and Mongoose ODM: CRUD operations, query operators ($gt, $in, $elemMatch), atomic update modifiers ($set, $inc, $push), Schema validations, Pre/Post hooks, Population, and Aggregation Pipeline stages ($match, $group, $lookup, $unwind).",
+    "tier": "free",
+    "downloadUrl": "https://github.com/msk-institute/mongodb-mongoose-cheatsheet",
+    "topicsCovered": [
+      "CRUD Operations",
+      "Comparison & Logical Operators",
+      "Field Modifiers ($set, $inc, $push)",
+      "Mongoose Schemas & Pre-hooks",
+      ".populate() vs Embedding",
+      "Aggregation Pipeline ($match, $group, $lookup)"
+    ],
+    "readTime": "8 min lookup",
+    "pages": 6,
+    "featured": true,
+    "updatedAt": "2026-09-15",
+    "cheatsheetContent": {
+      "sections": [
+        {
+          "categoryTitle": "1. Query & Comparison Operators",
+          "items": [
+            {
+              "commandOrSyntax": "{ price: { $gte: 1000, $lte: 5000 } }",
+              "explanation": "Finds documents where numeric field is between 1000 and 5000 inclusive",
+              "example": "db.courses.find({ price: { $gte: 1000, $lte: 5000 } });"
+            },
+            {
+              "commandOrSyntax": "{ category: { $in: ['Web', 'AI', 'Cloud'] } }",
+              "explanation": "Matches documents where category equals any value in the array",
+              "example": "db.courses.find({ category: { $in: ['Web', 'AI'] } });"
+            },
+            {
+              "commandOrSyntax": "{ tags: { $all: ['react', 'node'] } }",
+              "explanation": "Matches array fields that contain ALL specified items simultaneously",
+              "example": "db.courses.find({ tags: { $all: ['react', 'node'] } });"
+            }
+          ]
+        },
+        {
+          "categoryTitle": "2. Atomic Update Modifiers",
+          "items": [
+            {
+              "commandOrSyntax": "{ $set: { status: 'PUBLISHED' } }",
+              "explanation": "Updates or sets specific field values without overwriting the rest of the document",
+              "example": "Course.updateOne({ _id: id }, { $set: { status: 'PUBLISHED' } });"
+            },
+            {
+              "commandOrSyntax": "{ $inc: { views: 1, inventory: -1 } }",
+              "explanation": "Atomically increments or decrements numerical fields without read race conditions",
+              "example": "Product.updateOne({ sku: 'A1' }, { $inc: { stock: -1 } });"
+            },
+            {
+              "commandOrSyntax": "{ $addToSet: { tags: 'nextjs' } }",
+              "explanation": "Appends an element to an array ONLY if it does not already exist (prevents duplicates)",
+              "example": "Course.updateOne({ _id: id }, { $addToSet: { tags: 'nextjs' } });"
+            }
+          ]
+        },
+        {
+          "categoryTitle": "3. Aggregation Pipeline Stages",
+          "items": [
+            {
+              "commandOrSyntax": "{ $match: { isPublished: true } }",
+              "explanation": "Filters documents in the pipeline; use early to leverage database indexes",
+              "example": "{ $match: { isPublished: True, rating: { $gte: 4.5 } } }"
+            },
+            {
+              "commandOrSyntax": "{ $group: { _id: '$category', total: { $sum: 1 }, avgPrice: { $avg: '$price' } } }",
+              "explanation": "Groups documents by key and computes accumulator metrics like sum, average, min, max",
+              "example": "{ $group: { _id: '$category', avgRating: { $avg: '$rating' } } }"
+            },
+            {
+              "commandOrSyntax": "{ $lookup: { from: 'users', localField: 'author', foreignField: '_id', as: 'authorData' } }",
+              "explanation": "Performs left outer join with target collection and outputs array in 'as' field",
+              "example": "{ $lookup: { from: 'authors', localField: 'authorId', foreignField: '_id', as: 'author' } }"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "cheat-nextjs-fullstack-framework",
+    "type": "cheatsheet",
+    "title": "Next.js 15 Full-Stack React Framework Cheatsheet",
+    "slug": "nextjs-fullstack-framework-cheatsheet",
+    "category": "Web Development",
+    "level": "Advanced",
+    "description": "The definitive master cheatsheet for Next.js 15 App Router: React Server Components (RSC), 'use client' boundaries, Server Actions ('use server'), Form handling with useActionState, Cache revalidation (revalidatePath, revalidateTag), API route.ts handlers, and Middleware route protection.",
+    "tier": "free",
+    "downloadUrl": "https://github.com/msk-institute/nextjs-complete-cheatsheet",
+    "topicsCovered": [
+      "App Router & File Conventions",
+      "Server Components vs Client Components",
+      "Server Actions & useActionState",
+      "Caching & revalidateTag",
+      "API Route Handlers (route.ts)",
+      "Edge Middleware (middleware.ts)"
+    ],
+    "readTime": "8 min lookup",
+    "pages": 6,
+    "featured": true,
+    "updatedAt": "2026-09-15",
+    "cheatsheetContent": {
+      "sections": [
+        {
+          "categoryTitle": "1. App Router File Conventions",
+          "items": [
+            {
+              "commandOrSyntax": "page.tsx / layout.tsx / template.tsx",
+              "explanation": "page = unique route UI; layout = persistent shared shell preserving state; template = remounts fresh on navigation",
+              "example": "app/courses/[slug]/page.tsx"
+            },
+            {
+              "commandOrSyntax": "loading.tsx / error.tsx / not-found.tsx",
+              "explanation": "Automatic React Suspense skeleton boundary, error boundary, and 404 handler",
+              "example": "export default function Loading() { return <Skeleton />; }"
+            },
+            {
+              "commandOrSyntax": "generateStaticParams()",
+              "explanation": "Prerenders dynamic route parameter slugs statically into HTML at build time",
+              "example": "export async function generateStaticParams() { return [{ slug: 'web' }]; }"
+            }
+          ]
+        },
+        {
+          "categoryTitle": "2. Server Actions & Form Mutations",
+          "items": [
+            {
+              "commandOrSyntax": "'use server'",
+              "explanation": "Marks file or function as a Server Action that executes exclusively on the backend",
+              "example": "async function createPost(formData: FormData) { 'use server'; ... }"
+            },
+            {
+              "commandOrSyntax": "const [state, formAction] = useActionState(action, initialState)",
+              "explanation": "React 19 hook for managing Server Action execution, pending status, and server validation errors",
+              "example": "const [state, formAction] = useActionState(signupAction, {});"
+            },
+            {
+              "commandOrSyntax": "revalidatePath('/courses') / revalidateTag('courses')",
+              "explanation": "Purges cached server HTML and data on demand, refreshing content on next visit",
+              "example": "revalidatePath('/courses'); revalidateTag('course-catalog');"
+            }
+          ]
+        },
+        {
+          "categoryTitle": "3. Edge Middleware & API Handlers",
+          "items": [
+            {
+              "commandOrSyntax": "export async function GET(request: NextRequest) { ... }",
+              "explanation": "Defines an HTTP GET API endpoint in route.ts returning NextResponse.json()",
+              "example": "return NextResponse.json({ status: 'ok', data });"
+            },
+            {
+              "commandOrSyntax": "export function middleware(request: NextRequest) { ... }",
+              "explanation": "Edge middleware intercepting incoming requests for redirects, headers, and authentication guards",
+              "example": "if (!token) return NextResponse.redirect(new URL('/login', request.url));"
+            },
+            {
+              "commandOrSyntax": "export const dynamic = 'force-dynamic' / 'force-static'",
+              "explanation": "Explicitly controls whether a route segment renders dynamically on every request or statically at build time",
+              "example": "export const dynamic = 'force-dynamic';"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "cheat-dsa-mastery-handbook",
+    "type": "cheatsheet",
+    "title": "Data Structures & Algorithms (DSA) Interview Patterns Cheatsheet",
+    "slug": "dsa-interview-patterns-cheatsheet",
+    "category": "Programming",
+    "level": "All Levels",
+    "description": "The ultimate quick-reference handbook for coding interviews and competitive programming: Big-O complexity charts, Two Pointers, Sliding Window, Fast/Slow cycle detection, Monotonic Stack, Binary Search templates, Tree traversals, Graph BFS/DFS, and 1D/2D Dynamic Programming tabulation formulas.",
+    "tier": "free",
+    "downloadUrl": "https://github.com/msk-institute/dsa-mastery-cheatsheet",
+    "topicsCovered": [
+      "Big-O Cheatsheet",
+      "Two Pointers & Sliding Window",
+      "Fast & Slow Pointers (Floyd's)",
+      "Monotonic Stacks & Deques",
+      "Binary Search Boundary Templates",
+      "Tree Traversals & Heap Formulas",
+      "Graph BFS, DFS & Dijkstra",
+      "Dynamic Programming Patterns"
+    ],
+    "readTime": "10 min lookup",
+    "pages": 8,
+    "featured": true,
+    "updatedAt": "2026-09-15",
+    "cheatsheetContent": {
+      "sections": [
+        {
+          "categoryTitle": "1. Big-O Complexity Quick Reference",
+          "items": [
+            {
+              "commandOrSyntax": "O(1) - Constant Time",
+              "explanation": "Hash map lookup, array index access, stack push/pop, queue enqueue/dequeue",
+              "example": "hashTable.get(key) // O(1) average"
+            },
+            {
+              "commandOrSyntax": "O(log n) - Logarithmic Time",
+              "explanation": "Binary search, balanced BST search, heap insert/extract-min, divide-and-conquer exponentiation",
+              "example": "binarySearch(arr, target) // O(log n)"
+            },
+            {
+              "commandOrSyntax": "O(n) - Linear Time",
+              "explanation": "Single-pass array traversal, two-pointer scan, sliding window, tree DFS/BFS traversal",
+              "example": "for (let i = 0; i < n; i++) { ... } // O(n)"
+            },
+            {
+              "commandOrSyntax": "O(n log n) - Linearithmic Time",
+              "explanation": "Optimal comparison sorting algorithms: Merge Sort, Quick Sort (avg), Heap Sort",
+              "example": "arr.sort((a, b) => a - b) // O(n log n)"
+            },
+            {
+              "commandOrSyntax": "O(n²) - Quadratic Time",
+              "explanation": "Nested loops, bubble sort, selection sort, checking all pairs in an array",
+              "example": "for (let i = 0; i < n; i++) for (let j = 0; j < n; j++) { ... }"
+            }
+          ]
+        },
+        {
+          "categoryTitle": "2. Two Pointers & Sliding Window Patterns",
+          "items": [
+            {
+              "commandOrSyntax": "Opposite-Direction Two Pointers",
+              "explanation": "One pointer at 0, one at n - 1; converge inwards while left < right (Two Sum sorted, Palindromes)",
+              "example": "while (left < right) { if (nums[left] + nums[right] === target) return ...; }"
+            },
+            {
+              "commandOrSyntax": "Fast & Slow Pointers (Floyd's Cycle)",
+              "explanation": "Slow moves 1 step, fast moves 2 steps; if they meet, a cycle exists (detect loop in Linked List)",
+              "example": "while (fast && fast.next) { slow = slow.next; fast = fast.next.next; if (slow === fast) return true; }"
+            },
+            {
+              "commandOrSyntax": "Dynamic Sliding Window (At Most K)",
+              "explanation": "Expand right pointer to include elements; while window is invalid, shrink left pointer",
+              "example": "for (let r = 0; r < n; r++) { add(nums[r]); while (!valid()) remove(nums[l++]); maxLen = Math.max(maxLen, r - l + 1); }"
+            }
+          ]
+        },
+        {
+          "categoryTitle": "3. Binary Search & Tree / Graph Templates",
+          "items": [
+            {
+              "commandOrSyntax": "Binary Search (Preventing Overflow)",
+              "explanation": "Calculate mid as low + Math.floor((high - low) / 2) to avoid 32-bit integer overflow",
+              "example": "let mid = low + Math.floor((high - low) / 2);"
+            },
+            {
+              "commandOrSyntax": "Heap Array Indices (0-indexed)",
+              "explanation": "Left Child = 2*i + 1, Right Child = 2*i + 2, Parent = Math.floor((i - 1) / 2)",
+              "example": "const parent = (i - 1) >> 1;"
+            },
+            {
+              "commandOrSyntax": "BFS with Queue (Shortest Path)",
+              "explanation": "Queue initialized with source node; pop node, inspect neighbors, mark visited, push unvisited",
+              "example": "const queue = [start]; visited.add(start); while (queue.length) { const u = queue.shift(); ... }"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "cheat-power-bi-dax-modeling",
+    "type": "cheatsheet",
+    "title": "Power BI DAX & Star Schema Data Modeling Master Cheatsheet",
+    "description": "Comprehensive corporate quick reference for Power BI developers: Evaluation context (Row vs Filter context), CALCULATE modifier patterns, Time Intelligence functions, Iterators (SUMX), and Star Schema relationship best practices.",
+    "badge": "Power BI & DAX",
+    "category": "Data Analytics",
+    "tier": "free",
+    "downloadUrl": "https://github.com/msk-institute/power-bi-dax-cheatsheet",
+    "topicsCovered": [
+      "CALCULATE & Filter Context",
+      "Time Intelligence (YTD, Prior Year)",
+      "Iterators (SUMX, AVERAGEX, RANKX)",
+      "Star Schema & Relationships",
+      "Row-Level Security (RLS)",
+      "Conditional Logic (SWITCH TRUE)"
+    ],
+    "cheatsheetContent": {
+      "sections": [
+        {
+          "categoryTitle": "1. Essential Aggregations & Safe Division",
+          "items": [
+            {
+              "commandOrSyntax": "DIVIDE(Numerator, Denominator, [AlternateResult])",
+              "explanation": "Safely divides numbers handling division by zero gracefully without throwing errors (returns BLANK or alternate result)",
+              "example": "Profit Margin = DIVIDE([Total Profit], [Total Sales], 0)"
+            },
+            {
+              "commandOrSyntax": "DISTINCTCOUNT(ColumnName)",
+              "explanation": "Counts unique non-duplicate values in a column; ignores blank cells unless specified",
+              "example": "Unique Customers = DISTINCTCOUNT(Orders[CustomerID])"
+            },
+            {
+              "commandOrSyntax": "COUNTROWS(TableName)",
+              "explanation": "Optimized DAX engine function to count total rows in a table or filtered table expression",
+              "example": "Total Orders = COUNTROWS(Orders)"
+            }
+          ]
+        },
+        {
+          "categoryTitle": "2. CALCULATE & Evaluation Context Modifiers",
+          "items": [
+            {
+              "commandOrSyntax": "CALCULATE(Expression, [Filter1], [Filter2]...)",
+              "explanation": "The most powerful DAX function. Evaluates an expression inside a modified filter context; triggers context transition",
+              "example": "Tech Sales = CALCULATE([Total Sales], Products[Category] = \"Technology\")"
+            },
+            {
+              "commandOrSyntax": "ALL(TableOrColumn)",
+              "explanation": "Removes all filters from the specified table or column, returning all rows for percentage calculations",
+              "example": "Sales % of Total = DIVIDE([Total Sales], CALCULATE([Total Sales], ALL(Products)))"
+            },
+            {
+              "commandOrSyntax": "ALLEXCEPT(Table, Column1, [Column2])",
+              "explanation": "Clears all filters from a table EXCEPT those applied to specified columns",
+              "example": "Category Total = CALCULATE([Total Sales], ALLEXCEPT(Products, Products[Category]))"
+            },
+            {
+              "commandOrSyntax": "KEEPFILTERS(FilterExpression)",
+              "explanation": "Applies new filters without overwriting or overriding existing outer report slicers/filters",
+              "example": "North Only = CALCULATE([Total Sales], KEEPFILTERS(Regions[Region] = \"North\"))"
+            }
+          ]
+        },
+        {
+          "categoryTitle": "3. Row Context Iterators (The 'X' Functions)",
+          "items": [
+            {
+              "commandOrSyntax": "SUMX(Table, RowExpression)",
+              "explanation": "Iterates row-by-row through a table, calculates the expression for each row, and sums the results",
+              "example": "Total Revenue = SUMX(OrderItems, OrderItems[Qty] * OrderItems[UnitPrice] * (1 - OrderItems[Discount]))"
+            },
+            {
+              "commandOrSyntax": "RANKX(Table, Expression, [Value], [Order], [Ties])",
+              "explanation": "Ranks items in a table based on a DAX expression; supports DESC/ASC and Dense/Skip tie breaking",
+              "example": "Product Rank = RANKX(ALL(Products[ProductName]), [Total Sales], , DESC, Dense)"
+            },
+            {
+              "commandOrSyntax": "AVERAGEX(Table, Expression)",
+              "explanation": "Calculates row-by-row expression and returns arithmetic mean of non-blank results",
+              "example": "Avg Order Value = AVERAGEX(VALUES(Orders[OrderID]), [Total Sales])"
+            }
+          ]
+        },
+        {
+          "categoryTitle": "4. Time Intelligence & Period Comparisons",
+          "items": [
+            {
+              "commandOrSyntax": "TOTALYTD(Expression, DateColumn, [Filter], [YearEndDate])",
+              "explanation": "Calculates year-to-date cumulative total from January 1st to the current date in context",
+              "example": "YTD Sales = TOTALYTD([Total Sales], DimDate[Date])"
+            },
+            {
+              "commandOrSyntax": "SAMEPERIODLASTYEAR(DateColumn)",
+              "explanation": "Shifts dates in context exactly one year backward for YoY variance and growth analysis",
+              "example": "Sales SPLY = CALCULATE([Total Sales], SAMEPERIODLASTYEAR(DimDate[Date]))"
+            },
+            {
+              "commandOrSyntax": "DATEADD(DateColumn, NumberOfIntervals, Interval)",
+              "explanation": "Shifts dates by Day, Month, Quarter, or Year for custom period comparisons",
+              "example": "Prior Month Sales = CALCULATE([Total Sales], DATEADD(DimDate[Date], -1, MONTH))"
+            },
+            {
+              "commandOrSyntax": "DATESINPERIOD(DateColumn, StartDate, NumberOfIntervals, Interval)",
+              "explanation": "Returns a sliding window date range; perfect for rolling averages (e.g., 30-day or 90-day moving sales)",
+              "example": "Rolling 90D Sales = CALCULATE([Total Sales], DATESINPERIOD(DimDate[Date], MAX(DimDate[Date]), -90, DAY))"
+            }
+          ]
+        },
+        {
+          "categoryTitle": "5. Logical, Conditional & Selected Values",
+          "items": [
+            {
+              "commandOrSyntax": "SWITCH(TRUE(), Condition1, Result1, Condition2, Result2, [Else])",
+              "explanation": "Clean alternative to deeply nested IF statements; evaluates conditions sequentially",
+              "example": "Sales Tier = SWITCH(TRUE(), [Total Sales] > 100000, \"Platinum\", [Total Sales] > 50000, \"Gold\", \"Silver\")"
+            },
+            {
+              "commandOrSyntax": "SELECTEDVALUE(ColumnName, [AlternateResult])",
+              "explanation": "Returns the value when only one distinct value is selected in a slicer; otherwise returns default",
+              "example": "Target Region = SELECTEDVALUE(Regions[Region], \"All Regions\")"
+            },
+            {
+              "commandOrSyntax": "USERELATIONSHIP(Column1, Column2)",
+              "explanation": "Activates an inactive relationship inside a CALCULATE statement without changing the physical model",
+              "example": "Sales by Ship Date = CALCULATE([Total Sales], USERELATIONSHIP(Orders[ShipDate], DimDate[Date]))"
+            }
+          ]
+        },
+        {
+          "categoryTitle": "6. Star Schema & Data Modeling Golden Rules",
+          "items": [
+            {
+              "commandOrSyntax": "1-to-Many Single Direction",
+              "explanation": "Always model relationships from 1-side (Dimension: Customers/Products) to Many-side (Fact: Orders/Sales) with Single cross-filter direction",
+              "example": "Dim_Customers[CustomerID] (1) ---> Fact_Sales[CustomerID] (*)"
+            },
+            {
+              "commandOrSyntax": "Avoid Bi-Directional Cross-Filtering",
+              "explanation": "Bi-directional filters cause ambiguity, performance degradation, and unexpected measure propagation in large enterprise models",
+              "example": "Keep Cross-filter direction = Single; use CROSSFILTER() in DAX only when strictly required"
+            },
+            {
+              "commandOrSyntax": "Dynamic Row-Level Security (RLS)",
+              "explanation": "Restrict data access using Entra ID / Microsoft 365 login email with USERPRINCIPALNAME()",
+              "example": "[SalesManagerEmail] = USERPRINCIPALNAME()"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "cheat-react-modern-architecture",
+    "type": "cheatsheet",
+    "title": "Modern React & Component Architecture Master Cheatsheet",
+    "slug": "react-modern-architecture-cheatsheet",
+    "category": "Web Development",
+    "level": "Intermediate to Advanced",
+    "badge": "React & Architecture",
+    "description": "The definitive modern React engineering cheatsheet: component lifecycle, essential hooks (useState, useEffect), memoization (useMemo, useCallback), mutable refs, useReducer patterns, Context API, custom hooks patterns, and production performance tuning.",
+    "tier": "free",
+    "downloadUrl": "/downloads/study-material/react-modern-architecture-cheatsheet.pdf",
+    "topicsCovered": [
+      "JSX & Props",
+      "useState & State Patterns",
+      "useEffect & Lifecycle",
+      "useMemo & useCallback",
+      "useReducer & Context",
+      "Custom Hooks & Performance"
+    ],
+    "readTime": "6 min lookup",
+    "pages": 6,
+    "featured": true,
+    "updatedAt": "2026-09-15",
+    "cheatsheetContent": {
+      "sections": [
+        {
+          "categoryTitle": "1. Components, JSX & Props Patterns",
+          "items": [
+            {
+              "commandOrSyntax": "export default function Component({ propA, propB = defaultValue }: Props)",
+              "explanation": "Modern functional component with destructured typed props and default fallbacks",
+              "example": "function UserCard({ name, role = 'Member', avatar }: UserProps) { return <div className=\"card\"><img src={avatar} /><h3>{name}</h3><span>{role}</span></div>; }"
+            },
+            {
+              "commandOrSyntax": "Conditional Rendering: {condition && <Element />} | {cond ? <A /> : <B />}",
+              "explanation": "Inline logical AND guard and ternary operator for dynamic UI rendering based on truthy state",
+              "example": "{isLoading ? <Spinner /> : <ProductList items={products} />}"
+            },
+            {
+              "commandOrSyntax": "List Rendering with Stable Key: items.map((item) => <Item key={item.id} {...item} />)",
+              "explanation": "Always provide unique, stable IDs as keys—never array indices when lists can be reordered or filtered",
+              "example": "{todos.map(todo => <TodoItem key={todo.id} text={todo.title} done={todo.completed} />)}"
+            }
+          ]
+        },
+        {
+          "categoryTitle": "2. Core Hooks: useState & useEffect",
+          "items": [
+            {
+              "commandOrSyntax": "const [state, setState] = useState<T>(initialValueOrLazyFn)",
+              "explanation": "Declares reactive state variable. Use updater function setState(prev => prev + 1) for concurrent/atomic updates",
+              "example": "const [count, setCount] = useState<number>(0); setCount(prev => prev + 1);"
+            },
+            {
+              "commandOrSyntax": "useEffect(() => { /* subscription / fetch */ return () => /* cleanup */; }, [deps])",
+              "explanation": "Synchronizes component with external systems (APIs, DOM listeners, timers). Always clean up subscriptions in return callback",
+              "example": "useEffect(() => { const timer = setInterval(tick, 1000); return () => clearInterval(timer); }, []);"
+            },
+            {
+              "commandOrSyntax": "useRef<T>(initialValue)",
+              "explanation": "Holds a mutable value across renders without triggering a re-render. Commonly used for direct DOM access or interval IDs",
+              "example": "const inputRef = useRef<HTMLInputElement>(null); inputRef.current?.focus();"
+            }
+          ]
+        },
+        {
+          "categoryTitle": "3. Performance & Memoization: useMemo & useCallback",
+          "items": [
+            {
+              "commandOrSyntax": "const memoizedValue = useMemo(() => computeHeavyData(a, b), [a, b])",
+              "explanation": "Caches the result of an expensive calculation between renders unless dependencies change",
+              "example": "const filteredUsers = useMemo(() => users.filter(u => u.role === selectedRole), [users, selectedRole]);"
+            },
+            {
+              "commandOrSyntax": "const memoizedCallback = useCallback((arg) => { doSomething(arg); }, [deps])",
+              "explanation": "Preserves referential equality of a function instance to prevent unnecessary re-renders in memoized child components",
+              "example": "const handleDelete = useCallback((id: string) => { setList(prev => prev.filter(x => x.id !== id)); }, []);"
+            },
+            {
+              "commandOrSyntax": "React.memo(Component, [arePropsEqual])",
+              "explanation": "Higher-order component that skips re-rendering if props have not changed shallowly",
+              "example": "export const ProductRow = React.memo(function ProductRow({ item }: Props) { return <div>{item.title}</div>; });"
+            }
+          ]
+        },
+        {
+          "categoryTitle": "4. Complex State & Global State: useReducer & Context API",
+          "items": [
+            {
+              "commandOrSyntax": "const [state, dispatch] = useReducer(reducer, initialState)",
+              "explanation": "Manages complex state logic with explicit action types ({ type, payload }) following unidirectional Redux pattern",
+              "example": "function reducer(state, action) { switch(action.type) { case 'ADD': return {...state, items: [...state.items, action.payload]}; default: return state; } }"
+            },
+            {
+              "commandOrSyntax": "const ThemeContext = createContext<ThemeContextType | null>(null)",
+              "explanation": "Creates Context for prop-drilling prevention. Pair with ThemeContext.Provider and custom useContext consumer hook",
+              "example": "export function useTheme() { const ctx = useContext(ThemeContext); if(!ctx) throw new Error('Outside Provider'); return ctx; }"
+            }
+          ]
+        },
+        {
+          "categoryTitle": "5. Custom Hooks Architecture",
+          "items": [
+            {
+              "commandOrSyntax": "function useLocalStorage<T>(key: string, initialValue: T)",
+              "explanation": "Extracts reusable, testable stateful logic into pure JavaScript functions prefixed with 'use'",
+              "example": "function useFetch<T>(url: string) { const [data, setData] = useState<T|null>(null); useEffect(() => { fetch(url).then(r => r.json()).then(setData); }, [url]); return { data }; }"
+            },
+            {
+              "commandOrSyntax": "useWindowSize() / useDebounce(value, delay)",
+              "explanation": "Essential utility custom hooks for responsive UI listeners and search input rate limiting",
+              "example": "const debouncedQuery = useDebounce(searchQuery, 400); useEffect(() => { searchApi(debouncedQuery); }, [debouncedQuery]);"
+            }
+          ]
+        },
+        {
+          "categoryTitle": "6. React 19 & Architecture Golden Rules",
+          "items": [
+            {
+              "commandOrSyntax": "Single Source of Truth & Lifting State Up",
+              "explanation": "Keep state at the lowest common ancestor that needs it. Avoid duplicating derived state that can be computed on the fly",
+              "example": "Do not store 'fullName' in state if 'firstName' and 'lastName' are already in state; compute: const fullName = `${firstName} ${lastName}`"
+            },
+            {
+              "commandOrSyntax": "Server Components vs Client Components ('use client')",
+              "explanation": "In Next.js / modern React, components are Server Components by default (zero JS bundle). Add 'use client' only for hooks/events",
+              "example": "'use client';\nimport { useState } from 'react';\nexport function InteractiveButton() { ... }"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "cheat-django-drf-architecture",
+    "type": "cheatsheet",
+    "title": "Django & Django REST Framework (DRF) API Architecture Cheatsheet",
+    "slug": "django-drf-api-architecture-cheatsheet",
+    "category": "Backend Engineering",
+    "level": "Intermediate to Advanced",
+    "badge": "Django & REST APIs",
+    "description": "Production reference for Django & Django REST Framework: Models, ORM QuerySets (select_related, prefetch_related), ModelSerializers, GenericAPIViews, ModelViewSets, SimpleJWT authentication, Custom Permissions, and Filtering.",
+    "tier": "free",
+    "downloadUrl": "/downloads/study-material/django-drf-api-architecture-cheatsheet.pdf",
+    "topicsCovered": [
+      "Project & Apps Setup",
+      "ORM Models & Migrations",
+      "DRF Serializers & Validation",
+      "ViewSets & DefaultRouter",
+      "JWT Auth & Permissions",
+      "ORM Performance Tuning"
+    ],
+    "readTime": "6 min lookup",
+    "pages": 6,
+    "featured": true,
+    "updatedAt": "2026-09-15",
+    "cheatsheetContent": {
+      "sections": [
+        {
+          "categoryTitle": "1. Django CLI, Apps & Project Configuration",
+          "items": [
+            {
+              "commandOrSyntax": "django-admin startproject config . && python manage.py startapp api",
+              "explanation": "Initializes project in current directory and scaffolds modular app",
+              "example": "python manage.py makemigrations && python manage.py migrate"
+            },
+            {
+              "commandOrSyntax": "settings.py: INSTALLED_APPS = ['rest_framework', 'corsheaders', 'api.apps.ApiConfig']",
+              "explanation": "Registers Django apps and DRF packages into core runtime",
+              "example": "REST_FRAMEWORK = { 'DEFAULT_AUTHENTICATION_CLASSES': ['rest_framework_simplejwt.authentication.JWTAuthentication'] }"
+            }
+          ]
+        },
+        {
+          "categoryTitle": "2. Models, Relationships & ORM Queries",
+          "items": [
+            {
+              "commandOrSyntax": "models.ForeignKey(ParentModel, on_delete=models.CASCADE, related_name='items')",
+              "explanation": "Establishes 1-to-Many relational link with reverse query accessor alias",
+              "example": "class Order(models.Model): customer = models.ForeignKey(User, on_delete=models.CASCADE, related_name='orders')"
+            },
+            {
+              "commandOrSyntax": "select_related() vs prefetch_related()",
+              "explanation": "Eliminates N+1 query disasters. select_related() performs SQL JOIN for 1-to-1 / 1-to-Many; prefetch_related() performs separate batch IN query for Many-to-Many",
+              "example": "orders = Order.objects.select_related('customer').prefetch_related('items__product').all()"
+            }
+          ]
+        },
+        {
+          "categoryTitle": "3. DRF Serializers & Data Validation",
+          "items": [
+            {
+              "commandOrSyntax": "class ModelSerializer(serializers.ModelSerializer): class Meta: model = M; fields = '__all__'",
+              "explanation": "Translates complex QuerySets and Model instances into native Python datatypes and JSON payloads",
+              "example": "class UserSerializer(serializers.ModelSerializer): class Meta: model = User; fields = ['id', 'username', 'email']"
+            },
+            {
+              "commandOrSyntax": "def validate_<field>(self, value): | def validate(self, data):",
+              "explanation": "Field-level and object-level validators. Raise serializers.ValidationError for bad input payloads",
+              "example": "def validate_price(self, value): if value <= 0: raise serializers.ValidationError('Price must be positive'); return value"
+            }
+          ]
+        },
+        {
+          "categoryTitle": "4. Class-Based Views & ModelViewSets",
+          "items": [
+            {
+              "commandOrSyntax": "class ProductViewSet(viewsets.ModelViewSet): queryset = Product.objects.all(); serializer_class = ProductSerializer",
+              "explanation": "Provides automatic CRUD (list, create, retrieve, update, destroy) handlers in a single declarative class",
+              "example": "router = DefaultRouter(); router.register(r'products', ProductViewSet); urlpatterns = router.urls"
+            },
+            {
+              "commandOrSyntax": "@action(detail=True, methods=['post']) def custom_action(self, request, pk=None):",
+              "explanation": "Adds custom sub-endpoints to a ViewSet (e.g. /api/orders/5/mark_shipped/)",
+              "example": "@action(detail=True, methods=['post']) def approve(self, request, pk=None): order = self.get_object(); order.status='APPROVED'; order.save(); return Response({'status': 'approved'})"
+            }
+          ]
+        },
+        {
+          "categoryTitle": "5. Authentication, JWT & Permissions",
+          "items": [
+            {
+              "commandOrSyntax": "permission_classes = [IsAuthenticated | IsAdminUser | CustomPermission]",
+              "explanation": "Guards endpoints against unauthorized HTTP operations",
+              "example": "class IsOwnerOrReadOnly(permissions.BasePermission): def has_object_permission(self, req, view, obj): return req.method in permissions.SAFE_METHODS or obj.owner == req.user"
+            },
+            {
+              "commandOrSyntax": "SimpleJWT: TokenObtainPairView & TokenRefreshView",
+              "explanation": "Stateless authentication returning short-lived Access Token and long-lived Refresh Token",
+              "example": "urlpatterns = [path('api/token/', TokenObtainPairView.as_view()), path('api/token/refresh/', TokenRefreshView.as_view())]"
+            }
+          ]
+        },
+        {
+          "categoryTitle": "6. Production API Best Practices",
+          "items": [
+            {
+              "commandOrSyntax": "PageNumberPagination / LimitOffsetPagination",
+              "explanation": "Always paginate list endpoints to protect memory and network bandwidth from large datasets",
+              "example": "REST_FRAMEWORK = { 'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination', 'PAGE_SIZE': 20 }"
+            },
+            {
+              "commandOrSyntax": "django-filter & SearchFilter",
+              "explanation": "Declarative query filtering via URL query params (?search=laptop&category=electronics)",
+              "example": "filter_backends = [DjangoFilterBackend, filters.SearchFilter]; search_fields = ['name', 'description']"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "id": "cheat-flask-architecture",
+    "type": "cheatsheet",
+    "title": "Flask Web Architecture & REST API Cheatsheet",
+    "slug": "flask-complete-course",
+    "category": "Backend Development",
+    "level": "Intermediate",
+    "badge": "Cheat Sheet",
+    "description": "Essential quick-reference guide covering WSGI request lifecycles, routing converters, Jinja2 syntax, Flask-WTF, SQLAlchemy ORM models, Blueprints, and JWT auth.",
+    "tier": "FREE",
+    "downloadUrl": "#",
+    "topicsCovered": [
+      "Flask 3.x WSGI Architecture & App Factory",
+      "Routing & URL Type Converters",
+      "Request & Response Objects, Cookies",
+      "Jinja2 Syntax, Filters & Macros",
+      "Flask-WTF Forms & CSRF Defense",
+      "Flask-SQLAlchemy Models, Relations & Migrations",
+      "Flask-Login & Werkzeug Password Hashing",
+      "REST APIs with Marshmallow & Flask-JWT-Extended"
+    ],
+    "readTime": "20 min",
+    "pages": 6,
+    "featured": true,
+    "updatedAt": "2026-09-18",
+    "icon": "flask",
+    "author": "MSK Faculty Team",
+    "cheatsheetContent": {
+      "sections": [
+        {
+          "categoryTitle": "1. Flask Setup, CLI & Application Factory",
+          "items": [
+            {
+              "commandOrSyntax": "from flask import Flask\napp = Flask(__name__)\n\n@app.route('/')\ndef index():\n    return 'Hello, Flask 3.x!'",
+              "explanation": "Minimal single-file Flask WSGI application instance. __name__ helps locate resources.",
+              "example": "if __name__ == '__main__': app.run(debug=True, port=5000)"
+            },
+            {
+              "commandOrSyntax": "def create_app(config_name='default'):\n    app = Flask(__name__)\n    app.config.from_object(config[config_name])\n    db.init_app(app)\n    app.register_blueprint(main_bp)\n    return app",
+              "explanation": "Application Factory Pattern. Prevents circular imports and allows isolated test environments.",
+              "example": "app = create_app('production')"
+            },
+            {
+              "commandOrSyntax": "export FLASK_APP=wsgi.py\nexport FLASK_DEBUG=1\nflask run --port=5000",
+              "explanation": "Flask CLI commands with environment variables loaded automatically via python-dotenv.",
+              "example": ".flaskenv: FLASK_APP=wsgi.py, FLASK_DEBUG=1"
+            }
+          ]
+        },
+        {
+          "categoryTitle": "2. Routing, Dynamic Converters & HTTP Methods",
+          "items": [
+            {
+              "commandOrSyntax": "@app.route('/user/<int:user_id>/<string:slug>')\ndef user_profile(user_id, slug):\n    return f'User #{user_id}: {slug}'",
+              "explanation": "Dynamic URL routing with built-in type converters (string, int, float, path, uuid).",
+              "example": "Converters: <int:id>, <uuid:order_id>, <path:filepath>"
+            },
+            {
+              "commandOrSyntax": "@app.route('/api/items', methods=['GET', 'POST'])\ndef items():\n    if request.method == 'POST':\n        return create_item()\n    return get_items()",
+              "explanation": "Restricting endpoints to explicit HTTP verbs. Unsupported methods return HTTP 405.",
+              "example": "methods=['GET', 'POST', 'PUT', 'DELETE', 'PATCH']"
+            },
+            {
+              "commandOrSyntax": "from flask import url_for, redirect, abort\nreturn redirect(url_for('auth.login', next='/dashboard'))",
+              "explanation": "Dynamic reverse routing with url_for(). Halts execution immediately with abort(403).",
+              "example": "abort(404, description='Resource not found')"
+            }
+          ]
+        },
+        {
+          "categoryTitle": "3. Request Data Parsing & Response Generation",
+          "items": [
+            {
+              "commandOrSyntax": "q = request.args.get('search', '', type=str)\nform_val = request.form.get('email')\njson_data = request.get_json(silent=True)\nskills = request.form.getlist('skills')",
+              "explanation": "Extracting query parameters (?q=), form submissions, JSON payloads, and multi-value checkboxes.",
+              "example": "request.headers.get('Authorization'), request.files['avatar']"
+            },
+            {
+              "commandOrSyntax": "from flask import make_response, jsonify\nres = make_response(jsonify({'status': 'ok'}), 201)\nres.headers['X-Engine'] = 'Flask'\nreturn res",
+              "explanation": "Explicit response construction with custom headers, status codes, and JSON serialization.",
+              "example": "Shortcut tuple: return {'id': 1}, 201, {'Header': 'Val'}"
+            },
+            {
+              "commandOrSyntax": "res.set_cookie('session_id', token, max_age=86400, httponly=True, secure=True, samesite='Lax')",
+              "explanation": "Setting hardened HTTP cookies with XSS and CSRF defense attributes. Delete with res.delete_cookie(key).",
+              "example": "request.cookies.get('session_id')"
+            }
+          ]
+        },
+        {
+          "categoryTitle": "4. Jinja2 Templating, Filters & Macros",
+          "items": [
+            {
+              "commandOrSyntax": "{{ user.name|title }}\n{{ items|length }}\n{{ raw_html|safe }}\n{{ price|default(0, true) }}",
+              "explanation": "Jinja2 variable interpolation and pipe filters. Register custom filter with @app.template_filter().",
+              "example": "@app.template_filter('inr')\\ndef inr(val): return f'₹{val:,.2f}'"
+            },
+            {
+              "commandOrSyntax": "{% extends 'base.html' %}\n{% block title %}{{ super() }} | Courses{% endblock %}\n{% block content %}\n    {% for item in items %}\n        <p>{{ loop.index }}: {{ item }}</p>\n    {% else %}\n        <p>No items found.</p>\n    {% endfor %}\n{% endblock %}",
+              "explanation": "Template layout inheritance with {% extends %}, block overrides, and loops with loop.index/loop.first.",
+              "example": "Preserve parent content using {{ super() }}"
+            },
+            {
+              "commandOrSyntax": "{% macro render_field(field) %}\n    <label>{{ field.label }}</label>\n    {{ field(class='input') }}\n    {% for err in field.errors %}<p>{{ err }}</p>{% endfor %}\n{% endmacro %}",
+              "explanation": "Reusable UI macros. Import via {% from 'macros/form.html' import render_field %}.",
+              "example": "{{ render_field(form.username) }}"
+            }
+          ]
+        },
+        {
+          "categoryTitle": "5. Flask-WTF Forms & CSRF Defense",
+          "items": [
+            {
+              "commandOrSyntax": "from flask_wtf import FlaskForm\nfrom wtforms import StringField, PasswordField, SubmitField\nfrom wtforms.validators import DataRequired, Email, Length, EqualTo\n\nclass RegisterForm(FlaskForm):\n    email = StringField('Email', validators=[DataRequired(), Email()])\n    password = PasswordField('Password', validators=[Length(min=8)])\n    submit = SubmitField('Sign Up')",
+              "explanation": "Declarative form classes with built-in validation rules and automatic type casting.",
+              "example": "Custom validator: def validate_email(self, field): ..."
+            },
+            {
+              "commandOrSyntax": "form = RegisterForm()\nif form.validate_on_submit():\n    user_email = form.email.data\n    flash('Account created!', 'success')\n    return redirect(url_for('home'))",
+              "explanation": "Form processing in route. Checks POST method, validates CSRF token, and verifies all field constraints.",
+              "example": "In template: {{ form.hidden_tag() }} to render CSRF input"
+            },
+            {
+              "commandOrSyntax": "flash('Profile updated successfully!', 'success')\n# In template:\n{% with msgs = get_flashed_messages(with_categories=true) %}\n    {% for cat, msg in msgs %}<div class='alert {{ cat }}'>{{ msg }}</div>{% endfor %}\n{% endwith %}",
+              "explanation": "Post/Redirect/Get flash messaging. Persists messages in session cookie and purges upon retrieval.",
+              "example": "get_flashed_messages(category_filter=['danger'])"
+            }
+          ]
+        },
+        {
+          "categoryTitle": "6. Flask-SQLAlchemy Models, Relations & Migrations",
+          "items": [
+            {
+              "commandOrSyntax": "class User(db.Model):\n    id = db.Column(db.Integer, primary_key=True)\n    username = db.Column(db.String(80), unique=True, nullable=False, index=True)\n    posts = db.relationship('Post', back_populates='author', cascade='all, delete-orphan')",
+              "explanation": "SQLAlchemy 3.x declarative model definition with primary keys, indexes, and One-to-Many relationships.",
+              "example": "Foreign Key: author_id = db.Column(db.Integer, db.ForeignKey('user.id'))"
+            },
+            {
+              "commandOrSyntax": "user = User(username='sumit')\ndb.session.add(user)\ndb.session.commit() # Flush & commit to database\n\n# Queries\nactive = User.query.filter_by(is_active=True).all()\nuser = User.query.get_or_404(1)\npages = User.query.order_by(User.id.desc()).paginate(page=1, per_page=10)",
+              "explanation": "CRUD database operations via db.session and model queries with automatic 404 aborts and pagination.",
+              "example": "Rollback on error: except Exception: db.session.rollback()"
+            },
+            {
+              "commandOrSyntax": "flask db init     # Initialize migrations folder once\nflask db migrate -m 'add bio column' # Auto-detect schema changes\nflask db upgrade  # Apply migrations to database",
+              "explanation": "Alembic database migrations via Flask-Migrate. Rollback with flask db downgrade.",
+              "example": "flask db --help"
+            }
+          ]
+        },
+        {
+          "categoryTitle": "7. Authentication (Flask-Login & Werkzeug)",
+          "items": [
+            {
+              "commandOrSyntax": "from werkzeug.security import generate_password_hash, check_password_hash\n\nhash_str = generate_password_hash('PlaintextPassword', method='pbkdf2:sha256')\nis_valid = check_password_hash(hash_str, candidate_password)",
+              "explanation": "Cryptographic salted password hashing using PBKDF2/SHA256 with constant-time verification.",
+              "example": "Store hash_str in DB (length >= 256). Never store plaintext!"
+            },
+            {
+              "commandOrSyntax": "from flask_login import UserMixin, login_user, logout_user, login_required, current_user\n\nclass User(UserMixin, db.Model): ...\n\n@login_manager.user_loader\ndef load_user(user_id):\n    return User.query.get(int(user_id))\n\n@app.route('/dashboard')\n@login_required\ndef dashboard():\n    return f'Welcome, {current_user.username}'",
+              "explanation": "User session management with Flask-Login. UserMixin provides authentication properties.",
+              "example": "login_user(user, remember=True)"
+            }
+          ]
+        },
+        {
+          "categoryTitle": "8. REST APIs, JWT & Production Deployment",
+          "items": [
+            {
+              "commandOrSyntax": "from marshmallow import Schema, fields\n\nclass UserSchema(Schema):\n    id = fields.Int(dump_only=True)\n    username = fields.Str(required=True)\n    email = fields.Email(required=True)\n\nuser_schema = UserSchema()\nusers_schema = UserSchema(many=True)",
+              "explanation": "Data serialization and input validation using Marshmallow schemas.",
+              "example": "json_dict = user_schema.dump(user); data = user_schema.load(request.json)"
+            },
+            {
+              "commandOrSyntax": "from flask_jwt_extended import create_access_token, jwt_required, get_jwt_identity\n\ntoken = create_access_token(identity=str(user.id))\n\n@app.route('/api/profile')\n@jwt_required()\ndef profile():\n    uid = get_jwt_identity()\n    return {'user_id': uid}",
+              "explanation": "Stateless JWT authentication for mobile and Single Page Apps via Authorization: Bearer <token>.",
+              "example": "Refresh token: @jwt_required(refresh=True)"
+            },
+            {
+              "commandOrSyntax": "gunicorn --workers 4 --bind 0.0.0.0:8000 'wsgi:app'\n# Formula: workers = (2 * CPU_CORES) + 1",
+              "explanation": "Production WSGI server execution. Never run app.run() in production.",
+              "example": "Docker CMD: ['gunicorn', '-w', '4', '-b', '0.0.0.0:8000', 'wsgi:app']"
+            }
+          ]
+        }
+      ]
+    }
+  }
+]

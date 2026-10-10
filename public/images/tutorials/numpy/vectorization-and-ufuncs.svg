@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="900" height="500" fill="url(#bgGrad)" rx="16"/>
+
+  <text x="450" y="40" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="22" font-weight="700" text-anchor="middle">Vectorization &amp; SIMD Performance Acceleration</text>
+  <text x="450" y="65" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="14" text-anchor="middle">Why NumPy Executes 100x Faster Than Traditional Python For-Loops</text>
+
+  <!-- Left: Python Loop (Serialized) -->
+  <g transform="translate(40, 95)">
+    <rect width="390" height="375" rx="10" fill="#1e293b" stroke="#f59e0b" stroke-width="1.5"/>
+    <rect width="390" height="35" rx="10" fill="#d97706"/>
+    <text x="195" y="23" fill="#fff" font-family="system-ui, sans-serif" font-size="14" font-weight="700" text-anchor="middle">Serialized Python Loop (Iterative Interpreter)</text>
+
+    <!-- Cycle illustration -->
+    <g transform="translate(25, 55)">
+      <rect x="0" y="0" width="340" height="110" fill="#0f172a" rx="6"/>
+      <text x="15" y="25" fill="#fbbf24" font-family="monospace" font-size="12">res = []</text>
+      <text x="15" y="45" fill="#fbbf24" font-family="monospace" font-size="12">for x in py_list:       # 1,000,000 iterations</text>
+      <text x="35" y="65" fill="#cbd5e1" font-family="monospace" font-size="11"># 1. Inspect PyObject type (overhead)</text>
+      <text x="35" y="80" fill="#cbd5e1" font-family="monospace" font-size="11"># 2. Unbox value from memory</text>
+      <text x="35" y="95" fill="#f8fafc" font-family="monospace" font-size="12">    res.append(x * 2)  # Box new object</text>
+    </g>
+
+    <!-- Execution Timeline -->
+    <g transform="translate(25, 185)">
+      <text x="0" y="15" fill="#f43f5e" font-family="system-ui, sans-serif" font-size="12" font-weight="700">CPU Execution Flow (1 element at a time):</text>
+      <rect x="0" y="30" width="60" height="35" fill="#450a0a" stroke="#f43f5e" rx="4"/><text x="30" y="52" fill="#fff" font-family="monospace" font-size="11" text-anchor="middle">Iter 1</text>
+      <rect x="70" y="30" width="60" height="35" fill="#450a0a" stroke="#f43f5e" rx="4"/><text x="100" y="52" fill="#fff" font-family="monospace" font-size="11" text-anchor="middle">Iter 2</text>
+      <rect x="140" y="30" width="60" height="35" fill="#450a0a" stroke="#f43f5e" rx="4"/><text x="170" y="52" fill="#fff" font-family="monospace" font-size="11" text-anchor="middle">Iter 3</text>
+      <text x="210" y="52" fill="#94a3b8" font-family="monospace" font-size="14">...</text>
+      <rect x="240" y="30" width="90" height="35" fill="#450a0a" stroke="#f43f5e" rx="4"/><text x="285" y="52" fill="#fff" font-family="monospace" font-size="11" text-anchor="middle">Iter 1,000,000</text>
+    </g>
+
+    <rect x="25" y="275" width="340" height="75" fill="#451a03" rx="6" stroke="#f59e0b"/>
+    <text x="170" y="300" fill="#f59e0b" font-family="system-ui, sans-serif" font-size="13" font-weight="700" text-anchor="middle">Execution Time: ~145.2 ms</text>
+    <text x="170" y="322" fill="#fed7aa" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">Slow: GIL, dynamic typing, bytecode dispatch overhead</text>
+  </g>
+
+  <!-- Right: NumPy Vectorized (Parallel SIMD) -->
+  <g transform="translate(470, 95)">
+    <rect width="390" height="375" rx="10" fill="#1e293b" stroke="#10b981" stroke-width="1.5"/>
+    <rect width="390" height="35" rx="10" fill="#047857"/>
+    <text x="195" y="23" fill="#fff" font-family="system-ui, sans-serif" font-size="14" font-weight="700" text-anchor="middle">Vectorized NumPy C-Loop (SIMD Parallel)</text>
+
+    <!-- Code box -->
+    <g transform="translate(25, 55)">
+      <rect x="0" y="0" width="340" height="110" fill="#0f172a" rx="6"/>
+      <text x="15" y="25" fill="#34d399" font-family="monospace" font-size="12"># High-level Python syntax:</text>
+      <text x="15" y="45" fill="#38bdf8" font-family="monospace" font-size="14" font-weight="700">res = np_arr * 2</text>
+      <text x="15" y="70" fill="#cbd5e1" font-family="monospace" font-size="11"># Executes in compiled C / Fortran</text>
+      <text x="15" y="88" fill="#cbd5e1" font-family="monospace" font-size="11"># Zero Python interpreter interaction per element</text>
+    </g>
+
+    <!-- SIMD Hardware Registers -->
+    <g transform="translate(25, 185)">
+      <text x="0" y="15" fill="#10b981" font-family="system-ui, sans-serif" font-size="12" font-weight="700">CPU SIMD Register (AVX-512 / 8 floats in 1 cycle):</text>
+      <g transform="translate(0, 30)">
+        <rect x="0" y="0" width="40" height="35" fill="#065f46" stroke="#34d399" rx="2"/><text x="20" y="22" fill="#fff" font-family="monospace" font-size="11" text-anchor="middle">e0</text>
+        <rect x="42" y="0" width="40" height="35" fill="#065f46" stroke="#34d399" rx="2"/><text x="62" y="22" fill="#fff" font-family="monospace" font-size="11" text-anchor="middle">e1</text>
+        <rect x="84" y="0" width="40" height="35" fill="#065f46" stroke="#34d399" rx="2"/><text x="104" y="22" fill="#fff" font-family="monospace" font-size="11" text-anchor="middle">e2</text>
+        <rect x="126" y="0" width="40" height="35" fill="#065f46" stroke="#34d399" rx="2"/><text x="146" y="22" fill="#fff" font-family="monospace" font-size="11" text-anchor="middle">e3</text>
+        <rect x="168" y="0" width="40" height="35" fill="#065f46" stroke="#34d399" rx="2"/><text x="188" y="22" fill="#fff" font-family="monospace" font-size="11" text-anchor="middle">e4</text>
+        <rect x="210" y="0" width="40" height="35" fill="#065f46" stroke="#34d399" rx="2"/><text x="230" y="22" fill="#fff" font-family="monospace" font-size="11" text-anchor="middle">e5</text>
+        <rect x="252" y="0" width="40" height="35" fill="#065f46" stroke="#34d399" rx="2"/><text x="272" y="22" fill="#fff" font-family="monospace" font-size="11" text-anchor="middle">e6</text>
+        <rect x="294" y="0" width="40" height="35" fill="#065f46" stroke="#34d399" rx="2"/><text x="314" y="22" fill="#fff" font-family="monospace" font-size="11" text-anchor="middle">e7</text>
+      </g>
+    </g>
+
+    <rect x="25" y="275" width="340" height="75" fill="#064e3b" rx="6" stroke="#10b981"/>
+    <text x="170" y="300" fill="#34d399" font-family="system-ui, sans-serif" font-size="13" font-weight="700" text-anchor="middle">Execution Time: ~1.2 ms (120x FASTER!)</text>
+    <text x="170" y="322" fill="#a7f3d0" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">Optimized hardware pipeline, zero memory fragmentation</text>
+  </g>
+</svg>

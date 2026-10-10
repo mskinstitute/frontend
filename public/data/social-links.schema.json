@@ -1,0 +1,118 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "MSK Institute Social Media & Community Trust Registry",
+  "type": "object",
+  "required": ["channels", "googleReviews", "whatsAppSupport"],
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "comment": {
+      "type": "string"
+    },
+    "channels": {
+      "type": "array",
+      "description": "List of official social media channels for MSK Institute",
+      "items": {
+        "type": "object",
+        "required": ["id", "name", "handle", "url", "badge", "followers", "description", "enabled"],
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "Unique identifier: youtube, instagram, linkedin, whatsapp, github, facebook, telegram, twitter"
+          },
+          "name": {
+            "type": "string",
+            "description": "Display name of the platform (e.g., YouTube, Instagram, LinkedIn)"
+          },
+          "handle": {
+            "type": "string",
+            "description": "Public account handle (e.g., @mskinstitute)"
+          },
+          "url": {
+            "type": "string",
+            "description": "Full URL to the official profile"
+          },
+          "badge": {
+            "type": "string",
+            "description": "Short badge tag (e.g., Video Classes, Campus Life, Alumni & Jobs)"
+          },
+          "followers": {
+            "type": "string",
+            "description": "Follower count or content stat (e.g., 100+ Lessons, Daily Updates, Network)"
+          },
+          "description": {
+            "type": "string",
+            "description": "Purpose and description shown on trust cards"
+          },
+          "enabled": {
+            "type": "boolean",
+            "description": "Set to true to show this channel across the website, or false to hide it"
+          },
+          "color": {
+            "type": "string",
+            "description": "Brand hex color"
+          }
+        }
+      }
+    },
+    "googleReviews": {
+      "type": "object",
+      "required": ["rating", "reviewCount", "mapsUrl", "enabled"],
+      "properties": {
+        "rating": {
+          "type": "string",
+          "description": "Average Google star rating (e.g. '4.9')"
+        },
+        "reviewCount": {
+          "type": "string",
+          "description": "Total count of reviews (e.g. '128+')"
+        },
+        "mapsUrl": {
+          "type": "string",
+          "description": "Google Maps link to read/write reviews"
+        },
+        "label": {
+          "type": "string"
+        },
+        "enabled": {
+          "type": "boolean"
+        }
+      }
+    },
+    "whatsAppSupport": {
+      "type": "object",
+      "required": ["phone", "cleanNumber", "defaultMessage", "counselorName", "enabled"],
+      "properties": {
+        "phone": {
+          "type": "string",
+          "description": "Formatted phone number with country code (e.g. '+91 83930 42166')"
+        },
+        "cleanNumber": {
+          "type": "string",
+          "description": "Digits only without spaces or plus symbol (e.g. '918393042166')"
+        },
+        "defaultMessage": {
+          "type": "string",
+          "description": "Default pre-filled message when user clicks WhatsApp link"
+        },
+        "counselorName": {
+          "type": "string",
+          "description": "Name of the academic counselor / mentor"
+        },
+        "enabled": {
+          "type": "boolean"
+        }
+      }
+    },
+    "communityStats": {
+      "type": "object",
+      "properties": {
+        "studentsMentored": { "type": "string" },
+        "activeLearners": { "type": "string" },
+        "practicalRatio": { "type": "string" },
+        "verifiedCertificates": { "type": "string" }
+      }
+    }
+  }
+}

@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="480" viewBox="0 0 800 480" fill="none" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  <defs>
+    <linearGradient id="pptOrange" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D24726"/>
+      <stop offset="100%" stop-color="#A23218"/>
+    </linearGradient>
+    <linearGradient id="ribbonBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#F8FAFC"/>
+      <stop offset="100%" stop-color="#EEF2F6"/>
+    </linearGradient>
+    <linearGradient id="slideBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#F8FAFC"/>
+    </linearGradient>
+    <filter id="shadow" x="-5" y="-3" width="810" height="490" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="#000000" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <!-- Outer Window Frame -->
+  <rect width="800" height="480" rx="10" fill="#FFFFFF"/>
+  <rect width="800" height="480" rx="10" stroke="#CBD5E1" stroke-width="1.5"/>
+
+  <!-- Title Bar -->
+  <path d="M 0 10 C 0 4.477 4.477 0 10 0 L 790 0 C 795.523 0 800 4.477 800 10 L 800 38 L 0 38 Z" fill="url(#pptOrange)"/>
+  
+  <!-- Window Controls -->
+  <circle cx="18" cy="19" r="5" fill="#FF5F56"/>
+  <circle cx="34" cy="19" r="5" fill="#FFBD2E"/>
+  <circle cx="50" cy="19" r="5" fill="#27C93F"/>
+
+  <!-- PowerPoint Icon Badge -->
+  <rect x="68" y="8" width="22" height="22" rx="4" fill="#8F2510"/>
+  <text x="79" y="24" fill="#FFFFFF" font-size="14" font-weight="900" text-anchor="middle">P</text>
+
+  <!-- Presentation Title & Search -->
+  <text x="400" y="24" fill="#FFFFFF" font-size="13" font-weight="600" text-anchor="middle" letter-spacing="0.2">Quarterly_Pitch_Deck.pptx - Microsoft PowerPoint</text>
+
+  <!-- Quick Save / Undo icons placeholder -->
+  <rect x="670" y="9" width="120" height="20" rx="4" fill="rgba(255,255,255,0.15)"/>
+  <text x="730" y="23" fill="#FFFFFF" font-size="11" text-anchor="middle">AutoSave: On</text>
+
+  
+  <!-- Ribbon Tabs -->
+  <rect x="0" y="38" width="800" height="30" fill="#F1F5F9"/>
+  <line x1="0" y1="68" x2="800" y2="68" stroke="#E2E8F0" stroke-width="1"/>
+
+  <rect x="8" y="42" width="46" height="26" rx="3" fill="#D24726"/>
+  <text x="31" y="59" fill="#FFFFFF" font-size="11" font-weight="bold" text-anchor="middle">File</text>
+
+  <rect x="58" y="42" width="52" height="26" rx="3" fill="#FFFFFF" stroke="#CBD5E1"/>
+  <text x="84" y="59" fill="#1E293B" font-size="11" font-weight="bold" text-anchor="middle">Home</text>
+  <text x="132" y="59" fill="#475569" font-size="11" text-anchor="middle">Insert</text>
+  <text x="176" y="59" fill="#475569" font-size="11" text-anchor="middle">Draw</text>
+  <text x="220" y="59" fill="#475569" font-size="11" text-anchor="middle">Design</text>
+  <text x="274" y="59" fill="#475569" font-size="11" text-anchor="middle">Transitions</text>
+  <text x="338" y="59" fill="#475569" font-size="11" text-anchor="middle">Animations</text>
+  <text x="404" y="59" fill="#475569" font-size="11" text-anchor="middle">Slide Show</text>
+  <text x="460" y="59" fill="#475569" font-size="11" text-anchor="middle">Record</text>
+  <text x="506" y="59" fill="#475569" font-size="11" text-anchor="middle">Review</text>
+  <text x="548" y="59" fill="#475569" font-size="11" text-anchor="middle">View</text>
+
+  <!-- Ribbon Toolbar Area -->
+  <rect x="0" y="68" width="800" height="66" fill="url(#ribbonBg)"/>
+  <line x1="0" y1="134" x2="800" y2="134" stroke="#CBD5E1" stroke-width="1"/>
+
+  <!-- Ribbon Groups -->
+  <!-- Slides Group -->
+  <rect x="10" y="74" width="70" height="42" rx="4" fill="#FFFFFF" stroke="#CBD5E1"/>
+  <rect x="25" y="78" width="20" height="14" rx="2" fill="#D24726"/>
+  <text x="45" y="104" fill="#1E293B" font-size="10" font-weight="bold" text-anchor="middle">New Slide</text>
+  <text x="45" y="126" fill="#64748B" font-size="9" text-anchor="middle">Slides</text>
+  <line x1="88" y1="74" x2="88" y2="128" stroke="#E2E8F0"/>
+
+  <!-- Font Group -->
+  <rect x="96" y="74" width="110" height="20" rx="3" fill="#FFFFFF" stroke="#CBD5E1"/>
+  <text x="104" y="88" fill="#1E293B" font-size="10">Segoe UI</text>
+  <rect x="210" y="74" width="38" height="20" rx="3" fill="#FFFFFF" stroke="#CBD5E1"/>
+  <text x="222" y="88" fill="#1E293B" font-size="10">28</text>
+  <rect x="96" y="98" width="18" height="18" rx="2" fill="#E2E8F0"/>
+  <text x="105" y="111" fill="#0F172A" font-size="11" font-weight="bold" text-anchor="middle">B</text>
+  <rect x="118" y="98" width="18" height="18" rx="2" fill="#E2E8F0"/>
+  <text x="127" y="111" fill="#0F172A" font-size="11" font-style="italic" text-anchor="middle">I</text>
+  <rect x="140" y="98" width="18" height="18" rx="2" fill="#E2E8F0"/>
+  <text x="149" y="111" fill="#0F172A" font-size="11" text-decoration="underline" text-anchor="middle">U</text>
+  <text x="175" y="126" fill="#64748B" font-size="9" text-anchor="middle">Font</text>
+  <line x1="256" y1="74" x2="256" y2="128" stroke="#E2E8F0"/>
+
+  <!-- Paragraph Group -->
+  <rect x="264" y="74" width="96" height="42" rx="3" fill="#FFFFFF" stroke="#CBD5E1"/>
+  <text x="312" y="94" fill="#334155" font-size="10" text-anchor="middle">Bullets / Align</text>
+  <text x="312" y="126" fill="#64748B" font-size="9" text-anchor="middle">Paragraph</text>
+  <line x1="368" y1="74" x2="368" y2="128" stroke="#E2E8F0"/>
+
+  <!-- Drawing Group -->
+  <rect x="376" y="74" width="130" height="42" rx="3" fill="#FFFFFF" stroke="#CBD5E1"/>
+  <text x="441" y="94" fill="#334155" font-size="10" text-anchor="middle">Shapes &amp; Arrange</text>
+  <text x="441" y="126" fill="#64748B" font-size="9" text-anchor="middle">Drawing</text>
+  <line x1="514" y1="74" x2="514" y2="128" stroke="#E2E8F0"/>
+
+  <!-- Designer Group -->
+  <rect x="522" y="74" width="76" height="42" rx="4" fill="#FEF2F2" stroke="#F87171"/>
+  <text x="560" y="95" fill="#B91C1C" font-size="10" font-weight="bold" text-anchor="middle">Designer</text>
+  <text x="560" y="126" fill="#64748B" font-size="9" text-anchor="middle">Design Ideas</text>
+
+  <!-- Main Body Layout: Left Thumbnail Pane (170px) + Canvas (630px) -->
+  <rect x="0" y="134" width="170" height="318" fill="#F8FAFC"/>
+  <line x1="170" y1="134" x2="170" y2="452" stroke="#E2E8F0" stroke-width="1.5"/>
+
+  <!-- Left Thumbnails -->
+  <!-- Thumb 1 (Active) -->
+  <rect x="12" y="144" width="146" height="84" rx="4" fill="#FFFFFF" stroke="#D24726" stroke-width="2"/>
+  <rect x="2" y="174" width="8" height="24" rx="2" fill="#D24726"/>
+  <text x="20" y="160" fill="#D24726" font-size="10" font-weight="bold">1</text>
+  <rect x="36" y="162" width="98" height="12" rx="2" fill="#0F172A"/>
+  <rect x="46" y="180" width="78" height="6" rx="1" fill="#94A3B8"/>
+
+  <!-- Thumb 2 -->
+  <rect x="12" y="238" width="146" height="84" rx="4" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1"/>
+  <text x="20" y="254" fill="#64748B" font-size="10">2</text>
+  <rect x="36" y="250" width="60" height="8" rx="1" fill="#475569"/>
+  <rect x="36" y="266" width="44" height="40" rx="2" fill="#EEF2F6"/>
+  <rect x="88" y="266" width="44" height="40" rx="2" fill="#EEF2F6"/>
+
+  <!-- Thumb 3 -->
+  <rect x="12" y="332" width="146" height="84" rx="4" fill="#FFFFFF" stroke="#E2E8F0" stroke-width="1"/>
+  <text x="20" y="348" fill="#64748B" font-size="10">3</text>
+  <rect x="36" y="344" width="70" height="8" rx="1" fill="#475569"/>
+  <rect x="36" y="360" width="98" height="42" rx="2" fill="#EEF2F6"/>
+
+  <!-- Canvas Workspace Area (170 to 800) -->
+  <rect x="170" y="134" width="630" height="318" fill="#E2E8F0"/>
+
+  <!-- Active Slide (Widescreen 16:9 aspect inside canvas) -->
+  <rect x="220" y="152" width="530" height="280" rx="4" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1"/>
+
+  <!-- Active Slide Content -->
+  <rect x="250" y="180" width="470" height="70" rx="4" fill="none" stroke="#CBD5E1" stroke-dasharray="4 4"/>
+  <text x="485" y="218" fill="#0F172A" font-size="22" font-weight="900" text-anchor="middle">2026 Strategy &amp; Product Roadmap</text>
+  <text x="485" y="238" fill="#64748B" font-size="12" text-anchor="middle">Click to add subtitle or presenter name</text>
+
+  <rect x="250" y="266" width="470" height="140" rx="4" fill="none" stroke="#E2E8F0" stroke-dasharray="3 3"/>
+  <circle cx="340" cy="330" r="26" fill="#FEF3C7"/>
+  <text x="340" y="335" fill="#D97706" font-size="11" font-weight="bold" text-anchor="middle">Vision</text>
+
+  <circle cx="485" cy="330" r="26" fill="#DBEAFE"/>
+  <text x="485" y="335" fill="#2563EB" font-size="11" font-weight="bold" text-anchor="middle">Growth</text>
+
+  <circle cx="630" cy="330" r="26" fill="#DCFCE7"/>
+  <text x="630" y="335" fill="#16A34A" font-size="11" font-weight="bold" text-anchor="middle">Scale</text>
+
+  <!-- Bottom Status Bar -->
+  <rect x="0" y="452" width="800" height="28" fill="#F1F5F9"/>
+  <line x1="0" y1="452" x2="800" y2="452" stroke="#CBD5E1" stroke-width="1"/>
+  <text x="14" y="470" fill="#475569" font-size="11">Slide 1 of 18</text>
+  <text x="120" y="470" fill="#475569" font-size="11">English (United States)</text>
+  <text x="270" y="470" fill="#475569" font-size="11">Notes</text>
+  <text x="330" y="470" fill="#475569" font-size="11">Comments</text>
+
+  <!-- View Switcher & Zoom Slider -->
+  <rect x="590" y="458" width="16" height="14" rx="2" fill="#D24726"/>
+  <rect x="612" y="458" width="16" height="14" rx="2" fill="#E2E8F0"/>
+  <rect x="634" y="458" width="16" height="14" rx="2" fill="#E2E8F0"/>
+  <rect x="656" y="458" width="16" height="14" rx="2" fill="#E2E8F0"/>
+  <line x1="684" y1="465" x2="760" y2="465" stroke="#94A3B8" stroke-width="2"/>
+  <circle cx="725" cy="465" r="5" fill="#D24726"/>
+  <text x="776" y="470" fill="#475569" font-size="11">68%</text>
+
+</svg>

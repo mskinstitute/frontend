@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="480" viewBox="0 0 800 480" fill="none" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  <defs>
+    <linearGradient id="excelGreen" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#107C41"/>
+      <stop offset="100%" stop-color="#0B5A2E"/>
+    </linearGradient>
+    <linearGradient id="gridHeader" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#F8FAFC"/>
+      <stop offset="100%" stop-color="#E2E8F0"/>
+    </linearGradient>
+    <filter id="shadow" x="-5" y="-3" width="810" height="490" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="#000000" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <!-- Outer Window Frame -->
+  <rect width="800" height="480" rx="10" fill="#FFFFFF"/>
+  <rect width="800" height="480" rx="10" stroke="#CBD5E1" stroke-width="1.5"/>
+
+  <!-- Title Bar -->
+  <path d="M 0 10 C 0 4.477 4.477 0 10 0 L 790 0 C 795.523 0 800 4.477 800 10 L 800 38 L 0 38 Z" fill="url(#excelGreen)"/>
+  
+  <!-- Window Controls -->
+  <circle cx="18" cy="19" r="5" fill="#FF5F56"/>
+  <circle cx="34" cy="19" r="5" fill="#FFBD2E"/>
+  <circle cx="50" cy="19" r="5" fill="#27C93F"/>
+
+  <!-- Excel Icon Badge -->
+  <rect x="68" y="8" width="22" height="22" rx="4" fill="#0A4D27"/>
+  <text x="79" y="24" fill="#FFFFFF" font-size="14" font-weight="900" text-anchor="middle">X</text>
+
+  <!-- Workbook Title -->
+  <text x="400" y="24" fill="#FFFFFF" font-size="13" font-weight="600" text-anchor="middle" letter-spacing="0.2">Lookup Functions: VLOOKUP vs. XLOOKUP - Microsoft Excel</text>
+
+  <!-- AutoSave Pill -->
+  <rect x="670" y="9" width="120" height="20" rx="4" fill="rgba(255,255,255,0.15)"/>
+  <text x="730" y="23" fill="#FFFFFF" font-size="11" text-anchor="middle">AutoSave: On</text>
+
+  
+  <rect x="0" y="38" width="800" height="38" fill="#F8FAFC"/>
+  <line x1="0" y1="76" x2="800" y2="76" stroke="#CBD5E1"/>
+  <text x="24" y="61" fill="#0F172A" font-size="13" font-weight="bold">VLOOKUP (Legacy Classic) vs. XLOOKUP (Modern Microsoft 365 Standard)</text>
+
+  <!-- Left: VLOOKUP Breakdown -->
+  <g transform="translate(30, 90)">
+    <rect width="360" height="360" rx="8" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5"/>
+    <rect width="360" height="32" rx="8 8 0 0" fill="#1E293B"/>
+    <text x="180" y="21" fill="#FFFFFF" font-size="12" font-weight="bold" text-anchor="middle">VLOOKUP Anatomy &amp; Limitations</text>
+
+    <!-- Syntax Box -->
+    <rect x="15" y="44" width="330" height="42" rx="4" fill="#F1F5F9"/>
+    <text x="25" y="68" fill="#0F172A" font-size="11" font-family="monospace" font-weight="bold">=VLOOKUP(F2, A2:D100, 4, FALSE)</text>
+
+    <!-- Parameter Breakdown -->
+    <text x="20" y="110" fill="#2563EB" font-size="11" font-weight="bold">1. lookup_value (F2):</text>
+    <text x="20" y="125" fill="#475569" font-size="10">The value to search for (e.g. Employee ID "E-104")</text>
+
+    <text x="20" y="150" fill="#D97706" font-size="11" font-weight="bold">2. table_array (A2:D100):</text>
+    <text x="20" y="165" fill="#475569" font-size="10">The lookup value MUST be in the FIRST column (Col A)!</text>
+
+    <text x="20" y="190" fill="#107C41" font-size="11" font-weight="bold">3. col_index_num (4):</text>
+    <text x="20" y="205" fill="#475569" font-size="10">Column number to return (Salary is 4th column)</text>
+
+    <text x="20" y="230" fill="#DC2626" font-size="11" font-weight="bold">4. [range_lookup] (FALSE):</text>
+    <text x="20" y="245" fill="#475569" font-size="10">FALSE or 0 for EXACT MATCH. (Omit = approximate risk!)</text>
+
+    <!-- Weaknesses Alert -->
+    <rect x="15" y="265" width="330" height="80" rx="4" fill="#FEF2F2" stroke="#FCA5A5"/>
+    <text x="25" y="284" fill="#991B1B" font-size="10" font-weight="bold">VLOOKUP Critical Flaws:</text>
+    <text x="25" y="300" fill="#B91C1C" font-size="9">• CANNOT look to the left (lookup must be Col 1)</text>
+    <text x="25" y="315" fill="#B91C1C" font-size="9">• Breaks if someone inserts a column (static index 4)</text>
+    <text x="25" y="330" fill="#B91C1C" font-size="9">• Requires wrapping in =IFERROR(VLOOKUP(...), "Not Found")</text>
+  </g>
+
+  <!-- Right: XLOOKUP Mastery -->
+  <g transform="translate(410, 90)">
+    <rect width="360" height="360" rx="8" fill="#FFFFFF" stroke="#107C41" stroke-width="2"/>
+    <rect width="360" height="32" rx="8 8 0 0" fill="#107C41"/>
+    <text x="180" y="21" fill="#FFFFFF" font-size="12" font-weight="bold" text-anchor="middle">XLOOKUP (Modern Microsoft 365 Standard)</text>
+
+    <!-- Syntax Box -->
+    <rect x="15" y="44" width="330" height="42" rx="4" fill="#F0FDF4" stroke="#86EFAC"/>
+    <text x="25" y="68" fill="#107C41" font-size="11" font-family="monospace" font-weight="bold">=XLOOKUP(F2, A2:A100, D2:D100, "N/A")</text>
+
+    <text x="20" y="110" fill="#2563EB" font-size="11" font-weight="bold">1. lookup_value (F2):</text>
+    <text x="20" y="125" fill="#475569" font-size="10">Target item to match</text>
+
+    <text x="20" y="150" fill="#D97706" font-size="11" font-weight="bold">2. lookup_array (A2:A100):</text>
+    <text x="20" y="165" fill="#475569" font-size="10">Specific column to search (can be anywhere!)</text>
+
+    <text x="20" y="190" fill="#107C41" font-size="11" font-weight="bold">3. return_array (D2:D100):</text>
+    <text x="20" y="205" fill="#475569" font-size="10">Specific column to retrieve (can be to the LEFT or RIGHT!)</text>
+
+    <text x="20" y="230" fill="#7C3AED" font-size="11" font-weight="bold">4. [if_not_found] ("N/A"):</text>
+    <text x="20" y="245" fill="#475569" font-size="10">Built-in error handler (no IFERROR needed!)</text>
+
+    <!-- Strengths -->
+    <rect x="15" y="265" width="330" height="80" rx="4" fill="#ECFDF5" stroke="#6EE7B7"/>
+    <text x="25" y="284" fill="#065F46" font-size="10" font-weight="bold">Why XLOOKUP is Superior:</text>
+    <text x="25" y="300" fill="#047857" font-size="9">• Defaults to EXACT MATCH automatically</text>
+    <text x="25" y="315" fill="#047857" font-size="9">• Looks Left, Right, Up, and Down (2-Way Matrix lookup)</text>
+    <text x="25" y="330" fill="#047857" font-size="9">• Column insertions never break the formula!</text>
+  </g>
+
+</svg>

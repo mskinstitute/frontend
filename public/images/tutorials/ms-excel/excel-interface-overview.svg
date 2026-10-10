@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="480" viewBox="0 0 800 480" fill="none" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  <defs>
+    <linearGradient id="excelGreen" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#107C41"/>
+      <stop offset="100%" stop-color="#0B5A2E"/>
+    </linearGradient>
+    <linearGradient id="gridHeader" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#F8FAFC"/>
+      <stop offset="100%" stop-color="#E2E8F0"/>
+    </linearGradient>
+    <filter id="shadow" x="-5" y="-3" width="810" height="490" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="#000000" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <!-- Outer Window Frame -->
+  <rect width="800" height="480" rx="10" fill="#FFFFFF"/>
+  <rect width="800" height="480" rx="10" stroke="#CBD5E1" stroke-width="1.5"/>
+
+  <!-- Title Bar -->
+  <path d="M 0 10 C 0 4.477 4.477 0 10 0 L 790 0 C 795.523 0 800 4.477 800 10 L 800 38 L 0 38 Z" fill="url(#excelGreen)"/>
+  
+  <!-- Window Controls -->
+  <circle cx="18" cy="19" r="5" fill="#FF5F56"/>
+  <circle cx="34" cy="19" r="5" fill="#FFBD2E"/>
+  <circle cx="50" cy="19" r="5" fill="#27C93F"/>
+
+  <!-- Excel Icon Badge -->
+  <rect x="68" y="8" width="22" height="22" rx="4" fill="#0A4D27"/>
+  <text x="79" y="24" fill="#FFFFFF" font-size="14" font-weight="900" text-anchor="middle">X</text>
+
+  <!-- Workbook Title -->
+  <text x="400" y="24" fill="#FFFFFF" font-size="13" font-weight="600" text-anchor="middle" letter-spacing="0.2">Financial_Model_2026.xlsx - Microsoft Excel</text>
+
+  <!-- AutoSave Pill -->
+  <rect x="670" y="9" width="120" height="20" rx="4" fill="rgba(255,255,255,0.15)"/>
+  <text x="730" y="23" fill="#FFFFFF" font-size="11" text-anchor="middle">AutoSave: On</text>
+
+  
+  <!-- Ribbon Tabs -->
+  <rect x="0" y="38" width="800" height="30" fill="#F1F5F9"/>
+  <line x1="0" y1="68" x2="800" y2="68" stroke="#E2E8F0" stroke-width="1"/>
+
+  <rect x="8" y="42" width="46" height="26" rx="3" fill="#107C41"/>
+  <text x="31" y="59" fill="#FFFFFF" font-size="11" font-weight="bold" text-anchor="middle">File</text>
+
+  <rect x="58" y="42" width="52" height="26" rx="3" fill="#FFFFFF" stroke="#CBD5E1"/>
+  <text x="84" y="59" fill="#1E293B" font-size="11" font-weight="bold" text-anchor="middle">Home</text>
+  <text x="132" y="59" fill="#475569" font-size="11" text-anchor="middle">Insert</text>
+  <text x="186" y="59" fill="#475569" font-size="11" text-anchor="middle">Page Layout</text>
+  <text x="246" y="59" fill="#475569" font-size="11" text-anchor="middle">Formulas</text>
+  <text x="296" y="59" fill="#475569" font-size="11" text-anchor="middle">Data</text>
+  <text x="340" y="59" fill="#475569" font-size="11" text-anchor="middle">Review</text>
+  <text x="382" y="59" fill="#475569" font-size="11" text-anchor="middle">View</text>
+  <text x="432" y="59" fill="#475569" font-size="11" text-anchor="middle">Developer</text>
+
+  <!-- Ribbon Commands Bar -->
+  <rect x="0" y="68" width="800" height="64" fill="#F8FAFC"/>
+  <line x1="0" y1="132" x2="800" y2="132" stroke="#CBD5E1"/>
+
+  <!-- Font Group -->
+  <rect x="10" y="74" width="105" height="22" rx="3" fill="#FFFFFF" stroke="#CBD5E1"/>
+  <text x="18" y="89" fill="#1E293B" font-size="11">Calibri</text>
+  <rect x="120" y="74" width="38" height="22" rx="3" fill="#FFFFFF" stroke="#CBD5E1"/>
+  <text x="132" y="89" fill="#1E293B" font-size="11">11</text>
+  <rect x="10" y="100" width="20" height="20" rx="2" fill="#E2E8F0"/>
+  <text x="20" y="114" fill="#0F172A" font-size="11" font-weight="bold" text-anchor="middle">B</text>
+  <rect x="34" y="100" width="20" height="20" rx="2" fill="#E2E8F0"/>
+  <text x="44" y="114" fill="#0F172A" font-size="11" font-style="italic" text-anchor="middle">I</text>
+  <rect x="58" y="100" width="20" height="20" rx="2" fill="#E2E8F0"/>
+  <text x="68" y="114" fill="#0F172A" font-size="11" text-decoration="underline" text-anchor="middle">U</text>
+  <rect x="82" y="100" width="22" height="20" rx="2" fill="#FEF3C7"/>
+  <text x="93" y="114" fill="#B45309" font-size="11" text-anchor="middle">🪣</text>
+  <rect x="108" y="100" width="22" height="20" rx="2" fill="#FFFFFF" stroke="#CBD5E1"/>
+  <text x="119" y="114" fill="#DC2626" font-size="11" font-weight="bold" text-anchor="middle">A</text>
+  <line x1="168" y1="74" x2="168" y2="124" stroke="#CBD5E1"/>
+
+  <!-- Alignment Group -->
+  <rect x="178" y="74" width="115" height="46" rx="3" fill="#FFFFFF" stroke="#CBD5E1"/>
+  <text x="235" y="93" fill="#1E293B" font-size="10" text-anchor="middle">Wrap Text</text>
+  <text x="235" y="112" fill="#1E293B" font-size="10" text-anchor="middle">Merge &amp; Center</text>
+  <line x1="303" y1="74" x2="303" y2="124" stroke="#CBD5E1"/>
+
+  <!-- Number Group -->
+  <rect x="313" y="74" width="95" height="22" rx="3" fill="#FFFFFF" stroke="#CBD5E1"/>
+  <text x="323" y="89" fill="#1E293B" font-size="11">Currency ($)</text>
+  <text x="330" y="114" fill="#1E293B" font-size="11" font-weight="bold">$</text>
+  <text x="355" y="114" fill="#1E293B" font-size="11" font-weight="bold">%</text>
+  <text x="380" y="114" fill="#1E293B" font-size="11" font-weight="bold">,  .00</text>
+  <line x1="418" y1="74" x2="418" y2="124" stroke="#CBD5E1"/>
+
+  <!-- Styles (Conditional Formatting) -->
+  <rect x="428" y="74" width="90" height="46" rx="3" fill="#ECFDF5" stroke="#107C41"/>
+  <text x="473" y="94" fill="#047857" font-size="10" font-weight="bold" text-anchor="middle">Conditional</text>
+  <text x="473" y="110" fill="#047857" font-size="10" font-weight="bold" text-anchor="middle">Formatting</text>
+  <line x1="528" y1="74" x2="528" y2="124" stroke="#CBD5E1"/>
+
+  <!-- AutoSum -->
+  <rect x="538" y="74" width="85" height="46" rx="3" fill="#EFF6FF" stroke="#3B82F6"/>
+  <text x="580" y="94" fill="#1D4ED8" font-size="12" font-weight="bold" text-anchor="middle">∑ AutoSum</text>
+  <text x="580" y="110" fill="#2563EB" font-size="9" text-anchor="middle">Sort &amp; Filter ▾</text>
+
+  <!-- Formula Bar & Name Box Area -->
+  <rect x="0" y="132" width="800" height="28" fill="#FFFFFF"/>
+  <line x1="0" y1="160" x2="800" y2="160" stroke="#CBD5E1"/>
+
+  <!-- Name Box -->
+  <rect x="6" y="136" width="68" height="20" rx="2" fill="#FFFFFF" stroke="#CBD5E1"/>
+  <text x="14" y="150" fill="#107C41" font-size="11" font-weight="bold">C5</text>
+
+  <!-- fx icon -->
+  <text x="86" y="151" fill="#64748B" font-size="12" font-style="italic" font-weight="bold">fx</text>
+  <line x1="102" y1="136" x2="102" y2="156" stroke="#CBD5E1"/>
+
+  <!-- Formula Input Area -->
+  <rect x="108" y="136" width="682" height="20" rx="2" fill="#FFFFFF"/>
+  <text x="114" y="150" fill="#0F172A" font-size="12" font-family="monospace">=SUM(C2:C4)</text>
+
+  <!-- Spreadsheet Grid Area (Headers & Cells) -->
+  <!-- Top-left select-all triangle -->
+  <rect x="0" y="160" width="36" height="22" fill="url(#gridHeader)" stroke="#CBD5E1"/>
+  
+  <!-- Column Headers -->
+  <rect x="36" y="160" width="110" height="22" fill="url(#gridHeader)" stroke="#CBD5E1"/>
+  <text x="91" y="175" fill="#475569" font-size="11" font-weight="bold" text-anchor="middle">A</text>
+
+  <rect x="146" y="160" width="130" height="22" fill="url(#gridHeader)" stroke="#CBD5E1"/>
+  <text x="211" y="175" fill="#475569" font-size="11" font-weight="bold" text-anchor="middle">B</text>
+
+  <rect x="276" y="160" width="140" height="22" fill="url(#gridHeader)" stroke="#CBD5E1"/>
+  <text x="346" y="175" fill="#475569" font-size="11" font-weight="bold" text-anchor="middle">C</text>
+
+  <rect x="416" y="160" width="130" height="22" fill="url(#gridHeader)" stroke="#CBD5E1"/>
+  <text x="481" y="175" fill="#475569" font-size="11" font-weight="bold" text-anchor="middle">D</text>
+
+  <rect x="546" y="160" width="130" height="22" fill="url(#gridHeader)" stroke="#CBD5E1"/>
+  <text x="611" y="175" fill="#475569" font-size="11" font-weight="bold" text-anchor="middle">E</text>
+
+  <rect x="676" y="160" width="124" height="22" fill="url(#gridHeader)" stroke="#CBD5E1"/>
+  <text x="738" y="175" fill="#475569" font-size="11" font-weight="bold" text-anchor="middle">F</text>
+
+  <!-- Row 1: Header Labels -->
+  <rect x="0" y="182" width="36" height="24" fill="url(#gridHeader)" stroke="#CBD5E1"/>
+  <text x="18" y="198" fill="#475569" font-size="11" font-weight="bold" text-anchor="middle">1</text>
+  <rect x="36" y="182" width="110" height="24" fill="#0F172A" stroke="#CBD5E1"/>
+  <text x="42" y="198" fill="#FFFFFF" font-size="11" font-weight="bold">Product Name</text>
+  <rect x="146" y="182" width="130" height="24" fill="#0F172A" stroke="#CBD5E1"/>
+  <text x="152" y="198" fill="#FFFFFF" font-size="11" font-weight="bold">Category</text>
+  <rect x="276" y="182" width="140" height="24" fill="#0F172A" stroke="#CBD5E1"/>
+  <text x="410" y="198" fill="#FFFFFF" font-size="11" font-weight="bold" text-anchor="end">Q1 Sales ($)</text>
+  <rect x="416" y="182" width="130" height="24" fill="#0F172A" stroke="#CBD5E1"/>
+  <text x="540" y="198" fill="#FFFFFF" font-size="11" font-weight="bold" text-anchor="end">Q2 Sales ($)</text>
+  <rect x="546" y="182" width="130" height="24" fill="#0F172A" stroke="#CBD5E1"/>
+  <text x="670" y="198" fill="#FFFFFF" font-size="11" font-weight="bold" text-anchor="end">Growth %</text>
+  <rect x="676" y="182" width="124" height="24" fill="#0F172A" stroke="#CBD5E1"/>
+  <text x="682" y="198" fill="#FFFFFF" font-size="11" font-weight="bold">Status</text>
+
+  <!-- Row 2 -->
+  <rect x="0" y="206" width="36" height="24" fill="url(#gridHeader)" stroke="#CBD5E1"/>
+  <text x="18" y="222" fill="#475569" font-size="11" font-weight="bold" text-anchor="middle">2</text>
+  <rect x="36" y="206" width="110" height="24" fill="#FFFFFF" stroke="#CBD5E1"/>
+  <text x="42" y="222" fill="#1E293B" font-size="11">Cloud Storage</text>
+  <rect x="146" y="206" width="130" height="24" fill="#FFFFFF" stroke="#CBD5E1"/>
+  <text x="152" y="222" fill="#475569" font-size="11">SaaS Software</text>
+  <rect x="276" y="206" width="140" height="24" fill="#FFFFFF" stroke="#CBD5E1"/>
+  <text x="410" y="222" fill="#1E293B" font-size="11" text-anchor="end">$14,500.00</text>
+  <rect x="416" y="206" width="130" height="24" fill="#FFFFFF" stroke="#CBD5E1"/>
+  <text x="540" y="222" fill="#1E293B" font-size="11" text-anchor="end">$18,200.00</text>
+  <rect x="546" y="206" width="130" height="24" fill="#DCFCE7" stroke="#CBD5E1"/>
+  <text x="670" y="222" fill="#15803D" font-size="11" font-weight="bold" text-anchor="end">+25.5%</text>
+  <rect x="676" y="206" width="124" height="24" fill="#FFFFFF" stroke="#CBD5E1"/>
+  <text x="682" y="222" fill="#16A34A" font-size="11" font-weight="bold">Active</text>
+
+  <!-- Row 3 -->
+  <rect x="0" y="230" width="36" height="24" fill="url(#gridHeader)" stroke="#CBD5E1"/>
+  <text x="18" y="246" fill="#475569" font-size="11" font-weight="bold" text-anchor="middle">3</text>
+  <rect x="36" y="230" width="110" height="24" fill="#FFFFFF" stroke="#CBD5E1"/>
+  <text x="42" y="246" fill="#1E293B" font-size="11">API Gateway</text>
+  <rect x="146" y="230" width="130" height="24" fill="#FFFFFF" stroke="#CBD5E1"/>
+  <text x="152" y="246" fill="#475569" font-size="11">Infrastructure</text>
+  <rect x="276" y="230" width="140" height="24" fill="#FFFFFF" stroke="#CBD5E1"/>
+  <text x="410" y="246" fill="#1E293B" font-size="11" text-anchor="end">$22,400.00</text>
+  <rect x="416" y="230" width="130" height="24" fill="#FFFFFF" stroke="#CBD5E1"/>
+  <text x="540" y="246" fill="#1E293B" font-size="11" text-anchor="end">$26,880.00</text>
+  <rect x="546" y="230" width="130" height="24" fill="#DCFCE7" stroke="#CBD5E1"/>
+  <text x="670" y="246" fill="#15803D" font-size="11" font-weight="bold" text-anchor="end">+20.0%</text>
+  <rect x="676" y="230" width="124" height="24" fill="#FFFFFF" stroke="#CBD5E1"/>
+  <text x="682" y="246" fill="#16A34A" font-size="11" font-weight="bold">Active</text>
+
+  <!-- Row 4 -->
+  <rect x="0" y="254" width="36" height="24" fill="url(#gridHeader)" stroke="#CBD5E1"/>
+  <text x="18" y="270" fill="#475569" font-size="11" font-weight="bold" text-anchor="middle">4</text>
+  <rect x="36" y="254" width="110" height="24" fill="#FFFFFF" stroke="#CBD5E1"/>
+  <text x="42" y="270" fill="#1E293B" font-size="11">Consulting</text>
+  <rect x="146" y="254" width="130" height="24" fill="#FFFFFF" stroke="#CBD5E1"/>
+  <text x="152" y="270" fill="#475569" font-size="11">Services</text>
+  <rect x="276" y="254" width="140" height="24" fill="#FFFFFF" stroke="#CBD5E1"/>
+  <text x="410" y="270" fill="#1E293B" font-size="11" text-anchor="end">$8,900.00</text>
+  <rect x="416" y="254" width="130" height="24" fill="#FFFFFF" stroke="#CBD5E1"/>
+  <text x="540" y="270" fill="#1E293B" font-size="11" text-anchor="end">$7,200.00</text>
+  <rect x="546" y="254" width="130" height="24" fill="#FEE2E2" stroke="#CBD5E1"/>
+  <text x="670" y="270" fill="#DC2626" font-size="11" font-weight="bold" text-anchor="end">-19.1%</text>
+  <rect x="676" y="254" width="124" height="24" fill="#FFFFFF" stroke="#CBD5E1"/>
+  <text x="682" y="270" fill="#D97706" font-size="11" font-weight="bold">Review</text>
+
+  <!-- Row 5 (Active Cell C5 with Green Border and AutoFill Handle) -->
+  <rect x="0" y="278" width="36" height="24" fill="url(#gridHeader)" stroke="#CBD5E1"/>
+  <text x="18" y="294" fill="#475569" font-size="11" font-weight="bold" text-anchor="middle">5</text>
+  <rect x="36" y="278" width="110" height="24" fill="#F1F5F9" stroke="#CBD5E1"/>
+  <text x="42" y="294" fill="#0F172A" font-size="11" font-weight="bold">Total</text>
+  <rect x="146" y="278" width="130" height="24" fill="#F1F5F9" stroke="#CBD5E1"/>
+  <rect x="276" y="278" width="140" height="24" fill="#FFFFFF" stroke="#107C41" stroke-width="2.5"/>
+  <text x="410" y="294" fill="#107C41" font-size="12" font-weight="900" text-anchor="end">$45,800.00</text>
+  <!-- AutoFill Handle Green Square at bottom right of C5 -->
+  <rect x="413" y="299" width="6" height="6" fill="#107C41"/>
+
+  <rect x="416" y="278" width="130" height="24" fill="#F1F5F9" stroke="#CBD5E1"/>
+  <text x="540" y="294" fill="#0F172A" font-size="11" font-weight="bold" text-anchor="end">$52,280.00</text>
+  <rect x="546" y="278" width="130" height="24" fill="#F1F5F9" stroke="#CBD5E1"/>
+  <text x="670" y="294" fill="#15803D" font-size="11" font-weight="bold" text-anchor="end">+14.1%</text>
+  <rect x="676" y="278" width="124" height="24" fill="#F1F5F9" stroke="#CBD5E1"/>
+
+  <!-- Rows 6-10 Blank Grid -->
+  <g opacity="0.6">
+    <line x1="0" y1="326" x2="800" y2="326" stroke="#E2E8F0"/>
+    <line x1="0" y1="350" x2="800" y2="350" stroke="#E2E8F0"/>
+    <line x1="0" y1="374" x2="800" y2="374" stroke="#E2E8F0"/>
+    <line x1="0" y1="398" x2="800" y2="398" stroke="#E2E8F0"/>
+    <line x1="0" y1="422" x2="800" y2="422" stroke="#E2E8F0"/>
+    <line x1="36" y1="302" x2="36" y2="446" stroke="#E2E8F0"/>
+    <line x1="146" y1="302" x2="146" y2="446" stroke="#E2E8F0"/>
+    <line x1="276" y1="302" x2="276" y2="446" stroke="#E2E8F0"/>
+    <line x1="416" y1="302" x2="416" y2="446" stroke="#E2E8F0"/>
+    <line x1="546" y1="302" x2="546" y2="446" stroke="#E2E8F0"/>
+    <line x1="676" y1="302" x2="676" y2="446" stroke="#E2E8F0"/>
+  </g>
+
+  <!-- Sheet Tabs Bar -->
+  <rect x="0" y="424" width="800" height="28" fill="#F8FAFC"/>
+  <line x1="0" y1="424" x2="800" y2="424" stroke="#CBD5E1"/>
+  <rect x="15" y="427" width="85" height="24" rx="3 3 0 0" fill="#FFFFFF" stroke="#CBD5E1" stroke-bottom="none"/>
+  <line x1="15" y1="450" x2="100" y2="450" stroke="#107C41" stroke-width="2.5"/>
+  <text x="57" y="443" fill="#107C41" font-size="11" font-weight="bold" text-anchor="middle">Sales_Q1Q2</text>
+  <rect x="105" y="427" width="75" height="24" rx="3 3 0 0" fill="#F1F5F9" stroke="#CBD5E1"/>
+  <text x="142" y="443" fill="#64748B" font-size="11" text-anchor="middle">Employees</text>
+  <circle cx="195" cy="439" r="8" fill="#E2E8F0"/>
+  <text x="195" y="443" fill="#475569" font-size="12" font-weight="bold" text-anchor="middle">+</text>
+
+  <!-- Bottom Status Bar -->
+  <rect x="0" y="452" width="800" height="28" fill="#F1F5F9"/>
+  <line x1="0" y1="452" x2="800" y2="452" stroke="#CBD5E1"/>
+  <text x="14" y="470" fill="#475569" font-size="11">Ready</text>
+  <text x="320" y="470" fill="#334155" font-size="11">Average: $15,266.67</text>
+  <text x="470" y="470" fill="#334155" font-size="11">Count: 3</text>
+  <text x="545" y="470" fill="#107C41" font-size="11" font-weight="bold">Sum: $45,800.00</text>
+  <line x1="680" y1="465" x2="750" y2="465" stroke="#94A3B8" stroke-width="2"/>
+  <circle cx="715" cy="465" r="5" fill="#107C41"/>
+  <text x="765" y="470" fill="#475569" font-size="11">100%</text>
+
+</svg>

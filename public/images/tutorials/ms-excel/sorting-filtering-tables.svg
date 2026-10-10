@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="480" viewBox="0 0 800 480" fill="none" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  <defs>
+    <linearGradient id="excelGreen" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#107C41"/>
+      <stop offset="100%" stop-color="#0B5A2E"/>
+    </linearGradient>
+    <linearGradient id="gridHeader" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#F8FAFC"/>
+      <stop offset="100%" stop-color="#E2E8F0"/>
+    </linearGradient>
+    <filter id="shadow" x="-5" y="-3" width="810" height="490" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="#000000" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <!-- Outer Window Frame -->
+  <rect width="800" height="480" rx="10" fill="#FFFFFF"/>
+  <rect width="800" height="480" rx="10" stroke="#CBD5E1" stroke-width="1.5"/>
+
+  <!-- Title Bar -->
+  <path d="M 0 10 C 0 4.477 4.477 0 10 0 L 790 0 C 795.523 0 800 4.477 800 10 L 800 38 L 0 38 Z" fill="url(#excelGreen)"/>
+  
+  <!-- Window Controls -->
+  <circle cx="18" cy="19" r="5" fill="#FF5F56"/>
+  <circle cx="34" cy="19" r="5" fill="#FFBD2E"/>
+  <circle cx="50" cy="19" r="5" fill="#27C93F"/>
+
+  <!-- Excel Icon Badge -->
+  <rect x="68" y="8" width="22" height="22" rx="4" fill="#0A4D27"/>
+  <text x="79" y="24" fill="#FFFFFF" font-size="14" font-weight="900" text-anchor="middle">X</text>
+
+  <!-- Workbook Title -->
+  <text x="400" y="24" fill="#FFFFFF" font-size="13" font-weight="600" text-anchor="middle" letter-spacing="0.2">Excel Tables (Ctrl + T) & Structured Data - Microsoft Excel</text>
+
+  <!-- AutoSave Pill -->
+  <rect x="670" y="9" width="120" height="20" rx="4" fill="rgba(255,255,255,0.15)"/>
+  <text x="730" y="23" fill="#FFFFFF" font-size="11" text-anchor="middle">AutoSave: On</text>
+
+  
+  <!-- Top Banner -->
+  <rect x="0" y="38" width="800" height="40" fill="#F8FAFC"/>
+  <line x1="0" y1="78" x2="800" y2="78" stroke="#CBD5E1"/>
+  <text x="24" y="63" fill="#0F172A" font-size="13" font-weight="bold">Insert &gt; Table (Ctrl + T): Structured References, AutoFilter &amp; Total Row</text>
+
+  <!-- Left: The Excel Table View -->
+  <g transform="translate(30, 95)">
+    <rect width="460" height="240" rx="6" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5"/>
+
+    <!-- Table Header Row -->
+    <rect width="460" height="30" rx="6 6 0 0" fill="#107C41"/>
+    <text x="15" y="20" fill="#FFFFFF" font-size="11" font-weight="bold">Emp ID ▾</text>
+    <text x="90" y="20" fill="#FFFFFF" font-size="11" font-weight="bold">Full Name ▾</text>
+    <text x="195" y="20" fill="#FFFFFF" font-size="11" font-weight="bold">Department ▾</text>
+    <text x="310" y="20" fill="#FFFFFF" font-size="11" font-weight="bold">Salary ($) ▾</text>
+    <text x="400" y="20" fill="#FFFFFF" font-size="11" font-weight="bold">Bonus ▾</text>
+
+    <!-- Banded Row 1 -->
+    <rect y="30" width="460" height="26" fill="#F8FAFC"/>
+    <text x="15" y="47" fill="#475569" font-size="11">E-101</text>
+    <text x="90" y="47" fill="#1E293B" font-size="11">Sarah Jenkins</text>
+    <text x="195" y="47" fill="#475569" font-size="11">Engineering</text>
+    <text x="350" y="47" fill="#1E293B" font-size="11" text-anchor="end">$92,000</text>
+    <text x="435" y="47" fill="#1E293B" font-size="11" text-anchor="end">$9,200</text>
+
+    <!-- Banded Row 2 -->
+    <rect y="56" width="460" height="26" fill="#FFFFFF"/>
+    <text x="15" y="73" fill="#475569" font-size="11">E-102</text>
+    <text x="90" y="73" fill="#1E293B" font-size="11">Michael Chen</text>
+    <text x="195" y="73" fill="#475569" font-size="11">Marketing</text>
+    <text x="350" y="73" fill="#1E293B" font-size="11" text-anchor="end">$78,500</text>
+    <text x="435" y="73" fill="#1E293B" font-size="11" text-anchor="end">$7,850</text>
+
+    <!-- Banded Row 3 -->
+    <rect y="82" width="460" height="26" fill="#F8FAFC"/>
+    <text x="15" y="99" fill="#475569" font-size="11">E-103</text>
+    <text x="90" y="99" fill="#1E293B" font-size="11">Amina Patel</text>
+    <text x="195" y="99" fill="#475569" font-size="11">Engineering</text>
+    <text x="350" y="99" fill="#1E293B" font-size="11" text-anchor="end">$98,000</text>
+    <text x="435" y="99" fill="#1E293B" font-size="11" text-anchor="end">$9,800</text>
+
+    <!-- Banded Row 4 -->
+    <rect y="108" width="460" height="26" fill="#FFFFFF"/>
+    <text x="15" y="125" fill="#475569" font-size="11">E-104</text>
+    <text x="90" y="125" fill="#1E293B" font-size="11">David Ross</text>
+    <text x="195" y="125" fill="#475569" font-size="11">Finance</text>
+    <text x="350" y="125" fill="#1E293B" font-size="11" text-anchor="end">$84,000</text>
+    <text x="435" y="125" fill="#1E293B" font-size="11" text-anchor="end">$8,400</text>
+
+    <!-- Banded Row 5 -->
+    <rect y="134" width="460" height="26" fill="#F8FAFC"/>
+    <text x="15" y="151" fill="#475569" font-size="11">E-105</text>
+    <text x="90" y="151" fill="#1E293B" font-size="11">Elena Rostova</text>
+    <text x="195" y="151" fill="#475569" font-size="11">Sales</text>
+    <text x="350" y="151" fill="#1E293B" font-size="11" text-anchor="end">$72,000</text>
+    <text x="435" y="151" fill="#1E293B" font-size="11" text-anchor="end">$7,200</text>
+
+    <!-- Total Row -->
+    <rect y="160" width="460" height="30" rx="0 0 6 6" fill="#DCFCE7" stroke="#86EFAC"/>
+    <text x="15" y="180" fill="#166534" font-size="11" font-weight="bold">Total</text>
+    <text x="350" y="180" fill="#166534" font-size="12" font-weight="900" text-anchor="end">$424,500 [Sum ▾]</text>
+    <text x="435" y="180" fill="#166534" font-size="12" font-weight="900" text-anchor="end">$42,450</text>
+  </g>
+
+  <!-- Right: Structured Reference Syntax Card -->
+  <g transform="translate(510, 95)">
+    <rect width="260" height="240" rx="8" fill="#F8FAFC" stroke="#CBD5E1"/>
+    <rect width="260" height="34" rx="8 8 0 0" fill="#047857"/>
+    <text x="130" y="22" fill="#FFFFFF" font-size="12" font-weight="bold" text-anchor="middle">Structured Reference Syntax</text>
+
+    <text x="15" y="60" fill="#334155" font-size="11" font-weight="bold">No more cell coordinate gibberish!</text>
+    <text x="15" y="78" fill="#64748B" font-size="10">Instead of =D2*0.10, Tables use:</text>
+
+    <rect x="15" y="90" width="230" height="36" rx="4" fill="#FFFFFF" stroke="#CBD5E1"/>
+    <text x="25" y="113" fill="#107C41" font-size="12" font-family="monospace" font-weight="bold">=[@Salary] * 0.10</text>
+
+    <text x="15" y="145" fill="#334155" font-size="10" font-weight="bold">• [@Salary]</text>
+    <text x="80" y="145" fill="#64748B" font-size="10">Refers to current row value</text>
+
+    <text x="15" y="165" fill="#334155" font-size="10" font-weight="bold">• Auto-Calculated</text>
+    <text x="115" y="165" fill="#64748B" font-size="10">Fills all rows automatically</text>
+
+    <text x="15" y="185" fill="#334155" font-size="10" font-weight="bold">• Auto-Expanding</text>
+    <text x="115" y="185" fill="#64748B" font-size="10">New rows inherit formatting</text>
+
+    <text x="15" y="205" fill="#334155" font-size="10" font-weight="bold">• Pivot Source</text>
+    <text x="115" y="205" fill="#64748B" font-size="10">Never miss newly added rows</text>
+  </g>
+
+  <!-- Bottom Panel: Sorting & Filtering Tips -->
+  <g transform="translate(30, 350)">
+    <rect width="740" height="105" rx="8" fill="#EFF6FF" stroke="#BFDBFE"/>
+    <text x="20" y="25" fill="#1E3A8A" font-size="12" font-weight="bold">Sorting &amp; Filtering Superpowers:</text>
+    <text x="20" y="48" fill="#1D4ED8" font-size="11">• AutoFilter Shortcut: Ctrl + Shift + L (toggles filter arrows on/off instantly)</text>
+    <text x="20" y="68" fill="#1D4ED8" font-size="11">• Multi-Level Sorting: Data &gt; Sort (e.g. Sort primarily by Department A-Z, then secondarily by Salary Largest to Smallest)</text>
+    <text x="20" y="88" fill="#1E40AF" font-size="11">• Wildcard Text Filters: Asterisk (*) matches any characters (e.g. "Eng*" matches Engineering and English)</text>
+  </g>
+
+</svg>

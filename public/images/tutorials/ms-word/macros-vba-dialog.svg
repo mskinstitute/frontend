@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="360" viewBox="0 0 800 360" fill="none" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  <defs>
+    <linearGradient id="wordBlue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#185ABD"/>
+      <stop offset="100%" stop-color="#103F91"/>
+    </linearGradient>
+    <linearGradient id="ribbonBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#F3F5F8"/>
+      <stop offset="100%" stop-color="#E8ECF1"/>
+    </linearGradient>
+    <filter id="cardShadow" x="-10" y="-5" width="820" height="380" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+
+  <!-- Window Frame -->
+  <rect width="800" height="360" rx="12" fill="#FFFFFF"/>
+  <rect width="800" height="360" rx="12" stroke="#D1D5DB" stroke-width="1.5"/>
+
+  <!-- Title Bar -->
+  <path d="M 0 12 C 0 5.373 5.373 0 12 0 L 788 0 C 794.627 0 800 5.373 800 12 L 800 42 L 0 42 Z" fill="url(#wordBlue)"/>
+  
+  <!-- Window Controls & Title -->
+  <circle cx="20" cy="21" r="5.5" fill="#FF5F56"/>
+  <circle cx="38" cy="21" r="5.5" fill="#FFBD2E"/>
+  <circle cx="56" cy="21" r="5.5" fill="#27C93F"/>
+
+  <!-- Word App Icon Badge -->
+  <rect x="76" y="10" width="22" height="22" rx="4" fill="#0C3B78"/>
+  <text x="87" y="26" fill="#FFFFFF" font-size="14" font-weight="900" text-anchor="middle">W</text>
+
+  <!-- Document Title -->
+  <text x="400" y="26" fill="#FFFFFF" font-size="13" font-weight="600" text-anchor="middle" letter-spacing="0.2">Automating Repetitive Tasks with Macros - Microsoft Word</text>
+
+  
+  <rect x="0" y="42" width="800" height="318" fill="#F8FAFC"/>
+
+  <g transform="translate(40, 65)">
+    <!-- Card 1: Record Macro Dialog -->
+    <rect x="0" y="0" width="340" height="260" rx="8" fill="#FFFFFF" stroke="#CBD5E1" filter="url(#cardShadow)"/>
+    <rect x="0" y="0" width="340" height="32" rx="8" fill="#EFF6FF"/>
+    <text x="15" y="21" font-size="12" font-weight="bold" fill="#1D4ED8">Record Macro Dialog Box</text>
+
+    <text x="20" y="60" font-size="11" font-weight="bold" fill="#334155">Macro Name:</text>
+    <rect x="20" y="68" width="300" height="26" rx="4" fill="#FFFFFF" stroke="#CBD5E1"/>
+    <text x="28" y="85" font-size="11" font-weight="bold" fill="#0F172A">FormatInvoiceReport</text>
+
+    <text x="20" y="115" font-size="11" font-weight="bold" fill="#334155">Assign macro to:</text>
+    <rect x="20" y="125" width="140" height="32" rx="4" fill="#F1F5F9" stroke="#94A3B8"/>
+    <text x="90" y="146" font-size="11" font-weight="bold" fill="#334155" text-anchor="middle">🔲 Button</text>
+
+    <rect x="180" y="125" width="140" height="32" rx="4" fill="#F1F5F9" stroke="#94A3B8"/>
+    <text x="250" y="146" font-size="11" font-weight="bold" fill="#334155" text-anchor="middle">⌨️ Keyboard</text>
+
+    <text x="20" y="180" font-size="11" font-weight="bold" fill="#334155">Store macro in:</text>
+    <rect x="20" y="188" width="300" height="26" rx="4" fill="#FFFFFF" stroke="#CBD5E1"/>
+    <text x="28" y="205" font-size="11" fill="#64748B">All Documents (Normal.dotm)</text>
+
+    <rect x="235" y="222" width="85" height="26" rx="4" fill="#185ABD"/>
+    <text x="277" y="239" font-size="11" font-weight="bold" fill="#FFFFFF" text-anchor="middle">OK</text>
+  </g>
+
+  <g transform="translate(410, 65)">
+    <!-- Card 2: VBA Editor Preview -->
+    <rect x="0" y="0" width="350" height="260" rx="8" fill="#1E293B" stroke="#0F172A" filter="url(#cardShadow)"/>
+    <rect x="0" y="0" width="350" height="32" rx="8" fill="#0F172A"/>
+    <text x="15" y="21" font-size="12" font-weight="bold" fill="#93C5FD">Visual Basic for Applications (Alt + F11)</text>
+
+    <g transform="translate(15, 50)">
+      <text x="0" y="15" font-size="11" font-family="monospace" fill="#38BDF8">Sub FormatInvoiceReport()</text>
+      <text x="15" y="35" font-size="11" font-family="monospace" fill="#94A3B8">' Automated document styling</text>
+      <text x="15" y="55" font-size="11" font-family="monospace" fill="#F1F5F9">With Selection.Font</text>
+      <text x="30" y="75" font-size="11" font-family="monospace" fill="#F1F5F9">.Name = <tspan fill="#FDE047">"Calibri"</tspan></text>
+      <text x="30" y="95" font-size="11" font-family="monospace" fill="#F1F5F9">.Size = <tspan fill="#F43F5E">12</tspan></text>
+      <text x="30" y="115" font-size="11" font-family="monospace" fill="#F1F5F9">.Bold = <tspan fill="#38BDF8">True</tspan></text>
+      <text x="15" y="135" font-size="11" font-family="monospace" fill="#F1F5F9">End With</text>
+      <text x="15" y="155" font-size="11" font-family="monospace" fill="#F1F5F9">ActiveDocument.Save</text>
+      <text x="0" y="175" font-size="11" font-family="monospace" fill="#38BDF8">End Sub</text>
+    </g>
+
+    <text x="15" y="245" font-size="10" fill="#94A3B8">Runs complex multi-step formatting in 0.1 seconds!</text>
+  </g>
+
+</svg>

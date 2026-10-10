@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="900" height="500" fill="url(#bgGrad)" rx="16"/>
+
+  <text x="450" y="42" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="22" font-weight="700" text-anchor="middle">Linear Algebra with numpy.linalg</text>
+  <text x="450" y="68" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="14" text-anchor="middle">Matrix Multiplication (@ operator), Determinant, Inversion &amp; Eigenvalues</text>
+
+  <!-- Matrix Multiplication Visual (Row x Col) -->
+  <g transform="translate(50, 100)">
+    <rect width="470" height="360" rx="10" fill="#1e293b" stroke="#3b82f6" stroke-width="1.5"/>
+    <rect width="470" height="35" rx="10" fill="#1d4ed8"/>
+    <text x="235" y="23" fill="#fff" font-family="system-ui, sans-serif" font-size="14" font-weight="700" text-anchor="middle">Matrix Dot Product: C = A @ B</text>
+
+    <!-- Matrix A (2x2) -->
+    <g transform="translate(30, 60)">
+      <text x="45" y="-10" fill="#93c5fd" font-family="monospace" font-size="12" text-anchor="middle">Matrix A (2x2)</text>
+      <!-- Row 0 highlighted -->
+      <rect x="0" y="0" width="42" height="32" fill="#0284c7" stroke="#38bdf8" stroke-width="2" rx="3"/><text x="21" y="21" fill="#fff" font-family="monospace" font-size="14" font-weight="700" text-anchor="middle">1</text>
+      <rect x="46" y="0" width="42" height="32" fill="#0284c7" stroke="#38bdf8" stroke-width="2" rx="3"/><text x="67" y="21" fill="#fff" font-family="monospace" font-size="14" font-weight="700" text-anchor="middle">2</text>
+      
+      <rect x="0" y="38" width="42" height="32" fill="#1e293b" stroke="#64748b" rx="3"/><text x="21" y="59" fill="#94a3b8" font-family="monospace" font-size="14" text-anchor="middle">3</text>
+      <rect x="46" y="38" width="42" height="32" fill="#1e293b" stroke="#64748b" rx="3"/><text x="67" y="59" fill="#94a3b8" font-family="monospace" font-size="14" text-anchor="middle">4</text>
+    </g>
+
+    <text x="145" y="105" fill="#f8fafc" font-family="monospace" font-size="24" font-weight="700">@</text>
+
+    <!-- Matrix B (2x2) -->
+    <g transform="translate(180, 60)">
+      <text x="45" y="-10" fill="#93c5fd" font-family="monospace" font-size="12" text-anchor="middle">Matrix B (2x2)</text>
+      <!-- Col 0 highlighted -->
+      <rect x="0" y="0" width="42" height="32" fill="#0284c7" stroke="#38bdf8" stroke-width="2" rx="3"/><text x="21" y="21" fill="#fff" font-family="monospace" font-size="14" font-weight="700" text-anchor="middle">5</text>
+      <rect x="46" y="0" width="42" height="32" fill="#1e293b" stroke="#64748b" rx="3"/><text x="67" y="21" fill="#94a3b8" font-family="monospace" font-size="14" text-anchor="middle">6</text>
+      
+      <rect x="0" y="38" width="42" height="32" fill="#0284c7" stroke="#38bdf8" stroke-width="2" rx="3"/><text x="21" y="59" fill="#fff" font-family="monospace" font-size="14" font-weight="700" text-anchor="middle">7</text>
+      <rect x="46" y="38" width="42" height="32" fill="#1e293b" stroke="#64748b" rx="3"/><text x="67" y="59" fill="#94a3b8" font-family="monospace" font-size="14" text-anchor="middle">8</text>
+    </g>
+
+    <text x="295" y="105" fill="#f8fafc" font-family="monospace" font-size="24" font-weight="700">=</text>
+
+    <!-- Matrix C (2x2) Result -->
+    <g transform="translate(330, 60)">
+      <text x="45" y="-10" fill="#34d399" font-family="monospace" font-size="12" text-anchor="middle">Result C (2x2)</text>
+      <rect x="0" y="0" width="42" height="32" fill="#059669" stroke="#34d399" stroke-width="2" rx="3"/><text x="21" y="21" fill="#fff" font-family="monospace" font-size="14" font-weight="700" text-anchor="middle">19</text>
+      <rect x="46" y="0" width="42" height="32" fill="#047857" stroke="#34d399" rx="3"/><text x="67" y="21" fill="#fff" font-family="monospace" font-size="14" text-anchor="middle">22</text>
+      
+      <rect x="0" y="38" width="42" height="32" fill="#047857" stroke="#34d399" rx="3"/><text x="21" y="59" fill="#fff" font-family="monospace" font-size="14" text-anchor="middle">43</text>
+      <rect x="46" y="38" width="42" height="32" fill="#047857" stroke="#34d399" rx="3"/><text x="67" y="59" fill="#fff" font-family="monospace" font-size="14" text-anchor="middle">50</text>
+    </g>
+
+    <!-- Calculation step -->
+    <rect x="25" y="160" width="420" height="60" fill="#0f172a" rx="6"/>
+    <text x="40" y="185" fill="#38bdf8" font-family="monospace" font-size="13">C[0, 0] = (1 * 5) + (2 * 7) = 5 + 14 = 19</text>
+    <text x="40" y="205" fill="#94a3b8" font-family="monospace" font-size="11">Notice: @ operator or np.matmul(A, B)</text>
+
+    <!-- Python vs Elementwise asterisk warning -->
+    <rect x="25" y="235" width="420" height="105" fill="#451a03" rx="6" stroke="#f59e0b"/>
+    <text x="40" y="260" fill="#f59e0b" font-family="system-ui, sans-serif" font-size="13" font-weight="700">Crucial Distinction: * vs. @</text>
+    <text x="40" y="285" fill="#fed7aa" font-family="monospace" font-size="12">A * B  -&gt; Element-wise: [1*5, 2*6, 3*7, 4*8]</text>
+    <text x="40" y="305" fill="#fed7aa" font-family="monospace" font-size="12">A @ B  -&gt; True Matrix Dot Product</text>
+    <text x="40" y="325" fill="#34d399" font-family="monospace" font-size="11">np.dot(A, B) performs matrix multiplication for 2D</text>
+  </g>
+
+  <!-- Right: numpy.linalg Toolkit -->
+  <g transform="translate(545, 100)">
+    <rect width="305" height="360" rx="10" fill="#1e293b" stroke="#8b5cf6" stroke-width="1.5"/>
+    <rect width="305" height="35" rx="10" fill="#7c3aed"/>
+    <text x="152" y="23" fill="#fff" font-family="system-ui, sans-serif" font-size="14" font-weight="700" text-anchor="middle">numpy.linalg Master Functions</text>
+
+    <g transform="translate(20, 55)">
+      <text x="0" y="20" fill="#c4b5fd" font-family="monospace" font-size="13" font-weight="700">1. Matrix Inversion:</text>
+      <text x="10" y="40" fill="#f8fafc" font-family="monospace" font-size="12">inv_A = np.linalg.inv(A)</text>
+      <text x="10" y="58" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="11">Satisfies: A @ inv_A = np.eye(N)</text>
+
+      <text x="0" y="90" fill="#c4b5fd" font-family="monospace" font-size="13" font-weight="700">2. Determinant:</text>
+      <text x="10" y="110" fill="#f8fafc" font-family="monospace" font-size="12">det_A = np.linalg.det(A)</text>
+
+      <text x="0" y="145" fill="#c4b5fd" font-family="monospace" font-size="13" font-weight="700">3. Solve Linear System (Ax = b):</text>
+      <text x="10" y="165" fill="#f8fafc" font-family="monospace" font-size="12">x = np.linalg.solve(A, b)</text>
+
+      <text x="0" y="200" fill="#c4b5fd" font-family="monospace" font-size="13" font-weight="700">4. Eigenvalues &amp; Vectors:</text>
+      <text x="10" y="220" fill="#f8fafc" font-family="monospace" font-size="12">w, v = np.linalg.eig(A)</text>
+      <text x="10" y="238" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="11">Core of PCA &amp; Machine Learning</text>
+
+      <text x="0" y="270" fill="#c4b5fd" font-family="monospace" font-size="13" font-weight="700">5. SVD (Singular Value Decomp):</text>
+      <text x="10" y="290" fill="#f8fafc" font-family="monospace" font-size="12">U, S, Vt = np.linalg.svd(A)</text>
+    </g>
+  </g>
+</svg>

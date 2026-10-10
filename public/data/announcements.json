@@ -1,0 +1,40 @@
+[
+  {
+    "id": "ann-1",
+    "icon": "📢",
+    "badge": "Admissions Open",
+    "text": "Save up to 20% on early registration for Python & MERN Stack Live Batches!",
+    "active": true,
+    "startDate": "2026-08-01",
+    "endDate": "2026-09-30"
+  },
+  {
+    "id": "ann-2",
+    "icon": "🔥",
+    "badge": "Special Offer",
+    "text": "Enroll in any course this week to get free access to Premium Study Notes downloads.",
+    "active": true,
+    "startDate": "2026-08-01",
+    "endDate": "2026-09-30"
+  },
+  {
+    "id": "ann-3",
+    "icon": "⚡",
+    "badge": "Live Updates",
+    "text": "New trial batches are now active. Book your class room seats.",
+    "active": true,
+    "link": "/live",
+    "startDate": "2026-08-01",
+    "endDate": "2026-09-30"
+  },
+  {
+    "id": "ann-4",
+    "icon": "🚀",
+    "badge": "Registry",
+    "text": "Graduate credentials are fully queryable online via our dynamic certificate verification portal.",
+    "active": true,
+    "link": "/verify-certificate",
+    "startDate": "2026-08-01",
+    "endDate": "2026-09-30"
+  }
+]

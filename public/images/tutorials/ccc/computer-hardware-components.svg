@@ -1,0 +1,112 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520" width="100%" height="100%" style="background:#090d16;font-family:system-ui,-apple-system,sans-serif;">
+  <defs>
+    <linearGradient id="primaryGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4f46e5" />
+      <stop offset="100%" stop-color="#7c3aed" />
+    </linearGradient>
+    <linearGradient id="cpuGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#059669" />
+      <stop offset="100%" stop-color="#10b981" />
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1e293b" />
+      <stop offset="100%" stop-color="#0f172a" />
+    </linearGradient>
+  </defs>
+
+  <!-- Title -->
+  <text x="450" y="42" fill="#f8fafc" font-size="22" font-weight="bold" text-anchor="middle">Computer Architecture &amp; Hardware Components (कंप्यूटर संरचना)</text>
+  <text x="450" y="68" fill="#94a3b8" font-size="13" text-anchor="middle">Input Unit → Central Processing Unit (CPU) → Output Unit | Primary &amp; Secondary Memory</text>
+
+  <!-- INPUT DEVICES BOX -->
+  <rect x="30" y="100" width="220" height="370" rx="14" fill="url(#cardGrad)" stroke="#38bdf8" stroke-width="2" />
+  <rect x="30" y="100" width="220" height="42" rx="14" fill="#0284c7" />
+  <text x="140" y="127" fill="#ffffff" font-size="15" font-weight="bold" text-anchor="middle">1. INPUT DEVICES (इनपुट)</text>
+  
+  <g transform="translate(45, 160)" fill="#e2e8f0" font-size="13">
+    <rect x="0" y="0" width="190" height="34" rx="8" fill="#1e293b" stroke="#334155" />
+    <text x="95" y="22" text-anchor="middle">⌨️ Keyboard (कीबोर्ड)</text>
+    
+    <rect x="0" y="44" width="190" height="34" rx="8" fill="#1e293b" stroke="#334155" />
+    <text x="95" y="66" text-anchor="middle">🖱️ Mouse (माउस - Optical)</text>
+    
+    <rect x="0" y="88" width="190" height="34" rx="8" fill="#1e293b" stroke="#334155" />
+    <text x="95" y="110" text-anchor="middle">📄 Scanner &amp; OMR / OCR</text>
+    
+    <rect x="0" y="132" width="190" height="34" rx="8" fill="#1e293b" stroke="#334155" />
+    <text x="95" y="154" text-anchor="middle">🎙️ Microphone (माइक्रोफोन)</text>
+    
+    <rect x="0" y="176" width="190" height="34" rx="8" fill="#1e293b" stroke="#334155" />
+    <text x="95" y="198" text-anchor="middle">📷 Web Camera (वेबकैम)</text>
+    
+    <rect x="0" y="220" width="190" height="34" rx="8" fill="#1e293b" stroke="#334155" />
+    <text x="95" y="242" text-anchor="middle">📊 Barcode &amp; QR Reader</text>
+  </g>
+  <text x="140" y="450" fill="#38bdf8" font-size="12" font-style="italic" text-anchor="middle">Takes data from User</text>
+
+  <!-- ARROW INPUT TO CPU -->
+  <path d="M 252 285 L 290 285" stroke="#38bdf8" stroke-width="4" fill="none" marker-end="url(#arrow)" />
+  <polygon points="290,285 280,278 280,292" fill="#38bdf8" />
+
+  <!-- CPU & MEMORY (CENTER BIG BOX) -->
+  <rect x="295" y="90" width="310" height="390" rx="16" fill="url(#cardGrad)" stroke="#10b981" stroke-width="2.5" />
+  <rect x="295" y="90" width="310" height="42" rx="16" fill="url(#cpuGrad)" />
+  <text x="450" y="117" fill="#ffffff" font-size="15" font-weight="bold" text-anchor="middle">2. CPU - Central Processing Unit (दिमाग)</text>
+
+  <!-- Inside CPU: CU and ALU -->
+  <g transform="translate(315, 145)">
+    <!-- CU -->
+    <rect x="0" y="0" width="270" height="60" rx="10" fill="#0f172a" stroke="#10b981" stroke-width="1.5" />
+    <text x="135" y="26" fill="#34d399" font-size="14" font-weight="bold" text-anchor="middle">Control Unit (CU)</text>
+    <text x="135" y="48" fill="#94a3b8" font-size="11" text-anchor="middle">Manages all operations &amp; flow (ट्रैफिक पुलिस)</text>
+
+    <!-- ALU -->
+    <rect x="0" y="70" width="270" height="60" rx="10" fill="#0f172a" stroke="#10b981" stroke-width="1.5" />
+    <text x="135" y="96" fill="#34d399" font-size="14" font-weight="bold" text-anchor="middle">ALU (Arithmetic &amp; Logic Unit)</text>
+    <text x="135" y="118" fill="#94a3b8" font-size="11" text-anchor="middle">Mathematical (+,-,*,/) &amp; Logical (&gt;,&lt;,=) Work</text>
+
+    <!-- Registers / Cache -->
+    <rect x="0" y="140" width="270" height="40" rx="8" fill="#0f172a" stroke="#eab308" />
+    <text x="135" y="165" fill="#facc15" font-size="12" font-weight="bold" text-anchor="middle">High-Speed CPU Registers &amp; Cache (L1/L2/L3)</text>
+
+    <!-- PRIMARY MEMORY -->
+    <rect x="0" y="190" width="270" height="65" rx="10" fill="#0f172a" stroke="#6366f1" stroke-width="1.5" />
+    <text x="135" y="214" fill="#a5b4fc" font-size="13" font-weight="bold" text-anchor="middle">Primary Memory (मुख्य मेमोरी)</text>
+    <text x="135" y="235" fill="#cbd5e1" font-size="11" text-anchor="middle">RAM (Volatile / अस्थायी) | ROM (Non-Volatile / BIOS)</text>
+
+    <!-- SECONDARY STORAGE -->
+    <rect x="0" y="265" width="270" height="55" rx="10" fill="#0f172a" stroke="#f43f5e" stroke-width="1.5" />
+    <text x="135" y="288" fill="#fda4af" font-size="13" font-weight="bold" text-anchor="middle">Secondary Storage (स्थायी स्टोरेज)</text>
+    <text x="135" y="307" fill="#cbd5e1" font-size="11" text-anchor="middle">SSD / Hard Disk / Pen Drive / Memory Card</text>
+  </g>
+
+  <!-- ARROW CPU TO OUTPUT -->
+  <path d="M 607 285 L 645 285" stroke="#ec4899" stroke-width="4" fill="none" />
+  <polygon points="645,285 635,278 635,292" fill="#ec4899" />
+
+  <!-- OUTPUT DEVICES BOX -->
+  <rect x="650" y="100" width="220" height="370" rx="14" fill="url(#cardGrad)" stroke="#ec4899" stroke-width="2" />
+  <rect x="650" y="100" width="220" height="42" rx="14" fill="#db2777" />
+  <text x="760" y="127" fill="#ffffff" font-size="15" font-weight="bold" text-anchor="middle">3. OUTPUT DEVICES (आउटपुट)</text>
+
+  <g transform="translate(665, 160)" fill="#e2e8f0" font-size="13">
+    <rect x="0" y="0" width="190" height="34" rx="8" fill="#1e293b" stroke="#334155" />
+    <text x="95" y="22" text-anchor="middle">🖥️ Monitor (VDU - Soft Copy)</text>
+    
+    <rect x="0" y="44" width="190" height="34" rx="8" fill="#1e293b" stroke="#334155" />
+    <text x="95" y="66" text-anchor="middle">🖨️ Printer (Hard Copy Output)</text>
+    
+    <rect x="0" y="88" width="190" height="34" rx="8" fill="#1e293b" stroke="#334155" />
+    <text x="95" y="110" text-anchor="middle">🔈 Speakers &amp; Headphones</text>
+    
+    <rect x="0" y="132" width="190" height="34" rx="8" fill="#1e293b" stroke="#334155" />
+    <text x="95" y="154" text-anchor="middle">📽️ Projector (प्रोजेक्टर)</text>
+    
+    <rect x="0" y="176" width="190" height="34" rx="8" fill="#1e293b" stroke="#334155" />
+    <text x="95" y="198" text-anchor="middle">📐 Plotter (Large Blueprints)</text>
+    
+    <rect x="0" y="220" width="190" height="34" rx="8" fill="#1e293b" stroke="#334155" />
+    <text x="95" y="242" text-anchor="middle">📳 Braille Reader (Special)</text>
+  </g>
+  <text x="760" y="450" fill="#ec4899" font-size="12" font-style="italic" text-anchor="middle">Gives Results to User</text>
+</svg>

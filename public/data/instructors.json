@@ -1,0 +1,46 @@
+[
+  {
+    "id": "sumit-kumar",
+    "name": "Sumit Kumar",
+    "designation": "Founder",
+    "qualification": "B.Tech in Computer Science & Engineering",
+    "experience": "8+ Years",
+    "picture": "/assets/img/instructors/sumit-kumar.webp",
+    "bio": "Founder of MSK Institute with over 8+ years of expertise in software development, Python architectures, Full-Stack engineering, and coaching over 1,200+ students to successful technical careers in Shikohabad and across India.",
+    "specialties": [
+      "Python & OOP",
+      "Full-Stack MERN",
+      "System Design & Logic Building",
+      "Database Architecture",
+      "CCC & NIELIT Certification"
+    ],
+    "social": {
+      "github": "https://github.com/mskinstitute",
+      "linkedin": "https://linkedin.com/company/msk-institute",
+      "youtube": "https://youtube.com/@mskinstitute"
+    },
+    "rating": 4.9,
+    "studentsCount": 1200
+  },
+  {
+    "id": "manish-sharma",
+    "name": "Er. Manish Sharma",
+    "designation": "Senior Frontend & UI/UX Mentor",
+    "qualification": "MCA (Master of Computer Applications)",
+    "experience": "5+ Years",
+    "picture": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=400&auto=format&fit=crop",
+    "bio": "Senior frontend developer with 5+ years of practical industry experience building scalable React, Tailwind CSS, and modern interactive web interfaces with practical classroom mentorship.",
+    "specialties": [
+      "Modern JavaScript & TypeScript",
+      "React.js & Next.js",
+      "Tailwind CSS & Responsive UI",
+      "Web Accessibility & UX"
+    ],
+    "social": {
+      "github": "https://github.com/mskinstitute",
+      "linkedin": "https://linkedin.com/company/msk-institute"
+    },
+    "rating": 4.8,
+    "studentsCount": 650
+  }
+]

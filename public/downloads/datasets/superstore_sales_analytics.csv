@@ -1,0 +1,251 @@
+OrderID,OrderDate,ShipDate,ShipMode,CustomerID,CustomerName,Segment,City,Region,Category,SubCategory,Sales,Quantity,Discount,Profit
+IN-2025-10001,2025-02-21,2025-02-22,First Class,CUST-116,Ayaan Patel,Home Office,Mumbai,Central,Technology,Monitors,32807.8,4,0.05,4161.78
+IN-2025-10002,2025-10-17,2025-10-18,Second Class,CUST-135,Aadhya Gupta,Corporate,Lucknow,East,Technology,Phones,51176.27,3,0.05,10146.09
+IN-2025-10003,2025-06-25,2025-06-26,Standard Class,CUST-125,Vihaan Kumar,Corporate,Lucknow,East,Technology,Printers,42535.97,7,0.0,14624.57
+IN-2025-10004,2025-05-18,2025-05-23,First Class,CUST-137,Reyansh Iyer,Consumer,New Delhi,South,Furniture,Chairs,27333.15,7,0.1,5738.46
+IN-2025-10005,2025-11-15,2025-11-18,Second Class,CUST-124,Saanvi Gupta,Home Office,Pune,North,Office Supplies,Envelopes,868.25,3,0.15,331.92
+IN-2025-10006,2025-05-13,2025-05-18,Second Class,CUST-121,Vivaan Gupta,Consumer,Chennai,West,Furniture,Chairs,9263.88,6,0.05,2157.31
+IN-2025-10007,2025-08-21,2025-08-25,Same Day,CUST-110,Krishna Patel,Consumer,Jaipur,Central,Furniture,Furnishings,30143.81,4,0.05,2104.65
+IN-2025-10008,2025-08-17,2025-08-18,Standard Class,CUST-108,Arjun Nair,Consumer,Kolkata,Central,Technology,Printers,25370.68,5,0.2,8857.11
+IN-2025-10009,2025-01-28,2025-01-29,First Class,CUST-122,Vihaan Singh,Corporate,Bengaluru,West,Technology,Accessories,54774.13,2,0.25,16172.13
+IN-2025-10010,2025-11-10,2025-11-15,Second Class,CUST-110,Saanvi Chauhan,Consumer,Jaipur,Central,Technology,Monitors,24921.83,6,0.1,3102.26
+IN-2025-10011,2025-01-08,2025-01-10,Standard Class,CUST-106,Kavya Mehta,Consumer,Jaipur,South,Technology,Printers,67715.44,7,0.05,10697.63
+IN-2025-10012,2025-12-18,2025-12-20,First Class,CUST-126,Saanvi Joshi,Home Office,Ahmedabad,North,Technology,Phones,7585.45,4,0.2,946.95
+IN-2025-10013,2025-01-08,2025-01-09,Standard Class,CUST-115,Aditya Sharma,Corporate,Mumbai,Central,Technology,Accessories,38871.33,3,0.25,6579.92
+IN-2025-10014,2025-10-19,2025-10-23,Second Class,CUST-131,Aadhya Gupta,Consumer,Mumbai,West,Furniture,Furnishings,12116.45,1,0.25,2534.17
+IN-2025-10015,2025-11-21,2025-11-22,Standard Class,CUST-126,Diya Chauhan,Consumer,Hyderabad,South,Technology,Monitors,30942.51,5,0.15,6715.54
+IN-2025-10016,2025-02-08,2025-02-12,Standard Class,CUST-104,Pooja Mehta,Consumer,Mumbai,South,Technology,Printers,38994.88,7,0.0,6596.45
+IN-2025-10017,2025-07-06,2025-07-07,Same Day,CUST-117,Pari Singh,Corporate,Jaipur,West,Technology,Phones,19327.16,1,0.25,6625.41
+IN-2025-10018,2025-01-11,2025-01-12,Same Day,CUST-133,Sneha Patel,Consumer,Jaipur,North,Technology,Laptops,39654.59,4,0.15,10916.86
+IN-2025-10019,2025-10-04,2025-10-06,Standard Class,CUST-140,Aditya Mishra,Home Office,Lucknow,Central,Office Supplies,Paper,4452.26,6,0.05,1117.81
+IN-2025-10020,2025-07-09,2025-07-11,First Class,CUST-130,Diya Chauhan,Consumer,New Delhi,West,Office Supplies,Fasteners,3985.01,4,0.2,869.99
+IN-2025-10021,2025-03-09,2025-03-12,Standard Class,CUST-116,Saanvi Singh,Consumer,Ahmedabad,Central,Office Supplies,Paper,2352.04,1,0.25,1050.91
+IN-2025-10022,2025-09-27,2025-09-30,Standard Class,CUST-109,Krishna Verma,Consumer,Jaipur,South,Furniture,Bookcases,16765.91,4,0.25,2771.13
+IN-2025-10023,2025-05-21,2025-05-26,Same Day,CUST-117,Vivaan Verma,Home Office,Kolkata,East,Technology,Laptops,26931.51,5,0.05,4042.11
+IN-2025-10024,2025-08-24,2025-08-29,Same Day,CUST-136,Aarav Verma,Consumer,Bengaluru,Central,Technology,Accessories,45775.67,3,0.0,7052.27
+IN-2025-10025,2025-06-10,2025-06-11,First Class,CUST-114,Ayaan Nair,Consumer,Chennai,Central,Furniture,Tables,30993.22,3,0.05,651.51
+IN-2025-10026,2025-01-14,2025-01-16,First Class,CUST-127,Ayaan Singh,Consumer,Mumbai,West,Technology,Printers,18513.32,8,0.1,5698.68
+IN-2025-10027,2025-04-10,2025-04-12,Standard Class,CUST-113,Ananya Kumar,Corporate,Mumbai,East,Furniture,Furnishings,24744.58,6,0.0,5025.58
+IN-2025-10028,2025-05-04,2025-05-06,First Class,CUST-103,Vihaan Reddy,Corporate,Chennai,East,Furniture,Chairs,15326.25,5,0.0,1884.77
+IN-2025-10029,2025-07-23,2025-07-24,Second Class,CUST-124,Aadhya Verma,Home Office,Chennai,Central,Furniture,Chairs,19524.1,5,0.25,782.85
+IN-2025-10030,2025-06-14,2025-06-18,First Class,CUST-136,Arjun Gupta,Corporate,Kolkata,South,Office Supplies,Fasteners,1480.1,1,0.1,498.77
+IN-2025-10031,2025-04-10,2025-04-14,First Class,CUST-130,Pari Joshi,Home Office,Hyderabad,Central,Furniture,Tables,24083.22,6,0.0,846.19
+IN-2025-10032,2025-04-27,2025-04-30,Second Class,CUST-113,Arjun Sharma,Consumer,Hyderabad,West,Office Supplies,Storage,1789.5,4,0.25,754.34
+IN-2025-10033,2025-07-23,2025-07-27,Same Day,CUST-116,Arjun Nair,Home Office,New Delhi,North,Furniture,Tables,8628.37,8,0.0,2048.29
+IN-2025-10034,2025-04-18,2025-04-19,Same Day,CUST-109,Pari Nair,Home Office,Jaipur,Central,Furniture,Furnishings,18083.9,7,0.2,2997.99
+IN-2025-10035,2025-03-15,2025-03-19,Same Day,CUST-117,Ayaan Mehta,Home Office,Pune,Central,Furniture,Tables,11197.76,5,0.05,-299.6
+IN-2025-10036,2025-06-09,2025-06-12,Standard Class,CUST-109,Arjun Gupta,Corporate,Bengaluru,South,Technology,Printers,33531.96,7,0.0,8208.64
+IN-2025-10037,2025-07-07,2025-07-11,Standard Class,CUST-137,Ananya Joshi,Consumer,Chennai,East,Furniture,Furnishings,17189.6,4,0.15,2928.94
+IN-2025-10038,2025-05-08,2025-05-12,Same Day,CUST-102,Ananya Kumar,Home Office,Kolkata,South,Furniture,Tables,27506.48,7,0.2,3032.23
+IN-2025-10039,2025-11-19,2025-11-20,Standard Class,CUST-128,Arjun Mehta,Corporate,Bengaluru,North,Furniture,Furnishings,11454.0,6,0.15,989.74
+IN-2025-10040,2025-07-09,2025-07-12,Standard Class,CUST-131,Aarav Iyer,Home Office,New Delhi,East,Technology,Laptops,56701.99,1,0.05,15304.07
+IN-2025-10041,2025-01-07,2025-01-12,Second Class,CUST-116,Arjun Joshi,Home Office,Mumbai,Central,Technology,Printers,43170.04,3,0.2,12795.02
+IN-2025-10042,2025-12-20,2025-12-21,Second Class,CUST-120,Vihaan Reddy,Consumer,Pune,Central,Office Supplies,Art,1683.15,2,0.2,637.5
+IN-2025-10043,2025-11-23,2025-11-25,Standard Class,CUST-120,Meera Chauhan,Consumer,Lucknow,North,Furniture,Furnishings,24168.68,6,0.0,-708.46
+IN-2025-10044,2025-07-28,2025-07-32,Standard Class,CUST-128,Saanvi Nair,Corporate,Bengaluru,West,Technology,Monitors,61695.69,8,0.15,11235.95
+IN-2025-10045,2025-12-14,2025-12-19,First Class,CUST-121,Ayaan Mehta,Consumer,Pune,West,Technology,Printers,44889.48,6,0.0,12285.5
+IN-2025-10046,2025-06-16,2025-06-18,Same Day,CUST-114,Saanvi Chauhan,Corporate,Chennai,East,Office Supplies,Envelopes,4424.52,4,0.0,1499.68
+IN-2025-10047,2025-12-08,2025-12-12,Same Day,CUST-136,Ayaan Iyer,Corporate,Ahmedabad,West,Technology,Laptops,23036.84,4,0.1,4907.13
+IN-2025-10048,2025-10-22,2025-10-25,Same Day,CUST-136,Sneha Kumar,Corporate,Jaipur,East,Furniture,Furnishings,8752.0,2,0.25,222.49
+IN-2025-10049,2025-06-07,2025-06-08,Second Class,CUST-113,Reyansh Iyer,Corporate,Pune,Central,Office Supplies,Fasteners,1402.55,4,0.1,315.76
+IN-2025-10050,2025-06-08,2025-06-10,First Class,CUST-101,Pooja Patel,Corporate,New Delhi,North,Office Supplies,Paper,3547.6,8,0.0,821.52
+IN-2025-10051,2025-01-28,2025-01-33,First Class,CUST-131,Kavya Joshi,Corporate,Bengaluru,North,Furniture,Furnishings,6650.79,8,0.0,-202.16
+IN-2025-10052,2025-11-19,2025-11-20,Second Class,CUST-110,Riya Singh,Consumer,Hyderabad,North,Office Supplies,Art,2488.26,4,0.2,989.54
+IN-2025-10053,2025-08-13,2025-08-17,First Class,CUST-138,Aadhya Singh,Home Office,Lucknow,North,Office Supplies,Envelopes,608.69,4,0.1,237.81
+IN-2025-10054,2025-02-22,2025-02-24,Second Class,CUST-112,Pooja Verma,Consumer,New Delhi,West,Furniture,Furnishings,9240.22,5,0.25,179.66
+IN-2025-10055,2025-08-28,2025-08-29,Second Class,CUST-117,Riya Nair,Consumer,Kolkata,North,Office Supplies,Binders,3308.65,3,0.0,1413.13
+IN-2025-10056,2025-03-02,2025-03-05,First Class,CUST-129,Vihaan Joshi,Home Office,Pune,West,Furniture,Furnishings,12756.21,7,0.25,1650.79
+IN-2025-10057,2025-10-11,2025-10-14,Standard Class,CUST-106,Ayaan Nair,Home Office,Lucknow,North,Office Supplies,Paper,2521.09,3,0.15,985.18
+IN-2025-10058,2025-11-17,2025-11-21,First Class,CUST-112,Riya Mishra,Home Office,Ahmedabad,North,Furniture,Bookcases,15263.78,2,0.05,706.98
+IN-2025-10059,2025-07-11,2025-07-15,First Class,CUST-126,Pooja Sharma,Corporate,Mumbai,East,Furniture,Bookcases,5032.12,1,0.25,914.66
+IN-2025-10060,2025-09-28,2025-09-32,Same Day,CUST-104,Reyansh Yadav,Corporate,Lucknow,West,Office Supplies,Art,3463.15,3,0.1,868.87
+IN-2025-10061,2025-12-15,2025-12-19,Standard Class,CUST-102,Meera Chauhan,Consumer,Bengaluru,East,Office Supplies,Storage,2423.19,2,0.15,541.1
+IN-2025-10062,2025-11-04,2025-11-06,Same Day,CUST-119,Sneha Iyer,Corporate,Kolkata,West,Furniture,Tables,14093.74,4,0.2,-93.12
+IN-2025-10063,2025-12-17,2025-12-19,Standard Class,CUST-118,Aadhya Kumar,Home Office,Pune,North,Furniture,Bookcases,28309.27,8,0.05,3509.7
+IN-2025-10064,2025-09-15,2025-09-19,First Class,CUST-122,Pooja Chauhan,Home Office,Kolkata,West,Furniture,Tables,32665.55,7,0.05,706.94
+IN-2025-10065,2025-07-28,2025-07-29,First Class,CUST-131,Ananya Mishra,Home Office,Bengaluru,West,Technology,Phones,34136.32,2,0.15,8730.07
+IN-2025-10066,2025-09-04,2025-09-08,Standard Class,CUST-110,Aadhya Mehta,Home Office,Bengaluru,North,Furniture,Bookcases,12450.56,2,0.1,1964.84
+IN-2025-10067,2025-11-28,2025-11-33,Same Day,CUST-121,Kavya Mehta,Home Office,New Delhi,Central,Technology,Phones,36885.95,4,0.25,12239.26
+IN-2025-10068,2025-07-03,2025-07-04,Standard Class,CUST-129,Sai Iyer,Corporate,New Delhi,North,Furniture,Chairs,11768.38,3,0.05,734.96
+IN-2025-10069,2025-07-17,2025-07-22,Second Class,CUST-111,Sai Verma,Home Office,Kolkata,Central,Office Supplies,Binders,2200.48,4,0.15,760.9
+IN-2025-10070,2025-05-21,2025-05-25,First Class,CUST-101,Pari Singh,Home Office,Jaipur,South,Technology,Printers,53374.87,5,0.25,18529.61
+IN-2025-10071,2025-12-14,2025-12-17,Same Day,CUST-120,Reyansh Mishra,Corporate,Mumbai,South,Furniture,Bookcases,21393.98,5,0.0,5301.59
+IN-2025-10072,2025-11-27,2025-11-31,First Class,CUST-101,Riya Mehta,Home Office,New Delhi,Central,Office Supplies,Art,3358.1,4,0.2,1429.66
+IN-2025-10073,2025-06-26,2025-06-28,Second Class,CUST-140,Krishna Nair,Home Office,Bengaluru,North,Office Supplies,Envelopes,311.38,1,0.2,123.67
+IN-2025-10074,2025-12-12,2025-12-14,Standard Class,CUST-119,Diya Iyer,Corporate,Bengaluru,South,Technology,Monitors,63034.63,5,0.05,12868.35
+IN-2025-10075,2025-08-09,2025-08-12,First Class,CUST-108,Pari Verma,Consumer,Hyderabad,West,Office Supplies,Paper,506.76,5,0.2,151.34
+IN-2025-10076,2025-08-04,2025-08-07,First Class,CUST-138,Ananya Mehta,Home Office,Chennai,North,Office Supplies,Binders,1970.47,6,0.2,699.29
+IN-2025-10077,2025-11-08,2025-11-09,Same Day,CUST-120,Aadhya Verma,Consumer,New Delhi,North,Furniture,Furnishings,5708.48,3,0.15,116.68
+IN-2025-10078,2025-06-15,2025-06-20,Same Day,CUST-138,Arjun Mishra,Home Office,Mumbai,West,Office Supplies,Art,4472.08,6,0.05,1207.17
+IN-2025-10079,2025-08-15,2025-08-17,First Class,CUST-107,Saanvi Yadav,Home Office,Chennai,North,Furniture,Bookcases,9073.87,8,0.0,-121.16
+IN-2025-10080,2025-04-22,2025-04-27,Standard Class,CUST-104,Diya Gupta,Consumer,Lucknow,South,Technology,Monitors,17550.92,4,0.1,2977.84
+IN-2025-10081,2025-03-25,2025-03-30,Standard Class,CUST-118,Arjun Patel,Home Office,Pune,South,Technology,Laptops,11380.98,4,0.2,2303.46
+IN-2025-10082,2025-01-11,2025-01-13,First Class,CUST-104,Arjun Iyer,Corporate,Jaipur,North,Office Supplies,Storage,2113.08,2,0.15,833.62
+IN-2025-10083,2025-04-17,2025-04-22,Standard Class,CUST-134,Ishaan Joshi,Home Office,New Delhi,North,Furniture,Furnishings,16640.76,8,0.0,-293.07
+IN-2025-10084,2025-06-03,2025-06-08,Second Class,CUST-105,Arjun Singh,Home Office,Lucknow,Central,Office Supplies,Paper,1724.09,5,0.15,602.31
+IN-2025-10085,2025-10-17,2025-10-21,Standard Class,CUST-108,Pooja Iyer,Consumer,Kolkata,West,Technology,Printers,21543.91,7,0.25,4832.4
+IN-2025-10086,2025-06-04,2025-06-08,First Class,CUST-117,Saanvi Patel,Home Office,Ahmedabad,North,Technology,Laptops,10949.8,6,0.05,1557.17
+IN-2025-10087,2025-01-18,2025-01-23,First Class,CUST-108,Aadhya Kumar,Home Office,Kolkata,North,Furniture,Bookcases,13540.05,4,0.05,1670.51
+IN-2025-10088,2025-08-22,2025-08-24,Standard Class,CUST-123,Pooja Kumar,Consumer,Pune,Central,Technology,Printers,51328.69,1,0.2,17664.55
+IN-2025-10089,2025-12-22,2025-12-25,Standard Class,CUST-112,Krishna Iyer,Corporate,Chennai,East,Technology,Phones,65890.39,7,0.0,16489.32
+IN-2025-10090,2025-12-05,2025-12-06,Standard Class,CUST-134,Reyansh Mishra,Corporate,Ahmedabad,East,Technology,Accessories,26814.62,2,0.0,5218.34
+IN-2025-10091,2025-03-05,2025-03-10,Standard Class,CUST-106,Krishna Joshi,Home Office,Kolkata,West,Office Supplies,Art,1969.27,2,0.1,499.98
+IN-2025-10092,2025-02-14,2025-02-17,Same Day,CUST-134,Ishaan Sharma,Consumer,Kolkata,Central,Technology,Laptops,17378.66,3,0.1,5863.99
+IN-2025-10093,2025-06-10,2025-06-11,Standard Class,CUST-132,Aadhya Patel,Consumer,Kolkata,Central,Office Supplies,Binders,2601.26,6,0.0,1062.19
+IN-2025-10094,2025-12-13,2025-12-14,Same Day,CUST-102,Pari Verma,Corporate,Lucknow,West,Office Supplies,Art,3064.76,2,0.15,932.98
+IN-2025-10095,2025-06-01,2025-06-03,Same Day,CUST-124,Aditya Mishra,Consumer,Hyderabad,West,Office Supplies,Art,2036.26,5,0.25,608.72
+IN-2025-10096,2025-04-11,2025-04-14,Second Class,CUST-105,Sneha Nair,Consumer,Jaipur,Central,Technology,Accessories,28098.13,3,0.05,9564.36
+IN-2025-10097,2025-03-04,2025-03-07,Second Class,CUST-112,Meera Patel,Home Office,Mumbai,South,Office Supplies,Art,1820.23,8,0.25,620.58
+IN-2025-10098,2025-11-19,2025-11-24,First Class,CUST-121,Arjun Joshi,Consumer,Ahmedabad,West,Office Supplies,Paper,3217.9,6,0.2,1119.36
+IN-2025-10099,2025-05-03,2025-05-07,Same Day,CUST-103,Vivaan Kumar,Corporate,Mumbai,North,Office Supplies,Fasteners,2238.84,1,0.15,706.75
+IN-2025-10100,2025-10-26,2025-10-28,First Class,CUST-139,Kavya Yadav,Consumer,New Delhi,West,Technology,Accessories,73766.99,3,0.0,10282.8
+IN-2025-10101,2025-12-08,2025-12-12,Same Day,CUST-134,Sneha Reddy,Consumer,Chennai,East,Furniture,Furnishings,12060.47,1,0.25,621.24
+IN-2025-10102,2025-06-21,2025-06-22,First Class,CUST-107,Pooja Nair,Corporate,Pune,East,Office Supplies,Envelopes,4346.25,3,0.1,1524.12
+IN-2025-10103,2025-10-03,2025-10-05,First Class,CUST-120,Ananya Patel,Home Office,Mumbai,East,Office Supplies,Art,2466.58,3,0.25,695.87
+IN-2025-10104,2025-12-23,2025-12-28,Standard Class,CUST-128,Sneha Kumar,Consumer,Chennai,East,Technology,Phones,27475.2,4,0.05,8138.59
+IN-2025-10105,2025-03-05,2025-03-06,First Class,CUST-107,Sneha Chauhan,Home Office,Jaipur,North,Office Supplies,Paper,4186.36,7,0.05,1484.1
+IN-2025-10106,2025-03-06,2025-03-11,Second Class,CUST-129,Vivaan Mishra,Corporate,Hyderabad,West,Office Supplies,Paper,3049.18,4,0.2,1207.32
+IN-2025-10107,2025-05-08,2025-05-12,Second Class,CUST-124,Riya Joshi,Corporate,Pune,West,Office Supplies,Fasteners,1767.66,4,0.2,425.15
+IN-2025-10108,2025-05-05,2025-05-06,Same Day,CUST-124,Pooja Verma,Home Office,Jaipur,North,Furniture,Chairs,23306.78,3,0.15,742.03
+IN-2025-10109,2025-04-03,2025-04-07,First Class,CUST-102,Aadhya Sharma,Corporate,Jaipur,East,Technology,Printers,67155.09,1,0.1,13849.39
+IN-2025-10110,2025-12-04,2025-12-07,Second Class,CUST-109,Vivaan Singh,Corporate,Bengaluru,West,Furniture,Chairs,30388.07,4,0.05,-1346.16
+IN-2025-10111,2025-12-18,2025-12-23,Same Day,CUST-108,Ishaan Gupta,Corporate,Mumbai,North,Technology,Printers,49726.62,2,0.0,13090.36
+IN-2025-10112,2025-08-27,2025-08-32,Standard Class,CUST-133,Riya Gupta,Home Office,Bengaluru,East,Furniture,Chairs,21540.21,7,0.05,477.53
+IN-2025-10113,2025-11-22,2025-11-23,First Class,CUST-105,Sneha Yadav,Home Office,Jaipur,Central,Technology,Printers,59519.88,7,0.1,7738.35
+IN-2025-10114,2025-12-09,2025-12-10,First Class,CUST-105,Saanvi Gupta,Home Office,Mumbai,Central,Office Supplies,Paper,630.28,6,0.25,181.57
+IN-2025-10115,2025-11-06,2025-11-10,Same Day,CUST-112,Arjun Verma,Home Office,Ahmedabad,North,Furniture,Tables,3961.62,1,0.1,38.99
+IN-2025-10116,2025-09-10,2025-09-14,Same Day,CUST-117,Vivaan Chauhan,Home Office,Hyderabad,East,Furniture,Chairs,27634.99,2,0.1,1370.07
+IN-2025-10117,2025-07-14,2025-07-18,Same Day,CUST-122,Sai Joshi,Home Office,Ahmedabad,East,Office Supplies,Paper,3438.68,2,0.15,1312.79
+IN-2025-10118,2025-03-20,2025-03-25,First Class,CUST-121,Vihaan Verma,Corporate,Pune,East,Furniture,Furnishings,8332.63,8,0.0,693.05
+IN-2025-10119,2025-06-24,2025-06-29,Same Day,CUST-118,Vivaan Verma,Home Office,Kolkata,East,Office Supplies,Envelopes,2768.94,3,0.2,1213.34
+IN-2025-10120,2025-08-22,2025-08-23,Second Class,CUST-105,Ayaan Chauhan,Home Office,Chennai,East,Furniture,Chairs,20126.73,6,0.1,3093.85
+IN-2025-10121,2025-02-15,2025-02-20,Second Class,CUST-134,Saanvi Mishra,Corporate,Pune,South,Technology,Laptops,45197.79,7,0.2,10611.54
+IN-2025-10122,2025-05-04,2025-05-07,Same Day,CUST-114,Meera Singh,Home Office,Ahmedabad,South,Technology,Phones,64697.84,8,0.0,14490.36
+IN-2025-10123,2025-11-26,2025-11-29,First Class,CUST-105,Pooja Yadav,Corporate,Pune,South,Office Supplies,Envelopes,3720.93,6,0.2,1337.4
+IN-2025-10124,2025-02-08,2025-02-10,Second Class,CUST-116,Kavya Sharma,Corporate,Jaipur,Central,Furniture,Furnishings,28717.18,2,0.0,3316.66
+IN-2025-10125,2025-07-10,2025-07-14,Same Day,CUST-127,Riya Verma,Consumer,Chennai,North,Furniture,Furnishings,23525.32,3,0.05,1255.18
+IN-2025-10126,2025-09-14,2025-09-15,Standard Class,CUST-134,Arjun Singh,Consumer,Bengaluru,East,Office Supplies,Binders,1860.91,5,0.0,809.92
+IN-2025-10127,2025-04-09,2025-04-14,First Class,CUST-109,Ishaan Reddy,Home Office,Mumbai,Central,Office Supplies,Binders,2280.51,3,0.25,787.14
+IN-2025-10128,2025-12-20,2025-12-25,First Class,CUST-137,Vivaan Mehta,Consumer,Mumbai,North,Office Supplies,Fasteners,1176.28,7,0.2,297.25
+IN-2025-10129,2025-01-21,2025-01-25,First Class,CUST-120,Kavya Gupta,Home Office,Kolkata,East,Furniture,Chairs,21280.29,7,0.15,-54.82
+IN-2025-10130,2025-04-15,2025-04-18,Second Class,CUST-121,Diya Iyer,Corporate,Kolkata,South,Furniture,Chairs,11229.95,5,0.15,1010.04
+IN-2025-10131,2025-03-08,2025-03-09,Standard Class,CUST-119,Ananya Mehta,Home Office,Kolkata,South,Technology,Accessories,66844.48,4,0.05,19108.13
+IN-2025-10132,2025-09-16,2025-09-20,Same Day,CUST-120,Kavya Sharma,Consumer,Kolkata,Central,Furniture,Tables,8896.16,1,0.1,497.02
+IN-2025-10133,2025-10-16,2025-10-20,First Class,CUST-135,Aarav Mehta,Consumer,Kolkata,South,Furniture,Bookcases,27443.42,7,0.0,1640.6
+IN-2025-10134,2025-09-19,2025-09-21,First Class,CUST-136,Ishaan Verma,Corporate,Jaipur,West,Office Supplies,Paper,3953.42,2,0.05,1406.67
+IN-2025-10135,2025-07-04,2025-07-07,First Class,CUST-136,Saanvi Chauhan,Consumer,Hyderabad,Central,Office Supplies,Art,1950.28,3,0.25,412.14
+IN-2025-10136,2025-08-11,2025-08-16,Same Day,CUST-110,Meera Yadav,Consumer,Chennai,Central,Furniture,Tables,12459.64,5,0.2,1681.43
+IN-2025-10137,2025-09-11,2025-09-16,Same Day,CUST-137,Ishaan Joshi,Consumer,Chennai,East,Office Supplies,Storage,3922.81,1,0.2,1357.0
+IN-2025-10138,2025-05-16,2025-05-21,Second Class,CUST-104,Riya Joshi,Consumer,Jaipur,Central,Furniture,Tables,27828.5,2,0.05,630.57
+IN-2025-10139,2025-08-01,2025-08-04,Same Day,CUST-110,Aadhya Iyer,Consumer,Kolkata,Central,Office Supplies,Art,3292.15,1,0.25,1264.05
+IN-2025-10140,2025-09-05,2025-09-07,First Class,CUST-131,Sneha Mishra,Corporate,Bengaluru,West,Office Supplies,Paper,2257.69,5,0.2,833.01
+IN-2025-10141,2025-04-16,2025-04-18,First Class,CUST-136,Ishaan Gupta,Corporate,Pune,South,Office Supplies,Envelopes,2292.49,5,0.1,733.48
+IN-2025-10142,2025-10-04,2025-10-09,Same Day,CUST-126,Saanvi Chauhan,Consumer,Pune,North,Furniture,Chairs,10562.72,5,0.25,873.67
+IN-2025-10143,2025-04-16,2025-04-18,First Class,CUST-136,Krishna Patel,Consumer,Lucknow,Central,Technology,Phones,6415.18,4,0.25,2105.41
+IN-2025-10144,2025-01-08,2025-01-09,Same Day,CUST-122,Kavya Verma,Home Office,Bengaluru,North,Office Supplies,Binders,1830.19,8,0.15,793.86
+IN-2025-10145,2025-04-21,2025-04-24,First Class,CUST-119,Vivaan Chauhan,Consumer,Lucknow,South,Office Supplies,Envelopes,3120.32,3,0.15,1354.74
+IN-2025-10146,2025-03-27,2025-03-28,Same Day,CUST-132,Sai Iyer,Corporate,New Delhi,North,Furniture,Chairs,24532.92,8,0.25,1239.22
+IN-2025-10147,2025-09-18,2025-09-22,Second Class,CUST-133,Pari Singh,Consumer,Mumbai,East,Technology,Printers,37784.98,1,0.25,10779.21
+IN-2025-10148,2025-05-11,2025-05-16,Second Class,CUST-112,Meera Mehta,Home Office,Kolkata,West,Office Supplies,Paper,585.52,3,0.05,215.07
+IN-2025-10149,2025-06-16,2025-06-18,Standard Class,CUST-117,Ananya Gupta,Corporate,Pune,East,Furniture,Chairs,11369.7,4,0.0,657.91
+IN-2025-10150,2025-02-22,2025-02-26,First Class,CUST-111,Ananya Nair,Home Office,Pune,North,Office Supplies,Paper,1669.58,3,0.15,426.1
+IN-2025-10151,2025-08-05,2025-08-10,First Class,CUST-127,Pooja Joshi,Home Office,Hyderabad,South,Office Supplies,Fasteners,3512.84,8,0.2,774.47
+IN-2025-10152,2025-06-23,2025-06-24,Standard Class,CUST-104,Pooja Yadav,Consumer,Lucknow,Central,Technology,Phones,20976.17,2,0.25,5027.54
+IN-2025-10153,2025-12-07,2025-12-12,Same Day,CUST-106,Sneha Joshi,Consumer,Ahmedabad,South,Office Supplies,Art,1794.47,8,0.25,384.8
+IN-2025-10154,2025-05-26,2025-05-27,Same Day,CUST-117,Aarav Iyer,Consumer,Lucknow,North,Technology,Printers,29117.02,1,0.0,3921.04
+IN-2025-10155,2025-01-16,2025-01-19,Same Day,CUST-112,Arjun Chauhan,Home Office,Kolkata,East,Furniture,Furnishings,30827.85,7,0.0,6844.71
+IN-2025-10156,2025-11-22,2025-11-27,Second Class,CUST-123,Vihaan Patel,Home Office,Kolkata,Central,Technology,Phones,53921.88,5,0.15,15848.79
+IN-2025-10157,2025-12-22,2025-12-27,Same Day,CUST-135,Ananya Mehta,Consumer,Hyderabad,West,Furniture,Tables,11820.79,2,0.0,2733.24
+IN-2025-10158,2025-11-26,2025-11-30,Standard Class,CUST-116,Reyansh Verma,Consumer,Lucknow,North,Furniture,Chairs,10289.92,8,0.05,-377.94
+IN-2025-10159,2025-04-18,2025-04-19,Second Class,CUST-133,Ishaan Gupta,Home Office,Lucknow,East,Office Supplies,Fasteners,3517.36,4,0.1,1423.11
+IN-2025-10160,2025-11-05,2025-11-10,Second Class,CUST-127,Ishaan Singh,Consumer,Jaipur,Central,Office Supplies,Binders,3204.77,8,0.0,983.22
+IN-2025-10161,2025-11-12,2025-11-16,First Class,CUST-127,Aadhya Patel,Corporate,Kolkata,South,Office Supplies,Art,1153.15,3,0.15,295.59
+IN-2025-10162,2025-09-02,2025-09-06,Same Day,CUST-136,Sneha Patel,Corporate,Hyderabad,East,Technology,Accessories,50269.41,6,0.0,16695.07
+IN-2025-10163,2025-12-18,2025-12-20,Standard Class,CUST-118,Ananya Nair,Home Office,Lucknow,North,Technology,Phones,52126.71,4,0.15,13299.83
+IN-2025-10164,2025-06-07,2025-06-10,Standard Class,CUST-114,Reyansh Iyer,Consumer,Ahmedabad,South,Office Supplies,Fasteners,2862.47,4,0.2,856.33
+IN-2025-10165,2025-05-11,2025-05-15,Same Day,CUST-135,Saanvi Singh,Corporate,Chennai,Central,Furniture,Furnishings,5539.91,8,0.1,1353.93
+IN-2025-10166,2025-06-07,2025-06-10,Same Day,CUST-103,Riya Mehta,Consumer,Bengaluru,North,Furniture,Furnishings,10579.23,4,0.15,93.71
+IN-2025-10167,2025-04-19,2025-04-23,First Class,CUST-117,Kavya Iyer,Home Office,Ahmedabad,West,Technology,Accessories,16006.17,8,0.05,4572.52
+IN-2025-10168,2025-11-18,2025-11-19,Standard Class,CUST-105,Vivaan Chauhan,Consumer,Kolkata,South,Office Supplies,Binders,421.0,4,0.2,100.1
+IN-2025-10169,2025-06-15,2025-06-16,Same Day,CUST-132,Aarav Sharma,Home Office,Jaipur,West,Technology,Laptops,42059.24,5,0.0,7704.85
+IN-2025-10170,2025-12-17,2025-12-21,Second Class,CUST-107,Vihaan Yadav,Consumer,Hyderabad,South,Office Supplies,Fasteners,1411.61,7,0.0,407.41
+IN-2025-10171,2025-07-12,2025-07-16,Second Class,CUST-115,Ishaan Nair,Consumer,New Delhi,North,Furniture,Furnishings,11302.07,1,0.25,1048.85
+IN-2025-10172,2025-02-06,2025-02-10,Same Day,CUST-122,Riya Mehta,Consumer,Jaipur,North,Technology,Phones,61280.2,8,0.1,17111.04
+IN-2025-10173,2025-02-02,2025-02-05,Standard Class,CUST-112,Diya Sharma,Consumer,Lucknow,South,Office Supplies,Art,3726.88,4,0.2,1024.22
+IN-2025-10174,2025-07-27,2025-07-32,First Class,CUST-125,Arjun Chauhan,Home Office,Mumbai,Central,Office Supplies,Paper,411.97,2,0.1,127.41
+IN-2025-10175,2025-10-20,2025-10-25,Same Day,CUST-121,Aarav Nair,Corporate,Ahmedabad,West,Technology,Accessories,32784.48,3,0.25,6765.02
+IN-2025-10176,2025-11-19,2025-11-23,Standard Class,CUST-140,Ishaan Chauhan,Consumer,Mumbai,North,Furniture,Tables,11370.0,3,0.25,2105.35
+IN-2025-10177,2025-06-13,2025-06-16,Standard Class,CUST-106,Aarav Singh,Corporate,Chennai,East,Technology,Phones,11110.81,7,0.0,2434.66
+IN-2025-10178,2025-02-01,2025-02-04,Standard Class,CUST-139,Meera Chauhan,Corporate,Kolkata,North,Furniture,Furnishings,12327.67,4,0.2,-303.14
+IN-2025-10179,2025-03-17,2025-03-21,Second Class,CUST-109,Krishna Singh,Corporate,Ahmedabad,South,Technology,Phones,35427.34,8,0.0,7682.54
+IN-2025-10180,2025-05-12,2025-05-14,Same Day,CUST-139,Meera Gupta,Corporate,Mumbai,South,Furniture,Chairs,30026.11,7,0.1,1491.25
+IN-2025-10181,2025-06-15,2025-06-19,Second Class,CUST-120,Diya Reddy,Home Office,Hyderabad,West,Furniture,Tables,25399.79,5,0.25,6111.64
+IN-2025-10182,2025-11-23,2025-11-27,Second Class,CUST-121,Ananya Singh,Corporate,Chennai,North,Office Supplies,Binders,2282.02,1,0.25,767.69
+IN-2025-10183,2025-12-15,2025-12-17,Same Day,CUST-119,Aditya Mehta,Corporate,Ahmedabad,South,Office Supplies,Paper,1157.44,7,0.15,422.08
+IN-2025-10184,2025-08-03,2025-08-08,Same Day,CUST-138,Ananya Yadav,Home Office,Kolkata,Central,Technology,Accessories,54114.4,2,0.0,16603.83
+IN-2025-10185,2025-04-25,2025-04-28,Second Class,CUST-140,Vivaan Reddy,Home Office,Kolkata,East,Furniture,Chairs,2836.9,4,0.15,78.36
+IN-2025-10186,2025-07-12,2025-07-16,Second Class,CUST-123,Aarav Joshi,Consumer,Pune,West,Technology,Laptops,56873.02,6,0.1,16375.71
+IN-2025-10187,2025-08-11,2025-08-13,Same Day,CUST-123,Kavya Verma,Corporate,Ahmedabad,East,Technology,Accessories,7315.03,1,0.1,2073.66
+IN-2025-10188,2025-02-21,2025-02-23,Second Class,CUST-134,Sai Yadav,Consumer,Chennai,Central,Furniture,Furnishings,9898.41,3,0.05,707.88
+IN-2025-10189,2025-11-21,2025-11-25,Same Day,CUST-102,Meera Gupta,Corporate,Lucknow,West,Furniture,Chairs,20441.23,2,0.2,239.88
+IN-2025-10190,2025-09-04,2025-09-06,First Class,CUST-121,Reyansh Joshi,Consumer,Pune,West,Office Supplies,Envelopes,1363.47,7,0.2,405.17
+IN-2025-10191,2025-06-04,2025-06-07,Same Day,CUST-140,Sai Mehta,Home Office,Pune,Central,Office Supplies,Storage,3083.52,4,0.1,858.13
+IN-2025-10192,2025-03-04,2025-03-07,Second Class,CUST-133,Ananya Mishra,Home Office,Bengaluru,Central,Furniture,Furnishings,7155.3,3,0.2,1006.4
+IN-2025-10193,2025-08-06,2025-08-09,Second Class,CUST-112,Diya Mehta,Corporate,Lucknow,North,Furniture,Chairs,14805.99,7,0.2,126.42
+IN-2025-10194,2025-11-17,2025-11-21,Same Day,CUST-132,Aadhya Iyer,Corporate,Ahmedabad,South,Technology,Monitors,7160.25,5,0.0,2112.58
+IN-2025-10195,2025-04-09,2025-04-14,First Class,CUST-111,Pari Reddy,Home Office,Ahmedabad,Central,Office Supplies,Storage,2359.22,6,0.2,629.85
+IN-2025-10196,2025-01-27,2025-01-31,Second Class,CUST-128,Vihaan Iyer,Home Office,Hyderabad,East,Technology,Printers,19887.51,2,0.15,6330.31
+IN-2025-10197,2025-02-28,2025-02-30,Second Class,CUST-138,Saanvi Mehta,Home Office,Lucknow,West,Technology,Monitors,14746.45,4,0.0,2470.36
+IN-2025-10198,2025-06-19,2025-06-24,First Class,CUST-139,Pooja Patel,Corporate,Pune,East,Office Supplies,Paper,4532.93,2,0.05,1489.54
+IN-2025-10199,2025-07-25,2025-07-26,First Class,CUST-109,Arjun Gupta,Consumer,Chennai,South,Office Supplies,Art,1912.05,5,0.25,658.43
+IN-2025-10200,2025-07-14,2025-07-18,Standard Class,CUST-106,Ananya Yadav,Home Office,Pune,East,Furniture,Furnishings,10104.94,2,0.25,-497.75
+IN-2025-10201,2025-11-15,2025-11-18,Standard Class,CUST-135,Ananya Gupta,Corporate,Hyderabad,West,Furniture,Bookcases,23605.6,3,0.2,1211.59
+IN-2025-10202,2025-08-28,2025-08-31,Standard Class,CUST-103,Vihaan Nair,Corporate,New Delhi,North,Technology,Printers,35108.46,7,0.05,12222.06
+IN-2025-10203,2025-03-23,2025-03-26,Second Class,CUST-118,Aditya Nair,Corporate,Pune,North,Furniture,Tables,3958.61,4,0.15,545.03
+IN-2025-10204,2025-02-21,2025-02-22,Standard Class,CUST-114,Kavya Verma,Consumer,Lucknow,South,Office Supplies,Envelopes,2336.32,6,0.0,471.97
+IN-2025-10205,2025-07-28,2025-07-30,Same Day,CUST-105,Ayaan Mishra,Consumer,Mumbai,North,Furniture,Bookcases,23393.74,3,0.25,-207.3
+IN-2025-10206,2025-03-22,2025-03-23,Standard Class,CUST-140,Sai Joshi,Corporate,Hyderabad,South,Furniture,Furnishings,28992.86,2,0.05,-695.64
+IN-2025-10207,2025-02-25,2025-02-30,Same Day,CUST-123,Aadhya Kumar,Consumer,Hyderabad,East,Office Supplies,Storage,1043.4,5,0.25,365.45
+IN-2025-10208,2025-11-01,2025-11-04,Second Class,CUST-134,Meera Yadav,Consumer,Kolkata,East,Office Supplies,Storage,3367.91,4,0.15,1341.93
+IN-2025-10209,2025-02-13,2025-02-15,Same Day,CUST-139,Aditya Yadav,Consumer,Chennai,East,Technology,Printers,52205.58,6,0.2,13089.37
+IN-2025-10210,2025-03-22,2025-03-26,Standard Class,CUST-102,Riya Verma,Consumer,Pune,South,Technology,Laptops,53555.7,5,0.25,11328.87
+IN-2025-10211,2025-09-23,2025-09-27,Same Day,CUST-126,Aditya Nair,Home Office,Jaipur,Central,Technology,Accessories,10309.21,4,0.05,1424.47
+IN-2025-10212,2025-06-18,2025-06-22,Standard Class,CUST-120,Aadhya Iyer,Consumer,New Delhi,South,Technology,Printers,11807.15,1,0.1,3079.64
+IN-2025-10213,2025-12-22,2025-12-24,Standard Class,CUST-101,Arjun Iyer,Consumer,Bengaluru,West,Furniture,Bookcases,6257.11,5,0.25,-74.59
+IN-2025-10214,2025-01-04,2025-01-07,Same Day,CUST-118,Sneha Verma,Corporate,Lucknow,North,Furniture,Furnishings,17410.52,3,0.1,-580.96
+IN-2025-10215,2025-05-06,2025-05-07,Standard Class,CUST-115,Sneha Sharma,Consumer,New Delhi,South,Technology,Printers,30478.35,3,0.0,10108.21
+IN-2025-10216,2025-12-18,2025-12-22,Second Class,CUST-121,Ayaan Mishra,Home Office,Chennai,East,Technology,Monitors,29541.74,1,0.05,6956.18
+IN-2025-10217,2025-09-08,2025-09-09,Same Day,CUST-105,Pari Mehta,Corporate,Pune,East,Technology,Monitors,29577.78,5,0.2,6059.05
+IN-2025-10218,2025-05-26,2025-05-31,Second Class,CUST-130,Saanvi Reddy,Corporate,Hyderabad,Central,Technology,Phones,4357.16,4,0.2,933.78
+IN-2025-10219,2025-11-12,2025-11-13,First Class,CUST-101,Ananya Mehta,Home Office,Pune,North,Technology,Monitors,70127.2,1,0.05,15186.58
+IN-2025-10220,2025-05-23,2025-05-24,Standard Class,CUST-115,Sneha Mishra,Home Office,Chennai,West,Office Supplies,Storage,2987.7,7,0.0,975.06
+IN-2025-10221,2025-10-19,2025-10-20,Same Day,CUST-109,Ayaan Singh,Corporate,Chennai,West,Office Supplies,Envelopes,1766.01,4,0.0,553.1
+IN-2025-10222,2025-03-07,2025-03-12,Standard Class,CUST-110,Vihaan Patel,Corporate,Ahmedabad,East,Furniture,Chairs,17127.15,4,0.15,4100.08
+IN-2025-10223,2025-08-10,2025-08-13,Standard Class,CUST-106,Sai Chauhan,Home Office,Pune,Central,Technology,Phones,47636.05,2,0.25,9307.73
+IN-2025-10224,2025-06-08,2025-06-12,Standard Class,CUST-120,Krishna Mehta,Consumer,New Delhi,West,Furniture,Tables,6031.21,3,0.0,-117.17
+IN-2025-10225,2025-01-01,2025-01-03,Second Class,CUST-113,Ananya Kumar,Home Office,Mumbai,Central,Office Supplies,Paper,4373.48,2,0.05,956.68
+IN-2025-10226,2025-08-21,2025-08-23,Standard Class,CUST-122,Vihaan Sharma,Corporate,New Delhi,South,Office Supplies,Art,3522.48,1,0.15,1052.34
+IN-2025-10227,2025-07-22,2025-07-24,First Class,CUST-114,Sai Singh,Corporate,Ahmedabad,South,Technology,Monitors,41091.01,5,0.15,7253.82
+IN-2025-10228,2025-09-14,2025-09-18,Standard Class,CUST-106,Krishna Mishra,Consumer,Kolkata,South,Office Supplies,Fasteners,1186.52,1,0.15,532.18
+IN-2025-10229,2025-12-26,2025-12-29,Same Day,CUST-135,Kavya Kumar,Home Office,Jaipur,East,Furniture,Bookcases,8754.11,4,0.0,399.74
+IN-2025-10230,2025-05-26,2025-05-27,Same Day,CUST-134,Saanvi Chauhan,Home Office,Hyderabad,South,Technology,Phones,48431.48,1,0.05,8780.69
+IN-2025-10231,2025-07-19,2025-07-22,Second Class,CUST-112,Ayaan Reddy,Corporate,Chennai,Central,Technology,Accessories,60629.74,4,0.15,15134.97
+IN-2025-10232,2025-05-18,2025-05-20,Same Day,CUST-103,Aditya Sharma,Consumer,Lucknow,South,Technology,Monitors,36536.27,4,0.05,7172.03
+IN-2025-10233,2025-12-11,2025-12-13,First Class,CUST-104,Aarav Patel,Home Office,Bengaluru,North,Office Supplies,Paper,3848.54,7,0.2,1129.15
+IN-2025-10234,2025-06-04,2025-06-07,First Class,CUST-109,Sai Iyer,Corporate,Ahmedabad,East,Technology,Monitors,50871.77,6,0.05,16972.57
+IN-2025-10235,2025-10-22,2025-10-24,Same Day,CUST-120,Ishaan Patel,Consumer,New Delhi,Central,Furniture,Chairs,6619.97,4,0.25,300.98
+IN-2025-10236,2025-02-19,2025-02-23,Second Class,CUST-122,Aditya Gupta,Corporate,Chennai,South,Office Supplies,Storage,3522.38,6,0.15,1294.5
+IN-2025-10237,2025-05-01,2025-05-03,Second Class,CUST-105,Saanvi Singh,Consumer,New Delhi,North,Furniture,Furnishings,22476.29,7,0.15,5410.73
+IN-2025-10238,2025-06-13,2025-06-18,Same Day,CUST-107,Kavya Chauhan,Home Office,Hyderabad,South,Furniture,Chairs,25716.81,1,0.1,-1028.06
+IN-2025-10239,2025-02-09,2025-02-10,First Class,CUST-111,Ananya Patel,Home Office,Mumbai,Central,Technology,Accessories,34936.6,8,0.25,9123.28
+IN-2025-10240,2025-07-01,2025-07-03,Same Day,CUST-111,Vivaan Verma,Corporate,Hyderabad,South,Furniture,Bookcases,24139.13,2,0.0,946.74
+IN-2025-10241,2025-10-13,2025-10-18,Same Day,CUST-110,Vivaan Kumar,Consumer,Kolkata,North,Furniture,Furnishings,7042.19,3,0.25,-297.74
+IN-2025-10242,2025-02-10,2025-02-14,Standard Class,CUST-120,Ananya Joshi,Corporate,Pune,North,Office Supplies,Fasteners,1854.12,7,0.1,542.8
+IN-2025-10243,2025-08-06,2025-08-07,First Class,CUST-129,Pari Singh,Consumer,Pune,Central,Technology,Phones,43242.35,2,0.25,11827.55
+IN-2025-10244,2025-09-12,2025-09-16,Second Class,CUST-136,Vivaan Mehta,Corporate,Jaipur,West,Office Supplies,Envelopes,3706.93,4,0.15,1181.42
+IN-2025-10245,2025-02-10,2025-02-14,Standard Class,CUST-133,Riya Yadav,Home Office,Lucknow,South,Technology,Printers,16246.45,4,0.05,5627.85
+IN-2025-10246,2025-01-05,2025-01-09,Standard Class,CUST-128,Reyansh Mehta,Home Office,Bengaluru,Central,Furniture,Bookcases,32145.74,2,0.0,7208.75
+IN-2025-10247,2025-09-13,2025-09-17,First Class,CUST-118,Sneha Joshi,Consumer,Lucknow,Central,Office Supplies,Art,740.09,2,0.0,175.71
+IN-2025-10248,2025-02-19,2025-02-22,First Class,CUST-127,Krishna Mishra,Home Office,Ahmedabad,Central,Office Supplies,Art,303.87,3,0.2,81.7
+IN-2025-10249,2025-11-20,2025-11-24,Standard Class,CUST-126,Diya Iyer,Consumer,New Delhi,West,Furniture,Bookcases,3282.7,5,0.1,640.83
+IN-2025-10250,2025-08-09,2025-08-10,Second Class,CUST-109,Ishaan Iyer,Corporate,Chennai,East,Office Supplies,Art,2948.7,8,0.05,655.56

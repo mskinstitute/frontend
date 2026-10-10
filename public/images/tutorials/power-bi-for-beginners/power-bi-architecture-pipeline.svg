@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="pbiBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#141414" />
+      <stop offset="100%" stop-color="#242424" />
+    </linearGradient>
+  </defs>
+  <rect width="900" height="450" rx="16" fill="url(#pbiBg)" />
+  <rect x="2" y="2" width="896" height="446" rx="14" fill="none" stroke="#444" stroke-width="1.5" />
+  <text x="450" y="45" fill="#f8fafc" font-family="system-ui" font-size="22" font-weight="800" text-anchor="middle">
+    MICROSOFT POWER BI END-TO-END DATA ARCHITECTURE
+  </text>
+  <text x="450" y="70" fill="#f59e0b" font-family="system-ui" font-size="13" font-weight="600" text-anchor="middle">
+    From Heterogeneous Data Sources to Executive Cloud Reports
+  </text>
+  <!-- 4 Pipeline Blocks -->
+  <!-- Block 1: Get Data -->
+  <g transform="translate(40, 110)">
+    <rect width="170" height="280" rx="10" fill="#2d2d2d" stroke="#f59e0b" stroke-width="1.5" />
+    <rect width="170" height="40" rx="10" fill="#d97706" />
+    <text x="85" y="25" fill="#ffffff" font-family="system-ui" font-size="13" font-weight="700" text-anchor="middle">1. GET DATA</text>
+    <text x="15" y="70" fill="#f8fafc" font-family="system-ui" font-size="11 font-weight="600">• Excel &amp; CSV files</text>
+    <text x="15" y="95" fill="#f8fafc" font-family="system-ui" font-size="11 font-weight="600">• SQL Databases</text>
+    <text x="15" y="120" fill="#f8fafc" font-family="system-ui" font-size="11 font-weight="600">• SharePoint &amp; Web</text>
+    <text x="15" y="145" fill="#f8fafc" font-family="system-ui" font-size="11 font-weight="600">• Azure Data Lakes</text>
+  </g>
+  <!-- Block 2: Power Query -->
+  <g transform="translate(255, 110)">
+    <rect width="170" height="280" rx="10" fill="#2d2d2d" stroke="#10b981" stroke-width="1.5" />
+    <rect width="170" height="40" rx="10" fill="#059669" />
+    <text x="85" y="25" fill="#ffffff" font-family="system-ui" font-size="13" font-weight="700" text-anchor="middle">2. POWER QUERY</text>
+    <text x="15" y="70" fill="#f8fafc" font-family="system-ui" font-size="11">• Data Cleaning (ETL)</text>
+    <text x="15" y="95" fill="#f8fafc" font-family="system-ui" font-size="11">• Remove Duplicates</text>
+    <text x="15" y="120" fill="#f8fafc" font-family="system-ui" font-size="11">• Unpivot Columns</text>
+    <text x="15" y="145" fill="#f8fafc" font-family="system-ui" font-size="11">• M-Language Scripts</text>
+  </g>
+  <!-- Block 3: Modeling & DAX -->
+  <g transform="translate(470, 110)">
+    <rect width="170" height="280" rx="10" fill="#2d2d2d" stroke="#3b82f6" stroke-width="1.5" />
+    <rect width="170" height="40" rx="10" fill="#2563eb" />
+    <text x="85" y="25" fill="#ffffff" font-family="system-ui" font-size="13" font-weight="700" text-anchor="middle">3. MODEL &amp; DAX</text>
+    <text x="15" y="70" fill="#f8fafc" font-family="system-ui" font-size="11">• Star Schema (Fact/Dim)</text>
+    <text x="15" y="95" fill="#f8fafc" font-family="system-ui" font-size="11">• 1-to-Many Relations</text>
+    <text x="15" y="120" fill="#f8fafc" font-family="system-ui" font-size="11">• DAX Measures (CALCULATE)</text>
+    <text x="15" y="145" fill="#f8fafc" font-family="system-ui" font-size="11">• Time Intelligence</text>
+  </g>
+  <!-- Block 4: Report & Service -->
+  <g transform="translate(685, 110)">
+    <rect width="175" height="280" rx="10" fill="#2d2d2d" stroke="#ec4899" stroke-width="1.5" />
+    <rect width="175" height="40" rx="10" fill="#db2777" />
+    <text x="87" y="25" fill="#ffffff" font-family="system-ui" font-size="13" font-weight="700" text-anchor="middle">4. SERVICE &amp; CLOUD</text>
+    <text x="15" y="70" fill="#f8fafc" font-family="system-ui" font-size="11">• Interactive Visuals</text>
+    <text x="15" y="95" fill="#f8fafc" font-family="system-ui" font-size="11">• Slicers &amp; Drillthrough</text>
+    <text x="15" y="120" fill="#f8fafc" font-family="system-ui" font-size="11">• Row-Level Security (RLS)</text>
+    <text x="15" y="145" fill="#f8fafc" font-family="system-ui" font-size="11">• Scheduled Refresh</text>
+  </g>
+</svg>

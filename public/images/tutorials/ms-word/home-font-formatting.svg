@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="380" viewBox="0 0 800 380" fill="none" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  <defs>
+    <linearGradient id="wordBlue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#185ABD"/>
+      <stop offset="100%" stop-color="#103F91"/>
+    </linearGradient>
+    <linearGradient id="ribbonBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#F3F5F8"/>
+      <stop offset="100%" stop-color="#E8ECF1"/>
+    </linearGradient>
+    <filter id="cardShadow" x="-10" y="-5" width="820" height="400" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+
+  <!-- Window Frame -->
+  <rect width="800" height="380" rx="12" fill="#FFFFFF"/>
+  <rect width="800" height="380" rx="12" stroke="#D1D5DB" stroke-width="1.5"/>
+
+  <!-- Title Bar -->
+  <path d="M 0 12 C 0 5.373 5.373 0 12 0 L 788 0 C 794.627 0 800 5.373 800 12 L 800 42 L 0 42 Z" fill="url(#wordBlue)"/>
+  
+  <!-- Window Controls & Title -->
+  <circle cx="20" cy="21" r="5.5" fill="#FF5F56"/>
+  <circle cx="38" cy="21" r="5.5" fill="#FFBD2E"/>
+  <circle cx="56" cy="21" r="5.5" fill="#27C93F"/>
+
+  <!-- Word App Icon Badge -->
+  <rect x="76" y="10" width="22" height="22" rx="4" fill="#0C3B78"/>
+  <text x="87" y="26" fill="#FFFFFF" font-size="14" font-weight="900" text-anchor="middle">W</text>
+
+  <!-- Document Title -->
+  <text x="400" y="26" fill="#FFFFFF" font-size="13" font-weight="600" text-anchor="middle" letter-spacing="0.2">Home Tab: Font Formatting Group - Microsoft Word</text>
+
+  
+  <rect x="0" y="42" width="800" height="338" fill="#F8FAFC"/>
+
+  <!-- Font Ribbon Box Simulation -->
+  <g transform="translate(40, 65)">
+    <rect x="0" y="0" width="720" height="110" rx="12" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5" filter="url(#cardShadow)"/>
+
+    <!-- Row 1: Font Family, Size, Grow/Shrink, Case, Clear -->
+    <rect x="20" y="18" width="160" height="32" rx="4" fill="#F1F5F9" stroke="#94A3B8"/>
+    <text x="32" y="39" font-size="14" font-weight="600" fill="#1E293B">Calibri (Body)</text>
+    <text x="162" y="38" font-size="10" fill="#64748B">▼</text>
+
+    <rect x="190" y="18" width="55" height="32" rx="4" fill="#F1F5F9" stroke="#94A3B8"/>
+    <text x="204" y="39" font-size="14" font-weight="600" fill="#1E293B">12</text>
+    <text x="230" y="38" font-size="10" fill="#64748B">▼</text>
+
+    <!-- Increase/Decrease Font Size -->
+    <rect x="255" y="18" width="32" height="32" rx="4" fill="#FFFFFF" stroke="#CBD5E1"/>
+    <text x="264" y="40" font-size="16" font-weight="bold" fill="#0F172A">A<tspan font-size="10" dy="-5">▲</tspan></text>
+
+    <rect x="295" y="18" width="32" height="32" rx="4" fill="#FFFFFF" stroke="#CBD5E1"/>
+    <text x="304" y="40" font-size="14" font-weight="bold" fill="#0F172A">A<tspan font-size="8" dy="3">▼</tspan></text>
+
+    <!-- Change Case -->
+    <rect x="335" y="18" width="36" height="32" rx="4" fill="#FFFFFF" stroke="#CBD5E1"/>
+    <text x="342" y="39" font-size="13" font-weight="bold" fill="#0F172A">Aa</text>
+
+    <!-- Clear Formatting -->
+    <rect x="380" y="18" width="36" height="32" rx="4" fill="#FFFFFF" stroke="#CBD5E1"/>
+    <text x="388" y="39" font-size="13" font-weight="bold" fill="#DC2626">A⌫</text>
+
+    <!-- Row 2: Bold, Italic, Underline, Strikethrough, Subscript, Superscript, Effects, Highlight, Color -->
+    <rect x="20" y="60" width="32" height="32" rx="4" fill="#DBEAFE" stroke="#2563EB"/>
+    <text x="31" y="82" font-size="15" font-weight="bold" fill="#1D4ED8">B</text>
+
+    <rect x="58" y="60" width="32" height="32" rx="4" fill="#FFFFFF" stroke="#CBD5E1"/>
+    <text x="70" y="82" font-size="15" font-weight="bold" font-style="italic" fill="#334155">I</text>
+
+    <rect x="96" y="60" width="32" height="32" rx="4" fill="#FFFFFF" stroke="#CBD5E1"/>
+    <text x="106" y="82" font-size="15" font-weight="bold" text-decoration="underline" fill="#334155">U</text>
+
+    <rect x="134" y="60" width="32" height="32" rx="4" fill="#FFFFFF" stroke="#CBD5E1"/>
+    <text x="141" y="81" font-size="13" text-decoration="line-through" fill="#64748B">abc</text>
+
+    <rect x="172" y="60" width="32" height="32" rx="4" fill="#FFFFFF" stroke="#CBD5E1"/>
+    <text x="179" y="82" font-size="13" font-weight="bold" fill="#334155">X<tspan font-size="9" dy="4">2</tspan></text>
+
+    <rect x="210" y="60" width="32" height="32" rx="4" fill="#FFFFFF" stroke="#CBD5E1"/>
+    <text x="217" y="80" font-size="13" font-weight="bold" fill="#334155">X<tspan font-size="9" dy="-6">2</tspan></text>
+
+    <rect x="248" y="60" width="36" height="32" rx="4" fill="#FEF08A" stroke="#EAB308"/>
+    <text x="256" y="82" font-size="14">🖍️</text>
+
+    <rect x="290" y="60" width="44" height="32" rx="4" fill="#FFFFFF" stroke="#CBD5E1"/>
+    <text x="298" y="80" font-size="15" font-weight="bold" fill="#DC2626">A</text>
+    <rect x="298" y="85" width="14" height="3" fill="#DC2626"/>
+    <text x="318" y="80" font-size="9" fill="#64748B">▼</text>
+
+    <!-- Dialog Box Launcher -->
+    <rect x="685" y="80" width="18" height="18" rx="3" fill="#F1F5F9" stroke="#94A3B8"/>
+    <text x="689" y="93" font-size="11" fill="#475569">↘</text>
+  </g>
+
+  <!-- Key Shortcuts Grid Cards -->
+  <g transform="translate(40, 195)">
+    <rect x="0" y="0" width="225" height="150" rx="8" fill="#FFFFFF" stroke="#E2E8F0"/>
+    <rect x="0" y="0" width="225" height="32" rx="8" fill="#EFF6FF"/>
+    <text x="15" y="21" font-size="12" font-weight="bold" fill="#1D4ED8">Core Formatting</text>
+    <text x="15" y="55" font-size="11" fill="#334155"><tspan font-weight="bold">Ctrl + B</tspan> : Bold</text>
+    <text x="15" y="78" font-size="11" fill="#334155"><tspan font-weight="bold">Ctrl + I</tspan> : Italic</text>
+    <text x="15" y="101" font-size="11" fill="#334155"><tspan font-weight="bold">Ctrl + U</tspan> : Underline</text>
+    <text x="15" y="124" font-size="11" fill="#334155"><tspan font-weight="bold">Ctrl + Shift + F</tspan> : Font Dialog</text>
+  </g>
+
+  <g transform="translate(285, 195)">
+    <rect x="0" y="0" width="225" height="150" rx="8" fill="#FFFFFF" stroke="#E2E8F0"/>
+    <rect x="0" y="0" width="225" height="32" rx="8" fill="#F0FDF4"/>
+    <text x="15" y="21" font-size="12" font-weight="bold" fill="#15803D">Sizing &amp; Case</text>
+    <text x="15" y="55" font-size="11" fill="#334155"><tspan font-weight="bold">Ctrl + ]</tspan> : Increase font 1pt</text>
+    <text x="15" y="78" font-size="11" fill="#334155"><tspan font-weight="bold">Ctrl + [</tspan> : Decrease font 1pt</text>
+    <text x="15" y="101" font-size="11" fill="#334155"><tspan font-weight="bold">Shift + F3</tspan> : Change Case</text>
+    <text x="15" y="124" font-size="11" fill="#334155"><tspan font-weight="bold">Ctrl + Space</tspan> : Clear Format</text>
+  </g>
+
+  <g transform="translate(535, 195)">
+    <rect x="0" y="0" width="225" height="150" rx="8" fill="#FFFFFF" stroke="#E2E8F0"/>
+    <rect x="0" y="0" width="225" height="32" rx="8" fill="#FEF3C7"/>
+    <text x="15" y="21" font-size="12" font-weight="bold" fill="#B45309">Subscript &amp; Scripts</text>
+    <text x="15" y="55" font-size="11" fill="#334155"><tspan font-weight="bold">Ctrl + =</tspan> : Subscript (H₂O)</text>
+    <text x="15" y="78" font-size="11" fill="#334155"><tspan font-weight="bold">Ctrl + Shift + +</tspan> : Superscript (x²)</text>
+    <text x="15" y="101" font-size="11" fill="#334155"><tspan font-weight="bold">Ctrl + D</tspan> : Open Font Box</text>
+    <text x="15" y="124" font-size="11" fill="#334155"><tspan font-weight="bold">Ctrl + Shift + A</tspan> : ALL CAPS</text>
+  </g>
+
+</svg>

@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 480" width="100%" height="100%" style="background:#090d16;font-family:system-ui,-apple-system,sans-serif;">
+  <text x="450" y="38" fill="#f8fafc" font-size="20" font-weight="bold" text-anchor="middle">Word Processing Comparison: LibreOffice Writer vs MS Word</text>
+  <text x="450" y="62" fill="#94a3b8" font-size="12" text-anchor="middle">Both widely tested in NIELIT CCC Exam | Default Formats: .odt (Writer) vs .docx (Word)</text>
+
+  <!-- Left Card: LibreOffice Writer -->
+  <g transform="translate(50, 85)">
+    <rect x="0" y="0" width="380" height="360" rx="12" fill="#1e293b" stroke="#10b981" stroke-width="2" />
+    <rect x="0" y="0" width="380" height="42" rx="12" fill="#059669" />
+    <text x="190" y="27" fill="#ffffff" font-size="16" font-weight="bold" text-anchor="middle">LibreOffice Writer (FOSS)</text>
+
+    <g transform="translate(20, 60)" fill="#e2e8f0" font-size="13">
+      <text x="0" y="20" fill="#34d399" font-weight="bold">Key Shortcuts (CCC Exam Special):</text>
+      <text x="10" y="50">📄 Default Extension: <tspan fill="#facc15" font-weight="bold">.odt</tspan> (OpenDocument)</text>
+      <text x="10" y="78">🖨️ Print Preview: <tspan fill="#67e8f9" font-weight="bold">Ctrl + Shift + O</tspan></text>
+      <text x="10" y="106">📊 Insert Table: <tspan fill="#67e8f9" font-weight="bold">Ctrl + F12</tspan></text>
+      <text x="10" y="134">🧹 Clear Formatting: <tspan fill="#67e8f9" font-weight="bold">Ctrl + M</tspan></text>
+      <text x="10" y="162">❌ Close Writer: <tspan fill="#67e8f9" font-weight="bold">Ctrl + Q</tspan></text>
+      <text x="10" y="190">🔍 Zoom Min / Max: <tspan fill="#facc15">20% to 600%</tspan></text>
+      <text x="10" y="218">📖 Spell Check: <tspan fill="#67e8f9">F7</tspan> | Thesaurus: <tspan fill="#67e8f9">Ctrl+F7</tspan></text>
+      
+      <rect x="0" y="240" width="340" height="42" rx="6" fill="#0f172a" stroke="#334155" />
+      <text x="170" y="266" fill="#a7f3d0" font-size="12" text-anchor="middle">100% Free &amp; Open Source Software (FOSS)</text>
+    </g>
+  </g>
+
+  <!-- Right Card: Microsoft Word -->
+  <g transform="translate(470, 85)">
+    <rect x="0" y="0" width="380" height="360" rx="12" fill="#1e293b" stroke="#3b82f6" stroke-width="2" />
+    <rect x="0" y="0" width="380" height="42" rx="12" fill="#2563eb" />
+    <text x="190" y="27" fill="#ffffff" font-size="16" font-weight="bold" text-anchor="middle">Microsoft Word (Proprietary)</text>
+
+    <g transform="translate(20, 60)" fill="#e2e8f0" font-size="13">
+      <text x="0" y="20" fill="#60a5fa" font-weight="bold">Key Shortcuts (Standard Industry):</text>
+      <text x="10" y="50">📄 Default Extension: <tspan fill="#facc15" font-weight="bold">.docx</tspan> (Office Open XML)</text>
+      <text x="10" y="78">🖨️ Print Preview: <tspan fill="#67e8f9" font-weight="bold">Ctrl + F2 / Ctrl + P</tspan></text>
+      <text x="10" y="106">📊 Insert Table: <tspan fill="#67e8f9" font-weight="bold">Insert Ribbon &gt; Table</tspan></text>
+      <text x="10" y="134">🧹 Clear Formatting: <tspan fill="#67e8f9" font-weight="bold">Ctrl + Spacebar</tspan></text>
+      <text x="10" y="162">❌ Close Document: <tspan fill="#67e8f9" font-weight="bold">Ctrl + W / Alt + F4</tspan></text>
+      <text x="10" y="190">🔍 Zoom Min / Max: <tspan fill="#facc15">10% to 500%</tspan></text>
+      <text x="10" y="218">📖 Spell Check: <tspan fill="#67e8f9">F7</tspan> | Thesaurus: <tspan fill="#67e8f9">Shift + F7</tspan></text>
+      
+      <rect x="0" y="240" width="340" height="42" rx="6" fill="#0f172a" stroke="#334155" />
+      <text x="170" y="266" fill="#bfdbfe" font-size="12" text-anchor="middle">Commercial Licensed Software (Microsoft Corp)</text>
+    </g>
+  </g>
+</svg>

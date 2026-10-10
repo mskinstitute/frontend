@@ -1,0 +1,77 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 480" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b0f19"/>
+      <stop offset="100%" stop-color="#1e1b4b"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="480" rx="16" fill="url(#bg3)"/>
+  <text x="40" y="45" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="20" font-weight="700">Stack (LIFO) vs Queue (FIFO) Mechanical Principles</text>
+  <rect x="630" y="25" width="130" height="28" rx="14" fill="#312e81"/>
+  <text x="695" y="44" fill="#a5b4fc" font-family="system-ui, sans-serif" font-size="12" font-weight="600" text-anchor="middle">CORE PATTERNS</text>
+
+  <!-- STACK CONTAINER (Left) -->
+  <text x="80" y="105" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="16" font-weight="700">1. STACK: Last In, First Out (LIFO)</text>
+  <text x="80" y="125" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="12">Analogy: Cafeteria Tray Stack or Browser Back-Button History</text>
+
+  <!-- U-Shaped Bucket -->
+  <path d="M 120 160 L 120 380 L 260 380 L 260 160" fill="none" stroke="#64748b" stroke-width="4" stroke-linecap="round"/>
+
+  <!-- Stack Elements -->
+  <rect x="130" y="325" width="120" height="45" rx="6" fill="#1e293b" stroke="#334155" stroke-width="1.5"/>
+  <text x="190" y="352" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="14" font-weight="600" text-anchor="middle">Item 1 (Bottom)</text>
+
+  <rect x="130" y="270" width="120" height="45" rx="6" fill="#1e293b" stroke="#334155" stroke-width="1.5"/>
+  <text x="190" y="297" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="14" font-weight="600" text-anchor="middle">Item 2</text>
+
+  <rect x="130" y="215" width="120" height="45" rx="6" fill="#0284c7" stroke="#38bdf8" stroke-width="2"/>
+  <text x="190" y="242" fill="#ffffff" font-family="system-ui, sans-serif" font-size="14" font-weight="700" text-anchor="middle">Item 3 (TOP)</text>
+
+  <!-- Push / Pop Arrows -->
+  <path d="M 80 180 Q 150 140, 160 180" fill="none" stroke="#10b981" stroke-width="2.5" stroke-dasharray="3"/>
+  <polygon points="160,185 155,175 165,175" fill="#10b981"/>
+  <text x="90" y="165" fill="#34d399" font-family="system-ui, sans-serif" font-size="12" font-weight="700">PUSH ↓</text>
+
+  <path d="M 220 180 Q 230 140, 300 180" fill="none" stroke="#f43f5e" stroke-width="2.5" stroke-dasharray="3"/>
+  <polygon points="305,185 295,180 300,172" fill="#f43f5e"/>
+  <text x="260" y="165" fill="#fb7185" font-family="system-ui, sans-serif" font-size="12" font-weight="700">POP ↑</text>
+
+
+  <!-- QUEUE CONTAINER (Right) -->
+  <text x="440" y="105" fill="#a855f7" font-family="system-ui, sans-serif" font-size="16" font-weight="700">2. QUEUE: First In, First Out (FIFO)</text>
+  <text x="440" y="125" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="12">Analogy: Movie Theater Ticket Line or Printer Print-Spooler</text>
+
+  <!-- Pipe Line -->
+  <line x1="440" y1="210" x2="740" y2="210" stroke="#64748b" stroke-width="4" stroke-linecap="round"/>
+  <line x1="440" y1="290" x2="740" y2="290" stroke="#64748b" stroke-width="4" stroke-linecap="round"/>
+
+  <!-- Queue Elements -->
+  <!-- FRONT (Dequeued First) -->
+  <rect x="460" y="220" width="75" height="60" rx="6" fill="#9333ea" stroke="#c084fc" stroke-width="2"/>
+  <text x="497" y="250" fill="#ffffff" font-family="system-ui, sans-serif" font-size="13" font-weight="700" text-anchor="middle">1st In</text>
+  <text x="497" y="267" fill="#f3e8ff" font-family="system-ui, sans-serif" font-size="9" text-anchor="middle">FRONT</text>
+
+  <rect x="550" y="220" width="75" height="60" rx="6" fill="#1e293b" stroke="#334155" stroke-width="1.5"/>
+  <text x="587" y="250" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="13" font-weight="600" text-anchor="middle">2nd In</text>
+
+  <rect x="640" y="220" width="75" height="60" rx="6" fill="#1e293b" stroke="#334155" stroke-width="1.5"/>
+  <text x="677" y="250" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="13" font-weight="600" text-anchor="middle">3rd In</text>
+  <text x="677" y="267" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="9" text-anchor="middle">REAR</text>
+
+  <!-- Dequeue Left Arrow -->
+  <line x1="440" y1="250" x2="380" y2="250" stroke="#f43f5e" stroke-width="2.5"/>
+  <polygon points="375,250 385,245 385,255" fill="#f43f5e"/>
+  <text x="405" y="235" fill="#fb7185" font-family="system-ui, sans-serif" font-size="11" font-weight="700" text-anchor="middle">DEQUEUE</text>
+
+  <!-- Enqueue Right Arrow -->
+  <line x1="770" y1="250" x2="725" y2="250" stroke="#10b981" stroke-width="2.5"/>
+  <polygon points="720,250 730,245 730,255" fill="#10b981"/>
+  <text x="755" y="235" fill="#34d399" font-family="system-ui, sans-serif" font-size="11" font-weight="700" text-anchor="middle">ENQUEUE</text>
+
+  <!-- Performance Card Bottom -->
+  <rect x="80" y="405" width="660" height="50" rx="8" fill="#1e293b" stroke="#334155"/>
+  <text x="100" y="435" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="13">
+    Both Stack and Queue achieve <tspan fill="#34d399" font-weight="700">O(1) Constant Time</tspan> for insertions and removals. Ideal for DFS (Stack) and BFS (Queue) traversals.
+  </text>
+</svg>

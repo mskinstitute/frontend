@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="480" viewBox="0 0 800 480" fill="none" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  <defs>
+    <linearGradient id="excelGreen" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#107C41"/>
+      <stop offset="100%" stop-color="#0B5A2E"/>
+    </linearGradient>
+    <linearGradient id="gridHeader" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#F8FAFC"/>
+      <stop offset="100%" stop-color="#E2E8F0"/>
+    </linearGradient>
+    <filter id="shadow" x="-5" y="-3" width="810" height="490" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="#000000" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <!-- Outer Window Frame -->
+  <rect width="800" height="480" rx="10" fill="#FFFFFF"/>
+  <rect width="800" height="480" rx="10" stroke="#CBD5E1" stroke-width="1.5"/>
+
+  <!-- Title Bar -->
+  <path d="M 0 10 C 0 4.477 4.477 0 10 0 L 790 0 C 795.523 0 800 4.477 800 10 L 800 38 L 0 38 Z" fill="url(#excelGreen)"/>
+  
+  <!-- Window Controls -->
+  <circle cx="18" cy="19" r="5" fill="#FF5F56"/>
+  <circle cx="34" cy="19" r="5" fill="#FFBD2E"/>
+  <circle cx="50" cy="19" r="5" fill="#27C93F"/>
+
+  <!-- Excel Icon Badge -->
+  <rect x="68" y="8" width="22" height="22" rx="4" fill="#0A4D27"/>
+  <text x="79" y="24" fill="#FFFFFF" font-size="14" font-weight="900" text-anchor="middle">X</text>
+
+  <!-- Workbook Title -->
+  <text x="400" y="24" fill="#FFFFFF" font-size="13" font-weight="600" text-anchor="middle" letter-spacing="0.2">Conditional Formatting Rules & Heatmaps - Microsoft Excel</text>
+
+  <!-- AutoSave Pill -->
+  <rect x="670" y="9" width="120" height="20" rx="4" fill="rgba(255,255,255,0.15)"/>
+  <text x="730" y="23" fill="#FFFFFF" font-size="11" text-anchor="middle">AutoSave: On</text>
+
+  
+  <!-- Top Banner -->
+  <rect x="0" y="38" width="800" height="40" fill="#F8FAFC"/>
+  <line x1="0" y1="78" x2="800" y2="78" stroke="#CBD5E1"/>
+  <text x="24" y="63" fill="#0F172A" font-size="13" font-weight="bold">Home &gt; Conditional Formatting: Data Bars, Color Scales, Icon Sets &amp; Formula Rules</text>
+
+  <!-- Left: Visual Formatting Types (4 Cards) -->
+  <g transform="translate(30, 95)">
+    <!-- 1. Highlight Rules -->
+    <rect width="360" height="75" rx="6" fill="#FFFFFF" stroke="#CBD5E1"/>
+    <text x="15" y="22" fill="#0F172A" font-size="11" font-weight="bold">1. Highlight Cell Rules (Thresholds)</text>
+    <rect x="15" y="32" width="70" height="28" rx="3" fill="#DCFCE7"/>
+    <text x="50" y="50" fill="#166534" font-size="11" font-weight="bold" text-anchor="middle">&gt; $100K</text>
+    <rect x="95" y="32" width="70" height="28" rx="3" fill="#FEF3C7"/>
+    <text x="130" y="50" fill="#B45309" font-size="11" font-weight="bold" text-anchor="middle">$50K-$100K</text>
+    <rect x="175" y="32" width="70" height="28" rx="3" fill="#FEE2E2"/>
+    <text x="210" y="50" fill="#991B1B" font-size="11" font-weight="bold" text-anchor="middle">&lt; $50K</text>
+
+    <!-- 2. Data Bars -->
+    <g transform="translate(0, 85)">
+      <rect width="360" height="75" rx="6" fill="#FFFFFF" stroke="#CBD5E1"/>
+      <text x="15" y="22" fill="#0F172A" font-size="11" font-weight="bold">2. Data Bars (In-Cell Progress Bars)</text>
+      <!-- Cell 1 -->
+      <rect x="15" y="32" width="90" height="24" rx="2" fill="#F1F5F9" stroke="#E2E8F0"/>
+      <rect x="15" y="32" width="75" height="24" rx="2" fill="#60A5FA"/>
+      <text x="25" y="48" fill="#1E293B" font-size="10" font-weight="bold">$8,500</text>
+      <!-- Cell 2 -->
+      <rect x="115" y="32" width="90" height="24" rx="2" fill="#F1F5F9" stroke="#E2E8F0"/>
+      <rect x="115" y="32" width="45" height="24" rx="2" fill="#60A5FA"/>
+      <text x="125" y="48" fill="#1E293B" font-size="10" font-weight="bold">$4,200</text>
+      <!-- Cell 3 -->
+      <rect x="215" y="32" width="90" height="24" rx="2" fill="#F1F5F9" stroke="#E2E8F0"/>
+      <rect x="215" y="32" width="90" height="24" rx="2" fill="#60A5FA"/>
+      <text x="225" y="48" fill="#1E293B" font-size="10" font-weight="bold">$10,000</text>
+    </g>
+
+    <!-- 3. Icon Sets -->
+    <g transform="translate(0, 170)">
+      <rect width="360" height="75" rx="6" fill="#FFFFFF" stroke="#CBD5E1"/>
+      <text x="15" y="22" fill="#0F172A" font-size="11" font-weight="bold">3. Icon Sets (Traffic Lights, Arrows)</text>
+      <circle cx="28" cy="46" r="8" fill="#16A34A"/>
+      <text x="42" y="50" fill="#15803D" font-size="11" font-weight="bold">Top 33% (Good)</text>
+
+      <circle cx="140" cy="46" r="8" fill="#EAB308"/>
+      <text x="154" y="50" fill="#A16207" font-size="11" font-weight="bold">Middle (Neutral)</text>
+
+      <circle cx="260" cy="46" r="8" fill="#DC2626"/>
+      <text x="274" y="50" fill="#991B1B" font-size="11" font-weight="bold">Bottom (Alert)</text>
+    </g>
+  </g>
+
+  <!-- Right: Rules Manager Modal -->
+  <g transform="translate(410, 95)">
+    <rect width="360" height="245" rx="8" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.5"/>
+    <rect width="360" height="32" rx="8 8 0 0" fill="#F8FAFC"/>
+    <text x="15" y="21" fill="#0F172A" font-size="11" font-weight="bold">Conditional Formatting Rules Manager</text>
+
+    <!-- Filter dropdown -->
+    <text x="15" y="50" fill="#64748B" font-size="10">Show formatting rules for: This Worksheet</text>
+    <rect x="15" y="58" width="85" height="22" rx="3" fill="#107C41"/>
+    <text x="57" y="73" fill="#FFFFFF" font-size="10" font-weight="bold" text-anchor="middle">+ New Rule...</text>
+    <rect x="105" y="58" width="75" height="22" rx="3" fill="#F1F5F9" stroke="#CBD5E1"/>
+    <text x="142" y="73" fill="#475569" font-size="10" text-anchor="middle">Edit Rule...</text>
+
+    <!-- Rule 1: Formula based -->
+    <rect x="15" y="88" width="330" height="60" rx="4" fill="#F8FAFC" stroke="#CBD5E1"/>
+    <text x="25" y="106" fill="#1E293B" font-size="10" font-weight="bold">Formula: =$E2&gt;100000</text>
+    <text x="25" y="122" fill="#64748B" font-size="9">Applies to: =$A$2:$F$100</text>
+    <rect x="25" y="128" width="60" height="14" rx="2" fill="#DCFCE7"/>
+    <text x="55" y="139" fill="#15803D" font-size="9" font-weight="bold" text-anchor="middle">Green Fill</text>
+
+    <!-- Rule 2: Duplicate Values -->
+    <rect x="15" y="154" width="330" height="50" rx="4" fill="#F8FAFC" stroke="#CBD5E1"/>
+    <text x="25" y="172" fill="#1E293B" font-size="10" font-weight="bold">Duplicate Values</text>
+    <text x="25" y="188" fill="#64748B" font-size="9">Applies to: =$A$2:$A$100 (Emp ID)</text>
+    <rect x="25" y="192" width="60" height="10" rx="2" fill="#FEE2E2"/>
+
+    <text x="15" y="232" fill="#107C41" font-size="10" font-weight="bold">[✓] Stop If True (Prevents rule collision)</text>
+  </g>
+
+  <!-- Bottom Tip Box -->
+  <rect x="30" y="355" width="740" height="100" rx="6" fill="#FFF7ED" stroke="#FDBA74"/>
+  <text x="50" y="380" fill="#9A3412" font-size="12" font-weight="bold">Pro Tip: Highlighting Entire Rows with Formulas:</text>
+  <text x="50" y="402" fill="#C2410C" font-size="11">To highlight an entire row when column D equals "Completed", write: =$D2="Completed"</text>
+  <text x="50" y="420" fill="#9A3412" font-size="11">Notice the dollar sign before D ($D locks column inspection) and NO dollar sign before 2 (allowing row evaluation)!</text>
+  <text x="50" y="440" fill="#7C2D12" font-size="10" font-weight="600">Always test your formula on a single cell first to verify TRUE or FALSE output before creating rule.</text>
+
+</svg>

@@ -1,0 +1,92 @@
+{
+  "$schema": "./social-links.schema.json",
+  "comment": "MSK Institute — Official Social Media & Community Trust Registry. Easily update any link, handle, follower count, or toggle enabled true/false.",
+  "channels": [
+    {
+      "id": "youtube",
+      "name": "YouTube",
+      "handle": "@mskinstitute",
+      "url": "https://youtube.com/@mskinstitute",
+      "badge": "Video Classes",
+      "followers": "100+ Lessons",
+      "description": "Free coding video lectures, live project builds, and seminar recordings.",
+      "enabled": true,
+      "color": "#FF0000"
+    },
+    {
+      "id": "instagram",
+      "name": "Instagram",
+      "handle": "@mskinstitute.in",
+      "url": "https://www.instagram.com/mskinstitute.in",
+      "badge": "Campus Life",
+      "followers": "Daily Updates",
+      "description": "Classroom lab moments, student achievements, certificate ceremonies, and tech reels.",
+      "enabled": true,
+      "color": "#E4405F"
+    },
+    {
+      "id": "linkedin",
+      "name": "LinkedIn",
+      "handle": "company/msk-institute",
+      "url": "https://www.linkedin.com/company/mskinstitute/",
+      "badge": "Alumni & Jobs",
+      "followers": "Network",
+      "description": "Career opportunities, alumni job placements, software internships, and tech industry news.",
+      "enabled": true,
+      "color": "#0A66C2"
+    },
+    {
+      "id": "whatsapp",
+      "name": "WhatsApp",
+      "handle": "+91 83930 42166",
+      "url": "https://wa.me/918393042166",
+      "badge": "Direct Help",
+      "followers": "Instant Support",
+      "description": "Chat directly with Er. Sumit Kumar for course counseling, syllabus inquiries, and demo seats.",
+      "enabled": true,
+      "color": "#25D366"
+    },
+    {
+      "id": "github",
+      "name": "GitHub",
+      "handle": "mskinstitute",
+      "url": "https://github.com/mskinstitute",
+      "badge": "Open Source",
+      "followers": "Code Repos",
+      "description": "Explore student capstone code, open-source projects, and starter boilerplates.",
+      "enabled": true,
+      "color": "#181717"
+    },
+    {
+      "id": "facebook",
+      "name": "Facebook",
+      "handle": "mskinstitute",
+      "url": "https://www.facebook.com/mskinstitute.in",
+      "badge": "Community",
+      "followers": "Official Page",
+      "description": "Official institute announcements, felicitation photos, and community news.",
+      "enabled": true,
+      "color": "#1877F2"
+    }
+  ],
+  "googleReviews": {
+    "rating": "4.9",
+    "reviewCount": "128+",
+    "mapsUrl": "https://maps.google.com/?q=MSK+Institute+Shikohabad",
+    "label": "Google Verified Reviews",
+    "enabled": true
+  },
+  "whatsAppSupport": {
+    "phone": "+91 83930 42166",
+    "cleanNumber": "918393042166",
+    "defaultMessage": "Hi MSK Institute, I want to inquire about courses and demo classes in Shikohabad.",
+    "counselorName": "Er. Sumit Kumar",
+    "enabled": true
+  },
+  "communityStats": {
+    "studentsMentored": "1,200+",
+    "activeLearners": "200+ Students",
+    "practicalRatio": "100%",
+    "verifiedCertificates": "500+"
+  }
+}

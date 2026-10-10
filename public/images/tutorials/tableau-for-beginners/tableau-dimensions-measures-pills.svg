@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="tabBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#09131f" />
+      <stop offset="100%" stop-color="#15263a" />
+    </linearGradient>
+  </defs>
+  <rect width="900" height="450" rx="16" fill="url(#tabBg)" />
+  <rect x="2" y="2" width="896" height="446" rx="14" fill="none" stroke="#334155" stroke-width="1.5" />
+  <text x="450" y="45" fill="#f8fafc" font-family="system-ui" font-size="22" font-weight="800" text-anchor="middle">
+    TABLEAU CORE CONCEPTS: BLUE (DISCRETE) VS GREEN (CONTINUOUS) PILLS
+  </text>
+  <text x="450" y="70" fill="#38bdf8" font-family="system-ui" font-size="13" text-anchor="middle">
+    Understanding How Tableau Categorizes Data and Renders Visual Elements
+  </text>
+  <g transform="translate(60, 100)">
+    <!-- Left: Blue Discrete -->
+    <rect width="360" height="300" rx="10" fill="#1e293b" stroke="#3b82f6" stroke-width="2" />
+    <rect width="360" height="40" rx="10" fill="#2563eb" />
+    <text x="180" y="26" fill="#ffffff" font-family="system-ui" font-size="15" font-weight="700" text-anchor="middle">BLUE PILLS: DISCRETE (Headers)</text>
+    <text x="25" y="70" fill="#cbd5e1" font-family="system-ui" font-size="12">• Draws headers and row/column dividers</text>
+    <text x="25" y="95" fill="#cbd5e1" font-family="system-ui" font-size="12">• Individually separate and distinct values</text>
+    <text x="25" y="120" fill="#cbd5e1" font-family="system-ui" font-size="12">• Examples: Region, Category, Year (Discrete)</text>
+    <rect x="25" y="150" width="140" height="35" rx="18" fill="#1d4ed8" />
+    <text x="95" y="172" fill="#ffffff" font-family="system-ui" font-size="12" font-weight="700" text-anchor="middle">[Region]</text>
+  </g>
+  <g transform="translate(480, 100)">
+    <!-- Right: Green Continuous -->
+    <rect width="360" height="300" rx="10" fill="#1e293b" stroke="#10b981" stroke-width="2" />
+    <rect width="360" height="40" rx="10" fill="#059669" />
+    <text x="180" y="26" fill="#ffffff" font-family="system-ui" font-size="15" font-weight="700" text-anchor="middle">GREEN PILLS: CONTINUOUS (Axes)</text>
+    <text x="25" y="70" fill="#cbd5e1" font-family="system-ui" font-size="12">• Draws continuous numerical axes</text>
+    <text x="25" y="95" fill="#cbd5e1" font-family="system-ui" font-size="12">• Forming an unbroken whole without interruption</text>
+    <text x="25" y="120" fill="#cbd5e1" font-family="system-ui" font-size="12">• Examples: Profit, Sales, Discount %</text>
+    <rect x="25" y="150" width="140" height="35" rx="18" fill="#047857" />
+    <text x="95" y="172" fill="#ffffff" font-family="system-ui" font-size="12" font-weight="700" text-anchor="middle">SUM([Sales])</text>
+  </g>
+</svg>

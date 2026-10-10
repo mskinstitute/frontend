@@ -1,0 +1,283 @@
+[
+  {
+    "id": "branch-shikohabad-001",
+    "code": "SKB-01",
+    "name": "MSK Institute Shikohabad",
+    "displayName": "Shikohabad Campus (Headquarters)",
+    "slug": "shikohabad",
+    "organizationId": "msk-institute",
+    "city": "Shikohabad",
+    "normalizedCity": "shikohabad",
+    "state": "Uttar Pradesh",
+    "country": "India",
+    "countryCode": "IN",
+    "postalCode": "283135",
+    "address": "Gali No. 3, Near Gyan Jyoti Public School",
+    "landmark": "Near Gyan Jyoti Public School, Station Road Area",
+    "latitude": 27.1157743,
+    "longitude": 78.5829716,
+    "phone": "+918393042166",
+    "formattedPhone": "+91 83930 42166",
+    "whatsapp": "+918393042166",
+    "email": "mskshikohabad@gmail.com",
+    "website": "https://www.mskinstitute.in/locations/shikohabad",
+    "openingHours": [
+      {
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday"
+        ],
+        "opens": "08:00",
+        "closes": "19:00"
+      },
+      {
+        "dayOfWeek": [
+          "Sunday"
+        ],
+        "opens": "10:00",
+        "closes": "14:00"
+      }
+    ],
+    "status": "OPEN",
+    "branchType": "CORPORATE",
+    "isHeadquarters": true,
+    "openingDate": "2023-01-15",
+    "googleBusiness": {
+      "profileUrl": "https://maps.google.com/?q=MSK+Institute+Shikohabad"
+    },
+    "availableCourseIds": [
+      "course-ccc-nielit",
+      "course-adca",
+      "course-html5-complete-course",
+      "course-css-for-beginners",
+      "course-css-for-intermediate",
+      "course-css-for-advanced",
+      "course-backend-node",
+      "course-web-dev",
+      "course-cyber-security-ethical-hacking",
+      "course-python-for-beginners",
+      "course-python-for-intermediate",
+      "course-python-for-advanced",
+      "course-numpy-complete-course",
+      "course-javascript-for-beginners",
+      "course-javascript-for-intermediate",
+      "course-javascript-for-advanced",
+      "course-react-js-for-beginners",
+      "course-react-js-for-intermediate",
+      "course-react-js-for-advanced",
+      "course-bootstrap-for-beginner",
+      "course-bootstrap-for-advanced",
+      "course-sql-for-beginners",
+      "course-sql-for-intermediate",
+      "course-sql-for-advanced",
+      "course-ms-word-for-beginners",
+      "course-ms-word-for-advanced",
+      "course-git--github-basics",
+      "course-ms-powerpoint-for-beginners",
+      "course-ms-excel-for-beginners",
+      "course-ms-excel-for-intermediate",
+      "course-ms-excel-for-advanced",
+      "course-power-bi-for-beginners",
+      "course-power-bi-for-intermediate",
+      "course-power-bi-for-advanced",
+      "course-data-analysis--basics--pandas",
+      "course-data-analysis--visualization--statistics",
+      "course-data-analysis--advanced-pandas--ml-basics",
+      "course-tableau-for-beginners",
+      "course-django-for-backend-development",
+      "course-orm-concepts-for-backend-development",
+      "course-rest-api-development-with-django",
+      "course-authentication--authorization-for-backend",
+      "course-deployment--hosting-for-backend",
+      "course-advanced-backend-concepts",
+      "course-ms-office--4-months",
+      "course-web-designing-complete-pathway--4-months",
+      "course-ms-word-complete-pathway-beginner-to-advanced--2-months",
+      "course-python-mastery-beginner-to-advanced--3-months",
+      "course-python-backend-development-mastery-combo--8-months",
+      "course-data-analysis-mastery-combo-course--12-months",
+      "course-power-bi-mastery-beginner-to-advanced--3-months",
+      "course-ms-excel-beginners-to-advanced--6-months",
+      "course-frontend-development--8-months",
+      "course-o-level",
+      "course-full-stack-development",
+      "course-sql-mysql-mastery-beginner-to-advanced--3-months",
+      "course-markdown-mastery",
+      "course-pandas-complete-course",
+      "course-nodejs-and-express-backend",
+      "course-mongodb-and-mongoose-database",
+      "course-tailwind-css-mastery",
+      "course-nextjs-complete-course",
+      "course-full-stack-mern-mastery--12-months",
+      "course-full-stack-python-mastery--12-months",
+      "course-dsa-mastery-course",
+      "course-flask-complete-course"
+    ],
+    "activeBatchIds": [
+      "batch-python-mastery-3-months",
+      "batch-mern-full-stack",
+      "batch-data-analysis-mastery",
+      "batch-python-summer-2026"
+    ],
+    "facultyIds": [
+      "sumit-kumar"
+    ],
+    "facilities": [
+      "High-Performance Air-Conditioned Computer Lab",
+      "Dual-Monitor Instructor Demonstration Stations",
+      "100 Mbps Dedicated Fiber Internet",
+      "Full Power Backup & Inverter Systems",
+      "Dedicated Doubt Counters & Mentor Desks",
+      "Practice Workstations for Post-Class Coding",
+      "TypeQuest Speed Lab Terminals",
+      "Offline Courseware & Cheatsheet Library"
+    ],
+    "gallery": [
+      {
+        "url": "/logo.jpg",
+        "alt": "MSK Institute Shikohabad Campus Entrance",
+        "caption": "MSK Institute Shikohabad Campus Entrance & Front Office"
+      }
+    ],
+    "localDescription": "MSK Institute Shikohabad is our flagship headquarters and premier software engineering training center in Firozabad district. Equipped with cutting-edge computer labs, fiber internet, and projector-enabled interactive lecture halls, the campus provides hands-on career coaching in Full Stack Web Development, Python, Data Analytics, CCC, ADCA, and Office Productivity.",
+    "localSeo": {
+      "title": "MSK Institute Shikohabad | Best Computer & Coding Institute in Shikohabad",
+      "description": "Join MSK Institute Shikohabad for practical software training in Python, Full Stack Web Development, CCC, ADCA, and Data Analytics. Certified courses with hands-on lab projects.",
+      "keywords": [
+        "MSK Institute Shikohabad",
+        "Computer Institute in Shikohabad",
+        "Coding Classes Shikohabad",
+        "Best Computer Center Shikohabad",
+        "Python Course Shikohabad",
+        "CCC Coaching Shikohabad",
+        "ADCA Course Shikohabad"
+      ],
+      "ogImage": "https://www.mskinstitute.in/logo.jpg",
+      "canonical": "https://www.mskinstitute.in/locations/shikohabad",
+      "indexable": true
+    },
+    "faqs": [
+      {
+        "question": "Where is MSK Institute located in Shikohabad?",
+        "answer": "MSK Institute Shikohabad is situated at Gali No. 3, Near Gyan Jyoti Public School, Shikohabad, Uttar Pradesh (PIN: 283135). It is centrally accessible from Station Road, Katra Bazar, and nearby towns like Sirsaganj and Jasrana."
+      },
+      {
+        "question": "What are the lab timings and operating hours at Shikohabad branch?",
+        "answer": "The campus and computer lab are open Monday through Saturday from 08:00 AM to 07:00 PM, and Sundays from 10:00 AM to 02:00 PM. Students enjoy extended practice lab hours beyond lecture timings."
+      },
+      {
+        "question": "Can I attend a free demo class before enrolling at Shikohabad campus?",
+        "answer": "Yes! We offer 2 days of free demo classes across all programming and computer diploma courses. You can book an appointment online or walk directly into the campus counseling desk."
+      },
+      {
+        "question": "Are offline certificates verified online from this branch?",
+        "answer": "All certificates awarded upon course completion at MSK Institute Shikohabad come with tamper-proof QR codes and can be instantly verified globally at mskinstitute.in/verify-certificate."
+      }
+    ],
+    "createdAt": "2023-01-15T00:00:00.000Z",
+    "updatedAt": "2026-09-25T12:00:00.000Z"
+  },
+  {
+    "id": "branch-agra-001",
+    "code": "AGR-01",
+    "name": "MSK Institute Agra",
+    "displayName": "Agra Regional Center (Coming Soon)",
+    "slug": "agra",
+    "organizationId": "msk-institute",
+    "city": "Agra",
+    "normalizedCity": "agra",
+    "state": "Uttar Pradesh",
+    "country": "India",
+    "countryCode": "IN",
+    "postalCode": "282002",
+    "address": "Sanjay Place Commercial Complex (Upcoming Learning Center)",
+    "landmark": "Near Sanjay Place Metro Station Area",
+    "latitude": 27.1766701,
+    "longitude": 78.0080745,
+    "phone": "+918393042166",
+    "formattedPhone": "+91 83930 42166",
+    "whatsapp": "+918393042166",
+    "email": "mskshikohabad@gmail.com",
+    "website": "https://www.mskinstitute.in/locations/agra",
+    "openingHours": [
+      {
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday"
+        ],
+        "opens": "09:00",
+        "closes": "18:00"
+      }
+    ],
+    "status": "COMING_SOON",
+    "branchType": "CORPORATE",
+    "isHeadquarters": false,
+    "openingDate": "2026-11-15",
+    "googleBusiness": {
+      "profileUrl": "https://maps.google.com/?q=Agra+Uttar+Pradesh"
+    },
+    "availableCourseIds": [
+      "course-python-mastery-beginner-to-advanced--3-months",
+      "course-full-stack-development",
+      "course-data-analysis-mastery-combo-course--12-months",
+      "course-ccc-nielit",
+      "course-adca"
+    ],
+    "activeBatchIds": [],
+    "facultyIds": [
+      "sumit-kumar"
+    ],
+    "facilities": [
+      "Modern High-Density Coding Workstations",
+      "Interactive Smart Digital Classroom",
+      "Gigabit Fiber Internet Connectivity",
+      "Placement & Career Guidance Cell"
+    ],
+    "gallery": [
+      {
+        "url": "/logo.jpg",
+        "alt": "MSK Institute Agra Expansion Hub",
+        "caption": "MSK Institute Agra Center Pre-Launch Desk"
+      }
+    ],
+    "localDescription": "MSK Institute is proud to announce its upcoming regional software training campus in Agra, Uttar Pradesh. Bringing our industry-recognized practical teaching pedagogy, hands-on live project labs, and interview training to students and working professionals in Agra.",
+    "localSeo": {
+      "title": "MSK Institute Agra | Coding & Software Training Academy (Coming Soon)",
+      "description": "MSK Institute is opening its state-of-the-art coding center in Agra. Pre-register for Full Stack Web Development, Python Mastery, and Data Analytics career courses.",
+      "keywords": [
+        "MSK Institute Agra",
+        "Coding Institute Agra",
+        "Python Course in Agra",
+        "Web Development Course Agra",
+        "Computer Classes Agra"
+      ],
+      "ogImage": "https://www.mskinstitute.in/logo.jpg",
+      "canonical": "https://www.mskinstitute.in/locations/agra",
+      "indexable": true
+    },
+    "faqs": [
+      {
+        "question": "When will MSK Institute Agra campus officially commence offline classes?",
+        "answer": "Offline classroom batches at the Agra learning center are slated to commence in late 2026. Pre-booking and counseling for inaugural cohorts are currently active."
+      },
+      {
+        "question": "Can Agra students start classes online before the physical center opens?",
+        "answer": "Yes! Students registering in Agra can immediately join our live interactive online cohorts and seamlessly transition into physical campus lab sessions once the campus opens."
+      },
+      {
+        "question": "Will the Agra branch offer the same curriculum and placement support as the headquarters?",
+        "answer": "Absolutely. Every MSK Institute branch adheres to the standardized practical curriculum, shared project repositories, centralized code playground, and placement portal."
+      }
+    ],
+    "createdAt": "2026-09-01T00:00:00.000Z",
+    "updatedAt": "2026-09-25T12:00:00.000Z"
+  }
+]

@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="480" viewBox="0 0 800 480" fill="none" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  <defs>
+    <linearGradient id="pptOrange" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D24726"/>
+      <stop offset="100%" stop-color="#A23218"/>
+    </linearGradient>
+    <linearGradient id="ribbonBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#F8FAFC"/>
+      <stop offset="100%" stop-color="#EEF2F6"/>
+    </linearGradient>
+    <linearGradient id="slideBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#F8FAFC"/>
+    </linearGradient>
+    <filter id="shadow" x="-5" y="-3" width="810" height="490" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="#000000" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <!-- Outer Window Frame -->
+  <rect width="800" height="480" rx="10" fill="#FFFFFF"/>
+  <rect width="800" height="480" rx="10" stroke="#CBD5E1" stroke-width="1.5"/>
+
+  <!-- Title Bar -->
+  <path d="M 0 10 C 0 4.477 4.477 0 10 0 L 790 0 C 795.523 0 800 4.477 800 10 L 800 38 L 0 38 Z" fill="url(#pptOrange)"/>
+  
+  <!-- Window Controls -->
+  <circle cx="18" cy="19" r="5" fill="#FF5F56"/>
+  <circle cx="34" cy="19" r="5" fill="#FFBD2E"/>
+  <circle cx="50" cy="19" r="5" fill="#27C93F"/>
+
+  <!-- PowerPoint Icon Badge -->
+  <rect x="68" y="8" width="22" height="22" rx="4" fill="#8F2510"/>
+  <text x="79" y="24" fill="#FFFFFF" font-size="14" font-weight="900" text-anchor="middle">P</text>
+
+  <!-- Presentation Title & Search -->
+  <text x="400" y="24" fill="#FFFFFF" font-size="13" font-weight="600" text-anchor="middle" letter-spacing="0.2">Object Animations & The Animation Pane - Microsoft PowerPoint</text>
+
+  <!-- Quick Save / Undo icons placeholder -->
+  <rect x="670" y="9" width="120" height="20" rx="4" fill="rgba(255,255,255,0.15)"/>
+  <text x="730" y="23" fill="#FFFFFF" font-size="11" text-anchor="middle">AutoSave: On</text>
+
+  
+  <!-- Top Category Banner -->
+  <rect x="0" y="38" width="800" height="60" fill="#F8FAFC"/>
+  <line x1="0" y1="98" x2="800" y2="98" stroke="#E2E8F0"/>
+
+  <!-- 4 Animation Categories -->
+  <g transform="translate(30, 46)">
+    <rect width="170" height="42" rx="4" fill="#F0FDF4" stroke="#86EFAC"/>
+    <circle cx="20" cy="21" r="9" fill="#16A34A"/>
+    <text x="20" y="25" fill="#FFFFFF" font-size="12" font-weight="bold" text-anchor="middle">★</text>
+    <text x="36" y="19" fill="#166534" font-size="11" font-weight="bold">Entrance (Green)</text>
+    <text x="36" y="33" fill="#15803D" font-size="9">Appear, Fade, Fly In, Zoom</text>
+
+    <rect x="185" y="0" width="170" height="42" rx="4" fill="#FEFCE8" stroke="#FDE047"/>
+    <circle cx="205" cy="21" r="9" fill="#CA8A04"/>
+    <text x="205" y="25" fill="#FFFFFF" font-size="12" font-weight="bold" text-anchor="middle">★</text>
+    <text x="221" y="19" fill="#854D0E" font-size="11" font-weight="bold">Emphasis (Yellow)</text>
+    <text x="221" y="33" fill="#A16207" font-size="9">Pulse, Spin, Color, Teeter</text>
+
+    <rect x="370" y="0" width="170" height="42" rx="4" fill="#FEF2F2" stroke="#FCA5A5"/>
+    <circle cx="390" cy="21" r="9" fill="#DC2626"/>
+    <text x="390" y="25" fill="#FFFFFF" font-size="12" font-weight="bold" text-anchor="middle">★</text>
+    <text x="406" y="19" fill="#991B1B" font-size="11" font-weight="bold">Exit (Red)</text>
+    <text x="406" y="33" fill="#B91C1C" font-size="9">Disappear, Fade, Fly Out</text>
+
+    <rect x="555" y="0" width="190" height="42" rx="4" fill="#EFF6FF" stroke="#93C5FD"/>
+    <circle cx="575" cy="21" r="9" fill="#2563EB"/>
+    <text x="575" y="25" fill="#FFFFFF" font-size="12" font-weight="bold" text-anchor="middle">↝</text>
+    <text x="591" y="19" fill="#1E40AF" font-size="11" font-weight="bold">Motion Paths (Blue)</text>
+    <text x="591" y="33" fill="#1D4ED8" font-size="9">Lines, Arcs, Custom Paths</text>
+  </g>
+
+  <!-- Left: Slide Preview with numbered badges -->
+  <rect x="30" y="112" width="460" height="340" rx="8" fill="#FFFFFF" stroke="#CBD5E1"/>
+  <text x="45" y="136" fill="#0F172A" font-size="13" font-weight="bold">Slide Canvas with Animation Sequence Badges</text>
+
+  <!-- Object 1: Title -->
+  <rect x="50" y="155" width="420" height="45" rx="4" fill="#F8FAFC" stroke="#CBD5E1"/>
+  <circle cx="65" cy="177" r="11" fill="#D24726"/>
+  <text x="65" y="181" fill="#FFFFFF" font-size="11" font-weight="bold" text-anchor="middle">1</text>
+  <text x="85" y="182" fill="#0F172A" font-size="14" font-weight="bold">Q4 Strategic Growth Initiatives</text>
+
+  <!-- Object 2: Bullet 1 -->
+  <rect x="50" y="215" width="420" height="36" rx="4" fill="#FFFFFF" stroke="#E2E8F0"/>
+  <circle cx="65" cy="233" r="11" fill="#D24726"/>
+  <text x="65" y="237" fill="#FFFFFF" font-size="11" font-weight="bold" text-anchor="middle">2</text>
+  <text x="85" y="237" fill="#334155" font-size="12">1. Expand Cloud Infrastructure by 40%</text>
+
+  <!-- Object 3: Bullet 2 -->
+  <rect x="50" y="265" width="420" height="36" rx="4" fill="#FFFFFF" stroke="#E2E8F0"/>
+  <circle cx="65" cy="283" r="11" fill="#D24726"/>
+  <text x="65" y="287" fill="#FFFFFF" font-size="11" font-weight="bold" text-anchor="middle">3</text>
+  <text x="85" y="287" fill="#334155" font-size="12">2. Launch Customer Self-Service Portal</text>
+
+  <!-- Object 4: Callout Box with motion path -->
+  <rect x="50" y="320" width="180" height="60" rx="6" fill="#EFF6FF" stroke="#3B82F6"/>
+  <circle cx="65" cy="350" r="11" fill="#D24726"/>
+  <text x="65" y="354" fill="#FFFFFF" font-size="11" font-weight="bold" text-anchor="middle">4</text>
+  <text x="85" y="354" fill="#1E40AF" font-size="11" font-weight="bold">Revenue Goal: $12M</text>
+
+  <!-- Motion Path dashed line -->
+  <path d="M 230 350 C 300 350, 320 400, 390 380" stroke="#2563EB" stroke-width="2" stroke-dasharray="4 3" fill="none"/>
+  <polygon points="392,380 382,374 384,385" fill="#2563EB"/>
+
+  <!-- Right: Animation Pane Sidebar -->
+  <g transform="translate(510, 112)">
+    <rect width="260" height="340" rx="8" fill="#F8FAFC" stroke="#CBD5E1"/>
+    <rect x="0" y="0" width="260" height="34" rx="8 8 0 0" fill="#E2E8F0"/>
+    <text x="12" y="22" fill="#0F172A" font-size="12" font-weight="bold">Animation Pane</text>
+    <rect x="180" y="6" width="68" height="22" rx="3" fill="#D24726"/>
+    <text x="214" y="21" fill="#FFFFFF" font-size="10" font-weight="bold" text-anchor="middle">▶ Play All</text>
+
+    <!-- Sequence Items -->
+    <!-- Item 1 -->
+    <rect x="10" y="44" width="240" height="50" rx="4" fill="#FFFFFF" stroke="#86EFAC"/>
+    <circle cx="24" cy="62" r="7" fill="#16A34A"/>
+    <text x="24" y="65" fill="#FFFFFF" font-size="8" font-weight="bold" text-anchor="middle">★</text>
+    <text x="36" y="60" fill="#0F172A" font-size="10" font-weight="bold">Title 1 (Fly In)</text>
+    <text x="36" y="74" fill="#64748B" font-size="9">Start: On Click | 0.50s</text>
+    <rect x="175" y="58" width="55" height="12" rx="2" fill="#86EFAC"/>
+
+    <!-- Item 2 -->
+    <rect x="10" y="102" width="240" height="50" rx="4" fill="#FFFFFF" stroke="#86EFAC"/>
+    <circle cx="24" cy="120" r="7" fill="#16A34A"/>
+    <text x="24" y="123" fill="#FFFFFF" font-size="8" font-weight="bold" text-anchor="middle">★</text>
+    <text x="36" y="118" fill="#0F172A" font-size="10" font-weight="bold">Content Placeholder 2</text>
+    <text x="36" y="132" fill="#64748B" font-size="9">Start: After Previous | 0.40s</text>
+    <rect x="185" y="116" width="45" height="12" rx="2" fill="#86EFAC"/>
+
+    <!-- Item 3 -->
+    <rect x="10" y="160" width="240" height="50" rx="4" fill="#FFFFFF" stroke="#FDE047"/>
+    <circle cx="24" cy="178" r="7" fill="#CA8A04"/>
+    <text x="24" y="181" fill="#FFFFFF" font-size="8" font-weight="bold" text-anchor="middle">★</text>
+    <text x="36" y="176" fill="#0F172A" font-size="10" font-weight="bold">Goal Box (Pulse Emphasis)</text>
+    <text x="36" y="190" fill="#64748B" font-size="9">Start: With Previous | 0.80s</text>
+    <rect x="170" y="174" width="60" height="12" rx="2" fill="#FDE047"/>
+
+    <!-- Item 4 -->
+    <rect x="10" y="218" width="240" height="50" rx="4" fill="#FFFFFF" stroke="#93C5FD"/>
+    <circle cx="24" cy="236" r="7" fill="#2563EB"/>
+    <text x="24" y="239" fill="#FFFFFF" font-size="8" font-weight="bold" text-anchor="middle">↝</text>
+    <text x="36" y="234" fill="#0F172A" font-size="10" font-weight="bold">Motion Path: Curve</text>
+    <text x="36" y="248" fill="#64748B" font-size="9">Delay: 0.25s | Duration: 1.20s</text>
+    <rect x="160" y="232" width="70" height="12" rx="2" fill="#93C5FD"/>
+
+    <!-- Trigger / Timing hint -->
+    <rect x="10" y="280" width="240" height="48" rx="4" fill="#FEF2F2" stroke="#FCA5A5"/>
+    <text x="18" y="298" fill="#991B1B" font-size="9" font-weight="bold">Animation Triggers:</text>
+    <text x="18" y="312" fill="#7F1D1D" font-size="8">Trigger animation on click of specific button or shape</text>
+  </g>
+
+</svg>

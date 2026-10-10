@@ -1,0 +1,163 @@
+# Micro-Frontend Architectures and Module Federation
+
+As organizations scale to dozens of engineering squads, monolithic frontend codebases encounter severe bottlenecks: conflicting dependency upgrades, long CI/CD build queues, and tight deployment coupling. **Micro-Frontend Architecture** decomposes a monolithic web application into independent, semi-autonomous frontend applications that assemble dynamically in the browser. **Webpack 5 Module Federation** is the enterprise standard protocol enabling micro-frontends to share code and runtime components dynamically without npm publishing overhead.
+
+---
+
+## 1. Monolith vs Micro-Frontends
+
+```
+Monolithic Frontend:
+[ Squad A: Billing ] + [ Squad B: Search ] + [ Squad C: Auth ]
+──► Bundled into 1 massive artifact
+──► 1 bug in Billing blocks Search squad's release!
+
+Micro-Frontend Architecture:
+┌────────────────────────────────────────────────────────┐
+│ Host Shell (App Shell / Navigation / Global Context)   │
+└───────┬────────────────────────┬───────────────────────┘
+        │                        │
+        ▼                        ▼
+┌──────────────────┐    ┌──────────────────┐
+│ Remote App 1     │    │ Remote App 2     │
+│ (Billing Squad)  │    │ (Search Squad)   │
+│ Deploys to CDN A │    │ Deploys to CDN B │
+└──────────────────┘    └──────────────────┘
+```
+
+---
+
+## 2. Core Concepts of Webpack Module Federation
+
+- **Host (Shell):** The parent application that initializes the root DOM and consumes external modules.
+- **Remote:** An independent application that exposes specific components, state hooks, or routes for consumption by other applications.
+- **Shared Dependencies:** Libraries (such as `react`, `react-dom`, `@apollo/client`) loaded once as singletons to prevent multiple copies from bloating browser memory.
+
+---
+
+## 3. Remote Container Webpack Configuration
+
+The Remote application exposes its internal components via `ModuleFederationPlugin`:
+
+```js
+// remote-billing/webpack.config.js
+const { ModuleFederationPlugin } = require("webpack").container;
+const deps = require("./package.json").dependencies;
+
+module.exports = {
+  plugins: [
+    new ModuleFederationPlugin({
+      name: "billing_remote",
+      filename: "remoteEntry.js", // The manifest file consumed by hosts
+      exposes: {
+        // Expose component for external consumption
+        "./InvoiceWidget": "./src/components/InvoiceWidget",
+        "./BillingSummary": "./src/components/BillingSummary",
+      },
+      shared: {
+        ...deps,
+        react: { singleton: true, requiredVersion: deps.react },
+        "react-dom": { singleton: true, requiredVersion: deps["react-dom"] },
+      },
+    }),
+  ],
+};
+```
+
+---
+
+## 4. Host Shell Webpack Configuration
+
+The Host application declares the location of the remote container:
+
+```js
+// host-shell/webpack.config.js
+const { ModuleFederationPlugin } = require("webpack").container;
+const deps = require("./package.json").dependencies;
+
+module.exports = {
+  plugins: [
+    new ModuleFederationPlugin({
+      name: "host_shell",
+      remotes: {
+        // Points to deployed manifest of remote
+        billing_remote: "billing_remote@https://billing.enterprise.com/remoteEntry.js",
+      },
+      shared: {
+        ...deps,
+        react: { singleton: true, requiredVersion: deps.react },
+        "react-dom": { singleton: true, requiredVersion: deps["react-dom"] },
+      },
+    }),
+  ],
+};
+```
+
+---
+
+## 5. Dynamic Consumption in React Host
+
+The Host imports the federated component just like any other lazy-loaded component:
+
+```tsx
+import React, { Suspense, lazy } from "react";
+
+// Dynamically imported across the internet from billing CDN!
+const RemoteInvoiceWidget = lazy(() => import("billing_remote/InvoiceWidget"));
+
+export function HostDashboard() {
+  return (
+    <div className="p-8 bg-slate-900 min-h-screen text-white">
+      <h1 className="text-2xl font-bold mb-6">Host Shell Portal</h1>
+
+      <Suspense fallback={<div className="p-6 bg-slate-800 rounded animate-pulse">Streaming remote billing chunk...</div>}>
+        <RemoteInvoiceWidget organizationId="org_881" />
+      </Suspense>
+    </div>
+  );
+}
+```
+
+---
+
+## Practice Quiz
+
+### Q1: What primary organizational problem does a Micro-Frontend architecture solve?
+- A) It compresses images on the server
+- B) It decouples monolithic codebases so independent squads can build, test, and deploy their features independently without blocking each other's release cycles
+- C) It eliminates the need for CSS
+- D) It replaces the backend database
+**Answer:** B
+**Explanation:** Micro-frontends align architectural boundaries with team boundaries, allowing autonomous squads to deploy independently to production without centralized release bottlenecks.
+
+### Q2: What is the purpose of remoteEntry.js in Webpack Module Federation?
+- A) It is a text file storing database passwords
+- B) It is the manifest file generated by the remote application that tells host applications which modules are exposed and what shared dependencies are required
+- C) It converts React components to Vue
+- D) It formats hard drives
+**Answer:** B
+**Explanation:** remoteEntry.js serves as the federation entry point, exposing the remote container interface, dependency versions, and chunk paths to consumer hosts.
+
+### Q3: Why is singleton: true essential when configuring shared: ['react'] in Module Federation?
+- A) To force React into single-threaded mode
+- B) To ensure only a single instance of the React runtime exists in browser memory; having multiple copies of React breaks React Hooks (e.g. Invalid hook call error)
+- C) To disable React re-renders
+- D) To restrict React to one component per page
+**Answer:** B
+**Explanation:** React relies on internal singleton state for hooks. Loading two separate React bundles in the same browser window triggers fatal hook errors; singleton: true guarantees unified instance sharing.
+
+### Q4: How does a host application consume a federated remote component?
+- A) By copying the source code files into its git repository
+- B) By using standard dynamic React.lazy(() => import("remoteName/Component")) wrapped in a Suspense boundary
+- C) Through an iframe element
+- D) Via an SQL query
+**Answer:** B
+**Explanation:** Federated components integrate natively into the React tree; hosts load them dynamically via React.lazy and import(), rendering them directly inside Suspense boundaries.
+
+### Q5: What happens if a remote micro-frontend fails to load due to a CDN outage?
+- A) The entire host application crashes to a blank white screen
+- B) An Error Boundary wrapping the remote Suspense component can catch the chunk error and display a localized fallback without crashing the rest of the host shell
+- C) The user's computer reboots
+- D) Webpack automatically rolls back the server
+**Answer:** B
+**Explanation:** Wrapping remote federated components in standard React Error Boundaries isolates failures, ensuring an outage in one squad's micro-frontend doesn't take down the entire host portal.

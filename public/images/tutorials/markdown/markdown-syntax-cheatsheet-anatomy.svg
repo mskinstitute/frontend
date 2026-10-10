@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 500" width="100%" height="100%" style="background:#090d16;font-family:system-ui,-apple-system,sans-serif;">
+  <text x="450" y="38" fill="#f8fafc" font-size="20" font-weight="bold" text-anchor="middle">Markdown &amp; GFM Syntax Visual Anatomy</text>
+  <text x="450" y="62" fill="#94a3b8" font-size="12" text-anchor="middle">Essential building blocks for technical documentation and developer READMEs</text>
+
+  <!-- Card 1: Headings & Quotes -->
+  <g transform="translate(40, 85)">
+    <rect x="0" y="0" width="255" height="180" rx="10" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5" />
+    <rect x="0" y="0" width="255" height="32" rx="10" fill="#0284c7" />
+    <text x="127" y="21" fill="#ffffff" font-size="13" font-weight="bold" text-anchor="middle">1. Headings &amp; Quotes</text>
+    <g transform="translate(15, 45)" font-family="monospace" font-size="11">
+      <text x="0" y="16" fill="#38bdf8"># H1 Heading (Page)</text>
+      <text x="0" y="36" fill="#38bdf8">## H2 Section</text>
+      <text x="0" y="56" fill="#38bdf8">### H3 Sub-section</text>
+      <text x="0" y="80" fill="#fbbf24">&gt; Blockquote text</text>
+      <text x="0" y="100" fill="#fbbf24">&gt;&gt; Nested quotation</text>
+      <text x="0" y="122" fill="#94a3b8">--- (Divider rule)</text>
+    </g>
+  </g>
+
+  <!-- Card 2: Formatting & Emphasis -->
+  <g transform="translate(322, 85)">
+    <rect x="0" y="0" width="255" height="180" rx="10" fill="#1e293b" stroke="#a855f7" stroke-width="1.5" />
+    <rect x="0" y="0" width="255" height="32" rx="10" fill="#7c3aed" />
+    <text x="127" y="21" fill="#ffffff" font-size="13" font-weight="bold" text-anchor="middle">2. Emphasis &amp; Formatting</text>
+    <g transform="translate(15, 45)" font-family="monospace" font-size="11">
+      <text x="0" y="16" fill="#c084fc">**Bold Text** (__also__)</text>
+      <text x="0" y="36" fill="#e9d5ff">*Italic Text* (_also_)</text>
+      <text x="0" y="56" fill="#c084fc">***Bold and Italic***</text>
+      <text x="0" y="78" fill="#f43f5e">~~Strikethrough~~ (GFM)</text>
+      <text x="0" y="98" fill="#facc15">==Highlighted Text==</text>
+      <text x="0" y="120" fill="#6ee7b7">H~2~O Sub / X^2^ Super</text>
+    </g>
+  </g>
+
+  <!-- Card 3: Lists & Task Checkboxes -->
+  <g transform="translate(605, 85)">
+    <rect x="0" y="0" width="255" height="180" rx="10" fill="#1e293b" stroke="#10b981" stroke-width="1.5" />
+    <rect x="0" y="0" width="255" height="32" rx="10" fill="#059669" />
+    <text x="127" y="21" fill="#ffffff" font-size="13" font-weight="bold" text-anchor="middle">3. Lists &amp; Tasks</text>
+    <g transform="translate(15, 45)" font-family="monospace" font-size="11">
+      <text x="0" y="16" fill="#34d399">- Unordered bullet 1</text>
+      <text x="0" y="34" fill="#34d399">* Unordered bullet 2</text>
+      <text x="0" y="54" fill="#67e8f9">1. Numbered item 1</text>
+      <text x="0" y="72" fill="#67e8f9">2. Numbered item 2</text>
+      <text x="0" y="94" fill="#facc15">- [ ] Incomplete task</text>
+      <text x="0" y="114" fill="#34d399">- [x] Completed task</text>
+    </g>
+  </g>
+
+  <!-- Card 4: Links & Images -->
+  <g transform="translate(40, 285)">
+    <rect x="0" y="0" width="255" height="185" rx="10" fill="#1e293b" stroke="#f59e0b" stroke-width="1.5" />
+    <rect x="0" y="0" width="255" height="32" rx="10" fill="#d97706" />
+    <text x="127" y="21" fill="#ffffff" font-size="13" font-weight="bold" text-anchor="middle">4. Links &amp; Media</text>
+    <g transform="translate(15, 45)" font-family="monospace" font-size="10">
+      <text x="0" y="16" fill="#fbbf24">[Link Text](https://url)</text>
+      <text x="0" y="34" fill="#94a3b8">&lt;https://autolink.com&gt;</text>
+      <text x="0" y="54" fill="#f43f5e">![Alt text](image.png)</text>
+      <text x="0" y="74" fill="#facc15">[!Badge](link.svg)</text>
+      <text x="0" y="96" fill="#67e8f9">&lt;img src="pic.jpg"</text>
+      <text x="0" y="112" fill="#67e8f9">     width="300" /&gt;</text>
+      <text x="0" y="130" fill="#cbd5e1">&lt;kbd&gt;Ctrl&lt;/kbd&gt;+&lt;kbd&gt;C&lt;/kbd&gt;</text>
+    </g>
+  </g>
+
+  <!-- Card 5: Code & Technical Blocks -->
+  <g transform="translate(322, 285)">
+    <rect x="0" y="0" width="255" height="185" rx="10" fill="#1e293b" stroke="#0ea5e9" stroke-width="1.5" />
+    <rect x="0" y="0" width="255" height="32" rx="10" fill="#0284c7" />
+    <text x="127" y="21" fill="#ffffff" font-size="13" font-weight="bold" text-anchor="middle">5. Code &amp; Math</text>
+    <g transform="translate(15, 45)" font-family="monospace" font-size="10">
+      <text x="0" y="16" fill="#38bdf8">`inline_variable`</text>
+      <text x="0" y="34" fill="#94a3b8">```typescript</text>
+      <text x="10" y="50" fill="#34d399">const sum = (a, b) =&gt;</text>
+      <text x="20" y="66" fill="#34d399">a + b;</text>
+      <text x="0" y="82" fill="#94a3b8">```</text>
+      <text x="0" y="104" fill="#facc15">$E = mc^2$ (Inline Math)</text>
+      <text x="0" y="122" fill="#facc15">$$\sum_{i=1}^n x_i$$ (Block)</text>
+    </g>
+  </g>
+
+  <!-- Card 6: Tables & Alerts -->
+  <g transform="translate(605, 285)">
+    <rect x="0" y="0" width="255" height="185" rx="10" fill="#1e293b" stroke="#ec4899" stroke-width="1.5" />
+    <rect x="0" y="0" width="255" height="32" rx="10" fill="#db2777" />
+    <text x="127" y="21" fill="#ffffff" font-size="13" font-weight="bold" text-anchor="middle">6. Tables &amp; Alerts</text>
+    <g transform="translate(15, 45)" font-family="monospace" font-size="10">
+      <text x="0" y="16" fill="#f472b6">| Header | Align |</text>
+      <text x="0" y="32" fill="#f472b6">| :---   | ---:  |</text>
+      <text x="0" y="48" fill="#f472b6">| Left   | Right |</text>
+      <text x="0" y="72" fill="#38bdf8">&gt; [!NOTE] Blue Info</text>
+      <text x="0" y="90" fill="#34d399">&gt; [!TIP] Green Tip</text>
+      <text x="0" y="108" fill="#facc15">&gt; [!WARNING] Caution</text>
+      <text x="0" y="126" fill="#f43f5e">&gt; [!CAUTION] Red Alert</text>
+    </g>
+  </g>
+</svg>

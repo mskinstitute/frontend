@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="480" viewBox="0 0 800 480" fill="none" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  <defs>
+    <linearGradient id="excelGreen" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#107C41"/>
+      <stop offset="100%" stop-color="#0B5A2E"/>
+    </linearGradient>
+    <linearGradient id="gridHeader" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#F8FAFC"/>
+      <stop offset="100%" stop-color="#E2E8F0"/>
+    </linearGradient>
+    <filter id="shadow" x="-5" y="-3" width="810" height="490" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="#000000" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <!-- Outer Window Frame -->
+  <rect width="800" height="480" rx="10" fill="#FFFFFF"/>
+  <rect width="800" height="480" rx="10" stroke="#CBD5E1" stroke-width="1.5"/>
+
+  <!-- Title Bar -->
+  <path d="M 0 10 C 0 4.477 4.477 0 10 0 L 790 0 C 795.523 0 800 4.477 800 10 L 800 38 L 0 38 Z" fill="url(#excelGreen)"/>
+  
+  <!-- Window Controls -->
+  <circle cx="18" cy="19" r="5" fill="#FF5F56"/>
+  <circle cx="34" cy="19" r="5" fill="#FFBD2E"/>
+  <circle cx="50" cy="19" r="5" fill="#27C93F"/>
+
+  <!-- Excel Icon Badge -->
+  <rect x="68" y="8" width="22" height="22" rx="4" fill="#0A4D27"/>
+  <text x="79" y="24" fill="#FFFFFF" font-size="14" font-weight="900" text-anchor="middle">X</text>
+
+  <!-- Workbook Title -->
+  <text x="400" y="24" fill="#FFFFFF" font-size="13" font-weight="600" text-anchor="middle" letter-spacing="0.2">Power Query ETL & Power Pivot Data Model - Microsoft Excel</text>
+
+  <!-- AutoSave Pill -->
+  <rect x="670" y="9" width="120" height="20" rx="4" fill="rgba(255,255,255,0.15)"/>
+  <text x="730" y="23" fill="#FFFFFF" font-size="11" text-anchor="middle">AutoSave: On</text>
+
+  
+  <rect x="0" y="38" width="800" height="38" fill="#F8FAFC"/>
+  <line x1="0" y1="76" x2="800" y2="76" stroke="#CBD5E1"/>
+  <text x="24" y="61" fill="#0F172A" font-size="13" font-weight="bold">Data &gt; Get Data &gt; Power Query Editor &amp; Power Pivot Relational Data Modeling</text>
+
+  <!-- Left: Power Query Editor Interface Simulation -->
+  <g transform="translate(30, 90)">
+    <rect width="460" height="250" rx="6" fill="#FFFFFF" stroke="#0F172A" stroke-width="1.5"/>
+    <rect width="460" height="26" rx="6 6 0 0" fill="#0F172A"/>
+    <text x="15" y="18" fill="#FFFFFF" font-size="11" font-weight="bold">Power Query Editor - [Orders_Transform]</text>
+
+    <!-- Query Editor Grid -->
+    <rect x="0" y="26" width="310" height="224" fill="#FFFFFF"/>
+    <!-- Col Headers -->
+    <rect x="0" y="26" width="100" height="22" fill="#E2E8F0" stroke="#CBD5E1"/>
+    <text x="10" y="41" fill="#334155" font-size="10" font-weight="bold">123 OrderID</text>
+    <rect x="100" y="26" width="110" height="22" fill="#E2E8F0" stroke="#CBD5E1"/>
+    <text x="110" y="41" fill="#334155" font-size="10" font-weight="bold">ABC Customer</text>
+    <rect x="210" y="26" width="100" height="22" fill="#E2E8F0" stroke="#CBD5E1"/>
+    <text x="220" y="41" fill="#334155" font-size="10" font-weight="bold">$ Revenue</text>
+
+    <!-- Rows -->
+    <text x="10" y="65" fill="#475569" font-size="10">1001</text>
+    <text x="110" y="65" fill="#1E293B" font-size="10">Acme Corp</text>
+    <text x="220" y="65" fill="#16A34A" font-size="10" font-weight="bold">$4,500.00</text>
+
+    <text x="10" y="88" fill="#475569" font-size="10">1002</text>
+    <text x="110" y="88" fill="#1E293B" font-size="10">GlobalTech</text>
+    <text x="220" y="88" fill="#16A34A" font-size="10" font-weight="bold">$8,200.00</text>
+
+    <text x="10" y="111" fill="#475569" font-size="10">1003</text>
+    <text x="110" y="111" fill="#1E293B" font-size="10">Apex Retail</text>
+    <text x="220" y="111" fill="#16A34A" font-size="10" font-weight="bold">$1,250.00</text>
+
+    <!-- Right sidebar: Applied Steps -->
+    <g transform="translate(310, 26)">
+      <rect width="150" height="224" fill="#F8FAFC" stroke="#CBD5E1"/>
+      <text x="10" y="20" fill="#0F172A" font-size="10" font-weight="bold">APPLIED STEPS</text>
+
+      <rect x="6" y="30" width="138" height="20" rx="3" fill="#E2E8F0"/>
+      <text x="12" y="44" fill="#475569" font-size="9">✓ Source</text>
+
+      <rect x="6" y="54" width="138" height="20" rx="3" fill="#E2E8F0"/>
+      <text x="12" y="68" fill="#475569" font-size="9">✓ Promoted Headers</text>
+
+      <rect x="6" y="78" width="138" height="20" rx="3" fill="#E2E8F0"/>
+      <text x="12" y="92" fill="#475569" font-size="9">✓ Changed Type</text>
+
+      <rect x="6" y="102" width="138" height="20" rx="3" fill="#E2E8F0"/>
+      <text x="12" y="116" fill="#475569" font-size="9">✓ Removed Blank Rows</text>
+
+      <rect x="6" y="126" width="138" height="20" rx="3" fill="#DCFCE7" stroke="#86EFAC"/>
+      <text x="12" y="140" fill="#166534" font-size="9" font-weight="bold">✓ Unpivoted Columns</text>
+    </g>
+  </g>
+
+  <!-- Right: Power Pivot Star Schema Data Model -->
+  <g transform="translate(510, 90)">
+    <rect width="260" height="250" rx="6" fill="#F8FAFC" stroke="#CBD5E1"/>
+    <rect width="260" height="28" rx="6 6 0 0" fill="#0B5A2E"/>
+    <text x="130" y="19" fill="#FFFFFF" font-size="11" font-weight="bold" text-anchor="middle">Power Pivot Data Model (DAX)</text>
+
+    <!-- Dimension Table 1: Customers -->
+    <g transform="translate(15, 38)">
+      <rect width="105" height="70" rx="4" fill="#FFFFFF" stroke="#3B82F6"/>
+      <rect width="105" height="16" rx="4 4 0 0" fill="#3B82F6"/>
+      <text x="52" y="12" fill="#FFFFFF" font-size="9" font-weight="bold" text-anchor="middle">Dim_Customers (1)</text>
+      <text x="8" y="30" fill="#0F172A" font-size="8" font-weight="bold">🔑 CustomerID</text>
+      <text x="8" y="44" fill="#64748B" font-size="8">CustomerName</text>
+      <text x="8" y="58" fill="#64748B" font-size="8">Region</text>
+    </g>
+
+    <!-- Dimension Table 2: Products -->
+    <g transform="translate(140, 38)">
+      <rect width="105" height="70" rx="4" fill="#FFFFFF" stroke="#3B82F6"/>
+      <rect width="105" height="16" rx="4 4 0 0" fill="#3B82F6"/>
+      <text x="52" y="12" fill="#FFFFFF" font-size="9" font-weight="bold" text-anchor="middle">Dim_Products (1)</text>
+      <text x="8" y="30" fill="#0F172A" font-size="8" font-weight="bold">🔑 ProductID</text>
+      <text x="8" y="44" fill="#64748B" font-size="8">ProductName</text>
+      <text x="8" y="58" fill="#64748B" font-size="8">Category</text>
+    </g>
+
+    <!-- Relationship Lines -->
+    <line x1="67" y1="108" x2="110" y2="155" stroke="#107C41" stroke-width="2"/>
+    <line x1="192" y1="108" x2="150" y2="155" stroke="#107C41" stroke-width="2"/>
+
+    <!-- Central Fact Table: Fact_Sales (*) -->
+    <g transform="translate(60, 155)">
+      <rect width="140" height="85" rx="4" fill="#FFFFFF" stroke="#107C41" stroke-width="1.5"/>
+      <rect width="140" height="18" rx="4 4 0 0" fill="#107C41"/>
+      <text x="70" y="13" fill="#FFFFFF" font-size="9" font-weight="bold" text-anchor="middle">Fact_Sales (*)</text>
+      <text x="8" y="30" fill="#0F172A" font-size="8">SalesID</text>
+      <text x="8" y="44" fill="#2563EB" font-size="8">CustomerID (FK)</text>
+      <text x="8" y="58" fill="#2563EB" font-size="8">ProductID (FK)</text>
+      <text x="8" y="72" fill="#15803D" font-size="8" font-weight="bold">Revenue (Measure)</text>
+    </g>
+  </g>
+
+  <!-- Bottom Tip Banner -->
+  <g transform="translate(30, 350)">
+    <rect width="740" height="105" rx="6" fill="#EFF6FF" stroke="#BFDBFE"/>
+    <text x="20" y="24" fill="#1E3A8A" font-size="12" font-weight="bold">Why Master Power Query &amp; Power Pivot?</text>
+    <text x="20" y="46" fill="#1D4ED8" font-size="11">• Handles 100+ Million Rows: Bypasses the 1,048,576 row sheet limit using the high-speed xVelocity engine.</text>
+    <text x="20" y="66" fill="#1D4ED8" font-size="11">• One-Click Automated Refresh: Click Data &gt; Refresh All, and all web/CSV/database imports and cleanups re-execute automatically.</text>
+    <text x="20" y="86" fill="#1E40AF" font-size="11">• Powerful DAX Measures: Calculate =CALCULATE(SUM(Sales[Amount]), Filter[Year]=2026) dynamically in memory.</text>
+  </g>
+
+</svg>

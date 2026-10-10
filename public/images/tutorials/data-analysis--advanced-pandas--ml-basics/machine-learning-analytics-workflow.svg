@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="mlBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#120c24" />
+      <stop offset="100%" stop-color="#211540" />
+    </linearGradient>
+  </defs>
+  <rect width="900" height="450" rx="16" fill="url(#mlBg)" />
+  <rect x="2" y="2" width="896" height="446" rx="14" fill="none" stroke="#4c1d95" stroke-width="1.5" />
+  <text x="450" y="45" fill="#f8fafc" font-family="system-ui" font-size="22" font-weight="800" text-anchor="middle">
+    SCIKIT-LEARN MACHINE LEARNING PIPELINE FOR DATA ANALYSTS
+  </text>
+  <text x="450" y="70" fill="#c084fc" font-family="system-ui" font-size="13" text-anchor="middle">
+    From Raw Features to Business Predictions &amp; Performance Metrics
+  </text>
+  <g transform="translate(40, 110)">
+    <!-- Stage 1 -->
+    <rect width="180" height="280" rx="10" fill="#1e1b4b" stroke="#6366f1" stroke-width="1.5" />
+    <rect width="180" height="35" rx="10" fill="#4f46e5" />
+    <text x="90" y="23" fill="#fff" font-family="system-ui" font-size="12" font-weight="700" text-anchor="middle">1. PREPARATION</text>
+    <text x="15" y="70" fill="#e0e7ff" font-family="system-ui" font-size="11">• Train/Test Split</text>
+    <text x="15" y="95" fill="#e0e7ff" font-family="system-ui" font-size="11">• OneHotEncoding</text>
+    <text x="15" y="120" fill="#e0e7ff" font-family="system-ui" font-size="11">• StandardScaler</text>
+  </g>
+  <g transform="translate(260, 110)">
+    <!-- Stage 2 -->
+    <rect width="180" height="280" rx="10" fill="#1e1b4b" stroke="#8b5cf6" stroke-width="1.5" />
+    <rect width="180" height="35" rx="10" fill="#7c3aed" />
+    <text x="90" y="23" fill="#fff" font-family="system-ui" font-size="12" font-weight="700" text-anchor="middle">2. FIT (TRAINING)</text>
+    <text x="15" y="70" fill="#ede9fe" font-family="system-ui" font-size="11">• model.fit(X_tr, y_tr)</text>
+    <text x="15" y="95" fill="#ede9fe" font-family="system-ui" font-size="11">• Learn weights/slopes</text>
+    <text x="15" y="120" fill="#ede9fe" font-family="system-ui" font-size="11">• Cross-validation</text>
+  </g>
+  <g transform="translate(480, 110)">
+    <!-- Stage 3 -->
+    <rect width="180" height="280" rx="10" fill="#1e1b4b" stroke="#ec4899" stroke-width="1.5" />
+    <rect width="180" height="35" rx="10" fill="#db2777" />
+    <text x="90" y="23" fill="#fff" font-family="system-ui" font-size="12" font-weight="700" text-anchor="middle">3. PREDICTION</text>
+    <text x="15" y="70" fill="#fce7f3" font-family="system-ui" font-size="11">• y_pred = model.predict()</text>
+    <text x="15" y="95" fill="#fce7f3" font-family="system-ui" font-size="11">• predict_proba()</text>
+    <text x="15" y="120" fill="#fce7f3" font-family="system-ui" font-size="11">• Unseen test records</text>
+  </g>
+  <g transform="translate(700, 110)">
+    <!-- Stage 4 -->
+    <rect width="160" height="280" rx="10" fill="#1e1b4b" stroke="#10b981" stroke-width="1.5" />
+    <rect width="160" height="35" rx="10" fill="#059669" />
+    <text x="80" y="23" fill="#fff" font-family="system-ui" font-size="12" font-weight="700" text-anchor="middle">4. EVALUATION</text>
+    <text x="15" y="70" fill="#d1fae5" font-family="system-ui" font-size="11">• R² Score &amp; RMSE</text>
+    <text x="15" y="95" fill="#d1fae5" font-family="system-ui" font-size="11">• Confusion Matrix</text>
+    <text x="15" y="120" fill="#d1fae5" font-family="system-ui" font-size="11">• Precision &amp; Recall</text>
+    <text x="15" y="145" fill="#d1fae5" font-family="system-ui" font-size="11">• ROC-AUC Curve</text>
+  </g>
+</svg>

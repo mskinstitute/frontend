@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 480" width="100%" height="100%" style="background:#090d16;font-family:system-ui,-apple-system,sans-serif;">
+  <text x="450" y="40" fill="#f8fafc" font-size="22" font-weight="bold" text-anchor="middle">Generations of Computers (कंप्यूटर की 5 पीढ़ियां)</text>
+  <text x="450" y="66" fill="#94a3b8" font-size="13" text-anchor="middle">Evolution of Main Electronic Switching Components from 1940s to Future AI</text>
+
+  <!-- Central connecting timeline bar -->
+  <rect x="50" y="245" width="800" height="6" rx="3" fill="#334155" />
+
+  <!-- 1st Gen -->
+  <g transform="translate(50, 100)">
+    <rect x="0" y="0" width="150" height="130" rx="10" fill="#1e293b" stroke="#f43f5e" stroke-width="2" />
+    <rect x="0" y="0" width="150" height="28" rx="10" fill="#e11d48" />
+    <text x="75" y="19" fill="#ffffff" font-size="12" font-weight="bold" text-anchor="middle">1st Gen (1940-56)</text>
+    <circle cx="75" cy="55" r="18" fill="#f43f5e" opacity="0.2" />
+    <text x="75" y="60" fill="#f43f5e" font-size="18" text-anchor="middle">💡</text>
+    <text x="75" y="90" fill="#f8fafc" font-size="13" font-weight="bold" text-anchor="middle">Vacuum Tubes</text>
+    <text x="75" y="112" fill="#94a3b8" font-size="11" text-anchor="middle">ENIAC, EDVAC, UNIVAC</text>
+  </g>
+  <circle cx="125" cy="248" r="8" fill="#f43f5e" />
+
+  <!-- 2nd Gen -->
+  <g transform="translate(215, 270)">
+    <rect x="0" y="0" width="150" height="130" rx="10" fill="#1e293b" stroke="#f59e0b" stroke-width="2" />
+    <rect x="0" y="0" width="150" height="28" rx="10" fill="#d97706" />
+    <text x="75" y="19" fill="#ffffff" font-size="12" font-weight="bold" text-anchor="middle">2nd Gen (1956-63)</text>
+    <circle cx="75" cy="55" r="18" fill="#f59e0b" opacity="0.2" />
+    <text x="75" y="60" fill="#f59e0b" font-size="18" text-anchor="middle">🔌</text>
+    <text x="75" y="90" fill="#f8fafc" font-size="13" font-weight="bold" text-anchor="middle">Transistors</text>
+    <text x="75" y="112" fill="#94a3b8" font-size="11" text-anchor="middle">IBM 1401, FORTRAN</text>
+  </g>
+  <circle cx="290" cy="248" r="8" fill="#f59e0b" />
+
+  <!-- 3rd Gen -->
+  <g transform="translate(380, 100)">
+    <rect x="0" y="0" width="150" height="130" rx="10" fill="#1e293b" stroke="#10b981" stroke-width="2" />
+    <rect x="0" y="0" width="150" height="28" rx="10" fill="#059669" />
+    <text x="75" y="19" fill="#ffffff" font-size="12" font-weight="bold" text-anchor="middle">3rd Gen (1964-71)</text>
+    <circle cx="75" cy="55" r="18" fill="#10b981" opacity="0.2" />
+    <text x="75" y="60" fill="#10b981" font-size="18" text-anchor="middle">🔲</text>
+    <text x="75" y="90" fill="#f8fafc" font-size="13" font-weight="bold" text-anchor="middle">Integrated Circuit (IC)</text>
+    <text x="75" y="112" fill="#94a3b8" font-size="11" text-anchor="middle">Jack Kilby / Robert Noyce</text>
+  </g>
+  <circle cx="455" cy="248" r="8" fill="#10b981" />
+
+  <!-- 4th Gen -->
+  <g transform="translate(545, 270)">
+    <rect x="0" y="0" width="150" height="130" rx="10" fill="#1e293b" stroke="#0ea5e9" stroke-width="2" />
+    <rect x="0" y="0" width="150" height="28" rx="10" fill="#0284c7" />
+    <text x="75" y="19" fill="#ffffff" font-size="12" font-weight="bold" text-anchor="middle">4th Gen (1971-Present)</text>
+    <circle cx="75" cy="55" r="18" fill="#0ea5e9" opacity="0.2" />
+    <text x="75" y="60" fill="#0ea5e9" font-size="18" text-anchor="middle">💻</text>
+    <text x="75" y="90" fill="#f8fafc" font-size="13" font-weight="bold" text-anchor="middle">Microprocessor (VLSI)</text>
+    <text x="75" y="112" fill="#94a3b8" font-size="11" text-anchor="middle">Intel 4004, Modern PCs</text>
+  </g>
+  <circle cx="620" cy="248" r="8" fill="#0ea5e9" />
+
+  <!-- 5th Gen -->
+  <g transform="translate(710, 100)">
+    <rect x="0" y="0" width="150" height="130" rx="10" fill="#1e293b" stroke="#8b5cf6" stroke-width="2" />
+    <rect x="0" y="0" width="150" height="28" rx="10" fill="#7c3aed" />
+    <text x="75" y="19" fill="#ffffff" font-size="12" font-weight="bold" text-anchor="middle">5th Gen (Present-Future)</text>
+    <circle cx="75" cy="55" r="18" fill="#8b5cf6" opacity="0.2" />
+    <text x="75" y="60" fill="#8b5cf6" font-size="18" text-anchor="middle">🤖</text>
+    <text x="75" y="90" fill="#f8fafc" font-size="13" font-weight="bold" text-anchor="middle">AI &amp; Quantum (ULSI)</text>
+    <text x="75" y="112" fill="#94a3b8" font-size="11" text-anchor="middle">Robotics, Natural Language</text>
+  </g>
+  <circle cx="785" cy="248" r="8" fill="#8b5cf6" />
+</svg>

@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="480" viewBox="0 0 800 480" fill="none" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  <defs>
+    <linearGradient id="wordBlue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#185ABD"/>
+      <stop offset="100%" stop-color="#103F91"/>
+    </linearGradient>
+    <linearGradient id="ribbonBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#F3F5F8"/>
+      <stop offset="100%" stop-color="#E8ECF1"/>
+    </linearGradient>
+    <filter id="cardShadow" x="-10" y="-5" width="820" height="500" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+
+  <!-- Window Frame -->
+  <rect width="800" height="480" rx="12" fill="#FFFFFF"/>
+  <rect width="800" height="480" rx="12" stroke="#D1D5DB" stroke-width="1.5"/>
+
+  <!-- Title Bar -->
+  <path d="M 0 12 C 0 5.373 5.373 0 12 0 L 788 0 C 794.627 0 800 5.373 800 12 L 800 42 L 0 42 Z" fill="url(#wordBlue)"/>
+  
+  <!-- Window Controls & Title -->
+  <circle cx="20" cy="21" r="5.5" fill="#FF5F56"/>
+  <circle cx="38" cy="21" r="5.5" fill="#FFBD2E"/>
+  <circle cx="56" cy="21" r="5.5" fill="#27C93F"/>
+
+  <!-- Word App Icon Badge -->
+  <rect x="76" y="10" width="22" height="22" rx="4" fill="#0C3B78"/>
+  <text x="87" y="26" fill="#FFFFFF" font-size="14" font-weight="900" text-anchor="middle">W</text>
+
+  <!-- Document Title -->
+  <text x="400" y="26" fill="#FFFFFF" font-size="13" font-weight="600" text-anchor="middle" letter-spacing="0.2">Document1 [Compatibility Mode] - Microsoft Word</text>
+
+  
+  <!-- Ribbon Tabs Bar -->
+  <rect x="0" y="42" width="800" height="32" fill="#EAEFF5" border-bottom="1px solid #D1D5DB"/>
+  <line x1="0" y1="74" x2="800" y2="74" stroke="#CBD5E1" stroke-width="1"/>
+
+  <!-- Tabs -->
+  <rect x="10" y="46" width="48" height="28" rx="4" fill="#185ABD"/>
+  <text x="34" y="65" fill="#FFFFFF" font-size="12" font-weight="bold" text-anchor="middle">File</text>
+
+  <rect x="64" y="46" width="56" height="28" rx="4" fill="#FFFFFF"/>
+  <text x="92" y="65" fill="#185ABD" font-size="12" font-weight="bold" text-anchor="middle">Home</text>
+  <line x1="68" y1="73" x2="116" y2="73" stroke="#185ABD" stroke-width="2.5"/>
+
+  <text x="144" y="65" fill="#475569" font-size="12" font-weight="500">Insert</text>
+  <text x="195" y="65" fill="#475569" font-size="12" font-weight="500">Draw</text>
+  <text x="242" y="65" fill="#475569" font-size="12" font-weight="500">Design</text>
+  <text x="296" y="65" fill="#475569" font-size="12" font-weight="500">Layout</text>
+  <text x="354" y="65" fill="#475569" font-size="12" font-weight="500">References</text>
+  <text x="432" y="65" fill="#475569" font-size="12" font-weight="500">Mailings</text>
+  <text x="496" y="65" fill="#475569" font-size="12" font-weight="500">Review</text>
+  <text x="552" y="65" fill="#475569" font-size="12" font-weight="500">View</text>
+  <text x="600" y="65" fill="#475569" font-size="12" font-weight="500">Help</text>
+
+  <!-- Ribbon Command Bar -->
+  <rect x="0" y="74" width="800" height="92" fill="#F8FAFC"/>
+  <line x1="0" y1="166" x2="800" y2="166" stroke="#E2E8F0" stroke-width="1"/>
+
+  <!-- Group 1: Clipboard -->
+  <g transform="translate(10, 80)">
+    <rect x="5" y="5" width="34" height="42" rx="4" fill="#E2E8F0"/>
+    <text x="22" y="32" font-size="18" text-anchor="middle">📋</text>
+    <text x="22" y="58" font-size="10" fill="#334155" text-anchor="middle">Paste</text>
+    <text x="56" y="20" font-size="11" fill="#334155">✂️ Cut</text>
+    <text x="56" y="40" font-size="11" fill="#334155">📄 Copy</text>
+    <text x="56" y="60" font-size="11" fill="#334155">🖌️ Format Painter</text>
+    <line x1="150" y1="4" x2="150" y2="76" stroke="#E2E8F0"/>
+    <text x="75" y="80" font-size="10" fill="#64748B" font-weight="600" text-anchor="middle">Clipboard</text>
+  </g>
+
+  <!-- Group 2: Font -->
+  <g transform="translate(170, 80)">
+    <rect x="0" y="4" width="95" height="22" rx="3" fill="#FFFFFF" stroke="#CBD5E1"/>
+    <text x="6" y="19" font-size="11" fill="#1E293B">Calibri</text>
+    <text x="82" y="19" font-size="9" fill="#64748B">▼</text>
+    
+    <rect x="100" y="4" width="36" height="22" rx="3" fill="#FFFFFF" stroke="#CBD5E1"/>
+    <text x="108" y="19" font-size="11" fill="#1E293B">11</text>
+    <text x="126" y="19" font-size="8" fill="#64748B">▼</text>
+
+    <!-- Font buttons -->
+    <rect x="0" y="34" width="22" height="22" rx="3" fill="#E2E8F0"/>
+    <text x="7" y="49" font-size="12" font-weight="bold" fill="#0F172A">B</text>
+
+    <rect x="25" y="34" width="22" height="22" rx="3" fill="#FFFFFF" stroke="#CBD5E1"/>
+    <text x="33" y="49" font-size="12" font-style="italic" font-weight="bold" fill="#334155">I</text>
+
+    <rect x="50" y="34" width="22" height="22" rx="3" fill="#FFFFFF" stroke="#CBD5E1"/>
+    <text x="57" y="49" font-size="12" font-weight="bold" text-decoration="underline" fill="#334155">U</text>
+
+    <rect x="75" y="34" width="22" height="22" rx="3" fill="#FFFFFF" stroke="#CBD5E1"/>
+    <text x="80" y="49" font-size="11" fill="#DC2626" font-weight="bold">A<tspan font-size="8" fill="#DC2626">▼</tspan></text>
+
+    <rect x="100" y="34" width="22" height="22" rx="3" fill="#FEF08A"/>
+    <text x="104" y="49" font-size="11" fill="#854D0E">🖍️</text>
+
+    <line x1="150" y1="4" x2="150" y2="76" stroke="#E2E8F0"/>
+    <text x="75" y="80" font-size="10" fill="#64748B" font-weight="600" text-anchor="middle">Font</text>
+  </g>
+
+  <!-- Group 3: Paragraph -->
+  <g transform="translate(330, 80)">
+    <rect x="0" y="6" width="20" height="20" rx="3" fill="#FFFFFF" stroke="#CBD5E1"/>
+    <text x="4" y="20" font-size="11">☰</text>
+    <rect x="24" y="6" width="20" height="20" rx="3" fill="#FFFFFF" stroke="#CBD5E1"/>
+    <text x="27" y="20" font-size="10">1≡</text>
+    <rect x="48" y="6" width="20" height="20" rx="3" fill="#FFFFFF" stroke="#CBD5E1"/>
+    <text x="51" y="20" font-size="11">⇤</text>
+    <rect x="72" y="6" width="20" height="20" rx="3" fill="#FFFFFF" stroke="#CBD5E1"/>
+    <text x="75" y="20" font-size="11">⇥</text>
+
+    <rect x="0" y="34" width="20" height="20" rx="3" fill="#E2E8F0"/>
+    <text x="3" y="48" font-size="11">⫷</text>
+    <rect x="24" y="34" width="20" height="20" rx="3" fill="#FFFFFF" stroke="#CBD5E1"/>
+    <text x="27" y="48" font-size="11">≡</text>
+    <rect x="48" y="34" width="20" height="20" rx="3" fill="#FFFFFF" stroke="#CBD5E1"/>
+    <text x="51" y="48" font-size="11">⫸</text>
+    <rect x="72" y="34" width="20" height="20" rx="3" fill="#FFFFFF" stroke="#CBD5E1"/>
+    <text x="75" y="48" font-size="11">≣</text>
+
+    <line x1="120" y1="4" x2="120" y2="76" stroke="#E2E8F0"/>
+    <text x="60" y="80" font-size="10" fill="#64748B" font-weight="600" text-anchor="middle">Paragraph</text>
+  </g>
+
+  <!-- Group 4: Styles Gallery -->
+  <g transform="translate(460, 80)">
+    <rect x="5" y="8" width="55" height="46" rx="4" fill="#FFFFFF" stroke="#CBD5E1"/>
+    <text x="32" y="28" font-size="13" font-weight="bold" fill="#0F172A" text-anchor="middle">AaBb</text>
+    <text x="32" y="46" font-size="9" fill="#64748B" text-anchor="middle">Normal</text>
+
+    <rect x="65" y="8" width="55" height="46" rx="4" fill="#FFFFFF" stroke="#CBD5E1"/>
+    <text x="92" y="28" font-size="13" font-weight="bold" fill="#185ABD" text-anchor="middle">AaBb</text>
+    <text x="92" y="46" font-size="9" fill="#64748B" text-anchor="middle">Heading 1</text>
+
+    <rect x="125" y="8" width="55" height="46" rx="4" fill="#FFFFFF" stroke="#CBD5E1"/>
+    <text x="152" y="28" font-size="13" font-weight="bold" fill="#0284C7" text-anchor="middle">AaBb</text>
+    <text x="152" y="46" font-size="9" fill="#64748B" text-anchor="middle">Heading 2</text>
+
+    <line x1="195" y1="4" x2="195" y2="76" stroke="#E2E8F0"/>
+    <text x="100" y="80" font-size="10" fill="#64748B" font-weight="600" text-anchor="middle">Styles</text>
+  </g>
+
+  <!-- Group 5: Editing -->
+  <g transform="translate(665, 80)">
+    <text x="10" y="22" font-size="11" fill="#334155">🔍 Find</text>
+    <text x="10" y="44" font-size="11" fill="#334155">⇄ Replace</text>
+    <text x="10" y="64" font-size="11" fill="#334155">↖ Select</text>
+    <text x="50" y="80" font-size="10" fill="#64748B" font-weight="600" text-anchor="middle">Editing</text>
+  </g>
+
+  <!-- Workspace Canvas -->
+  <rect x="0" y="166" width="800" height="286" fill="#EEF2F6"/>
+
+  <!-- Ruler -->
+  <rect x="150" y="166" width="500" height="18" fill="#F8FAFC" stroke="#CBD5E1" stroke-width="0.5"/>
+  <line x1="160" y1="184" x2="160" y2="176" stroke="#94A3B8"/>
+  <line x1="210" y1="184" x2="210" y2="172" stroke="#64748B"/>
+  <text x="208" y="174" font-size="8" fill="#64748B">1</text>
+  <line x1="260" y1="184" x2="260" y2="172" stroke="#64748B"/>
+  <text x="258" y="174" font-size="8" fill="#64748B">2</text>
+  <line x1="310" y1="184" x2="310" y2="172" stroke="#64748B"/>
+  <text x="308" y="174" font-size="8" fill="#64748B">3</text>
+  <line x1="360" y1="184" x2="360" y2="172" stroke="#64748B"/>
+  <text x="358" y="174" font-size="8" fill="#64748B">4</text>
+  <line x1="410" y1="184" x2="410" y2="172" stroke="#64748B"/>
+  <text x="408" y="174" font-size="8" fill="#64748B">5</text>
+  <line x1="460" y1="184" x2="460" y2="172" stroke="#64748B"/>
+  <text x="458" y="174" font-size="8" fill="#64748B">6</text>
+
+  <!-- White Document Page -->
+  <rect x="150" y="188" width="500" height="260" rx="2" fill="#FFFFFF" stroke="#D1D5DB" stroke-width="1"/>
+
+  <!-- Document Page Mock Text -->
+  <text x="185" y="222" font-size="18" font-weight="bold" fill="#185ABD">Mastering Microsoft Word: Professional Guide</text>
+  <rect x="185" y="234" width="430" height="4" rx="2" fill="#CBD5E1"/>
+  <rect x="185" y="246" width="390" height="4" rx="2" fill="#E2E8F0"/>
+  <rect x="185" y="258" width="410" height="4" rx="2" fill="#E2E8F0"/>
+
+  <text x="185" y="285" font-size="13" font-weight="bold" fill="#0F172A">1. Understanding the Modern Ribbon Interface</text>
+  <rect x="185" y="296" width="420" height="4" rx="2" fill="#E2E8F0"/>
+  <rect x="185" y="306" width="370" height="4" rx="2" fill="#E2E8F0"/>
+
+  <!-- Callout boxes with arrows on UI elements -->
+  <rect x="20" y="185" width="115" height="50" rx="8" fill="#FEF3C7" stroke="#F59E0B"/>
+  <text x="28" y="202" font-size="10" font-weight="bold" fill="#92400E">Quick Access Toolbar</text>
+  <text x="28" y="217" font-size="9" fill="#78350F">Save (Ctrl+S), Undo,</text>
+  <text x="28" y="229" font-size="9" fill="#78350F">Redo shortcuts</text>
+
+  <rect x="665" y="200" width="120" height="60" rx="8" fill="#DBEAFE" stroke="#3B82F6"/>
+  <text x="673" y="218" font-size="10" font-weight="bold" fill="#1E40AF">The Ribbon</text>
+  <text x="673" y="233" font-size="9" fill="#1E3A8A">Tabs organize related</text>
+  <text x="673" y="245" font-size="9" fill="#1E3A8A">commands into logical</text>
+  <text x="673" y="255" font-size="9" fill="#1E3A8A">functional groups.</text>
+
+  <!-- Status Bar -->
+  <rect x="0" y="452" width="800" height="28" fill="#185ABD"/>
+  <text x="20" y="470" fill="#FFFFFF" font-size="11" font-weight="500">Page 1 of 1</text>
+  <text x="110" y="470" fill="#FFFFFF" font-size="11" font-weight="500">342 words</text>
+  <text x="200" y="470" fill="#FFFFFF" font-size="11" font-weight="500">English (United States)</text>
+  <text x="670" y="470" fill="#FFFFFF" font-size="11" font-weight="500">100%</text>
+  <text x="720" y="470" fill="#FFFFFF" font-size="11">🔍 ───○───</text>
+
+</svg>

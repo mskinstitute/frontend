@@ -1,0 +1,118 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 480" width="100%" height="100%" style="background:#090d16;font-family:system-ui,-apple-system,sans-serif;">
+  <defs>
+    <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0284c7" />
+      <stop offset="100%" stop-color="#0369a1" />
+    </linearGradient>
+    <linearGradient id="purpleGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#7c3aed" />
+      <stop offset="100%" stop-color="#6d28d9" />
+    </linearGradient>
+    <linearGradient id="greenGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#059669" />
+      <stop offset="100%" stop-color="#047857" />
+    </linearGradient>
+    <linearGradient id="orangeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ea580c" />
+      <stop offset="100%" stop-color="#c2410c" />
+    </linearGradient>
+  </defs>
+
+  <!-- Title -->
+  <text x="450" y="40" fill="#f8fafc" font-size="22" font-weight="bold" text-anchor="middle">The Markdown Compilation &amp; Rendering Pipeline</text>
+  <text x="450" y="66" fill="#94a3b8" font-size="13" text-anchor="middle">From Human-Readable Plain Text to Semantic HTML5 in Modern Browsers</text>
+
+  <!-- Step 1: Raw Markdown Source -->
+  <g transform="translate(40, 100)">
+    <rect x="0" y="0" width="180" height="280" rx="10" fill="#1e293b" stroke="#38bdf8" stroke-width="2" />
+    <rect x="0" y="0" width="180" height="34" rx="10" fill="url(#blueGrad)" />
+    <text x="90" y="22" fill="#ffffff" font-size="13" font-weight="bold" text-anchor="middle">1. Markdown (.md)</text>
+    <g transform="translate(15, 50)" fill="#f8fafc" font-size="11" font-family="monospace">
+      <text x="0" y="16" fill="#38bdf8"># Welcome</text>
+      <text x="0" y="42" fill="#94a3b8">This is **bold**</text>
+      <text x="0" y="68" fill="#94a3b8">and *italic* text.</text>
+      <text x="0" y="100" fill="#fbbf24">- Task item 1</text>
+      <text x="0" y="120" fill="#fbbf24">- Task item 2</text>
+      <text x="0" y="150" fill="#34d399">`const x = 10;`</text>
+      <text x="0" y="180" fill="#f43f5e">[Link](https://...)</text>
+    </g>
+    <text x="90" y="260" fill="#94a3b8" font-size="10" text-anchor="middle">Human-Readable Text</text>
+  </g>
+
+  <!-- Arrow 1 -->
+  <path d="M 225 240 L 260 240" stroke="#38bdf8" stroke-width="3" fill="none" />
+  <polygon points="260,240 250,234 250,246" fill="#38bdf8" />
+
+  <!-- Step 2: Lexer & Parser (AST) -->
+  <g transform="translate(265, 100)">
+    <rect x="0" y="0" width="180" height="280" rx="10" fill="#1e293b" stroke="#a855f7" stroke-width="2" />
+    <rect x="0" y="0" width="180" height="34" rx="10" fill="url(#purpleGrad)" />
+    <text x="90" y="22" fill="#ffffff" font-size="13" font-weight="bold" text-anchor="middle">2. Parser &amp; AST</text>
+    <g transform="translate(15, 50)" fill="#cbd5e1" font-size="11" font-family="monospace">
+      <text x="0" y="16" fill="#c084fc">Root Node</text>
+      <text x="10" y="38" fill="#e9d5ff">├─ Heading (d:1)</text>
+      <text x="10" y="60" fill="#e9d5ff">├─ Paragraph</text>
+      <text x="20" y="82" fill="#a855f7">├─ Strong</text>
+      <text x="20" y="104" fill="#a855f7">└─ Emphasis</text>
+      <text x="10" y="126" fill="#e9d5ff">├─ List (ordered:f)</text>
+      <text x="20" y="148" fill="#a855f7">└─ ListItem</text>
+      <text x="10" y="170" fill="#e9d5ff">└─ InlineCode</text>
+    </g>
+    <text x="90" y="240" fill="#c084fc" font-size="10" text-anchor="middle">Remark / CommonMark</text>
+    <text x="90" y="260" fill="#94a3b8" font-size="9" text-anchor="middle">Abstract Syntax Tree</text>
+  </g>
+
+  <!-- Arrow 2 -->
+  <path d="M 450 240 L 485 240" stroke="#a855f7" stroke-width="3" fill="none" />
+  <polygon points="485,240 475,234 475,246" fill="#a855f7" />
+
+  <!-- Step 3: Compiler to HTML -->
+  <g transform="translate(490, 100)">
+    <rect x="0" y="0" width="180" height="280" rx="10" fill="#1e293b" stroke="#10b981" stroke-width="2" />
+    <rect x="0" y="0" width="180" height="34" rx="10" fill="url(#greenGrad)" />
+    <text x="90" y="22" fill="#ffffff" font-size="13" font-weight="bold" text-anchor="middle">3. HTML5 Compiler</text>
+    <g transform="translate(15, 50)" fill="#f8fafc" font-size="10" font-family="monospace">
+      <text x="0" y="16" fill="#34d399">&lt;h1&gt;Welcome&lt;/h1&gt;</text>
+      <text x="0" y="38" fill="#94a3b8">&lt;p&gt;This is</text>
+      <text x="0" y="56" fill="#67e8f9">&lt;strong&gt;bold&lt;/strong&gt;</text>
+      <text x="0" y="74" fill="#94a3b8">and</text>
+      <text x="0" y="92" fill="#67e8f9">&lt;em&gt;italic&lt;/em&gt;&lt;/p&gt;</text>
+      <text x="0" y="116" fill="#fbbf24">&lt;ul&gt;</text>
+      <text x="10" y="134" fill="#fef08a">&lt;li&gt;Task 1&lt;/li&gt;</text>
+      <text x="0" y="152" fill="#fbbf24">&lt;/ul&gt;</text>
+      <text x="0" y="176" fill="#f43f5e">&lt;code&gt;...&lt;/code&gt;</text>
+    </g>
+    <text x="90" y="260" fill="#94a3b8" font-size="10" text-anchor="middle">Rehype / Marked / Pandoc</text>
+  </g>
+
+  <!-- Arrow 3 -->
+  <path d="M 675 240 L 710 240" stroke="#10b981" stroke-width="3" fill="none" />
+  <polygon points="710,240 700,234 700,246" fill="#10b981" />
+
+  <!-- Step 4: Browser Render DOM -->
+  <g transform="translate(715, 100)">
+    <rect x="0" y="0" width="150" height="280" rx="10" fill="#1e293b" stroke="#f97316" stroke-width="2" />
+    <rect x="0" y="0" width="150" height="34" rx="10" fill="url(#orangeGrad)" />
+    <text x="75" y="22" fill="#ffffff" font-size="13" font-weight="bold" text-anchor="middle">4. Final Page</text>
+    <g transform="translate(15, 50)" fill="#f8fafc">
+      <text x="0" y="20" font-size="18" font-weight="bold" fill="#f8fafc">Welcome</text>
+      <text x="0" y="50" font-size="11" fill="#cbd5e1">This is <tspan font-weight="bold" fill="#38bdf8">bold</tspan> and</text>
+      <text x="0" y="70" font-size="11" font-style="italic" fill="#cbd5e1">italic text.</text>
+      <circle cx="5" cy="98" r="3" fill="#fbbf24" />
+      <text x="14" y="102" font-size="11" fill="#cbd5e1">Task item 1</text>
+      <circle cx="5" cy="118" r="3" fill="#fbbf24" />
+      <text x="14" y="122" font-size="11" fill="#cbd5e1">Task item 2</text>
+      <rect x="0" y="135" width="100" height="22" rx="4" fill="#0f172a" stroke="#334155" />
+      <text x="8" y="150" font-size="10" font-family="monospace" fill="#34d399">const x = 10</text>
+    </g>
+    <text x="75" y="260" fill="#fdba74" font-size="10" text-anchor="middle">Styled via CSS / Typography</text>
+  </g>
+
+  <!-- Bottom Legend Banner -->
+  <g transform="translate(40, 410)">
+    <rect x="0" y="0" width="820" height="42" rx="8" fill="#0f172a" stroke="#334155" />
+    <text x="410" y="26" fill="#94a3b8" font-size="12" text-anchor="middle">
+      <tspan fill="#38bdf8" font-weight="bold">Markdown is portable:</tspan> One source file can compile to HTML, PDF, ePub, GitHub READMEs, and mobile apps!
+    </text>
+  </g>
+</svg>

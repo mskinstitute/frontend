@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="480" viewBox="0 0 800 480" fill="none" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  <defs>
+    <linearGradient id="pptOrange" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D24726"/>
+      <stop offset="100%" stop-color="#A23218"/>
+    </linearGradient>
+    <linearGradient id="ribbonBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#F8FAFC"/>
+      <stop offset="100%" stop-color="#EEF2F6"/>
+    </linearGradient>
+    <linearGradient id="slideBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#F8FAFC"/>
+    </linearGradient>
+    <filter id="shadow" x="-5" y="-3" width="810" height="490" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="#000000" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <!-- Outer Window Frame -->
+  <rect width="800" height="480" rx="10" fill="#FFFFFF"/>
+  <rect width="800" height="480" rx="10" stroke="#CBD5E1" stroke-width="1.5"/>
+
+  <!-- Title Bar -->
+  <path d="M 0 10 C 0 4.477 4.477 0 10 0 L 790 0 C 795.523 0 800 4.477 800 10 L 800 38 L 0 38 Z" fill="url(#pptOrange)"/>
+  
+  <!-- Window Controls -->
+  <circle cx="18" cy="19" r="5" fill="#FF5F56"/>
+  <circle cx="34" cy="19" r="5" fill="#FFBD2E"/>
+  <circle cx="50" cy="19" r="5" fill="#27C93F"/>
+
+  <!-- PowerPoint Icon Badge -->
+  <rect x="68" y="8" width="22" height="22" rx="4" fill="#8F2510"/>
+  <text x="79" y="24" fill="#FFFFFF" font-size="14" font-weight="900" text-anchor="middle">P</text>
+
+  <!-- Presentation Title & Search -->
+  <text x="400" y="24" fill="#FFFFFF" font-size="13" font-weight="600" text-anchor="middle" letter-spacing="0.2">Formatting Text & Drawing Shapes - Microsoft PowerPoint</text>
+
+  <!-- Quick Save / Undo icons placeholder -->
+  <rect x="670" y="9" width="120" height="20" rx="4" fill="rgba(255,255,255,0.15)"/>
+  <text x="730" y="23" fill="#FFFFFF" font-size="11" text-anchor="middle">AutoSave: On</text>
+
+  
+  <!-- Top Section: Font & Paragraph Toolbar -->
+  <rect x="30" y="50" width="740" height="120" rx="8" fill="#F8FAFC" stroke="#E2E8F0"/>
+  <text x="45" y="72" fill="#0F172A" font-size="13" font-weight="bold">Typography &amp; WordArt Tools</text>
+
+  <g transform="translate(45, 84)">
+    <rect width="180" height="34" rx="4" fill="#FFFFFF" stroke="#CBD5E1"/>
+    <text x="12" y="22" fill="#1E293B" font-size="12" font-weight="600">Montserrat ExtraBold</text>
+    
+    <rect x="190" y="0" width="60" height="34" rx="4" fill="#FFFFFF" stroke="#CBD5E1"/>
+    <text x="210" y="22" fill="#1E293B" font-size="13" font-weight="bold">36 pt</text>
+
+    <!-- WordArt Previews -->
+    <rect x="260" y="0" width="460" height="66" rx="4" fill="#FFFFFF" stroke="#CBD5E1"/>
+    <text x="275" y="25" fill="#D24726" font-size="16" font-weight="900" filter="drop-shadow(2px 2px 0px rgba(0,0,0,0.2))">SHADOW</text>
+    <text x="365" y="25" fill="none" stroke="#2563EB" stroke-width="1.5" font-size="16" font-weight="900">OUTLINE</text>
+    <text x="455" y="25" fill="#E11D48" font-size="16" font-weight="900" filter="drop-shadow(0px 0px 4px #FB7185)">NEON GLOW</text>
+    <text x="580" y="25" fill="#475569" font-size="16" font-weight="900" letter-spacing="4">SPACED</text>
+    
+    <text x="275" y="52" fill="#64748B" font-size="11">Text Fill • Text Outline • Shadow • Reflection • Glow • Bevel • 3D Rotation • Transform (Warp)</text>
+  </g>
+
+  <!-- Bottom Section: Shapes & SmartArt -->
+  <rect x="30" y="185" width="740" height="260" rx="8" fill="#FFFFFF" stroke="#CBD5E1"/>
+  <text x="45" y="210" fill="#0F172A" font-size="13" font-weight="bold">Shapes, Icons &amp; SmartArt Process Flow</text>
+
+  <!-- Shape 1: Rectangle -->
+  <rect x="50" y="230" width="110" height="65" rx="8" fill="#D24726"/>
+  <text x="105" y="267" fill="#FFFFFF" font-size="12" font-weight="bold" text-anchor="middle">Rounded Box</text>
+
+  <line x1="165" y1="262" x2="200" y2="262" stroke="#94A3B8" stroke-width="2" stroke-dasharray="4 2"/>
+  <polygon points="205,262 195,257 195,267" fill="#94A3B8"/>
+
+  <!-- Shape 2: Circle -->
+  <circle cx="250" cy="262" r="36" fill="#2563EB"/>
+  <text x="250" y="266" fill="#FFFFFF" font-size="12" font-weight="bold" text-anchor="middle">Key Step</text>
+
+  <line x1="290" y1="262" x2="325" y2="262" stroke="#94A3B8" stroke-width="2" stroke-dasharray="4 2"/>
+  <polygon points="330,262 320,257 320,267" fill="#94A3B8"/>
+
+  <!-- Shape 3: Diamond -->
+  <polygon points="380,225 425,262 380,300 335,262" fill="#059669"/>
+  <text x="380" y="266" fill="#FFFFFF" font-size="11" font-weight="bold" text-anchor="middle">Decision</text>
+
+  <!-- SmartArt Diagram on right -->
+  <rect x="460" y="225" width="290" height="150" rx="6" fill="#F8FAFC" stroke="#E2E8F0"/>
+  <text x="475" y="248" fill="#0F172A" font-size="12" font-weight="bold">SmartArt: Horizontal Chevron Process</text>
+  
+  <polygon points="475,265 530,265 545,285 530,305 475,305 490,285" fill="#D24726"/>
+  <text x="505" y="289" fill="#FFFFFF" font-size="10" font-weight="bold" text-anchor="middle">1. Plan</text>
+
+  <polygon points="545,265 600,265 615,285 600,305 545,305 560,285" fill="#EA580C"/>
+  <text x="575" y="289" fill="#FFFFFF" font-size="10" font-weight="bold" text-anchor="middle">2. Design</text>
+
+  <polygon points="615,265 670,265 685,285 670,305 615,305 630,285" fill="#F59E0B"/>
+  <text x="645" y="289" fill="#FFFFFF" font-size="10" font-weight="bold" text-anchor="middle">3. Build</text>
+
+  <polygon points="685,265 735,265 745,285 735,305 685,305 700,285" fill="#10B981"/>
+  <text x="715" y="289" fill="#FFFFFF" font-size="10" font-weight="bold" text-anchor="middle">4. Go</text>
+
+  <text x="475" y="335" fill="#475569" font-size="11">Align Tools: Home &gt; Arrange &gt; Align Center / Distribute Horizontally</text>
+  <text x="475" y="355" fill="#D24726" font-size="11" font-weight="600">Group Shapes Shortcut: Ctrl + G | Ungroup: Ctrl + Shift + G</text>
+
+  <!-- Bottom Tip -->
+  <text x="50" y="420" fill="#64748B" font-size="11">Merge Shapes: Select 2+ shapes &gt; Shape Format &gt; Merge Shapes (Union, Combine, Fragment, Intersect, Subtract)</text>
+
+</svg>

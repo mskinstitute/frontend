@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="480" viewBox="0 0 800 480" fill="none" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  <defs>
+    <linearGradient id="excelGreen" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#107C41"/>
+      <stop offset="100%" stop-color="#0B5A2E"/>
+    </linearGradient>
+    <linearGradient id="gridHeader" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#F8FAFC"/>
+      <stop offset="100%" stop-color="#E2E8F0"/>
+    </linearGradient>
+    <filter id="shadow" x="-5" y="-3" width="810" height="490" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="#000000" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <!-- Outer Window Frame -->
+  <rect width="800" height="480" rx="10" fill="#FFFFFF"/>
+  <rect width="800" height="480" rx="10" stroke="#CBD5E1" stroke-width="1.5"/>
+
+  <!-- Title Bar -->
+  <path d="M 0 10 C 0 4.477 4.477 0 10 0 L 790 0 C 795.523 0 800 4.477 800 10 L 800 38 L 0 38 Z" fill="url(#excelGreen)"/>
+  
+  <!-- Window Controls -->
+  <circle cx="18" cy="19" r="5" fill="#FF5F56"/>
+  <circle cx="34" cy="19" r="5" fill="#FFBD2E"/>
+  <circle cx="50" cy="19" r="5" fill="#27C93F"/>
+
+  <!-- Excel Icon Badge -->
+  <rect x="68" y="8" width="22" height="22" rx="4" fill="#0A4D27"/>
+  <text x="79" y="24" fill="#FFFFFF" font-size="14" font-weight="900" text-anchor="middle">X</text>
+
+  <!-- Workbook Title -->
+  <text x="400" y="24" fill="#FFFFFF" font-size="13" font-weight="600" text-anchor="middle" letter-spacing="0.2">Format Cells Dialog (Ctrl + 1) - Microsoft Excel</text>
+
+  <!-- AutoSave Pill -->
+  <rect x="670" y="9" width="120" height="20" rx="4" fill="rgba(255,255,255,0.15)"/>
+  <text x="730" y="23" fill="#FFFFFF" font-size="11" text-anchor="middle">AutoSave: On</text>
+
+  
+  <!-- Background Workspace Dimmed -->
+  <rect x="0" y="38" width="800" height="442" fill="#F1F5F9"/>
+
+  <!-- Modal Dialog Window (Format Cells) -->
+  <g transform="translate(100, 55)">
+    <rect width="600" height="390" rx="8" fill="#FFFFFF" stroke="#94A3B8" stroke-width="1.5" filter="drop-shadow(0 10px 25px rgba(0,0,0,0.15))"/>
+    
+    <!-- Modal Header -->
+    <rect width="600" height="34" rx="8 8 0 0" fill="#F8FAFC"/>
+    <line x1="0" y1="34" x2="600" y2="34" stroke="#E2E8F0"/>
+    <text x="18" y="22" fill="#0F172A" font-size="13" font-weight="bold">Format Cells (Shortcut: Ctrl + 1)</text>
+    <text x="580" y="22" fill="#64748B" font-size="14" text-anchor="end">✕</text>
+
+    <!-- Modal Tabs -->
+    <g transform="translate(18, 44)">
+      <rect x="0" y="0" width="70" height="26" rx="4 4 0 0" fill="#FFFFFF" stroke="#CBD5E1"/>
+      <line x1="0" y1="26" x2="70" y2="26" stroke="#107C41" stroke-width="2"/>
+      <text x="35" y="17" fill="#107C41" font-size="11" font-weight="bold" text-anchor="middle">Number</text>
+
+      <rect x="75" y="0" width="75" height="26" rx="4 4 0 0" fill="#F8FAFC" stroke="#CBD5E1"/>
+      <text x="112" y="17" fill="#64748B" font-size="11" text-anchor="middle">Alignment</text>
+
+      <rect x="155" y="0" width="55" height="26" rx="4 4 0 0" fill="#F8FAFC" stroke="#CBD5E1"/>
+      <text x="182" y="17" fill="#64748B" font-size="11" text-anchor="middle">Font</text>
+
+      <rect x="215" y="0" width="60" height="26" rx="4 4 0 0" fill="#F8FAFC" stroke="#CBD5E1"/>
+      <text x="245" y="17" fill="#64748B" font-size="11" text-anchor="middle">Border</text>
+
+      <rect x="280" y="0" width="50" height="26" rx="4 4 0 0" fill="#F8FAFC" stroke="#CBD5E1"/>
+      <text x="305" y="17" fill="#64748B" font-size="11" text-anchor="middle">Fill</text>
+
+      <rect x="335" y="0" width="75" height="26" rx="4 4 0 0" fill="#F8FAFC" stroke="#CBD5E1"/>
+      <text x="372" y="17" fill="#64748B" font-size="11" text-anchor="middle">Protection</text>
+    </g>
+
+    <!-- Dialog Content: Left Category List (170px) -->
+    <g transform="translate(18, 80)">
+      <text x="0" y="0" fill="#334155" font-size="11" font-weight="bold">Category:</text>
+      <rect y="8" width="160" height="240" rx="4" fill="#FFFFFF" stroke="#CBD5E1"/>
+      
+      <rect y="8" width="160" height="22" fill="#FFFFFF"/>
+      <text x="10" y="24" fill="#334155" font-size="11">General</text>
+      
+      <rect y="30" width="160" height="22" fill="#FFFFFF"/>
+      <text x="10" y="46" fill="#334155" font-size="11">Number</text>
+
+      <!-- Currency Selected -->
+      <rect y="52" width="160" height="24" fill="#107C41"/>
+      <text x="10" y="68" fill="#FFFFFF" font-size="11" font-weight="bold">Currency</text>
+
+      <rect y="76" width="160" height="22" fill="#FFFFFF"/>
+      <text x="10" y="92" fill="#334155" font-size="11">Accounting</text>
+
+      <rect y="98" width="160" height="22" fill="#FFFFFF"/>
+      <text x="10" y="114" fill="#334155" font-size="11">Date</text>
+
+      <rect y="120" width="160" height="22" fill="#FFFFFF"/>
+      <text x="10" y="136" fill="#334155" font-size="11">Time</text>
+
+      <rect y="142" width="160" height="22" fill="#FFFFFF"/>
+      <text x="10" y="158" fill="#334155" font-size="11">Percentage</text>
+
+      <rect y="164" width="160" height="22" fill="#FFFFFF"/>
+      <text x="10" y="180" fill="#334155" font-size="11">Fraction</text>
+
+      <rect y="186" width="160" height="22" fill="#FFFFFF"/>
+      <text x="10" y="202" fill="#334155" font-size="11">Text</text>
+
+      <rect y="208" width="160" height="22" fill="#FFFFFF"/>
+      <text x="10" y="224" fill="#334155" font-size="11">Custom (Formats)</text>
+    </g>
+
+    <!-- Dialog Content: Right Options Pane -->
+    <g transform="translate(195, 80)">
+      <!-- Sample Box -->
+      <rect width="385" height="55" rx="4" fill="#F8FAFC" stroke="#CBD5E1"/>
+      <text x="12" y="18" fill="#64748B" font-size="10">Sample:</text>
+      <text x="190" y="38" fill="#107C41" font-size="16" font-weight="bold" text-anchor="middle">$14,500.00</text>
+
+      <!-- Decimal Places -->
+      <text x="0" y="80" fill="#334155" font-size="11">Decimal places:</text>
+      <rect x="100" y="66" width="55" height="24" rx="3" fill="#FFFFFF" stroke="#CBD5E1"/>
+      <text x="120" y="82" fill="#0F172A" font-size="12" font-weight="bold">2</text>
+
+      <!-- Symbol Picker -->
+      <text x="0" y="118" fill="#334155" font-size="11">Symbol:</text>
+      <rect x="100" y="104" width="200" height="24" rx="3" fill="#FFFFFF" stroke="#CBD5E1"/>
+      <text x="110" y="120" fill="#0F172A" font-size="11">$ (English - United States)</text>
+
+      <!-- Negative Numbers Preview -->
+      <text x="0" y="152" fill="#334155" font-size="11">Negative numbers:</text>
+      <rect y="160" width="385" height="88" rx="4" fill="#FFFFFF" stroke="#CBD5E1"/>
+      <rect y="160" width="385" height="22" fill="#EFF6FF"/>
+      <text x="15" y="176" fill="#0F172A" font-size="11">-$1,234.10</text>
+      <text x="15" y="196" fill="#DC2626" font-size="11">$1,234.10  (Red)</text>
+      <text x="15" y="216" fill="#0F172A" font-size="11">($1,234.10) (Parentheses)</text>
+      <text x="15" y="236" fill="#DC2626" font-size="11">($1,234.10) (Red Parentheses)</text>
+    </g>
+
+    <!-- Dialog Bottom Buttons -->
+    <rect x="420" y="345" width="75" height="30" rx="4" fill="#107C41"/>
+    <text x="457" y="364" fill="#FFFFFF" font-size="12" font-weight="bold" text-anchor="middle">OK</text>
+
+    <rect x="505" y="345" width="75" height="30" rx="4" fill="#F1F5F9" stroke="#CBD5E1"/>
+    <text x="542" y="364" fill="#475569" font-size="12" text-anchor="middle">Cancel</text>
+  </g>
+
+</svg>

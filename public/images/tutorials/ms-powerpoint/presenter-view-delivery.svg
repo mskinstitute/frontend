@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="480" viewBox="0 0 800 480" fill="none" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  <defs>
+    <linearGradient id="pptOrange" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D24726"/>
+      <stop offset="100%" stop-color="#A23218"/>
+    </linearGradient>
+    <linearGradient id="ribbonBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#F8FAFC"/>
+      <stop offset="100%" stop-color="#EEF2F6"/>
+    </linearGradient>
+    <linearGradient id="slideBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#F8FAFC"/>
+    </linearGradient>
+    <filter id="shadow" x="-5" y="-3" width="810" height="490" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="#000000" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <!-- Outer Window Frame -->
+  <rect width="800" height="480" rx="10" fill="#FFFFFF"/>
+  <rect width="800" height="480" rx="10" stroke="#CBD5E1" stroke-width="1.5"/>
+
+  <!-- Title Bar -->
+  <path d="M 0 10 C 0 4.477 4.477 0 10 0 L 790 0 C 795.523 0 800 4.477 800 10 L 800 38 L 0 38 Z" fill="url(#pptOrange)"/>
+  
+  <!-- Window Controls -->
+  <circle cx="18" cy="19" r="5" fill="#FF5F56"/>
+  <circle cx="34" cy="19" r="5" fill="#FFBD2E"/>
+  <circle cx="50" cy="19" r="5" fill="#27C93F"/>
+
+  <!-- PowerPoint Icon Badge -->
+  <rect x="68" y="8" width="22" height="22" rx="4" fill="#8F2510"/>
+  <text x="79" y="24" fill="#FFFFFF" font-size="14" font-weight="900" text-anchor="middle">P</text>
+
+  <!-- Presentation Title & Search -->
+  <text x="400" y="24" fill="#FFFFFF" font-size="13" font-weight="600" text-anchor="middle" letter-spacing="0.2">Presenter View & Dual Monitor Delivery - Microsoft PowerPoint</text>
+
+  <!-- Quick Save / Undo icons placeholder -->
+  <rect x="670" y="9" width="120" height="20" rx="4" fill="rgba(255,255,255,0.15)"/>
+  <text x="730" y="23" fill="#FFFFFF" font-size="11" text-anchor="middle">AutoSave: On</text>
+
+  
+  <!-- Dark Studio Presenter View Interface -->
+  <rect x="0" y="38" width="800" height="442" fill="#18181B"/>
+
+  <!-- Top Timer / Clock Header -->
+  <rect x="0" y="38" width="800" height="36" fill="#09090B"/>
+  <circle cx="24" cy="56" r="6" fill="#22C55E"/>
+  <text x="38" y="60" fill="#E4E4E7" font-size="12" font-weight="600">Slide 4 of 24</text>
+  <text x="160" y="60" fill="#E4E4E7" font-size="12">Elapsed: 00:14:28</text>
+  <text x="290" y="60" fill="#71717A" font-size="11">⏸ Pause Timer</text>
+  <text x="680" y="60" fill="#E4E4E7" font-size="12" font-weight="bold">Clock: 10:45 AM</text>
+
+  <!-- Left Side: Main Current Slide (What audience sees on projector) -->
+  <g transform="translate(24, 86)">
+    <text x="0" y="0" fill="#A1A1AA" font-size="11" font-weight="bold">CURRENT AUDIENCE VIEW</text>
+    <rect y="10" width="460" height="260" rx="6" fill="#FFFFFF" stroke="#3F3F46" stroke-width="2"/>
+    
+    <!-- Audience slide content -->
+    <rect x="25" y="35" width="410" height="40" rx="3" fill="#D24726"/>
+    <text x="230" y="60" fill="#FFFFFF" font-size="16" font-weight="bold" text-anchor="middle">Financial Projections (2026 - 2028)</text>
+
+    <!-- Bar Chart -->
+    <rect x="60" y="190" width="45" height="50" fill="#D24726"/>
+    <text x="82" y="180" fill="#09090B" font-size="10" font-weight="bold" text-anchor="middle">$4.2M</text>
+    <text x="82" y="255" fill="#71717A" font-size="9" text-anchor="middle">2026</text>
+
+    <rect x="135" y="150" width="45" height="90" fill="#EA580C"/>
+    <text x="157" y="140" fill="#09090B" font-size="10" font-weight="bold" text-anchor="middle">$8.5M</text>
+    <text x="157" y="255" fill="#71717A" font-size="9" text-anchor="middle">2027</text>
+
+    <rect x="210" y="105" width="45" height="135" fill="#16A34A"/>
+    <text x="232" y="95" fill="#09090B" font-size="10" font-weight="bold" text-anchor="middle">$15.8M</text>
+    <text x="232" y="255" fill="#71717A" font-size="9" text-anchor="middle">2028</text>
+
+    <!-- Red Laser Pointer Dot Simulation -->
+    <circle cx="232" cy="120" r="7" fill="#FF0000" filter="drop-shadow(0px 0px 6px #FF0000)"/>
+    <circle cx="232" cy="120" r="3" fill="#FFFFFF"/>
+  </g>
+
+  <!-- Presenter Annotation Toolbar below current slide -->
+  <g transform="translate(24, 370)">
+    <rect width="460" height="48" rx="6" fill="#27272A" stroke="#3F3F46"/>
+    <circle cx="35" cy="24" r="14" fill="#D24726"/>
+    <text x="35" y="28" fill="#FFFFFF" font-size="11" font-weight="bold" text-anchor="middle">🖊</text>
+    <text x="56" y="28" fill="#E4E4E7" font-size="11">Pen</text>
+
+    <circle cx="110" cy="24" r="14" fill="#EAB308"/>
+    <text x="110" y="28" fill="#000000" font-size="11" font-weight="bold" text-anchor="middle">🖍</text>
+    <text x="131" y="28" fill="#E4E4E7" font-size="11">Highlighter</text>
+
+    <circle cx="205" cy="24" r="14" fill="#3B82F6"/>
+    <text x="205" y="28" fill="#FFFFFF" font-size="11" font-weight="bold" text-anchor="middle">🔍</text>
+    <text x="226" y="28" fill="#E4E4E7" font-size="11">Zoom Slide</text>
+
+    <circle cx="310" cy="24" r="14" fill="#52525B"/>
+    <text x="310" y="28" fill="#FFFFFF" font-size="10" font-weight="bold" text-anchor="middle">B</text>
+    <text x="331" y="28" fill="#E4E4E7" font-size="11">Black Screen ('B')</text>
+
+    <text x="420" y="28" fill="#A1A1AA" font-size="11">See All</text>
+  </g>
+
+  <!-- Right Top: Next Slide Preview -->
+  <g transform="translate(510, 86)">
+    <text x="0" y="0" fill="#A1A1AA" font-size="11" font-weight="bold">NEXT SLIDE PREVIEW</text>
+    <rect y="10" width="265" height="150" rx="6" fill="#27272A" stroke="#3F3F46"/>
+    <rect x="15" y="25" width="235" height="24" rx="2" fill="#3F3F46"/>
+    <text x="25" y="41" fill="#E4E4E7" font-size="10" font-weight="bold">Slide 5: Investment Ask &amp; Terms</text>
+    <rect x="15" y="60" width="160" height="10" rx="2" fill="#52525B"/>
+    <rect x="15" y="76" width="130" height="10" rx="2" fill="#52525B"/>
+    <text x="132" y="140" fill="#71717A" font-size="9" text-anchor="middle">Press Right Arrow or Click to Advance</text>
+  </g>
+
+  <!-- Right Bottom: Private Speaker Notes Panel -->
+  <g transform="translate(510, 260)">
+    <text x="0" y="0" fill="#A1A1AA" font-size="11" font-weight="bold">PRIVATE SPEAKER NOTES (Visible only to you)</text>
+    <rect y="10" width="265" height="195" rx="6" fill="#27272A" stroke="#3F3F46"/>
+    <text x="15" y="32" fill="#38BDF8" font-size="11" font-weight="bold">• Emphasize 180% year-over-year growth.</text>
+    <text x="15" y="52" fill="#E4E4E7" font-size="11">• Point out customer acquisition cost reduction.</text>
+    <text x="15" y="72" fill="#E4E4E7" font-size="11">• Pause for 5 seconds for questions on 2028 target.</text>
+    <text x="15" y="94" fill="#FACC15" font-size="10" font-weight="bold">Keyboard Shortcuts during show:</text>
+    <text x="15" y="112" fill="#D4D4D8" font-size="10">F5: Start from beginning</text>
+    <text x="15" y="128" fill="#D4D4D8" font-size="10">Shift + F5: Start from current slide</text>
+    <text x="15" y="144" fill="#D4D4D8" font-size="10">B: Black screen | W: White screen</text>
+    <text x="15" y="160" fill="#D4D4D8" font-size="10">Ctrl + P: Pen | Ctrl + L: Laser pointer</text>
+    <text x="15" y="176" fill="#D4D4D8" font-size="10">Esc: Exit Slide Show</text>
+  </g>
+
+</svg>

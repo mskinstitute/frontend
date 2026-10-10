@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 480" width="100%" height="100%">
+  <defs>
+    <linearGradient id="gbBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b1120" />
+      <stop offset="100%" stop-color="#1e293b" />
+    </linearGradient>
+    <filter id="cardShadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#000" flood-opacity="0.4" />
+    </filter>
+  </defs>
+
+  <rect width="900" height="480" rx="16" fill="url(#gbBg)" />
+  <rect x="2" y="2" width="896" height="476" rx="14" fill="none" stroke="#334155" stroke-width="1.5" />
+
+  <text x="450" y="40" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="20" font-weight="800" text-anchor="middle">
+    PANDAS GROUPBY: THE SPLIT - APPLY - COMBINE WORKFLOW
+  </text>
+  <text x="450" y="65" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="13" text-anchor="middle">
+    Code: df.groupby('City')['Sales'].agg(['mean', 'sum', 'count'])
+  </text>
+
+  <!-- STEP 1: SPLIT -->
+  <g transform="translate(40, 95)" filter="url(#cardShadow)">
+    <rect width="230" height="345" rx="10" fill="#1e293b" stroke="#3b82f6" stroke-width="1.5" />
+    <rect width="230" height="35" rx="10" fill="#1d4ed8" />
+    <text x="115" y="23" fill="#ffffff" font-family="system-ui" font-size="14" font-weight="700" text-anchor="middle">1. SPLIT (By Key)</text>
+    
+    <text x="15" y="62" fill="#94a3b8" font-family="system-ui" font-size="11">Break original DataFrame into</text>
+    <text x="15" y="78" fill="#94a3b8" font-family="system-ui" font-size="11">distinct subsets based on key:</text>
+
+    <!-- Subgroups -->
+    <rect x="15" y="95" width="200" height="65" rx="6" fill="#0f172a" stroke="#334155" />
+    <text x="25" y="115" fill="#60a5fa" font-family="monospace" font-size="11" font-weight="700">Group: City == 'Delhi'</text>
+    <text x="25" y="133" fill="#cbd5e1" font-family="monospace" font-size="10">Row 1: Sales = 45000</text>
+    <text x="25" y="148" fill="#cbd5e1" font-family="monospace" font-size="10">Row 4: Sales = 55000</text>
+
+    <rect x="15" y="170" width="200" height="65" rx="6" fill="#0f172a" stroke="#334155" />
+    <text x="25" y="190" fill="#f59e0b" font-family="monospace" font-size="11" font-weight="700">Group: City == 'Mumbai'</text>
+    <text x="25" y="208" fill="#cbd5e1" font-family="monospace" font-size="10">Row 2: Sales = 72000</text>
+    <text x="25" y="223" fill="#cbd5e1" font-family="monospace" font-size="10">Row 5: Sales = 68000</text>
+
+    <rect x="15" y="245" width="200" height="65" rx="6" fill="#0f172a" stroke="#334155" />
+    <text x="25" y="265" fill="#10b981" font-family="monospace" font-size="11" font-weight="700">Group: City == 'Bengaluru'</text>
+    <text x="25" y="283" fill="#cbd5e1" font-family="monospace" font-size="10">Row 3: Sales = 91000</text>
+    <text x="25" y="298" fill="#cbd5e1" font-family="monospace" font-size="10">Row 6: Sales = 89000</text>
+  </g>
+
+  <!-- ARROW 1 -->
+  <path d="M 285 260 L 325 260" stroke="#60a5fa" stroke-width="3" stroke-dasharray="6,4" />
+  <polygon points="325,255 335,260 325,265" fill="#60a5fa" />
+
+  <!-- STEP 2: APPLY -->
+  <g transform="translate(345, 95)" filter="url(#cardShadow)">
+    <rect width="230" height="345" rx="10" fill="#1e293b" stroke="#f59e0b" stroke-width="1.5" />
+    <rect width="230" height="35" rx="10" fill="#d97706" />
+    <text x="115" y="23" fill="#ffffff" font-family="system-ui" font-size="14" font-weight="700" text-anchor="middle">2. APPLY (Function)</text>
+    
+    <text x="15" y="62" fill="#94a3b8" font-family="system-ui" font-size="11">Compute aggregation metric</text>
+    <text x="15" y="78" fill="#94a3b8" font-family="system-ui" font-size="11">independently for each group:</text>
+
+    <!-- Function applications -->
+    <rect x="15" y="95" width="200" height="65" rx="6" fill="#0f172a" stroke="#334155" />
+    <text x="25" y="118" fill="#60a5fa" font-family="monospace" font-size="11">Delhi mean(Sales):</text>
+    <text x="25" y="138" fill="#38bdf8" font-family="monospace" font-size="13" font-weight="700">(45k + 55k) / 2 = 50k</text>
+
+    <rect x="15" y="170" width="200" height="65" rx="6" fill="#0f172a" stroke="#334155" />
+    <text x="25" y="193" fill="#f59e0b" font-family="monospace" font-size="11">Mumbai mean(Sales):</text>
+    <text x="25" y="213" fill="#fbbf24" font-family="monospace" font-size="13" font-weight="700">(72k + 68k) / 2 = 70k</text>
+
+    <rect x="15" y="245" width="200" height="65" rx="6" fill="#0f172a" stroke="#334155" />
+    <text x="25" y="268" fill="#10b981" font-family="monospace" font-size="11">BLR mean(Sales):</text>
+    <text x="25" y="288" fill="#34d399" font-family="monospace" font-size="13" font-weight="700">(91k + 89k) / 2 = 90k</text>
+  </g>
+
+  <!-- ARROW 2 -->
+  <path d="M 590 260 L 630 260" stroke="#34d399" stroke-width="3" stroke-dasharray="6,4" />
+  <polygon points="630,255 640,260 630,265" fill="#34d399" />
+
+  <!-- STEP 3: COMBINE -->
+  <g transform="translate(645, 95)" filter="url(#cardShadow)">
+    <rect width="215" height="345" rx="10" fill="#1e293b" stroke="#10b981" stroke-width="1.5" />
+    <rect width="215" height="35" rx="10" fill="#059669" />
+    <text x="107" y="23" fill="#ffffff" font-family="system-ui" font-size="14" font-weight="700" text-anchor="middle">3. COMBINE (Result)</text>
+    
+    <text x="15" y="62" fill="#94a3b8" font-family="system-ui" font-size="11">Assemble aggregate outputs into</text>
+    <text x="15" y="78" fill="#94a3b8" font-family="system-ui" font-size="11">a final concise summary DataFrame:</text>
+
+    <!-- Result Table -->
+    <g transform="translate(15, 100)" font-family="monospace" font-size="11">
+      <rect width="185" height="25" rx="4" fill="#334155" />
+      <text x="45" y="17" fill="#f59e0b" font-weight="700">City</text>
+      <text x="135" y="17" fill="#60a5fa" font-weight="700">mean_sales</text>
+
+      <!-- Row 1 -->
+      <rect y="30" width="185" height="28" rx="4" fill="#0f172a" stroke="#334155" />
+      <text x="15" y="48" fill="#f8fafc">Delhi</text>
+      <text x="125" y="48" fill="#38bdf8" font-weight="700">50,000</text>
+
+      <!-- Row 2 -->
+      <rect y="63" width="185" height="28" rx="4" fill="#0f172a" stroke="#334155" />
+      <text x="15" y="81" fill="#f8fafc">Mumbai</text>
+      <text x="125" y="81" fill="#fbbf24" font-weight="700">70,000</text>
+
+      <!-- Row 3 -->
+      <rect y="96" width="185" height="28" rx="4" fill="#0f172a" stroke="#334155" />
+      <text x="15" y="114" fill="#f8fafc">Bengaluru</text>
+      <text x="125" y="114" fill="#34d399" font-weight="700">90,000</text>
+    </g>
+
+    <!-- Benefit note -->
+    <rect x="15" y="240" width="185" height="85" rx="6" fill="#0f172a" stroke="#334155" />
+    <text x="25" y="260" fill="#34d399" font-family="system-ui" font-size="11" font-weight="700">C-Engine Vectorization:</text>
+    <text x="25" y="278" fill="#94a3b8" font-family="system-ui" font-size="10">Runs in compiled Cython.</text>
+    <text x="25" y="294" fill="#94a3b8" font-family="system-ui" font-size="10">100x faster than looping</text>
+    <text x="25" y="310" fill="#94a3b8" font-family="system-ui" font-size="10">over rows manually!</text>
+  </g>
+</svg>

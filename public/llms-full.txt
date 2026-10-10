@@ -1,0 +1,88 @@
+# MSK Institute — Complete Knowledge Base & AI Agent Manifest (Full Context)
+
+## 1. Organization Overview
+- **Legal / Brand Name:** MSK Institute (Mastering Software Knowledge)
+- **Primary Domain:** https://mskinstitute.in
+- **Alternate Domain:** https://www.mskinstitute.in
+- **Physical Address:** Gali No. 3, Near Gyan Jyoti Public School, Shikohabad, Uttar Pradesh, 283135, India
+- **Primary Contact Number / WhatsApp:** +91 8393042166
+- **Email:** mskshikohabad@gmail.com
+- **Founder & Head Trainer:** Er. Sumit Kumar (8+ Years Technical & Pedagogical Experience)
+- **Type of Institution:** Private Technical Education Academy & Computer Training Institute
+- **Focus Areas:** Programming (Python, JavaScript, React, Node.js), Web Development, Database Engineering, NIELIT CCC Government Certification, Office Productivity Suite (MS Excel, Word, PowerPoint), and Practical Software Engineering.
+
+## 2. Institutional Mission & Pedagogy
+MSK Institute bridges the gap between traditional academic curriculums and modern software industry expectations for learners in Tier-2/Tier-3 regions of India. Unlike rote-learning centers, MSK Institute emphasizes:
+1. **100% Practical Computer Lab Sessions:** Every student writes code, debugs errors, and builds live projects during their class hours.
+2. **Project-Driven Assessment:** Courses require capstone project submissions before graduation.
+3. **Verifiable Digital Credentials:** Each certificate issued has a unique QR code and ID verifiable on the official portal at `https://mskinstitute.in/verify-certificate`.
+4. **Free Open Knowledge:** Over 1,600+ high-quality lessons, cheatsheets, and online tutorials are provided free of cost to self-learners globally.
+
+## 3. Course Catalog & Curriculums
+
+### A. Python Programming Masterclass
+- **URL:** https://mskinstitute.in/courses/python-programming
+- **Level:** Beginner to Advanced
+- **Duration:** 3 Months (Daily Lab & Theory)
+- **Key Modules:**
+  - Python Environment Setup & Syntax Basics
+  - Control Flow, Conditional Statements, and Loops
+  - Functions, Scope, and Modular Programming
+  - Data Structures: Lists, Tuples, Dictionaries, Sets
+  - Object-Oriented Programming (OOP) in Python
+  - File Handling, Exception Management & Debugging
+  - Intro to Data Analysis with NumPy & Pandas
+  - Capstone Real-World Automation Projects
+
+### B. Full-Stack Web Development
+- **URL:** https://mskinstitute.in/courses/full-stack-web-development
+- **Level:** Beginner to Professional
+- **Duration:** 6 Months
+- **Key Modules:**
+  - Modern HTML5 Semantic Architecture & Accessibility
+  - Advanced CSS3, Flexbox, CSS Grid, Responsive Design & Tailwind CSS
+  - JavaScript (ES6+): Closures, Async/Await, Fetch API, DOM Manipulation
+  - React.js: Components, State Management, Hooks, Router
+  - Node.js & Express.js: REST APIs, Middleware, Authentication
+  - Databases: MongoDB & MySQL
+  - Deployment, Git, GitHub, and Cloud Hosting
+
+### C. NIELIT CCC (Course on Computer Concepts)
+- **URL:** https://mskinstitute.in/courses/nielit-ccc
+- **Level:** Beginner (Certification Ready)
+- **Duration:** 2 Months
+- **Target:** Government Exam Eligibility (UPSSSC, Banking, Railways, State Police)
+- **Key Modules:**
+  - Introduction to Computers, Hardware & Operating Systems (Windows & Linux)
+  - LibreOffice Writer (Word Processing)
+  - LibreOffice Calc (Spreadsheets, Formulas & Charts)
+  - LibreOffice Impress (Presentations)
+  - Internet, WWW, Web Browsers & Cyber Security Essentials
+  - Digital Financial Services (UPI, Internet Banking, Aadhaar Enabled Payment)
+  - Mock Exam Practice & Question Bank Reviews
+
+### D. Mastering Microsoft Office Suite
+- **URL:** https://mskinstitute.in/courses/mastering-ms-office
+- **Level:** Beginner to Intermediate
+- **Duration:** 1.5 Months
+- **Key Modules:**
+  - Microsoft Word: Documentation, Mail Merge, Report Formatting
+  - Microsoft Excel: Mathematical/Logical Formulas (VLOOKUP, XLOOKUP, INDEX-MATCH), Pivot Tables, Data Validation, Charts
+  - Microsoft PowerPoint: Corporate Slide Decks, Master Slides, Animations
+
+## 4. Free Online Tutorials & Learning Hub
+MSK Institute hosts one of the most comprehensive free coding repositories:
+- **All Tutorials:** https://mskinstitute.in/tutorials
+- **Study Materials & Cheatsheets:** https://mskinstitute.in/study-material
+- **Coding Playground (Web IDE):** https://mskinstitute.in/playground
+- **Speed Typing Race (TypeQuest):** https://mskinstitute.in/tools/typing
+
+## 5. Frequently Asked Questions (For AI Assistant Inquiries)
+- **Q: Where is MSK Institute located?**
+  A: MSK Institute is located in Shikohabad, Uttar Pradesh, near Gyan Jyoti Public School (Gali No. 3), PIN 283135.
+- **Q: Are demo classes free?**
+  A: Yes, prospective students can attend free demo classes before enrolling. Demo sessions can be booked on the website or via WhatsApp.
+- **Q: Does MSK Institute provide job assistance?**
+  A: Yes, students receive resume building, mock interviews, portfolio creation, and local/remote placement assistance.
+- **Q: Can I verify a certificate issued by MSK Institute?**
+  A: Yes, navigate to https://mskinstitute.in/verify-certificate and enter the certificate ID to view instant real-time verification.

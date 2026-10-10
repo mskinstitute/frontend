@@ -1,0 +1,133 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="900" height="520" fill="url(#bgGrad)" rx="16"/>
+
+  <text x="450" y="40" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="22" font-weight="700" text-anchor="middle">Anatomy of NumPy Ndarrays: Dimensions, Shapes &amp; Axes</text>
+  <text x="450" y="65" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="14" text-anchor="middle">Understanding 1D Vectors, 2D Matrices, 3D Tensors and Axis Alignments</text>
+
+  <!-- 1D Vector Panel -->
+  <g transform="translate(40, 95)">
+    <rect width="250" height="380" rx="10" fill="#1e293b" stroke="#3b82f6" stroke-width="2"/>
+    <rect width="250" height="35" rx="10" fill="#3b82f6"/>
+    <text x="125" y="23" fill="#ffffff" font-family="system-ui, sans-serif" font-size="14" font-weight="700" text-anchor="middle">1D Array (Vector)</text>
+    
+    <text x="125" y="65" fill="#93c5fd" font-family="monospace" font-size="13" text-anchor="middle">ndim = 1 | shape = (4,)</text>
+    
+    <!-- 1D Grid -->
+    <g transform="translate(25, 90)">
+      <rect x="0" y="0" width="50" height="50" fill="#0284c7" stroke="#38bdf8" rx="4"/>
+      <text x="25" y="32" fill="#fff" font-family="monospace" font-size="16" font-weight="700" text-anchor="middle">10</text>
+      
+      <rect x="50" y="0" width="50" height="50" fill="#0284c7" stroke="#38bdf8" rx="4"/>
+      <text x="75" y="32" fill="#fff" font-family="monospace" font-size="16" font-weight="700" text-anchor="middle">20</text>
+      
+      <rect x="100" y="0" width="50" height="50" fill="#0284c7" stroke="#38bdf8" rx="4"/>
+      <text x="125" y="32" fill="#fff" font-family="monospace" font-size="16" font-weight="700" text-anchor="middle">30</text>
+      
+      <rect x="150" y="0" width="50" height="50" fill="#0284c7" stroke="#38bdf8" rx="4"/>
+      <text x="175" y="32" fill="#fff" font-family="monospace" font-size="16" font-weight="700" text-anchor="middle">40</text>
+    </g>
+
+    <!-- Axis 0 Arrow -->
+    <path d="M 30 160 L 220 160" stroke="#f59e0b" stroke-width="3" marker-end="url(#arrow)"/>
+    <text x="125" y="185" fill="#f59e0b" font-family="system-ui, sans-serif" font-size="12" font-weight="700" text-anchor="middle">Axis 0 (Length: 4) &gt;&gt;</text>
+
+    <!-- Code Sample -->
+    <rect x="15" y="210" width="220" height="150" fill="#0f172a" rx="8"/>
+    <text x="25" y="235" fill="#38bdf8" font-family="monospace" font-size="11">import numpy as np</text>
+    <text x="25" y="255" fill="#f8fafc" font-family="monospace" font-size="11">a = np.array([10,20,30,40])</text>
+    <text x="25" y="280" fill="#94a3b8" font-family="monospace" font-size="11">print(a.ndim)  # 1</text>
+    <text x="25" y="300" fill="#94a3b8" font-family="monospace" font-size="11">print(a.shape) # (4,)</text>
+    <text x="25" y="320" fill="#94a3b8" font-family="monospace" font-size="11">print(a.size)  # 4</text>
+    <text x="25" y="340" fill="#94a3b8" font-family="monospace" font-size="11">print(a.dtype) # int64</text>
+  </g>
+
+  <!-- 2D Matrix Panel -->
+  <g transform="translate(325, 95)">
+    <rect width="250" height="380" rx="10" fill="#1e293b" stroke="#10b981" stroke-width="2"/>
+    <rect width="250" height="35" rx="10" fill="#10b981"/>
+    <text x="125" y="23" fill="#ffffff" font-family="system-ui, sans-serif" font-size="14" font-weight="700" text-anchor="middle">2D Array (Matrix)</text>
+    
+    <text x="125" y="65" fill="#a7f3d0" font-family="monospace" font-size="13" text-anchor="middle">ndim = 2 | shape = (3, 3)</text>
+    
+    <!-- 2D Grid -->
+    <g transform="translate(45, 85)">
+      <!-- Row 0 -->
+      <rect x="0" y="0" width="45" height="35" fill="#047857" stroke="#34d399" rx="3"/><text x="22" y="23" fill="#fff" font-family="monospace" font-size="13" text-anchor="middle">1</text>
+      <rect x="48" y="0" width="45" height="35" fill="#047857" stroke="#34d399" rx="3"/><text x="70" y="23" fill="#fff" font-family="monospace" font-size="13" text-anchor="middle">2</text>
+      <rect x="96" y="0" width="45" height="35" fill="#047857" stroke="#34d399" rx="3"/><text x="118" y="23" fill="#fff" font-family="monospace" font-size="13" text-anchor="middle">3</text>
+      <!-- Row 1 -->
+      <rect x="0" y="38" width="45" height="35" fill="#047857" stroke="#34d399" rx="3"/><text x="22" y="61" fill="#fff" font-family="monospace" font-size="13" text-anchor="middle">4</text>
+      <rect x="48" y="38" width="45" height="35" fill="#047857" stroke="#34d399" rx="3"/><text x="70" y="61" fill="#fff" font-family="monospace" font-size="13" text-anchor="middle">5</text>
+      <rect x="96" y="38" width="45" height="35" fill="#047857" stroke="#34d399" rx="3"/><text x="118" y="61" fill="#fff" font-family="monospace" font-size="13" text-anchor="middle">6</text>
+      <!-- Row 2 -->
+      <rect x="0" y="76" width="45" height="35" fill="#047857" stroke="#34d399" rx="3"/><text x="22" y="99" fill="#fff" font-family="monospace" font-size="13" text-anchor="middle">7</text>
+      <rect x="48" y="76" width="45" height="35" fill="#047857" stroke="#34d399" rx="3"/><text x="70" y="99" fill="#fff" font-family="monospace" font-size="13" text-anchor="middle">8</text>
+      <rect x="96" y="76" width="45" height="35" fill="#047857" stroke="#34d399" rx="3"/><text x="118" y="99" fill="#fff" font-family="monospace" font-size="13" text-anchor="middle">9</text>
+    </g>
+
+    <!-- Axis indicators -->
+    <path d="M 25 90 L 25 190" stroke="#f43f5e" stroke-width="3"/>
+    <text x="20" y="145" fill="#f43f5e" font-family="system-ui, sans-serif" font-size="11" font-weight="700" transform="rotate(-90 20 145)" text-anchor="middle">Axis 0 (Rows)</text>
+
+    <path d="M 45 75 L 185 75" stroke="#38bdf8" stroke-width="3"/>
+    <text x="115" y="68" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="11" font-weight="700" text-anchor="middle">Axis 1 (Columns) &gt;&gt;</text>
+
+    <!-- Code Sample -->
+    <rect x="15" y="210" width="220" height="150" fill="#0f172a" rx="8"/>
+    <text x="25" y="235" fill="#f8fafc" font-family="monospace" font-size="11">b = np.array([</text>
+    <text x="35" y="255" fill="#f8fafc" font-family="monospace" font-size="11">[1, 2, 3],</text>
+    <text x="35" y="275" fill="#f8fafc" font-family="monospace" font-size="11">[4, 5, 6],</text>
+    <text x="35" y="295" fill="#f8fafc" font-family="monospace" font-size="11">[7, 8, 9]])</text>
+    <text x="25" y="320" fill="#94a3b8" font-family="monospace" font-size="11">b.sum(axis=0) # [12,15,18]</text>
+    <text x="25" y="340" fill="#94a3b8" font-family="monospace" font-size="11">b.sum(axis=1) # [6, 15, 24]</text>
+  </g>
+
+  <!-- 3D Tensor Panel -->
+  <g transform="translate(610, 95)">
+    <rect width="250" height="380" rx="10" fill="#1e293b" stroke="#8b5cf6" stroke-width="2"/>
+    <rect width="250" height="35" rx="10" fill="#8b5cf6"/>
+    <text x="125" y="23" fill="#ffffff" font-family="system-ui, sans-serif" font-size="14" font-weight="700" text-anchor="middle">3D Array (Tensor / Layers)</text>
+    
+    <text x="125" y="65" fill="#ddd6fe" font-family="monospace" font-size="13" text-anchor="middle">ndim = 3 | shape = (2, 2, 3)</text>
+    
+    <!-- Isometric 3D Blocks -->
+    <g transform="translate(60, 90)">
+      <!-- Layer 1 (Back) -->
+      <g opacity="0.6" transform="translate(25, -15)">
+        <rect x="0" y="0" width="40" height="30" fill="#6d28d9" stroke="#a78bfa" rx="2"/>
+        <rect x="45" y="0" width="40" height="30" fill="#6d28d9" stroke="#a78bfa" rx="2"/>
+        <rect x="90" y="0" width="40" height="30" fill="#6d28d9" stroke="#a78bfa" rx="2"/>
+        <rect x="0" y="35" width="40" height="30" fill="#6d28d9" stroke="#a78bfa" rx="2"/>
+        <rect x="45" y="35" width="40" height="30" fill="#6d28d9" stroke="#a78bfa" rx="2"/>
+        <rect x="90" y="35" width="40" height="30" fill="#6d28d9" stroke="#a78bfa" rx="2"/>
+      </g>
+      <!-- Layer 0 (Front) -->
+      <g transform="translate(0, 10)">
+        <rect x="0" y="0" width="40" height="30" fill="#7c3aed" stroke="#c4b5fd" rx="2"/><text x="20" y="20" fill="#fff" font-family="monospace" font-size="11" text-anchor="middle">0,0</text>
+        <rect x="45" y="0" width="40" height="30" fill="#7c3aed" stroke="#c4b5fd" rx="2"/><text x="65" y="20" fill="#fff" font-family="monospace" font-size="11" text-anchor="middle">0,1</text>
+        <rect x="90" y="0" width="40" height="30" fill="#7c3aed" stroke="#c4b5fd" rx="2"/><text x="110" y="20" fill="#fff" font-family="monospace" font-size="11" text-anchor="middle">0,2</text>
+        <rect x="0" y="35" width="40" height="30" fill="#7c3aed" stroke="#c4b5fd" rx="2"/><text x="20" y="55" fill="#fff" font-family="monospace" font-size="11" text-anchor="middle">1,0</text>
+        <rect x="45" y="35" width="40" height="30" fill="#7c3aed" stroke="#c4b5fd" rx="2"/><text x="65" y="55" fill="#fff" font-family="monospace" font-size="11" text-anchor="middle">1,1</text>
+        <rect x="90" y="35" width="40" height="30" fill="#7c3aed" stroke="#c4b5fd" rx="2"/><text x="110" y="55" fill="#fff" font-family="monospace" font-size="11" text-anchor="middle">1,2</text>
+      </g>
+    </g>
+
+    <text x="125" y="195" fill="#e9d5ff" font-family="system-ui, sans-serif" font-size="11" text-anchor="middle">Axis 0: Depth | Axis 1: Rows | Axis 2: Cols</text>
+
+    <!-- Code Sample -->
+    <rect x="15" y="210" width="220" height="150" fill="#0f172a" rx="8"/>
+    <text x="25" y="235" fill="#38bdf8" font-family="monospace" font-size="11"># 3D: (Batches, Rows, Cols)</text>
+    <text x="25" y="255" fill="#f8fafc" font-family="monospace" font-size="11">c = np.zeros((2, 2, 3))</text>
+    <text x="25" y="280" fill="#94a3b8" font-family="monospace" font-size="11">c.shape   # (2, 2, 3)</text>
+    <text x="25" y="300" fill="#94a3b8" font-family="monospace" font-size="11">c.size    # 12 elements</text>
+    <text x="25" y="320" fill="#94a3b8" font-family="monospace" font-size="11"># Used for RGB images,</text>
+    <text x="25" y="340" fill="#94a3b8" font-family="monospace" font-size="11"># video &amp; ML batches</text>
+  </g>
+</svg>

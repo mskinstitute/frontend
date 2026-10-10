@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="480" viewBox="0 0 800 480" fill="none" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  <defs>
+    <linearGradient id="pptOrange" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#D24726"/>
+      <stop offset="100%" stop-color="#A23218"/>
+    </linearGradient>
+    <linearGradient id="ribbonBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#F8FAFC"/>
+      <stop offset="100%" stop-color="#EEF2F6"/>
+    </linearGradient>
+    <linearGradient id="slideBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#F8FAFC"/>
+    </linearGradient>
+    <filter id="shadow" x="-5" y="-3" width="810" height="490" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="#000000" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <!-- Outer Window Frame -->
+  <rect width="800" height="480" rx="10" fill="#FFFFFF"/>
+  <rect width="800" height="480" rx="10" stroke="#CBD5E1" stroke-width="1.5"/>
+
+  <!-- Title Bar -->
+  <path d="M 0 10 C 0 4.477 4.477 0 10 0 L 790 0 C 795.523 0 800 4.477 800 10 L 800 38 L 0 38 Z" fill="url(#pptOrange)"/>
+  
+  <!-- Window Controls -->
+  <circle cx="18" cy="19" r="5" fill="#FF5F56"/>
+  <circle cx="34" cy="19" r="5" fill="#FFBD2E"/>
+  <circle cx="50" cy="19" r="5" fill="#27C93F"/>
+
+  <!-- PowerPoint Icon Badge -->
+  <rect x="68" y="8" width="22" height="22" rx="4" fill="#8F2510"/>
+  <text x="79" y="24" fill="#FFFFFF" font-size="14" font-weight="900" text-anchor="middle">P</text>
+
+  <!-- Presentation Title & Search -->
+  <text x="400" y="24" fill="#FFFFFF" font-size="13" font-weight="600" text-anchor="middle" letter-spacing="0.2">Capstone Project: Executive Pitch Deck - Microsoft PowerPoint</text>
+
+  <!-- Quick Save / Undo icons placeholder -->
+  <rect x="670" y="9" width="120" height="20" rx="4" fill="rgba(255,255,255,0.15)"/>
+  <text x="730" y="23" fill="#FFFFFF" font-size="11" text-anchor="middle">AutoSave: On</text>
+
+  
+  <!-- Dark Modern Pitch Deck Slide -->
+  <rect x="0" y="38" width="800" height="442" fill="#0B0F19"/>
+
+  <!-- Top Slide Header -->
+  <text x="50" y="78" fill="#38BDF8" font-size="11" font-weight="bold" letter-spacing="2">INVESTOR PRESENTATION 2026</text>
+  <text x="50" y="112" fill="#FFFFFF" font-size="24" font-weight="900">The Problem &amp; Market Opportunity</text>
+
+  <!-- 3 Column Cards Architecture -->
+  <!-- Card 1: Problem -->
+  <g transform="translate(50, 135)">
+    <rect width="215" height="230" rx="8" fill="#111827" stroke="#374151"/>
+    <rect x="16" y="16" width="36" height="36" rx="6" fill="#FEF2F2"/>
+    <text x="34" y="39" fill="#EF4444" font-size="18" text-anchor="middle">✕</text>
+    <text x="16" y="76" fill="#F87171" font-size="12" font-weight="bold">The Pain Point</text>
+    <text x="16" y="98" fill="#E5E7EB" font-size="13" font-weight="bold">83% of Remote Teams</text>
+    <text x="16" y="118" fill="#9CA3AF" font-size="11">struggle with disconnected workflows, fragmented file versions, and presentation alignment across time zones.</text>
+    <rect x="16" y="195" width="80" height="20" rx="3" fill="#374151"/>
+    <text x="56" y="209" fill="#D1D5DB" font-size="9" text-anchor="middle">High Friction</text>
+  </g>
+
+  <!-- Card 2: Solution -->
+  <g transform="translate(290, 135)">
+    <rect width="215" height="230" rx="8" fill="#111827" stroke="#D24726" stroke-width="2"/>
+    <rect x="16" y="16" width="36" height="36" rx="6" fill="#FEF3C7"/>
+    <text x="34" y="39" fill="#D97706" font-size="18" text-anchor="middle">💡</text>
+    <text x="16" y="76" fill="#FBBF24" font-size="12" font-weight="bold">Our Solution</text>
+    <text x="16" y="98" fill="#FFFFFF" font-size="13" font-weight="bold">Unified AI Workspace</text>
+    <text x="16" y="118" fill="#9CA3AF" font-size="11">Automates presentation design, synchronizes live metrics from SQL &amp; Excel, and enables seamless team co-authoring.</text>
+    <rect x="16" y="195" width="105" height="20" rx="3" fill="#D24726"/>
+    <text x="68" y="209" fill="#FFFFFF" font-size="9" font-weight="bold" text-anchor="middle">10x Productivity</text>
+  </g>
+
+  <!-- Card 3: Traction -->
+  <g transform="translate(530, 135)">
+    <rect width="215" height="230" rx="8" fill="#111827" stroke="#374151"/>
+    <rect x="16" y="16" width="36" height="36" rx="6" fill="#DCFCE7"/>
+    <text x="34" y="39" fill="#16A34A" font-size="18" text-anchor="middle">🚀</text>
+    <text x="16" y="76" fill="#4ADE80" font-size="12" font-weight="bold">Market Traction</text>
+    <text x="16" y="98" fill="#E5E7EB" font-size="13" font-weight="bold">$2.4M ARR in 9 Mos</text>
+    <text x="16" y="118" fill="#9CA3AF" font-size="11">Over 45,000 active enterprise creators with a 94% retention rate and viral word-of-mouth growth.</text>
+    <rect x="16" y="195" width="90" height="20" rx="3" fill="#16A34A"/>
+    <text x="61" y="209" fill="#FFFFFF" font-size="9" font-weight="bold" text-anchor="middle">Profitable MoM</text>
+  </g>
+
+  <!-- Bottom Pitch Deck Footer Architecture -->
+  <line x1="50" y1="390" x2="745" y2="390" stroke="#1F2937" stroke-width="1"/>
+  <text x="50" y="420" fill="#6B7280" font-size="11">Pitch Deck Slide Design Rules: 1. The 10/20/30 Rule (10 slides, 20 mins, 30pt font minimum)</text>
+  <text x="50" y="440" fill="#6B7280" font-size="11">2. High contrast colors | 3. One core concept per slide | 4. Visual data over bulleted text paragraphs</text>
+  <text x="745" y="430" fill="#9CA3AF" font-size="11" text-anchor="end">Slide 03 / 10</text>
+
+</svg>

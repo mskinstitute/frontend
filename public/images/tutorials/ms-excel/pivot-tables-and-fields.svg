@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="480" viewBox="0 0 800 480" fill="none" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  <defs>
+    <linearGradient id="excelGreen" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#107C41"/>
+      <stop offset="100%" stop-color="#0B5A2E"/>
+    </linearGradient>
+    <linearGradient id="gridHeader" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#F8FAFC"/>
+      <stop offset="100%" stop-color="#E2E8F0"/>
+    </linearGradient>
+    <filter id="shadow" x="-5" y="-3" width="810" height="490" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="#000000" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <!-- Outer Window Frame -->
+  <rect width="800" height="480" rx="10" fill="#FFFFFF"/>
+  <rect width="800" height="480" rx="10" stroke="#CBD5E1" stroke-width="1.5"/>
+
+  <!-- Title Bar -->
+  <path d="M 0 10 C 0 4.477 4.477 0 10 0 L 790 0 C 795.523 0 800 4.477 800 10 L 800 38 L 0 38 Z" fill="url(#excelGreen)"/>
+  
+  <!-- Window Controls -->
+  <circle cx="18" cy="19" r="5" fill="#FF5F56"/>
+  <circle cx="34" cy="19" r="5" fill="#FFBD2E"/>
+  <circle cx="50" cy="19" r="5" fill="#27C93F"/>
+
+  <!-- Excel Icon Badge -->
+  <rect x="68" y="8" width="22" height="22" rx="4" fill="#0A4D27"/>
+  <text x="79" y="24" fill="#FFFFFF" font-size="14" font-weight="900" text-anchor="middle">X</text>
+
+  <!-- Workbook Title -->
+  <text x="400" y="24" fill="#FFFFFF" font-size="13" font-weight="600" text-anchor="middle" letter-spacing="0.2">Pivot Tables & Slicers Interactive Dashboard - Microsoft Excel</text>
+
+  <!-- AutoSave Pill -->
+  <rect x="670" y="9" width="120" height="20" rx="4" fill="rgba(255,255,255,0.15)"/>
+  <text x="730" y="23" fill="#FFFFFF" font-size="11" text-anchor="middle">AutoSave: On</text>
+
+  
+  <!-- Top Banner -->
+  <rect x="0" y="38" width="800" height="38" fill="#F8FAFC"/>
+  <line x1="0" y1="76" x2="800" y2="76" stroke="#CBD5E1"/>
+  <text x="24" y="61" fill="#0F172A" font-size="13" font-weight="bold">Insert &gt; PivotTable: Data Summarization, Cross-Tabulation &amp; Interactive Slicers</text>
+
+  <!-- Left Side: Generated PivotTable (460px) -->
+  <g transform="translate(30, 90)">
+    <rect width="470" height="240" rx="6" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5"/>
+    <rect width="470" height="28" rx="6 6 0 0" fill="#0F172A"/>
+    <text x="15" y="19" fill="#FFFFFF" font-size="11" font-weight="bold">Row Labels</text>
+    <text x="260" y="19" fill="#FFFFFF" font-size="11" font-weight="bold" text-anchor="end">Sum of Q1</text>
+    <text x="360" y="19" fill="#FFFFFF" font-size="11" font-weight="bold" text-anchor="end">Sum of Q2</text>
+    <text x="455" y="19" fill="#FFFFFF" font-size="11" font-weight="bold" text-anchor="end">Total Sales</text>
+
+    <!-- Pivot Rows -->
+    <rect y="28" width="470" height="24" fill="#F1F5F9"/>
+    <text x="15" y="44" fill="#0F172A" font-size="11" font-weight="bold">▾ Electronics</text>
+    <text x="260" y="44" fill="#0F172A" font-size="11" text-anchor="end">$45,000</text>
+    <text x="360" y="44" fill="#0F172A" font-size="11" text-anchor="end">$58,200</text>
+    <text x="455" y="44" fill="#0F172A" font-size="11" font-weight="bold" text-anchor="end">$103,200</text>
+
+    <text x="35" y="68" fill="#475569" font-size="10">Laptops</text>
+    <text x="260" y="68" fill="#475569" font-size="10" text-anchor="end">$28,000</text>
+    <text x="360" y="68" fill="#475569" font-size="10" text-anchor="end">$34,200</text>
+    <text x="455" y="68" fill="#475569" font-size="10" text-anchor="end">$62,200</text>
+
+    <text x="35" y="90" fill="#475569" font-size="10">Smartphones</text>
+    <text x="260" y="90" fill="#475569" font-size="10" text-anchor="end">$17,000</text>
+    <text x="360" y="90" fill="#475569" font-size="10" text-anchor="end">$24,000</text>
+    <text x="455" y="90" fill="#475569" font-size="10" text-anchor="end">$41,000</text>
+
+    <rect y="100" width="470" height="24" fill="#F1F5F9"/>
+    <text x="15" y="116" fill="#0F172A" font-size="11" font-weight="bold">▾ Services</text>
+    <text x="260" y="116" fill="#0F172A" font-size="11" text-anchor="end">$18,400</text>
+    <text x="360" y="116" fill="#0F172A" font-size="11" text-anchor="end">$22,100</text>
+    <text x="455" y="116" fill="#0F172A" font-size="11" font-weight="bold" text-anchor="end">$40,500</text>
+
+    <text x="35" y="140" fill="#475569" font-size="10">Maintenance</text>
+    <text x="260" y="140" fill="#475569" font-size="10" text-anchor="end">$11,200</text>
+    <text x="360" y="140" fill="#475569" font-size="10" text-anchor="end">$13,500</text>
+    <text x="455" y="140" fill="#475569" font-size="10" text-anchor="end">$24,700</text>
+
+    <text x="35" y="162" fill="#475569" font-size="10">Cloud Backup</text>
+    <text x="260" y="162" fill="#475569" font-size="10" text-anchor="end">$7,200</text>
+    <text x="360" y="162" fill="#475569" font-size="10" text-anchor="end">$8,600</text>
+    <text x="455" y="162" fill="#475569" font-size="10" text-anchor="end">$15,800</text>
+
+    <!-- Grand Total -->
+    <rect y="174" width="470" height="28" rx="0 0 6 6" fill="#DCFCE7"/>
+    <text x="15" y="192" fill="#166534" font-size="11" font-weight="bold">Grand Total</text>
+    <text x="260" y="192" fill="#166534" font-size="11" font-weight="bold" text-anchor="end">$63,400</text>
+    <text x="360" y="192" fill="#166534" font-size="11" font-weight="bold" text-anchor="end">$80,300</text>
+    <text x="455" y="192" fill="#166534" font-size="13" font-weight="900" text-anchor="end">$143,700</text>
+  </g>
+
+  <!-- Right Side: PivotTable Fields Pane (260px) -->
+  <g transform="translate(520, 90)">
+    <rect width="250" height="360" rx="6" fill="#F8FAFC" stroke="#CBD5E1"/>
+    <rect width="250" height="28" rx="6 6 0 0" fill="#107C41"/>
+    <text x="125" y="19" fill="#FFFFFF" font-size="11" font-weight="bold" text-anchor="middle">PivotTable Fields</text>
+
+    <!-- Fields list -->
+    <text x="15" y="44" fill="#334155" font-size="10" font-weight="bold">Choose fields to add to report:</text>
+    <text x="15" y="62" fill="#0F172A" font-size="10">[✓] Category</text>
+    <text x="15" y="78" fill="#0F172A" font-size="10">[✓] Sub-Category</text>
+    <text x="15" y="94" fill="#0F172A" font-size="10">[✓] Q1 Sales</text>
+    <text x="15" y="110" fill="#0F172A" font-size="10">[✓] Q2 Sales</text>
+    <text x="15" y="126" fill="#64748B" font-size="10">[  ] Region</text>
+
+    <!-- 4 Quadrants -->
+    <g transform="translate(10, 140)">
+      <!-- Filters -->
+      <rect width="110" height="95" rx="3" fill="#FFFFFF" stroke="#CBD5E1"/>
+      <text x="8" y="16" fill="#64748B" font-size="9" font-weight="bold">FILTERS</text>
+      <rect x="6" y="24" width="98" height="18" rx="2" fill="#EFF6FF"/>
+      <text x="12" y="37" fill="#1E40AF" font-size="9">Region [All]</text>
+
+      <!-- Columns -->
+      <rect x="120" width="110" height="95" rx="3" fill="#FFFFFF" stroke="#CBD5E1"/>
+      <text x="128" y="16" fill="#64748B" font-size="9" font-weight="bold">COLUMNS</text>
+
+      <!-- Rows -->
+      <rect y="105" width="110" height="105" rx="3" fill="#FFFFFF" stroke="#CBD5E1"/>
+      <text x="8" y="121" fill="#64748B" font-size="9" font-weight="bold">ROWS</text>
+      <rect x="6" y="128" width="98" height="18" rx="2" fill="#F0FDF4"/>
+      <text x="12" y="141" fill="#166534" font-size="9">Category</text>
+      <rect x="6" y="150" width="98" height="18" rx="2" fill="#F0FDF4"/>
+      <text x="12" y="163" fill="#166534" font-size="9">Sub-Category</text>
+
+      <!-- Values -->
+      <rect x="120" y="105" width="110" height="105" rx="3" fill="#FFFFFF" stroke="#CBD5E1"/>
+      <text x="128" y="121" fill="#64748B" font-size="9" font-weight="bold">VALUES (∑)</text>
+      <rect x="126" y="128" width="98" height="18" rx="2" fill="#FEF3C7"/>
+      <text x="132" y="141" fill="#92400E" font-size="9">Sum of Q1</text>
+      <rect x="126" y="150" width="98" height="18" rx="2" fill="#FEF3C7"/>
+      <text x="132" y="163" fill="#92400E" font-size="9">Sum of Q2</text>
+    </g>
+  </g>
+
+  <!-- Left Bottom: Interactive Slicers -->
+  <g transform="translate(30, 340)">
+    <rect width="470" height="110" rx="6" fill="#F8FAFC" stroke="#CBD5E1"/>
+    <text x="15" y="20" fill="#0F172A" font-size="11" font-weight="bold">Interactive Slicers (One-Click Visual Filtering):</text>
+    
+    <rect x="15" y="30" width="90" height="30" rx="4" fill="#107C41"/>
+    <text x="60" y="49" fill="#FFFFFF" font-size="11" font-weight="bold" text-anchor="middle">All Regions</text>
+
+    <rect x="115" y="30" width="80" height="30" rx="4" fill="#FFFFFF" stroke="#CBD5E1"/>
+    <text x="155" y="49" fill="#475569" font-size="11" text-anchor="middle">North</text>
+
+    <rect x="205" y="30" width="80" height="30" rx="4" fill="#FFFFFF" stroke="#CBD5E1"/>
+    <text x="245" y="49" fill="#475569" font-size="11" text-anchor="middle">South</text>
+
+    <rect x="295" y="30" width="80" height="30" rx="4" fill="#FFFFFF" stroke="#CBD5E1"/>
+    <text x="335" y="49" fill="#475569" font-size="11" text-anchor="middle">East</text>
+
+    <rect x="385" y="30" width="70" height="30" rx="4" fill="#FFFFFF" stroke="#CBD5E1"/>
+    <text x="420" y="49" fill="#475569" font-size="11" text-anchor="middle">West</text>
+
+    <text x="15" y="85" fill="#64748B" font-size="10">Right-click any Slicer &gt; Report Connections to control 5 different PivotTables at once!</text>
+  </g>
+
+</svg>

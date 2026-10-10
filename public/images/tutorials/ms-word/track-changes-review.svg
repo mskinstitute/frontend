@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="360" viewBox="0 0 800 360" fill="none" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  <defs>
+    <linearGradient id="wordBlue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#185ABD"/>
+      <stop offset="100%" stop-color="#103F91"/>
+    </linearGradient>
+    <linearGradient id="ribbonBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#F3F5F8"/>
+      <stop offset="100%" stop-color="#E8ECF1"/>
+    </linearGradient>
+    <filter id="cardShadow" x="-10" y="-5" width="820" height="380" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+
+  <!-- Window Frame -->
+  <rect width="800" height="360" rx="12" fill="#FFFFFF"/>
+  <rect width="800" height="360" rx="12" stroke="#D1D5DB" stroke-width="1.5"/>
+
+  <!-- Title Bar -->
+  <path d="M 0 12 C 0 5.373 5.373 0 12 0 L 788 0 C 794.627 0 800 5.373 800 12 L 800 42 L 0 42 Z" fill="url(#wordBlue)"/>
+  
+  <!-- Window Controls & Title -->
+  <circle cx="20" cy="21" r="5.5" fill="#FF5F56"/>
+  <circle cx="38" cy="21" r="5.5" fill="#FFBD2E"/>
+  <circle cx="56" cy="21" r="5.5" fill="#27C93F"/>
+
+  <!-- Word App Icon Badge -->
+  <rect x="76" y="10" width="22" height="22" rx="4" fill="#0C3B78"/>
+  <text x="87" y="26" fill="#FFFFFF" font-size="14" font-weight="900" text-anchor="middle">W</text>
+
+  <!-- Document Title -->
+  <text x="400" y="26" fill="#FFFFFF" font-size="13" font-weight="600" text-anchor="middle" letter-spacing="0.2">Collaboration: Track Changes & Markup - Microsoft Word</text>
+
+  
+  <rect x="0" y="42" width="800" height="318" fill="#F8FAFC"/>
+
+  <!-- Review Panel Simulation -->
+  <g transform="translate(40, 65)">
+    <rect x="0" y="0" width="720" height="270" rx="8" fill="#FFFFFF" stroke="#CBD5E1" filter="url(#cardShadow)"/>
+    
+    <!-- Toolbar -->
+    <rect x="0" y="0" width="720" height="36" rx="8" fill="#F1F5F9"/>
+    <rect x="15" y="6" width="105" height="24" rx="4" fill="#DC2626"/>
+    <text x="67" y="22" font-size="11" fill="#FFFFFF" font-weight="bold" text-anchor="middle">Track Changes: ON</text>
+
+    <text x="150" y="22" font-size="11" fill="#334155" font-weight="600">Display: <tspan fill="#2563EB">All Markup ▼</tspan></text>
+    
+    <rect x="360" y="6" width="80" height="24" rx="4" fill="#F0FDF4" stroke="#86EFAC"/>
+    <text x="400" y="22" font-size="11" fill="#15803D" text-anchor="middle">✓ Accept</text>
+
+    <rect x="450" y="6" width="80" height="24" rx="4" fill="#FEF2F2" stroke="#FECACA"/>
+    <text x="490" y="22" font-size="11" fill="#DC2626" text-anchor="middle">✕ Reject</text>
+
+    <rect x="540" y="6" width="80" height="24" rx="4" fill="#EFF6FF" stroke="#BFDBFE"/>
+    <text x="580" y="22" font-size="11" fill="#1D4ED8" text-anchor="middle">+ Comment</text>
+
+    <!-- Document Canvas with Revision marks -->
+    <g transform="translate(30, 60)">
+      <text x="0" y="25" font-size="14" fill="#0F172A">Project Proposal for Website Modernization</text>
+      
+      <!-- Strikethrough deleted text in red -->
+      <text x="0" y="60" font-size="13" fill="#0F172A">The new platform will be built using </text>
+      <text x="250" y="60" font-size="13" fill="#DC2626" text-decoration="line-through">PHP and jQuery</text>
+      <!-- Inserted text in blue underlined -->
+      <text x="360" y="60" font-size="13" fill="#2563EB" text-decoration="underline" font-weight="bold">Next.js and Tailwind CSS</text>
+      <text x="530" y="60" font-size="13" fill="#0F172A"> to ensure</text>
+
+      <text x="0" y="90" font-size="13" fill="#0F172A">maximum speed, high SEO rankings, and clean mobile responsiveness.</text>
+    </g>
+
+    <!-- Right Margin Comment Balloon -->
+    <g transform="translate(540, 100)">
+      <rect x="0" y="0" width="160" height="75" rx="6" fill="#EFF6FF" stroke="#93C5FD"/>
+      <text x="10" y="18" font-size="10" font-weight="bold" fill="#1E40AF">Sumit Kumar (Lead)</text>
+      <text x="10" y="32" font-size="9" fill="#64748B">2 mins ago</text>
+      <text x="10" y="48" font-size="10" fill="#1E293B">Modernized stack</text>
+      <text x="10" y="62" font-size="10" fill="#1E293B">decision approved.</text>
+    </g>
+
+    <!-- Bottom summary -->
+    <rect x="20" y="220" width="680" height="35" rx="6" fill="#F8FAFC"/>
+    <text x="30" y="242" font-size="11" fill="#475569">💡 <tspan font-weight="bold">Shortcut:</tspan> Press <tspan font-weight="bold" fill="#185ABD">Ctrl + Shift + E</tspan> to toggle Track Changes on/off anytime.</text>
+  </g>
+
+</svg>

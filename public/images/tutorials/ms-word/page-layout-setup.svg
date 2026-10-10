@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="360" viewBox="0 0 800 360" fill="none" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  <defs>
+    <linearGradient id="wordBlue" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#185ABD"/>
+      <stop offset="100%" stop-color="#103F91"/>
+    </linearGradient>
+    <linearGradient id="ribbonBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#F3F5F8"/>
+      <stop offset="100%" stop-color="#E8ECF1"/>
+    </linearGradient>
+    <filter id="cardShadow" x="-10" y="-5" width="820" height="380" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000000" flood-opacity="0.08"/>
+    </filter>
+  </defs>
+
+  <!-- Window Frame -->
+  <rect width="800" height="360" rx="12" fill="#FFFFFF"/>
+  <rect width="800" height="360" rx="12" stroke="#D1D5DB" stroke-width="1.5"/>
+
+  <!-- Title Bar -->
+  <path d="M 0 12 C 0 5.373 5.373 0 12 0 L 788 0 C 794.627 0 800 5.373 800 12 L 800 42 L 0 42 Z" fill="url(#wordBlue)"/>
+  
+  <!-- Window Controls & Title -->
+  <circle cx="20" cy="21" r="5.5" fill="#FF5F56"/>
+  <circle cx="38" cy="21" r="5.5" fill="#FFBD2E"/>
+  <circle cx="56" cy="21" r="5.5" fill="#27C93F"/>
+
+  <!-- Word App Icon Badge -->
+  <rect x="76" y="10" width="22" height="22" rx="4" fill="#0C3B78"/>
+  <text x="87" y="26" fill="#FFFFFF" font-size="14" font-weight="900" text-anchor="middle">W</text>
+
+  <!-- Document Title -->
+  <text x="400" y="26" fill="#FFFFFF" font-size="13" font-weight="600" text-anchor="middle" letter-spacing="0.2">Page Setup: Margins, Orientation & Columns - Microsoft Word</text>
+
+  
+  <rect x="0" y="42" width="800" height="318" fill="#F8FAFC"/>
+
+  <!-- 3 Big Cards for Page Setup -->
+  <g transform="translate(30, 65)">
+    <!-- Margins Card -->
+    <rect x="0" y="0" width="225" height="260" rx="10" fill="#FFFFFF" stroke="#CBD5E1" filter="url(#cardShadow)"/>
+    <rect x="0" y="0" width="225" height="36" rx="10" fill="#EFF6FF"/>
+    <text x="15" y="23" font-size="13" font-weight="bold" fill="#1D4ED8">1. Margins</text>
+
+    <!-- Visual Margins Page -->
+    <rect x="55" y="55" width="115" height="110" fill="#F8FAFC" stroke="#94A3B8" stroke-dasharray="3,3"/>
+    <rect x="70" y="70" width="85" height="80" fill="#FFFFFF" stroke="#1E293B"/>
+    <text x="112" y="115" font-size="10" fill="#64748B" text-anchor="middle">Text Body</text>
+
+    <text x="15" y="190" font-size="11" font-weight="bold" fill="#334155">• Normal (1" all around)</text>
+    <text x="15" y="210" font-size="11" fill="#475569">• Narrow (0.5" margin)</text>
+    <text x="15" y="230" font-size="11" fill="#475569">• Moderate / Custom</text>
+  </g>
+
+  <g transform="translate(285, 65)">
+    <!-- Orientation Card -->
+    <rect x="0" y="0" width="225" height="260" rx="10" fill="#FFFFFF" stroke="#CBD5E1" filter="url(#cardShadow)"/>
+    <rect x="0" y="0" width="225" height="36" rx="10" fill="#F0FDF4"/>
+    <text x="15" y="23" font-size="13" font-weight="bold" fill="#15803D">2. Orientation</text>
+
+    <!-- Visual Portrait vs Landscape -->
+    <!-- Portrait -->
+    <rect x="30" y="65" width="65" height="90" rx="3" fill="#FFFFFF" stroke="#2563EB" stroke-width="1.5"/>
+    <text x="62" y="115" font-size="9" font-weight="bold" fill="#1E40AF" text-anchor="middle">Portrait</text>
+    <text x="62" y="170" font-size="10" fill="#475569" text-anchor="middle">Vertical (8.5x11)</text>
+
+    <!-- Landscape -->
+    <rect x="120" y="80" width="90" height="65" rx="3" fill="#FFFFFF" stroke="#16A34A" stroke-width="1.5"/>
+    <text x="165" y="116" font-size="9" font-weight="bold" fill="#15803D" text-anchor="middle">Landscape</text>
+    <text x="165" y="170" font-size="10" fill="#475569" text-anchor="middle">Horizontal (11x8.5)</text>
+
+    <text x="15" y="210" font-size="11" fill="#334155">• Perfect for Certificates,</text>
+    <text x="15" y="230" font-size="11" fill="#334155">Wide Tables &amp; Brochures</text>
+  </g>
+
+  <g transform="translate(540, 65)">
+    <!-- Columns & Breaks Card -->
+    <rect x="0" y="0" width="230" height="260" rx="10" fill="#FFFFFF" stroke="#CBD5E1" filter="url(#cardShadow)"/>
+    <rect x="0" y="0" width="230" height="36" rx="10" fill="#FFF7ED"/>
+    <text x="15" y="23" font-size="13" font-weight="bold" fill="#C2410C">3. Columns &amp; Breaks</text>
+
+    <!-- Two columns mock -->
+    <g transform="translate(35, 55)">
+      <rect x="0" y="0" width="70" height="85" fill="#F1F5F9" stroke="#94A3B8"/>
+      <line x1="10" y1="15" x2="60" y2="15" stroke="#64748B" stroke-width="3"/>
+      <line x1="10" y1="30" x2="60" y2="30" stroke="#94A3B8" stroke-width="2"/>
+      <line x1="10" y1="45" x2="60" y2="45" stroke="#94A3B8" stroke-width="2"/>
+
+      <rect x="90" y="0" width="70" height="85" fill="#F1F5F9" stroke="#94A3B8"/>
+      <line x1="100" y1="15" x2="150" y2="15" stroke="#64748B" stroke-width="3"/>
+      <line x1="100" y1="30" x2="150" y2="30" stroke="#94A3B8" stroke-width="2"/>
+      <line x1="100" y1="45" x2="150" y2="45" stroke="#94A3B8" stroke-width="2"/>
+    </g>
+
+    <text x="15" y="175" font-size="11" font-weight="bold" fill="#334155">• 1, 2, 3 Newspaper Columns</text>
+    <text x="15" y="195" font-size="11" fill="#475569">• <tspan font-weight="bold">Ctrl + Enter</tspan> : Page Break</text>
+    <text x="15" y="215" font-size="11" fill="#475569">• Section Breaks for mixed</text>
+    <text x="15" y="235" font-size="11" fill="#475569">page orientations in 1 file</text>
+  </g>
+
+</svg>

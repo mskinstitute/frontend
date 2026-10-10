@@ -1,0 +1,31 @@
+# MSK Institute — Mastering Software Knowledge
+> MSK Institute is a premier coding academy and computer training institute located in Shikohabad, Uttar Pradesh, India. Founded and mentored by Er. Sumit Kumar, MSK Institute provides practical, project-based classroom training, offline computer lab sessions, verifiable graduation certifications, and extensive free online programming tutorials.
+
+## Core Training Programs & Courses
+- [Python for Beginners & Data Science](https://mskinstitute.in/courses/python-programming): Complete Python programming course covering fundamentals, OOP, data structures, automation, and mini projects.
+- [Full-Stack Web Development](https://mskinstitute.in/courses/full-stack-web-development): Comprehensive frontend and backend development using HTML5, CSS3, JavaScript, React, Node.js, and database systems.
+- [NIELIT CCC Course](https://mskinstitute.in/courses/nielit-ccc): Government-recognized Course on Computer Concepts preparation covering computer basics, LibreOffice, digital literacy, and online exam practice.
+- [Mastering MS Office Suite](https://mskinstitute.in/courses/mastering-ms-office): In-depth workplace productivity training on Microsoft Word, Excel (formulas, pivot tables), and PowerPoint.
+- [All Courses](https://mskinstitute.in/courses): Browse all active online and offline training programs.
+
+## Free Tutorials & Coding Documentation
+MSK Institute provides over 1,600+ structured, interactive programming tutorials and cheat sheets for self-paced learners:
+- [HTML5 Complete Course](https://mskinstitute.in/tutorials/html5-complete-course): Semantic HTML, forms, multimedia, tables, and SEO best practices.
+- [CSS for Beginners & Intermediate](https://mskinstitute.in/tutorials/css-for-beginners): Flexbox, CSS Grid, animations, responsive design, and modern CSS variables.
+- [Python Mastery Tutorials](https://mskinstitute.in/tutorials/python-for-beginners): Python syntax, loops, functions, file handling, and algorithms with code snippets.
+- [Free Study Material & Cheatsheets](https://mskinstitute.in/study-material): Downloadable PDF notes, quick reference cheat sheets, and practical guides.
+
+## Interactive Tools & Coding Practice
+- [Online Code Playground](https://mskinstitute.in/playground): Real-time multi-language code compiler and runner.
+- [TypeQuest Speed Typing](https://mskinstitute.in/tools/typing): Interactive typing tutor and competitive speed racer to build developer keyboard skills.
+
+## Institute Details & Verification
+- **Location:** Gali No. 3, Near Gyan Jyoti Public School, Shikohabad, Uttar Pradesh, 283135, India
+- **Lead Mentor:** Er. Sumit Kumar (Senior Software Engineer & Lead Technical Trainer, 8+ Years Experience)
+- **Learning Modes:** 100% Practical In-Person Offline Labs & Live Interactive Online Batches
+- **Certificate Verification:** [https://mskinstitute.in/verify-certificate](https://mskinstitute.in/verify-certificate) (Instant public validation of student credentials)
+- **Contact Admissions:** Phone / WhatsApp: +91 8393042166 | Email: mskshikohabad@gmail.com
+- **Website:** [https://mskinstitute.in](https://mskinstitute.in)
+
+## Admissions & Demo Classes
+Weekly free demo classes and hands-on coding workshops are conducted at the Shikohabad campus. Students can register directly online or contact admissions on WhatsApp.

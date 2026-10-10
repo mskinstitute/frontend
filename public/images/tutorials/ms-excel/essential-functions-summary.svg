@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="480" viewBox="0 0 800 480" fill="none" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  <defs>
+    <linearGradient id="excelGreen" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#107C41"/>
+      <stop offset="100%" stop-color="#0B5A2E"/>
+    </linearGradient>
+    <linearGradient id="gridHeader" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#F8FAFC"/>
+      <stop offset="100%" stop-color="#E2E8F0"/>
+    </linearGradient>
+    <filter id="shadow" x="-5" y="-3" width="810" height="490" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="3" stdDeviation="5" flood-color="#000000" flood-opacity="0.12"/>
+    </filter>
+  </defs>
+
+  <!-- Outer Window Frame -->
+  <rect width="800" height="480" rx="10" fill="#FFFFFF"/>
+  <rect width="800" height="480" rx="10" stroke="#CBD5E1" stroke-width="1.5"/>
+
+  <!-- Title Bar -->
+  <path d="M 0 10 C 0 4.477 4.477 0 10 0 L 790 0 C 795.523 0 800 4.477 800 10 L 800 38 L 0 38 Z" fill="url(#excelGreen)"/>
+  
+  <!-- Window Controls -->
+  <circle cx="18" cy="19" r="5" fill="#FF5F56"/>
+  <circle cx="34" cy="19" r="5" fill="#FFBD2E"/>
+  <circle cx="50" cy="19" r="5" fill="#27C93F"/>
+
+  <!-- Excel Icon Badge -->
+  <rect x="68" y="8" width="22" height="22" rx="4" fill="#0A4D27"/>
+  <text x="79" y="24" fill="#FFFFFF" font-size="14" font-weight="900" text-anchor="middle">X</text>
+
+  <!-- Workbook Title -->
+  <text x="400" y="24" fill="#FFFFFF" font-size="13" font-weight="600" text-anchor="middle" letter-spacing="0.2">Essential Excel Functions Cheatsheet - Microsoft Excel</text>
+
+  <!-- AutoSave Pill -->
+  <rect x="670" y="9" width="120" height="20" rx="4" fill="rgba(255,255,255,0.15)"/>
+  <text x="730" y="23" fill="#FFFFFF" font-size="11" text-anchor="middle">AutoSave: On</text>
+
+  
+  <rect x="0" y="38" width="800" height="38" fill="#F8FAFC"/>
+  <line x1="0" y1="76" x2="800" y2="76" stroke="#CBD5E1"/>
+  <text x="24" y="61" fill="#0F172A" font-size="13" font-weight="bold">Most Frequently Used Excel Built-in Functions &amp; Syntax</text>
+
+  <!-- 6 Function Cards Grid (2 rows x 3 columns) -->
+  <!-- Card 1: SUM -->
+  <g transform="translate(30, 90)">
+    <rect width="230" height="110" rx="6" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5"/>
+    <rect width="230" height="28" rx="6 6 0 0" fill="#107C41"/>
+    <text x="14" y="19" fill="#FFFFFF" font-size="12" font-weight="bold">SUM(number1, [number2], ...)</text>
+    <text x="14" y="46" fill="#334155" font-size="11" font-weight="bold">Calculates Total</text>
+    <text x="14" y="64" fill="#64748B" font-size="10">Adds all numbers in a range.</text>
+    <rect x="14" y="74" width="202" height="24" rx="3" fill="#F1F5F9"/>
+    <text x="22" y="90" fill="#107C41" font-size="11" font-family="monospace">=SUM(B2:B20)</text>
+  </g>
+
+  <!-- Card 2: AVERAGE -->
+  <g transform="translate(285, 90)">
+    <rect width="230" height="110" rx="6" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5"/>
+    <rect width="230" height="28" rx="6 6 0 0" fill="#107C41"/>
+    <text x="14" y="19" fill="#FFFFFF" font-size="12" font-weight="bold">AVERAGE(number1, ...)</text>
+    <text x="14" y="46" fill="#334155" font-size="11" font-weight="bold">Calculates Mean</text>
+    <text x="14" y="64" fill="#64748B" font-size="10">Computes arithmetic average.</text>
+    <rect x="14" y="74" width="202" height="24" rx="3" fill="#F1F5F9"/>
+    <text x="22" y="90" fill="#107C41" font-size="11" font-family="monospace">=AVERAGE(C2:C50)</text>
+  </g>
+
+  <!-- Card 3: COUNT & COUNTA -->
+  <g transform="translate(540, 90)">
+    <rect width="230" height="110" rx="6" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5"/>
+    <rect width="230" height="28" rx="6 6 0 0" fill="#107C41"/>
+    <text x="14" y="19" fill="#FFFFFF" font-size="12" font-weight="bold">COUNT vs. COUNTA</text>
+    <text x="14" y="46" fill="#334155" font-size="11" font-weight="bold">Tally Cells</text>
+    <text x="14" y="64" fill="#64748B" font-size="10">COUNT=numbers only | COUNTA=all</text>
+    <rect x="14" y="74" width="202" height="24" rx="3" fill="#F1F5F9"/>
+    <text x="22" y="90" fill="#107C41" font-size="11" font-family="monospace">=COUNTA(A2:A100)</text>
+  </g>
+
+  <!-- Card 4: MIN & MAX -->
+  <g transform="translate(30, 215)">
+    <rect width="230" height="110" rx="6" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5"/>
+    <rect width="230" height="28" rx="6 6 0 0" fill="#0B5A2E"/>
+    <text x="14" y="19" fill="#FFFFFF" font-size="12" font-weight="bold">MIN &amp; MAX Functions</text>
+    <text x="14" y="46" fill="#334155" font-size="11" font-weight="bold">Extreme Values</text>
+    <text x="14" y="64" fill="#64748B" font-size="10">Finds lowest or highest value.</text>
+    <rect x="14" y="74" width="202" height="24" rx="3" fill="#F1F5F9"/>
+    <text x="22" y="90" fill="#0B5A2E" font-size="11" font-family="monospace">=MAX(Sales_Q1)</text>
+  </g>
+
+  <!-- Card 5: IF Logic -->
+  <g transform="translate(285, 215)">
+    <rect width="230" height="110" rx="6" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5"/>
+    <rect width="230" height="28" rx="6 6 0 0" fill="#0B5A2E"/>
+    <text x="14" y="19" fill="#FFFFFF" font-size="12" font-weight="bold">IF(logical_test, [true], [false])</text>
+    <text x="14" y="46" fill="#334155" font-size="11" font-weight="bold">Conditional Decision</text>
+    <text x="14" y="64" fill="#64748B" font-size="10">Returns A if true, B if false.</text>
+    <rect x="14" y="74" width="202" height="24" rx="3" fill="#F1F5F9"/>
+    <text x="22" y="90" fill="#0B5A2E" font-size="11" font-family="monospace">=IF(D2&gt;=50, "Pass", "Fail")</text>
+  </g>
+
+  <!-- Card 6: Text Manipulation -->
+  <g transform="translate(540, 215)">
+    <rect width="230" height="110" rx="6" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="1.5"/>
+    <rect width="230" height="28" rx="6 6 0 0" fill="#0B5A2E"/>
+    <text x="14" y="19" fill="#FFFFFF" font-size="12" font-weight="bold">CONCAT &amp; Text Functions</text>
+    <text x="14" y="46" fill="#334155" font-size="11" font-weight="bold">Combine / Clean Text</text>
+    <text x="14" y="64" fill="#64748B" font-size="10">Join strings, UPPER, TRIM.</text>
+    <rect x="14" y="74" width="202" height="24" rx="3" fill="#F1F5F9"/>
+    <text x="22" y="90" fill="#0B5A2E" font-size="11" font-family="monospace">=TRIM(A2) &amp; " " &amp; B2</text>
+  </g>
+
+  <!-- Bottom Formulas Summary Note -->
+  <rect x="30" y="340" width="740" height="115" rx="6" fill="#EFF6FF" stroke="#BFDBFE"/>
+  <text x="50" y="365" fill="#1E3A8A" font-size="12" font-weight="bold">Best Practices for Writing Clean Formulas:</text>
+  <text x="50" y="388" fill="#1D4ED8" font-size="11">1. Avoid Hardcoding: Never type =A1*0.18 inside formulas. Put 18% in cell B1 and reference =A1*$B$1.</text>
+  <text x="50" y="408" fill="#1D4ED8" font-size="11">2. Parentheses Balance: Excel color-codes matching pairs of parentheses in nested formulas.</text>
+  <text x="50" y="428" fill="#1E40AF" font-size="11">3. Evaluate Formula Tool: Use Formulas &gt; Evaluate Formula to step through complex calculations step-by-step!</text>
+  <text x="50" y="446" fill="#1E3A8A" font-size="10" font-weight="600">Shortcuts: Ctrl + ` (toggles view formulas mode across whole worksheet)</text>
+
+</svg>

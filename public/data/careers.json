@@ -1,0 +1,978 @@
+[
+  {
+    "id": "job-education-counselor",
+    "type": "job",
+    "title": "Education / Admission Counselor",
+    "department": "Admissions & Counseling",
+    "category": "Counseling & Sales",
+    "location": "On-site (Shikohabad Campus)",
+    "workType": "Full-time",
+    "mode": "On-site",
+    "stipendOrSalary": "₹8,000–₹15,000/month + Incentives",
+    "duration": "Permanent",
+    "openings": 1,
+    "priority": "High",
+    "gender": "Female Preferred",
+    "experienceLevel": "0 - 3 Years (Freshers with good communication welcome)",
+    "deadline": "2026-11-30",
+    "featured": true,
+    "active": true,
+    "shortDescription": "Guide students and parents on IT courses (Python, Web Dev, O-Level, CCC), handle walk-ins and phone inquiries, and lead admissions.",
+    "description": "We are hiring an enthusiastic Education / Admission Counselor for our Shikohabad campus. You will interact warmly with aspiring students and parents, understand their career goals, recommend suitable technical training courses, and coordinate campus admissions.",
+    "responsibilities": [
+      "Provide 1-on-1 counseling to prospective students and parents visiting the Shikohabad campus",
+      "Explain curriculum, career opportunities, and placement support for all MSK technical courses",
+      "Follow up with walk-in inquiries and online leads via phone calls and WhatsApp",
+      "Coordinate student enrollment, batch allocation, and fee documentation",
+      "Maintain daily inquiry registers and weekly admission conversion reports"
+    ],
+    "requirements": [
+      "Fluent and persuasive communication skills in Hindi (basic English is helpful)",
+      "Empathetic, energetic, and student-focused attitude",
+      "Basic familiarity with computer courses (CCC, O-Level, Web Dev, Python) or eager to learn",
+      "Prior experience in academic counseling, telecalling, or front-desk is an added advantage"
+    ],
+    "skills": ["Student Counseling", "Admission Management", "Career Guidance", "Hindi Communication", "Lead Follow-up", "MS Excel"],
+    "perks": [
+      "Attractive performance incentives on monthly student admissions",
+      "Fixed daylight campus working hours (No late-night shifts)",
+      "Safe, respectful campus environment in Shikohabad",
+      "Complimentary upskilling access to MSK tech certifications"
+    ],
+    "postedAt": "2026-09-04",
+    "company": "MSK Institute"
+  },
+  {
+    "id": "job-sales-executive",
+    "type": "job",
+    "title": "Sales Executive",
+    "department": "Business Development & Sales",
+    "category": "Sales",
+    "location": "On-site (Shikohabad Campus)",
+    "workType": "Full-time",
+    "mode": "On-site",
+    "stipendOrSalary": "₹8,000–₹15,000/month + Incentives",
+    "duration": "Permanent",
+    "openings": 1,
+    "priority": "High",
+    "gender": "Any",
+    "experienceLevel": "1 - 3 Years (Sales / EdTech experience preferred)",
+    "deadline": "2026-11-30",
+    "featured": true,
+    "active": true,
+    "shortDescription": "Drive student admissions and institutional tie-ups across colleges and schools in Shikohabad, Firozabad, and surrounding areas.",
+    "description": "Join our business development team to expand MSK Institute's reach across regional schools, colleges, and student communities. You will drive student enrollments and execute field outreach campaigns.",
+    "responsibilities": [
+      "Execute local outreach and seminar partnerships with colleges and schools in Firozabad district",
+      "Convert warm incoming leads and telephonic inquiries into verified campus enrollments",
+      "Achieve monthly and quarterly admission targets",
+      "Organize free demo sessions, career awareness workshops, and scholarship drives",
+      "Track lead conversion metrics using CRM tools and submit weekly reports"
+    ],
+    "requirements": [
+      "Proven track record in sales, field outreach, or educational admissions",
+      "High energy, self-motivated with strong closing and negotiation skills",
+      "Comfortable with local travel across Shikohabad and nearby educational hubs",
+      "Good command of spoken Hindi and relationship-building skills"
+    ],
+    "skills": ["Direct Sales", "Telecalling", "Field Outreach", "Negotiation", "Lead Conversion", "Institutional Tie-ups"],
+    "perks": [
+      "High uncapped incentive structure per student enrollment",
+      "Travel allowance for institutional outreach",
+      "Rapid career advancement to Sales Lead / Centre Manager",
+      "Direct mentorship from institute leadership"
+    ],
+    "postedAt": "2026-09-04",
+    "company": "MSK Institute"
+  },
+  {
+    "id": "job-digital-marketing-executive",
+    "type": "job",
+    "title": "Digital Marketing Executive",
+    "department": "Marketing & Growth",
+    "category": "Marketing",
+    "location": "On-site (Shikohabad Campus)",
+    "workType": "Full-time",
+    "mode": "On-site",
+    "stipendOrSalary": "₹8,000–₹14,000/month",
+    "duration": "Permanent",
+    "openings": 1,
+    "priority": "High",
+    "gender": "Any",
+    "experienceLevel": "1 - 3 Years",
+    "deadline": "2026-11-25",
+    "featured": true,
+    "active": true,
+    "shortDescription": "Manage paid Meta & Google ad campaigns, Local SEO ranking, Google Business Profile, and student acquisition in Shikohabad.",
+    "description": "We are looking for a results-driven Digital Marketing Executive based at our Shikohabad campus. You will formulate and run digital marketing campaigns, optimize Google Search visibility, manage social media growth, and generate quality admissions leads.",
+    "responsibilities": [
+      "Plan and execute targeted Facebook, Instagram, and Google Search ad campaigns for course admissions",
+      "Optimize Google Business Profile (GMB) and local SEO for top rankings in Shikohabad and Firozabad",
+      "Manage content calendar across YouTube, Instagram, and LinkedIn",
+      "Analyze campaign performance (CPL, CTR, ROAS) and optimize lead quality",
+      "Coordinate with content creators and graphic interns to produce high-converting ad creatives"
+    ],
+    "requirements": [
+      "Hands-on experience running Meta Ads Manager and Google Ads",
+      "Proven understanding of Local SEO, keywords, and Google Business Profile optimization",
+      "Analytical approach to track lead conversions and budget allocation",
+      "Familiarity with Canva, WordPress, or basic web tools is an asset"
+    ],
+    "skills": ["Meta Ads", "Google Ads", "Local SEO", "Google Business Profile", "Lead Generation", "Social Media Marketing"],
+    "perks": [
+      "Performance bonuses on campaign ROI and admission milestones",
+      "Opportunity to lead the institute's regional digital marketing efforts",
+      "Access to premium marketing tools and ad budgets",
+      "Collaborative on-campus creative work environment"
+    ],
+    "postedAt": "2026-09-04",
+    "company": "MSK Institute"
+  },
+  {
+    "id": "job-video-editor-content-creator",
+    "type": "job",
+    "title": "Video Editor / Content Creator",
+    "department": "Media & Creative",
+    "category": "Media & Content",
+    "location": "On-site (Shikohabad Campus)",
+    "workType": "Full-time",
+    "mode": "On-site",
+    "stipendOrSalary": "₹7,000–₹12,000/month",
+    "duration": "Permanent",
+    "openings": 1,
+    "priority": "Medium",
+    "gender": "Any",
+    "experienceLevel": "0 - 2 Years (Creative portfolio required)",
+    "deadline": "2026-11-20",
+    "featured": true,
+    "active": true,
+    "shortDescription": "Shoot and edit high-impact YouTube tutorials, viral Instagram reels, student testimonials, and course promotional videos.",
+    "description": "Join our campus media team to capture the vibrant life of MSK Institute. You will script, shoot, and edit engaging video content, YouTube coding lessons, tech podcast clips, and social media reels.",
+    "responsibilities": [
+      "Edit high-retention video content for YouTube, Instagram Reels, and website showcase",
+      "Handle camera, lighting, and wireless mic audio setups in the campus studio",
+      "Design click-worthy YouTube thumbnails and banner graphics",
+      "Record student project reviews, classroom moments, and instructor masterclasses",
+      "Add kinetic typography, motion graphics, sound effects, and color grading"
+    ],
+    "requirements": [
+      "Proficiency in Adobe Premiere Pro, DaVinci Resolve, or CapCut Pro",
+      "Basic skills in After Effects and Photoshop for motion graphics & thumbnails",
+      "Strong sense of visual storytelling, pacing, and viral social trends",
+      "Demonstrated portfolio of past video edits (Instagram/YouTube links)"
+    ],
+    "skills": ["Video Editing", "Premiere Pro", "CapCut", "YouTube Thumbnails", "Reels Creation", "Audio & Lighting"],
+    "perks": [
+      "Work with high-spec video gear and dedicated studio setup",
+      "High creative freedom to build your personal creator portfolio",
+      "Performance incentives on viral video reach milestones",
+      "Free access to all technical courses at the institute"
+    ],
+    "postedAt": "2026-09-04",
+    "company": "MSK Institute"
+  },
+  {
+    "id": "job-programming-trainer",
+    "type": "job",
+    "title": "Programming Trainer",
+    "department": "Academic & Technical Training",
+    "category": "Coding & Software",
+    "location": "On-site (Shikohabad Campus)",
+    "workType": "Full-time",
+    "mode": "On-site",
+    "stipendOrSalary": "₹10,000–₹18,000/month",
+    "duration": "Permanent",
+    "openings": 1,
+    "priority": "High",
+    "gender": "Any",
+    "experienceLevel": "1 - 3 Years (Teaching or Industry Coding Experience)",
+    "deadline": "2026-11-30",
+    "featured": true,
+    "active": true,
+    "shortDescription": "Deliver hands-on classroom & lab training in Python, Full-Stack Web Development, C/C++, Java, and mentor student live projects.",
+    "description": "We are seeking a passionate Programming Trainer to lead our software engineering batches at the Shikohabad campus. You will teach core programming concepts, guide lab assignments, and mentor students into career-ready developers.",
+    "responsibilities": [
+      "Conduct interactive theory lectures and practical lab sessions on Python, C++, Java, and Web Development",
+      "Guide students step-by-step through live projects (APIs, web applications, portfolio building)",
+      "Prepare weekly practice questions, coding quizzes, and project evaluation rubrics",
+      "Provide 1-on-1 doubt clearing and mentor students for technical interviews",
+      "Keep course modules updated with modern industry tech stacks"
+    ],
+    "requirements": [
+      "Strong mastery of Python, C/C++, JavaScript, HTML/CSS, and relational databases (SQL)",
+      "BCA / MCA / B.Tech (CS/IT) or proven practical coding background",
+      "Clear teaching communication in Hindi with patience for beginners",
+      "Familiarity with Git/GitHub and modern development practices"
+    ],
+    "skills": ["Python", "JavaScript", "C/C++", "Full-Stack Web Dev", "SQL", "Git", "Lab Instruction"],
+    "perks": [
+      "Competitive salary package with annual review",
+      "Daylight campus timings with fixed regular working hours",
+      "Respected educator profile in the Shikohabad academic community",
+      "Direct collaboration with Founder & Lead Instructor Er. Sumit Kumar"
+    ],
+    "postedAt": "2026-09-04",
+    "company": "MSK Institute"
+  },
+  {
+    "id": "job-data-analytics-trainer",
+    "type": "job",
+    "title": "Data Analytics Trainer",
+    "department": "Academic & Technical Training",
+    "category": "Data Science & BI",
+    "location": "On-site (Shikohabad Campus)",
+    "workType": "Full-time",
+    "mode": "On-site",
+    "stipendOrSalary": "₹10,000–₹18,000/month",
+    "duration": "Permanent",
+    "openings": 1,
+    "priority": "High",
+    "gender": "Any",
+    "experienceLevel": "1 - 3 Years (Training or Industry Analytics experience)",
+    "deadline": "2026-11-30",
+    "featured": true,
+    "active": true,
+    "shortDescription": "Train students on Advanced Excel, SQL, Power BI, Tableau, and Python for Data Analysis with real corporate datasets.",
+    "description": "Lead our Data Analytics and Business Intelligence training track at Shikohabad campus. You will mentor learners in data cleaning, dashboard creation, SQL queries, and predictive visualization for high-paying data roles.",
+    "responsibilities": [
+      "Deliver hands-on training on Advanced Excel (VLOOKUP, XLOOKUP, Pivot Tables, Power Query)",
+      "Teach SQL database querying, aggregations, joins, and database design",
+      "Train students on building interactive dashboards in Microsoft Power BI and Tableau",
+      "Introduce Python data manipulation using Pandas, NumPy, and Matplotlib",
+      "Review capstone projects and prepare students for corporate analyst roles"
+    ],
+    "requirements": [
+      "Proficiency in Advanced Excel, SQL, Power BI, and Python (Pandas/NumPy)",
+      "Experience working with real-world business datasets and dashboards",
+      "Effective presentation and bilingual (Hindi/English) instruction skills",
+      "Passion for guiding students from foundational to advanced analytics"
+    ],
+    "skills": ["Advanced Excel", "SQL", "Power BI", "Tableau", "Python (Pandas)", "Data Modeling", "Business Intelligence"],
+    "perks": [
+      "Attractive compensation with performance increments",
+      "State-of-the-art computer lab facility for student practicals",
+      "Leadership opportunity to shape MSK's Data Science curriculum"
+    ],
+    "postedAt": "2026-09-04",
+    "company": "MSK Institute"
+  },
+  {
+    "id": "job-cybersecurity-trainer",
+    "type": "job",
+    "title": "Cybersecurity / Ethical Hacking Trainer",
+    "department": "Academic & Technical Training",
+    "category": "Cybersecurity",
+    "location": "On-site (Shikohabad Campus)",
+    "workType": "Full-time",
+    "mode": "On-site",
+    "stipendOrSalary": "₹12,000–₹22,000/month",
+    "duration": "Permanent",
+    "openings": 1,
+    "priority": "Medium",
+    "gender": "Any",
+    "experienceLevel": "1 - 3 Years",
+    "deadline": "2026-11-30",
+    "featured": false,
+    "active": true,
+    "shortDescription": "Instruct students in Network Security, Linux, Ethical Hacking, Kali Linux, Web Pen-testing, and SOC fundamentals.",
+    "description": "We are hiring a Cybersecurity & Ethical Hacking Trainer to establish hands-on offensive and defensive cybersecurity lab training at MSK Institute Shikohabad.",
+    "responsibilities": [
+      "Teach computer networking protocols (TCP/IP, DNS, VPN, Firewalls) and Linux commands",
+      "Conduct lab simulations using Kali Linux, Nmap, Wireshark, Burp Suite, and Metasploit",
+      "Train students in web application vulnerabilities (OWASP Top 10) and penetration testing",
+      "Guide practical capture-the-flag (CTF) challenges and security auditing exercises",
+      "Prepare students for industry certifications (CEH, CompTIA Security+)"
+    ],
+    "requirements": [
+      "Strong theoretical and practical knowledge of cybersecurity, networking, and Linux",
+      "Hands-on experience with ethical hacking and security scanning tools",
+      "Certifications such as CEH, Security+, OSCP, or equivalent practical experience preferred",
+      "Clear Hindi communication and dedication to ethical practices"
+    ],
+    "skills": ["Ethical Hacking", "Kali Linux", "Networking (TCP/IP)", "Burp Suite", "Wireshark", "Web Pen-testing", "Linux Admin"],
+    "perks": [
+      "Competitive salary band with performance incentives",
+      "Dedicated high-performance cybersecurity lab environment",
+      "Freedom to design cutting-edge cyber range practicals"
+    ],
+    "postedAt": "2026-09-04",
+    "company": "MSK Institute"
+  },
+  {
+    "id": "job-student-support-executive",
+    "type": "job",
+    "title": "Student Support Executive",
+    "department": "Student Affairs & Operations",
+    "category": "Student Operations",
+    "location": "On-site (Shikohabad Campus)",
+    "workType": "Full-time",
+    "mode": "On-site",
+    "stipendOrSalary": "₹7,000–₹11,000/month",
+    "duration": "Permanent",
+    "openings": 1,
+    "priority": "Medium",
+    "gender": "Female Preferred",
+    "experienceLevel": "0 - 2 Years",
+    "deadline": "2026-11-30",
+    "featured": false,
+    "active": true,
+    "shortDescription": "Manage day-to-day student inquiries, batch attendance, learning portal credentials, exams, and student grievance resolution.",
+    "description": "MSK Institute is looking for an organized and empathetic Student Support Executive to ensure students have a seamless learning experience from admission to graduation.",
+    "responsibilities": [
+      "Monitor daily student attendance, batch schedules, and lab system allocations",
+      "Assist students with LMS portal logins, digital study notes, and video recordings access",
+      "Address student queries and coordinate with trainers for extra revision sessions",
+      "Organize monthly tests, publish scorecards, and process certificate verification requests",
+      "Collect student feedback and coordinate parent-mentor meetings"
+    ],
+    "requirements": [
+      "Polite, helpful, and patient attitude with strong interpersonal skills",
+      "Good command of spoken Hindi and written Hindi/English",
+      "Working knowledge of Google Sheets, MS Excel, and email communication",
+      "Graduates in any discipline welcome to apply"
+    ],
+    "skills": ["Student Support", "Attendance Tracking", "LMS Administration", "Customer Care", "MS Excel", "Communication"],
+    "perks": [
+      "Stable campus environment with fixed daytime working hours",
+      "Performance appraisal and career growth into Academic Operations Manager",
+      "Friendly and supportive campus culture in Shikohabad"
+    ],
+    "postedAt": "2026-09-04",
+    "company": "MSK Institute"
+  },
+  {
+    "id": "job-front-desk-office-executive",
+    "type": "job",
+    "title": "Front Desk / Reception Executive",
+    "department": "Administration & Reception",
+    "category": "Office Administration",
+    "location": "On-site (Shikohabad Campus)",
+    "workType": "Full-time",
+    "mode": "On-site",
+    "stipendOrSalary": "₹6,000–₹10,000/month",
+    "duration": "Permanent",
+    "openings": 1,
+    "priority": "Optional",
+    "gender": "Female Preferred",
+    "experienceLevel": "0 - 2 Years",
+    "deadline": "2026-11-30",
+    "featured": false,
+    "active": true,
+    "shortDescription": "Manage front-office reception, warmly welcome visitors, handle incoming phone inquiries, and oversee reception administration.",
+    "description": "We are seeking a well-presented and courteous Front Desk / Reception Executive to be the welcoming face of MSK Institute Shikohabad.",
+    "responsibilities": [
+      "Warmly welcome students, parents, and visitors to the campus reception",
+      "Answer incoming telephone calls and direct inquiries to the counseling department",
+      "Maintain visitor logbooks, inquiry forms, and front desk documentation",
+      "Coordinate office supplies, couriers, and general reception upkeep",
+      "Assist the administrative team with basic data entry and document printing"
+    ],
+    "requirements": [
+      "Presentable appearance, professional etiquette, and polite spoken Hindi",
+      "Punctual, organized, and attentive to campus hospitality",
+      "Basic computer literacy (MS Word, Excel, Email)",
+      "Higher Secondary (12th Pass) or Graduate in any stream"
+    ],
+    "skills": ["Front Desk", "Reception Management", "Call Handling", "Visitor Hospitality", "Data Entry", "MS Office"],
+    "perks": [
+      "Safe, comfortable campus office environment",
+      "Fixed regular timings with paid holidays",
+      "Complimentary access to MSK computer literacy & CCC courses"
+    ],
+    "postedAt": "2026-09-04",
+    "company": "MSK Institute"
+  },
+  {
+    "id": "job-hr-operations-executive",
+    "type": "job",
+    "title": "HR & Operations Executive",
+    "department": "Human Resources & Operations",
+    "category": "HR & Operations",
+    "location": "On-site (Shikohabad Campus)",
+    "workType": "Full-time",
+    "mode": "On-site",
+    "stipendOrSalary": "₹9,000–₹15,000/month",
+    "duration": "Permanent",
+    "openings": 1,
+    "priority": "Optional",
+    "gender": "Female Preferred",
+    "experienceLevel": "1 - 3 Years",
+    "deadline": "2026-11-30",
+    "featured": false,
+    "active": true,
+    "shortDescription": "Oversee staff recruitment, trainer coordination, institute policy compliance, employee records, and campus operations.",
+    "description": "MSK Institute is looking for an HR & Operations Executive to streamline institutional operations, manage recruitment of trainers and staff, and maintain operational efficiency across the campus.",
+    "responsibilities": [
+      "Manage end-to-end recruitment of technical trainers, counselors, and interns",
+      "Oversee staff onboarding, attendance records, leave management, and payroll inputs",
+      "Coordinate trainer scheduling and lab resource allocation",
+      "Ensure campus infrastructure, computers, and amenities function smoothly",
+      "Enforce institute guidelines, documentation, and compliance standards"
+    ],
+    "requirements": [
+      "BBA / MBA / MSW / Graduate with 1+ years experience in HR or operational administration",
+      "Good understanding of recruitment channels, interview coordination, and team management",
+      "Proficient in Google Workspace, MS Excel, and official documentation",
+      "Strong organizational and problem-solving capabilities"
+    ],
+    "skills": ["Human Resources", "Talent Acquisition", "Campus Operations", "Payroll Inputs", "Vendor Management", "Staff Welfare"],
+    "perks": [
+      "Leadership role with direct reporting to Institute Directors",
+      "Competitive pay with performance-based bonuses",
+      "Professional work environment with long-term stability"
+    ],
+    "postedAt": "2026-09-04",
+    "company": "MSK Institute"
+  },
+  {
+    "id": "job-part-time-programming-trainer",
+    "type": "job",
+    "title": "Part-Time Programming Trainer (Evening / Weekend)",
+    "department": "Academic & Technical Training",
+    "category": "Coding & Software",
+    "location": "On-site (Shikohabad Campus)",
+    "workType": "Part-time",
+    "mode": "On-site",
+    "stipendOrSalary": "₹3,000–₹5,000/month",
+    "duration": "Part-time (2-3 hrs/day)",
+    "openings": 1,
+    "priority": "High",
+    "gender": "Any",
+    "experienceLevel": "Freshers with solid skills or Experienced College Students",
+    "deadline": "2026-11-30",
+    "featured": true,
+    "active": true,
+    "shortDescription": "Teach 1 to 2 daily evening batches or weekend practicals on Python, C++, and basic Web Development.",
+    "description": "Ideal for college students, freelance coders, or working techies looking for flexible teaching hours. Conduct 1 to 2 batches daily in evening or weekend sessions at our Shikohabad computer lab.",
+    "responsibilities": [
+      "Deliver 1-2 hours daily practical sessions on Python or Web Development basics",
+      "Guide students during evening lab hours and solve coding doubts",
+      "Assign and evaluate weekly coding homework exercises"
+    ],
+    "requirements": [
+      "Good command of Python, C/C++, or HTML/CSS/JavaScript",
+      "BCA / B.Tech / B.Sc (CS/IT) pursuing or completed",
+      "Ability to dedicate 2–3 hours per day or weekends in Shikohabad"
+    ],
+    "skills": ["Python", "C++", "HTML/CSS", "JavaScript", "Lab Mentorship", "Teaching"],
+    "perks": [
+      "Flexible evening / weekend batch schedules",
+      "Fixed monthly part-time remuneration (₹3k–₹5k)",
+      "Official teaching credential certificate from MSK Institute"
+    ],
+    "postedAt": "2026-09-04",
+    "company": "MSK Institute"
+  },
+  {
+    "id": "job-part-time-telecounselor",
+    "type": "job",
+    "title": "Part-Time Tele-Counselor & Admission Assistant",
+    "department": "Admissions & Counseling",
+    "category": "Counseling & Sales",
+    "location": "On-site (Shikohabad Campus)",
+    "workType": "Part-time",
+    "mode": "On-site",
+    "stipendOrSalary": "₹2,500–₹4,500/month + Incentives",
+    "duration": "Part-time (3-4 hrs/day)",
+    "openings": 2,
+    "priority": "High",
+    "gender": "Female Preferred",
+    "experienceLevel": "Freshers / College Students welcome",
+    "deadline": "2026-11-30",
+    "featured": true,
+    "active": true,
+    "shortDescription": "Handle telephonic student inquiries, course briefing, counseling appointments, and earn admission incentives in flexible 3-4 hr shifts.",
+    "description": "We are hiring Part-Time Tele-Counselors (Female Preferred) for 3–4 hour daily shifts. You will follow up on course inquiries, share syllabus details over WhatsApp/call, and schedule campus counseling visits.",
+    "responsibilities": [
+      "Call interested students and parents to brief them on upcoming batches and courses",
+      "Answer WhatsApp inquiries regarding fees, timings, and certifications",
+      "Book campus walk-in appointments for senior counselors",
+      "Maintain follow-up logs in Excel/Google Sheets"
+    ],
+    "requirements": [
+      "Polite, clear, and confident Hindi communication",
+      "Basic smartphone and Excel proficiency",
+      "Available for 3–4 hours daily during campus hours in Shikohabad"
+    ],
+    "skills": ["Telecalling", "Student Counseling", "WhatsApp Communication", "Hindi Fluency", "Follow-ups"],
+    "perks": [
+      "Monthly stipend + attractive per-admission incentives",
+      "Ideal part-time opportunity for college students and homemakers",
+      "Safe and supportive workplace"
+    ],
+    "postedAt": "2026-09-04",
+    "company": "MSK Institute"
+  },
+  {
+    "id": "job-part-time-lab-assistant",
+    "type": "job",
+    "title": "Part-Time Computer Lab Assistant & Faculty",
+    "department": "Academic & Technical Training",
+    "category": "Training",
+    "location": "On-site (Shikohabad Campus)",
+    "workType": "Part-time",
+    "mode": "On-site",
+    "stipendOrSalary": "₹2,500–₹5,000/month",
+    "duration": "Part-time (3 hrs/day)",
+    "openings": 1,
+    "priority": "Medium",
+    "gender": "Female Preferred",
+    "experienceLevel": "12th Pass / CCC / DCA or Pursuing Graduation",
+    "deadline": "2026-11-30",
+    "featured": false,
+    "active": true,
+    "shortDescription": "Help beginner students practice MS Office, CCC typing, computer basics, and oversee computer lab discipline.",
+    "description": "Looking for a patient and knowledgeable Lab Assistant (Female Preferred) to supervise morning or afternoon lab batches, help students with MS Word/Excel exercises, and ensure computer systems are ready.",
+    "responsibilities": [
+      "Assist beginner students in typing, MS Office (Word, Excel, PowerPoint), and Internet practicals",
+      "Help students log in and complete practice sets for CCC examinations",
+      "Report computer hardware/software issues to technical staff"
+    ],
+    "requirements": [
+      "Good knowledge of MS Office and Windows basic operations",
+      "Friendly, patient demeanor with learners",
+      "Resident of Shikohabad or nearby area"
+    ],
+    "skills": ["Computer Basics", "MS Office", "Typing Guidance", "Lab Discipline", "Student Assistance"],
+    "perks": [
+      "Fixed daylight part-time shift (Morning or Afternoon)",
+      "Free computer and software certifications",
+      "Comfortable academic environment"
+    ],
+    "postedAt": "2026-09-04",
+    "company": "MSK Institute"
+  },
+  {
+    "id": "job-part-time-social-media",
+    "type": "job",
+    "title": "Part-Time Social Media & Content Creator",
+    "department": "Media & Marketing",
+    "category": "Media & Marketing",
+    "location": "On-site (Shikohabad Campus)",
+    "workType": "Part-time",
+    "mode": "On-site",
+    "stipendOrSalary": "₹2,000–₹4,500/month",
+    "duration": "Part-time (2-3 hrs/day)",
+    "openings": 1,
+    "priority": "Medium",
+    "gender": "Any",
+    "experienceLevel": "Freshers / College Students",
+    "deadline": "2026-11-20",
+    "featured": false,
+    "active": true,
+    "shortDescription": "Shoot campus reels, record student interviews, design Canva posts, and handle Instagram growth on flexible hours.",
+    "description": "Join our media wing on a part-time basis. You will visit the campus 2–3 hours daily to capture classroom life, student project demonstrations, and create trending Instagram reels.",
+    "responsibilities": [
+      "Shoot daily reels and stories highlighting student achievements and campus events",
+      "Design creative story templates and carousels using Canva",
+      "Engage with followers and post batch announcements"
+    ],
+    "requirements": [
+      "Active on Instagram, aware of trending audio and video styles",
+      "Basic video editing on CapCut, InShot, or VN Editor",
+      "Creative eye and smartphone camera skills"
+    ],
+    "skills": ["Instagram Reels", "Canva", "CapCut", "Content Creation", "Storytelling"],
+    "perks": [
+      "Flexible daily hours",
+      "Build a high-reach creator portfolio",
+      "Performance incentives on viral content"
+    ],
+    "postedAt": "2026-09-04",
+    "company": "MSK Institute"
+  },
+  {
+    "id": "job-part-time-data-analytics-instructor",
+    "type": "job",
+    "title": "Part-Time Data Analytics Instructor (Excel & SQL)",
+    "department": "Academic & Technical Training",
+    "category": "Data Science & BI",
+    "location": "On-site (Shikohabad Campus)",
+    "workType": "Part-time",
+    "mode": "On-site",
+    "stipendOrSalary": "₹3,000–₹5,000/month",
+    "duration": "Part-time (Weekend or Evening)",
+    "openings": 1,
+    "priority": "Medium",
+    "gender": "Any",
+    "experienceLevel": "1+ Years experience or strong project portfolio",
+    "deadline": "2026-11-30",
+    "featured": false,
+    "active": true,
+    "shortDescription": "Conduct weekend or evening batches focused on Advanced Excel formulas, Pivot tables, SQL queries, and Power BI dashboards.",
+    "description": "Teach specialized batches for college students and working professionals in Shikohabad. You will cover Advanced Excel, SQL database queries, and Power BI visual dashboards.",
+    "responsibilities": [
+      "Deliver interactive weekend or evening practicals on Advanced Excel and SQL",
+      "Solve student queries and review assignment datasets",
+      "Demonstrate business dashboard creation in Power BI"
+    ],
+    "requirements": [
+      "Expertise in Excel (XLOOKUP, Pivot Tables, Power Query) and SQL queries",
+      "Clear explanation style in Hindi",
+      "Availability on weekends or designated evening hours"
+    ],
+    "skills": ["Advanced Excel", "SQL", "Power BI", "Data Reporting", "Instruction"],
+    "perks": [
+      "Weekend-friendly schedule",
+      "Rewarding trainer honorarium (₹3k–₹5k/month)",
+      "Institute faculty network credentials"
+    ],
+    "postedAt": "2026-09-04",
+    "company": "MSK Institute"
+  },
+  {
+    "id": "intern-digital-marketing",
+    "type": "internship",
+    "title": "Digital Marketing Intern",
+    "department": "Marketing & Growth",
+    "category": "Marketing",
+    "location": "On-site (Shikohabad Campus)",
+    "workType": "Internship",
+    "mode": "On-site",
+    "stipendOrSalary": "₹2,500–₹5,000/month",
+    "duration": "3–6 months",
+    "openings": 2,
+    "priority": "High",
+    "gender": "Any",
+    "experienceLevel": "Freshers / College Students",
+    "deadline": "2026-11-20",
+    "featured": true,
+    "active": true,
+    "shortDescription": "Assist in running Meta & Google ads, executing campus outreach, SEO optimization, and analyzing lead generation campaigns.",
+    "description": "Learn real-world digital marketing at MSK Institute Shikohabad. You will gain hands-on experience running live ad campaigns, local SEO, content promotion, and conversion tracking under expert mentorship.",
+    "responsibilities": [
+      "Assist in drafting ad copies and setting up Meta and Google ad campaigns",
+      "Optimize local SEO keywords and Google Business Profile listings",
+      "Monitor lead metrics, cost-per-lead, and inquiry response times",
+      "Participate in local marketing drives and campus promotional events"
+    ],
+    "requirements": [
+      "Basic familiarity with social media platforms and digital marketing fundamentals",
+      "Eagerness to learn paid ad management and analytics",
+      "Good Hindi writing and verbal communication skills"
+    ],
+    "skills": ["Digital Marketing", "Meta Ads", "Local SEO", "Canva", "Google Analytics", "Lead Generation"],
+    "perks": [
+      "Verified MSK Industry Internship Certificate",
+      "Letter of Recommendation (LOR) for higher studies or corporate jobs",
+      "Pre-Placement Offer (PPO) opportunity for full-time role",
+      "Free access to any MSK technical certification course"
+    ],
+    "postedAt": "2026-09-04",
+    "company": "MSK Institute"
+  },
+  {
+    "id": "intern-social-media",
+    "type": "internship",
+    "title": "Social Media Intern",
+    "department": "Media & Marketing",
+    "category": "Social Media",
+    "location": "On-site (Shikohabad Campus)",
+    "workType": "Internship",
+    "mode": "On-site",
+    "stipendOrSalary": "₹2,000–₹4,500/month",
+    "duration": "3–6 months",
+    "openings": 2,
+    "priority": "High",
+    "gender": "Female Preferred",
+    "experienceLevel": "Freshers / College Students",
+    "deadline": "2026-11-20",
+    "featured": true,
+    "active": true,
+    "shortDescription": "Create viral Instagram reels, student spotlight posts, YouTube community updates, and drive community engagement.",
+    "description": "We are seeking a vibrant Social Media Intern (Female Preferred) to handle MSK Institute's social profiles on Instagram, YouTube, and LinkedIn from our Shikohabad campus.",
+    "responsibilities": [
+      "Ideate and publish daily reels, stories, and carousel posts about campus activities",
+      "Interview students, capture coding achievements, and share learning tips",
+      "Engage with followers, reply to comments, and moderate community groups",
+      "Track follower growth, engagement rates, and trend analytics"
+    ],
+    "requirements": [
+      "Active user of Instagram and YouTube with an eye for trending audio and formats",
+      "Comfortable appearing on camera or recording voiceovers",
+      "Basic design skills using Canva or mobile editing apps"
+    ],
+    "skills": ["Instagram Reels", "Content Ideation", "Community Engagement", "Canva", "Storytelling", "Social Media Strategy"],
+    "perks": [
+      "Verified Certificate of Internship",
+      "Build a public portfolio with thousands of reach",
+      "Free enrollment in technical courses"
+    ],
+    "postedAt": "2026-09-04",
+    "company": "MSK Institute"
+  },
+  {
+    "id": "intern-video-editing",
+    "type": "internship",
+    "title": "Video Editing Intern",
+    "department": "Media & Creative",
+    "category": "Video Production",
+    "location": "On-site (Shikohabad Campus)",
+    "workType": "Internship",
+    "mode": "On-site",
+    "stipendOrSalary": "₹2,500–₹5,000/month",
+    "duration": "3–6 months",
+    "openings": 1,
+    "priority": "Medium",
+    "gender": "Any",
+    "experienceLevel": "Freshers / Students",
+    "deadline": "2026-11-20",
+    "featured": true,
+    "active": true,
+    "shortDescription": "Edit engaging classroom lecture clips, YouTube coding tutorials, event recaps, and reels with dynamic captions and sound design.",
+    "description": "Join our on-campus creative studio in Shikohabad to edit high-retention video content for our educational channels.",
+    "responsibilities": [
+      "Cut and assemble raw footage from classroom sessions, lab practicals, and events",
+      "Add captions, motion graphics, transitions, and audio cleanup",
+      "Produce short-form vertical videos (Reels/Shorts) and horizontal YouTube tutorials"
+    ],
+    "requirements": [
+      "Hands-on experience with Premiere Pro, DaVinci Resolve, or CapCut",
+      "Understanding of aspect ratios, pacing, and visual storytelling",
+      "Showreel or sample video links required with application"
+    ],
+    "skills": ["Video Editing", "CapCut", "Premiere Pro", "Motion Graphics", "Sound Design", "Color Grading"],
+    "perks": [
+      "Access to professional video equipment and editing workstation",
+      "Verified MSK Internship Certificate",
+      "Opportunity for conversion to Full-time Video Editor"
+    ],
+    "postedAt": "2026-09-04",
+    "company": "MSK Institute"
+  },
+  {
+    "id": "intern-graphic-design",
+    "type": "internship",
+    "title": "Graphic Design Intern",
+    "department": "Creative & Design",
+    "category": "Graphic Design",
+    "location": "On-site (Shikohabad Campus)",
+    "workType": "Internship",
+    "mode": "On-site",
+    "stipendOrSalary": "₹2,000–₹4,500/month",
+    "duration": "3–6 months",
+    "openings": 1,
+    "priority": "Medium",
+    "gender": "Any",
+    "experienceLevel": "Freshers / Students",
+    "deadline": "2026-11-20",
+    "featured": false,
+    "active": true,
+    "shortDescription": "Design high-converting social media creatives, YouTube thumbnails, course brochures, banners, and student certificates.",
+    "description": "Work directly with our marketing and academic teams at Shikohabad campus to create eye-catching visual brand assets.",
+    "responsibilities": [
+      "Design digital banners, flyers, posters, and certificates for the institute",
+      "Create clickable YouTube thumbnails with high CTR design principles",
+      "Develop brand identity assets, templates, and infographics for course notes"
+    ],
+    "requirements": [
+      "Proficiency in Canva, Photoshop, Illustrator, or Figma",
+      "Strong color theory, typography, and layout sense",
+      "Design portfolio or samples required"
+    ],
+    "skills": ["Graphic Design", "Photoshop", "Canva", "YouTube Thumbnails", "Figma", "Typography"],
+    "perks": [
+      "Verified Internship Certificate",
+      "Strong portfolio pieces from commercial education campaigns",
+      "Performance-based stipend hikes"
+    ],
+    "postedAt": "2026-09-04",
+    "company": "MSK Institute"
+  },
+  {
+    "id": "intern-python-programming",
+    "type": "internship",
+    "title": "Python/Programming Intern",
+    "department": "Software Engineering",
+    "category": "Software Development",
+    "location": "On-site (Shikohabad Campus)",
+    "workType": "Internship",
+    "mode": "On-site",
+    "stipendOrSalary": "₹3,000–₹6,000/month",
+    "duration": "3–6 months",
+    "openings": 1,
+    "priority": "High",
+    "gender": "Any",
+    "experienceLevel": "Freshers / College Students",
+    "deadline": "2026-11-20",
+    "featured": true,
+    "active": true,
+    "shortDescription": "Build live web projects, automation scripts, and assist lab students under senior developer mentorship at Shikohabad campus.",
+    "description": "Gain intensive hands-on programming experience at MSK Institute Shikohabad. You will write code for internal software tools, work on Python/Web development projects, and assist beginner students during lab sessions.",
+    "responsibilities": [
+      "Develop backend microservices and automation scripts using Python",
+      "Work on frontend and backend web features using JavaScript and SQL",
+      "Assist classroom learners with code debugging during laboratory practicals",
+      "Maintain and test institute internal web utilities and test portals"
+    ],
+    "requirements": [
+      "Sound knowledge of Python basics, loops, functions, and OOP concepts",
+      "Basic understanding of HTML, CSS, JavaScript, and Git",
+      "Strong eagerness to solve logic puzzles and learn modern frameworks"
+    ],
+    "skills": ["Python", "JavaScript", "SQL", "Git", "Web Development", "Problem Solving"],
+    "perks": [
+      "Pre-Placement Offer (PPO) consideration for Junior Developer role",
+      "Official MSK Technical Internship Certificate",
+      "1-on-1 mentorship from Er. Sumit Kumar"
+    ],
+    "postedAt": "2026-09-04",
+    "company": "MSK Institute"
+  },
+  {
+    "id": "intern-data-analytics",
+    "type": "internship",
+    "title": "Data Analytics Intern",
+    "department": "Data & Analytics",
+    "category": "Data Science",
+    "location": "On-site (Shikohabad Campus)",
+    "workType": "Internship",
+    "mode": "On-site",
+    "stipendOrSalary": "₹3,000–₹6,000/month",
+    "duration": "3–6 months",
+    "openings": 1,
+    "priority": "High",
+    "gender": "Any",
+    "experienceLevel": "Freshers / Students",
+    "deadline": "2026-11-20",
+    "featured": true,
+    "active": true,
+    "shortDescription": "Clean data, design Excel & Power BI dashboards, write SQL queries, and analyze institute student inquiry pipelines.",
+    "description": "Work with real academic and business datasets at MSK Institute Shikohabad. You will construct executive dashboards, analyze student retention, and automate analytical reports.",
+    "responsibilities": [
+      "Extract, clean, and validate data using Microsoft Excel and Python",
+      "Design interactive dashboards in Power BI for admissions and test performances",
+      "Write SQL queries to extract performance summaries and generate cohort metrics"
+    ],
+    "requirements": [
+      "Strong command of Microsoft Excel (Pivot tables, formulas, charts)",
+      "Familiarity with SQL basics and Power BI or Tableau",
+      "Curious mindset with keen attention to statistical details"
+    ],
+    "skills": ["Advanced Excel", "Power BI", "SQL", "Data Cleaning", "Python (Pandas)", "Dashboards"],
+    "perks": [
+      "Experience with production analytics datasets",
+      "Verified Industry Internship Certificate",
+      "Mentorship from senior data instructors"
+    ],
+    "postedAt": "2026-09-04",
+    "company": "MSK Institute"
+  },
+  {
+    "id": "intern-cybersecurity",
+    "type": "internship",
+    "title": "Cybersecurity Intern",
+    "department": "Cybersecurity & IT",
+    "category": "Information Security",
+    "location": "On-site (Shikohabad Campus)",
+    "workType": "Internship",
+    "mode": "On-site",
+    "stipendOrSalary": "₹3,000–₹6,000/month",
+    "duration": "3–6 months",
+    "openings": 1,
+    "priority": "Medium",
+    "gender": "Any",
+    "experienceLevel": "Freshers / Students",
+    "deadline": "2026-11-20",
+    "featured": false,
+    "active": true,
+    "shortDescription": "Configure campus networks, conduct vulnerability audits, practice ethical hacking labs, and assist security workshops.",
+    "description": "Get hands-on defensive and offensive security experience at our Shikohabad computer laboratory.",
+    "responsibilities": [
+      "Assist in configuring lab LAN networks, routers, and Linux operating systems",
+      "Perform authorized vulnerability scans using Wireshark and Nmap",
+      "Help prepare hands-on security challenges and lab setups for students"
+    ],
+    "requirements": [
+      "Understanding of TCP/IP networking, Linux terminal commands, and basic security concepts",
+      "Passionate about ethical hacking and cybersecurity standards"
+    ],
+    "skills": ["Linux", "Networking (TCP/IP)", "Wireshark", "Nmap", "Ethical Hacking Basics"],
+    "perks": [
+      "Practical experience in an active cybersecurity lab",
+      "Verified MSK Internship Certificate",
+      "Discounted sponsorship for global security certifications"
+    ],
+    "postedAt": "2026-09-04",
+    "company": "MSK Institute"
+  },
+  {
+    "id": "intern-sales-telecalling",
+    "type": "internship",
+    "title": "Sales/Telecalling Intern",
+    "department": "Sales & Outreach",
+    "category": "Sales",
+    "location": "On-site (Shikohabad Campus)",
+    "workType": "Internship",
+    "mode": "On-site",
+    "stipendOrSalary": "₹2,000–₹4,500/month + Incentives",
+    "duration": "3–6 months",
+    "openings": 2,
+    "priority": "High",
+    "gender": "Female Preferred",
+    "experienceLevel": "Freshers / Students",
+    "deadline": "2026-11-20",
+    "featured": false,
+    "active": true,
+    "shortDescription": "Call incoming course inquiries, explain course advantages, schedule campus counselor visits, and earn high incentives.",
+    "description": "Build invaluable sales and customer interaction skills at our Shikohabad campus. You will contact student inquiries, explain curriculum offerings, and coordinate on-campus counseling visits.",
+    "responsibilities": [
+      "Make telephonic follow-ups to students who requested course brochures and demos",
+      "Explain course structures, upcoming batches, and fee concessions",
+      "Schedule walk-in campus counseling sessions",
+      "Maintain lead status updates on the institute admissions spreadsheet"
+    ],
+    "requirements": [
+      "Confident, energetic, and articulate Hindi speaking ability",
+      "Patience and polite telephonic etiquette",
+      "Enthusiastic about meeting enrollment goals"
+    ],
+    "skills": ["Telecalling", "Hindi Communication", "Lead Follow-up", "Customer Service", "Sales Etiquette"],
+    "perks": [
+      "Attractive performance incentives on every confirmed student admission",
+      "Certificate of Internship in Sales & Business Communication",
+      "High possibility of conversion to full-time Sales Executive"
+    ],
+    "postedAt": "2026-09-04",
+    "company": "MSK Institute"
+  },
+  {
+    "id": "intern-student-support",
+    "type": "internship",
+    "title": "Student Support Intern",
+    "department": "Student Affairs",
+    "category": "Student Operations",
+    "location": "On-site (Shikohabad Campus)",
+    "workType": "Internship",
+    "mode": "On-site",
+    "stipendOrSalary": "₹2,000–₹4,000/month",
+    "duration": "3–6 months",
+    "openings": 1,
+    "priority": "Medium",
+    "gender": "Female Preferred",
+    "experienceLevel": "Freshers / Students",
+    "deadline": "2026-11-20",
+    "featured": false,
+    "active": true,
+    "shortDescription": "Assist campus learners with lab workstation logins, attendance logging, course materials, and query coordination.",
+    "description": "Support the day-to-day academic operations and student experience at MSK Institute Shikohabad.",
+    "responsibilities": [
+      "Assist students with lab PC logins, software installations, and LMS access",
+      "Maintain daily batch attendance registers and student issue logs",
+      "Distribute physical study modules and answer basic administrative queries"
+    ],
+    "requirements": [
+      "Helpful, approachable, and disciplined personality",
+      "Basic computer proficiency (typing, Windows, Excel)",
+      "Good communication skills in Hindi"
+    ],
+    "skills": ["Student Assistance", "Computer Basics", "Attendance Logging", "Interpersonal Skills", "MS Office"],
+    "perks": [
+      "Verified Internship Certificate",
+      "Free access to any MSK computer diploma course",
+      "Comfortable, respectful campus learning environment"
+    ],
+    "postedAt": "2026-09-04",
+    "company": "MSK Institute"
+  }
+]
