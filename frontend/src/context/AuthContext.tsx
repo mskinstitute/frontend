@@ -17,8 +17,8 @@ interface AuthContextType {
   refreshToken: string | null;
   isLoading: boolean;
   isAuthenticated: boolean;
-  login: (payload: LoginPayload) => Promise<boolean>;
-  register: (payload: RegisterPayload) => Promise<boolean>;
+  login: (payload: LoginPayload) => Promise<AuthUser | null>;
+  register: (payload: RegisterPayload) => Promise<AuthUser | null>;
   logout: () => Promise<void>;
   forgotPassword: (identifier: string) => Promise<ForgotPasswordResponse | null>;
   resetPassword: (payload: ResetPasswordPayload) => Promise<boolean>;
@@ -82,31 +82,31 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
     }
   };
 
-  const login = async (payload: LoginPayload): Promise<boolean> => {
+  const login = async (payload: LoginPayload): Promise<AuthUser | null> => {
     try {
       setIsLoading(true);
       const res = await authApi.login(payload);
       saveSession(res.access, res.refresh, res.user);
       toast.success(`Welcome back, ${res.user.first_name}!`);
-      return true;
+      return res.user;
     } catch (err: any) {
       toast.error(err.message || 'Login failed. Please check your credentials.');
-      return false;
+      return null;
     } finally {
       setIsLoading(false);
     }
   };
 
-  const register = async (payload: RegisterPayload): Promise<boolean> => {
+  const register = async (payload: RegisterPayload): Promise<AuthUser | null> => {
     try {
       setIsLoading(true);
       const res = await authApi.register(payload);
       saveSession(res.access, res.refresh, res.user);
       toast.success('Registration successful! Welcome to MSK Institute.');
-      return true;
+      return res.user;
     } catch (err: any) {
       toast.error(err.message || 'Registration failed. Please check the form.');
-      return false;
+      return null;
     } finally {
       setIsLoading(false);
     }

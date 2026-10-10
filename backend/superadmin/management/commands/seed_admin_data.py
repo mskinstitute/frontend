@@ -1,14 +1,89 @@
 from django.core.management.base import BaseCommand
+from django.contrib.auth import get_user_model
 from superadmin.models import Branch, Staff, Student, Affiliate
 from decimal import Decimal
 import datetime
 
+User = get_user_model()
+
 
 class Command(BaseCommand):
-    help = "Seeds initial sample records for Branches, Staff, Students, and Affiliates."
+    help = "Seeds initial sample records and demo role user accounts."
 
     def handle(self, *args, **kwargs):
-        self.stdout.write("Seeding Super Admin sample data...")
+        self.stdout.write("Seeding Super Admin sample data and role accounts...")
+
+        # 0. Create Demo Role Accounts with password 'Msk@123456'
+        demo_accounts = [
+            {
+                "email": "admin@mskinstitute.in",
+                "username": "admin_user",
+                "first_name": "Super",
+                "last_name": "Admin",
+                "phone": "+91 99999 00001",
+                "role": "admin",
+                "gender": "male",
+                "is_staff": True,
+                "is_superuser": True,
+            },
+            {
+                "email": "staff@mskinstitute.in",
+                "username": "staff_user",
+                "first_name": "Faculty",
+                "last_name": "Trainer",
+                "phone": "+91 99999 00002",
+                "role": "staff",
+                "gender": "male",
+                "is_staff": True,
+                "is_superuser": False,
+            },
+            {
+                "email": "student@mskinstitute.in",
+                "username": "student_user",
+                "first_name": "Aman",
+                "last_name": "Yadav",
+                "phone": "+91 99999 00003",
+                "role": "student",
+                "gender": "male",
+                "is_staff": False,
+                "is_superuser": False,
+            },
+            {
+                "email": "affiliate@mskinstitute.in",
+                "username": "affiliate_user",
+                "first_name": "Campus",
+                "last_name": "Partner",
+                "phone": "+91 99999 00004",
+                "role": "affiliate",
+                "gender": "other",
+                "is_staff": False,
+                "is_superuser": False,
+            },
+        ]
+
+        for acc in demo_accounts:
+            user = User.objects.filter(email=acc["email"]).first()
+            if not user:
+                user = User.objects.create_user(
+                    email=acc["email"],
+                    username=acc["username"],
+                    password="Msk@123456",
+                    first_name=acc["first_name"],
+                    last_name=acc["last_name"],
+                    phone=acc["phone"],
+                    gender=acc["gender"],
+                    role=acc["role"],
+                    is_staff=acc["is_staff"],
+                    is_superuser=acc["is_superuser"],
+                )
+                self.stdout.write(f"Created demo account: {acc['email']} ({acc['role']})")
+            else:
+                user.role = acc["role"]
+                user.is_staff = acc["is_staff"]
+                user.is_superuser = acc["is_superuser"]
+                user.set_password("Msk@123456")
+                user.save()
+                self.stdout.write(f"Updated demo account password & role: {acc['email']} ({acc['role']})")
 
         # 1. Branches
         b1, _ = Branch.objects.get_or_create(
@@ -185,4 +260,4 @@ class Command(BaseCommand):
             }
         )
 
-        self.stdout.write(self.style.SUCCESS("Successfully seeded Super Admin data!"))
+        self.stdout.write(self.style.SUCCESS("Successfully seeded Super Admin data and demo role accounts!"))
