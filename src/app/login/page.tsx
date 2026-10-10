@@ -71,11 +71,14 @@ function LoginFormContent() {
     }
   };
 
-  const handleSelectDemoRole = (role: 'admin' | 'staff' | 'student' | 'affiliate') => {
+  const handleSelectDemoRole = (role: 'admin' | 'staff' | 'student' | 'affiliate' | 'branch') => {
     setSelectedDemoRole(role);
     setError(null);
     if (role === 'admin') {
       setIdentifier('admin@mskinstitute.in');
+      setPassword('Msk@123456');
+    } else if (role === 'branch') {
+      setIdentifier('branch@mskinstitute.in');
       setPassword('Msk@123456');
     } else if (role === 'staff') {
       setIdentifier('staff@mskinstitute.in');
@@ -167,7 +170,7 @@ function LoginFormContent() {
               </span>
               <span className="text-slate-600 font-mono">pwd: Msk@123456</span>
             </div>
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-1.5">
+            <div className="grid grid-cols-2 sm:grid-cols-5 gap-1.5">
               <button
                 type="button"
                 onClick={() => handleSelectDemoRole('admin')}
@@ -178,6 +181,17 @@ function LoginFormContent() {
                 }`}
               >
                 👑 Admin
+              </button>
+              <button
+                type="button"
+                onClick={() => handleSelectDemoRole('branch')}
+                className={`py-1.5 px-2 rounded-xl text-[11px] font-bold transition-all cursor-pointer ${
+                  selectedDemoRole === 'branch'
+                    ? 'bg-primary text-white shadow-xs'
+                    : 'bg-white border border-slate-200 text-slate-700 hover:border-primary'
+                }`}
+              >
+                🏛️ Branch
               </button>
               <button
                 type="button"

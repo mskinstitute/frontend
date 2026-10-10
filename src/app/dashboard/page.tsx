@@ -10,6 +10,7 @@ import {
   Users,
   Share2,
   ShieldCheck,
+  Building2,
   ArrowRight,
   Sparkles,
   Loader2
@@ -60,6 +61,13 @@ export default function DashboardIndexPage() {
               Student Portal
             </Link>
             <Link
+              href="/dashboard/branch"
+              className="p-2.5 rounded-lg border border-slate-200 hover:border-amber-500 hover:bg-amber-50/50 text-slate-700 flex items-center justify-center gap-1.5 font-medium transition-colors"
+            >
+              <Building2 className="w-3.5 h-3.5 text-amber-600" />
+              Branch / Franchise
+            </Link>
+            <Link
               href="/dashboard/staff"
               className="p-2.5 rounded-lg border border-slate-200 hover:border-primary hover:bg-slate-50 text-slate-700 flex items-center justify-center gap-1.5 font-medium transition-colors"
             >
@@ -75,10 +83,10 @@ export default function DashboardIndexPage() {
             </Link>
             <Link
               href="/admin"
-              className="p-2.5 rounded-lg border border-slate-200 hover:border-blue-600 hover:bg-blue-50/50 text-slate-700 flex items-center justify-center gap-1.5 font-medium transition-colors"
+              className="col-span-2 p-2.5 rounded-lg border border-slate-200 hover:border-blue-600 hover:bg-blue-50/50 text-slate-700 flex items-center justify-center gap-1.5 font-medium transition-colors"
             >
               <ShieldCheck className="w-3.5 h-3.5 text-blue-600" />
-              Super Admin
+              Super Admin Console
             </Link>
           </div>
         </div>

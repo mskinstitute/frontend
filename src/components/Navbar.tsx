@@ -779,7 +779,7 @@ export default function Navbar() {
                 onClick={() => setIsOpen(false)}
                 className="w-full flex items-center justify-center gap-2 py-2.5 bg-primary hover:bg-primary-light text-white font-bold text-xs rounded-xl shadow-xs transition-colors"
               >
-                <span>Open {user.role === 'admin' ? 'Super Admin' : user.role === 'staff' ? 'Faculty' : user.role === 'affiliate' ? 'Affiliate' : 'Student'} Dashboard</span>
+                <span>Open {user.role === 'admin' ? 'Super Admin' : user.role === 'branch' || user.role === 'franchise' ? 'Franchise & Branch' : user.role === 'staff' ? 'Faculty' : user.role === 'affiliate' ? 'Affiliate' : 'Student'} Dashboard</span>
                 <span>➔</span>
               </Link>
             ) : (
