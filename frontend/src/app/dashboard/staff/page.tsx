@@ -210,6 +210,8 @@ export default function StaffDashboardPage() {
             <span className="text-slate-400 hidden md:inline">Quick Role Switcher:</span>
             <Link href="/dashboard/student" className="hover:text-secondary transition-colors">Student Portal</Link>
             <span className="text-slate-600">·</span>
+            <Link href="/dashboard/branch" className="hover:text-secondary transition-colors">Branch Portal</Link>
+            <span className="text-slate-600">·</span>
             <Link href="/dashboard/affiliate" className="hover:text-secondary transition-colors">Affiliate Portal</Link>
             <span className="text-slate-600">·</span>
             <Link href="/admin" className="hover:text-secondary transition-colors">Super Admin</Link>

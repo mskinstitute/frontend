@@ -59,6 +59,17 @@ class Command(BaseCommand):
                 "is_staff": False,
                 "is_superuser": False,
             },
+            {
+                "email": "branch@mskinstitute.in",
+                "username": "branch_user",
+                "first_name": "Rajesh",
+                "last_name": "Sharma",
+                "phone": "+91 99999 00005",
+                "role": "branch",
+                "gender": "male",
+                "is_staff": True,
+                "is_superuser": False,
+            },
         ]
 
         for acc in demo_accounts:
