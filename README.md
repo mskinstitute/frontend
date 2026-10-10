@@ -50,8 +50,10 @@ MSK-Institute-Website/
 | `main` | Production-ready monorepo combining frontend and backend |
 | `backend` | Base branch for Django REST Framework backend |
 | `backend-auth` | Auth branch inside `backend` with CustomUser, UserSession, DRF JWT views & tests |
+| `backend-super-admin` | Super Admin backend branch with Branch, Staff, Student, and Affiliate models, views, and seed data |
 | `frontend` | Base branch for Next.js frontend |
 | `frontend-auth` | Auth branch inside `frontend` with Register, Login, Forgot Password, and Profile pages |
+| `frontend-super-admin` | Super Admin frontend branch with interactive Dashboard, Branches, Staff, Students, and Affiliates tabs |
 
 ---
 
@@ -111,3 +113,20 @@ The Next.js application will be running at `http://localhost:3000`.
 | `GET` | `/api/auth/me/` | Authenticated user profile |
 | `POST` | `/api/auth/forgot-password/` | Send 6-digit OTP to registered account |
 | `POST` | `/api/auth/reset-password/` | Reset password using OTP |
+
+---
+
+## 🏢 Super Admin Management Endpoints
+
+| Method | Endpoint | Description |
+|---|---|---|
+| `GET` | `/api/admin/dashboard/` | Consolidated KPI summary (branches, staff, students, finances, affiliates) |
+| `GET`, `POST` | `/api/admin/branches/` | List and create franchise branches |
+| `GET`, `PATCH`, `DELETE` | `/api/admin/branches/<id>/` | Retrieve, update, or remove branch details |
+| `GET`, `POST` | `/api/admin/staff/` | List and add staff/faculty members |
+| `GET`, `PATCH`, `DELETE` | `/api/admin/staff/<id>/` | Retrieve, update, or remove staff members |
+| `GET`, `POST` | `/api/admin/students/` | List and enroll students with tuition fee status |
+| `GET`, `PATCH`, `DELETE` | `/api/admin/students/<id>/` | Retrieve, update, or remove student enrollments |
+| `GET`, `POST` | `/api/admin/affiliates/` | List and create partner affiliate codes |
+| `GET`, `PATCH`, `DELETE` | `/api/admin/affiliates/<id>/` | Retrieve, update, or remove affiliate partners |
+
