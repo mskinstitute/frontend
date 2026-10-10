@@ -22,11 +22,14 @@ import {
   Newspaper,
   Briefcase,
   Keyboard,
+  User,
+  LogOut,
 } from 'lucide-react';
 
 import InstallAppButton from '@/components/InstallAppButton';
 import SearchModal from '@/components/SearchModal';
 import { useLiveStatus } from '@/context/LiveStatusContext';
+import { useAuth } from '@/context/AuthContext';
 import { SocialIconPills } from '@/components/SocialLinks';
 
 interface Announcement {
@@ -46,6 +49,7 @@ export default function Navbar() {
   const pathname = usePathname();
   const [announcements, setAnnouncements] = useState<Announcement[]>([]);
   const { isLiveNow } = useLiveStatus();
+  const { user, isAuthenticated, logout } = useAuth();
 
   useEffect(() => {
     async function loadAnnouncements() {
@@ -517,6 +521,28 @@ export default function Navbar() {
               <span>Book Demo</span>
               <span className="text-[11px]">➔</span>
             </Link>
+
+            {/* Auth Button - Desktop */}
+            {isAuthenticated && user ? (
+              <Link
+                href="/profile"
+                className="hidden md:inline-flex items-center gap-2 px-2.5 py-1.5 bg-slate-100 hover:bg-slate-200/80 text-slate-800 font-bold text-xs rounded-xl transition-all ml-1 border border-slate-200"
+                title={`Logged in as ${user.first_name} (${user.email})`}
+              >
+                <div className="w-5 h-5 rounded-full bg-secondary text-white text-[10px] font-extrabold flex items-center justify-center uppercase shadow-xs">
+                  {user.first_name?.[0] || 'U'}
+                </div>
+                <span className="truncate max-w-[90px]">{user.first_name}</span>
+              </Link>
+            ) : (
+              <Link
+                href="/login"
+                className="hidden md:inline-flex items-center gap-1.5 px-3 py-1.5 bg-slate-100 hover:bg-slate-200 text-slate-700 hover:text-slate-900 font-bold text-xs rounded-xl transition-colors ml-1 border border-slate-200"
+              >
+                <User className="w-3.5 h-3.5 text-slate-500" />
+                <span>Sign In</span>
+              </Link>
+            )}
           </div>
 
           {/* Mobile top actions: Search icon, Book Demo button & Hamburger */}
@@ -577,6 +603,56 @@ export default function Navbar() {
                 </kbd>
               </div>
             </button>
+
+            {/* Mobile Auth Strip */}
+            <div className="mt-2.5 p-2.5 rounded-xl bg-slate-50 border border-slate-200">
+              {isAuthenticated && user ? (
+                <div className="flex items-center justify-between">
+                  <Link
+                    href="/profile"
+                    onClick={() => setIsOpen(false)}
+                    className="flex items-center gap-2.5 min-w-0"
+                  >
+                    <div className="w-8 h-8 rounded-lg bg-secondary text-white text-xs font-bold flex items-center justify-center uppercase shadow-xs flex-shrink-0">
+                      {user.first_name?.[0] || 'U'}
+                    </div>
+                    <div className="min-w-0">
+                      <p className="text-xs font-bold text-slate-900 truncate">
+                        {user.first_name} {user.last_name}
+                      </p>
+                      <p className="text-[10px] text-slate-500 truncate">@{user.username}</p>
+                    </div>
+                  </Link>
+                  <button
+                    onClick={() => {
+                      logout();
+                      setIsOpen(false);
+                    }}
+                    className="p-1.5 text-slate-400 hover:text-red-500 hover:bg-white rounded-lg transition-colors cursor-pointer"
+                    title="Log Out"
+                  >
+                    <LogOut className="w-4 h-4" />
+                  </button>
+                </div>
+              ) : (
+                <div className="flex items-center gap-2">
+                  <Link
+                    href="/login"
+                    onClick={() => setIsOpen(false)}
+                    className="flex-1 py-1.5 px-3 text-center text-xs font-bold rounded-lg bg-white border border-slate-200 text-slate-800 shadow-xs hover:bg-slate-50 transition-colors"
+                  >
+                    Sign In
+                  </Link>
+                  <Link
+                    href="/register"
+                    onClick={() => setIsOpen(false)}
+                    className="flex-1 py-1.5 px-3 text-center text-xs font-bold rounded-lg bg-secondary text-white shadow-xs hover:bg-secondary-light transition-colors"
+                  >
+                    Register
+                  </Link>
+                </div>
+              )}
+            </div>
 
             {/* Direct Links */}
             <div className="space-y-1.5 mt-3">

@@ -8,6 +8,7 @@ import InstallAppModal from '@/components/InstallAppModal';
 import PwaUpdateToast from '@/components/PwaUpdateToast';
 import { PwaProvider } from '@/context/PwaContext';
 import { LiveStatusProvider } from '@/context/LiveStatusContext';
+import { AuthProvider } from '@/context/AuthContext';
 import { Plus_Jakarta_Sans } from 'next/font/google';
 import Analytics from '@/components/Analytics';
 import { GoogleTagManagerNoScript } from '@/components/GoogleTagManager';
@@ -182,20 +183,22 @@ export default function RootLayout({
       <body className={`min-h-screen flex flex-col bg-white text-text-main antialiased selection:bg-secondary selection:text-white ${jakarta.className} ${jakarta.variable}`}>
         <GoogleTagManagerNoScript />
         <PwaProvider>
-          <LiveStatusProvider>
-            <Analytics />
-            <PwaRegister />
-            <InstallAppModal />
-            <PwaUpdateToast />
-            <Navbar />
-            <main className="flex-grow pb-20 md:pb-0 relative">
-              {children}
-            </main>
-            <Footer />
-            <FloatingWhatsAppCTA />
-            <MobileBottomNav />
-            <Toaster position="top-right" toastOptions={{ duration: 4000 }} />
-          </LiveStatusProvider>
+          <AuthProvider>
+            <LiveStatusProvider>
+              <Analytics />
+              <PwaRegister />
+              <InstallAppModal />
+              <PwaUpdateToast />
+              <Navbar />
+              <main className="flex-grow pb-20 md:pb-0 relative">
+                {children}
+              </main>
+              <Footer />
+              <FloatingWhatsAppCTA />
+              <MobileBottomNav />
+              <Toaster position="top-right" toastOptions={{ duration: 4000 }} />
+            </LiveStatusProvider>
+          </AuthProvider>
         </PwaProvider>
       </body>
     </html>
