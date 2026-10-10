@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, Suspense } from 'react';
 import Link from 'next/link';
 import { useRouter, useSearchParams } from 'next/navigation';
 import {
@@ -13,16 +13,21 @@ import {
   Sparkles,
   GraduationCap,
   CheckCircle2,
-  AlertCircle
+  AlertCircle,
+  Building2,
+  Users,
+  Share2,
+  Zap
 } from 'lucide-react';
 import { useAuth } from '@/context/AuthContext';
+import { getRoleDashboardUrl } from '@/lib/roleNavigation';
 
-export default function LoginPage() {
+function LoginFormContent() {
   const router = useRouter();
   const searchParams = useSearchParams();
-  const redirectUrl = searchParams.get('redirect') || '/';
+  const redirectUrl = searchParams.get('redirect');
 
-  const { login, isAuthenticated, isLoading: authLoading } = useAuth();
+  const { login, user, isAuthenticated, isLoading: authLoading } = useAuth();
 
   const [identifier, setIdentifier] = useState('');
   const [password, setPassword] = useState('');
@@ -30,12 +35,14 @@ export default function LoginPage() {
   const [rememberMe, setRememberMe] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [selectedDemoRole, setSelectedDemoRole] = useState<string | null>(null);
 
   useEffect(() => {
-    if (isAuthenticated) {
-      router.push(redirectUrl);
+    if (isAuthenticated && user) {
+      const target = redirectUrl && redirectUrl !== '/' ? redirectUrl : getRoleDashboardUrl(user.role);
+      router.push(target);
     }
-  }, [isAuthenticated, redirectUrl, router]);
+  }, [isAuthenticated, user, redirectUrl, router]);
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -52,14 +59,33 @@ export default function LoginPage() {
     }
 
     setIsSubmitting(true);
-    const success = await login({
+    const loggedInUser = await login({
       identifier: trimmedIdentifier,
       password,
     });
     setIsSubmitting(false);
 
-    if (success) {
-      router.push(redirectUrl);
+    if (loggedInUser) {
+      const target = redirectUrl && redirectUrl !== '/' ? redirectUrl : getRoleDashboardUrl(loggedInUser.role);
+      router.push(target);
+    }
+  };
+
+  const handleSelectDemoRole = (role: 'admin' | 'staff' | 'student' | 'affiliate') => {
+    setSelectedDemoRole(role);
+    setError(null);
+    if (role === 'admin') {
+      setIdentifier('admin@mskinstitute.in');
+      setPassword('Msk@123456');
+    } else if (role === 'staff') {
+      setIdentifier('staff@mskinstitute.in');
+      setPassword('Msk@123456');
+    } else if (role === 'student') {
+      setIdentifier('student@mskinstitute.in');
+      setPassword('Msk@123456');
+    } else if (role === 'affiliate') {
+      setIdentifier('affiliate@mskinstitute.in');
+      setPassword('Msk@123456');
     }
   };
 
@@ -79,29 +105,33 @@ export default function LoginPage() {
           <div className="relative z-10">
             <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-white/15 text-secondary-light text-xs font-bold uppercase tracking-wider mb-6">
               <Sparkles className="w-3.5 h-3.5 text-secondary" />
-              <span>Student & Member Portal</span>
+              <span>Unified Portal Gateway</span>
             </div>
             
             <h2 className="text-3xl font-extrabold tracking-tight text-white leading-tight">
-              Welcome back to <span className="text-secondary">MSK Institute</span>
+              One Login for <span className="text-secondary">All Roles</span>
             </h2>
             <p className="mt-3 text-slate-300 text-sm leading-relaxed">
-              Log in to access your course materials, live lab sessions, verified certificates, and coding playground.
+              Automatic redirection based on your role: Super Admin, Faculty Instructor, Student, or Affiliate Partner.
             </p>
           </div>
 
-          <div className="space-y-4 my-8 relative z-10">
-            <div className="flex items-center gap-3 text-sm text-slate-200 bg-white/5 p-3 rounded-xl border border-white/10">
-              <CheckCircle2 className="w-5 h-5 text-secondary flex-shrink-0" />
-              <span>Multi-Identifier Login (Username, Email, or Mobile)</span>
+          <div className="space-y-3.5 my-8 relative z-10">
+            <div className="flex items-center gap-3 text-xs sm:text-sm text-slate-200 bg-white/5 p-3 rounded-xl border border-white/10">
+              <Building2 className="w-4 h-4 text-secondary flex-shrink-0" />
+              <span><strong>Super Admin:</strong> Franchise, Staff & Finances</span>
             </div>
-            <div className="flex items-center gap-3 text-sm text-slate-200 bg-white/5 p-3 rounded-xl border border-white/10">
-              <CheckCircle2 className="w-5 h-5 text-secondary flex-shrink-0" />
-              <span>Full Access to Hands-on Coding Labs</span>
+            <div className="flex items-center gap-3 text-xs sm:text-sm text-slate-200 bg-white/5 p-3 rounded-xl border border-white/10">
+              <Users className="w-4 h-4 text-secondary flex-shrink-0" />
+              <span><strong>Staff / Faculty:</strong> Batches & Attendance</span>
             </div>
-            <div className="flex items-center gap-3 text-sm text-slate-200 bg-white/5 p-3 rounded-xl border border-white/10">
-              <CheckCircle2 className="w-5 h-5 text-secondary flex-shrink-0" />
-              <span>Secure JWT Session Management</span>
+            <div className="flex items-center gap-3 text-xs sm:text-sm text-slate-200 bg-white/5 p-3 rounded-xl border border-white/10">
+              <GraduationCap className="w-4 h-4 text-secondary flex-shrink-0" />
+              <span><strong>Students:</strong> Courses, Live Labs & Certificates</span>
+            </div>
+            <div className="flex items-center gap-3 text-xs sm:text-sm text-slate-200 bg-white/5 p-3 rounded-xl border border-white/10">
+              <Share2 className="w-4 h-4 text-secondary flex-shrink-0" />
+              <span><strong>Affiliates:</strong> Referrals & Commission Ledger</span>
             </div>
           </div>
 
@@ -113,56 +143,113 @@ export default function LoginPage() {
           </div>
         </div>
 
-        {/* Right Side: Login Form */}
+        {/* Right Side: Login Form & Role Quick-Switcher */}
         <div className="lg:col-span-7 p-8 sm:p-12 flex flex-col justify-center bg-white">
-          <div className="mb-8">
+          <div className="mb-6">
             <div className="inline-flex items-center gap-2 text-primary font-bold text-xs uppercase tracking-wider mb-2 lg:hidden">
               <GraduationCap className="w-4 h-4 text-secondary" />
-              <span>MSK Institute Portal</span>
+              <span>MSK Institute Unified Portal</span>
             </div>
             <h1 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
-              Sign In to Your Account
+              Sign In to Your Portal
             </h1>
-            <p className="text-slate-600 text-sm mt-1">
-              Enter your credentials to continue your learning journey.
+            <p className="text-slate-600 text-xs sm:text-sm mt-1">
+              Enter your credentials to access your dedicated role dashboard.
             </p>
           </div>
 
+          {/* Quick Demo Role Autofill Bar */}
+          <div className="mb-6 p-3.5 rounded-2xl bg-slate-50 border border-slate-200/80">
+            <div className="flex items-center justify-between text-[11px] font-bold text-slate-600 mb-2">
+              <span className="flex items-center gap-1 text-slate-700">
+                <Zap className="w-3.5 h-3.5 text-secondary" />
+                <span>Test 1-Click Role Login:</span>
+              </span>
+              <span className="text-slate-600 font-mono">pwd: Msk@123456</span>
+            </div>
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-1.5">
+              <button
+                type="button"
+                onClick={() => handleSelectDemoRole('admin')}
+                className={`py-1.5 px-2 rounded-xl text-[11px] font-bold transition-all cursor-pointer ${
+                  selectedDemoRole === 'admin'
+                    ? 'bg-primary text-white shadow-xs'
+                    : 'bg-white border border-slate-200 text-slate-700 hover:border-primary'
+                }`}
+              >
+                👑 Admin
+              </button>
+              <button
+                type="button"
+                onClick={() => handleSelectDemoRole('staff')}
+                className={`py-1.5 px-2 rounded-xl text-[11px] font-bold transition-all cursor-pointer ${
+                  selectedDemoRole === 'staff'
+                    ? 'bg-primary text-white shadow-xs'
+                    : 'bg-white border border-slate-200 text-slate-700 hover:border-primary'
+                }`}
+              >
+                👨‍🏫 Staff
+              </button>
+              <button
+                type="button"
+                onClick={() => handleSelectDemoRole('student')}
+                className={`py-1.5 px-2 rounded-xl text-[11px] font-bold transition-all cursor-pointer ${
+                  selectedDemoRole === 'student'
+                    ? 'bg-primary text-white shadow-xs'
+                    : 'bg-white border border-slate-200 text-slate-700 hover:border-primary'
+                }`}
+              >
+                🎓 Student
+              </button>
+              <button
+                type="button"
+                onClick={() => handleSelectDemoRole('affiliate')}
+                className={`py-1.5 px-2 rounded-xl text-[11px] font-bold transition-all cursor-pointer ${
+                  selectedDemoRole === 'affiliate'
+                    ? 'bg-primary text-white shadow-xs'
+                    : 'bg-white border border-slate-200 text-slate-700 hover:border-primary'
+                }`}
+              >
+                🤝 Affiliate
+              </button>
+            </div>
+          </div>
+
           {error && (
-            <div className="mb-6 p-4 rounded-xl bg-red-50 border border-red-200 text-red-700 text-sm flex items-start gap-3 animate-in fade-in duration-200">
+            <div className="mb-5 p-4 rounded-xl bg-red-50 border border-red-200 text-red-700 text-sm flex items-start gap-3 animate-in fade-in duration-200">
               <AlertCircle className="w-5 h-5 text-red-600 flex-shrink-0 mt-0.5" />
               <div className="flex-1">{error}</div>
             </div>
           )}
 
-          <form onSubmit={handleSubmit} className="space-y-5">
-            {/* Identifier input (username, email, or mobile) */}
+          <form onSubmit={handleSubmit} className="space-y-4">
+            {/* Identifier input */}
             <div>
-              <label htmlFor="identifier" className="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">
-                Username, Email, or Mobile Number
+              <label htmlFor="identifier" className="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">
+                Username, Email, or Mobile
               </label>
               <div className="relative">
                 <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">
-                  <User className="w-5 h-5" />
+                  <User className="w-4 h-4" />
                 </div>
                 <input
                   id="identifier"
                   type="text"
                   required
                   value={identifier}
-                  onChange={(e) => setIdentifier(e.target.value)}
-                  placeholder="e.g. sumit, sumit@gmail.com, or +919876543210"
-                  className="w-full pl-11 pr-4 py-3 bg-slate-50 border border-slate-200 rounded-xl text-slate-900 placeholder-slate-400 text-sm focus:outline-none focus:ring-2 focus:ring-secondary/50 focus:border-secondary transition-all"
+                  onChange={(e) => {
+                    setIdentifier(e.target.value);
+                    setSelectedDemoRole(null);
+                  }}
+                  placeholder="e.g. admin@mskinstitute.in, student@mskinstitute.in..."
+                  className="w-full pl-10 pr-4 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-slate-900 placeholder-slate-400 text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-secondary/50 focus:border-secondary transition-all"
                 />
               </div>
-              <p className="text-[11px] text-slate-600 mt-1">
-                You can log in with your registered username, email address, or phone number.
-              </p>
             </div>
 
             {/* Password input */}
             <div>
-              <div className="flex items-center justify-between mb-1.5">
+              <div className="flex items-center justify-between mb-1">
                 <label htmlFor="password" className="block text-xs font-bold uppercase tracking-wider text-slate-700">
                   Password
                 </label>
@@ -175,7 +262,7 @@ export default function LoginPage() {
               </div>
               <div className="relative">
                 <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">
-                  <Lock className="w-5 h-5" />
+                  <Lock className="w-4 h-4" />
                 </div>
                 <input
                   id="password"
@@ -184,12 +271,12 @@ export default function LoginPage() {
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                   placeholder="••••••••••••"
-                  className="w-full pl-11 pr-11 py-3 bg-slate-50 border border-slate-200 rounded-xl text-slate-900 placeholder-slate-400 text-sm focus:outline-none focus:ring-2 focus:ring-secondary/50 focus:border-secondary transition-all"
+                  className="w-full pl-10 pr-10 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-slate-900 placeholder-slate-400 text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-secondary/50 focus:border-secondary transition-all"
                 />
                 <button
                   type="button"
                   onClick={() => setShowPassword(!showPassword)}
-                  className="absolute inset-y-0 right-0 pr-3.5 flex items-center text-slate-400 hover:text-slate-600 focus:outline-none"
+                  className="absolute inset-y-0 right-0 pr-3.5 flex items-center text-slate-400 hover:text-slate-600 focus:outline-none cursor-pointer"
                   aria-label={showPassword ? 'Hide password' : 'Show password'}
                 >
                   {showPassword ? <EyeOff className="w-4 h-4" /> : <Eye className="w-4 h-4" />}
@@ -197,8 +284,8 @@ export default function LoginPage() {
               </div>
             </div>
 
-            {/* Remember me & Security badge */}
-            <div className="flex items-center justify-between text-sm">
+            {/* Remember me & SSL */}
+            <div className="flex items-center justify-between text-xs pt-1">
               <label className="flex items-center gap-2 cursor-pointer select-none">
                 <input
                   type="checkbox"
@@ -206,11 +293,11 @@ export default function LoginPage() {
                   onChange={(e) => setRememberMe(e.target.checked)}
                   className="w-4 h-4 rounded text-secondary focus:ring-secondary border-slate-300"
                 />
-                <span className="text-slate-600 text-xs">Remember this device</span>
+                <span className="text-slate-600">Remember this session</span>
               </label>
 
               <span className="text-slate-600 text-[11px] flex items-center gap-1">
-                <ShieldCheck className="w-3.5 h-3.5 text-emerald-500" /> 256-Bit SSL
+                <ShieldCheck className="w-3.5 h-3.5 text-emerald-500" /> Auto Role Routing
               </span>
             </div>
 
@@ -218,16 +305,16 @@ export default function LoginPage() {
             <button
               type="submit"
               disabled={isSubmitting || authLoading}
-              className="w-full flex items-center justify-center gap-2 py-3.5 px-4 rounded-xl bg-secondary hover:bg-secondary-light text-white font-bold text-sm shadow-md shadow-secondary/20 transition-all duration-150 disabled:opacity-60 disabled:cursor-not-allowed group"
+              className="w-full flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-secondary hover:bg-secondary-light text-white font-bold text-sm shadow-md shadow-secondary/20 transition-all duration-150 disabled:opacity-60 disabled:cursor-not-allowed group cursor-pointer"
             >
               {isSubmitting ? (
                 <>
                   <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
-                  <span>Signing In...</span>
+                  <span>Authenticating...</span>
                 </>
               ) : (
                 <>
-                  <span>Sign In</span>
+                  <span>Sign In & Open Dashboard</span>
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
                 </>
               )}
@@ -235,11 +322,11 @@ export default function LoginPage() {
           </form>
 
           {/* Footer Link to Register */}
-          <div className="mt-8 pt-6 border-t border-slate-100 text-center">
-            <p className="text-sm text-slate-600">
-              Don&apos;t have an account yet?{' '}
+          <div className="mt-6 pt-4 border-t border-slate-100 text-center">
+            <p className="text-xs sm:text-sm text-slate-600">
+              New student or partner?{' '}
               <Link
-                href={`/register${redirectUrl !== '/' ? `?redirect=${encodeURIComponent(redirectUrl)}` : ''}`}
+                href="/register"
                 className="font-bold text-secondary hover:text-secondary-light underline-offset-4 hover:underline transition-colors"
               >
                 Create an account
@@ -249,5 +336,19 @@ export default function LoginPage() {
         </div>
       </div>
     </div>
+  );
+}
+
+export default function LoginPage() {
+  return (
+    <Suspense
+      fallback={
+        <div className="min-h-[calc(100vh-5rem)] flex items-center justify-center p-6 bg-slate-50">
+          <div className="animate-spin rounded-full h-10 w-10 border-b-2 border-secondary" />
+        </div>
+      }
+    >
+      <LoginFormContent />
+    </Suspense>
   );
 }

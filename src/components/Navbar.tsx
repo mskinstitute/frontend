@@ -525,14 +525,17 @@ export default function Navbar() {
             {/* Auth Button - Desktop */}
             {isAuthenticated && user ? (
               <Link
-                href="/profile"
+                href="/dashboard"
                 className="hidden md:inline-flex items-center gap-2 px-2.5 py-1.5 bg-slate-100 hover:bg-slate-200/80 text-slate-800 font-bold text-xs rounded-xl transition-all ml-1 border border-slate-200"
-                title={`Logged in as ${user.first_name} (${user.email})`}
+                title={`Logged in as ${user.first_name} (${user.role}) - Open Dashboard`}
               >
                 <div className="w-5 h-5 rounded-full bg-secondary text-white text-[10px] font-extrabold flex items-center justify-center uppercase shadow-xs">
                   {user.first_name?.[0] || 'U'}
                 </div>
                 <span className="truncate max-w-[90px]">{user.first_name}</span>
+                <span className="text-[10px] bg-secondary/15 text-secondary px-1 py-0.5 rounded font-semibold uppercase">
+                  Portal
+                </span>
               </Link>
             ) : (
               <Link
@@ -770,6 +773,26 @@ export default function Navbar() {
 
           {/* Mobile Footer CTAs & Admissions Helpline */}
           <div className="p-3 pt-2 pb-safe border-t border-border-subtle bg-slate-50/70 space-y-2">
+            {isAuthenticated && user ? (
+              <Link
+                href="/dashboard"
+                onClick={() => setIsOpen(false)}
+                className="w-full flex items-center justify-center gap-2 py-2.5 bg-primary hover:bg-primary-light text-white font-bold text-xs rounded-xl shadow-xs transition-colors"
+              >
+                <span>Open {user.role === 'admin' ? 'Super Admin' : user.role === 'staff' ? 'Faculty' : user.role === 'affiliate' ? 'Affiliate' : 'Student'} Dashboard</span>
+                <span>➔</span>
+              </Link>
+            ) : (
+              <Link
+                href="/login"
+                onClick={() => setIsOpen(false)}
+                className="w-full flex items-center justify-center gap-2 py-2.5 bg-slate-200 hover:bg-slate-300 text-slate-800 font-bold text-xs rounded-xl shadow-xs transition-colors"
+              >
+                <User className="w-3.5 h-3.5 text-slate-600" />
+                <span>Sign In to Student & Staff Portal</span>
+              </Link>
+            )}
+
             <Link
               href="/#book-demo"
               onClick={() => setIsOpen(false)}
