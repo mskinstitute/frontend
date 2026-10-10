@@ -19,13 +19,24 @@ export async function generateStaticParams() {
   for (const tut of tutorials) {
     try {
       const dirPath = path.join(process.cwd(), 'public', 'content', 'tutorials', tut.slug);
-      const files = await fs.readdir(dirPath);
-      for (const file of files) {
-        if (file.endsWith('.md')) {
+      const entries = await fs.readdir(dirPath, { withFileTypes: true });
+      for (const entry of entries) {
+        if (entry.isFile() && entry.name.endsWith('.md')) {
           paramsList.push({
             slug: tut.slug,
-            topicSlug: file.replace(/\.md$/, ''),
+            topicSlug: entry.name.replace(/\.md$/, ''),
           });
+        } else if (entry.isDirectory() && entry.name !== 'images') {
+          const subFiles = await fs.readdir(path.join(dirPath, entry.name));
+          for (const subFile of subFiles) {
+            if (subFile.endsWith('.md')) {
+              const cleanSlug = subFile.replace(/\.md$/, '').replace(/^\d+-/, '');
+              paramsList.push({
+                slug: tut.slug,
+                topicSlug: cleanSlug,
+              });
+            }
+          }
         }
       }
     } catch {

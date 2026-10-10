@@ -96,16 +96,29 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       for (const tut of tutorials) {
         const tutDir = path.join(tutorialsDir, tut.slug);
         if (fs.existsSync(tutDir)) {
-          const files = fs.readdirSync(tutDir);
-          for (const file of files) {
-            if (file.endsWith('.md')) {
-              const topicSlug = file.replace(/\.md$/, '');
+          const entries = fs.readdirSync(tutDir, { withFileTypes: true });
+          for (const entry of entries) {
+            if (entry.isFile() && entry.name.endsWith('.md')) {
+              const topicSlug = entry.name.replace(/\.md$/, '');
               tutorialTopicRoutes.push({
                 url: `${baseUrl}/tutorials/${tut.slug}/${topicSlug}`,
                 lastModified: new Date().toISOString().split('T')[0],
                 changeFrequency: 'monthly' as const,
                 priority: 0.7,
               });
+            } else if (entry.isDirectory() && entry.name !== 'images') {
+              const subFiles = fs.readdirSync(path.join(tutDir, entry.name));
+              for (const subFile of subFiles) {
+                if (subFile.endsWith('.md')) {
+                  const topicSlug = subFile.replace(/\.md$/, '').replace(/^\d+-/, '');
+                  tutorialTopicRoutes.push({
+                    url: `${baseUrl}/tutorials/${tut.slug}/${topicSlug}`,
+                    lastModified: new Date().toISOString().split('T')[0],
+                    changeFrequency: 'monthly' as const,
+                    priority: 0.7,
+                  });
+                }
+              }
             }
           }
         }

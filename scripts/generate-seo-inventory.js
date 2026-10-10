@@ -294,10 +294,25 @@ if (fs.existsSync(tutorialsDir)) {
       sitemap: true,
     });
 
-    const topicFiles = fs.readdirSync(tutDirPath).filter(f => f.endsWith('.md'));
+    const getTopicFiles = (dir) => {
+      let results = [];
+      const items = fs.readdirSync(dir, { withFileTypes: true });
+      for (const it of items) {
+        if (it.isFile() && it.name.endsWith('.md')) {
+          results.push(it.name);
+        } else if (it.isDirectory() && it.name !== 'images') {
+          const subItems = fs.readdirSync(path.join(dir, it.name));
+          for (const s of subItems) {
+            if (s.endsWith('.md')) results.push(s);
+          }
+        }
+      }
+      return results;
+    };
+    const topicFiles = getTopicFiles(tutDirPath);
     for (const tFile of topicFiles) {
       tutorialTopicCount++;
-      const topicSlug = tFile.replace(/\.md$/, '');
+      const topicSlug = tFile.replace(/\.md$/, '').replace(/^\d+-/, '');
       inventory.push({
         url: `${BASE_URL}/tutorials/${tutSlug}/${topicSlug}`,
         page_type: 'tutorial',

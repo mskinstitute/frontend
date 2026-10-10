@@ -67,8 +67,19 @@ tutorials.forEach(t => {
   validRoutes.add(`/tutorials/${t.slug}`);
   const subDir = path.join(tutDir, t.slug);
   if (fs.existsSync(subDir)) {
-    fs.readdirSync(subDir).filter(f => f.endsWith('.md')).forEach(f => {
-      validRoutes.add(`/tutorials/${t.slug}/${f.replace(/\.md$/, '')}`);
+    const getMdFiles = (dir) => {
+      let results = [];
+      fs.readdirSync(dir, { withFileTypes: true }).forEach(ent => {
+        if (ent.isFile() && ent.name.endsWith('.md')) {
+          results.push(ent.name);
+        } else if (ent.isDirectory() && ent.name !== 'images') {
+          fs.readdirSync(path.join(dir, ent.name)).filter(f => f.endsWith('.md')).forEach(f => results.push(f));
+        }
+      });
+      return results;
+    };
+    getMdFiles(subDir).forEach(f => {
+      validRoutes.add(`/tutorials/${t.slug}/${f.replace(/\.md$/, '').replace(/^\d+-/, '')}`);
     });
   }
 });

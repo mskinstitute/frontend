@@ -125,20 +125,56 @@ export async function fetchTutorialTopic(
 
   // Read the markdown file from disk
   let rawMarkdown = '';
+  const tutorialDir = path.join(
+    process.cwd(),
+    'public',
+    'content',
+    'tutorials',
+    tutorial.slug
+  );
+
   for (const filename of candidates) {
     try {
-      const filePath = path.join(
-        process.cwd(),
-        'public',
-        'content',
-        'tutorials',
-        tutorial.slug,
-        filename
-      );
+      const filePath = path.join(tutorialDir, filename);
       rawMarkdown = await fs.readFile(filePath, 'utf8');
       if (rawMarkdown) break;
     } catch {
       // Continue to next candidate
+    }
+  }
+
+  // If not found in tutorial root, search in chapter subdirectories
+  if (!rawMarkdown) {
+    try {
+      const entries = await fs.readdir(tutorialDir, { withFileTypes: true });
+      const subdirs = entries
+        .filter((e) => e.isDirectory() && e.name !== 'images')
+        .map((e) => e.name);
+
+      for (const sub of subdirs) {
+        try {
+          const subFiles = await fs.readdir(path.join(tutorialDir, sub));
+          for (const filename of candidates) {
+            const cleanCandidate = filename.replace(/^\d+-/, '');
+            const matchedFile = subFiles.find((f) => {
+              if (f === filename) return true;
+              const cleanF = f.replace(/^\d+-/, '');
+              return cleanF === filename || cleanF === cleanCandidate;
+            });
+
+            if (matchedFile) {
+              const subFilePath = path.join(tutorialDir, sub, matchedFile);
+              rawMarkdown = await fs.readFile(subFilePath, 'utf8');
+              if (rawMarkdown) break;
+            }
+          }
+          if (rawMarkdown) break;
+        } catch {
+          // Continue to next subdir
+        }
+      }
+    } catch {
+      // Directory read failed
     }
   }
 
