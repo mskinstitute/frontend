@@ -30,6 +30,7 @@ INSTALLED_APPS = [
 
     # Local apps
     'authentication',
+    'superadmin',
 ]
 
 MIDDLEWARE = [

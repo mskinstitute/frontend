@@ -16,13 +16,21 @@ def api_root_view(request):
             "profile": "/api/auth/me/",
             "forgot_password": "/api/auth/forgot-password/",
             "reset_password": "/api/auth/reset-password/",
+        },
+        "admin_endpoints": {
+            "dashboard": "/api/admin/dashboard/",
+            "branches": "/api/admin/branches/",
+            "staff": "/api/admin/staff/",
+            "students": "/api/admin/students/",
+            "affiliates": "/api/admin/affiliates/",
         }
     })
 
 urlpatterns = [
     path('', api_root_view, name='api_root'),
-    path('admin/', admin.site.urls),
+    path('django-admin/', admin.site.urls),
     path('api/auth/', include('authentication.urls', namespace='authentication')),
+    path('api/admin/', include('superadmin.urls', namespace='superadmin')),
 ]
 
 if settings.DEBUG:
