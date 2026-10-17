@@ -17,9 +17,12 @@ import {
   Building2,
   Users,
   Share2,
-  Zap
+  WifiOff,
+  BookOpen,
+  Video
 } from 'lucide-react';
 import { useAuth } from '@/context/AuthContext';
+import { useServerStatus } from '@/context/ServerStatusContext';
 import { getRoleDashboardUrl } from '@/lib/roleNavigation';
 
 function LoginFormContent() {
@@ -28,6 +31,7 @@ function LoginFormContent() {
   const redirectUrl = searchParams.get('redirect');
 
   const { login, user, isAuthenticated, isLoading: authLoading } = useAuth();
+  const { isServerOnline } = useServerStatus();
 
   const [identifier, setIdentifier] = useState('');
   const [password, setPassword] = useState('');
@@ -35,7 +39,15 @@ function LoginFormContent() {
   const [rememberMe, setRememberMe] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [selectedDemoRole, setSelectedDemoRole] = useState<string | null>(null);
+
+  const registered = searchParams.get('registered') === '1';
+  const emailParam = searchParams.get('email');
+
+  useEffect(() => {
+    if (emailParam) {
+      setIdentifier(emailParam);
+    }
+  }, [emailParam]);
 
   useEffect(() => {
     if (isAuthenticated && user) {
@@ -58,6 +70,11 @@ function LoginFormContent() {
       return;
     }
 
+    if (!isServerOnline) {
+      setError('The authentication server is currently offline. Sign in is only needed for dashboards; you can freely browse tutorials and courses without logging in.');
+      return;
+    }
+
     setIsSubmitting(true);
     const loggedInUser = await login({
       identifier: trimmedIdentifier,
@@ -68,27 +85,6 @@ function LoginFormContent() {
     if (loggedInUser) {
       const target = redirectUrl && redirectUrl !== '/' ? redirectUrl : getRoleDashboardUrl(loggedInUser.role);
       router.push(target);
-    }
-  };
-
-  const handleSelectDemoRole = (role: 'admin' | 'staff' | 'student' | 'affiliate' | 'branch') => {
-    setSelectedDemoRole(role);
-    setError(null);
-    if (role === 'admin') {
-      setIdentifier('admin@mskinstitute.in');
-      setPassword('Msk@123456');
-    } else if (role === 'branch') {
-      setIdentifier('branch@mskinstitute.in');
-      setPassword('Msk@123456');
-    } else if (role === 'staff') {
-      setIdentifier('staff@mskinstitute.in');
-      setPassword('Msk@123456');
-    } else if (role === 'student') {
-      setIdentifier('student@mskinstitute.in');
-      setPassword('Msk@123456');
-    } else if (role === 'affiliate') {
-      setIdentifier('affiliate@mskinstitute.in');
-      setPassword('Msk@123456');
     }
   };
 
@@ -159,75 +155,67 @@ function LoginFormContent() {
             <p className="text-slate-600 text-xs sm:text-sm mt-1">
               Enter your credentials to access your dedicated role dashboard.
             </p>
+            <div className="mt-3 p-3 rounded-xl bg-orange-50 border border-orange-200 text-xs text-orange-950 flex items-center justify-between gap-2">
+              <span className="font-medium">Looking for a Free Demo Class? No account needed!</span>
+              <Link href="/book-demo" className="font-extrabold text-[#FF6B00] hover:underline shrink-0">
+                Book Demo ➔
+              </Link>
+            </div>
           </div>
 
-          {/* Quick Demo Role Autofill Bar */}
-          <div className="mb-6 p-3.5 rounded-2xl bg-slate-50 border border-slate-200/80">
-            <div className="flex items-center justify-between text-[11px] font-bold text-slate-600 mb-2">
-              <span className="flex items-center gap-1 text-slate-700">
-                <Zap className="w-3.5 h-3.5 text-secondary" />
-                <span>Test 1-Click Role Login:</span>
-              </span>
-              <span className="text-slate-600 font-mono">pwd: Msk@123456</span>
+          {/* Backend Offline Notice: Reassures user that all tutorials, courses & live batches are open */}
+          {!isServerOnline && (
+            <div className="mb-6 p-4 rounded-2xl bg-amber-50 border border-amber-200/90 text-amber-950 shadow-xs animate-in fade-in duration-200">
+              <div className="flex items-start gap-3">
+                <div className="p-2 rounded-xl bg-amber-100 text-amber-800 flex-shrink-0 mt-0.5">
+                  <WifiOff className="w-5 h-5" />
+                </div>
+                <div className="flex-1 min-w-0">
+                  <h3 className="text-sm font-bold text-amber-950 flex items-center gap-1.5">
+                    <span>Authentication Server Offline</span>
+                    <span className="text-[10px] bg-amber-200/80 text-amber-900 px-1.5 py-0.5 rounded font-black uppercase">
+                      No Login Needed
+                    </span>
+                  </h3>
+                  <p className="text-xs text-amber-900/90 mt-1 leading-relaxed">
+                    Account sign-in is only required for student and staff dashboards. All tutorials, course details, study materials, and upcoming live batches are 100% free to browse right now without signing in!
+                  </p>
+                  <div className="mt-3 flex flex-wrap gap-2">
+                    <Link
+                      href="/tutorials"
+                      className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white border border-amber-300 text-amber-950 text-xs font-bold shadow-2xs hover:bg-amber-100 transition-colors"
+                    >
+                      <BookOpen className="w-3.5 h-3.5 text-secondary" />
+                      <span>Browse Tutorials</span>
+                    </Link>
+                    <Link
+                      href="/courses"
+                      className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white border border-amber-300 text-amber-950 text-xs font-bold shadow-2xs hover:bg-amber-100 transition-colors"
+                    >
+                      <span>Explore Courses</span>
+                    </Link>
+                    <Link
+                      href="/live"
+                      className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-secondary text-white text-xs font-bold shadow-2xs hover:bg-secondary-light transition-colors"
+                    >
+                      <Video className="w-3.5 h-3.5" />
+                      <span>Upcoming Live Batches</span>
+                    </Link>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div className="grid grid-cols-2 sm:grid-cols-5 gap-1.5">
-              <button
-                type="button"
-                onClick={() => handleSelectDemoRole('admin')}
-                className={`py-1.5 px-2 rounded-xl text-[11px] font-bold transition-all cursor-pointer ${
-                  selectedDemoRole === 'admin'
-                    ? 'bg-primary text-white shadow-xs'
-                    : 'bg-white border border-slate-200 text-slate-700 hover:border-primary'
-                }`}
-              >
-                👑 Admin
-              </button>
-              <button
-                type="button"
-                onClick={() => handleSelectDemoRole('branch')}
-                className={`py-1.5 px-2 rounded-xl text-[11px] font-bold transition-all cursor-pointer ${
-                  selectedDemoRole === 'branch'
-                    ? 'bg-primary text-white shadow-xs'
-                    : 'bg-white border border-slate-200 text-slate-700 hover:border-primary'
-                }`}
-              >
-                🏛️ Branch
-              </button>
-              <button
-                type="button"
-                onClick={() => handleSelectDemoRole('staff')}
-                className={`py-1.5 px-2 rounded-xl text-[11px] font-bold transition-all cursor-pointer ${
-                  selectedDemoRole === 'staff'
-                    ? 'bg-primary text-white shadow-xs'
-                    : 'bg-white border border-slate-200 text-slate-700 hover:border-primary'
-                }`}
-              >
-                👨‍🏫 Staff
-              </button>
-              <button
-                type="button"
-                onClick={() => handleSelectDemoRole('student')}
-                className={`py-1.5 px-2 rounded-xl text-[11px] font-bold transition-all cursor-pointer ${
-                  selectedDemoRole === 'student'
-                    ? 'bg-primary text-white shadow-xs'
-                    : 'bg-white border border-slate-200 text-slate-700 hover:border-primary'
-                }`}
-              >
-                🎓 Student
-              </button>
-              <button
-                type="button"
-                onClick={() => handleSelectDemoRole('affiliate')}
-                className={`py-1.5 px-2 rounded-xl text-[11px] font-bold transition-all cursor-pointer ${
-                  selectedDemoRole === 'affiliate'
-                    ? 'bg-primary text-white shadow-xs'
-                    : 'bg-white border border-slate-200 text-slate-700 hover:border-primary'
-                }`}
-              >
-                🤝 Affiliate
-              </button>
+          )}
+
+          {registered && (
+            <div className="mb-5 p-4 rounded-2xl bg-emerald-50 border border-emerald-200 text-emerald-800 text-xs flex items-start gap-3 shadow-xs animate-in fade-in">
+              <CheckCircle2 className="w-5 h-5 text-emerald-600 flex-shrink-0 mt-0.5" />
+              <div>
+                <p className="font-bold text-sm text-emerald-950">Registration Successful! 🎉</p>
+                <p className="mt-0.5 text-emerald-700">Please sign in with your credentials to access your dashboard.</p>
+              </div>
             </div>
-          </div>
+          )}
 
           {error && (
             <div className="mb-5 p-4 rounded-xl bg-red-50 border border-red-200 text-red-700 text-sm flex items-start gap-3 animate-in fade-in duration-200">
@@ -251,11 +239,8 @@ function LoginFormContent() {
                   type="text"
                   required
                   value={identifier}
-                  onChange={(e) => {
-                    setIdentifier(e.target.value);
-                    setSelectedDemoRole(null);
-                  }}
-                  placeholder="e.g. admin@mskinstitute.in, student@mskinstitute.in..."
+                  onChange={(e) => setIdentifier(e.target.value)}
+                  placeholder="Enter your username, email, or mobile"
                   className="w-full pl-10 pr-4 py-2.5 bg-slate-50 border border-slate-200 rounded-xl text-slate-900 placeholder-slate-400 text-xs sm:text-sm focus:outline-none focus:ring-2 focus:ring-secondary/50 focus:border-secondary transition-all"
                 />
               </div>
@@ -318,13 +303,22 @@ function LoginFormContent() {
             {/* Submit Button */}
             <button
               type="submit"
-              disabled={isSubmitting || authLoading}
-              className="w-full flex items-center justify-center gap-2 py-3 px-4 rounded-xl bg-secondary hover:bg-secondary-light text-white font-bold text-sm shadow-md shadow-secondary/20 transition-all duration-150 disabled:opacity-60 disabled:cursor-not-allowed group cursor-pointer"
+              disabled={isSubmitting || authLoading || !isServerOnline}
+              className={`w-full flex items-center justify-center gap-2 py-3 px-4 rounded-xl font-bold text-sm shadow-md transition-all duration-150 disabled:opacity-75 disabled:cursor-not-allowed disabled:pointer-events-none group ${
+                !isServerOnline
+                  ? 'bg-slate-200 text-slate-500 border border-slate-300 shadow-none'
+                  : 'bg-secondary hover:bg-secondary-light text-white shadow-secondary/20 cursor-pointer'
+              }`}
             >
-              {isSubmitting ? (
+              {!isServerOnline ? (
+                <>
+                  <WifiOff className="w-4 h-4 text-slate-400" />
+                  <span>Server Offline (Sign In Unavailable)</span>
+                </>
+              ) : isSubmitting ? (
                 <>
                   <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
-                  <span>Authenticating...</span>
+                  <span>Authenticating... Please wait</span>
                 </>
               ) : (
                 <>
@@ -337,15 +331,21 @@ function LoginFormContent() {
 
           {/* Footer Link to Register */}
           <div className="mt-6 pt-4 border-t border-slate-100 text-center">
-            <p className="text-xs sm:text-sm text-slate-600">
-              New student or partner?{' '}
-              <Link
-                href="/register"
-                className="font-bold text-secondary hover:text-secondary-light underline-offset-4 hover:underline transition-colors"
-              >
-                Create an account
-              </Link>
-            </p>
+            {isServerOnline ? (
+              <p className="text-xs sm:text-sm text-slate-600">
+                New student or partner?{' '}
+                <Link
+                  href="/register"
+                  className="font-bold text-secondary hover:text-secondary-light underline-offset-4 hover:underline transition-colors"
+                >
+                  Create an account
+                </Link>
+              </p>
+            ) : (
+              <p className="text-xs text-slate-500">
+                No sign-in or account is required to access Tutorials, Course syllabi, and Upcoming Batches.
+              </p>
+            )}
           </div>
         </div>
       </div>

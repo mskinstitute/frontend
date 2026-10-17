@@ -15,6 +15,7 @@ User-agent: cohere-ai
 User-agent: Diffbot
 User-agent: FacebookBot
 Allow: /
+Allow: /book-demo
 Allow: /courses/
 Allow: /tutorials/
 Allow: /study-material/

@@ -125,7 +125,7 @@ export default async function MockTestHubPage() {
               <span>AI Career Finder</span>
             </Link>
             <Link
-              href="/contact"
+              href="/book-demo"
               className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-secondary hover:bg-secondary-light text-white font-bold text-xs rounded-xl shadow-xs transition-colors whitespace-nowrap text-center"
             >
               <span>Book Free Demo Class</span>

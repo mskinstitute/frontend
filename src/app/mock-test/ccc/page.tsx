@@ -186,7 +186,7 @@ export default function CccMockTestPage() {
               </p>
             </div>
             <Link
-              href="/contact"
+              href="/book-demo?course=NIELIT%20CCC"
               className="inline-flex items-center gap-2 px-5 py-2.5 bg-secondary hover:bg-secondary-light text-white font-bold text-xs rounded-xl shadow-xs transition-colors whitespace-nowrap"
             >
               <span>Book Free Demo Class</span>

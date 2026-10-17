@@ -9,10 +9,12 @@ import PwaUpdateToast from '@/components/PwaUpdateToast';
 import { PwaProvider } from '@/context/PwaContext';
 import { LiveStatusProvider } from '@/context/LiveStatusContext';
 import { AuthProvider } from '@/context/AuthContext';
+import { ServerStatusProvider } from '@/context/ServerStatusContext';
 import { Plus_Jakarta_Sans } from 'next/font/google';
 import Analytics from '@/components/Analytics';
 import { GoogleTagManagerNoScript } from '@/components/GoogleTagManager';
 import FloatingWhatsAppCTA from '@/components/FloatingWhatsAppCTA';
+import GlobalNavigationLoader from '@/components/GlobalNavigationLoader';
 import socialRegistry from '../../public/data/social-links.json';
 import './globals.css';
 
@@ -182,23 +184,26 @@ export default function RootLayout({
       </head>
       <body className={`min-h-screen flex flex-col bg-white text-text-main antialiased selection:bg-secondary selection:text-white ${jakarta.className} ${jakarta.variable}`}>
         <GoogleTagManagerNoScript />
+        <GlobalNavigationLoader />
         <PwaProvider>
-          <AuthProvider>
-            <LiveStatusProvider>
-              <Analytics />
-              <PwaRegister />
-              <InstallAppModal />
-              <PwaUpdateToast />
-              <Navbar />
-              <main className="flex-grow pb-20 md:pb-0 relative">
-                {children}
-              </main>
-              <Footer />
-              <FloatingWhatsAppCTA />
-              <MobileBottomNav />
-              <Toaster position="top-right" toastOptions={{ duration: 4000 }} />
-            </LiveStatusProvider>
-          </AuthProvider>
+          <ServerStatusProvider>
+            <AuthProvider>
+              <LiveStatusProvider>
+                <Analytics />
+                <PwaRegister />
+                <InstallAppModal />
+                <PwaUpdateToast />
+                <Navbar />
+                <main className="flex-grow pb-20 md:pb-0 relative">
+                  {children}
+                </main>
+                <Footer />
+                <FloatingWhatsAppCTA />
+                <MobileBottomNav />
+                <Toaster position="top-right" toastOptions={{ duration: 4000 }} />
+              </LiveStatusProvider>
+            </AuthProvider>
+          </ServerStatusProvider>
         </PwaProvider>
       </body>
     </html>

@@ -14,13 +14,18 @@ import {
   Eye,
   EyeOff,
   Sparkles,
-  ShieldCheck
+  ShieldCheck,
+  WifiOff,
+  BookOpen,
+  Video
 } from 'lucide-react';
 import { useAuth } from '@/context/AuthContext';
+import { useServerStatus } from '@/context/ServerStatusContext';
 
 export default function ForgotPasswordPage() {
   const router = useRouter();
   const { forgotPassword, resetPassword } = useAuth();
+  const { isServerOnline } = useServerStatus();
 
   const [step, setStep] = useState<1 | 2>(1);
   const [identifier, setIdentifier] = useState('');
@@ -41,6 +46,11 @@ export default function ForgotPasswordPage() {
     const trimmed = identifier.trim();
     if (!trimmed) {
       setError('Please enter your email, phone, or username.');
+      return;
+    }
+
+    if (!isServerOnline) {
+      setError('The authentication server is currently offline. Password reset is temporarily unavailable.');
       return;
     }
 
@@ -72,6 +82,11 @@ export default function ForgotPasswordPage() {
     }
     if (newPassword !== confirmPassword) {
       setError('Passwords do not match.');
+      return;
+    }
+
+    if (!isServerOnline) {
+      setError('The authentication server is currently offline. Password reset is temporarily unavailable.');
       return;
     }
 
@@ -121,6 +136,38 @@ export default function ForgotPasswordPage() {
               : 'Enter the verification code and your new password below.'}
           </p>
         </div>
+
+        {/* Server Offline Banner */}
+        {!isServerOnline && (
+          <div className="mb-5 p-4 rounded-2xl bg-amber-50 border border-amber-200/90 text-amber-950 shadow-xs animate-in fade-in duration-200">
+            <div className="flex items-start gap-3">
+              <div className="p-2 rounded-xl bg-amber-100 text-amber-800 flex-shrink-0 mt-0.5">
+                <WifiOff className="w-5 h-5" />
+              </div>
+              <div className="flex-1 min-w-0">
+                <h3 className="text-sm font-bold text-amber-950">Authentication Server Offline</h3>
+                <p className="text-xs text-amber-900/90 mt-1 leading-relaxed">
+                  The backend server is currently offline. Password reset requires a live server connection, but you can continue browsing all tutorials, courses, and live batches freely!
+                </p>
+                <div className="mt-3 flex flex-wrap gap-2">
+                  <Link
+                    href="/tutorials"
+                    className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white border border-amber-300 text-amber-950 text-xs font-bold shadow-2xs hover:bg-amber-100 transition-colors"
+                  >
+                    <BookOpen className="w-3.5 h-3.5 text-secondary" />
+                    <span>Browse Tutorials</span>
+                  </Link>
+                  <Link
+                    href="/courses"
+                    className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white border border-amber-300 text-amber-950 text-xs font-bold shadow-2xs hover:bg-amber-100 transition-colors"
+                  >
+                    <span>Browse Courses</span>
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+        )}
 
         {error && (
           <div className="mb-5 p-4 rounded-xl bg-red-50 border border-red-200 text-red-700 text-sm flex items-start gap-3 animate-in fade-in duration-200">
@@ -177,13 +224,22 @@ export default function ForgotPasswordPage() {
 
             <button
               type="submit"
-              disabled={isSubmitting}
-              className="w-full flex items-center justify-center gap-2 py-3.5 px-4 rounded-xl bg-secondary hover:bg-secondary-light text-white font-bold text-sm shadow-md shadow-secondary/20 transition-all duration-150 disabled:opacity-60"
+              disabled={isSubmitting || !isServerOnline}
+              className={`w-full flex items-center justify-center gap-2 py-3.5 px-4 rounded-xl font-bold text-sm shadow-md transition-all duration-150 disabled:pointer-events-none disabled:cursor-not-allowed ${
+                !isServerOnline
+                  ? 'bg-slate-200 text-slate-500 border border-slate-300 shadow-none'
+                  : 'bg-secondary hover:bg-secondary-light text-white shadow-secondary/20 cursor-pointer disabled:opacity-60'
+              }`}
             >
-              {isSubmitting ? (
+              {!isServerOnline ? (
+                <>
+                  <WifiOff className="w-4 h-4 text-slate-400" />
+                  <span>Server Offline (Reset Unavailable)</span>
+                </>
+              ) : isSubmitting ? (
                 <>
                   <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
-                  <span>Sending Code...</span>
+                  <span>Sending Code... Please wait</span>
                 </>
               ) : (
                 <>
@@ -263,12 +319,12 @@ export default function ForgotPasswordPage() {
             <button
               type="submit"
               disabled={isSubmitting}
-              className="w-full mt-2 flex items-center justify-center gap-2 py-3.5 px-4 rounded-xl bg-secondary hover:bg-secondary-light text-white font-bold text-sm shadow-md shadow-secondary/20 transition-all duration-150 disabled:opacity-60"
+              className="w-full mt-2 flex items-center justify-center gap-2 py-3.5 px-4 rounded-xl bg-secondary hover:bg-secondary-light text-white font-bold text-sm shadow-md shadow-secondary/20 transition-all duration-150 disabled:opacity-60 disabled:pointer-events-none disabled:cursor-not-allowed cursor-pointer"
             >
               {isSubmitting ? (
                 <>
                   <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
-                  <span>Resetting Password...</span>
+                  <span>Resetting Password... Please wait</span>
                 </>
               ) : (
                 <>

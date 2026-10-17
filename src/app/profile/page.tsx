@@ -13,19 +13,70 @@ import {
   Sparkles,
   BookOpen,
   Award,
-  ArrowRight
+  ArrowRight,
+  WifiOff,
+  Video
 } from 'lucide-react';
 import { useAuth } from '@/context/AuthContext';
+import { useServerStatus } from '@/context/ServerStatusContext';
 
 export default function ProfilePage() {
   const router = useRouter();
   const { user, isAuthenticated, isLoading, logout } = useAuth();
+  const { isServerOnline } = useServerStatus();
 
   useEffect(() => {
     if (!isLoading && !isAuthenticated) {
+      if (!isServerOnline) return;
       router.push('/login?redirect=/profile');
     }
-  }, [isLoading, isAuthenticated, router]);
+  }, [isLoading, isAuthenticated, router, isServerOnline]);
+
+  if (!isAuthenticated && !isServerOnline) {
+    return (
+      <div className="min-h-[70vh] flex items-center justify-center p-4">
+        <div className="max-w-md w-full bg-white rounded-3xl p-8 shadow-xl border border-slate-200 text-center">
+          <div className="w-16 h-16 rounded-2xl bg-amber-50 text-amber-600 flex items-center justify-center mx-auto mb-4 border border-amber-200">
+            <WifiOff className="w-8 h-8" />
+          </div>
+          <h2 className="text-xl font-black text-slate-900 tracking-tight">
+            Profile Requires Server Connection
+          </h2>
+          <p className="text-xs text-slate-600 mt-2 leading-relaxed">
+            The MSK backend server is currently offline or unreachable. Profile access requires an active session, but you can freely explore all tutorials, courses, and upcoming live batches without signing in!
+          </p>
+          <div className="mt-6 flex flex-col gap-2.5">
+            <Link
+              href="/tutorials"
+              className="w-full py-2.5 px-4 rounded-xl bg-primary hover:bg-primary-light text-white font-bold text-xs shadow-xs transition-colors flex items-center justify-center gap-1.5"
+            >
+              <BookOpen className="w-3.5 h-3.5 text-secondary" />
+              <span>Browse Free Tutorials</span>
+            </Link>
+            <Link
+              href="/courses"
+              className="w-full py-2.5 px-4 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold text-xs transition-colors"
+            >
+              Explore All Courses
+            </Link>
+            <Link
+              href="/live"
+              className="w-full py-2.5 px-4 rounded-xl bg-secondary hover:bg-secondary-light text-white font-bold text-xs shadow-xs transition-colors flex items-center justify-center gap-1.5"
+            >
+              <Video className="w-3.5 h-3.5" />
+              <span>Upcoming Live Batches</span>
+            </Link>
+            <Link
+              href="/"
+              className="text-xs text-slate-500 hover:text-slate-800 font-semibold pt-1"
+            >
+              Return to Home
+            </Link>
+          </div>
+        </div>
+      </div>
+    );
+  }
 
   if (isLoading || !user) {
     return (

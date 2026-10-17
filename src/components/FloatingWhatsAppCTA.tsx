@@ -21,8 +21,8 @@ export default function FloatingWhatsAppCTA() {
 
   if (!mounted) return null;
 
-  // Don't display in admin dashboard or printable certificate views
-  if (pathname.startsWith('/admin') || pathname.startsWith('/verify-certificate')) {
+  // Don't display in admin/role dashboard or printable certificate views
+  if (pathname.startsWith('/admin') || pathname.startsWith('/dashboard') || pathname.startsWith('/verify-certificate')) {
     return null;
   }
 

@@ -1226,10 +1226,19 @@ export default function StudyMaterialClient({
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full flex items-center justify-center gap-1.5 py-3 bg-secondary hover:bg-secondary-light text-white font-bold text-sm rounded-xl transition-colors shadow disabled:opacity-75 disabled:cursor-not-allowed cursor-pointer"
+                className="w-full flex items-center justify-center gap-1.5 py-3 bg-secondary hover:bg-secondary-light text-white font-bold text-sm rounded-xl transition-colors shadow disabled:opacity-75 disabled:cursor-not-allowed disabled:pointer-events-none cursor-pointer"
               >
-                {isSubmitting ? 'Submitting request...' : 'Submit Inquiry Request'}
-                <Send className="w-4 h-4" />
+                {isSubmitting ? (
+                  <>
+                    <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
+                    <span>Submitting request... Please wait</span>
+                  </>
+                ) : (
+                  <>
+                    <span>Submit Inquiry Request</span>
+                    <Send className="w-4 h-4" />
+                  </>
+                )}
               </button>
             </form>
           </div>

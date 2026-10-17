@@ -11,6 +11,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   // Base static routes - Canonical 200 OK routes only (excluding redirects like /notes)
   const routes = [
     '',
+    '/book-demo',
     '/courses',
     '/learning-paths',
     '/projects',
@@ -39,7 +40,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     url: `${baseUrl}${route}`,
     lastModified: new Date().toISOString().split('T')[0],
     changeFrequency: 'daily' as const,
-    priority: route === '' ? 1.0 : route === '/courses' || route === '/learning-paths' || route === '/mock-test' || route === '/mock-test/ccc' || route === '/career-finder' || route === '/live-batches' || route === '/locations' ? 0.9 : 0.8,
+    priority: route === '' ? 1.0 : route === '/book-demo' ? 0.95 : route === '/courses' || route === '/learning-paths' || route === '/mock-test' || route === '/mock-test/ccc' || route === '/career-finder' || route === '/live-batches' || route === '/locations' ? 0.9 : 0.8,
   }));
 
   try {

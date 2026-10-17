@@ -1,96 +1,92 @@
 'use client';
 
 import React, { useEffect } from 'react';
-import { useRouter } from 'next/navigation';
 import Link from 'next/link';
+import { useRouter } from 'next/navigation';
+import { WifiOff, BookOpen, Video } from 'lucide-react';
 import { useAuth } from '@/context/AuthContext';
-import { getRoleDashboardUrl, getRoleDisplayName } from '@/lib/roleNavigation';
-import {
-  GraduationCap,
-  Users,
-  Share2,
-  ShieldCheck,
-  Building2,
-  ArrowRight,
-  Sparkles,
-  Loader2
-} from 'lucide-react';
+import { useServerStatus } from '@/context/ServerStatusContext';
+import { getRoleDashboardUrl } from '@/lib/roleNavigation';
 
 export default function DashboardIndexPage() {
   const router = useRouter();
   const { user, isAuthenticated, isLoading } = useAuth();
+  const { isServerOnline } = useServerStatus();
 
   useEffect(() => {
-    if (!isLoading) {
-      if (isAuthenticated && user) {
-        const destination = getRoleDashboardUrl(user.role);
-        router.replace(destination);
-      } else {
-        router.replace('/login?redirect=/dashboard');
-      }
+    if (isLoading) return;
+
+    if (!isAuthenticated || !user) {
+      if (!isServerOnline) return;
+      router.replace('/login?redirect=/dashboard');
+      return;
     }
-  }, [isAuthenticated, user, isLoading, router]);
 
-  return (
-    <div className="min-h-[calc(100vh-5rem)] flex flex-col items-center justify-center p-6 bg-gradient-to-br from-slate-50 via-sky-50/20 to-orange-50/30">
-      <div className="max-w-md w-full bg-white rounded-2xl shadow-xl border border-slate-200/80 p-8 text-center space-y-6">
-        <div className="w-16 h-16 bg-primary/10 text-primary rounded-2xl mx-auto flex items-center justify-center">
-          <Loader2 className="w-8 h-8 animate-spin text-secondary" />
-        </div>
+    const destination = getRoleDashboardUrl(user.role);
+    router.replace(destination);
+  }, [isAuthenticated, user, isLoading, router, isServerOnline]);
 
-        <div>
-          <h1 className="text-xl font-bold text-slate-900">Directing to your Dashboard...</h1>
-          <p className="text-sm text-slate-600 mt-1">
-            {isAuthenticated && user
-              ? `Authenticating role: ${getRoleDisplayName(user.role)}`
-              : 'Verifying session credentials...'}
+  if (!isAuthenticated && !isServerOnline) {
+    return (
+      <div className="min-h-screen bg-[#071B2F] flex items-center justify-center p-6 text-center">
+        <div className="max-w-md w-full bg-white rounded-3xl p-8 shadow-2xl border border-slate-200">
+          <div className="w-16 h-16 rounded-2xl bg-amber-50 text-amber-600 flex items-center justify-center mx-auto mb-4 border border-amber-200">
+            <WifiOff className="w-8 h-8" />
+          </div>
+          <h2 className="text-xl font-black text-slate-900 tracking-tight">
+            Dashboard Requires Server Connection
+          </h2>
+          <p className="text-xs text-slate-600 mt-2 leading-relaxed">
+            The MSK backend server is currently offline or unreachable. Sign-in is required to access student, branch, and staff dashboards, but you can freely explore all tutorials, courses, and upcoming live batches without signing in!
           </p>
-        </div>
-
-        {/* Quick Fallback / Switcher in case client side navigation is delayed */}
-        <div className="pt-4 border-t border-slate-100 space-y-2">
-          <p className="text-xs font-semibold uppercase tracking-wider text-slate-400">
-            Direct Role Access
-          </p>
-          <div className="grid grid-cols-2 gap-2 text-xs">
+          <div className="mt-6 flex flex-col gap-2.5">
             <Link
-              href="/dashboard/student"
-              className="p-2.5 rounded-lg border border-slate-200 hover:border-secondary hover:bg-orange-50/50 text-slate-700 flex items-center justify-center gap-1.5 font-medium transition-colors"
+              href="/tutorials"
+              className="w-full py-2.5 px-4 rounded-xl bg-primary hover:bg-primary-light text-white font-bold text-xs shadow-xs transition-colors flex items-center justify-center gap-1.5"
             >
-              <GraduationCap className="w-3.5 h-3.5 text-secondary" />
-              Student Portal
+              <BookOpen className="w-3.5 h-3.5 text-secondary" />
+              <span>Browse Free Tutorials</span>
             </Link>
             <Link
-              href="/dashboard/branch"
-              className="p-2.5 rounded-lg border border-slate-200 hover:border-amber-500 hover:bg-amber-50/50 text-slate-700 flex items-center justify-center gap-1.5 font-medium transition-colors"
+              href="/courses"
+              className="w-full py-2.5 px-4 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-800 font-bold text-xs transition-colors"
             >
-              <Building2 className="w-3.5 h-3.5 text-amber-600" />
-              Branch / Franchise
+              Explore All Courses
             </Link>
             <Link
-              href="/dashboard/staff"
-              className="p-2.5 rounded-lg border border-slate-200 hover:border-primary hover:bg-slate-50 text-slate-700 flex items-center justify-center gap-1.5 font-medium transition-colors"
+              href="/live"
+              className="w-full py-2.5 px-4 rounded-xl bg-secondary hover:bg-secondary-light text-white font-bold text-xs shadow-xs transition-colors flex items-center justify-center gap-1.5"
             >
-              <Users className="w-3.5 h-3.5 text-primary" />
-              Staff Portal
+              <Video className="w-3.5 h-3.5" />
+              <span>Upcoming Live Batches</span>
             </Link>
             <Link
-              href="/dashboard/affiliate"
-              className="p-2.5 rounded-lg border border-slate-200 hover:border-emerald-500 hover:bg-emerald-50/50 text-slate-700 flex items-center justify-center gap-1.5 font-medium transition-colors"
+              href="/"
+              className="text-xs text-slate-500 hover:text-slate-800 font-semibold pt-1"
             >
-              <Share2 className="w-3.5 h-3.5 text-emerald-600" />
-              Affiliate Portal
-            </Link>
-            <Link
-              href="/admin"
-              className="col-span-2 p-2.5 rounded-lg border border-slate-200 hover:border-blue-600 hover:bg-blue-50/50 text-slate-700 flex items-center justify-center gap-1.5 font-medium transition-colors"
-            >
-              <ShieldCheck className="w-3.5 h-3.5 text-blue-600" />
-              Super Admin Console
+              Return to Home
             </Link>
           </div>
         </div>
       </div>
+    );
+  }
+
+  return (
+    <div className="min-h-screen bg-[#071B2F] flex flex-col items-center justify-center p-6 text-center">
+      <div className="relative mb-6">
+        <div className="w-14 h-14 border-4 border-[#FF6B00]/20 border-t-[#FF6B00] rounded-full animate-spin" />
+        <div className="absolute inset-0 flex items-center justify-center">
+          <span className="w-2.5 h-2.5 rounded-full bg-[#FF6B00] animate-pulse" />
+        </div>
+      </div>
+      <h3 className="text-white text-base font-bold tracking-tight mb-1">
+        Routing to Your Workspace
+      </h3>
+      <p className="text-slate-400 text-xs max-w-sm">
+        Authenticating session and routing to your authorized portal...
+      </p>
     </div>
   );
 }
+

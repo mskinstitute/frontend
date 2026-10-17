@@ -1376,10 +1376,13 @@ We are looking to hire skilled students and graduates from MSK Institute. Please
                     <button
                       type="submit"
                       disabled={isApplying}
-                      className="w-full py-3 bg-secondary hover:bg-secondary-light text-primary font-bold text-sm rounded-xl shadow-md transition-all flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50"
+                      className="w-full py-3 bg-secondary hover:bg-secondary-light text-primary font-bold text-sm rounded-xl shadow-md transition-all flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50 disabled:pointer-events-none disabled:cursor-not-allowed"
                     >
                       {isApplying ? (
-                        'Submitting Application...'
+                        <>
+                          <div className="w-4 h-4 border-2 border-primary/30 border-t-primary rounded-full animate-spin" />
+                          <span>Submitting Application... Please wait</span>
+                        </>
                       ) : (
                         <>
                           <Send className="w-4 h-4" />

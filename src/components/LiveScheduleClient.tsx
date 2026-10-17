@@ -10,7 +10,6 @@ import {
   ChevronDown, GraduationCap, Laptop, MapPin, Share2
 } from 'lucide-react';
 import { LiveClass, LiveBatch } from '@/types';
-import DemoBookingForm from './DemoBookingForm';
 import WebShareButton from '@/components/WebShareButton';
 import { parseISTTimeToEpoch } from '@/context/LiveStatusContext';
 
@@ -1378,23 +1377,6 @@ export default function LiveScheduleClient({ initialClasses, initialBatches }: L
         </div>
       </section>
 
-      {/* 7. Booking Modal (Popup) */}
-      {showBookingModal && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-primary/40 backdrop-blur-sm animate-in fade-in duration-200">
-          <div className="bg-white p-6 rounded-xl border border-border-subtle shadow-xl space-y-6 max-w-md w-full relative">
-            <button 
-              onClick={() => setShowBookingModal(false)}
-              className="absolute top-4 right-4 p-1 rounded-full text-text-muted hover:text-primary hover:bg-surface cursor-pointer"
-            >
-              <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-              </svg>
-            </button>
-            
-            <DemoBookingForm courseTitle={selectedBatchTitle} isEmbedded={true} />
-          </div>
-        </div>
-      )}
     </div>
   );
 }

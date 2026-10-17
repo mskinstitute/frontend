@@ -1,11 +1,19 @@
+'use client';
+
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import { Mail, Phone, MapPin, ExternalLink, ShieldCheck, Star } from 'lucide-react';
 import InstallAppButton from '@/components/InstallAppButton';
 import { SocialIconPills, GoogleGIcon } from '@/components/SocialLinks';
 import { BUSINESS_CONFIG } from '@/config/business';
 
 export default function Footer() {
+  const pathname = usePathname();
   const currentYear = new Date().getFullYear();
+
+  if (pathname?.startsWith('/dashboard') || pathname?.startsWith('/admin')) {
+    return null;
+  }
 
   return (
     <footer className="bg-primary text-white border-t border-primary-light no-print">
@@ -97,7 +105,7 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="hover:text-white transition-colors duration-150">
+                <Link href="/book-demo" className="hover:text-white transition-colors duration-150">
                   Book Free Demo Class
                 </Link>
               </li>

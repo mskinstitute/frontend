@@ -257,7 +257,7 @@ export default async function CourseMockTestPage({ params }: { params: Params })
                 </Link>
               ) : null}
               <Link
-                href="/contact"
+                href={`/book-demo?course=${encodeURIComponent(course?.title || '')}`}
                 className="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-secondary hover:bg-secondary-light text-white font-extrabold text-xs sm:text-sm rounded-2xl shadow-sm transition-all text-center"
               >
                 <span>Book Free Demo Class</span>

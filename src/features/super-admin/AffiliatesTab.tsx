@@ -16,6 +16,11 @@ import {
 } from 'lucide-react';
 import { AffiliateItem } from '@/types/admin';
 import toast from 'react-hot-toast';
+import AdminDemosSubTab from './affiliate/AdminDemosSubTab';
+import AdminEnrollmentsSubTab from './affiliate/AdminEnrollmentsSubTab';
+import AdminCommissionSettingsSubTab from './affiliate/AdminCommissionSettingsSubTab';
+import AdminPayoutQueueSubTab from './affiliate/AdminPayoutQueueSubTab';
+import AdminFollowupSubTab from './affiliate/AdminFollowupSubTab';
 
 interface AffiliatesTabProps {
   affiliates: AffiliateItem[];
@@ -34,6 +39,7 @@ export default function AffiliatesTab({
   isAddOpen,
   setIsAddOpen,
 }: AffiliatesTabProps) {
+  const [subTab, setSubTab] = useState<'partners' | 'demos' | 'enrollments' | 'settings' | 'payouts' | 'followup'>('partners');
   const [search, setSearch] = useState('');
   const [copiedCode, setCopiedCode] = useState<string | null>(null);
 
@@ -133,9 +139,34 @@ export default function AffiliatesTab({
 
   return (
     <div className="space-y-6 animate-in fade-in duration-200">
-      
-      {/* Search & Actions Bar */}
-      <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-4 bg-white p-4 rounded-3xl border border-slate-200/80 shadow-xs">
+      {/* Sub-Navigation Pill Bar */}
+      <div className="flex items-center gap-1.5 overflow-x-auto pb-1 no-scrollbar border-b border-slate-200">
+        {[
+          { id: 'partners', label: `Partner Network (${affiliates.length})` },
+          { id: 'demos', label: '2-Day Demo Classes' },
+          { id: 'enrollments', label: 'Admissions & Fee Payments' },
+          { id: 'payouts', label: 'Payout Queue' },
+          { id: 'settings', label: 'Commission Rules & Overrides' },
+          { id: 'followup', label: 'Follow-up Leads' },
+        ].map((tab) => (
+          <button
+            key={tab.id}
+            onClick={() => setSubTab(tab.id as any)}
+            className={`px-3.5 py-2 rounded-xl text-xs font-bold transition whitespace-nowrap ${
+              subTab === tab.id
+                ? 'bg-[#0A2540] text-white shadow-sm'
+                : 'bg-slate-100 text-slate-600 hover:bg-slate-200/80'
+            }`}
+          >
+            {tab.label}
+          </button>
+        ))}
+      </div>
+
+      {subTab === 'partners' && (
+        <div className="space-y-4">
+          {/* Search & Actions Bar */}
+          <div className="flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-4 bg-white p-4 rounded-3xl border border-slate-200/80 shadow-xs">
         <div className="relative flex-1 max-w-md">
           <Search className="w-4 h-4 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2" />
           <input
@@ -252,8 +283,16 @@ export default function AffiliatesTab({
           </table>
         </div>
       </div>
+    </div>
+  )}
 
-      {/* Add / Edit Affiliate Modal */}
+  {subTab === 'demos' && <AdminDemosSubTab />}
+  {subTab === 'enrollments' && <AdminEnrollmentsSubTab />}
+  {subTab === 'payouts' && <AdminPayoutQueueSubTab />}
+  {subTab === 'settings' && <AdminCommissionSettingsSubTab />}
+  {subTab === 'followup' && <AdminFollowupSubTab />}
+
+  {/* Add / Edit Affiliate Modal */}
       {isAddOpen && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50 backdrop-blur-xs animate-in fade-in duration-150">
           <div className="bg-white rounded-3xl max-w-lg w-full p-6 shadow-2xl border border-slate-200 relative overflow-hidden">

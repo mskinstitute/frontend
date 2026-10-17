@@ -5,12 +5,13 @@ import {
   RegisterPayload,
   RegisterResponse,
   ResetPasswordPayload,
-  ForgotPasswordResponse
+  ForgotPasswordResponse,
+  CheckAvailabilityResponse
 } from '@/types/auth';
 
 const BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000';
 
-class AuthApiError extends Error {
+export class AuthApiError extends Error {
   status: number;
   data: any;
 
@@ -76,6 +77,17 @@ export const authApi = {
   /**
    * Register a new user with required columns:
    * first_name, last_name, email, phone, password, gender
+   */
+  async checkAvailability(params: { email?: string; phone?: string }): Promise<CheckAvailabilityResponse> {
+    const query = new URLSearchParams();
+    if (params.email) query.set('email', params.email);
+    if (params.phone) query.set('phone', params.phone);
+    return request<CheckAvailabilityResponse>(`/api/auth/check-availability/?${query.toString()}`);
+  },
+
+  /**
+   * Register a new user with required columns:
+   * first_name, last_name, email, phone, password, gender, address
    */
   async register(payload: RegisterPayload): Promise<RegisterResponse> {
     return request<RegisterResponse>('/api/auth/register/', {

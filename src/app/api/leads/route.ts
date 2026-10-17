@@ -13,13 +13,18 @@ export async function POST(req: NextRequest) {
       phone,
       email = '',
       city = '',
-      learningMode = 'OFFLINE',
+      learningMode = 'ONLINE',
       batchId = '',
       batchTitle = '',
       courseTitle = '',
       price = '',
       startDate = '',
       schedule = '',
+      preferredDate = '',
+      preferredSlot = '',
+      studentBackground = '',
+      bookingType = '',
+      referralCode = '',
       query = '',
       utm_source = '',
       utm_medium = '',
@@ -34,12 +39,24 @@ export async function POST(req: NextRequest) {
       );
     }
 
+    const effectiveDate = startDate || preferredDate || '';
+    const effectiveSlot = schedule || preferredSlot || '';
+    const isDemo =
+      bookingType === 'FREE_DEMO_CLASS' ||
+      (batchTitle && batchTitle.toLowerCase().includes('demo')) ||
+      (query && query.toLowerCase().includes('demo'));
+
     const timestamp = new Date().toISOString();
     const leadId = `lead-${Date.now()}`;
 
     const leadData: LeadSubmission & {
       startDate?: string;
       schedule?: string;
+      preferredDate?: string;
+      preferredSlot?: string;
+      studentBackground?: string;
+      bookingType?: string;
+      referralCode?: string;
     } = {
       id: leadId,
       name: name.trim(),
@@ -48,11 +65,16 @@ export async function POST(req: NextRequest) {
       city: city.trim() || 'Not specified',
       learningMode: learningMode,
       batchId,
-      batchTitle,
+      batchTitle: batchTitle || (isDemo ? `Free Demo Class - ${courseTitle}` : ''),
       courseTitle,
-      price,
-      startDate,
-      schedule,
+      price: price || (isDemo ? '₹0 (Free Trial)' : ''),
+      startDate: effectiveDate,
+      schedule: effectiveSlot,
+      preferredDate: effectiveDate,
+      preferredSlot: effectiveSlot,
+      studentBackground: studentBackground.trim(),
+      bookingType: isDemo ? 'FREE_DEMO_CLASS' : 'GENERAL_LEAD',
+      referralCode: referralCode.trim(),
       query: query.trim(),
       submittedAt: timestamp,
       utm_source,
@@ -90,6 +112,7 @@ export async function POST(req: NextRequest) {
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
             timestamp: new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' }),
+            leadId: leadData.id,
             name: leadData.name,
             phone: leadData.phone,
             email: leadData.email,
@@ -100,6 +123,9 @@ export async function POST(req: NextRequest) {
             price: leadData.price,
             startDate: leadData.startDate,
             schedule: leadData.schedule,
+            studentBackground: leadData.studentBackground,
+            bookingType: leadData.bookingType,
+            referralCode: leadData.referralCode,
             query: leadData.query,
             utm_source: leadData.utm_source,
             utm_campaign: leadData.utm_campaign,
@@ -111,11 +137,32 @@ export async function POST(req: NextRequest) {
     }
 
     // 3. Format Professional Business WhatsApp Message
-    const formattedWhatsAppMessage = `🎓 *NEW LIVE BATCH ADMISSION ENQUIRY*
+    let formattedWhatsAppMessage = '';
+    if (isDemo) {
+      formattedWhatsAppMessage = `🎓 *NEW FREE DEMO CLASS BOOKING*
+━━━━━━━━━━━━━━━━━━━━━━━━━━
+👋 *Hello Er. Sumit Kumar / MSK Institute,*
+I have booked a *Free 2-Day Trial Demo Class* on the website:
+
+👤 *STUDENT DETAILS:*
+• *Full Name:* ${leadData.name}
+• *WhatsApp Phone:* +91 ${leadData.phone}
+${leadData.email ? `• *Email:* ${leadData.email}\n` : ''}${leadData.city ? `• *City / Location:* ${leadData.city}\n` : ''}${studentBackground ? `• *Background:* ${studentBackground}\n` : ''}
+💻 *DEMO PREFERENCES:*
+• *Course:* ${courseTitle || 'Coding Masterclass'}
+• *Preferred Mode:* ${leadData.learningMode === 'ONLINE' ? '🌐 Online Live Class (Interactive Google Meet)' : '🏢 In-Person Lab (Shikohabad Centre)'}
+${effectiveDate ? `• *Preferred Date:* ${effectiveDate}\n` : ''}${effectiveSlot ? `• *Time Slot:* ${effectiveSlot}\n` : ''}${leadData.query ? `• *Questions / Goal:* ${leadData.query}\n` : ''}
+━━━━━━━━━━━━━━━━━━━━━━━━━━
+🆔 *Booking Ref:* #${leadId}
+🕒 *Submitted At:* ${new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' })}
+📍 *MSK Institute of Technology & Coding, Shikohabad*
+🚀 _Please send me the Live Demo join link / classroom entry pass. Thank you!_`;
+    } else {
+      formattedWhatsAppMessage = `🎓 *NEW LIVE BATCH ADMISSION ENQUIRY*
 ━━━━━━━━━━━━━━━━━━━━━━━━━━
 📌 *Batch:* ${batchTitle || 'Coding Live Batch'}
 📚 *Course:* ${courseTitle || 'Professional Training'}
-${startDate ? `📅 *Start Date:* ${startDate}\n` : ''}${schedule ? `⏰ *Schedule:* ${schedule}\n` : ''}${price ? `💰 *Batch Fee:* ${price}\n` : ''}
+${effectiveDate ? `📅 *Start Date:* ${effectiveDate}\n` : ''}${effectiveSlot ? `⏰ *Schedule:* ${effectiveSlot}\n` : ''}${price ? `💰 *Batch Fee:* ${price}\n` : ''}
 👤 *STUDENT DETAILS:*
 • *Full Name:* ${leadData.name}
 • *WhatsApp Phone:* ${leadData.phone}
@@ -124,13 +171,14 @@ ${leadData.query ? `• *Student Query:* ${leadData.query}\n` : '• *Goal:* Req
 ━━━━━━━━━━━━━━━━━━━━━━━━━━
 📍 *MSK Institute of Technology & Coding*
 🚀 _Sent from Official MSK Live Admissions Portal_`;
+    }
 
     const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(formattedWhatsAppMessage)}`;
 
     return NextResponse.json({
       success: true,
       leadId,
-      message: 'Lead registered successfully',
+      message: 'Demo class seat reserved successfully!',
       whatsappUrl,
       formattedWhatsAppMessage,
     });

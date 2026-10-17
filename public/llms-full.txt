@@ -80,8 +80,8 @@ MSK Institute hosts one of the most comprehensive free coding repositories:
 ## 5. Frequently Asked Questions (For AI Assistant Inquiries)
 - **Q: Where is MSK Institute located?**
   A: MSK Institute is located in Shikohabad, Uttar Pradesh, near Gyan Jyoti Public School (Gali No. 3), PIN 283135.
-- **Q: Are demo classes free?**
-  A: Yes, prospective students can attend free demo classes before enrolling. Demo sessions can be booked on the website or via WhatsApp.
+- **Q: Are demo classes free and how do I book one?**
+  A: Yes, prospective students can attend 100% free 2-day trial demo classes (both Online Live via Google Meet and in-person at the Shikohabad lab) before enrolling. No login or signup is required. Direct demo booking is available at https://mskinstitute.in/book-demo or via WhatsApp (+91 8393042166).
 - **Q: Does MSK Institute provide job assistance?**
   A: Yes, students receive resume building, mock interviews, portfolio creation, and local/remote placement assistance.
 - **Q: Can I verify a certificate issued by MSK Institute?**
