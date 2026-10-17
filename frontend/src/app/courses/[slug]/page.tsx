@@ -9,12 +9,11 @@ import {
 import { WhatsAppIcon } from '@/components/SocialLinks';
 import { fetchCourses, fetchLiveBatches } from '@/services/api';
 import { getBranchesForCourse } from '@/lib/branches';
-import DemoBookingForm from '@/components/DemoBookingForm';
 import CourseCurriculumAccordion from '@/components/CourseCurriculumAccordion';
 import CourseRelatedContent from '@/components/CourseRelatedContent';
 import WebShareButton from '@/components/WebShareButton';
 import CourseViewTracker from '@/components/CourseViewTracker';
-import { Course, LiveBatch } from '@/types';
+import { Course, LiveBatch, Branch } from '@/types';
 import { constructMetadata } from '@/lib/seo';
 
 type Params = Promise<{ slug: string }>;
@@ -469,7 +468,7 @@ export default async function CourseDetailPage({ params }: { params: Params }) {
                     <Globe className="w-3 h-3 text-emerald-600" />
                     <span>Online Nationwide</span>
                   </span>
-                  {availableBranches.map((b) => (
+                  {availableBranches.map((b: Branch) => (
                     <Link
                       key={b.id}
                       href={`/locations/${b.slug}`}
@@ -482,12 +481,27 @@ export default async function CourseDetailPage({ params }: { params: Params }) {
                 </div>
               </div>
 
-              {/* Action booking embedded lead form */}
+              {/* Dedicated Free Demo CTA Card */}
               <div className="pt-4 border-t border-border-subtle">
-                <DemoBookingForm courseTitle={course.title} isEmbedded={true} />
-                <p className="text-xs text-center text-text-muted mt-3 leading-relaxed">
-                  * Free demo classes available at our campus locations and online interactive batches.
-                </p>
+                <div className="p-4 rounded-2xl bg-gradient-to-br from-secondary/10 via-surface to-secondary/5 border border-secondary/30 space-y-2.5">
+                  <div className="flex items-center gap-1.5 text-xs font-black uppercase text-secondary">
+                    <Sparkles className="w-3.5 h-3.5 text-secondary animate-pulse" />
+                    <span>Free 2-Day Trial • No Login Needed</span>
+                  </div>
+                  <h3 className="font-extrabold text-sm text-primary">
+                    Attend Free Demo for {course.title}
+                  </h3>
+                  <p className="text-xs text-text-muted leading-relaxed">
+                    Experience practical hands-on labs with Er. Sumit Kumar (Online Live or in Shikohabad lab) before enrolling.
+                  </p>
+                  <Link
+                    href={`/book-demo?course=${encodeURIComponent(course.title)}`}
+                    className="w-full inline-flex items-center justify-center gap-2 py-3 px-4 bg-secondary hover:bg-secondary-light text-white rounded-xl text-xs font-black shadow-xs transition-all hover:scale-[1.02]"
+                  >
+                    <span>Book Free Demo Class</span>
+                    <ArrowRight className="w-3.5 h-3.5" />
+                  </Link>
+                </div>
               </div>
 
               {/* Direct WhatsApp Mentor Connect & Google Rating */}

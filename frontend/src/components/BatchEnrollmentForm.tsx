@@ -385,12 +385,12 @@ export default function BatchEnrollmentForm({
             <button
               type="submit"
               disabled={isSubmitting}
-              className="w-full py-3.5 px-4 bg-gradient-to-r from-secondary to-amber-600 hover:from-secondary-light hover:to-amber-500 text-white font-extrabold text-sm rounded-xl shadow-lg hover:shadow-xl transition-all duration-200 flex items-center justify-center gap-2 cursor-pointer transform hover:-translate-y-0.5 active:translate-y-0 disabled:opacity-75"
+              className="w-full py-3.5 px-4 bg-gradient-to-r from-secondary to-amber-600 hover:from-secondary-light hover:to-amber-500 text-white font-extrabold text-sm rounded-xl shadow-lg hover:shadow-xl transition-all duration-200 flex items-center justify-center gap-2 cursor-pointer transform hover:-translate-y-0.5 active:translate-y-0 disabled:opacity-75 disabled:pointer-events-none disabled:cursor-not-allowed"
             >
               {isSubmitting ? (
                 <span className="inline-flex items-center gap-2">
                   <span className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin" />
-                  Saving & Connecting WhatsApp...
+                  Saving & Connecting WhatsApp... Please wait
                 </span>
               ) : (
                 <>

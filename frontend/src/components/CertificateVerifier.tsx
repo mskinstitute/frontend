@@ -121,12 +121,12 @@ function CertificateVerifierContent() {
           <button
             type="submit"
             disabled={loading}
-            className="px-6 py-2.5 bg-secondary hover:bg-secondary-light text-white font-bold text-sm rounded-lg shadow transition-colors flex items-center justify-center gap-1.5 cursor-pointer disabled:opacity-70"
+            className="px-6 py-2.5 bg-secondary hover:bg-secondary-light text-white font-bold text-sm rounded-lg shadow transition-colors flex items-center justify-center gap-1.5 cursor-pointer disabled:opacity-70 disabled:pointer-events-none disabled:cursor-not-allowed"
           >
             {loading ? (
               <>
                 <RefreshCw className="w-4 h-4 animate-spin" />
-                Verifying...
+                Verifying Authenticity... Please wait
               </>
             ) : (
               'Verify Authenticity'

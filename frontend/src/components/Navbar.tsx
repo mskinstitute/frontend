@@ -30,6 +30,7 @@ import InstallAppButton from '@/components/InstallAppButton';
 import SearchModal from '@/components/SearchModal';
 import { useLiveStatus } from '@/context/LiveStatusContext';
 import { useAuth } from '@/context/AuthContext';
+import { useServerStatus } from '@/context/ServerStatusContext';
 import { SocialIconPills } from '@/components/SocialLinks';
 
 interface Announcement {
@@ -50,6 +51,7 @@ export default function Navbar() {
   const [announcements, setAnnouncements] = useState<Announcement[]>([]);
   const { isLiveNow } = useLiveStatus();
   const { user, isAuthenticated, logout } = useAuth();
+  const { isServerOnline } = useServerStatus();
 
   useEffect(() => {
     async function loadAnnouncements() {
@@ -327,6 +329,10 @@ export default function Navbar() {
     return group.items.some((item) => isActive(item.href));
   };
 
+  if (pathname?.startsWith('/dashboard') || pathname?.startsWith('/admin')) {
+    return null;
+  }
+
   return (
     <header className="sticky top-0 z-50 no-print shadow-sm">
       <nav className="bg-white border-b border-border-subtle">
@@ -351,7 +357,7 @@ export default function Navbar() {
           </div>
 
           {/* Universal Desktop & Laptop Search Trigger */}
-          <div className="hidden md:flex items-center flex-1 max-w-[200px] lg:max-w-[260px] xl:max-w-xs mx-2 lg:mx-4 2xl:mx-6">
+          <div className="hidden md:flex items-center flex-1 min-w-[120px] max-w-[200px] lg:max-w-[260px] xl:max-w-xs mx-1.5 lg:mx-3 2xl:mx-6 flex-shrink">
             <button
               onClick={() => setIsSearchOpen(true)}
               type="button"
@@ -378,7 +384,7 @@ export default function Navbar() {
           </div>
 
           {/* Desktop Navigation Links */}
-          <div ref={navRef} className="hidden md:flex items-center gap-0.5 lg:gap-1 xl:gap-2">
+          <div ref={navRef} className="hidden md:flex items-center gap-0.5 lg:gap-1 xl:gap-2 flex-shrink-0">
             {/* Direct Links (Home, Courses & Live) */}
             {directLinks.map((link) => {
               const Icon = link.icon;
@@ -513,42 +519,42 @@ export default function Navbar() {
               );
             })}
 
-            {/* Quick Demo CTA Button - Desktop & Tablet */}
+            {/* Quick Demo CTA Button - Desktop & Tablet (Points directly to dedicated /book-demo route, no login required) */}
             <Link
-              href="/#book-demo"
-              className="hidden md:inline-flex items-center gap-1.5 px-3 py-1.5 bg-secondary hover:bg-secondary-light text-white font-bold text-xs rounded-xl shadow-xs transition-colors whitespace-nowrap ml-1"
+              href="/book-demo"
+              className="hidden md:inline-flex items-center gap-1.5 px-3 py-1.5 bg-secondary hover:bg-secondary-light text-white font-bold text-xs rounded-xl shadow-xs transition-colors whitespace-nowrap ml-1 flex-shrink-0"
             >
-              <span>Book Demo</span>
-              <span className="text-[11px]">➔</span>
+              <span className="whitespace-nowrap">Book Free Demo</span>
+              <span className="text-[11px] flex-shrink-0">➔</span>
             </Link>
 
-            {/* Auth Button - Desktop */}
+            {/* Auth Button - Desktop (Automatically hidden when backend server is offline or unreachable) */}
             {isAuthenticated && user ? (
               <Link
                 href="/dashboard"
-                className="hidden md:inline-flex items-center gap-2 px-2.5 py-1.5 bg-slate-100 hover:bg-slate-200/80 text-slate-800 font-bold text-xs rounded-xl transition-all ml-1 border border-slate-200"
+                className="hidden md:inline-flex items-center gap-2 px-2.5 py-1.5 bg-slate-100 hover:bg-slate-200/80 text-slate-800 font-bold text-xs rounded-xl transition-all ml-1 border border-slate-200 whitespace-nowrap flex-shrink-0"
                 title={`Logged in as ${user.first_name} (${user.role}) - Open Dashboard`}
               >
-                <div className="w-5 h-5 rounded-full bg-secondary text-white text-[10px] font-extrabold flex items-center justify-center uppercase shadow-xs">
+                <div className="w-5 h-5 rounded-full bg-secondary text-white text-[10px] font-extrabold flex items-center justify-center uppercase shadow-xs flex-shrink-0">
                   {user.first_name?.[0] || 'U'}
                 </div>
                 <span className="truncate max-w-[90px]">{user.first_name}</span>
-                <span className="text-[10px] bg-secondary/15 text-secondary px-1 py-0.5 rounded font-semibold uppercase">
+                <span className="text-[10px] bg-secondary/15 text-secondary px-1 py-0.5 rounded font-semibold uppercase flex-shrink-0">
                   Portal
                 </span>
               </Link>
-            ) : (
+            ) : isServerOnline ? (
               <Link
                 href="/login"
-                className="hidden md:inline-flex items-center gap-1.5 px-3 py-1.5 bg-slate-100 hover:bg-slate-200 text-slate-700 hover:text-slate-900 font-bold text-xs rounded-xl transition-colors ml-1 border border-slate-200"
+                className="hidden md:inline-flex items-center gap-1.5 px-3 py-1.5 bg-slate-100 hover:bg-slate-200 text-slate-700 hover:text-slate-900 font-bold text-xs rounded-xl transition-colors ml-1 border border-slate-200 whitespace-nowrap flex-shrink-0 animate-in fade-in duration-200"
               >
-                <User className="w-3.5 h-3.5 text-slate-500" />
-                <span>Sign In</span>
+                <User className="w-3.5 h-3.5 text-slate-500 flex-shrink-0" />
+                <span className="whitespace-nowrap">Sign In</span>
               </Link>
-            )}
+            ) : null}
           </div>
 
-          {/* Mobile top actions: Search icon, Book Demo button & Hamburger */}
+          {/* Mobile top actions: Search icon, Book Demo button (guest only) & Hamburger */}
           <div className="md:hidden flex items-center gap-1.5">
             <button
               onClick={() => setIsSearchOpen(true)}
@@ -558,12 +564,12 @@ export default function Navbar() {
               <Search className="w-5 h-5" />
             </button>
             <Link
-              href="/#book-demo"
-              className="inline-flex items-center gap-1 px-3 py-1.5 bg-secondary text-white rounded-full text-xs font-bold shadow-sm hover:bg-secondary-light active:scale-95 transition-all whitespace-nowrap"
-              aria-label="Book Demo"
+              href="/book-demo"
+              className="inline-flex items-center gap-1 px-3 py-1.5 bg-secondary text-white rounded-full text-xs font-bold shadow-sm hover:bg-secondary-light active:scale-95 transition-all whitespace-nowrap flex-shrink-0"
+              aria-label="Book Free Demo"
             >
-              <span>Book Demo</span>
-              <span className="text-[10px]">➔</span>
+              <span className="whitespace-nowrap">Free Demo</span>
+              <span className="text-[10px] flex-shrink-0">➔</span>
             </Link>
             <button
               onClick={handleToggleMobileMenu}
@@ -607,9 +613,9 @@ export default function Navbar() {
               </div>
             </button>
 
-            {/* Mobile Auth Strip */}
-            <div className="mt-2.5 p-2.5 rounded-xl bg-slate-50 border border-slate-200">
-              {isAuthenticated && user ? (
+            {/* Mobile Auth Strip (Hidden for guests when backend server is offline or unreachable) */}
+            {isAuthenticated && user ? (
+              <div className="mt-2.5 p-2.5 rounded-xl bg-slate-50 border border-slate-200">
                 <div className="flex items-center justify-between">
                   <Link
                     href="/profile"
@@ -637,7 +643,9 @@ export default function Navbar() {
                     <LogOut className="w-4 h-4" />
                   </button>
                 </div>
-              ) : (
+              </div>
+            ) : isServerOnline ? (
+              <div className="mt-2.5 p-2.5 rounded-xl bg-slate-50 border border-slate-200 animate-in fade-in duration-200">
                 <div className="flex items-center gap-2">
                   <Link
                     href="/login"
@@ -654,8 +662,8 @@ export default function Navbar() {
                     Register
                   </Link>
                 </div>
-              )}
-            </div>
+              </div>
+            ) : null}
 
             {/* Direct Links */}
             <div className="space-y-1.5 mt-3">
@@ -782,21 +790,21 @@ export default function Navbar() {
                 <span>Open {user.role === 'admin' ? 'Super Admin' : user.role === 'branch' || user.role === 'franchise' ? 'Franchise & Branch' : user.role === 'staff' ? 'Faculty' : user.role === 'affiliate' ? 'Affiliate' : 'Student'} Dashboard</span>
                 <span>➔</span>
               </Link>
-            ) : (
+            ) : isServerOnline ? (
               <Link
                 href="/login"
                 onClick={() => setIsOpen(false)}
-                className="w-full flex items-center justify-center gap-2 py-2.5 bg-slate-200 hover:bg-slate-300 text-slate-800 font-bold text-xs rounded-xl shadow-xs transition-colors"
+                className="w-full flex items-center justify-center gap-2 py-2.5 bg-slate-200 hover:bg-slate-300 text-slate-800 font-bold text-xs rounded-xl shadow-xs transition-colors animate-in fade-in duration-200"
               >
                 <User className="w-3.5 h-3.5 text-slate-600" />
                 <span>Sign In to Student & Staff Portal</span>
               </Link>
-            )}
+            ) : null}
 
             <Link
-              href="/#book-demo"
+              href="/book-demo"
               onClick={() => setIsOpen(false)}
-              className="w-full flex items-center justify-center gap-2 py-2.5 bg-secondary hover:bg-secondary-light text-white font-bold text-xs rounded-xl shadow-xs transition-colors"
+              className="w-full flex items-center justify-center gap-2 py-2.5 bg-secondary hover:bg-secondary-light text-white font-bold text-xs rounded-xl shadow-xs transition-colors whitespace-nowrap"
             >
               <span>Book Free Demo Class</span>
               <span>➔</span>

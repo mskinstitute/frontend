@@ -57,8 +57,24 @@ export default function HomeFeaturedCourses({ courses }: HomeFeaturedCoursesProp
     return true;
   });
 
-  // Display top courses for selected tab
-  const displayCourses = filteredCourses.slice(0, 6);
+  const toDays = (d: { value: number; unit: 'HOURS' | 'DAYS' | 'MONTHS' }) => {
+    if (!d) return 0;
+    if (d.unit === 'MONTHS') return d.value * 30;
+    if (d.unit === 'DAYS') return d.value;
+    return d.value / 24;
+  };
+
+  const getDurationMonths = (d: { value: number; unit: 'HOURS' | 'DAYS' | 'MONTHS' }) => {
+    if (!d) return 0;
+    if (d.unit === 'MONTHS') return d.value;
+    if (d.unit === 'DAYS') return d.value / 30;
+    return d.value / (24 * 30);
+  };
+
+  // Display top courses for selected tab, sorted by duration descending (longest to shortest)
+  const displayCourses = [...filteredCourses]
+    .sort((a, b) => toDays(b.duration) - toDays(a.duration))
+    .slice(0, 6);
 
   return (
     <div className="space-y-8">
@@ -82,34 +98,45 @@ export default function HomeFeaturedCourses({ courses }: HomeFeaturedCoursesProp
 
       {/* Courses Grid */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {displayCourses.map((course) => (
-          <div
-            key={course.id}
-            className="group bg-white rounded-2xl border border-border-subtle overflow-hidden shadow-xs hover:shadow-md transition-all duration-300 flex flex-col hover:-translate-y-0.5"
-          >
-            {/* Thumbnail Header */}
-            <div className="relative h-48 w-full bg-gray-100 overflow-hidden">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src={course.featuredImageUrl}
-                alt={`${course.title} at MSK Institute`}
-                width={600}
-                height={340}
-                loading="lazy"
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-60" />
+        {displayCourses.map((course) => {
+          const isPopular = getDurationMonths(course.duration) >= 12 || (course as any).isPopular === true;
 
-              <span className="absolute top-3.5 right-3.5 bg-primary/90 text-white text-[11px] font-black uppercase px-2.5 py-1 rounded-lg backdrop-blur-xs">
-                {course.level}
-              </span>
+          return (
+            <div
+              key={course.id}
+              className="group bg-white rounded-2xl border border-border-subtle overflow-hidden shadow-xs hover:shadow-md transition-all duration-300 flex flex-col hover:-translate-y-0.5"
+            >
+              {/* Thumbnail Header */}
+              <div className="relative h-48 w-full bg-gray-100 overflow-hidden">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={course.featuredImageUrl}
+                  alt={`${course.title} at MSK Institute`}
+                  width={600}
+                  height={340}
+                  loading="lazy"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-60" />
 
-              {course.certificate && (
-                <span className="absolute bottom-3 left-3 bg-secondary text-white text-[10px] font-black uppercase tracking-wider px-2 py-0.5 rounded shadow-xs">
-                  ★ Certified Course
+                {/* Popular Ribbon for Longest Duration Programs */}
+                {isPopular && (
+                  <span className="absolute top-3.5 left-3.5 bg-secondary text-white text-[10px] font-black uppercase tracking-wider px-2 py-0.5 rounded shadow-sm flex items-center gap-1 z-10 backdrop-blur-xs">
+                    <Sparkles className="w-3 h-3" />
+                    Popular
+                  </span>
+                )}
+
+                <span className="absolute top-3.5 right-3.5 bg-primary/90 text-white text-[11px] font-black uppercase px-2.5 py-1 rounded-lg backdrop-blur-xs">
+                  {course.level}
                 </span>
-              )}
-            </div>
+
+                {course.certificate && (
+                  <span className="absolute bottom-3 left-3 bg-secondary text-white text-[10px] font-black uppercase tracking-wider px-2 py-0.5 rounded shadow-xs">
+                    ★ Certified Course
+                  </span>
+                )}
+              </div>
 
             {/* Course Content */}
             <div className="p-6 flex-grow flex flex-col justify-between gap-4">
@@ -152,12 +179,12 @@ export default function HomeFeaturedCourses({ courses }: HomeFeaturedCoursesProp
                 </div>
 
                 <div className="grid grid-cols-2 gap-2">
-                  <a
-                    href="#book-demo"
+                  <Link
+                    href={`/book-demo?course=${encodeURIComponent(course.title)}`}
                     className="text-center py-2 px-2 bg-surface hover:bg-slate-100 text-primary border border-border-subtle font-bold text-xs rounded-xl transition-colors block"
                   >
                     Free Demo
-                  </a>
+                  </Link>
                   <Link
                     href={`/courses/${course.slug}`}
                     className="text-center py-2 px-2 bg-secondary hover:bg-secondary-light text-white font-bold text-xs rounded-xl shadow-xs transition-colors block"
@@ -168,7 +195,8 @@ export default function HomeFeaturedCourses({ courses }: HomeFeaturedCoursesProp
               </div>
             </div>
           </div>
-        ))}
+        );
+      })}
       </div>
 
       {/* Explore All Courses Link */}
@@ -177,7 +205,7 @@ export default function HomeFeaturedCourses({ courses }: HomeFeaturedCoursesProp
           href="/courses"
           className="inline-flex items-center gap-2 px-6 py-3 border border-border-subtle hover:bg-surface text-primary font-bold text-sm rounded-xl transition-colors shadow-2xs hover:shadow-xs"
         >
-          <span>Explore All 12+ Professional Computer Courses</span>
+          <span>Explore All {courses.length > 0 ? `${courses.length}+` : '65+'} Professional Computer Courses</span>
           <ArrowRight className="w-4 h-4 text-secondary" />
         </Link>
       </div>

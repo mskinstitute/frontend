@@ -1,9 +1,7 @@
 'use client';
 
-import { useState } from 'react';
-import { toast } from 'react-hot-toast';
-import { Send, X, Calendar, User, Phone, Book } from 'lucide-react';
-import { trackFormStart, trackFormSubmit, trackGenerateLead, trackCourseEnquiry, trackDemoRequest } from '@/lib/dataLayer';
+import Link from 'next/link';
+import { ArrowRight, Sparkles } from 'lucide-react';
 
 interface DemoBookingFormProps {
   courseTitle: string;
@@ -11,135 +9,26 @@ interface DemoBookingFormProps {
   isEmbedded?: boolean;
 }
 
-export default function DemoBookingForm({ courseTitle, onClose, isEmbedded = false }: DemoBookingFormProps) {
-  const [name, setName] = useState('');
-  const [phone, setPhone] = useState('');
-  const [date, setDate] = useState('');
-  const [isSubmitting, setIsSubmitting] = useState(false);
-
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-
-    if (!name.trim()) {
-      toast.error('Please enter your name');
-      return;
-    }
-    if (!/^\d{10}$/.test(phone.trim())) {
-      toast.error('Please enter a valid 10-digit mobile number');
-      return;
-    }
-    if (!date) {
-      toast.error('Please choose a preferred start date');
-      return;
-    }
-
-    setIsSubmitting(true);
-
-    // Simulate API request submission
-    setTimeout(() => {
-      setIsSubmitting(false);
-      // Fire form submission and lead generation ONLY after verified completion (zero PII)
-      trackFormSubmit('demo_booking', { course_name: courseTitle });
-      trackGenerateLead('demo_booking', {
-        course_name: courseTitle,
-        preferred_date: date,
-      });
-      trackDemoRequest({
-        courseName: courseTitle,
-        preferredDate: date,
-      });
-      trackCourseEnquiry({ courseName: courseTitle });
-
-      toast.success('Demo session request sent! Our counselor will call you within 24 hours.');
-      setName('');
-      setPhone('');
-      setDate('');
-      if (onClose) onClose();
-    }, 1200);
-  };
-
+export default function DemoBookingForm({ courseTitle }: DemoBookingFormProps) {
   return (
-    <div className={isEmbedded ? "space-y-4 w-full" : "bg-white p-6 rounded-xl border border-border-subtle shadow-lg space-y-6 relative max-w-md w-full"}>
-      {onClose && (
-        <button
-          onClick={onClose}
-          className="absolute top-4 right-4 p-1 rounded-full text-text-muted hover:text-primary hover:bg-surface transition-colors"
-          aria-label="Close form"
-        >
-          <X className="w-5 h-5" />
-        </button>
-      )}
-
-      <div className="space-y-1">
-        <h3 className={isEmbedded ? "text-base font-bold text-primary" : "text-xl font-bold text-primary"}>
-          Book a Free Demo Batch
-        </h3>
-        <p className="text-xs text-text-muted">
-          Register to attend a trial session for <strong>{courseTitle}</strong>.
-        </p>
+    <div className="p-5 rounded-2xl bg-white border border-border-subtle shadow-md space-y-3">
+      <div className="flex items-center gap-1.5 text-xs font-black uppercase text-secondary">
+        <Sparkles className="w-3.5 h-3.5 text-secondary" />
+        <span>Free 2-Day Trial</span>
       </div>
-
-      <form onSubmit={handleSubmit} className="space-y-4">
-        {/* Name input */}
-        <div className="space-y-1.5">
-          <label htmlFor="demo-fullname" className="text-xs font-bold text-text-muted uppercase tracking-wider block">Full Name</label>
-          <div className="relative">
-            <User className="absolute left-3 top-3 h-4.5 w-4.5 text-text-muted" />
-            <input
-              id="demo-fullname"
-              type="text"
-              required
-              placeholder="e.g. Amit Kumar"
-              value={name}
-              onFocus={() => trackFormStart('demo_booking')}
-              onChange={(e) => setName(e.target.value)}
-              className="w-full pl-10 pr-3 py-2.5 bg-surface border border-border-subtle rounded-lg text-sm focus:outline-none focus:border-secondary transition-colors"
-            />
-          </div>
-        </div>
-
-        {/* Mobile Input */}
-        <div className="space-y-1.5">
-          <label htmlFor="demo-mobile" className="text-xs font-bold text-text-muted uppercase tracking-wider block">Mobile Number</label>
-          <div className="relative">
-            <Phone className="absolute left-3 top-3 h-4.5 w-4.5 text-text-muted" />
-            <input
-              id="demo-mobile"
-              type="tel"
-              required
-              placeholder="e.g. 9876543210"
-              value={phone}
-              onChange={(e) => setPhone(e.target.value)}
-              className="w-full pl-10 pr-3 py-2.5 bg-surface border border-border-subtle rounded-lg text-sm focus:outline-none focus:border-secondary transition-colors"
-            />
-          </div>
-        </div>
-
-        {/* Preferred Date */}
-        <div className="space-y-1.5">
-          <label htmlFor="demo-date" className="text-xs font-bold text-text-muted uppercase tracking-wider block">Preferred Date</label>
-          <div className="relative">
-            <Calendar className="absolute left-3 top-3 h-4.5 w-4.5 text-text-muted" />
-            <input
-              id="demo-date"
-              type="date"
-              required
-              value={date}
-              onChange={(e) => setDate(e.target.value)}
-              className="w-full pl-10 pr-3 py-2.5 bg-surface border border-border-subtle rounded-lg text-sm focus:outline-none focus:border-secondary transition-colors"
-            />
-          </div>
-        </div>
-
-        <button
-          type="submit"
-          disabled={isSubmitting}
-          className="w-full flex items-center justify-center gap-1.5 py-3 bg-secondary hover:bg-secondary-light text-white font-bold text-sm rounded-lg transition-colors shadow disabled:opacity-75 disabled:cursor-not-allowed"
-        >
-          {isSubmitting ? 'Sending Request...' : 'Send Booking Request'}
-          <Send className="w-4 h-4" />
-        </button>
-      </form>
+      <h3 className="font-extrabold text-sm text-primary">
+        Book Free Demo for {courseTitle}
+      </h3>
+      <p className="text-xs text-text-muted leading-relaxed">
+        Attend 2 days of free live online or in-person lab classes. No login required.
+      </p>
+      <Link
+        href={`/book-demo?course=${encodeURIComponent(courseTitle)}`}
+        className="w-full inline-flex items-center justify-center gap-2 py-3 px-4 bg-secondary hover:bg-secondary-light text-white rounded-xl text-xs font-black shadow-xs transition-all"
+      >
+        <span>Go to Free Demo Booking Portal</span>
+        <ArrowRight className="w-3.5 h-3.5" />
+      </Link>
     </div>
   );
 }

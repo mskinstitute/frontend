@@ -108,16 +108,10 @@ const matchesLevel = (courseLevel: string, selLevel: string) => {
   return cl.includes(sl);
 };
 
-const FLAGSHIP_SLUGS = new Set([
-  'ccc',
-  'adca',
-  'adca-advanced-diploma-computer-applications',
-  'python-programming-masterclass',
-  'full-stack-web-development-bootcamp',
-  'frontend-web-development-engineering',
-  'javascript-react-frontend-engineering',
-  'backend-engineering-nodejs-databases',
-]);
+// Popular courses are the longest duration programs (12+ months masteries & diplomas)
+const isPopularCourse = (course: Course) => {
+  return getDurationMonths(course.duration) >= 12 || (course as any).isPopular === true;
+};
 
 const PAGE_SIZE = 12;
 
@@ -128,7 +122,7 @@ export default function CourseCatalogClient({ initialCourses }: { initialCourses
   const [selectedLevel, setSelectedLevel] = useState('All');
   const [selectedMode, setSelectedMode] = useState('All');
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
-  const [sortBy, setSortBy] = useState<'featured' | 'duration-asc' | 'duration-desc' | 'alphabetical'>('featured');
+  const [sortBy, setSortBy] = useState<'duration-desc' | 'featured' | 'duration-asc' | 'alphabetical'>('duration-desc');
   const [visibleCount, setVisibleCount] = useState<number>(PAGE_SIZE);
   const [isMobileFilterOpen, setIsMobileFilterOpen] = useState(false);
   const [openFaq, setOpenFaq] = useState<number | null>(0);
@@ -226,10 +220,11 @@ export default function CourseCatalogClient({ initialCourses }: { initialCourses
     // Apply sorting
     if (sortBy === 'duration-asc') {
       result.sort((a, b) => toDays(a.duration) - toDays(b.duration));
-    } else if (sortBy === 'duration-desc') {
-      result.sort((a, b) => toDays(b.duration) - toDays(a.duration));
     } else if (sortBy === 'alphabetical') {
       result.sort((a, b) => a.title.localeCompare(b.title));
+    } else {
+      // Default: 'duration-desc' (longest to shortest) and 'featured'
+      result.sort((a, b) => toDays(b.duration) - toDays(a.duration));
     }
 
     return result;
@@ -267,7 +262,7 @@ export default function CourseCatalogClient({ initialCourses }: { initialCourses
     setSelectedDuration('all');
     setSelectedLevel('All');
     setSelectedMode('All');
-    setSortBy('featured');
+    setSortBy('duration-desc');
     setVisibleCount(PAGE_SIZE);
   };
 
@@ -882,9 +877,9 @@ export default function CourseCatalogClient({ initialCourses }: { initialCourses
                     onChange={(e) => setSortBy(e.target.value as any)}
                     className="p-1.5 px-2 bg-surface border border-border-subtle rounded-xl text-xs font-medium text-primary focus:outline-none focus:border-secondary cursor-pointer"
                   >
-                    <option value="featured">Featured First</option>
+                    <option value="duration-desc">Duration: Longest First (Default)</option>
                     <option value="duration-asc">Duration: Shortest First</option>
-                    <option value="duration-desc">Duration: Longest First</option>
+                    <option value="featured">Featured First</option>
                     <option value="alphabetical">Name: A to Z</option>
                   </select>
                 </div>
@@ -977,7 +972,7 @@ export default function CourseCatalogClient({ initialCourses }: { initialCourses
                   /* ================= GRID VIEW ================= */
                   <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-2 2xl:grid-cols-3 gap-5 sm:gap-6">
                     {visibleCourses.map((course, idx) => {
-                      const isFlagship = FLAGSHIP_SLUGS.has(course.slug);
+                      const isPopular = isPopularCourse(course);
                       const whatsappMsg = encodeURIComponent(
                         `Hi MSK Institute, I am interested in the "${course.title}" course. Please share demo timings, fee structure, and syllabus details.`
                       );
@@ -1023,8 +1018,8 @@ export default function CourseCatalogClient({ initialCourses }: { initialCourses
                               </div>
                             )}
 
-                            {/* Popular / Flagship Ribbon */}
-                            {isFlagship && (
+                            {/* Popular Ribbon for Longest Duration Programs */}
+                            {isPopular && (
                               <span className="absolute top-3 left-3 bg-secondary text-white text-[10px] font-black uppercase tracking-wider px-2 py-0.5 rounded shadow-sm backdrop-blur-xs flex items-center gap-1 z-10">
                                 <Sparkles className="w-3 h-3" />
                                 Popular
@@ -1139,7 +1134,7 @@ export default function CourseCatalogClient({ initialCourses }: { initialCourses
                   /* ================= LIST VIEW ================= */
                   <div className="flex flex-col gap-4">
                     {visibleCourses.map((course, idx) => {
-                      const isFlagship = FLAGSHIP_SLUGS.has(course.slug);
+                      const isPopular = isPopularCourse(course);
                       const whatsappMsg = encodeURIComponent(
                         `Hi MSK Institute, I am interested in the "${course.title}" course. Please share demo timings, fee structure, and syllabus details.`
                       );
@@ -1186,8 +1181,8 @@ export default function CourseCatalogClient({ initialCourses }: { initialCourses
                               </div>
                             )}
 
-                            {/* Popular Ribbon */}
-                            {isFlagship && (
+                            {/* Popular Ribbon for Longest Duration Programs */}
+                            {isPopular && (
                               <span className="absolute top-3 left-3 bg-secondary text-white text-[10px] font-black uppercase tracking-wider px-2 py-0.5 rounded shadow-sm flex items-center gap-1 z-10">
                                 <Sparkles className="w-3 h-3" />
                                 Popular
@@ -1400,9 +1395,9 @@ export default function CourseCatalogClient({ initialCourses }: { initialCourses
                   onChange={(e) => setSortBy(e.target.value as any)}
                   className="w-full p-2.5 bg-surface border border-border-subtle rounded-xl text-xs font-medium focus:outline-none focus:border-secondary cursor-pointer"
                 >
-                  <option value="featured">Featured First</option>
+                  <option value="duration-desc">Duration: Longest First (Default)</option>
                   <option value="duration-asc">Duration: Shortest First</option>
-                  <option value="duration-desc">Duration: Longest First</option>
+                  <option value="featured">Featured First</option>
                   <option value="alphabetical">Name: A to Z</option>
                 </select>
               </div>

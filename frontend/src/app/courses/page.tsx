@@ -68,6 +68,11 @@ export default async function CoursesPage() {
   try {
     const allCourses = await fetchCourses();
     courses = (allCourses || []).filter((course) => course && course.status === 'PUBLISH');
+    courses.sort((a, b) => {
+      const aDays = a.duration.unit === 'MONTHS' ? a.duration.value * 30 : a.duration.unit === 'DAYS' ? a.duration.value : a.duration.value / 24;
+      const bDays = b.duration.unit === 'MONTHS' ? b.duration.value * 30 : b.duration.unit === 'DAYS' ? b.duration.value : b.duration.value / 24;
+      return bDays - aDays;
+    });
   } catch (error) {
     console.error('Failed to load courses:', error);
     errorMsg = 'Unable to load the course catalog. Please try again later.';

@@ -106,7 +106,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
       return res.user;
     } catch (err: any) {
       toast.error(err.message || 'Registration failed. Please check the form.');
-      return null;
+      throw err;
     } finally {
       setIsLoading(false);
     }

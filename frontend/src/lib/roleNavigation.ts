@@ -62,3 +62,58 @@ export function getRoleDisplayName(role?: string): string {
   }
   return 'Student / Learner';
 }
+
+/**
+ * Checks whether an authenticated user's role has permission to access a specific dashboard.
+ * - Admin/superadmin has supervisor access across all dashboards.
+ * - Students, staff, branches, and affiliates can strictly access only their authorized portal.
+ */
+export function hasRolePermission(userRole: string | undefined | null, requiredDashboardRole: string): boolean {
+  if (!userRole) return false;
+  const normalizedUserRole = userRole.toLowerCase().trim();
+  const normalizedTargetRole = requiredDashboardRole.toLowerCase().trim();
+
+  // Super administrators have access across portals
+  if (
+    normalizedUserRole === 'admin' ||
+    normalizedUserRole === 'superadmin' ||
+    normalizedUserRole === 'super_admin'
+  ) {
+    return true;
+  }
+
+  if (normalizedTargetRole === 'student') {
+    return normalizedUserRole === 'student';
+  }
+
+  if (normalizedTargetRole === 'branch') {
+    return (
+      normalizedUserRole === 'branch' ||
+      normalizedUserRole === 'franchise' ||
+      normalizedUserRole === 'branch_manager' ||
+      normalizedUserRole === 'center_manager'
+    );
+  }
+
+  if (normalizedTargetRole === 'staff') {
+    return (
+      normalizedUserRole === 'staff' ||
+      normalizedUserRole === 'instructor' ||
+      normalizedUserRole === 'teacher'
+    );
+  }
+
+  if (normalizedTargetRole === 'affiliate') {
+    return normalizedUserRole === 'affiliate' || normalizedUserRole === 'partner';
+  }
+
+  if (normalizedTargetRole === 'admin') {
+    return (
+      normalizedUserRole === 'admin' ||
+      normalizedUserRole === 'superadmin' ||
+      normalizedUserRole === 'super_admin'
+    );
+  }
+
+  return false;
+}

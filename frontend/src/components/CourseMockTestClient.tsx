@@ -22,6 +22,7 @@ export default function CourseMockTestClient({ config }: CourseMockTestClientPro
   const [candidateName, setCandidateName] = useState('');
   const [reviewFilter, setReviewFilter] = useState<'all' | 'incorrect' | 'correct'>('all');
   const [showConfirmModal, setShowConfirmModal] = useState(false);
+  const [isSubmittingExam, setIsSubmittingExam] = useState(false);
 
   // Timer Countdown
   useEffect(() => {
@@ -645,19 +646,32 @@ export default function CourseMockTestClient({ config }: CourseMockTestClientPro
 
             <div className="flex items-center gap-3 pt-2">
               <button
+                disabled={isSubmittingExam}
                 onClick={() => setShowConfirmModal(false)}
-                className="flex-1 py-2.5 rounded-xl border border-border-subtle text-xs font-bold text-primary hover:bg-surface cursor-pointer transition-colors"
+                className="flex-1 py-2.5 rounded-xl border border-border-subtle text-xs font-bold text-primary hover:bg-surface cursor-pointer transition-colors disabled:opacity-50 disabled:pointer-events-none"
               >
                 Keep Reviewing
               </button>
               <button
+                disabled={isSubmittingExam}
                 onClick={() => {
-                  setShowConfirmModal(false);
-                  setIsExamSubmitted(true);
+                  setIsSubmittingExam(true);
+                  setTimeout(() => {
+                    setIsSubmittingExam(false);
+                    setShowConfirmModal(false);
+                    setIsExamSubmitted(true);
+                  }, 450);
                 }}
-                className="flex-1 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold shadow-xs cursor-pointer transition-colors"
+                className="flex-1 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold shadow-xs cursor-pointer transition-colors flex items-center justify-center gap-2 disabled:opacity-75 disabled:pointer-events-none disabled:cursor-not-allowed"
               >
-                Yes, Submit Now
+                {isSubmittingExam ? (
+                  <>
+                    <div className="w-3.5 h-3.5 border-2 border-white/40 border-t-white rounded-full animate-spin" />
+                    <span>Calculating Score... Please wait</span>
+                  </>
+                ) : (
+                  <span>Yes, Submit Now</span>
+                )}
               </button>
             </div>
           </div>

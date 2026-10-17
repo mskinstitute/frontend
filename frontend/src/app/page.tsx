@@ -89,9 +89,14 @@ export default async function HomePage() {
       getBranchSummaries(),
     ]);
     const publishedCourses = courses.filter(c => c.status === 'PUBLISH');
+    publishedCourses.sort((a, b) => {
+      const aDays = a.duration.unit === 'MONTHS' ? a.duration.value * 30 : a.duration.unit === 'DAYS' ? a.duration.value : a.duration.value / 24;
+      const bDays = b.duration.unit === 'MONTHS' ? b.duration.value * 30 : b.duration.unit === 'DAYS' ? b.duration.value : b.duration.value / 24;
+      return bDays - aDays;
+    });
     allPublishedCourses = publishedCourses;
     publishedCoursesCount = publishedCourses.length;
-    featuredCourses = publishedCourses.slice(0, 3);
+    featuredCourses = publishedCourses.slice(0, 6);
     allBatches = batches || [];
     branchCount = branches.length;
   } catch (error) {
@@ -384,14 +389,14 @@ export default async function HomePage() {
                 Join <strong>MSK Institute</strong> in Shikohabad to learn Python, Full-Stack Web Development, and essential computer concepts with hands-on lab projects and direct mentorship by <strong>Er. Sumit Kumar</strong>.
               </p>
               <div className={`flex flex-wrap gap-3 pt-2 ${hasLiveBatches ? '' : 'justify-center'}`}>
-                <a
-                  href="#book-demo"
+                <Link
+                  href="/book-demo"
                   className="inline-flex items-center justify-center px-6 py-3.5 bg-secondary hover:bg-secondary-light text-white font-black text-sm rounded-xl shadow-md hover:shadow-lg transition-all duration-200 hover:-translate-y-0.5 gap-2 cursor-pointer"
                 >
                   <Sparkles className="w-4 h-4" />
                   <span>Book Free Demo Class</span>
                   <span className="text-xs">➔</span>
-                </a>
+                </Link>
                 <Link
                   href="/courses"
                   className="inline-flex items-center justify-center px-5 py-3.5 bg-white border border-border-subtle hover:bg-surface text-primary font-bold text-sm rounded-xl shadow-2xs transition-all duration-200"

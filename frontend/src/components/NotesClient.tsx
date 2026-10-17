@@ -212,10 +212,19 @@ export default function NotesClient({ initialNotes }: { initialNotes: Note[] }) 
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full flex items-center justify-center gap-1.5 py-3 bg-secondary hover:bg-secondary-light text-white font-bold text-sm rounded-lg transition-colors shadow disabled:opacity-75 disabled:cursor-not-allowed"
+                className="w-full flex items-center justify-center gap-1.5 py-3 bg-secondary hover:bg-secondary-light text-white font-bold text-sm rounded-lg transition-colors shadow disabled:opacity-75 disabled:cursor-not-allowed disabled:pointer-events-none cursor-pointer"
               >
-                {isSubmitting ? 'Submitting request...' : 'Submit Checkout Request'}
-                <Send className="w-4 h-4" />
+                {isSubmitting ? (
+                  <>
+                    <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
+                    <span>Submitting request... Please wait</span>
+                  </>
+                ) : (
+                  <>
+                    <span>Submit Checkout Request</span>
+                    <Send className="w-4 h-4" />
+                  </>
+                )}
               </button>
             </form>
           </div>

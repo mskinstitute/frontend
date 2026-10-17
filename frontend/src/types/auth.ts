@@ -6,6 +6,7 @@ export interface AuthUser {
   last_name: string;
   phone: string;
   gender: 'male' | 'female' | 'other' | string;
+  address?: string;
   role?: string;
   picture?: string | null;
   date_joined?: string;
@@ -38,6 +39,16 @@ export interface RegisterPayload {
   phone: string;
   password: string;
   gender: 'male' | 'female' | 'other';
+  address: string;
+  ref_code?: string;
+  course_interest?: string;
+}
+
+export interface CheckAvailabilityResponse {
+  email_exists: boolean;
+  phone_exists: boolean;
+  email_message?: string;
+  phone_message?: string;
 }
 
 export interface LoginPayload {
