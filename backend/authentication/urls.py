@@ -7,12 +7,14 @@ from .views import (
     UserProfileView,
     ForgotPasswordView,
     ResetPasswordConfirmView,
+    CheckAvailabilityView,
 )
 
 app_name = 'authentication'
 
 urlpatterns = [
     path('register/', RegisterAPIView.as_view(), name='register'),
+    path('check-availability/', CheckAvailabilityView.as_view(), name='check_availability'),
     path('login/', LoginAPIView.as_view(), name='login'),
     path('logout/', LogoutView.as_view(), name='logout'),
     path('token/refresh/', CustomTokenRefreshView.as_view(), name='token_refresh'),

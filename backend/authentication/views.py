@@ -10,6 +10,7 @@ from django.db import transaction
 from django.utils import timezone
 from datetime import timedelta
 import random
+import re
 
 from .models import CustomUser, UserSession
 from .serializers import (
@@ -42,6 +43,22 @@ class RegisterAPIView(APIView):
                 access_jti=str(new_access["jti"]),
             )
 
+            # Check referral attribution
+            ref_code = serializer.validated_data.get('ref_code') or request.data.get('ref_code')
+            course_interest = serializer.validated_data.get('course_interest') or request.data.get('course_interest', '')
+            if ref_code:
+                from affiliates.services import AttributionEngine
+                ip = request.META.get('HTTP_X_FORWARDED_FOR', '').split(',')[0].strip() or request.META.get('REMOTE_ADDR')
+                user_agent = request.META.get('HTTP_USER_AGENT', '')
+                AttributionEngine.attribute_student_registration(
+                    student=user,
+                    ref_code=ref_code,
+                    course_interest=course_interest,
+                    attribution_type='link_click',
+                    ip_address=ip,
+                    user_agent=user_agent
+                )
+
             return Response({
                 "detail": "User registered successfully.",
                 "id": user.id,
@@ -55,6 +72,7 @@ class RegisterAPIView(APIView):
                     "last_name": user.last_name,
                     "phone": user.phone,
                     "gender": user.gender,
+                    "address": getattr(user, "address", ""),
                     "picture": request.build_absolute_uri(user.picture.url) if user.picture else None,
                 },
             }, status=status.HTTP_201_CREATED)
@@ -76,7 +94,9 @@ class LoginAPIView(APIView):
         user_obj = CustomUser.objects.filter(
             Q(username__iexact=identifier) |
             Q(email__iexact=identifier) |
-            Q(phone__iexact=identifier)
+            Q(phone__iexact=identifier) |
+            Q(phone__iexact=identifier.replace('+91', '')) |
+            Q(phone__iexact=f"+91{identifier}")
         ).first()
 
         if not user_obj:
@@ -265,3 +285,45 @@ class ResetPasswordConfirmView(APIView):
                 old_session.delete()
 
         return Response({"detail": "Password reset successful. You can now login with your new password."}, status=status.HTTP_200_OK)
+
+
+class CheckAvailabilityView(APIView):
+    """
+    Check if an email or mobile phone is already registered.
+    Query params:
+        - email (optional): user email to check
+        - phone (optional): 10-digit mobile number or phone string to check
+    """
+    permission_classes = [permissions.AllowAny]
+
+    def get(self, request):
+        email = request.query_params.get('email', '').strip().lower()
+        phone = request.query_params.get('phone', '').strip()
+
+        email_exists = False
+        phone_exists = False
+
+        if email:
+            email_exists = User.objects.filter(email__iexact=email).exists()
+
+        if phone:
+            cleaned_phone = re.sub(r'[\s\-\(\)\+]', '', phone)
+            digits_only = re.sub(r'[^\d]', '', cleaned_phone)
+            if digits_only.startswith('91') and len(digits_only) == 12:
+                digits_only = digits_only[2:]
+            elif digits_only.startswith('0') and len(digits_only) == 11:
+                digits_only = digits_only[1:]
+
+            if len(digits_only) == 10:
+                phone_exists = User.objects.filter(
+                    Q(phone=cleaned_phone) |
+                    Q(phone=digits_only) |
+                    Q(phone=f"+91{digits_only}")
+                ).exists()
+
+        return Response({
+            "email_exists": email_exists,
+            "phone_exists": phone_exists,
+            "email_message": "An account with this email is already registered." if email_exists else "",
+            "phone_message": "An account with this mobile number is already registered." if phone_exists else ""
+        }, status=status.HTTP_200_OK)

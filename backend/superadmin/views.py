@@ -13,23 +13,21 @@ from .serializers import (
 )
 
 
-class IsAdminUserOrDev(permissions.BasePermission):
+class IsAdminUserOnly(permissions.BasePermission):
     """
-    Allows access to authenticated admin/staff users.
-    In development, allows safe read access if needed.
+    Strictly allows access to authenticated admin or superuser users.
     """
     def has_permission(self, request, view):
         if request.user and request.user.is_authenticated:
             role = getattr(request.user, 'role', '')
-            return request.user.is_staff or request.user.is_superuser or role == 'admin'
-        # Allow AllowAny for development convenience if configured, or require auth
-        return request.method in permissions.SAFE_METHODS or False
+            return bool(request.user.is_staff or request.user.is_superuser or role == 'admin')
+        return False
 
 
 class BranchViewSet(viewsets.ModelViewSet):
     queryset = Branch.objects.all()
     serializer_class = BranchSerializer
-    permission_classes = [permissions.AllowAny]  # Can be tightened to IsAdminUser
+    permission_classes = [IsAdminUserOnly]
     filter_backends = [filters.SearchFilter, filters.OrderingFilter]
     search_fields = ['name', 'code', 'city', 'manager_name', 'phone']
     ordering_fields = ['name', 'created_at', 'revenue_share_percentage']
@@ -39,7 +37,7 @@ class BranchViewSet(viewsets.ModelViewSet):
 class StaffViewSet(viewsets.ModelViewSet):
     queryset = Staff.objects.select_related('branch').all()
     serializer_class = StaffSerializer
-    permission_classes = [permissions.AllowAny]
+    permission_classes = [IsAdminUserOnly]
     filter_backends = [filters.SearchFilter, filters.OrderingFilter]
     search_fields = ['name', 'email', 'phone', 'department', 'branch__name']
     ordering_fields = ['name', 'joining_date', 'salary', 'created_at']
@@ -62,7 +60,7 @@ class StaffViewSet(viewsets.ModelViewSet):
 class StudentViewSet(viewsets.ModelViewSet):
     queryset = Student.objects.select_related('branch').all()
     serializer_class = StudentSerializer
-    permission_classes = [permissions.AllowAny]
+    permission_classes = [IsAdminUserOnly]
     filter_backends = [filters.SearchFilter, filters.OrderingFilter]
     search_fields = ['registration_number', 'first_name', 'last_name', 'email', 'phone', 'course_name', 'branch__name']
     ordering_fields = ['created_at', 'fee_total', 'fee_paid', 'first_name']
@@ -88,7 +86,7 @@ class StudentViewSet(viewsets.ModelViewSet):
 class AffiliateViewSet(viewsets.ModelViewSet):
     queryset = Affiliate.objects.all()
     serializer_class = AffiliateSerializer
-    permission_classes = [permissions.AllowAny]
+    permission_classes = [IsAdminUserOnly]
     filter_backends = [filters.SearchFilter, filters.OrderingFilter]
     search_fields = ['name', 'affiliate_code', 'email', 'phone']
     ordering_fields = ['total_referrals', 'total_earnings', 'created_at']
@@ -106,7 +104,7 @@ class DashboardSummaryAPIView(APIView):
     """
     Returns aggregated KPI metrics for the Super Admin Overview.
     """
-    permission_classes = [permissions.AllowAny]
+    permission_classes = [IsAdminUserOnly]
 
     def get(self, request):
         total_branches = Branch.objects.count()

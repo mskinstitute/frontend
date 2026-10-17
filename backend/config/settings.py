@@ -31,6 +31,7 @@ INSTALLED_APPS = [
     # Local apps
     'authentication',
     'superadmin',
+    'affiliates',
 ]
 
 MIDDLEWARE = [

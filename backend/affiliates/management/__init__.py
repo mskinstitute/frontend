@@ -1,0 +1,1 @@
+# affiliates management package

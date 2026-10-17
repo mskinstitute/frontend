@@ -18,6 +18,7 @@ class AuthenticationAPITests(TestCase):
         self.profile_url = reverse('authentication:user_profile')
         self.forgot_password_url = reverse('authentication:forgot_password')
         self.reset_password_url = reverse('authentication:reset_password_confirm')
+        self.check_availability_url = reverse('authentication:check_availability')
 
         self.user_data = {
             "first_name": "Sumit",
@@ -25,7 +26,8 @@ class AuthenticationAPITests(TestCase):
             "email": "sumit@mskinstitute.com",
             "phone": "+919876543210",
             "password": "SecurePassword123!",
-            "gender": "male"
+            "gender": "male",
+            "address": "Station Road, Shikohabad",
         }
 
     def test_registration_success(self):
@@ -38,14 +40,32 @@ class AuthenticationAPITests(TestCase):
         self.assertEqual(response.data['user']['last_name'], "Kumar")
         self.assertEqual(response.data['user']['phone'], "+919876543210")
         self.assertEqual(response.data['user']['gender'], "male")
+        self.assertEqual(response.data['user']['address'], "Station Road, Shikohabad")
         
         # Verify user in database
         user = User.objects.get(email="sumit@mskinstitute.com")
         self.assertTrue(user.check_password("SecurePassword123!"))
+        self.assertEqual(user.address, "Station Road, Shikohabad")
         
         # Verify UserSession created
         session = UserSession.objects.filter(user=user).first()
         self.assertIsNotNone(session)
+
+    def test_check_availability_api(self):
+        # Before registration
+        res1 = self.client.get(self.check_availability_url, {'email': 'sumit@mskinstitute.com', 'phone': '9876543210'})
+        self.assertEqual(res1.status_code, status.HTTP_200_OK)
+        self.assertFalse(res1.data['email_exists'])
+        self.assertFalse(res1.data['phone_exists'])
+
+        # Register user
+        self.client.post(self.register_url, self.user_data, format='json')
+
+        # After registration - both should exist
+        res2 = self.client.get(self.check_availability_url, {'email': 'SUMIT@mskinstitute.com', 'phone': '9876543210'})
+        self.assertEqual(res2.status_code, status.HTTP_200_OK)
+        self.assertTrue(res2.data['email_exists'])
+        self.assertTrue(res2.data['phone_exists'])
 
     def test_duplicate_email_registration_fails(self):
         self.client.post(self.register_url, self.user_data, format='json')

@@ -19,6 +19,7 @@ class UserSerializer(serializers.ModelSerializer):
             'email',
             'phone',
             'gender',
+            'address',
             'role',
             'picture',
             'date_joined',
@@ -42,6 +43,9 @@ class RegisterSerializer(serializers.ModelSerializer):
         min_length=6,
         error_messages={'min_length': 'Password must be at least 6 characters long.'}
     )
+    address = serializers.CharField(required=False, allow_blank=True)
+    ref_code = serializers.CharField(required=False, allow_blank=True, write_only=True)
+    course_interest = serializers.CharField(required=False, allow_blank=True, write_only=True)
 
     class Meta:
         model = User
@@ -52,6 +56,9 @@ class RegisterSerializer(serializers.ModelSerializer):
             'phone',
             'password',
             'gender',
+            'address',
+            'ref_code',
+            'course_interest',
         ]
         extra_kwargs = {
             'first_name': {'required': True, 'allow_blank': False},
@@ -69,9 +76,16 @@ class RegisterSerializer(serializers.ModelSerializer):
 
     def validate_phone(self, value):
         cleaned_phone = re.sub(r'[\s\-\(\)]', '', value)
-        if len(cleaned_phone) < 7:
-            raise serializers.ValidationError("Please provide a valid phone number.")
-        if User.objects.filter(phone=cleaned_phone).exists():
+        digits_only = re.sub(r'[^\d]', '', cleaned_phone)
+        if digits_only.startswith('91') and len(digits_only) == 12:
+            digits_only = digits_only[2:]
+        elif digits_only.startswith('0') and len(digits_only) == 11:
+            digits_only = digits_only[1:]
+
+        if not re.match(r'^[6-9]\d{9}$', digits_only):
+            raise serializers.ValidationError("Please provide a valid 10-digit Indian mobile number (e.g. 9876543210).")
+
+        if User.objects.filter(Q(phone=cleaned_phone) | Q(phone=digits_only) | Q(phone=f"+91{digits_only}")).exists():
             raise serializers.ValidationError("An account with this phone number already exists.")
         return cleaned_phone
 
@@ -84,6 +98,9 @@ class RegisterSerializer(serializers.ModelSerializer):
 
     def create(self, validated_data):
         password = validated_data.pop('password')
+        validated_data.pop('ref_code', None)
+        validated_data.pop('course_interest', None)
+
         email = validated_data['email']
         base_username = email.split('@')[0]
         username = base_username

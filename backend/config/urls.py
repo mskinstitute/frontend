@@ -31,6 +31,7 @@ urlpatterns = [
     path('django-admin/', admin.site.urls),
     path('api/auth/', include('authentication.urls', namespace='authentication')),
     path('api/admin/', include('superadmin.urls', namespace='superadmin')),
+    path('api/affiliates/', include('affiliates.urls', namespace='affiliates')),
 ]
 
 if settings.DEBUG:

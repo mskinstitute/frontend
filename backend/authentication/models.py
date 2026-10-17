@@ -55,6 +55,7 @@ class CustomUser(AbstractUser):
     phone = models.CharField(max_length=20, unique=True, db_index=True)
     gender = models.CharField(max_length=20, choices=GENDER_CHOICES, default='other')
     role = models.CharField(max_length=30, default='student')
+    address = models.TextField(blank=True, default='')
     picture = models.ImageField(upload_to='profiles/', null=True, blank=True)
     
     # Password reset support
