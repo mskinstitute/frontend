@@ -11,8 +11,11 @@
 
 # local env files
 .env
-.env.*
+.env.local
+.env*.local
 !.env.example
+!.env.production
+!.env.development
 
 # logs
 npm-debug.log*

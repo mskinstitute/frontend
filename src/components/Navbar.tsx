@@ -543,15 +543,15 @@ export default function Navbar() {
                   Portal
                 </span>
               </Link>
-            ) : isServerOnline ? (
+            ) : (
               <Link
                 href="/login"
-                className="hidden md:inline-flex items-center gap-1.5 px-3 py-1.5 bg-slate-100 hover:bg-slate-200 text-slate-700 hover:text-slate-900 font-bold text-xs rounded-xl transition-colors ml-1 border border-slate-200 whitespace-nowrap flex-shrink-0 animate-in fade-in duration-200"
+                className="hidden md:inline-flex items-center gap-1.5 px-3 py-1.5 bg-slate-100 hover:bg-slate-200 text-slate-700 hover:text-slate-900 font-bold text-xs rounded-xl transition-colors ml-1 border border-slate-200 whitespace-nowrap flex-shrink-0"
               >
                 <User className="w-3.5 h-3.5 text-slate-500 flex-shrink-0" />
                 <span className="whitespace-nowrap">Sign In</span>
               </Link>
-            ) : null}
+            )}
           </div>
 
           {/* Mobile top actions: Search icon, Book Demo button (guest only) & Hamburger */}
@@ -644,8 +644,8 @@ export default function Navbar() {
                   </button>
                 </div>
               </div>
-            ) : isServerOnline ? (
-              <div className="mt-2.5 p-2.5 rounded-xl bg-slate-50 border border-slate-200 animate-in fade-in duration-200">
+            ) : (
+              <div className="mt-2.5 p-2.5 rounded-xl bg-slate-50 border border-slate-200">
                 <div className="flex items-center gap-2">
                   <Link
                     href="/login"
@@ -663,7 +663,7 @@ export default function Navbar() {
                   </Link>
                 </div>
               </div>
-            ) : null}
+            )}
 
             {/* Direct Links */}
             <div className="space-y-1.5 mt-3">
@@ -790,16 +790,16 @@ export default function Navbar() {
                 <span>Open {user.role === 'admin' ? 'Super Admin' : user.role === 'branch' || user.role === 'franchise' ? 'Franchise & Branch' : user.role === 'staff' ? 'Faculty' : user.role === 'affiliate' ? 'Affiliate' : 'Student'} Dashboard</span>
                 <span>➔</span>
               </Link>
-            ) : isServerOnline ? (
+            ) : (
               <Link
                 href="/login"
                 onClick={() => setIsOpen(false)}
-                className="w-full flex items-center justify-center gap-2 py-2.5 bg-slate-200 hover:bg-slate-300 text-slate-800 font-bold text-xs rounded-xl shadow-xs transition-colors animate-in fade-in duration-200"
+                className="w-full flex items-center justify-center gap-2 py-2.5 bg-slate-200 hover:bg-slate-300 text-slate-800 font-bold text-xs rounded-xl shadow-xs transition-colors"
               >
                 <User className="w-3.5 h-3.5 text-slate-600" />
                 <span>Sign In to Student & Staff Portal</span>
               </Link>
-            ) : null}
+            )}
 
             <Link
               href="/book-demo"

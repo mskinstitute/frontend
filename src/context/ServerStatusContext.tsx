@@ -1,6 +1,7 @@
 'use client';
 
 import React, { createContext, useContext, useState, useEffect, useCallback, useMemo } from 'react';
+import { BACKEND_API_URL } from '@/config/api';
 
 interface ServerStatusContextType {
   isServerOnline: boolean;
@@ -43,12 +44,11 @@ export function ServerStatusProvider({ children }: { children: React.ReactNode }
       setIsServerOnline(false);
       return false;
     } catch {
-      // 2. Direct browser fallback ping to API_BASE_URL if route handler fails
+      // 2. Direct browser fallback ping to BACKEND_API_URL if route handler fails
       try {
         const directController = new AbortController();
-        const directTimeoutId = setTimeout(() => directController.abort(), 2000);
-        const apiUrl = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000';
-        const directRes = await fetch(`${apiUrl}/`, {
+        const directTimeoutId = setTimeout(() => directController.abort(), 3500);
+        const directRes = await fetch(`${BACKEND_API_URL}/`, {
           signal: directController.signal,
           mode: 'cors',
         });

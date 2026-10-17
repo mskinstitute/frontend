@@ -1,14 +1,15 @@
 import { NextResponse } from 'next/server';
+import { BACKEND_API_URL } from '@/config/api';
 
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
 
 export async function GET() {
-  const backendUrl = process.env.NEXT_PUBLIC_API_URL || 'http://127.0.0.1:8000';
+  const backendUrl = BACKEND_API_URL;
 
   try {
     const controller = new AbortController();
-    const timeout = setTimeout(() => controller.abort(), 2500);
+    const timeout = setTimeout(() => controller.abort(), 4000);
 
     const res = await fetch(`${backendUrl}/`, {
       signal: controller.signal,
