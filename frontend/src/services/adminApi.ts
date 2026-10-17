@@ -5,8 +5,9 @@ import {
   AffiliateItem,
   DashboardData
 } from '@/types/admin';
+import { BACKEND_API_URL } from '@/config/api';
 
-const BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000';
+const BASE_URL = BACKEND_API_URL;
 
 function getAuthHeaders(): HeadersInit {
   const headers: Record<string, string> = {
