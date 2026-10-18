@@ -8,11 +8,13 @@ import {
   Send, MessageCircle, Clock, ShieldCheck, UserCheck, 
   Globe, MapPin, Calendar, BookOpen, HelpCircle, ChevronDown,
   Copy, ExternalLink, ArrowRight, User, Mail, Compass,
-  Search, X
+  Search, X, LayoutGrid, AlertTriangle
 } from 'lucide-react';
 import toast from 'react-hot-toast';
 import { Course } from '@/types';
 import { trackFormStart, trackFormSubmit, trackGenerateLead, trackDemoRequest } from '@/lib/dataLayer';
+import { useAuth } from '@/context/AuthContext';
+import { affiliateApi, StudentJourney } from '@/services/affiliateApi';
 
 export interface CourseOptionItem {
   id: string;
@@ -112,11 +114,53 @@ function BookDemoFormContent({ courses = [] }: BookDemoClientProps) {
     return Array.from(map.values());
   }, [courses]);
 
+  // Auth Context & Student State
+  const { user, isAuthenticated } = useAuth();
+  const [studentJourney, setStudentJourney] = useState<StudentJourney | null>(null);
+  const [loadingJourney, setLoadingJourney] = useState(false);
+
   // Form State
   const [name, setName] = useState('');
   const [phone, setPhone] = useState('');
   const [email, setEmail] = useState('');
   const [city, setCity] = useState('');
+
+  // Derived student information when authenticated
+  const studentFullName = useMemo(() => {
+    if (!user) return '';
+    const full = `${user.first_name || ''} ${user.last_name || ''}`.trim();
+    return full || user.username || '';
+  }, [user]);
+
+  const studentPhone = user?.phone || '';
+  const studentEmail = user?.email || '';
+  const studentCity = user?.address || (initialMode === 'OFFLINE' ? 'Shikohabad' : 'Online');
+
+  // Load student journey if authenticated to detect active bookings
+  useEffect(() => {
+    if (isAuthenticated) {
+      setLoadingJourney(true);
+      affiliateApi.getStudentJourney()
+        .then((data) => setStudentJourney(data))
+        .catch(() => {})
+        .finally(() => setLoadingJourney(false));
+    } else {
+      setStudentJourney(null);
+    }
+  }, [isAuthenticated]);
+
+  // Pre-fill state when authenticated user is present
+  useEffect(() => {
+    if (isAuthenticated && user) {
+      if (studentFullName) setName(studentFullName);
+      if (studentPhone) setPhone(studentPhone);
+      if (studentEmail) setEmail(studentEmail);
+      if (studentCity) setCity(studentCity);
+    }
+  }, [isAuthenticated, user, studentFullName, studentPhone, studentEmail, studentCity]);
+
+  const activeDemo = studentJourney?.demo_booking;
+  const hasActiveDemo = Boolean(activeDemo && ['SCHEDULED', 'DAY1_DONE', 'DAY2_DONE'].includes(activeDemo.status));
 
   // Search course state
   const [searchQuery, setSearchQuery] = useState('');
@@ -229,23 +273,71 @@ function BookDemoFormContent({ courses = [] }: BookDemoClientProps) {
     return target.toLocaleDateString('en-IN', { weekday: 'short', month: 'short', day: 'numeric', year: 'numeric' });
   }, [dateChoice, customDate]);
 
+  // Compute ISO date string (YYYY-MM-DD) for backend Django database
+  const dateIsoString = useMemo(() => {
+    const now = new Date();
+    if (dateChoice === 'custom' && customDate) {
+      return customDate;
+    }
+    const target = new Date(now);
+    if (dateChoice === 'weekend') {
+      const day = now.getDay();
+      const diff = day <= 6 ? (6 - day) : 0;
+      target.setDate(now.getDate() + (diff === 0 ? 7 : diff));
+    } else if (dateChoice === 'monday') {
+      const day = now.getDay();
+      const diff = (1 + 7 - day) % 7 || 7;
+      target.setDate(now.getDate() + diff);
+    } else {
+      // Default: Tomorrow
+      target.setDate(now.getDate() + 1);
+    }
+    const year = target.getFullYear();
+    const month = String(target.getMonth() + 1).padStart(2, '0');
+    const d = String(target.getDate()).padStart(2, '0');
+    return `${year}-${month}-${d}`;
+  }, [dateChoice, customDate]);
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
-    if (!name.trim()) {
+    // Determine effective student information
+    const effectiveName = (isAuthenticated && user ? studentFullName : name).trim();
+    const rawPhone = isAuthenticated && user ? (user.phone || phone) : phone;
+    const cleanPhone = (rawPhone || '').replace(/[^\d]/g, '');
+    const effectiveEmail = (isAuthenticated && user ? (user.email || email) : email).trim();
+    const effectiveCity = (isAuthenticated && user ? (user.address || city) : city).trim() || (learningMode === 'OFFLINE' ? 'Shikohabad' : 'Online');
+
+    if (!effectiveName) {
       toast.error('Please enter your Full Name');
       return;
     }
 
-    const cleanPhone = phone.replace(/[^\d]/g, '');
     if (cleanPhone.length < 10) {
-      toast.error('Please enter a valid 10-digit WhatsApp number');
+      toast.error('Please provide a valid 10-digit WhatsApp mobile number');
       return;
     }
 
     setIsSubmitting(true);
 
     try {
+      // 1. If student is logged in, assign demo class directly to their account in Django backend
+      if (isAuthenticated) {
+        try {
+          await affiliateApi.bookDemo({
+            course_name: selectedCourse,
+            learning_mode: learningMode,
+            preferred_slot: preferredSlot,
+            scheduled_date: dateIsoString,
+            notes: queryNotes.trim() ? `${queryNotes.trim()} [Background: ${background}]` : `Background: ${background}`,
+          });
+        } catch (demoErr: any) {
+          toast.error(demoErr.message || 'Could not assign demo class to your student account.');
+          setIsSubmitting(false);
+          return;
+        }
+      }
+
       // Capture affiliate referral code if stored in cookie or localStorage
       let referralCode = '';
       if (typeof window !== 'undefined') {
@@ -257,10 +349,10 @@ function BookDemoFormContent({ courses = [] }: BookDemoClientProps) {
       }
 
       const payload = {
-        name: name.trim(),
+        name: effectiveName,
         phone: cleanPhone,
-        email: email.trim(),
-        city: city.trim() || (learningMode === 'OFFLINE' ? 'Shikohabad' : 'Online'),
+        email: effectiveEmail,
+        city: effectiveCity,
         learningMode,
         courseTitle: selectedCourse,
         batchTitle: `Free 2-Day Demo - ${selectedCourse}`,
@@ -271,8 +363,10 @@ function BookDemoFormContent({ courses = [] }: BookDemoClientProps) {
         bookingType: 'FREE_DEMO_CLASS',
         referralCode,
         utm_source: 'book_demo_page',
-        utm_medium: 'direct_booking',
+        utm_medium: isAuthenticated ? 'authenticated_student' : 'direct_booking',
         utm_campaign: 'free_demo_trial',
+        userId: user?.id,
+        isStudentLoggedIn: Boolean(isAuthenticated),
       };
 
       const res = await fetch('/api/leads', {
@@ -284,6 +378,10 @@ function BookDemoFormContent({ courses = [] }: BookDemoClientProps) {
       const data = await res.json();
 
       if (res.ok && data.success) {
+        if (typeof window !== 'undefined') {
+          localStorage.setItem('msk_has_demo_booking', 'true');
+          window.dispatchEvent(new Event('msk_demo_booked'));
+        }
         // Analytics
         trackFormSubmit('free_demo_page_booking', { course_name: selectedCourse });
         trackGenerateLead('free_demo_page', {
@@ -309,7 +407,11 @@ function BookDemoFormContent({ courses = [] }: BookDemoClientProps) {
 
         setBookingResponse(respData);
         setIsSubmitted(true);
-        toast.success('Demo class reserved! Opening WhatsApp to send your details...');
+        toast.success(
+          isAuthenticated
+            ? '🎉 Free demo class reserved and assigned to your student account!'
+            : 'Demo class reserved! Opening WhatsApp to send your details...'
+        );
 
         // Try automatic WhatsApp dispatch
         if (typeof window !== 'undefined' && data.whatsappUrl) {
@@ -322,9 +424,9 @@ function BookDemoFormContent({ courses = [] }: BookDemoClientProps) {
       } else {
         toast.error(data.error || 'Failed to submit demo booking. Please try again.');
       }
-    } catch (err) {
+    } catch (err: any) {
       console.error('Demo booking submission error:', err);
-      toast.error('Network error. You can still WhatsApp us directly.');
+      toast.error(err.message || 'Network error. You can still WhatsApp us directly.');
     } finally {
       setIsSubmitting(false);
     }
@@ -350,7 +452,11 @@ function BookDemoFormContent({ courses = [] }: BookDemoClientProps) {
         <div className="relative z-10 max-w-4xl mx-auto text-center space-y-4">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#FF6B00]/20 border border-[#FF6B00]/40 text-[#FF8533] text-xs font-black uppercase tracking-wider shadow-inner">
             <Sparkles className="w-4 h-4 text-[#FF8533] animate-pulse" />
-            <span>100% Free 2-Day Trial • No Login Required • Zero Admission Fee</span>
+            <span>
+              {isAuthenticated && user
+                ? '100% Free 2-Day Trial • Linked To Student Account • Zero Admission Fee'
+                : '100% Free 2-Day Trial • No Login Required • Zero Admission Fee'}
+            </span>
           </div>
 
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight leading-tight">
@@ -401,16 +507,17 @@ function BookDemoFormContent({ courses = [] }: BookDemoClientProps) {
                     Seat Reserved Successfully
                   </span>
                   <h2 className="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight">
-                    Demo Class Reserved, {name}!
+                    {isAuthenticated ? `Demo Class Assigned, ${studentFullName || name}!` : `Demo Class Reserved, ${name}!`}
                   </h2>
                   <p className="text-xs sm:text-sm text-slate-600 max-w-md mx-auto leading-relaxed">
-                    Your demo pass has been generated. Please send the WhatsApp confirmation to 
-                    <strong> Er. Sumit Kumar</strong> to receive your Google Meet link or Lab Entry Pass.
+                    {isAuthenticated
+                      ? 'Your demo seat has been reserved and linked directly to your student account. Send the WhatsApp confirmation to receive your Google Meet link or Lab Entry Pass.'
+                      : 'Your demo pass has been generated. Please send the WhatsApp confirmation to Er. Sumit Kumar to receive your Google Meet link or Lab Entry Pass.'}
                   </p>
                 </div>
 
-                {/* Big WhatsApp CTA Button */}
-                <div className="pt-2">
+                {/* Actions: Big WhatsApp CTA + Dashboard Link */}
+                <div className="pt-2 space-y-3">
                   <a
                     href={bookingResponse.whatsappUrl}
                     target="_blank"
@@ -421,7 +528,19 @@ function BookDemoFormContent({ courses = [] }: BookDemoClientProps) {
                     <span>Send WhatsApp Message to Confirm Now</span>
                     <ExternalLink className="w-4 h-4 opacity-80" />
                   </a>
-                  <p className="text-[11px] text-slate-400 mt-2">
+
+                  {isAuthenticated && (
+                    <Link
+                      href="/dashboard/student"
+                      className="w-full inline-flex items-center justify-center gap-2.5 py-3 px-6 bg-slate-900 hover:bg-slate-800 text-white font-extrabold text-xs sm:text-sm rounded-2xl shadow-md transition-all cursor-pointer"
+                    >
+                      <LayoutGrid className="w-4 h-4 text-cyan-400" />
+                      <span>View in Student Dashboard & Track Demo Progress</span>
+                      <ArrowRight className="w-4 h-4" />
+                    </Link>
+                  )}
+
+                  <p className="text-[11px] text-slate-400">
                     Tapping this will open WhatsApp directly with all your details pre-filled.
                   </p>
                 </div>
@@ -507,13 +626,50 @@ function BookDemoFormContent({ courses = [] }: BookDemoClientProps) {
             ) : (
               /* The Booking Form */
               <form onSubmit={handleSubmit} className="space-y-6">
-                <div>
-                  <h2 className="text-xl sm:text-2xl font-black text-slate-900 tracking-tight">
-                    Reserve Your Free Seat
-                  </h2>
-                  <p className="text-xs text-slate-500 mt-1">
-                    No login required. Fill the details below to lock your 2-day practical trial.
-                  </p>
+                <div className="space-y-3">
+                  {hasActiveDemo && activeDemo && (
+                    <div className="p-4 rounded-2xl bg-amber-50 border border-amber-200 text-amber-900 flex items-start gap-3">
+                      <AlertTriangle className="w-5 h-5 text-amber-600 shrink-0 mt-0.5" />
+                      <div className="text-xs space-y-1">
+                        <div className="font-extrabold text-amber-950">
+                          Active Demo in Progress: {activeDemo.course_name}
+                        </div>
+                        <p className="text-amber-800 leading-relaxed">
+                          You currently have an active demo booking ({activeDemo.status}) scheduled for {activeDemo.scheduled_date || 'upcoming session'} ({activeDemo.learning_mode}). You can track or attend your sessions directly from your student portal.
+                        </p>
+                        <div className="pt-1">
+                          <Link
+                            href="/dashboard/student"
+                            className="inline-flex items-center gap-1.5 font-black text-amber-900 hover:text-amber-950 underline"
+                          >
+                            <span>Open Student Dashboard</span>
+                            <ArrowRight className="w-3 h-3" />
+                          </Link>
+                        </div>
+                      </div>
+                    </div>
+                  )}
+
+                  <div>
+                    <h2 className="text-xl sm:text-2xl font-black text-slate-900 tracking-tight">
+                      Reserve Your Free Seat
+                    </h2>
+                    {isAuthenticated && user ? (
+                      <p className="text-xs text-emerald-700 font-semibold mt-1 flex items-center gap-1.5">
+                        <CheckCircle2 className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
+                        <span>
+                          Logged in as <strong>{studentFullName}</strong>. Your 2-day trial will be assigned directly to your student account.
+                        </span>
+                      </p>
+                    ) : (
+                      <p className="text-xs text-slate-500 mt-1">
+                        No login required. Fill the details below to lock your 2-day practical trial.{' '}
+                        <Link href="/login?redirect=/book-demo" className="text-[#FF6B00] font-bold hover:underline ml-1">
+                          Already a student? Log in ➔
+                        </Link>
+                      </p>
+                    )}
+                  </div>
                 </div>
 
                 {/* 1. Mode Selector Pill */}
@@ -748,85 +904,182 @@ function BookDemoFormContent({ courses = [] }: BookDemoClientProps) {
                   </div>
                 </div>
 
-                {/* 3. Name & Phone */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <div className="space-y-1.5">
-                    <label htmlFor="student-name" className="text-xs font-extrabold uppercase tracking-wider text-slate-700 block">
-                      Student Full Name <span className="text-red-500">*</span>
-                    </label>
-                    <div className="relative">
-                      <User className="w-4 h-4 text-slate-400 absolute left-3.5 top-3.5" />
-                      <input
-                        id="student-name"
-                        type="text"
-                        required
-                        placeholder="e.g. Rahul Sharma"
-                        value={name}
-                        onFocus={() => trackFormStart('free_demo_page_booking')}
-                        onChange={(e) => setName(e.target.value)}
-                        className="w-full pl-10 pr-3.5 py-3 bg-slate-50 border border-slate-200 rounded-xl text-xs sm:text-sm font-medium text-slate-800 focus:outline-none focus:ring-2 focus:ring-[#FF6B00] transition-all"
-                      />
-                    </div>
-                  </div>
-
-                  <div className="space-y-1.5">
-                    <label htmlFor="whatsapp-phone" className="text-xs font-extrabold uppercase tracking-wider text-slate-700 block">
-                      WhatsApp Mobile Number <span className="text-red-500">*</span>
-                    </label>
-                    <div className="relative">
-                      <span className="absolute left-3.5 top-3 text-xs font-black text-slate-500">
-                        +91
+                {/* 3. Student Information: Auto-detected if Logged In, otherwise Input Fields */}
+                {isAuthenticated && user ? (
+                  <div className="space-y-2">
+                    <div className="flex items-center justify-between">
+                      <label className="text-xs font-extrabold uppercase tracking-wider text-slate-700 block">
+                        3. Student Information
+                      </label>
+                      <span className="inline-flex items-center gap-1 text-[10px] font-black uppercase tracking-wider text-emerald-700 bg-emerald-50 px-2.5 py-0.5 rounded-full border border-emerald-200">
+                        <CheckCircle2 className="w-3 h-3 text-emerald-600" />
+                        Auto-detected from Account
                       </span>
-                      <input
-                        id="whatsapp-phone"
-                        type="tel"
-                        required
-                        maxLength={10}
-                        placeholder="98765 43210"
-                        value={phone}
-                        onChange={(e) => setPhone(e.target.value)}
-                        className="w-full pl-12 pr-3.5 py-3 bg-slate-50 border border-slate-200 rounded-xl text-xs sm:text-sm font-medium text-slate-800 focus:outline-none focus:ring-2 focus:ring-[#FF6B00] transition-all"
-                      />
                     </div>
-                  </div>
-                </div>
 
-                {/* 4. Email & City */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <div className="space-y-1.5">
-                    <label htmlFor="student-email" className="text-xs font-extrabold uppercase tracking-wider text-slate-700 block">
-                      Email Address <span className="text-[10px] font-normal text-slate-400">(Optional, for class notes)</span>
-                    </label>
-                    <div className="relative">
-                      <Mail className="w-4 h-4 text-slate-400 absolute left-3.5 top-3.5" />
-                      <input
-                        id="student-email"
-                        type="email"
-                        placeholder="rahul@example.com"
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)}
-                        className="w-full pl-10 pr-3.5 py-3 bg-slate-50 border border-slate-200 rounded-xl text-xs sm:text-sm font-medium text-slate-800 focus:outline-none focus:ring-2 focus:ring-[#FF6B00] transition-all"
-                      />
-                    </div>
-                  </div>
+                    <div className="p-4 sm:p-5 rounded-2xl bg-gradient-to-br from-emerald-50/70 via-slate-50 to-teal-50/50 border border-emerald-200/90 shadow-xs space-y-3">
+                      <div className="flex items-center justify-between pb-3 border-b border-emerald-200/70">
+                        <div className="flex items-center gap-3">
+                          <div className="w-10 h-10 rounded-full bg-gradient-to-tr from-[#FF6B00] to-[#FF8533] text-white flex items-center justify-center font-black text-sm uppercase shadow-xs">
+                            {user.first_name ? user.first_name[0] : (user.username ? user.username[0] : 'S')}
+                          </div>
+                          <div>
+                            <div className="font-extrabold text-slate-900 text-sm">
+                              {studentFullName}
+                            </div>
+                            <div className="text-[11px] text-slate-500">
+                              Student ID: #{user.id} • Registered Student
+                            </div>
+                          </div>
+                        </div>
 
-                  <div className="space-y-1.5">
-                    <label htmlFor="student-city" className="text-xs font-extrabold uppercase tracking-wider text-slate-700 block">
-                      City / Location
-                    </label>
-                    <div className="relative">
-                      <MapPin className="w-4 h-4 text-slate-400 absolute left-3.5 top-3.5" />
-                      <input
-                        id="student-city"
-                        type="text"
-                        placeholder={learningMode === 'OFFLINE' ? 'Shikohabad / Firozabad' : 'Any City / State'}
-                        value={city}
-                        onChange={(e) => setCity(e.target.value)}
-                        className="w-full pl-10 pr-3.5 py-3 bg-slate-50 border border-slate-200 rounded-xl text-xs sm:text-sm font-medium text-slate-800 focus:outline-none focus:ring-2 focus:ring-[#FF6B00] transition-all"
-                      />
+                        <Link
+                          href="/profile"
+                          className="text-[11px] font-extrabold text-[#FF6B00] hover:text-[#e56000] hover:underline"
+                        >
+                          Edit Profile
+                        </Link>
+                      </div>
+
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs">
+                        <div className="p-2.5 rounded-xl bg-white border border-slate-200/80">
+                          <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider block">
+                            WhatsApp Mobile Number
+                          </span>
+                          <strong className="text-slate-800 text-xs sm:text-sm font-extrabold block truncate">
+                            {user.phone ? `+91 ${user.phone}` : 'No phone linked'}
+                          </strong>
+                        </div>
+
+                        <div className="p-2.5 rounded-xl bg-white border border-slate-200/80">
+                          <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider block">
+                            Registered Email
+                          </span>
+                          <strong className="text-slate-800 text-xs font-semibold block truncate">
+                            {user.email || 'No email linked'}
+                          </strong>
+                        </div>
+
+                        <div className="p-2.5 rounded-xl bg-white border border-slate-200/80 sm:col-span-2">
+                          <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider block">
+                            City / Location
+                          </span>
+                          <strong className="text-slate-800 text-xs font-semibold block truncate">
+                            {user.address || (learningMode === 'OFFLINE' ? 'Shikohabad (Offline Lab)' : 'Online Live')}
+                          </strong>
+                        </div>
+                      </div>
+
+                      {/* If user profile has no phone number, prompt for WhatsApp number */}
+                      {!user.phone && (
+                        <div className="p-3 bg-amber-50 rounded-xl border border-amber-200 space-y-1">
+                          <label htmlFor="auth-phone-input" className="text-[11px] font-bold text-amber-900 block">
+                            Enter WhatsApp Number for Class Link <span className="text-red-500">*</span>:
+                          </label>
+                          <input
+                            id="auth-phone-input"
+                            type="tel"
+                            required
+                            placeholder="98765 43210"
+                            maxLength={10}
+                            value={phone}
+                            onChange={(e) => setPhone(e.target.value)}
+                            className="w-full px-3 py-2 bg-white border border-amber-300 rounded-lg text-xs font-semibold"
+                          />
+                        </div>
+                      )}
+
+                      <div className="p-2.5 rounded-xl bg-emerald-50/80 border border-emerald-200/70 text-[11px] text-emerald-800 flex items-center gap-2">
+                        <ShieldCheck className="w-4 h-4 text-emerald-600 shrink-0" />
+                        <span>
+                          No information entry required! This demo session will be directly assigned to your student profile & dashboard.
+                        </span>
+                      </div>
                     </div>
                   </div>
-                </div>
+                ) : (
+                  <>
+                    {/* 3. Name & Phone */}
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                      <div className="space-y-1.5">
+                        <label htmlFor="student-name" className="text-xs font-extrabold uppercase tracking-wider text-slate-700 block">
+                          Student Full Name <span className="text-red-500">*</span>
+                        </label>
+                        <div className="relative">
+                          <User className="w-4 h-4 text-slate-400 absolute left-3.5 top-3.5" />
+                          <input
+                            id="student-name"
+                            type="text"
+                            required
+                            placeholder="e.g. Rahul Sharma"
+                            value={name}
+                            onFocus={() => trackFormStart('free_demo_page_booking')}
+                            onChange={(e) => setName(e.target.value)}
+                            className="w-full pl-10 pr-3.5 py-3 bg-slate-50 border border-slate-200 rounded-xl text-xs sm:text-sm font-medium text-slate-800 focus:outline-none focus:ring-2 focus:ring-[#FF6B00] transition-all"
+                          />
+                        </div>
+                      </div>
+
+                      <div className="space-y-1.5">
+                        <label htmlFor="whatsapp-phone" className="text-xs font-extrabold uppercase tracking-wider text-slate-700 block">
+                          WhatsApp Mobile Number <span className="text-red-500">*</span>
+                        </label>
+                        <div className="relative">
+                          <span className="absolute left-3.5 top-3 text-xs font-black text-slate-500">
+                            +91
+                          </span>
+                          <input
+                            id="whatsapp-phone"
+                            type="tel"
+                            required
+                            maxLength={10}
+                            placeholder="98765 43210"
+                            value={phone}
+                            onChange={(e) => setPhone(e.target.value)}
+                            className="w-full pl-12 pr-3.5 py-3 bg-slate-50 border border-slate-200 rounded-xl text-xs sm:text-sm font-medium text-slate-800 focus:outline-none focus:ring-2 focus:ring-[#FF6B00] transition-all"
+                          />
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* 4. Email & City */}
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                      <div className="space-y-1.5">
+                        <label htmlFor="student-email" className="text-xs font-extrabold uppercase tracking-wider text-slate-700 block">
+                          Email Address <span className="text-[10px] font-normal text-slate-400">(Optional, for class notes)</span>
+                        </label>
+                        <div className="relative">
+                          <Mail className="w-4 h-4 text-slate-400 absolute left-3.5 top-3.5" />
+                          <input
+                            id="student-email"
+                            type="email"
+                            placeholder="rahul@example.com"
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
+                            className="w-full pl-10 pr-3.5 py-3 bg-slate-50 border border-slate-200 rounded-xl text-xs sm:text-sm font-medium text-slate-800 focus:outline-none focus:ring-2 focus:ring-[#FF6B00] transition-all"
+                          />
+                        </div>
+                      </div>
+
+                      <div className="space-y-1.5">
+                        <label htmlFor="student-city" className="text-xs font-extrabold uppercase tracking-wider text-slate-700 block">
+                          City / Location
+                        </label>
+                        <div className="relative">
+                          <MapPin className="w-4 h-4 text-slate-400 absolute left-3.5 top-3.5" />
+                          <input
+                            id="student-city"
+                            type="text"
+                            placeholder={learningMode === 'OFFLINE' ? 'Shikohabad / Firozabad' : 'Any City / State'}
+                            value={city}
+                            onChange={(e) => setCity(e.target.value)}
+                            className="w-full pl-10 pr-3.5 py-3 bg-slate-50 border border-slate-200 rounded-xl text-xs sm:text-sm font-medium text-slate-800 focus:outline-none focus:ring-2 focus:ring-[#FF6B00] transition-all"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </>
+                )}
 
                 {/* 5. Date Selection */}
                 <div className="space-y-2">

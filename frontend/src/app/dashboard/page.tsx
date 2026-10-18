@@ -1,3 +1,4 @@
+2.
 'use client';
 
 import React, { useEffect } from 'react';
@@ -22,7 +23,8 @@ export default function DashboardIndexPage() {
       return;
     }
 
-    const destination = getRoleDashboardUrl(user.role);
+    const search = typeof window !== 'undefined' ? window.location.search : '';
+    const destination = getRoleDashboardUrl(user.role) + (search || '');
     router.replace(destination);
   }, [isAuthenticated, user, isLoading, router, isServerOnline]);
 

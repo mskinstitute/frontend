@@ -28,6 +28,7 @@ With dummy nodes:
 
 ## 3. Designing a Doubly Linked List Node
 
+### Python:
 ```python
 class DoublyNode:
     def __init__(self, val: int = 0):
@@ -36,9 +37,66 @@ class DoublyNode:
         self.next: 'DoublyNode' = None
 ```
 
+### C:
+```c
+#include <stdio.h>
+#include <stdlib.h>
+
+typedef struct DoublyNode {
+    int val;
+    struct DoublyNode* prev;
+    struct DoublyNode* next;
+} DoublyNode;
+
+DoublyNode* create_node(int val) {
+    DoublyNode* node = (DoublyNode*)malloc(sizeof(DoublyNode));
+    node->val = val;
+    node->prev = NULL;
+    node->next = NULL;
+    return node;
+}
+```
+
+### C++:
+```cpp
+struct DoublyNode {
+    int val;
+    DoublyNode* prev;
+    DoublyNode* next;
+    DoublyNode(int v = 0) : val(v), prev(nullptr), next(nullptr) {}
+};
+```
+
+### Java:
+```java
+public class DoublyNode {
+    public int val;
+    public DoublyNode prev;
+    public DoublyNode next;
+
+    public DoublyNode(int val) {
+        this.val = val;
+        this.prev = null;
+        this.next = null;
+    }
+}
+```
+
+### JavaScript:
+```javascript
+class DoublyNode {
+    constructor(val = 0) {
+        this.val = val;
+        this.prev = null;
+        this.next = null;
+    }
+}
+```
+
 ### Removing a Node in $O(1)$ Time Given its Reference:
 In a singly linked list, deleting a node requires $O(n)$ traversal to find its predecessor. In a doubly linked list, because the node knows its own `prev`, deletion is an instant $O(1)$ pointer splice:
 
+### Python:
 ```python
 def remove_node(node: DoublyNode) -> None:
     # Splice out 'node' by connecting its neighbors to each other
@@ -46,11 +104,49 @@ def remove_node(node: DoublyNode) -> None:
     node.next.prev = node.prev
 ```
 
+### C:
+```c
+void remove_node(DoublyNode* node) {
+    if (!node || !node->prev || !node->next) return;
+    node->prev->next = node->next;
+    node->next->prev = node->prev;
+    free(node);
+}
+```
+
+### C++:
+```cpp
+void remove_node(DoublyNode* node) {
+    if (!node) return;
+    node->prev->next = node->next;
+    node->next->prev = node->prev;
+    delete node;
+}
+```
+
+### Java:
+```java
+public static void removeNode(DoublyNode node) {
+    if (node == null) return;
+    node.prev.next = node.next;
+    node.next.prev = node.prev;
+}
+```
+
+### JavaScript:
+```javascript
+function removeNode(node) {
+    if (!node) return;
+    node.prev.next = node.next;
+    node.next.prev = node.prev;
+}
+```
+
 ---
 
 ## 4. Multi-Language Implementations: Doubly Linked List with Sentinels
 
-### Python 3:
+### Python:
 ```python
 class DoublyLinkedList:
     def __init__(self):
@@ -79,42 +175,146 @@ class DoublyLinkedList:
         return last_real_node.val
 ```
 
-### Modern JavaScript / TypeScript:
-```typescript
-export class DNode {
-  val: number;
-  prev: DNode | null = null;
-  next: DNode | null = null;
-  constructor(val: number = 0) {
-    this.val = val;
-  }
+### C:
+```c
+#include <stdio.h>
+#include <stdlib.h>
+
+typedef struct DoublyLinkedList {
+    DoublyNode* head;
+    DoublyNode* tail;
+    int size;
+} DoublyLinkedList;
+
+DoublyLinkedList* create_list() {
+    DoublyLinkedList* list = (DoublyLinkedList*)malloc(sizeof(DoublyLinkedList));
+    list->head = create_node(0);
+    list->tail = create_node(0);
+    list->head->next = list->tail;
+    list->tail->prev = list->head;
+    list->size = 0;
+    return list;
 }
 
-export class DoublyLinkedList {
-  private head: DNode;
-  private tail: DNode;
-  public size: number = 0;
+void add_to_front(DoublyLinkedList* list, int val) {
+    DoublyNode* node = create_node(val);
+    node->next = list->head->next;
+    node->prev = list->head;
+    list->head->next->prev = node;
+    list->head->next = node;
+    list->size++;
+}
 
+int remove_last(DoublyLinkedList* list) {
+    if (list->size == 0) return -1;
+    DoublyNode* last = list->tail->prev;
+    int val = last->val;
+    last->prev->next = list->tail;
+    list->tail->prev = last->prev;
+    free(last);
+    list->size--;
+    return val;
+}
+```
+
+### C++:
+```cpp
+class DoublyLinkedList {
+private:
+    DoublyNode* head;
+    DoublyNode* tail;
+    int size;
+
+public:
+    DoublyLinkedList() : size(0) {
+        head = new DoublyNode(0);
+        tail = new DoublyNode(0);
+        head->next = tail;
+        tail->prev = head;
+    }
+
+    void addToFront(int val) {
+        DoublyNode* node = new DoublyNode(val);
+        node->next = head->next;
+        node->prev = head;
+        head->next->prev = node;
+        head->next = node;
+        size++;
+    }
+
+    int removeLast() {
+        if (size == 0) return -1;
+        DoublyNode* last = tail->prev;
+        int val = last->val;
+        last->prev->next = tail;
+        tail->prev = last->prev;
+        delete last;
+        size--;
+        return val;
+    }
+};
+```
+
+### Java:
+```java
+public class DoublyLinkedList {
+    private DoublyNode head;
+    private DoublyNode tail;
+    private int size;
+
+    public DoublyLinkedList() {
+        this.head = new DoublyNode(0);
+        this.tail = new DoublyNode(0);
+        this.head.next = this.tail;
+        this.tail.prev = this.head;
+        this.size = 0;
+    }
+
+    public void addToFront(int val) {
+        DoublyNode node = new DoublyNode(val);
+        node.next = this.head.next;
+        node.prev = this.head;
+        this.head.next.prev = node;
+        this.head.next = node;
+        this.size++;
+    }
+
+    public int removeLast() {
+        if (this.size == 0) return -1;
+        DoublyNode last = this.tail.prev;
+        int val = last.val;
+        last.prev.next = this.tail;
+        this.tail.prev = last.prev;
+        this.size--;
+        return val;
+    }
+}
+```
+
+### JavaScript:
+```javascript
+export class DoublyLinkedList {
   constructor() {
-    this.head = new DNode(0);
-    this.tail = new DNode(0);
+    this.head = new DoublyNode(0);
+    this.tail = new DoublyNode(0);
     this.head.next = this.tail;
     this.tail.prev = this.head;
+    this.size = 0;
   }
 
-  public addToFront(val: number): void {
-    const node = new DNode(val);
+  addToFront(val) {
+    const node = new DoublyNode(val);
     node.next = this.head.next;
     node.prev = this.head;
-    this.head.next!.prev = node;
+    this.head.next.prev = node;
     this.head.next = node;
     this.size++;
   }
 
-  public removeLast(): number {
+  removeLast() {
     if (this.size === 0) return -1;
-    const toRemove = this.tail.prev!;
-    toRemove.prev!.next = this.tail;
+    const toRemove = this.tail.prev;
+    toRemove.prev.next = this.tail;
     this.tail.prev = toRemove.prev;
     this.size--;
     return toRemove.val;

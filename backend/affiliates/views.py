@@ -6,6 +6,7 @@ from django.db import transaction
 from django.shortcuts import get_object_or_404
 from django.db.models import Count, Sum
 from decimal import Decimal
+from datetime import datetime
 
 from .models import (
     Affiliate,
@@ -348,10 +349,24 @@ class BookDemoAPIView(APIView):
     def post(self, request):
         user = request.user
         course_name = request.data.get('course_name', '').strip()
-        learning_mode = request.data.get('learning_mode', 'OFFLINE')
+        raw_mode = request.data.get('learning_mode', 'OFFLINE')
+        learning_mode = 'ONLINE' if isinstance(raw_mode, str) and 'ONLINE' in raw_mode.upper() else 'OFFLINE'
         preferred_slot = request.data.get('preferred_slot', '09:00 AM - 11:00 AM')
-        scheduled_date = request.data.get('scheduled_date', None)
+        scheduled_date_raw = request.data.get('scheduled_date', None)
         notes = request.data.get('notes', '')
+
+        scheduled_date = None
+        if scheduled_date_raw:
+            try:
+                scheduled_date = datetime.strptime(str(scheduled_date_raw)[:10], '%Y-%m-%d').date()
+            except Exception:
+                try:
+                    from dateutil import parser
+                    scheduled_date = parser.parse(str(scheduled_date_raw)).date()
+                except Exception:
+                    scheduled_date = timezone.now().date()
+        else:
+            scheduled_date = timezone.now().date()
 
         if not course_name:
             return Response({'error': 'course_name is required'}, status=status.HTTP_400_BAD_REQUEST)
@@ -378,7 +393,7 @@ class BookDemoAPIView(APIView):
                 course_name=course_name,
                 learning_mode=learning_mode,
                 preferred_slot=preferred_slot,
-                scheduled_date=scheduled_date or timezone.now().date(),
+                scheduled_date=scheduled_date,
                 status='SCHEDULED',
                 notes=notes
             )

@@ -29,6 +29,8 @@ export async function POST(req: NextRequest) {
       utm_source = '',
       utm_medium = '',
       utm_campaign = '',
+      userId = '',
+      isStudentLoggedIn = false,
     } = body;
 
     // Basic validation
@@ -147,7 +149,7 @@ I have booked a *Free 2-Day Trial Demo Class* on the website:
 👤 *STUDENT DETAILS:*
 • *Full Name:* ${leadData.name}
 • *WhatsApp Phone:* +91 ${leadData.phone}
-${leadData.email ? `• *Email:* ${leadData.email}\n` : ''}${leadData.city ? `• *City / Location:* ${leadData.city}\n` : ''}${studentBackground ? `• *Background:* ${studentBackground}\n` : ''}
+${leadData.email ? `• *Email:* ${leadData.email}\n` : ''}${leadData.city ? `• *City / Location:* ${leadData.city}\n` : ''}${studentBackground ? `• *Background:* ${studentBackground}\n` : ''}${isStudentLoggedIn ? `• *Account Status:* Registered Student (ID: #${userId || 'Active'})\n` : ''}
 💻 *DEMO PREFERENCES:*
 • *Course:* ${courseTitle || 'Coding Masterclass'}
 • *Preferred Mode:* ${leadData.learningMode === 'ONLINE' ? '🌐 Online Live Class (Interactive Google Meet)' : '🏢 In-Person Lab (Shikohabad Centre)'}

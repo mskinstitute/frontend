@@ -54,4 +54,7 @@ Review which mobile apps have access to your contacts, SMS, microphone, and loca
 
 ## Summary & Next Steps
 
-By practicing these 7 daily habits and understanding cybersecurity fundamentals, you safeguard both yourself and your family. Want to build a high-paying career as an ethical hacker or network defender? Explore our Cyber Security and Ethical Hacking diploma courses at MSK Institute!
+By practicing these 7 daily habits and understanding cybersecurity fundamentals, you safeguard both yourself and your family. 
+
+Want to build a high-paying career as an ethical hacker, SOC analyst, or network defender? Read our complete [Cyber Security Career for Beginners: Skills, Salary, Roadmap](/blogs/cyber-security-career-for-beginners-skills-salary-roadmap) guide or explore our 18-month **[Cyber Security & Ethical Hacking Professional Program](/courses/cyber-security-ethical-hacking-professional-program)** at MSK Institute!
+

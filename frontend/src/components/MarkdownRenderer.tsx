@@ -37,6 +37,7 @@ import { SupportedLanguage } from '@/features/playground';
 import { detectAndRenderVisualDiagram } from '@/components/MarkdownDiagrams';
 import InlineCodePreview from '@/components/InlineCodePreview';
 import { isWebPreviewSupported } from '@/lib/webPreviewUtils';
+import MultiLanguageCodeBlock, { CodeTab } from '@/components/MultiLanguageCodeBlock';
 
 const PlaygroundModal = dynamic(() => import('@/features/playground/PlaygroundModal'), {
   ssr: false,
@@ -185,6 +186,7 @@ type Block =
   | { type: 'hr' }
   | { type: 'heading'; level: number; text: string; cleanId: string }
   | { type: 'code'; lang: string; code: string; meta: CodeBlockMeta }
+  | { type: 'multi-code'; tabs: CodeTab[]; title?: string }
   | { type: 'table'; headers: string[]; rows: string[][] }
   | { type: 'blockquote'; lines: string[] }
   | { type: 'ordered-list'; items: string[] }
@@ -209,6 +211,25 @@ type Block =
 export default function MarkdownRenderer({ content }: MarkdownRendererProps) {
   const [copiedIndex, setCopiedIndex] = useState<number | null>(null);
   const [zoomedImage, setZoomedImage] = useState<{ src: string; alt: string } | null>(null);
+  const [userActiveLang, setUserActiveLang] = useState<string>('python');
+
+  // Load student preferred language track if saved
+  React.useEffect(() => {
+    try {
+      const active = localStorage.getItem('msk_dsa_active_lang');
+      if (active) {
+        setUserActiveLang(active);
+        return;
+      }
+      const stored = localStorage.getItem('msk_dsa_selected_langs');
+      if (stored) {
+        const parsed = JSON.parse(stored);
+        if (Array.isArray(parsed) && parsed.length > 0) {
+          setUserActiveLang(parsed[0]);
+        }
+      }
+    } catch {}
+  }, []);
   const [playgroundModal, setPlaygroundModal] = useState<{
     isOpen: boolean;
     language: SupportedLanguage;
@@ -690,7 +711,108 @@ export default function MarkdownRenderer({ content }: MarkdownRendererProps) {
       }
     }
 
-    return consolidatedBlocks;
+    // Multi-Language Code Block Cluster Consolidation:
+    // If consecutive code blocks exist, or code blocks are separated by language labels (e.g. "### Python:", "### C++:"),
+    // merge them into a single unified multi-code block with tabs!
+    const multiLangConsolidated: Block[] = [];
+    let mIdx = 0;
+
+    const isLanguageLabel = (text: string) => {
+      const clean = text.trim().replace(/^#+\s*/, '').replace(/[:.]\s*$/, '').trim();
+      return /^(?:Python(?:\s*3)?|C(?:\s*\(Pointers\))?|C\+\+|CPP|C\+\+\s*\(STL\)|Java|JavaScript|TypeScript|Modern\s+JavaScript|Modern\s+C\+\+|Modern\s+Java|JS|TS|Go|Rust|SQL)$/i.test(clean);
+    };
+
+    while (mIdx < consolidatedBlocks.length) {
+      const current = consolidatedBlocks[mIdx];
+
+      let isClusterStart = false;
+      if (
+        current.type === 'heading' &&
+        isLanguageLabel(current.text) &&
+        mIdx + 1 < consolidatedBlocks.length &&
+        consolidatedBlocks[mIdx + 1].type === 'code'
+      ) {
+        const nextCodeIdx = mIdx + 1;
+        if (
+          nextCodeIdx + 1 < consolidatedBlocks.length &&
+          ((consolidatedBlocks[nextCodeIdx + 1].type === 'heading' &&
+            isLanguageLabel((consolidatedBlocks[nextCodeIdx + 1] as any).text)) ||
+            consolidatedBlocks[nextCodeIdx + 1].type === 'code')
+        ) {
+          isClusterStart = true;
+        }
+      } else if (
+        current.type === 'code' &&
+        mIdx + 1 < consolidatedBlocks.length &&
+        consolidatedBlocks[mIdx + 1].type === 'code' &&
+        !detectAndRenderVisualDiagram(current.code, current.lang) &&
+        !detectAndRenderVisualDiagram((consolidatedBlocks[mIdx + 1] as any).code, (consolidatedBlocks[mIdx + 1] as any).lang)
+      ) {
+        const isHtmlCssPair =
+          (current.lang === 'html' && (consolidatedBlocks[mIdx + 1] as any).lang === 'css') ||
+          (current.lang === 'css' && (consolidatedBlocks[mIdx + 1] as any).lang === 'html');
+        if (!isHtmlCssPair) {
+          isClusterStart = true;
+        }
+      }
+
+      if (isClusterStart) {
+        const tabs: CodeTab[] = [];
+        let clusterIdx = mIdx;
+
+        while (clusterIdx < consolidatedBlocks.length) {
+          const item = consolidatedBlocks[clusterIdx];
+
+          if (item.type === 'heading' && isLanguageLabel(item.text)) {
+            const labelText = item.text.trim().replace(/^#+\s*/, '').replace(/[:.]\s*$/, '').trim();
+            if (
+              clusterIdx + 1 < consolidatedBlocks.length &&
+              consolidatedBlocks[clusterIdx + 1].type === 'code'
+            ) {
+              const codeBlock = consolidatedBlocks[clusterIdx + 1] as {
+                type: 'code';
+                lang: string;
+                code: string;
+                meta: CodeBlockMeta;
+              };
+              tabs.push({
+                lang: codeBlock.lang,
+                code: codeBlock.code,
+                meta: codeBlock.meta,
+                label: labelText,
+              });
+              clusterIdx += 2;
+              continue;
+            }
+            break;
+          } else if (item.type === 'code') {
+            tabs.push({
+              lang: item.lang,
+              code: item.code,
+              meta: item.meta,
+              label: getLanguageDisplayName(item.lang),
+            });
+            clusterIdx++;
+            continue;
+          }
+          break;
+        }
+
+        if (tabs.length > 1) {
+          multiLangConsolidated.push({
+            type: 'multi-code',
+            tabs,
+          });
+          mIdx = clusterIdx;
+          continue;
+        }
+      }
+
+      multiLangConsolidated.push(current);
+      mIdx++;
+    }
+
+    return multiLangConsolidated;
   }, [content]);
 
   let codeBlockCounter = 0;
@@ -786,7 +908,27 @@ export default function MarkdownRenderer({ content }: MarkdownRendererProps) {
           }
         }
 
-        // 3. Fenced Code Block
+        // 3a. Multi-Language Tabbed Code Block (Python, C, C++, Java, JavaScript)
+        if (block.type === 'multi-code') {
+          return (
+            <MultiLanguageCodeBlock
+              key={idx}
+              tabs={block.tabs}
+              activeLanguagePreference={userActiveLang}
+              title={block.title}
+              onTry={(l, c, t) => {
+                setPlaygroundModal({
+                  isOpen: true,
+                  language: l,
+                  code: c,
+                  title: t || 'Interactive DSA Playground',
+                });
+              }}
+            />
+          );
+        }
+
+        // 3b. Single Fenced Code Block
         if (block.type === 'code') {
           // Check if block represents an architectural process flow, anatomy diagram, or interactive CSS demo
           const visualDiagram = detectAndRenderVisualDiagram(block.code, block.lang);
@@ -794,252 +936,34 @@ export default function MarkdownRenderer({ content }: MarkdownRendererProps) {
             return <React.Fragment key={idx}>{visualDiagram}</React.Fragment>;
           }
 
-          codeBlockCounter++;
-          const codeIdx = codeBlockCounter;
-          const lang = block.lang;
-          const code = block.code;
-          const displayName = getLanguageDisplayName(lang);
-          const tokenizedLines = tokenizeCodeToLines(code, lang);
-
-          const getLangBadgeStyle = (l: string) => {
-            switch (l) {
-              case 'python':
-              case 'py':
-                return 'text-amber-300 bg-amber-400/10 border-amber-400/30';
-              case 'html':
-              case 'markup':
-                return 'text-orange-300 bg-orange-400/10 border-orange-400/30';
-              case 'css':
-                return 'text-cyan-300 bg-cyan-400/10 border-cyan-400/30';
-              case 'javascript':
-              case 'js':
-                return 'text-yellow-300 bg-yellow-400/10 border-yellow-400/30';
-              case 'typescript':
-              case 'ts':
-                return 'text-blue-300 bg-blue-400/10 border-blue-400/30';
-              case 'c':
-              case 'cpp':
-                return 'text-sky-300 bg-sky-400/10 border-sky-400/30';
-              case 'java':
-                return 'text-orange-300 bg-orange-400/10 border-orange-400/30';
-              default:
-                return 'text-slate-300 bg-white/5 border-white/10';
-            }
-          };
-
-          const enableTry = block.meta.enableTry !== false && Boolean(PLAYGROUND_SUPPORTED_LANGS[lang]);
-          const enableCopy = block.meta.enableCopy !== false;
-          const canPreview = block.meta.enablePreview !== false && isWebPreviewSupported(lang);
-          const hasCompanion = Boolean(block.meta.companionCode);
-          const companionLang = block.meta.companionLang;
-
           return (
-            <div
+            <MultiLanguageCodeBlock
               key={idx}
-              className="relative my-6 rounded-2xl overflow-hidden border border-[#2d2d2d] bg-[#1e1e1e] shadow-xl"
-            >
-              {/* Code Editor Header - Compact VS Code Titlebar */}
-              <div className="flex items-center justify-between px-3.5 py-1.5 bg-[#252526] border-b border-[#2d2d2d] text-xs font-mono select-none">
-                {/* Left: macOS dots + Language Badge + Linked Companion Badge */}
-                <div className="flex items-center gap-2.5">
-                  <div className="flex items-center gap-1.5" aria-hidden="true">
-                    <span className="w-2.5 h-2.5 rounded-full bg-[#ff5f56] inline-block shadow-2xs" />
-                    <span className="w-2.5 h-2.5 rounded-full bg-[#ffbd2e] inline-block shadow-2xs" />
-                    <span className="w-2.5 h-2.5 rounded-full bg-[#27c93f] inline-block shadow-2xs" />
-                  </div>
-                  <span
-                    className={`px-2 py-0.5 rounded border text-[10.5px] font-bold uppercase tracking-wider font-mono ${getLangBadgeStyle(
-                      lang
-                    )}`}
-                  >
-                    {displayName}
-                  </span>
-
-                  {hasCompanion && (
-                    <span
-                      className="hidden sm:inline-flex items-center gap-1 px-2 py-0.5 rounded bg-white/5 border border-white/10 text-[10px] font-sans text-slate-300 shadow-2xs"
-                      title={`This example has companion ${companionLang?.toUpperCase()} that will be automatically loaded in the playground!`}
-                    >
-                      <Link2 className="w-2.5 h-2.5 text-secondary" />
-                      <span>Linked with {companionLang?.toUpperCase()}</span>
-                    </span>
-                  )}
-                </div>
-
-                {/* Right: Actions */}
-                <div className="flex items-center gap-1.5">
-                  {/* MDN Docs Reference Link */}
-                  {block.meta.mdnUrl && (
-                    <a
-                      href={block.meta.mdnUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-1 text-sky-400 hover:text-white bg-sky-400/10 hover:bg-sky-500 transition-all py-0.5 px-2 sm:px-2.5 rounded-md active:scale-95 text-[11px] font-sans font-semibold border border-sky-400/30 shadow-xs"
-                      title="Read official documentation on MDN Web Docs"
-                    >
-                      <ExternalLink className="w-2.5 h-2.5" />
-                      <span className="hidden sm:inline">MDN Docs</span>
-                      <span className="sm:hidden">MDN</span>
-                    </a>
-                  )}
-
-                  {/* External Live Example / Demo Link */}
-                  {block.meta.exampleUrl && (
-                    <a
-                      href={block.meta.exampleUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center gap-1 text-emerald-400 hover:text-white bg-emerald-400/10 hover:bg-emerald-500 transition-all py-0.5 px-2 sm:px-2.5 rounded-md active:scale-95 text-[11px] font-sans font-semibold border border-emerald-400/30 shadow-xs"
-                      title="Open external live demo / example"
-                    >
-                      <ExternalLink className="w-2.5 h-2.5" />
-                      <span className="hidden sm:inline">Live Example</span>
-                      <span className="sm:hidden">Demo</span>
-                    </a>
-                  )}
-
-                  {/* Inline Live Preview / Run Button (respects canPreview) */}
-                  {canPreview && (
-                    <button
-                      type="button"
-                      onClick={(e) => {
-                        e.preventDefault();
-                        e.stopPropagation();
-                        togglePreviewActive(idx, block.meta);
-                      }}
-                      className={`flex items-center gap-1.5 transition-all cursor-pointer py-0.5 px-2.5 rounded-md active:scale-95 text-[11.5px] font-sans font-semibold border shadow-xs ${
-                        isPreviewActive(idx, block.meta)
-                          ? 'text-white bg-emerald-600 border-emerald-500 hover:bg-emerald-700'
-                          : 'text-emerald-400 hover:text-white bg-emerald-500/15 hover:bg-emerald-600 border-emerald-500/40'
-                      }`}
-                      title={
-                        isPreviewActive(idx, block.meta)
-                          ? 'Hide inline live preview output'
-                          : 'Run code and show live preview output right here'
-                      }
-                    >
-                      {isPreviewActive(idx, block.meta) ? (
-                        <>
-                          <EyeOff className="w-3 h-3" />
-                          <span>Hide</span>
-                        </>
-                      ) : (
-                        <>
-                          <Play className="w-3 h-3 fill-current" />
-                          <span>Run</span>
-                        </>
-                      )}
-                    </button>
-                  )}
-
-                  {/* Try in Playground Button (respects enableTry) */}
-                  {enableTry && (
-                    <button
-                      type="button"
-                      onClick={(e) => {
-                        e.preventDefault();
-                        e.stopPropagation();
-                        const isHtml = lang === 'html' || lang === 'markup';
-                        const isCss = lang === 'css';
-                        setPlaygroundModal({
-                          isOpen: true,
-                          language: PLAYGROUND_SUPPORTED_LANGS[lang],
-                          code,
-                          companionCss:
-                            isHtml && block.meta.companionLang === 'css' ? block.meta.companionCode : undefined,
-                          companionHtml:
-                            isCss && block.meta.companionLang === 'html' ? block.meta.companionCode : undefined,
-                          title: block.meta.title || `Interactive Playground (${displayName})`,
-                        });
-                      }}
-                      className="flex items-center gap-1.5 text-secondary hover:text-white bg-secondary/15 hover:bg-secondary transition-all cursor-pointer py-0.5 px-2.5 rounded-md active:scale-95 text-[11.5px] font-sans font-semibold border border-secondary/40 shadow-xs"
-                      title={
-                        hasCompanion
-                          ? `Open in Playground with linked ${companionLang?.toUpperCase()}`
-                          : 'Open and run in Playground'
-                      }
-                    >
-                      <Play className="w-3 h-3 fill-current" />
-                      <span>Try</span>
-                    </button>
-                  )}
-
-                  {/* Copy Code Button (respects enableCopy - hidden by default, shown when 'copy' is set in markdown) */}
-                  {enableCopy && (
-                    <button
-                      onClick={() => handleCopy(codeIdx, code)}
-                      className="flex items-center gap-1.5 text-slate-300 hover:text-white transition-colors cursor-pointer py-0.5 px-2.5 rounded-md hover:bg-white/10 active:scale-95 text-[11.5px] font-sans font-medium"
-                      aria-label="Copy code"
-                    >
-                      {copiedIndex === codeIdx ? (
-                        <>
-                          <Check className="w-3.5 h-3.5 text-emerald-400" />
-                          <span className="text-emerald-400 font-semibold">Copied!</span>
-                        </>
-                      ) : (
-                        <>
-                          <Copy className="w-3.5 h-3.5" />
-                          <span>Copy</span>
-                        </>
-                      )}
-                    </button>
-                  )}
-                </div>
-              </div>
-
-              {/* Code Editor Body - VS Code Dark+ with Sticky Line Numbers */}
-              <div className="overflow-x-auto py-3">
-                <div
-                  tabIndex={0}
-                  className="min-w-full inline-block font-mono text-[14px] sm:text-[15px] leading-6 select-text"
-                  style={{
-                    fontFamily:
-                      "ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace",
-                  }}
-                >
-                  {tokenizedLines.map((lineTokens, lineIdx) => (
-                    <div
-                      key={lineIdx}
-                      className="flex items-center hover:bg-[#282828] group min-w-full transition-colors"
-                    >
-                      {/* Sticky Line Number Gutter */}
-                      <span
-                        className="sticky left-0 bg-[#1e1e1e] group-hover:bg-[#282828] select-none text-right text-[#858585] group-hover:text-[#c6c6c6] text-[13px] sm:text-[14px] font-mono pr-3.5 pl-3 border-r border-[#333333] w-11 sm:w-13 shrink-0 transition-colors"
-                        aria-hidden="true"
-                      >
-                        {lineIdx + 1}
-                      </span>
-                      {/* Code Line */}
-                      <span className="pl-3.5 pr-4 whitespace-pre font-mono text-[#d4d4d4] flex-1">
-                        {lineTokens.length === 0 ? (
-                          '\u00A0'
-                        ) : (
-                          lineTokens.map((tok, tokIdx) => (
-                            <span
-                              key={tokIdx}
-                              style={{ color: getVSCodeTokenColor(tok.type, tok.text, lang) }}
-                            >
-                              {tok.text}
-                            </span>
-                          ))
-                        )}
-                      </span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              {/* Inline Live Preview / Output Window */}
-              {canPreview && isPreviewActive(idx, block.meta) && (
-                <InlineCodePreview
-                  lang={lang}
-                  code={code}
-                  companionLang={block.meta.companionLang}
-                  companionCode={block.meta.companionCode}
-                  title={block.meta.title}
-                />
-              )}
-            </div>
+              tabs={[
+                {
+                  lang: block.lang,
+                  code: block.code,
+                  meta: block.meta,
+                  label: getLanguageDisplayName(block.lang),
+                },
+              ]}
+              activeLanguagePreference={userActiveLang}
+              title={block.meta?.title}
+              onTry={(l, c, t) => {
+                const isHtml = block.lang === 'html' || block.lang === 'markup';
+                const isCss = block.lang === 'css';
+                setPlaygroundModal({
+                  isOpen: true,
+                  language: l,
+                  code: c,
+                  companionCss:
+                    isHtml && block.meta.companionLang === 'css' ? block.meta.companionCode : undefined,
+                  companionHtml:
+                    isCss && block.meta.companionLang === 'html' ? block.meta.companionCode : undefined,
+                  title: block.meta?.title || t || `Interactive Playground (${getLanguageDisplayName(block.lang)})`,
+                });
+              }}
+            />
           );
         }
 

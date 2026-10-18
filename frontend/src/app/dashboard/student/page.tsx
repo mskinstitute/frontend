@@ -1,7 +1,8 @@
 'use client';
 
-import React, { useState, useEffect, useCallback, useMemo } from 'react';
+import React, { useState, useEffect, useCallback, useMemo, Suspense } from 'react';
 import Link from 'next/link';
+import { useSearchParams } from 'next/navigation';
 import { useAuth } from '@/context/AuthContext';
 import { affiliateApi, StudentJourney, SuggestedCourse } from '@/services/affiliateApi';
 import { fetchCourses, fetchLiveBatches } from '@/services/api';
@@ -280,9 +281,23 @@ function getFallbackSuggestedCourses(demoCourse: string): SuggestedCourse[] {
   ];
 }
 
-export default function StudentDashboardPage() {
+function StudentDashboardContent() {
   const { user } = useAuth();
-  const [activeTab, setActiveTab] = useState<string>('dashboard');
+  const searchParams = useSearchParams();
+  const tabParam = searchParams?.get('tab');
+  const [activeTab, setActiveTab] = useState<string>(
+    tabParam && ['dashboard', 'courses', 'assignments', 'attendance', 'results', 'demos', 'certificates', 'payments', 'settings'].includes(tabParam)
+      ? tabParam
+      : 'dashboard'
+  );
+
+  // Synchronize activeTab when query param ?tab= changes
+  useEffect(() => {
+    const currentTab = searchParams?.get('tab');
+    if (currentTab && ['dashboard', 'courses', 'assignments', 'attendance', 'results', 'demos', 'certificates', 'payments', 'settings'].includes(currentTab)) {
+      setActiveTab(currentTab);
+    }
+  }, [searchParams]);
 
   // Journey & Demo Booking State
   const [journey, setJourney] = useState<StudentJourney | null>(null);
@@ -308,6 +323,15 @@ export default function StudentDashboardPage() {
       setLoadingJourney(true);
       const data = await affiliateApi.getStudentJourney();
       setJourney(data);
+      if (typeof window !== 'undefined') {
+        if (data?.demo_booking) {
+          localStorage.setItem('msk_has_demo_booking', 'true');
+          window.dispatchEvent(new Event('msk_demo_booked'));
+        } else {
+          localStorage.removeItem('msk_has_demo_booking');
+          window.dispatchEvent(new Event('msk_demo_cancelled'));
+        }
+      }
     } catch {
       // Keep null on error
     } finally {
@@ -452,6 +476,10 @@ export default function StudentDashboardPage() {
     setDemoSubmitting(true);
     try {
       await affiliateApi.bookDemo(demoForm);
+      if (typeof window !== 'undefined') {
+        localStorage.setItem('msk_has_demo_booking', 'true');
+        window.dispatchEvent(new Event('msk_demo_booked'));
+      }
       toast.success('🎉 Free 3-Day Demo seat reserved successfully!');
       setIsDemoModalOpen(false);
       await loadJourney();
@@ -1754,5 +1782,19 @@ export default function StudentDashboardPage() {
         </div>
       )}
     </DashboardLayout>
+  );
+}
+
+export default function StudentDashboardPage() {
+  return (
+    <Suspense
+      fallback={
+        <div className="min-h-screen bg-[#F8FAFC] flex items-center justify-center">
+          <div className="w-8 h-8 border-3 border-[#FF6B00] border-t-transparent rounded-full animate-spin" />
+        </div>
+      }
+    >
+      <StudentDashboardContent />
+    </Suspense>
   );
 }
