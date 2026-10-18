@@ -21,7 +21,7 @@ tags:
   - "CSS Grid"
 relatedCourses:
   - "html5-complete-course"
-  - "full-stack-web-dev-bootcamp"
+  - "full-stack-development"
 ---
 
 Web Design and Internet Technology practical exams are mandatory for university degrees (BCA, B.Sc IT, B.Tech CSE) and government diplomas (NIELIT O Level M2-R5). During external lab vivas, examiners evaluate whether you understand **browser rendering mechanics, layout algorithms, accessibility, and modern CSS3 architectures** beyond basic tag memorization.
@@ -140,4 +140,4 @@ $$\text{Inline Styles (1000)} > \text{IDs (100)} > \text{Classes / Attributes / 
 
 1. **Demonstrate Responsive Design:** Always know how to write `@media (max-width: 768px)` media queries to handle mobile viewports.
 2. **Test Code Live:** Run and edit live HTML5/CSS3 snippets in our interactive [MSK Code Playground](/playground).
-3. **Join Full-Stack Mentorship:** Learn semantic web design, responsive Tailwind CSS, and React in our comprehensive **[Full-Stack Web Development Bootcamp](/courses/full-stack-web-dev-bootcamp)** at MSK Institute!
+3. **Join Full-Stack Mentorship:** Learn semantic web design, responsive Tailwind CSS, and React in our comprehensive **[Full-Stack Web Development Grand Mastery](/courses/full-stack-development)** at MSK Institute!

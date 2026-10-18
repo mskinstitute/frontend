@@ -24,6 +24,8 @@ import {
   Keyboard,
   User,
   LogOut,
+  Settings,
+  Sparkles,
 } from 'lucide-react';
 
 import InstallAppButton from '@/components/InstallAppButton';
@@ -32,6 +34,8 @@ import { useLiveStatus } from '@/context/LiveStatusContext';
 import { useAuth } from '@/context/AuthContext';
 import { useServerStatus } from '@/context/ServerStatusContext';
 import { SocialIconPills } from '@/components/SocialLinks';
+import { getRoleDashboardUrl } from '@/lib/roleNavigation';
+import { affiliateApi } from '@/services/affiliateApi';
 
 interface Announcement {
   id: string;
@@ -219,12 +223,61 @@ export default function Navbar() {
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
   // Single active accordion for mobile: starts null so both Explore & Institute start closed
   const [mobileActiveAccordion, setMobileActiveAccordion] = useState<string | null>(null);
+  const [isMobileProfileOpen, setIsMobileProfileOpen] = useState(false);
+  const [hasDemoClass, setHasDemoClass] = useState<boolean>(() => {
+    if (typeof window !== 'undefined') {
+      return localStorage.getItem('msk_has_demo_booking') === 'true';
+    }
+    return false;
+  });
+
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
   const navRef = useRef<HTMLDivElement | null>(null);
+  const mobileProfileRef = useRef<HTMLDivElement | null>(null);
+
+  // Sync demo class booking status for student
+  useEffect(() => {
+    if (!isAuthenticated || !user) {
+      setHasDemoClass(false);
+      return;
+    }
+
+    let isMounted = true;
+    affiliateApi.getStudentJourney()
+      .then((data) => {
+        if (!isMounted) return;
+        const hasBooking = Boolean(data?.demo_booking) || data?.current_stage === 'DEMO_BOOKED' || data?.current_stage === 'DEMO_COMPLETED';
+        if (hasBooking) {
+          setHasDemoClass(true);
+          localStorage.setItem('msk_has_demo_booking', 'true');
+        } else {
+          const localBooked = localStorage.getItem('msk_has_demo_booking') === 'true';
+          setHasDemoClass(localBooked);
+        }
+      })
+      .catch(() => {
+        if (typeof window !== 'undefined') {
+          setHasDemoClass(localStorage.getItem('msk_has_demo_booking') === 'true');
+        }
+      });
+
+    const handleDemoBooked = () => setHasDemoClass(true);
+    const handleDemoCancelled = () => setHasDemoClass(false);
+
+    window.addEventListener('msk_demo_booked', handleDemoBooked);
+    window.addEventListener('msk_demo_cancelled', handleDemoCancelled);
+
+    return () => {
+      isMounted = false;
+      window.removeEventListener('msk_demo_booked', handleDemoBooked);
+      window.removeEventListener('msk_demo_cancelled', handleDemoCancelled);
+    };
+  }, [isAuthenticated, user]);
 
   // Close dropdown and mobile menu on route change
   useEffect(() => {
     setOpenDropdown(null);
+    setIsMobileProfileOpen(false);
     setIsOpen(false);
     setMobileActiveAccordion(null);
   }, [pathname]);
@@ -263,10 +316,14 @@ export default function Navbar() {
       if (navRef.current && !navRef.current.contains(event.target as Node)) {
         setOpenDropdown(null);
       }
+      if (mobileProfileRef.current && !mobileProfileRef.current.contains(event.target as Node)) {
+        setIsMobileProfileOpen(false);
+      }
     };
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key === 'Escape') {
         setOpenDropdown(null);
+        setIsMobileProfileOpen(false);
       }
     };
     document.addEventListener('mousedown', handleClickOutside);
@@ -333,9 +390,14 @@ export default function Navbar() {
     return null;
   }
 
+  const isStudent = !user?.role || user.role.toLowerCase() === 'student';
+  const myCourseHref = isStudent ? '/dashboard/student?tab=courses' : `${getRoleDashboardUrl(user?.role)}?tab=courses`;
+  const myDemoHref = '/dashboard/student?tab=demos';
+  const settingHref = isStudent ? '/dashboard/student?tab=settings' : '/profile';
+
   return (
     <header className="sticky top-0 z-50 no-print shadow-sm">
-      <nav className="bg-white border-b border-border-subtle">
+      <nav ref={navRef} className="bg-white border-b border-border-subtle">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between h-16 items-center">
           {/* Logo and Brand */}
@@ -519,30 +581,167 @@ export default function Navbar() {
               );
             })}
 
-            {/* Quick Demo CTA Button - Desktop & Tablet (Points directly to dedicated /book-demo route, no login required) */}
-            <Link
-              href="/book-demo"
-              className="hidden md:inline-flex items-center gap-1.5 px-3 py-1.5 bg-secondary hover:bg-secondary-light text-white font-bold text-xs rounded-xl shadow-xs transition-colors whitespace-nowrap ml-1 flex-shrink-0"
-            >
-              <span className="whitespace-nowrap">Book Free Demo</span>
-              <span className="text-[11px] flex-shrink-0">➔</span>
-            </Link>
-
-            {/* Auth Button - Desktop (Automatically hidden when backend server is offline or unreachable) */}
-            {isAuthenticated && user ? (
+            {/* Quick Demo CTA Button - Desktop & Tablet (Hidden when user is logged in) */}
+            {!isAuthenticated && (
               <Link
-                href="/dashboard"
-                className="hidden md:inline-flex items-center gap-2 px-2.5 py-1.5 bg-slate-100 hover:bg-slate-200/80 text-slate-800 font-bold text-xs rounded-xl transition-all ml-1 border border-slate-200 whitespace-nowrap flex-shrink-0"
-                title={`Logged in as ${user.first_name} (${user.role}) - Open Dashboard`}
+                href="/book-demo"
+                className="hidden md:inline-flex items-center gap-1.5 px-3 py-1.5 bg-secondary hover:bg-secondary-light text-white font-bold text-xs rounded-xl shadow-xs transition-colors whitespace-nowrap ml-1 flex-shrink-0"
               >
-                <div className="w-5 h-5 rounded-full bg-secondary text-white text-[10px] font-extrabold flex items-center justify-center uppercase shadow-xs flex-shrink-0">
-                  {user.first_name?.[0] || 'U'}
-                </div>
-                <span className="truncate max-w-[90px]">{user.first_name}</span>
-                <span className="text-[10px] bg-secondary/15 text-secondary px-1 py-0.5 rounded font-semibold uppercase flex-shrink-0">
-                  Portal
-                </span>
+                <span className="whitespace-nowrap">Book Free Demo</span>
+                <span className="text-[11px] flex-shrink-0">➔</span>
               </Link>
+            )}
+
+            {/* Auth / Profile Button with Dropdown - Desktop */}
+            {isAuthenticated && user ? (
+              <div
+                className="relative hidden md:block"
+                onMouseEnter={() => handleMouseEnter('profile')}
+                onMouseLeave={handleMouseLeave}
+              >
+                <button
+                  type="button"
+                  onClick={() => handleDropdownToggle('profile')}
+                  aria-expanded={openDropdown === 'profile'}
+                  className={`inline-flex items-center gap-2 px-2.5 py-1.5 rounded-xl transition-all border whitespace-nowrap flex-shrink-0 cursor-pointer ${
+                    openDropdown === 'profile'
+                      ? 'bg-slate-200/90 border-slate-300 text-slate-900 shadow-xs'
+                      : 'bg-slate-100 hover:bg-slate-200/80 border-slate-200 text-slate-800'
+                  }`}
+                  title={`Logged in as ${user.first_name} (${user.role || 'Student'})`}
+                >
+                  <div className="w-5 h-5 rounded-full bg-secondary text-white text-[10px] font-extrabold flex items-center justify-center uppercase shadow-xs flex-shrink-0">
+                    {user.first_name?.[0] || 'U'}
+                  </div>
+                  <span className="truncate max-w-[85px] text-xs font-bold">{user.first_name}</span>
+                  <span className="text-[10px] bg-secondary/15 text-secondary px-1 py-0.5 rounded font-semibold uppercase flex-shrink-0">
+                    Portal
+                  </span>
+                  <ChevronDown
+                    className={`w-3.5 h-3.5 text-slate-500 transition-transform duration-200 ${
+                      openDropdown === 'profile' ? 'rotate-180 text-secondary' : ''
+                    }`}
+                  />
+                </button>
+
+                {/* Desktop Profile Dropdown Panel */}
+                {openDropdown === 'profile' && (
+                  <div
+                    onMouseEnter={() => handleMouseEnter('profile')}
+                    onMouseLeave={handleMouseLeave}
+                    className="absolute top-full right-0 mt-1.5 w-60 bg-white rounded-2xl shadow-xl shadow-slate-900/10 border border-slate-200/90 p-1.5 z-50 animate-in fade-in zoom-in-95 duration-150"
+                  >
+                    <div className="space-y-1 py-1">
+                      {/* User Info Header / Quick Portal Link */}
+                      <Link
+                        href={getRoleDashboardUrl(user.role)}
+                        onClick={() => setOpenDropdown(null)}
+                        className="block px-3 py-2 border-b border-slate-100 bg-slate-50/80 hover:bg-slate-100/90 rounded-xl mb-1.5 transition-colors group"
+                      >
+                        <div className="flex items-center gap-2.5">
+                          <div className="w-8 h-8 rounded-xl bg-gradient-to-br from-primary to-primary-light text-white font-extrabold text-xs flex items-center justify-center uppercase shadow-xs flex-shrink-0">
+                            {user.first_name?.[0] || 'U'}
+                          </div>
+                          <div className="min-w-0 flex-1">
+                            <div className="flex items-center justify-between">
+                              <p className="text-xs font-bold text-slate-900 truncate">
+                                {user.first_name} {user.last_name || ''}
+                              </p>
+                              <span className="text-[9px] font-bold text-secondary group-hover:translate-x-0.5 transition-transform flex-shrink-0">
+                                Portal ➔
+                              </span>
+                            </div>
+                            <p className="text-[10px] text-slate-500 truncate mt-0.5">
+                              {user.email || `@${user.username}`}
+                            </p>
+                          </div>
+                        </div>
+                      </Link>
+
+                      {/* 1. My Course */}
+                      <Link
+                        href={myCourseHref}
+                        onClick={() => setOpenDropdown(null)}
+                        className="flex items-center gap-2.5 px-3 py-2 rounded-xl text-xs font-semibold text-slate-700 hover:text-secondary hover:bg-orange-50/80 transition-all duration-150 group"
+                      >
+                        <div className="w-7 h-7 rounded-lg bg-slate-100 text-slate-600 group-hover:bg-orange-100 group-hover:text-secondary flex items-center justify-center transition-colors flex-shrink-0">
+                          <BookOpen className="w-3.5 h-3.5" />
+                        </div>
+                        <span className="truncate">My Course</span>
+                      </Link>
+
+                      {/* 2. My Live Class */}
+                      <Link
+                        href="/live"
+                        onClick={() => setOpenDropdown(null)}
+                        className="flex items-center gap-2.5 px-3 py-2 rounded-xl text-xs font-semibold text-slate-700 hover:text-red-600 hover:bg-red-50/80 transition-all duration-150 group"
+                      >
+                        <div className="w-7 h-7 rounded-lg bg-slate-100 text-slate-600 group-hover:bg-red-100 group-hover:text-red-600 flex items-center justify-center transition-colors flex-shrink-0">
+                          <Video className="w-3.5 h-3.5" />
+                        </div>
+                        <div className="flex-1 flex items-center justify-between min-w-0">
+                          <span className="truncate">My Live Class</span>
+                          {isLiveNow && (
+                            <span className="flex items-center gap-1 text-[9px] font-extrabold px-1.5 py-0.5 rounded-full uppercase tracking-wider bg-red-100 text-red-600 flex-shrink-0">
+                              <span className="w-1.5 h-1.5 rounded-full bg-red-500 animate-ping" />
+                              LIVE
+                            </span>
+                          )}
+                        </div>
+                      </Link>
+
+                      {/* 3. My Demo Class (if student already booked demo class otherwise hide) */}
+                      {hasDemoClass && (
+                        <Link
+                          href={myDemoHref}
+                          onClick={() => setOpenDropdown(null)}
+                          className="flex items-center gap-2.5 px-3 py-2 rounded-xl text-xs font-semibold text-slate-700 hover:text-amber-600 hover:bg-amber-50/80 transition-all duration-150 group"
+                        >
+                          <div className="w-7 h-7 rounded-lg bg-slate-100 text-slate-600 group-hover:bg-amber-100 group-hover:text-amber-600 flex items-center justify-center transition-colors flex-shrink-0">
+                            <Sparkles className="w-3.5 h-3.5" />
+                          </div>
+                          <div className="flex-1 flex items-center justify-between min-w-0">
+                            <span className="truncate">My Demo Class</span>
+                            <span className="text-[9px] font-bold px-1.5 py-0.5 rounded-full bg-amber-100 text-amber-800 uppercase tracking-wider flex-shrink-0">
+                              Booked
+                            </span>
+                          </div>
+                        </Link>
+                      )}
+
+                      {/* Divider */}
+                      <div className="my-1 border-t border-slate-100" />
+
+                      {/* 4. Setting */}
+                      <Link
+                        href={settingHref}
+                        onClick={() => setOpenDropdown(null)}
+                        className="flex items-center gap-2.5 px-3 py-2 rounded-xl text-xs font-semibold text-slate-700 hover:text-slate-900 hover:bg-slate-100 transition-all duration-150 group"
+                      >
+                        <div className="w-7 h-7 rounded-lg bg-slate-100 text-slate-600 group-hover:bg-slate-200 group-hover:text-slate-900 flex items-center justify-center transition-colors flex-shrink-0">
+                          <Settings className="w-3.5 h-3.5" />
+                        </div>
+                        <span className="truncate">Setting</span>
+                      </Link>
+
+                      {/* 5. Logout */}
+                      <button
+                        type="button"
+                        onClick={async () => {
+                          setOpenDropdown(null);
+                          await logout();
+                        }}
+                        className="w-full flex items-center gap-2.5 px-3 py-2 rounded-xl text-xs font-semibold text-red-600 hover:bg-red-50 hover:text-red-700 transition-all duration-150 group cursor-pointer"
+                      >
+                        <div className="w-7 h-7 rounded-lg bg-red-50 text-red-600 group-hover:bg-red-100 flex items-center justify-center transition-colors flex-shrink-0">
+                          <LogOut className="w-3.5 h-3.5" />
+                        </div>
+                        <span className="truncate font-bold">Logout</span>
+                      </button>
+                    </div>
+                  </div>
+                )}
+              </div>
             ) : (
               <Link
                 href="/login"
@@ -554,25 +753,176 @@ export default function Navbar() {
             )}
           </div>
 
-          {/* Mobile top actions: Search icon, Book Demo button (guest only) & Hamburger */}
+          {/* Mobile top actions: Search icon, Profile button (if logged in) OR Book Demo button (guest) & Hamburger */}
           <div className="md:hidden flex items-center gap-1.5">
             <button
-              onClick={() => setIsSearchOpen(true)}
+              onClick={() => {
+                setIsMobileProfileOpen(false);
+                setIsSearchOpen(true);
+              }}
               className="p-2 rounded-md text-text-muted hover:text-primary hover:bg-surface focus:outline-none cursor-pointer"
               aria-label="Search resources"
             >
               <Search className="w-5 h-5" />
             </button>
-            <Link
-              href="/book-demo"
-              className="inline-flex items-center gap-1 px-3 py-1.5 bg-secondary text-white rounded-full text-xs font-bold shadow-sm hover:bg-secondary-light active:scale-95 transition-all whitespace-nowrap flex-shrink-0"
-              aria-label="Book Free Demo"
-            >
-              <span className="whitespace-nowrap">Free Demo</span>
-              <span className="text-[10px] flex-shrink-0">➔</span>
-            </Link>
+
+            {isAuthenticated && user ? (
+              <div className="relative" ref={mobileProfileRef}>
+                <button
+                  type="button"
+                  onClick={() => {
+                    if (isOpen) setIsOpen(false);
+                    setIsMobileProfileOpen((prev) => !prev);
+                  }}
+                  className={`inline-flex items-center gap-1.5 px-2.5 py-1.5 rounded-xl border whitespace-nowrap cursor-pointer transition-all ${
+                    isMobileProfileOpen
+                      ? 'bg-slate-200 border-slate-300 text-slate-900 shadow-xs'
+                      : 'bg-slate-100 hover:bg-slate-200 text-slate-800 border-slate-200'
+                  }`}
+                  aria-expanded={isMobileProfileOpen}
+                  aria-label="Open profile menu"
+                >
+                  <div className="w-5 h-5 rounded-full bg-secondary text-white text-[10px] font-extrabold flex items-center justify-center uppercase shadow-xs flex-shrink-0">
+                    {user.first_name?.[0] || 'U'}
+                  </div>
+                  <span className="truncate max-w-[65px] text-xs font-bold">{user.first_name}</span>
+                  <ChevronDown
+                    className={`w-3.5 h-3.5 text-slate-500 transition-transform duration-200 ${
+                      isMobileProfileOpen ? 'rotate-180 text-secondary' : ''
+                    }`}
+                  />
+                </button>
+
+                {/* Mobile Profile Dropdown Panel */}
+                {isMobileProfileOpen && (
+                  <div className="absolute top-full right-0 mt-2 w-64 max-w-[calc(100vw-2rem)] bg-white rounded-2xl shadow-2xl border border-slate-200/90 p-1.5 z-50 animate-in fade-in zoom-in-95 duration-150">
+                    <div className="space-y-1 py-1">
+                      {/* User Info Header / Quick Portal Link */}
+                      <Link
+                        href={getRoleDashboardUrl(user.role)}
+                        onClick={() => setIsMobileProfileOpen(false)}
+                        className="block px-3 py-2 border-b border-slate-100 bg-slate-50/80 hover:bg-slate-100/90 rounded-xl mb-1.5 transition-colors group"
+                      >
+                        <div className="flex items-center gap-2.5">
+                          <div className="w-8 h-8 rounded-xl bg-gradient-to-br from-primary to-primary-light text-white font-extrabold text-xs flex items-center justify-center uppercase shadow-xs flex-shrink-0">
+                            {user.first_name?.[0] || 'U'}
+                          </div>
+                          <div className="min-w-0 flex-1">
+                            <div className="flex items-center justify-between">
+                              <p className="text-xs font-bold text-slate-900 truncate">
+                                {user.first_name} {user.last_name || ''}
+                              </p>
+                              <span className="text-[9px] font-bold text-secondary group-hover:translate-x-0.5 transition-transform flex-shrink-0">
+                                Portal ➔
+                              </span>
+                            </div>
+                            <p className="text-[10px] text-slate-500 truncate mt-0.5">
+                              {user.email || `@${user.username}`}
+                            </p>
+                          </div>
+                        </div>
+                      </Link>
+
+                      {/* 1. My Course */}
+                      <Link
+                        href={myCourseHref}
+                        onClick={() => setIsMobileProfileOpen(false)}
+                        className="flex items-center gap-2.5 px-3 py-2 rounded-xl text-xs font-semibold text-slate-700 hover:text-secondary hover:bg-orange-50/80 transition-all duration-150 group"
+                      >
+                        <div className="w-7 h-7 rounded-lg bg-slate-100 text-slate-600 group-hover:bg-orange-100 group-hover:text-secondary flex items-center justify-center transition-colors flex-shrink-0">
+                          <BookOpen className="w-3.5 h-3.5" />
+                        </div>
+                        <span className="truncate">My Course</span>
+                      </Link>
+
+                      {/* 2. My Live Class */}
+                      <Link
+                        href="/live"
+                        onClick={() => setIsMobileProfileOpen(false)}
+                        className="flex items-center gap-2.5 px-3 py-2 rounded-xl text-xs font-semibold text-slate-700 hover:text-red-600 hover:bg-red-50/80 transition-all duration-150 group"
+                      >
+                        <div className="w-7 h-7 rounded-lg bg-slate-100 text-slate-600 group-hover:bg-red-100 group-hover:text-red-600 flex items-center justify-center transition-colors flex-shrink-0">
+                          <Video className="w-3.5 h-3.5" />
+                        </div>
+                        <div className="flex-1 flex items-center justify-between min-w-0">
+                          <span className="truncate">My Live Class</span>
+                          {isLiveNow && (
+                            <span className="flex items-center gap-1 text-[9px] font-extrabold px-1.5 py-0.5 rounded-full uppercase tracking-wider bg-red-100 text-red-600 flex-shrink-0">
+                              <span className="w-1.5 h-1.5 rounded-full bg-red-500 animate-ping" />
+                              LIVE
+                            </span>
+                          )}
+                        </div>
+                      </Link>
+
+                      {/* 3. My Demo Class (if student already booked demo class otherwise hide) */}
+                      {hasDemoClass && (
+                        <Link
+                          href={myDemoHref}
+                          onClick={() => setIsMobileProfileOpen(false)}
+                          className="flex items-center gap-2.5 px-3 py-2 rounded-xl text-xs font-semibold text-slate-700 hover:text-amber-600 hover:bg-amber-50/80 transition-all duration-150 group"
+                        >
+                          <div className="w-7 h-7 rounded-lg bg-slate-100 text-slate-600 group-hover:bg-amber-100 group-hover:text-amber-600 flex items-center justify-center transition-colors flex-shrink-0">
+                            <Sparkles className="w-3.5 h-3.5" />
+                          </div>
+                          <div className="flex-1 flex items-center justify-between min-w-0">
+                            <span className="truncate">My Demo Class</span>
+                            <span className="text-[9px] font-bold px-1.5 py-0.5 rounded-full bg-amber-100 text-amber-800 uppercase tracking-wider flex-shrink-0">
+                              Booked
+                            </span>
+                          </div>
+                        </Link>
+                      )}
+
+                      {/* Divider */}
+                      <div className="my-1 border-t border-slate-100" />
+
+                      {/* 4. Setting */}
+                      <Link
+                        href={settingHref}
+                        onClick={() => setIsMobileProfileOpen(false)}
+                        className="flex items-center gap-2.5 px-3 py-2 rounded-xl text-xs font-semibold text-slate-700 hover:text-slate-900 hover:bg-slate-100 transition-all duration-150 group"
+                      >
+                        <div className="w-7 h-7 rounded-lg bg-slate-100 text-slate-600 group-hover:bg-slate-200 group-hover:text-slate-900 flex items-center justify-center transition-colors flex-shrink-0">
+                          <Settings className="w-3.5 h-3.5" />
+                        </div>
+                        <span className="truncate">Setting</span>
+                      </Link>
+
+                      {/* 5. Logout */}
+                      <button
+                        type="button"
+                        onClick={async () => {
+                          setIsMobileProfileOpen(false);
+                          await logout();
+                        }}
+                        className="w-full flex items-center gap-2.5 px-3 py-2 rounded-xl text-xs font-semibold text-red-600 hover:bg-red-50 hover:text-red-700 transition-all duration-150 group cursor-pointer"
+                      >
+                        <div className="w-7 h-7 rounded-lg bg-red-50 text-red-600 group-hover:bg-red-100 flex items-center justify-center transition-colors flex-shrink-0">
+                          <LogOut className="w-3.5 h-3.5" />
+                        </div>
+                        <span className="truncate font-bold">Logout</span>
+                      </button>
+                    </div>
+                  </div>
+                )}
+              </div>
+            ) : (
+              <Link
+                href="/book-demo"
+                className="inline-flex items-center gap-1 px-3 py-1.5 bg-secondary text-white rounded-full text-xs font-bold shadow-sm hover:bg-secondary-light active:scale-95 transition-all whitespace-nowrap flex-shrink-0"
+                aria-label="Book Free Demo"
+              >
+                <span className="whitespace-nowrap">Free Demo</span>
+                <span className="text-[10px] flex-shrink-0">➔</span>
+              </Link>
+            )}
+
             <button
-              onClick={handleToggleMobileMenu}
+              onClick={() => {
+                if (isMobileProfileOpen) setIsMobileProfileOpen(false);
+                handleToggleMobileMenu();
+              }}
               className="p-2 rounded-md text-text-muted hover:text-primary hover:bg-surface focus:outline-none cursor-pointer"
               aria-label="Toggle navigation menu"
             >
@@ -801,14 +1151,16 @@ export default function Navbar() {
               </Link>
             )}
 
-            <Link
-              href="/book-demo"
-              onClick={() => setIsOpen(false)}
-              className="w-full flex items-center justify-center gap-2 py-2.5 bg-secondary hover:bg-secondary-light text-white font-bold text-xs rounded-xl shadow-xs transition-colors whitespace-nowrap"
-            >
-              <span>Book Free Demo Class</span>
-              <span>➔</span>
-            </Link>
+            {!isAuthenticated && (
+              <Link
+                href="/book-demo"
+                onClick={() => setIsOpen(false)}
+                className="w-full flex items-center justify-center gap-2 py-2.5 bg-secondary hover:bg-secondary-light text-white font-bold text-xs rounded-xl shadow-xs transition-colors whitespace-nowrap"
+              >
+                <span>Book Free Demo Class</span>
+                <span>➔</span>
+              </Link>
+            )}
 
             <InstallAppButton variant="full" />
 
