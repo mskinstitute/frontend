@@ -44,3 +44,9 @@ Thumbs.db
 
 # scratch and generator scripts
 /scratch/
+
+# Cloudflare OpenNext
+/.open-next/
+.dev.vars
+/backend/
+/frontend/

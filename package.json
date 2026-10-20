@@ -1,5 +1,5 @@
 {
-  "name": "msk-institute-website",
+  "name": "frontend",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -8,6 +8,9 @@
     "start": "next start",
     "lint": "next lint",
     "typecheck": "tsc --noEmit",
+    "build:worker": "opennextjs-cloudflare build",
+    "deploy": "opennextjs-cloudflare build && opennextjs-cloudflare deploy",
+    "preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview",
     "validate:courses": "node scripts/validate-courses.js",
     "validate:batches": "node scripts/validate-batches.js",
     "validate:seo": "node scripts/validate-seo.js",
@@ -35,6 +38,7 @@
     "react-hot-toast": "^2.4.1"
   },
   "devDependencies": {
+    "@opennextjs/cloudflare": "^1.20.12",
     "@tailwindcss/postcss": "^4.0.0",
     "@types/node": "^20.14.9",
     "@types/prismjs": "^1.26.6",
@@ -42,6 +46,8 @@
     "@types/react-dom": "^19.0.1",
     "postcss": "^8.4.38",
     "tailwindcss": "^4.0.0",
-    "typescript": "^5.5.3"
+    "typescript": "^5.5.3",
+    "wrangler": "^3.109.0"
   }
 }
+
