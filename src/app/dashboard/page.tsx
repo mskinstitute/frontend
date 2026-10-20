@@ -1,4 +1,3 @@
-2.
 'use client';
 
 import React, { useEffect } from 'react';
