@@ -8,10 +8,10 @@ import {
   Send, MessageCircle, Clock, ShieldCheck, UserCheck, 
   Globe, MapPin, Calendar, BookOpen, HelpCircle, ChevronDown,
   Copy, ExternalLink, ArrowRight, User, Mail, Compass,
-  Search, X, LayoutGrid, AlertTriangle
+  Search, X, LayoutGrid, AlertTriangle, Flame
 } from 'lucide-react';
 import toast from 'react-hot-toast';
-import { Course } from '@/types';
+import { Course, LiveBatch } from '@/types';
 import { trackFormStart, trackFormSubmit, trackGenerateLead, trackDemoRequest } from '@/lib/dataLayer';
 import { useAuth } from '@/context/AuthContext';
 import { affiliateApi, StudentJourney } from '@/services/affiliateApi';
@@ -20,9 +20,17 @@ export interface CourseOptionItem {
   id: string;
   title: string;
   duration: string;
-  fullLabel: string; // format: course name - duration
+  fullLabel: string; // format: course name - duration or batch name - starts
   category?: string;
   level?: string;
+  isBatch?: boolean;
+  batchId?: string;
+  startDate?: string;
+  schedule?: string;
+  price?: string;
+  seatsLeft?: number;
+  totalSeats?: number;
+  courseTitle?: string;
 }
 
 const TIME_SLOTS = [
@@ -43,9 +51,10 @@ const BACKGROUND_OPTIONS = [
 
 interface BookDemoClientProps {
   courses?: Course[];
+  batches?: LiveBatch[];
 }
 
-function BookDemoFormContent({ courses = [] }: BookDemoClientProps) {
+function BookDemoFormContent({ courses = [], batches = [] }: BookDemoClientProps) {
   const searchParams = useSearchParams();
 
   // Extract query params for pre-filling
@@ -162,26 +171,116 @@ function BookDemoFormContent({ courses = [] }: BookDemoClientProps) {
   const activeDemo = studentJourney?.demo_booking;
   const hasActiveDemo = Boolean(activeDemo && ['SCHEDULED', 'DAY1_DONE', 'DAY2_DONE'].includes(activeDemo.status));
 
-  // Search course state
+  // Search course / batch state
   const [searchQuery, setSearchQuery] = useState('');
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
 
+  // Client batches with fallback fetch
+  const [clientBatches, setClientBatches] = useState<LiveBatch[]>(batches || []);
+
+  useEffect(() => {
+    if (batches && batches.length > 0) {
+      setClientBatches(batches);
+    } else {
+      fetch('/api/live-batches')
+        .then((res) => res.json())
+        .then((data) => {
+          if (Array.isArray(data) && data.length > 0) {
+            setClientBatches(data);
+          }
+        })
+        .catch(() => {});
+    }
+  }, [batches]);
+
+  // Consolidate rich upcoming batch options
+  const batchOptions: CourseOptionItem[] = useMemo(() => {
+    const list: CourseOptionItem[] = [];
+    const sourceBatches = clientBatches.length > 0 ? clientBatches : (batches || []);
+
+    sourceBatches.forEach((b) => {
+      if (b.status === 'COMPLETED' || b.status === 'ARCHIVED') return;
+
+      const formattedStartDate = (() => {
+        try {
+          const d = new Date(b.startDate);
+          if (!isNaN(d.getTime())) {
+            return d.toLocaleDateString('en-IN', { day: 'numeric', month: 'short', year: 'numeric' });
+          }
+        } catch {}
+        return b.startDate || 'Upcoming';
+      })();
+
+      const dur = b.duration || 'Live Batch';
+
+      list.push({
+        id: b.id,
+        title: b.title,
+        duration: dur,
+        fullLabel: `${b.title} - Starts ${formattedStartDate}`,
+        category: b.schedule ? `Starts ${formattedStartDate} • ${b.schedule}` : `Starts ${formattedStartDate}`,
+        isBatch: true,
+        batchId: b.id,
+        startDate: formattedStartDate,
+        schedule: b.schedule,
+        price: b.price,
+        seatsLeft: b.leftSeats,
+        totalSeats: b.totalSeats,
+        courseTitle: b.courseTitle || b.title,
+      });
+    });
+
+    return list;
+  }, [clientBatches, batches]);
+
   const [selectedCourseItem, setSelectedCourseItem] = useState<CourseOptionItem>(() => {
-    if (initialCourse && courseOptions.length > 0) {
-      const match = courseOptions.find(
-        c => c.title.toLowerCase() === initialCourse.toLowerCase() ||
-             c.title.toLowerCase().includes(initialCourse.toLowerCase()) ||
-             initialCourse.toLowerCase().includes(c.title.toLowerCase())
+    // 1. If batch parameter is given, prioritize matching in batchOptions
+    if (initialBatch && batchOptions.length > 0) {
+      const bNorm = initialBatch.toLowerCase().replace(/[^a-z0-9]+/g, '-');
+      const match = batchOptions.find(
+        (b) =>
+          b.id.toLowerCase() === initialBatch.toLowerCase() ||
+          b.id.toLowerCase().replace(/[^a-z0-9]+/g, '-') === bNorm ||
+          b.id.toLowerCase().includes(initialBatch.toLowerCase()) ||
+          initialBatch.toLowerCase().includes(b.id.toLowerCase())
       );
       if (match) return match;
     }
-    return courseOptions[0] || {
-      id: 'default',
-      title: 'Python Programming Masterclass',
-      duration: '3 Months',
-      fullLabel: 'Python Programming Masterclass - 3 Months',
-    };
+
+    // 2. If course parameter is given, check batchOptions then courseOptions
+    if (initialCourse) {
+      const cNorm = initialCourse.toLowerCase().trim();
+      const batchMatch = batchOptions.find(
+        (b) =>
+          b.title.toLowerCase().includes(cNorm) ||
+          (b.courseTitle && b.courseTitle.toLowerCase().includes(cNorm)) ||
+          cNorm.includes(b.title.toLowerCase())
+      );
+      if (batchMatch) return batchMatch;
+
+      const courseMatch = courseOptions.find(
+        (c) =>
+          c.title.toLowerCase() === cNorm ||
+          c.title.toLowerCase().includes(cNorm) ||
+          cNorm.includes(c.title.toLowerCase())
+      );
+      if (courseMatch) return courseMatch;
+    }
+
+    // 3. Prioritize upcoming batch first if available
+    if (batchOptions.length > 0) {
+      return batchOptions[0];
+    }
+
+    return (
+      courseOptions[0] || {
+        id: 'default',
+        title: 'Python Programming Masterclass',
+        duration: '3 Months',
+        fullLabel: 'Python Programming Masterclass - 3 Months',
+      }
+    );
   });
 
   const selectedCourse = selectedCourseItem.fullLabel;
@@ -206,22 +305,59 @@ function BookDemoFormContent({ courses = [] }: BookDemoClientProps) {
   const [activeFaq, setActiveFaq] = useState<number | null>(0);
   const [hasCopied, setHasCopied] = useState(false);
 
-  // Sync param updates if navigated with new params
+  // Sync param updates if navigated with new params or when batch options load
   useEffect(() => {
-    if (initialCourse && courseOptions.length > 0) {
-      const match = courseOptions.find(
-        c => c.title.toLowerCase() === initialCourse.toLowerCase() ||
-             c.title.toLowerCase().includes(initialCourse.toLowerCase()) ||
-             initialCourse.toLowerCase().includes(c.title.toLowerCase())
+    if (initialBatch && batchOptions.length > 0) {
+      const bNorm = initialBatch.toLowerCase().replace(/[^a-z0-9]+/g, '-');
+      const match = batchOptions.find(
+        (b) =>
+          b.id.toLowerCase() === initialBatch.toLowerCase() ||
+          b.id.toLowerCase().replace(/[^a-z0-9]+/g, '-') === bNorm ||
+          b.id.toLowerCase().includes(initialBatch.toLowerCase()) ||
+          initialBatch.toLowerCase().includes(b.id.toLowerCase())
       );
       if (match) {
         setSelectedCourseItem(match);
+        return;
       }
     }
+
+    if (initialCourse) {
+      const cNorm = initialCourse.toLowerCase().trim();
+      const batchMatch = batchOptions.find(
+        (b) =>
+          b.title.toLowerCase().includes(cNorm) ||
+          (b.courseTitle && b.courseTitle.toLowerCase().includes(cNorm)) ||
+          cNorm.includes(b.title.toLowerCase())
+      );
+      if (batchMatch) {
+        setSelectedCourseItem(batchMatch);
+        return;
+      }
+
+      if (courseOptions.length > 0) {
+        const match = courseOptions.find(
+          (c) =>
+            c.title.toLowerCase() === cNorm ||
+            c.title.toLowerCase().includes(cNorm) ||
+            cNorm.includes(c.title.toLowerCase())
+        );
+        if (match) {
+          setSelectedCourseItem(match);
+          return;
+        }
+      }
+    }
+
+    // If no initial query param and currently selected is default/placeholder, pick first upcoming batch
+    if (!initialBatch && !initialCourse && batchOptions.length > 0 && selectedCourseItem.id === 'default') {
+      setSelectedCourseItem(batchOptions[0]);
+    }
+
     if (initialMode) {
       setLearningMode(initialMode);
     }
-  }, [initialCourse, initialMode, courseOptions]);
+  }, [initialBatch, initialCourse, initialMode, batchOptions, courseOptions, selectedCourseItem.id]);
 
   // Click outside listener to close search dropdown
   useEffect(() => {
@@ -234,15 +370,31 @@ function BookDemoFormContent({ courses = [] }: BookDemoClientProps) {
     return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
 
-  // Filtered courses based on search query
+  // Filtered upcoming batches based on search query (FIRST)
+  const filteredBatches = useMemo(() => {
+    const q = searchQuery.trim().toLowerCase();
+    if (!q) return batchOptions;
+    return batchOptions.filter(
+      (b) =>
+        b.title.toLowerCase().includes(q) ||
+        (b.courseTitle && b.courseTitle.toLowerCase().includes(q)) ||
+        b.duration.toLowerCase().includes(q) ||
+        b.fullLabel.toLowerCase().includes(q) ||
+        (b.schedule && b.schedule.toLowerCase().includes(q)) ||
+        (b.startDate && b.startDate.toLowerCase().includes(q))
+    );
+  }, [searchQuery, batchOptions]);
+
+  // Filtered courses based on search query (AFTER UPCOMING BATCHES)
   const filteredCourses = useMemo(() => {
     const q = searchQuery.trim().toLowerCase();
     if (!q) return courseOptions;
     return courseOptions.filter(
-      c => c.title.toLowerCase().includes(q) ||
-           c.duration.toLowerCase().includes(q) ||
-           c.fullLabel.toLowerCase().includes(q) ||
-           (c.category && c.category.toLowerCase().includes(q))
+      (c) =>
+        c.title.toLowerCase().includes(q) ||
+        c.duration.toLowerCase().includes(q) ||
+        c.fullLabel.toLowerCase().includes(q) ||
+        (c.category && c.category.toLowerCase().includes(q))
     );
   }, [searchQuery, courseOptions]);
 
@@ -354,17 +506,22 @@ function BookDemoFormContent({ courses = [] }: BookDemoClientProps) {
         email: effectiveEmail,
         city: effectiveCity,
         learningMode,
-        courseTitle: selectedCourse,
-        batchTitle: `Free 2-Day Demo - ${selectedCourse}`,
+        courseTitle: selectedCourseItem.courseTitle || selectedCourseItem.title,
+        batchTitle: selectedCourseItem.isBatch
+          ? `Free Demo - ${selectedCourseItem.title}`
+          : `Free 2-Day Demo - ${selectedCourseItem.title}`,
+        batchId: selectedCourseItem.isBatch ? selectedCourseItem.batchId : undefined,
         preferredDate: resolvedDateString,
         preferredSlot,
         studentBackground: background,
-        query: queryNotes.trim(),
+        query: selectedCourseItem.isBatch
+          ? `${queryNotes.trim()} [Upcoming Batch Demo: ${selectedCourseItem.title}, Starts: ${selectedCourseItem.startDate}, Schedule: ${selectedCourseItem.schedule || 'N/A'}]`.trim()
+          : queryNotes.trim(),
         bookingType: 'FREE_DEMO_CLASS',
         referralCode,
         utm_source: 'book_demo_page',
         utm_medium: isAuthenticated ? 'authenticated_student' : 'direct_booking',
-        utm_campaign: 'free_demo_trial',
+        utm_campaign: selectedCourseItem.isBatch ? 'upcoming_batch_demo' : 'free_demo_trial',
         userId: user?.id,
         isStudentLoggedIn: Boolean(isAuthenticated),
       };
@@ -744,14 +901,18 @@ function BookDemoFormContent({ courses = [] }: BookDemoClientProps) {
                             setIsDropdownOpen(false);
                           } else if (e.key === 'Enter') {
                             e.preventDefault();
-                            if (filteredCourses.length > 0) {
+                            if (filteredBatches.length > 0) {
+                              setSelectedCourseItem(filteredBatches[0]);
+                              setIsDropdownOpen(false);
+                              setSearchQuery('');
+                            } else if (filteredCourses.length > 0) {
                               setSelectedCourseItem(filteredCourses[0]);
                               setIsDropdownOpen(false);
                               setSearchQuery('');
                             }
                           }
                         }}
-                        placeholder="Search course name or duration (e.g. Python, MERN, 3 Months)..."
+                        placeholder="Search upcoming batch or course (e.g. Python, MERN, 3 Months)..."
                         className="w-full pl-10 pr-20 py-3 bg-slate-50 border border-slate-200 rounded-xl text-xs sm:text-sm font-semibold text-slate-800 focus:outline-none focus:ring-2 focus:ring-[#FF6B00] transition-all cursor-pointer"
                       />
 
@@ -792,67 +953,156 @@ function BookDemoFormContent({ courses = [] }: BookDemoClientProps) {
                         {/* Dropdown Header */}
                         <div className="px-3.5 py-2 bg-slate-50 border-b border-slate-100 flex items-center justify-between text-[11px] text-slate-500 font-semibold">
                           <span>
+                            {filteredBatches.length > 0 && (
+                              <span className="text-[#FF6B00] font-black mr-1">
+                                {filteredBatches.length} upcoming {filteredBatches.length === 1 ? 'batch' : 'batches'} •
+                              </span>
+                            )}
                             {filteredCourses.length}{' '}
-                            {filteredCourses.length === 1 ? 'course found' : 'courses available'}
+                            {filteredCourses.length === 1 ? 'course available' : 'courses available'}
                           </span>
-                          <span className="text-[10px] text-slate-400 font-mono">Format: Course - Duration</span>
+                          <span className="text-[10px] text-slate-400 font-mono">Format: Batch / Course - Duration</span>
                         </div>
 
-                        {/* Courses List */}
-                        <div className="max-h-64 overflow-y-auto p-1.5 space-y-1">
-                          {filteredCourses.map((c) => {
-                            const isSelected = selectedCourseItem.title === c.title;
-                            return (
-                              <button
-                                key={c.id || c.title}
-                                type="button"
-                                onClick={() => {
-                                  setSelectedCourseItem(c);
-                                  setIsDropdownOpen(false);
-                                  setSearchQuery('');
-                                }}
-                                className={`w-full text-left px-3.5 py-2.5 rounded-xl transition-all flex items-center justify-between gap-3 cursor-pointer ${
-                                  isSelected
-                                    ? 'bg-orange-50/90 border border-orange-200 text-[#FF6B00]'
-                                    : 'hover:bg-slate-50 text-slate-800'
-                                }`}
-                              >
-                                <div className="flex items-center gap-2.5 min-w-0">
-                                  <BookOpen
-                                    className={`w-4 h-4 shrink-0 ${
-                                      isSelected ? 'text-[#FF6B00]' : 'text-slate-400'
+                        {/* List Container */}
+                        <div className="max-h-72 overflow-y-auto p-1.5 space-y-2.5">
+                          {/* 1. UPCOMING LIVE BATCHES (DISPLAYED FIRST) */}
+                          {filteredBatches.length > 0 && (
+                            <div className="space-y-1">
+                              <div className="px-3 py-1 text-[10px] font-black uppercase tracking-wider text-[#B83A00] bg-orange-50/90 rounded-lg flex items-center justify-between border border-orange-100">
+                                <span className="flex items-center gap-1.5">
+                                  <Flame className="w-3.5 h-3.5 fill-[#FF6B00] text-[#FF6B00]" />
+                                  Upcoming Live Batches (Fast Filling)
+                                </span>
+                                <span className="text-[9px] font-extrabold text-white bg-[#FF6B00] px-1.5 py-0.2 rounded shadow-xs">
+                                  Priority Demo
+                                </span>
+                              </div>
+
+                              {filteredBatches.map((b) => {
+                                const isSelected = selectedCourseItem.id === b.id;
+                                return (
+                                  <button
+                                    key={b.id}
+                                    type="button"
+                                    onClick={() => {
+                                      setSelectedCourseItem(b);
+                                      setIsDropdownOpen(false);
+                                      setSearchQuery('');
+                                    }}
+                                    className={`w-full text-left px-3.5 py-2.5 rounded-xl transition-all flex items-center justify-between gap-3 cursor-pointer ${
+                                      isSelected
+                                        ? 'bg-orange-50 border-2 border-[#FF6B00] text-[#FF6B00] shadow-xs'
+                                        : 'bg-white hover:bg-orange-50/50 border border-orange-100/80 text-slate-800'
                                     }`}
-                                  />
-                                  <div className="truncate">
-                                    <div className="text-xs sm:text-sm font-bold truncate">
-                                      <span>{c.title}</span>
-                                      <span className="mx-1.5 text-slate-300 font-normal">-</span>
-                                      <span className="font-extrabold text-[#FF6B00]">{c.duration}</span>
+                                  >
+                                    <div className="flex items-center gap-2.5 min-w-0">
+                                      <div className={`p-1.5 rounded-lg shrink-0 ${
+                                        isSelected ? 'bg-[#FF6B00] text-white' : 'bg-orange-100 text-[#FF6B00]'
+                                      }`}>
+                                        <Flame className="w-4 h-4 fill-current" />
+                                      </div>
+                                      <div className="truncate">
+                                        <div className="text-xs sm:text-sm font-black truncate flex items-center gap-1.5">
+                                          <span className="text-slate-900">{b.title}</span>
+                                          <span className="text-[10px] font-extrabold text-[#B83A00] bg-orange-100 px-1.5 py-0.5 rounded shrink-0">
+                                            Starts {b.startDate}
+                                          </span>
+                                        </div>
+                                        <div className="text-[11px] text-slate-500 flex items-center gap-2 mt-0.5">
+                                          {b.schedule && <span className="truncate">{b.schedule}</span>}
+                                          {b.seatsLeft !== undefined && (
+                                            <span className="text-red-600 font-bold text-[10px] shrink-0">
+                                              • {b.seatsLeft} seats left
+                                            </span>
+                                          )}
+                                        </div>
+                                      </div>
                                     </div>
-                                    {c.category && (
-                                      <span className="text-[10px] text-slate-400 block truncate">
-                                        {c.category}
+
+                                    <div className="flex items-center gap-2 shrink-0">
+                                      <span className="px-2 py-0.5 rounded-md bg-gradient-to-r from-orange-500 to-amber-500 text-white text-[10px] font-black uppercase shadow-xs">
+                                        Live Batch
                                       </span>
-                                    )}
-                                  </div>
-                                </div>
+                                      {isSelected && (
+                                        <CheckCircle2 className="w-4 h-4 text-[#FF6B00] shrink-0" />
+                                      )}
+                                    </div>
+                                  </button>
+                                );
+                              })}
+                            </div>
+                          )}
 
-                                <div className="flex items-center gap-2 shrink-0">
-                                  <span className="px-2 py-0.5 rounded-md bg-slate-100 text-slate-700 text-[10px] font-bold">
-                                    {c.duration}
-                                  </span>
-                                  {isSelected && (
-                                    <CheckCircle2 className="w-4 h-4 text-[#FF6B00] shrink-0" />
-                                  )}
-                                </div>
-                              </button>
-                            );
-                          })}
+                          {/* 2. REGULAR COURSES (DISPLAYED AFTER UPCOMING BATCHES) */}
+                          {filteredCourses.length > 0 && (
+                            <div className="space-y-1">
+                              <div className="px-3 py-1 text-[10px] font-black uppercase tracking-wider text-slate-600 bg-slate-100/90 rounded-lg flex items-center justify-between border border-slate-200/60">
+                                <span className="flex items-center gap-1.5">
+                                  <BookOpen className="w-3.5 h-3.5 text-slate-500" />
+                                  All Regular Courses
+                                </span>
+                                <span className="text-[9px] font-semibold text-slate-500">
+                                  Online & Lab
+                                </span>
+                              </div>
 
-                          {filteredCourses.length === 0 && (
+                              {filteredCourses.map((c) => {
+                                const isSelected = selectedCourseItem.id === c.id;
+                                return (
+                                  <button
+                                    key={c.id || c.title}
+                                    type="button"
+                                    onClick={() => {
+                                      setSelectedCourseItem(c);
+                                      setIsDropdownOpen(false);
+                                      setSearchQuery('');
+                                    }}
+                                    className={`w-full text-left px-3.5 py-2.5 rounded-xl transition-all flex items-center justify-between gap-3 cursor-pointer ${
+                                      isSelected
+                                        ? 'bg-orange-50/90 border border-orange-200 text-[#FF6B00]'
+                                        : 'hover:bg-slate-50 text-slate-800'
+                                    }`}
+                                  >
+                                    <div className="flex items-center gap-2.5 min-w-0">
+                                      <BookOpen
+                                        className={`w-4 h-4 shrink-0 ${
+                                          isSelected ? 'text-[#FF6B00]' : 'text-slate-400'
+                                        }`}
+                                      />
+                                      <div className="truncate">
+                                        <div className="text-xs sm:text-sm font-bold truncate">
+                                          <span>{c.title}</span>
+                                          <span className="mx-1.5 text-slate-300 font-normal">-</span>
+                                          <span className="font-extrabold text-[#FF6B00]">{c.duration}</span>
+                                        </div>
+                                        {c.category && (
+                                          <span className="text-[10px] text-slate-400 block truncate">
+                                            {c.category}
+                                          </span>
+                                        )}
+                                      </div>
+                                    </div>
+
+                                    <div className="flex items-center gap-2 shrink-0">
+                                      <span className="px-2 py-0.5 rounded-md bg-slate-100 text-slate-700 text-[10px] font-bold">
+                                        {c.duration}
+                                      </span>
+                                      {isSelected && (
+                                        <CheckCircle2 className="w-4 h-4 text-[#FF6B00] shrink-0" />
+                                      )}
+                                    </div>
+                                  </button>
+                                );
+                              })}
+                            </div>
+                          )}
+
+                          {/* Empty State */}
+                          {filteredBatches.length === 0 && filteredCourses.length === 0 && (
                             <div className="p-4 text-center space-y-2">
                               <p className="text-xs font-bold text-slate-700">
-                                No courses found for &quot;{searchQuery}&quot;
+                                No live batches or courses found for &quot;{searchQuery}&quot;
                               </p>
                               <p className="text-[11px] text-slate-400">
                                 You can choose this custom topic or pick one from our popular tracks.
@@ -880,15 +1130,28 @@ function BookDemoFormContent({ courses = [] }: BookDemoClientProps) {
                     )}
                   </div>
 
-                  {/* Active Selected Course Confirmation Badge */}
-                  <div className="flex items-center justify-between px-3 py-2 rounded-xl bg-orange-50/80 border border-orange-200/80 text-xs mt-1.5">
+                  {/* Active Selected Course / Batch Confirmation Badge */}
+                  <div className={`flex items-center justify-between px-3.5 py-2.5 rounded-xl border text-xs mt-2 transition-all ${
+                    selectedCourseItem.isBatch
+                      ? 'bg-gradient-to-r from-orange-50 via-amber-50/60 to-orange-50 border-orange-300 shadow-xs'
+                      : 'bg-orange-50/80 border-orange-200/80'
+                  }`}>
                     <div className="flex items-center gap-2 min-w-0">
-                      <span className="text-[10px] font-black uppercase text-[#FF6B00] bg-white px-2 py-0.5 rounded border border-orange-200 shrink-0">
-                        Selected Course
+                      <span className={`text-[10px] font-black uppercase px-2 py-0.5 rounded border shrink-0 ${
+                        selectedCourseItem.isBatch
+                          ? 'bg-[#FF6B00] text-white border-[#FF6B00] shadow-xs flex items-center gap-1'
+                          : 'text-[#FF6B00] bg-white border-orange-200'
+                      }`}>
+                        {selectedCourseItem.isBatch && <Flame className="w-3 h-3 fill-white" />}
+                        {selectedCourseItem.isBatch ? 'Selected Live Batch' : 'Selected Course'}
                       </span>
                       <span className="font-extrabold text-slate-900 truncate">
                         {selectedCourseItem.title}{' '}
-                        <span className="text-[#FF6B00] font-bold">({selectedCourseItem.duration})</span>
+                        <span className="text-[#FF6B00] font-bold">
+                          {selectedCourseItem.isBatch
+                            ? `(Starts: ${selectedCourseItem.startDate}${selectedCourseItem.schedule ? ` • ${selectedCourseItem.schedule}` : ''})`
+                            : `(${selectedCourseItem.duration})`}
+                        </span>
                       </span>
                     </div>
                     <button
@@ -897,7 +1160,7 @@ function BookDemoFormContent({ courses = [] }: BookDemoClientProps) {
                         setIsDropdownOpen(true);
                         setSearchQuery('');
                       }}
-                      className="text-[11px] font-extrabold text-[#FF6B00] hover:underline shrink-0 ml-2 cursor-pointer"
+                      className="text-[11px] font-black text-[#FF6B00] hover:underline shrink-0 ml-2 cursor-pointer"
                     >
                       Change ➔
                     </button>

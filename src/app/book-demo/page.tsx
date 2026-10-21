@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
 import BookDemoClient from '@/components/BookDemoClient';
-import { fetchCourses } from '@/services/api';
+import { fetchCourses, fetchLiveBatches } from '@/services/api';
 
 export const metadata: Metadata = {
   title: 'Book Free Demo Class (Online Live & Lab) | MSK Institute Shikohabad',
@@ -48,7 +48,10 @@ export const metadata: Metadata = {
 };
 
 export default async function BookDemoPage() {
-  const courses = await fetchCourses().catch(() => []);
+  const [courses, batches] = await Promise.all([
+    fetchCourses().catch(() => []),
+    fetchLiveBatches().catch(() => []),
+  ]);
 
   // Structured Data (JSON-LD) for Search Engines & AI Crawlers (Perplexity, ChatGPT, Gemini, Google)
   const jsonLd = {
@@ -168,7 +171,7 @@ export default async function BookDemoPage() {
       />
       <main className="min-h-screen bg-slate-50 py-10 sm:py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <BookDemoClient courses={courses} />
+          <BookDemoClient courses={courses} batches={batches} />
         </div>
       </main>
     </>

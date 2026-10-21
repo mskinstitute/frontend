@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Link from 'next/link';
 import { toast } from 'react-hot-toast';
 import { 
   Send, CheckCircle2, ShieldCheck, Sparkles, 
@@ -81,6 +82,7 @@ export default function BatchEnrollmentForm({
           price: batch.price,
           startDate: batch.startDate,
           schedule: batch.schedule,
+          bookingType: 'BATCH_ADMISSION',
           query: query.trim(),
         }),
       });
@@ -194,15 +196,32 @@ export default function BatchEnrollmentForm({
           </span>
         </div>
         <h3 className="text-lg sm:text-xl font-extrabold tracking-tight">
-          Reserve Your Batch Seat & Demo
+          Reserve Your Batch Seat
         </h3>
         <p className="text-xs text-gray-300 mt-1">
-          Lock the discounted fee of <strong className="text-white text-sm">{batch.price}</strong> {batch.originalPrice && <span className="line-through text-gray-400 text-xs font-normal">({batch.originalPrice})</span>}. Free counseling & trial class.
+          Lock the discounted fee of <strong className="text-white text-sm">{batch.price}</strong> {batch.originalPrice && <span className="line-through text-gray-400 text-xs font-normal">({batch.originalPrice})</span>}. Direct admission & verified seat confirmation.
         </p>
       </div>
 
       {/* Form Body or Success State */}
       <div className="p-6 space-y-5">
+        {/* Important notice: Demo booking is on /book-demo */}
+        <div className="p-3 bg-gradient-to-r from-orange-50 via-amber-50 to-orange-50 rounded-xl border border-orange-200/90 text-xs shadow-xs space-y-1.5">
+          <div className="flex items-center gap-1.5 text-[#B83A00] font-black">
+            <Sparkles className="w-4 h-4 text-secondary shrink-0" />
+            <span>Looking to take a Free Trial Demo Class?</span>
+          </div>
+          <p className="text-[11px] text-slate-600 leading-tight">
+            Free demo sessions must be booked on our dedicated demo booking page.
+          </p>
+          <Link
+            href={`/book-demo?batch=${batch.id}&course=${encodeURIComponent(courseTitle || batch.courseTitle || batch.title)}`}
+            className="inline-flex items-center gap-1.5 font-black text-secondary hover:text-[#B83A00] hover:underline pt-0.5 text-xs"
+          >
+            <span>Book Free Demo Class on /book-demo ➔</span>
+          </Link>
+        </div>
+
         {isSuccess ? (
           <div className="text-center py-6 space-y-4 animate-in fade-in zoom-in-95 duration-200">
             <div className="w-16 h-16 rounded-full bg-green-100 text-green-600 flex items-center justify-center mx-auto shadow-inner">
@@ -374,7 +393,7 @@ export default function BatchEnrollmentForm({
               <textarea
                 id="lead-query"
                 rows={2}
-                placeholder="Ask about batch timings, laptop requirements, or demo slots..."
+                placeholder="Ask about batch timings, laptop requirements, syllabus, or fee details..."
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
                 className="w-full px-3 py-2 bg-surface border border-border-subtle rounded-xl text-xs focus:outline-none focus:border-secondary focus:bg-white transition-colors resize-none"
@@ -394,7 +413,7 @@ export default function BatchEnrollmentForm({
                 </span>
               ) : (
                 <>
-                  <span>Reserve Seat & Chat on WhatsApp</span>
+                  <span>Reserve Batch Seat & Connect on WhatsApp</span>
                   <ArrowRight className="w-4 h-4" />
                 </>
               )}
@@ -404,7 +423,7 @@ export default function BatchEnrollmentForm({
             <div className="pt-2 border-t border-border-subtle space-y-1.5 text-[11px] text-text-muted text-center">
               <div className="flex items-center justify-center gap-1 text-green-700 font-semibold">
                 <ShieldCheck className="w-3.5 h-3.5" />
-                <span>100% Free Trial Demo • No Obligation</span>
+                <span>Official Batch Seat Reservation • Verified Admissions</span>
               </div>
               <p className="text-[10px] text-text-muted leading-tight">
                 Our coordinator Er. Sumit Kumar / admissions team (+91 8393042166) will confirm your batch seat.

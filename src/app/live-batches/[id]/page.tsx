@@ -198,8 +198,15 @@ export default async function LiveBatchDetailPage({ params }: { params: Params }
           </span>
           <span>Admissions Closing Soon: Only <strong>{batch.leftSeats} of {batch.totalSeats} seats</strong> left for the <strong>{formattedStartDate}</strong> batch!</span>
           <a href="#enroll-form" className="underline font-black hover:text-amber-200 ml-1">
-            Lock Discounted Seat & Free Demo ➔
+            Reserve Batch Seat ➔
           </a>
+          <span className="text-amber-200/80 mx-1">•</span>
+          <Link
+            href={`/book-demo?batch=${batch.id}&course=${encodeURIComponent(course?.title || batch.title)}`}
+            className="underline font-black text-amber-200 hover:text-white ml-1"
+          >
+            Want Free Demo? Book on /book-demo ➔
+          </Link>
         </div>
       )}
 
@@ -357,16 +364,26 @@ export default async function LiveBatchDetailPage({ params }: { params: Params }
                     )}
                   </div>
 
-                  <a
-                    href="#enroll-form"
-                    className="w-full py-3.5 px-4 bg-secondary hover:bg-secondary-light text-white font-extrabold text-sm rounded-xl shadow-md transition-all flex items-center justify-center gap-2 block"
-                  >
-                    <span>Reserve Seat & Free Demo Class</span>
-                    <ArrowRight className="w-4 h-4" />
-                  </a>
+                  <div className="space-y-2">
+                    <a
+                      href="#enroll-form"
+                      className="w-full py-3.5 px-4 bg-secondary hover:bg-secondary-light text-white font-extrabold text-sm rounded-xl shadow-md transition-all flex items-center justify-center gap-2 block"
+                    >
+                      <span>Reserve Batch Seat (Direct Admission)</span>
+                      <ArrowRight className="w-4 h-4" />
+                    </a>
+
+                    <Link
+                      href={`/book-demo?batch=${batch.id}&course=${encodeURIComponent(course?.title || batch.title)}`}
+                      className="w-full py-2.5 px-3 bg-orange-50 hover:bg-orange-100 text-[#B83A00] font-black text-xs rounded-xl border border-orange-200 transition-all flex items-center justify-center gap-1.5 block"
+                    >
+                      <Sparkles className="w-3.5 h-3.5 text-secondary" />
+                      <span>Want a Demo First? Book Free Demo Class ➔</span>
+                    </Link>
+                  </div>
 
                   <p className="text-[10px] text-text-muted">
-                    ✓ Free Demo Session • ✓ 100% Practical Labs • ✓ Money-back Guarantee
+                    ✓ Direct Batch Enrollment • ✓ 100% Practical Labs • ✓ Money-back Guarantee
                   </p>
                 </>
               )}
@@ -536,8 +553,8 @@ export default async function LiveBatchDetailPage({ params }: { params: Params }
               <div className="space-y-3">
                 {[
                   {
-                    q: 'Can I attend a free demo session before paying?',
-                    a: 'Yes! We provide a free trial demo session so you can experience our lab teaching methodology and interact with the instructor before enrolling.',
+                    q: 'Can I attend a free demo session before enrolling?',
+                    a: 'Yes! We offer a 100% free 2-day trial demo class. Because demo seats require a digital classroom pass or lab seat allocation, demo classes must be booked directly on our dedicated /book-demo page so you can select your preferred demo slot.',
                   },
                   {
                     q: 'What if I miss a live class session?',
