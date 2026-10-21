@@ -1,5 +1,5 @@
-import { Metadata } from 'next';
-import { notFound } from 'next/navigation';
+import type { Metadata } from 'next';
+import { notFound, permanentRedirect } from 'next/navigation';
 import Link from 'next/link';
 import { 
   Clock, Award, Users, User, BookOpen, Layers, MessageSquare, 
@@ -18,6 +18,10 @@ import { constructMetadata } from '@/lib/seo';
 
 type Params = Promise<{ slug: string }>;
 
+const COURSE_SLUG_ALIASES: Record<string, string> = {
+  'ms-excel-beginners-to-advanced--6-months': 'excel-mastery',
+};
+
 export async function generateStaticParams() {
   try {
     const courses = await fetchCourses();
@@ -31,7 +35,8 @@ export async function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: { params: Params }): Promise<Metadata> {
-  const { slug } = await params;
+  const { slug: rawSlug } = await params;
+  const slug = COURSE_SLUG_ALIASES[rawSlug] || rawSlug;
   try {
     const courses = await fetchCourses();
     const course = courses.find((c) => c.slug === slug);
@@ -64,7 +69,11 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
 }
 
 export default async function CourseDetailPage({ params }: { params: Params }) {
-  const { slug } = await params;
+  const { slug: rawSlug } = await params;
+  if (COURSE_SLUG_ALIASES[rawSlug]) {
+    permanentRedirect(`/courses/${COURSE_SLUG_ALIASES[rawSlug]}`);
+  }
+  const slug = rawSlug;
   let course: Course | undefined;
   let allCourses: Course[] = [];
   let liveBatches: LiveBatch[] = [];

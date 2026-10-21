@@ -104,6 +104,7 @@ export const TOPICAL_CLUSTERS: Record<string, TopicalCluster> = {
     name: 'Data Analytics & Business Intelligence',
     description: 'Data transformation, statistical analysis, dashboard engineering with Advanced Excel, SQL, Python (Pandas/NumPy), and Power BI.',
     courseSlugs: [
+      'excel-mastery',
       'data-analytics-python-excel',
       'advanced-excel-business-analytics',
       'power-bi-business-intelligence',

@@ -113,9 +113,9 @@ export function resolveTopicTutorialUrl(
     tutorialSlug = 'ms-excel-for-advanced';
   } else if (cSlug === 'ms-excel-for-intermediate' || cSlug.includes('excel-for-intermediate')) {
     tutorialSlug = 'ms-excel-for-intermediate';
-  } else if (cSlug === 'ms-excel-for-beginners' || cSlug.includes('excel-for-beginners') || (cSlug.includes('excel') && !cSlug.includes('advanced') && !cSlug.includes('intermediate') && !cSlug.includes('6-months'))) {
+  } else if (cSlug === 'ms-excel-for-beginners' || cSlug.includes('excel-for-beginners') || (cSlug.includes('excel') && !cSlug.includes('advanced') && !cSlug.includes('intermediate') && !cSlug.includes('6-months') && !cSlug.includes('mastery'))) {
     tutorialSlug = 'ms-excel-for-beginners';
-  } else if (cSlug.includes('excel') && cSlug.includes('6-months')) {
+  } else if ((cSlug.includes('excel') && cSlug.includes('6-months')) || cSlug === 'excel-mastery' || cSlug.includes('excel-mastery')) {
     if (chTitle.includes('advanced') || chTitle.includes('macro') || chTitle.includes('vba') || chTitle.includes('power query') || chTitle.includes('power pivot') || chTitle.includes('dashboard') || chTitle.includes('what-if') || chTitle.includes('xlookup')) {
       tutorialSlug = 'ms-excel-for-advanced';
     } else if (chTitle.includes('intermediate') || chTitle.includes('pivot') || chTitle.includes('lookup') || chTitle.includes('conditional') || chTitle.includes('validation') || chTitle.includes('large data') || chTitle.includes('attendance')) {

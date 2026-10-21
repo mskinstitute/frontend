@@ -373,6 +373,15 @@ const courseOutcomesMap = {
     'Visual report design: custom charts, drillthrough navigation, slicers, and interactive tooltips',
     'Enterprise report deployment, scheduled data refresh, and Row-Level Security (RLS) policies'
   ],
+  'excel-mastery': [
+    'Complete spreadsheet engineering from basic calculations to enterprise data modeling',
+    'Lookup mastery: XLOOKUP, VLOOKUP, INDEX-MATCH, and multi-condition lookup formulas',
+    'Dynamic array formulas (FILTER, UNIQUE, SORT, XMATCH) and nested logical calculations',
+    'Pivot Tables, calculated fields, slicers, and interactive executive business dashboards',
+    'Automated data transformation with Power Query, data cleansing, and duplicate elimination',
+    'Data validation rules, error handling, cell protection, and foundational workflow macros',
+    'Real-world business analytics capstone projects and executive financial models'
+  ],
   'ms-excel-beginners-to-advanced--6-months': [
     'Complete spreadsheet engineering from basic calculations to enterprise data modeling',
     'Lookup mastery: XLOOKUP, VLOOKUP, INDEX-MATCH, and multi-condition lookup formulas',

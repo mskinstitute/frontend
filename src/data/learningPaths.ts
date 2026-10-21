@@ -166,8 +166,8 @@ export const LEARNING_PATHS: LearningPath[] = [
         stepNumber: 1,
         title: 'Advanced MS Excel & Business Analytics Modeling',
         duration: '3 Months',
-        courseSlug: 'ms-excel-beginners-to-advanced--6-months',
-        courseTitle: 'MS Excel (Beginners to Advanced)',
+        courseSlug: 'excel-mastery',
+        courseTitle: 'Excel Mastery Course (Beginner to Advanced)',
         description: 'Master lookup formulas (XLOOKUP, INDEX/MATCH), pivot tables, data validation, conditional formatting, and financial modeling.',
         skills: ['XLOOKUP & Nested Logic', 'Pivot Tables & Slicers', 'Data Cleaning Formulas', 'Excel Charts & Sparklines', 'Macro Basics'],
         deliverable: 'Automated 12-month commercial sales tracking & variance analysis workbook'

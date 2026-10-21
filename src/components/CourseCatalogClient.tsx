@@ -403,6 +403,15 @@ export default function CourseCatalogClient({ initialCourses }: { initialCourses
       level: "Comprehensive",
       certificate: "Power BI BI Specialist Certificate",
       bestFor: "Power Query ETL, DAX Modeling, Interactive KPI Dashboards & Executive Reports"
+    },
+    {
+      title: "Excel Mastery Course",
+      slug: "excel-mastery",
+      duration: "6 Months",
+      mode: "Offline & Online",
+      level: "Beginner to Advanced",
+      certificate: "Excel & Analytics Mastery Certificate",
+      bestFor: "Advanced Formulas (XLOOKUP), Dynamic Arrays, Pivot Tables, Power Query ETL, KPI Dashboards & Macros"
     }
   ];
 

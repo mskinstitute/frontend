@@ -18,7 +18,7 @@ tags:
   - "Productivity"
 relatedCourses:
   - "ccc"
-  - "ms-excel-beginners-to-advanced--6-months"
+  - "excel-mastery"
 ---
 
 Microsoft Excel is the backbone of business analytics, accounting, and daily office operations worldwide. Whether you manage student fees, retail stock, or salary calculations, mastering these modern Excel functions will save you hundreds of hours.

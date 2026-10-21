@@ -81,6 +81,11 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       {
+        source: '/courses/ms-excel-beginners-to-advanced--6-months',
+        destination: '/courses/excel-mastery',
+        permanent: true,
+      },
+      {
         source: '/courses/ccc-computer-concepts',
         destination: '/courses/ccc',
         permanent: true,
