@@ -83,10 +83,10 @@ export default function BranchBatches({ batches, branch }: BranchBatchesProps) {
                   </div>
 
                   <Link
-                    href={`/live-batches?batch=${batch.id}&branch=${branch.slug}`}
+                    href={`/book-demo?batch=${batch.id}&branch=${branch.slug}`}
                     className="inline-flex items-center gap-1.5 bg-secondary hover:bg-secondary-dark text-white text-xs font-bold px-4 py-2 rounded-xl transition-all"
                   >
-                    <span>Reserve Seat</span>
+                    <span>Book Demo</span>
                     <ArrowRight className="w-3.5 h-3.5" />
                   </Link>
                 </div>

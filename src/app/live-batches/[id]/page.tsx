@@ -9,7 +9,7 @@ import {
 } from 'lucide-react';
 import { fetchLiveBatches, fetchLiveBatchById } from '@/services/api';
 import CourseCurriculumAccordion from '@/components/CourseCurriculumAccordion';
-import BatchEnrollmentForm from '@/components/BatchEnrollmentForm';
+import BatchDemoCard from '@/components/BatchDemoCard';
 import BatchViewTracker from '@/components/BatchViewTracker';
 
 type Params = Promise<{ id: string }>;
@@ -46,7 +46,7 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
         ? `${batch.title} (Concluded) | MSK Institute Live Training`
         : `${batch.title} (${batch.price}) | MSK Institute Live Admissions`,
       description: isCompleted
-        ? `Completed live training cohort: ${batch.title}. Review curriculum and reserve seats in upcoming batches with ${batch.instructor} in Shikohabad.`
+        ? `Completed live training cohort: ${batch.title}. Review curriculum and book a free demo in upcoming batches with ${batch.instructor} in Shikohabad.`
         : `Enroll in ${batch.title}. Starting ${batch.startDate} with ${batch.instructor}. 100% practical lab training in Shikohabad and online. Only ${batch.leftSeats} seats left!`,
       alternates: {
         canonical: `https://www.mskinstitute.in/live-batches/${batch.id}`,
@@ -196,16 +196,12 @@ export default async function LiveBatchDetailPage({ params }: { params: Params }
             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
             <span className="relative inline-flex rounded-full h-2 w-2 bg-white"></span>
           </span>
-          <span>Admissions Closing Soon: Only <strong>{batch.leftSeats} of {batch.totalSeats} seats</strong> left for the <strong>{formattedStartDate}</strong> batch!</span>
-          <a href="#enroll-form" className="underline font-black hover:text-amber-200 ml-1">
-            Reserve Batch Seat ➔
-          </a>
-          <span className="text-amber-200/80 mx-1">•</span>
+          <span>New Cohort Starting <strong>{formattedStartDate}</strong>: Only <strong>{batch.leftSeats} of {batch.totalSeats} seats</strong> left!</span>
           <Link
             href={`/book-demo?batch=${batch.id}&course=${encodeURIComponent(course?.title || batch.title)}`}
-            className="underline font-black text-amber-200 hover:text-white ml-1"
+            className="underline font-black text-white hover:text-amber-200 ml-1"
           >
-            Want Free Demo? Book on /book-demo ➔
+            Book Demo ➔
           </Link>
         </div>
       )}
@@ -365,25 +361,18 @@ export default async function LiveBatchDetailPage({ params }: { params: Params }
                   </div>
 
                   <div className="space-y-2">
-                    <a
-                      href="#enroll-form"
-                      className="w-full py-3.5 px-4 bg-secondary hover:bg-secondary-light text-white font-extrabold text-sm rounded-xl shadow-md transition-all flex items-center justify-center gap-2 block"
-                    >
-                      <span>Reserve Batch Seat (Direct Admission)</span>
-                      <ArrowRight className="w-4 h-4" />
-                    </a>
-
                     <Link
                       href={`/book-demo?batch=${batch.id}&course=${encodeURIComponent(course?.title || batch.title)}`}
-                      className="w-full py-2.5 px-3 bg-orange-50 hover:bg-orange-100 text-[#B83A00] font-black text-xs rounded-xl border border-orange-200 transition-all flex items-center justify-center gap-1.5 block"
+                      className="w-full py-3.5 px-4 bg-gradient-to-r from-secondary to-amber-600 hover:from-secondary-light hover:to-amber-500 text-white font-extrabold text-sm rounded-xl shadow-md hover:shadow-lg transition-all flex items-center justify-center gap-2 block"
                     >
-                      <Sparkles className="w-3.5 h-3.5 text-secondary" />
-                      <span>Want a Demo First? Book Free Demo Class ➔</span>
+                      <Sparkles className="w-4 h-4 text-white" />
+                      <span>Book Demo</span>
+                      <ArrowRight className="w-4 h-4" />
                     </Link>
                   </div>
 
                   <p className="text-[10px] text-text-muted">
-                    ✓ Direct Batch Enrollment • ✓ 100% Practical Labs • ✓ Money-back Guarantee
+                    ✓ 100% Free 2-Day Trial • ✓ Individual Lab Station • ✓ Zero Obligation
                   </p>
                 </>
               )}
@@ -583,9 +572,9 @@ export default async function LiveBatchDetailPage({ params }: { params: Params }
             </section>
           </div>
 
-          {/* Right Column: Sticky Lead Capture Form */}
-          <div className="lg:col-span-1 space-y-6" id="enroll-form">
-            <BatchEnrollmentForm
+          {/* Right Column: Sticky Demo Booking Card */}
+          <div className="lg:col-span-1 space-y-6" id="demo-card">
+            <BatchDemoCard
               batch={batch}
               courseTitle={course?.title || batch.title}
               isSticky={true}

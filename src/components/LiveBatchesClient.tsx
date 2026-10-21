@@ -9,7 +9,7 @@ import {
   ArrowRight, Check, Flame, History 
 } from 'lucide-react';
 import { LiveBatch } from '@/types';
-import BatchEnrollmentForm from './BatchEnrollmentForm';
+import BatchDemoCard from './BatchDemoCard';
 
 interface LiveBatchesClientProps {
   batches: LiveBatch[];
@@ -155,7 +155,7 @@ export default function LiveBatchesClient({ batches }: LiveBatchesClientProps) {
                   <span className={`text-xs font-bold ${
                     isActiveSelection ? 'text-secondary' : 'text-text-muted'
                   }`}>
-                    {isActiveSelection ? '✓ Selected for instant enquiry form' : 'Click card to select for enquiry form'}
+                    {isActiveSelection ? '✓ Selected batch for free demo' : 'Click card to view demo details'}
                   </span>
 
                   <Link
@@ -223,10 +223,10 @@ export default function LiveBatchesClient({ batches }: LiveBatchesClientProps) {
         )}
       </div>
 
-      {/* Right Column - High Converting Lead Generation Form */}
-      <div className="lg:col-span-1" id="register-form">
+      {/* Right Column - Demo Booking Card */}
+      <div className="lg:col-span-1" id="demo-card">
         {selectedBatch && (
-          <BatchEnrollmentForm
+          <BatchDemoCard
             batch={selectedBatch}
             courseTitle={selectedBatch.courseTitle || selectedBatch.title}
             isSticky={true}

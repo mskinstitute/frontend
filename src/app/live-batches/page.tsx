@@ -4,7 +4,7 @@ import LiveBatchesClient from '@/components/LiveBatchesClient';
 
 export const metadata: Metadata = {
   title: "Upcoming Training Batches & Live Registrations | MSK Institute",
-  description: "Enrol in our upcoming professional live coding batches. Reserve your seat for Python Programming, MERN Stack Web Development, and CCC in Shikohabad.",
+  description: "Enrol in our upcoming professional live coding batches. Book your free demo for Python Programming, MERN Stack Web Development, and CCC in Shikohabad.",
   keywords: ["Computer Course Admissions", "Coding Batches Shikohabad", "Enroll in Python Course", "Web Dev Bootcamp Registration"],
 };
 
