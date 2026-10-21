@@ -26,6 +26,7 @@ import {
   LogOut,
   Settings,
   Sparkles,
+  Users,
 } from 'lucide-react';
 
 import InstallAppButton from '@/components/InstallAppButton';
@@ -105,6 +106,7 @@ export default function Navbar() {
     id: string;
     name: string;
     icon: typeof Compass;
+    badge?: string;
     items: DropdownItem[];
   }
 
@@ -118,10 +120,31 @@ export default function Navbar() {
   const directLinks: DirectLink[] = [
     { name: 'Home', href: '/', icon: Home },
     { name: 'Courses', href: '/courses', icon: BookOpen },
-    { name: 'Live', href: '/live', icon: Video, badge: isLiveNow ? 'LIVE' : undefined },
   ];
 
   const dropdownGroups: NavDropdown[] = [
+    {
+      id: 'live',
+      name: 'Live',
+      icon: Video,
+      badge: isLiveNow ? 'LIVE' : undefined,
+      items: [
+        {
+          name: 'Classes',
+          href: '/live',
+          icon: Video,
+          badge: isLiveNow ? 'LIVE' : undefined,
+          description: 'Show all live classes, daily timetable & Google Meet',
+        },
+        {
+          name: 'Batches',
+          href: '/live-batches',
+          icon: Users,
+          badge: 'ADMISSIONS',
+          description: 'Show all batches, cohort schedule & offline lab seats',
+        },
+      ],
+    },
     {
       id: 'explore',
       name: 'Explore',
@@ -138,13 +161,6 @@ export default function Navbar() {
           href: '/projects',
           icon: Laptop,
           description: 'Real-world capstones built by MSK students',
-        },
-        {
-          name: 'Live Batches',
-          href: '/live',
-          icon: Video,
-          badge: isLiveNow ? 'LIVE' : undefined,
-          description: 'Interactive batches with mentor doubt sessions',
         },
         {
           name: 'Code Playground',
@@ -379,7 +395,7 @@ export default function Navbar() {
     if (path === '/') {
       return pathname === '/';
     }
-    return pathname.startsWith(path);
+    return pathname === path || pathname.startsWith(path + '/');
   };
 
   const isDropdownActive = (group: NavDropdown) => {
@@ -481,6 +497,7 @@ export default function Navbar() {
               const GroupIcon = group.icon;
               const isOpen = openDropdown === group.id;
               const hasActiveItem = isDropdownActive(group);
+              const isLiveGroup = group.id === 'live';
 
               return (
                 <div
@@ -491,18 +508,30 @@ export default function Navbar() {
                 >
                   <button
                     type="button"
+                    id={`nav-dropdown-${group.id}`}
                     onClick={() => handleDropdownToggle(group.id)}
+                    aria-haspopup="true"
                     aria-expanded={isOpen}
+                    aria-controls={`nav-dropdown-menu-${group.id}`}
+                    aria-label={`${group.name} navigation menu`}
                     className={`relative flex items-center gap-1.5 px-2 py-1.5 lg:px-2.5 lg:py-2 xl:px-3 text-xs lg:text-sm font-medium rounded-md whitespace-nowrap transition-all duration-150 cursor-pointer ${
                       hasActiveItem
                         ? 'text-secondary font-bold border-b-2 border-secondary rounded-none pb-1'
+                        : isLiveGroup && isLiveNow
+                        ? 'text-slate-800 hover:text-red-600 hover:bg-red-50/60 font-semibold'
                         : isOpen
                         ? 'text-primary bg-surface font-semibold'
                         : 'text-text-muted hover:text-primary hover:bg-surface'
                     }`}
                   >
-                    <GroupIcon className="w-3.5 h-3.5 lg:w-4 lg:h-4 flex-shrink-0" />
+                    <GroupIcon className={`w-3.5 h-3.5 lg:w-4 lg:h-4 flex-shrink-0 ${isLiveGroup && isLiveNow && !hasActiveItem ? 'text-red-500' : ''}`} />
                     <span>{group.name}</span>
+                    {group.badge && (
+                      <span className="relative flex items-center gap-1 px-1.5 py-0.5 text-[9px] font-extrabold rounded-full uppercase tracking-wider bg-red-100 text-red-600 shadow-2xs">
+                        <span className="w-1.5 h-1.5 rounded-full bg-red-500 animate-ping inline-block" />
+                        <span>{group.badge}</span>
+                      </span>
+                    )}
                     <ChevronDown
                       className={`w-3.5 h-3.5 transition-transform duration-200 ${
                         isOpen ? 'rotate-180 text-secondary' : 'text-text-muted/70'
@@ -513,9 +542,12 @@ export default function Navbar() {
                   {/* Desktop Dropdown Panel */}
                   {isOpen && (
                     <div
+                      id={`nav-dropdown-menu-${group.id}`}
+                      role="menu"
+                      aria-labelledby={`nav-dropdown-${group.id}`}
                       onMouseEnter={() => handleMouseEnter(group.id)}
                       onMouseLeave={handleMouseLeave}
-                      className="absolute top-full left-0 mt-1.5 w-80 bg-white rounded-2xl shadow-xl shadow-slate-900/10 border border-slate-200 p-2 z-50 animate-in fade-in zoom-in-95 duration-150 max-h-[85vh] overflow-y-auto"
+                      className={`absolute top-full left-0 mt-1.5 ${group.id === 'live' ? 'w-72' : 'w-80'} bg-white rounded-2xl shadow-xl shadow-slate-900/10 border border-slate-200 p-2 z-50 animate-in fade-in zoom-in-95 duration-150 max-h-[85vh] overflow-y-auto`}
                     >
                       <div className="space-y-1">
                         {group.items.map((subItem) => {
@@ -525,6 +557,8 @@ export default function Navbar() {
                             <Link
                               key={subItem.href}
                               href={subItem.href}
+                              role="menuitem"
+                              title={subItem.description}
                               onClick={() => setOpenDropdown(null)}
                               className={`flex items-start gap-3 p-2.5 rounded-xl transition-all duration-150 group ${
                                 active
@@ -1068,6 +1102,8 @@ export default function Navbar() {
                     <button
                       type="button"
                       onClick={() => toggleMobileAccordion(group.id)}
+                      aria-expanded={isExpanded}
+                      aria-label={`Toggle ${group.name} menu`}
                       className="w-full flex items-center justify-between px-3.5 py-2.5 text-xs font-bold uppercase tracking-wider text-slate-700 hover:text-primary transition-colors cursor-pointer"
                     >
                       <span className="flex items-center gap-2">
@@ -1079,6 +1115,12 @@ export default function Navbar() {
                         <span className={hasActiveItem || isExpanded ? 'text-secondary font-bold' : ''}>
                           {group.name}
                         </span>
+                        {group.badge && (
+                          <span className="relative flex items-center gap-1 px-1.5 py-0.5 text-[8px] font-extrabold rounded-full uppercase tracking-wider bg-red-100 text-red-600">
+                            <span className="w-1 h-1 rounded-full bg-red-500 animate-ping inline-block" />
+                            <span>{group.badge}</span>
+                          </span>
+                        )}
                       </span>
                       <ChevronDown
                         className={`w-4 h-4 text-slate-400 transition-transform duration-200 ${

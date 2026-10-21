@@ -1,4 +1,6 @@
 import { Metadata } from 'next';
+import Link from 'next/link';
+import { Users, ArrowRight } from 'lucide-react';
 import { fetchLiveSchedule } from '@/services/api';
 import LiveScheduleClient from '@/components/LiveScheduleClient';
 import { BUSINESS_INFO } from '@/config/business';
@@ -302,6 +304,30 @@ export default async function LivePage() {
             Attend interactive live computer lectures in Shikohabad by <strong>Er. Sumit Kumar</strong>. Join active sessions on Google Meet, YouTube Live, or Zoom, review 7-day upcoming class topics, and enroll in upcoming live cohorts.
           </p>
         </header>
+
+        {/* Cross-Linking Bridge to Upcoming Cohorts */}
+        <div className="bg-gradient-to-r from-orange-50 via-amber-50 to-orange-50 border border-orange-200/80 rounded-2xl p-4 sm:p-5 flex flex-col sm:flex-row items-center justify-between gap-4 shadow-2xs">
+          <div className="flex items-center gap-3 text-center sm:text-left">
+            <div className="w-10 h-10 rounded-xl bg-secondary text-white flex items-center justify-center flex-shrink-0 shadow-xs">
+              <Users className="w-5 h-5" />
+            </div>
+            <div>
+              <h3 className="text-sm font-bold text-primary">
+                Looking for New Live Batches & Structured Cohorts?
+              </h3>
+              <p className="text-xs text-text-muted mt-0.5">
+                Explore upcoming cohorts with dedicated lab workstations, full syllabus, and certified diplomas.
+              </p>
+            </div>
+          </div>
+          <Link
+            href="/live-batches"
+            className="w-full sm:w-auto inline-flex items-center justify-center gap-1.5 px-4 py-2 bg-secondary hover:bg-secondary-light text-white text-xs font-bold rounded-xl shadow-xs transition-colors whitespace-nowrap flex-shrink-0"
+          >
+            <span>Explore Upcoming Live Batches</span>
+            <ArrowRight className="w-3.5 h-3.5" />
+          </Link>
+        </div>
 
         <LiveScheduleClient initialClasses={classes} initialBatches={upcomingBatches} />
       </div>
