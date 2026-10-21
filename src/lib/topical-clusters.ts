@@ -57,6 +57,7 @@ export const TOPICAL_CLUSTERS: Record<string, TopicalCluster> = {
     name: 'Full-Stack Web Development & Modern Frontend',
     description: 'Industrial MERN stack development covering semantic HTML5, modern CSS3, Tailwind CSS, JavaScript ES6+, React 19, Node.js, and MongoDB.',
     courseSlugs: [
+      'javascript-mastery',
       'full-stack-web-development-bootcamp',
       'html5-css3-modern-ui-design',
       'javascript-frontend-engineering',

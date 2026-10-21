@@ -21,7 +21,7 @@ tags:
   - "Cyber Security"
   - "ADCA"
 relatedCourses:
-  - "python-mastery-beginner-to-advanced--3-months"
+  - "python-mastery"
   - "data-analysis-mastery-combo-course--12-months"
   - "cyber-security-ethical-hacking-professional-program"
   - "full-stack-development"
@@ -71,7 +71,7 @@ flowchart TD
 ### 2. Current Qualification & Academic Stream
 - **Class 10th or 12th (Arts / Humanities):** Focus on foundational computing, typing speed, and [NIELIT CCC](/courses/ccc) or [ADCA Diploma](/courses/adca).
 - **Class 12th (Commerce) or B.Com / BBA:** Natural synergy with **Tally Prime GST Accounting** and **Data Analytics (Excel + SQL + Power BI)**.
-- **Class 12th (PCM / Science) or BCA / B.Tech / B.Sc IT:** Ready for high-earning software pathways like [Python Mastery](/courses/python-mastery-beginner-to-advanced--3-months), [Full-Stack Development](/courses/full-stack-development), or [Cyber Security](/courses/cyber-security-ethical-hacking-professional-program).
+- **Class 12th (PCM / Science) or BCA / B.Tech / B.Sc IT:** Ready for high-earning software pathways like [Python Mastery](/courses/python-mastery), [Full-Stack Development](/courses/full-stack-development), or [Cyber Security](/courses/cyber-security-ethical-hacking-professional-program).
 
 ### 3. Your Genuine Computer Interests
 Do you enjoy:
@@ -122,7 +122,7 @@ Here is an objective, head-to-head comparison of the six main career tracks taug
 | Rank & Track | Core Technologies | Target Job Roles | Ideal Duration | Level | Salary Scope in India (2026) | Top Verified Course |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | **1. Full-Stack Web Dev** | HTML5, Tailwind, React, Node.js / Django, PostgreSQL | Full-Stack Engineer, Frontend Dev, React Specialist | 12–18 Months | Beginner to Advanced | **₹5.0 – ₹14.0 LPA** | **[Full-Stack Grand Mastery](/courses/full-stack-development)** |
-| **2. Python & AI Foundations** | Python 3, OOP, SQLite, REST APIs, Automation | Junior Python Dev, Automation Trainee, AI Associate | 3–6 Months | Beginner | **₹4.5 – ₹9.0 LPA** | **[Python Mastery Course](/courses/python-mastery-beginner-to-advanced--3-months)** |
+| **2. Python & AI Foundations** | Python 3, OOP, SQLite, REST APIs, Automation | Junior Python Dev, Automation Trainee, AI Associate | 3–6 Months | Beginner | **₹4.5 – ₹9.0 LPA** | **[Python Mastery Course](/courses/python-mastery)** |
 | **3. Data Analytics & BI** | Advanced Excel, SQL, Power BI, DAX, Python Pandas | Data Analyst, BI Developer, MIS Executive | 6–12 Months | Beginner to Intermediate | **₹5.0 – ₹15.0 LPA** | **[Data Analysis Combo](/courses/data-analysis-mastery-combo-course--12-months)** |
 | **4. Cyber Security & SOC** | Networking, Linux, Wireshark, Burp Suite, Python, SIEM | SOC Analyst L1, Ethical Hacker, Security Admin | 12–18 Months | Beginner to Advanced | **₹5.0 – ₹16.0 LPA** | **[Cyber Security Program](/courses/cyber-security-ethical-hacking-professional-program)** |
 | **5. Office & Accounting (ADCA)**| MS Office, Tally Prime GST, Photoshop, CorelDraw | Accounts Assistant, Office Admin, DTP Designer | 12 Months | Beginner | **₹18,000 – ₹35,000/mo** | **[ADCA 1-Year Diploma](/courses/adca)** |
@@ -136,7 +136,7 @@ To make your decision even easier, here is the breakdown by specific student req
 
 ### ⭐ Best Overall Match for Tech Careers: Python Programming Mastery
 - **Why:** Python has the gentlest learning curve, English-like syntax, and opens doors to Web Development, Data Analytics, and AI. If you are unsure where to start in coding, **start with Python**.
-- 👉 **[Explore Python Mastery (Starts 1 Nov)](/courses/python-mastery-beginner-to-advanced--3-months)**
+- 👉 **[Explore Python Mastery (Starts 1 Nov)](/courses/python-mastery)**
 
 ### 💰 Best Budget & All-Rounder Option: 1-Year ADCA Diploma
 - **Why:** Covers 4 vital commercial skill sets in a single course: Office Automation, Advanced Excel, Tally Prime GST, and Graphic Design. Gives immediate employability in private offices and business markets.

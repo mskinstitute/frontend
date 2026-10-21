@@ -38,6 +38,13 @@ const validRoutes = new Set([
   '/disclaimer',
   '/admin',
   '/locations',
+  '/book-demo',
+  '/career-finder',
+  '/projects',
+  '/mock-test',
+  '/mock-test/ccc',
+  '/learning-paths',
+  '/shortcuts',
 ]);
 
 // Add branch routes
@@ -47,8 +54,11 @@ if (fs.existsSync(branchesPath)) {
   branches.forEach(b => validRoutes.add(`/locations/${b.slug}`));
 }
 
-// Add course routes
-courses.forEach(c => validRoutes.add(`/courses/${c.slug}`));
+// Add course routes & mock-test routes
+courses.forEach(c => {
+  validRoutes.add(`/courses/${c.slug}`);
+  validRoutes.add(`/mock-test/${c.slug}`);
+});
 
 // Add batch routes
 liveBatches.forEach(b => validRoutes.add(`/live-batches/${b.id}`));

@@ -17,7 +17,8 @@ tags:
   - "Beginner Guide"
   - "Career Advice"
 relatedCourses:
-  - "python-mastery-beginner-to-advanced--3-months"
+  - "python-mastery"
+  - "javascript-mastery"
   - "full-stack-development"
 ---
 
@@ -64,5 +65,5 @@ console.log(`Even numbers: ${evens}`);
 
 The good news is that once you master the core fundamentals of one language (loops, conditionals, functions, data structures), learning the second language takes less than a month. 
 
-Test your code live right now in our browser-based [MSK Code Playground](/playground), explore our [Python Mastery Batch](/courses/python-mastery-beginner-to-advanced--3-months), or [Book a Free Demo Class](/book-demo) at MSK Institute today!
+Test your code live right now in our browser-based [MSK Code Playground](/playground), explore our [Python Mastery Batch](/courses/python-mastery) and [JavaScript Mastery Course](/courses/javascript-mastery), or [Book a Free Demo Class](/book-demo) at MSK Institute today!
 

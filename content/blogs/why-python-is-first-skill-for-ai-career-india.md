@@ -19,7 +19,7 @@ tags:
   - "Data Science"
   - "Freshers Tech"
 relatedCourses:
-  - "python-mastery-beginner-to-advanced--3-months"
+  - "python-mastery"
   - "data-analysis-mastery-combo-course--12-months"
 ---
 
@@ -121,7 +121,7 @@ At **MSK Institute in Shikohabad**, we specialize in taking students from absolu
 
 - **Upcoming Python Mastery Batch (Starts 1 Nov):**  
   Covering core syntax, object-oriented programming (OOP), file manipulation, database integration, APIs, and hands-on portfolio projects.  
-  👉 **[View Python Mastery Course Curriculum](/courses/python-mastery-beginner-to-advanced--3-months)**
+  👉 **[View Python Mastery Course Curriculum](/courses/python-mastery)**
 
 - **Need Comprehensive Data Analytics?**  
   Combine Python with Excel, SQL, and Power BI for high-paying analytics careers.  

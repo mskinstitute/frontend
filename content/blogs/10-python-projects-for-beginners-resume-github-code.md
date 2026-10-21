@@ -19,7 +19,7 @@ tags:
   - "Coding For Beginners"
   - "Python Mastery"
 relatedCourses:
-  - "python-mastery-beginner-to-advanced--3-months"
+  - "python-mastery"
   - "data-analysis-mastery-combo-course--12-months"
 ---
 
@@ -195,7 +195,7 @@ Building 2 or 3 of these projects under the guidance of experienced software men
 
 - **Upcoming Python Mastery Batch (Starts 1 Nov):**  
   Covering Python syntax, Object-Oriented Programming (OOP), SQLite databases, APIs, and building 5+ portfolio-grade GitHub capstone projects:  
-  👉 **[Explore Python Mastery Course Syllabus](/courses/python-mastery-beginner-to-advanced--3-months)**
+  👉 **[Explore Python Mastery Course Syllabus](/courses/python-mastery)**
 
 - **Explore Live Student Capstones:**  
   See what past MSK students have built at our **[Student Projects Showcase](/projects)**.

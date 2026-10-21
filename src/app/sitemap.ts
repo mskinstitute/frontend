@@ -54,12 +54,15 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
     const courseRoutes = courses
       .filter((course) => course.status === 'PUBLISH')
-      .map((course) => ({
-        url: `${baseUrl}/courses/${course.slug}`,
-        lastModified: new Date().toISOString().split('T')[0],
-        changeFrequency: 'weekly' as const,
-        priority: 0.85,
-      }));
+      .map((course) => {
+        const isMastery = course.courseType === 'COMBO' || course.title.toLowerCase().includes('mastery');
+        return {
+          url: `${baseUrl}/courses/${course.slug}`,
+          lastModified: new Date().toISOString().split('T')[0],
+          changeFrequency: 'weekly' as const,
+          priority: isMastery ? 0.9 : 0.85,
+        };
+      });
 
     const mockTestRoutes = courses
       .filter((course) => course.status === 'PUBLISH' && course.slug !== 'ccc')

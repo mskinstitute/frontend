@@ -349,6 +349,14 @@ const courseOutcomesMap = {
     'Academic and legal document tools: Table of Contents, footnotes, citations, and indexing',
     'Collaborative reviewing, track changes, comment workflows, and professional publishing'
   ],
+  'python-mastery': [
+    'Complete Python language foundations: syntax, variables, data types, and control flow',
+    'Data structures mastery: Lists, Tuples, Dictionaries, Sets, and comprehension expressions',
+    'Object-Oriented Programming (OOP): classes, inheritance, polymorphism, and encapsulation',
+    'File I/O operations, JSON parsing, error handling, and modular project organization',
+    'Problem solving, algorithmic thinking, debugging in VS Code, and clean PEP 8 code style',
+    'Real-world portfolio projects: automation scripts, command-line utilities, and API consumers'
+  ],
   'python-mastery-beginner-to-advanced--3-months': [
     'Complete Python language foundations: syntax, variables, data types, and control flow',
     'Data structures mastery: Lists, Tuples, Dictionaries, Sets, and comprehension expressions',
@@ -356,6 +364,22 @@ const courseOutcomesMap = {
     'File I/O operations, JSON parsing, error handling, and modular project organization',
     'Problem solving, algorithmic thinking, debugging in VS Code, and clean PEP 8 code style',
     'Real-world portfolio projects: automation scripts, command-line utilities, and API consumers'
+  ],
+  'javascript-mastery': [
+    'Modern ES6+ fundamentals: let/const, arrow functions, destructuring, template literals, and spread operators',
+    'DOM manipulation, dynamic HTML rendering, event listeners, and browser Web APIs',
+    'Asynchronous JavaScript mastery: Promises, async/await, Fetch API, and AJAX requests',
+    'Object-Oriented & Functional Programming: classes, prototypes, closures, and higher-order functions',
+    'Error handling, debugging with Chrome DevTools, and clean modular code architecture',
+    'Production portfolio web applications, state management, and full-stack integration readiness'
+  ],
+  'excel-mastery': [
+    'Complete Excel interface navigation, cell formatting, data entry, and keyboard shortcuts',
+    'Lookup & Reference mastery: XLOOKUP, VLOOKUP, INDEX, MATCH, and dynamic multi-condition lookups',
+    'Dynamic array formulas: FILTER, UNIQUE, SORT, SEQUENCE, and spill ranges',
+    'Data summarization with Pivot Tables, Pivot Charts, Slicers, and Timelines',
+    'Power Query ETL: importing, cleaning, merging, unpivoting, and automated data transformation',
+    'Executive KPI business dashboards, conditional formatting, and real-world commercial reporting'
   ],
   'python-backend-development-mastery-combo--8-months': [
     'Core and advanced Python programming: data structures, OOP architecture, and file I/O',
@@ -372,6 +396,24 @@ const courseOutcomesMap = {
     'DAX formula mastery: CALCULATE, filter contexts, time intelligence, and dynamic KPI metrics',
     'Visual report design: custom charts, drillthrough navigation, slicers, and interactive tooltips',
     'Enterprise report deployment, scheduled data refresh, and Row-Level Security (RLS) policies'
+  ],
+  'javascript-mastery': [
+    'Master modern JavaScript syntax, primitive types, operators, scope, and closures from scratch',
+    'Advanced DOM engineering, event delegation, bubbling, and dynamic UI component construction',
+    'Asynchronous mastery with Promises, async/await, microtasks, Event Loop, and Fetch REST APIs',
+    'Object-Oriented and Functional paradigms: ES6 Classes, prototypal inheritance, and immutability',
+    'Modern tooling, ES Modules, browser storage (LocalStorage, IndexedDB), and clean code standards',
+    'Frontend application performance optimization, memory leak mitigation, and Chrome DevTools debugging',
+    'Build real-world capstone portfolio web applications with verifiable certification from MSK Institute'
+  ],
+  'javascript-mastery-beginner-to-advanced--3-months': [
+    'Master modern JavaScript syntax, primitive types, operators, scope, and closures from scratch',
+    'Advanced DOM engineering, event delegation, bubbling, and dynamic UI component construction',
+    'Asynchronous mastery with Promises, async/await, microtasks, Event Loop, and Fetch REST APIs',
+    'Object-Oriented and Functional paradigms: ES6 Classes, prototypal inheritance, and immutability',
+    'Modern tooling, ES Modules, browser storage (LocalStorage, IndexedDB), and clean code standards',
+    'Frontend application performance optimization, memory leak mitigation, and Chrome DevTools debugging',
+    'Build real-world capstone portfolio web applications with verifiable certification from MSK Institute'
   ],
   'excel-mastery': [
     'Complete spreadsheet engineering from basic calculations to enterprise data modeling',

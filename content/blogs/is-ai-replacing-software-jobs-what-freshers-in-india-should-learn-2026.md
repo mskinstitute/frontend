@@ -19,7 +19,7 @@ tags:
   - "Python"
   - "Data Analysis"
 relatedCourses:
-  - "python-mastery-beginner-to-advanced--3-months"
+  - "python-mastery"
   - "data-analysis-mastery-combo-course--12-months"
 ---
 
@@ -117,7 +117,7 @@ At **MSK Institute**, we don't teach from obsolete slides. Every student works o
 
 1. **Python Mastery Batch (Starts 1 Nov):**  
    From beginner syntax to building automated applications, REST APIs, and data scripts.  
-   👉 **[Explore Python Mastery Course Syllabus](/courses/python-mastery-beginner-to-advanced--3-months)**
+   👉 **[Explore Python Mastery Course Syllabus](/courses/python-mastery)**
 
 2. **Data Analysis Mastery Combo Program:**  
    Master Excel, SQL, Power BI, and Python with 10+ real-world enterprise business case studies.  

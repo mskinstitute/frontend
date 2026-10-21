@@ -20,8 +20,8 @@ MSK Institute bridges the gap between traditional academic curriculums and moder
 
 ## 3. Course Catalog & Curriculums
 
-### A. Python Programming Masterclass
-- **URL:** https://mskinstitute.in/courses/python-programming
+### A. Python Mastery (Beginner to Advanced)
+- **URL:** https://www.mskinstitute.in/courses/python-mastery
 - **Level:** Beginner to Advanced
 - **Duration:** 3 Months (Daily Lab & Theory)
 - **Key Modules:**
@@ -61,10 +61,69 @@ MSK Institute bridges the gap between traditional academic curriculums and moder
   - Digital Financial Services (UPI, Internet Banking, Aadhaar Enabled Payment)
   - Mock Exam Practice & Question Bank Reviews
 
-### D. Mastering Microsoft Office Suite
-- **URL:** https://mskinstitute.in/courses/mastering-ms-office
+### D. JavaScript Mastery (Beginner to Advanced)
+- **URL:** https://www.mskinstitute.in/courses/javascript-mastery
+- **Level:** Beginner to Advanced
+- **Duration:** 3 Months (Daily Practical Lab & Code Reviews)
+- **Key Modules:**
+  - Modern JavaScript Fundamentals, Syntax, Data Types & Operators
+  - DOM Manipulation, Event Listeners, Event Bubbling & Delegation
+  - Asynchronous JavaScript: Event Loop, Microtasks, Promises, and async/await
+  - Object-Oriented & Functional Programming (Prototypes, ES6 Classes, Closures)
+  - Fetch API, RESTful Integration, and Browser Storage (LocalStorage, IndexedDB)
+  - Performance Optimization, Memory Management & Chrome DevTools Debugging
+  - Capstone Real-World Full-Stack Web Projects
+
+### E. Excel Mastery Course (Beginner to Advanced)
+- **URL:** https://www.mskinstitute.in/courses/excel-mastery
+- **Level:** Beginner to Advanced
+- **Duration:** 6 Months
+- **Key Modules:**
+  - Complete Spreadsheet Navigation, Formatting & Data Entry
+  - Lookup Formulas: XLOOKUP, VLOOKUP, INDEX-MATCH & Multi-condition Logic
+  - Dynamic Array Formulas: FILTER, UNIQUE, SORT, XMATCH
+  - Advanced Pivot Tables, Calculated Fields, Slicers & Timelines
+  - Power Query ETL: Data Cleaning, Shape Transformations & Duplicate Elimination
+  - Executive Business KPI Dashboards & Foundational Workflow Macros
+
+### F. SQL & MySQL Mastery (Beginner to Advanced)
+- **URL:** https://www.mskinstitute.in/courses/sql-mysql-mastery-beginner-to-advanced--3-months
+- **Level:** Beginner to Advanced
+- **Duration:** 3 Months
+- **Key Modules:**
+  - Relational Database Design, DDL/DML Commands & Normalization (1NF, 2NF, 3NF)
+  - Complex Joins (INNER, LEFT, RIGHT, FULL, Self Joins) & Subqueries
+  - Advanced Analytical SQL: Common Table Expressions (CTEs) & Window Functions
+  - Stored Procedures, Triggers, Views & Database Transactions (ACID)
+  - B-Tree Indexing, EXPLAIN Query Plan Profiling & Performance Tuning
+
+### G. Power BI Mastery (Beginner to Advanced)
+- **URL:** https://www.mskinstitute.in/courses/power-bi-mastery-beginner-to-advanced--3-months
+- **Level:** Beginner to Advanced
+- **Duration:** 3 Months
+- **Key Modules:**
+  - Power Query ETL & Data Shaping
+  - Star Schema Dimensional Modeling & Cardinality
+  - DAX Calculations: CALCULATE, Time Intelligence, Filter Context
+  - Interactive Visual Reports, Drillthrough Navigation & Tooltips
+  - Deployment, Automated Refresh & Row-Level Security (RLS)
+
+### H. Data Analysis Mastery Combo Course
+- **URL:** https://www.mskinstitute.in/courses/data-analysis-mastery-combo-course--12-months
+- **Level:** Comprehensive / Career Track
+- **Duration:** 12 Months
+- **Key Modules:**
+  - Advanced Excel Modeling & Dashboards
+  - SQL Database Engineering & Analytics Queries
+  - Python Programming with NumPy & Pandas Data Wrangling
+  - Exploratory Data Analysis (EDA) & Data Visualization (Matplotlib, Seaborn)
+  - Power BI & Tableau Business Intelligence Dashboards
+  - Machine Learning Fundamentals for Analysts
+
+### I. Mastering Microsoft Office Suite
+- **URL:** https://www.mskinstitute.in/courses/ms-office--4-months
 - **Level:** Beginner to Intermediate
-- **Duration:** 1.5 Months
+- **Duration:** 4 Months
 - **Key Modules:**
   - Microsoft Word: Documentation, Mail Merge, Report Formatting
   - Microsoft Excel: Mathematical/Logical Formulas (VLOOKUP, XLOOKUP, INDEX-MATCH), Pivot Tables, Data Validation, Charts

@@ -86,7 +86,7 @@ export default function CareerFinderWizard() {
       } else {
         return {
           title: 'Python Programming Mastery (Beginner to Advanced)',
-          slug: 'python-mastery-beginner-to-advanced--3-months',
+          slug: 'python-mastery',
           duration: '3 Months',
           badge: 'Most Popular for Beginners',
           salaryRange: '₹3.5 LPA – ₹8.0 LPA',

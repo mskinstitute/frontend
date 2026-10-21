@@ -22,7 +22,7 @@ tags:
 relatedCourses:
   - "adca"
   - "ccc"
-  - "python-mastery-beginner-to-advanced--3-months"
+  - "python-mastery"
   - "full-stack-development"
 ---
 
@@ -102,7 +102,7 @@ Any reputable institute that is confident in its teaching quality and lab facili
 
 1. **[ADCA (Advance Diploma in Computer Applications)](/courses/adca):** 1-Year comprehensive diploma covering Office Automation, Tally Prime GST, Graphic Design & Web Basics.
 2. **[NIELIT CCC (Basic Computer Course)](/courses/ccc):** 3-Month government job certification with free online mock tests.
-3. **[Python Programming Mastery](/courses/python-mastery-beginner-to-advanced--3-months):** Hands-on coding from syntax basics to automation and AI integration.
+3. **[Python Programming Mastery](/courses/python-mastery):** Hands-on coding from syntax basics to automation and AI integration.
 4. **[Data Analysis Mastery Combo Program](/courses/data-analysis-mastery-combo-course--12-months):** Excel, SQL, Power BI, and Python for high-paying analytics careers.
 5. **[Full-Stack Web Development Grand Mastery](/courses/full-stack-development):** MERN, Django, Next.js, and cloud deployment.
 

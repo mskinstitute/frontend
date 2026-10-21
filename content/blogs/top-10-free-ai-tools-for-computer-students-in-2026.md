@@ -20,7 +20,7 @@ tags:
   - "ADCA"
 relatedCourses:
   - "adca"
-  - "python-mastery-beginner-to-advanced--3-months"
+  - "python-mastery"
 ---
 
 You don't need to know Python, Java, or advanced algorithms to benefit from the Artificial Intelligence revolution. In 2026, **Generative AI and Prompt Engineering are recognized as foundational digital literacy skills**—just like typing, emailing, and browsing the web were two decades ago.
@@ -140,7 +140,7 @@ Using AI tools gives you an immediate productivity boost, but combining AI fluen
    Enroll in our 1-year **[ADCA (Advance Diploma in Computer Applications)](/courses/adca)** to master Windows, MS Office, Advanced Excel, Tally Prime with GST, and Graphic Design.
 
 2. **Ready to Transition from AI User to AI Builder?**  
-   Learn to write real Python software and build automated AI applications in our beginner-friendly **[Python Programming Mastery Course](/courses/python-mastery-beginner-to-advanced--3-months)**.
+   Learn to write real Python software and build automated AI applications in our beginner-friendly **[Python Programming Mastery Course](/courses/python-mastery)**.
 
 3. **Visit Our Modern Computer Lab in Shikohabad:**  
    Every student gets 1 dedicated PC with high-speed internet and power backup.  

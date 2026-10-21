@@ -86,6 +86,11 @@ const nextConfig: NextConfig = {
         permanent: true,
       },
       {
+        source: '/courses/javascript-mastery-beginner-to-advanced--3-months',
+        destination: '/courses/javascript-mastery',
+        permanent: true,
+      },
+      {
         source: '/courses/ccc-computer-concepts',
         destination: '/courses/ccc',
         permanent: true,
@@ -102,7 +107,27 @@ const nextConfig: NextConfig = {
       },
       {
         source: '/courses/python-programming-masterclass',
-        destination: '/courses/python-mastery-beginner-to-advanced--3-months',
+        destination: '/courses/python-mastery',
+        permanent: true,
+      },
+      {
+        source: '/courses/python-mastery-beginner-to-advanced--3-months',
+        destination: '/courses/python-mastery',
+        permanent: true,
+      },
+      {
+        source: '/mock-test/python-mastery-beginner-to-advanced--3-months',
+        destination: '/mock-test/python-mastery',
+        permanent: true,
+      },
+      {
+        source: '/courses/sql-mastery',
+        destination: '/courses/sql-mysql-mastery-beginner-to-advanced--3-months',
+        permanent: true,
+      },
+      {
+        source: '/courses/power-bi-mastery',
+        destination: '/courses/power-bi-mastery-beginner-to-advanced--3-months',
         permanent: true,
       },
       {

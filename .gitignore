@@ -51,4 +51,8 @@ Thumbs.db
 
 # Local backend repo (if co-located in workspace)
 /backend/
+
+# Antigravity agent configuration
+.agent/
+.agents/
 

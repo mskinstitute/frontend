@@ -19,7 +19,7 @@ tags:
   - "MSK Tutorials"
 relatedCourses:
   - "python-for-beginners"
-  - "python-mastery-beginner-to-advanced--3-months"
+  - "python-mastery"
 ---
 
 Whether you are appearing for your BCA/B.Tech practical viva exam or preparing for your first software developer technical interview, Python is one of the most frequently tested languages. Here is a curated collection of the most critical conceptual and coding questions, compiled by Er. Sumit Kumar at MSK Institute.

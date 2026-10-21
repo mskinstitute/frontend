@@ -490,8 +490,16 @@ export async function fetchLiveBatches(): Promise<LiveBatch[]> {
 
   const enrichedBatches = rawBatches.map((batch) => {
     const lookupKey = (batch.courseSlug || batch.courseId || batch.id).toLowerCase();
+    const resolvedKey =
+      lookupKey === 'python-mastery-beginner-to-advanced--3-months' ||
+      lookupKey === 'course-python-mastery-beginner-to-advanced--3-months'
+        ? 'python-mastery'
+        : lookupKey;
     const matchedCourse = courses.find(
       (c) =>
+        c.slug.toLowerCase() === resolvedKey ||
+        c.id.toLowerCase() === resolvedKey ||
+        c.id.toLowerCase() === `course-${resolvedKey}` ||
         c.slug.toLowerCase() === lookupKey ||
         c.id.toLowerCase() === lookupKey ||
         c.slug.toLowerCase() === (batch.courseSlug || '').toLowerCase()

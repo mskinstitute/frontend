@@ -21,7 +21,8 @@ tags:
   - "High Salary Jobs"
 relatedCourses:
   - "data-analysis-mastery-combo-course--12-months"
-  - "python-mastery-beginner-to-advanced--3-months"
+  - "excel-mastery"
+  - "python-mastery"
 ---
 
 Every modern business in India—from retail supermarkets and private hospitals to e-commerce startups, banking institutions, and manufacturing plants—generates massive oceans of operational numbers every single day. Yet, most of this data sits unused because companies lack professionals who can clean it, analyze it, and turn it into **profitable business decisions**.

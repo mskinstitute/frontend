@@ -161,6 +161,14 @@ export function resolveTopicTutorialUrl(
     tutorialSlug = 'javascript-for-advanced';
   } else if (cSlug === 'javascript-for-intermediate' || cSlug.includes('javascript-for-intermediate') || cSlug.includes('javascript-intermediate')) {
     tutorialSlug = 'javascript-for-intermediate';
+  } else if (cSlug === 'javascript-mastery' || cSlug.includes('javascript-mastery')) {
+    if (chTitle.includes('advanced') || chTitle.includes('oop') || chTitle.includes('prototype') || chTitle.includes('async patterns') || chTitle.includes('pattern') || chTitle.includes('performance') || chTitle.includes('regular expression') || chTitle.includes('capstone')) {
+      tutorialSlug = 'javascript-for-advanced';
+    } else if (chTitle.includes('intermediate') || chTitle.includes('es6') || chTitle.includes('fetch') || chTitle.includes('promise') || chTitle.includes('event') || chTitle.includes('storage') || chTitle.includes('module')) {
+      tutorialSlug = 'javascript-for-intermediate';
+    } else {
+      tutorialSlug = 'javascript-for-beginners';
+    }
   } else if (cSlug === 'javascript-for-beginners' || (cSlug.includes('javascript') && !cSlug.includes('intermediate') && !cSlug.includes('advanced')) || (cSlug.includes('js-for-beginners'))) {
     tutorialSlug = 'javascript-for-beginners';
   } else if (cSlug === 'react-js-for-advanced' || cSlug.includes('react-js-for-advanced') || cSlug.includes('react-advanced')) {

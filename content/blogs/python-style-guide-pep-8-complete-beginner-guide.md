@@ -21,7 +21,7 @@ tags:
   - "MSK Tutorials"
 relatedCourses:
   - "python-for-beginners"
-  - "python-mastery-beginner-to-advanced--3-months"
+  - "python-mastery"
 ---
 
 When programmers start learning Python, one of the first things they fall in love with is how remarkably readable and expressive the language is. Unlike C, C++, or Java, Python has no curly braces `{}` to denote code blocks and no mandatory semicolons `;` at the end of every line.
@@ -646,4 +646,4 @@ Continue expanding your Python expertise with our structured resources:
 - **Foundations:** Learn [Python Syntax and Code Structure](/tutorials/python-for-beginners/syntax-code-structure) and [Python Variables and Rules](/tutorials/python-for-beginners/variables-introduction-and-rules).
 - **Interview Preparation:** Review the [Top 50 Python Interview & College Viva Questions (2026 Edition)](/blogs/top-50-python-interview-and-viva-questions-with-answers).
 - **Language Comparison:** Read [Python vs JavaScript: Which Programming Language Should Beginners Pick First?](/blogs/python-vs-javascript-which-to-learn-first).
-- **Comprehensive Training:** Enroll in our signature offline & online certification course: [Python for Beginners Course](/courses/python-for-beginners) or [Python Mastery (3 Months)](/courses/python-mastery-beginner-to-advanced--3-months).
+- **Comprehensive Training:** Enroll in our signature offline & online certification course: [Python for Beginners Course](/courses/python-for-beginners) or [Python Mastery (3 Months)](/courses/python-mastery).

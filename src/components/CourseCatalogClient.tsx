@@ -334,7 +334,7 @@ export default function CourseCatalogClient({ initialCourses }: { initialCourses
   const comparisonData = [
     {
       title: "Python Masterclass",
-      slug: "python-mastery-beginner-to-advanced--3-months",
+      slug: "python-mastery",
       duration: "3 Months",
       mode: "Online & Offline",
       level: "Beginner",
@@ -412,6 +412,15 @@ export default function CourseCatalogClient({ initialCourses }: { initialCourses
       level: "Beginner to Advanced",
       certificate: "Excel & Analytics Mastery Certificate",
       bestFor: "Advanced Formulas (XLOOKUP), Dynamic Arrays, Pivot Tables, Power Query ETL, KPI Dashboards & Macros"
+    },
+    {
+      title: "JavaScript Mastery",
+      slug: "javascript-mastery",
+      duration: "3 Months",
+      mode: "Online & Offline",
+      level: "Beginner to Advanced",
+      certificate: "JavaScript Software Engineer Certificate",
+      bestFor: "Modern ES6+, DOM Engineering, Asynchronous Async/Await, Closures, Web APIs & Frontend Architecture"
     }
   ];
 

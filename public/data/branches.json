@@ -96,7 +96,7 @@
       "course-ms-office--4-months",
       "course-web-designing-complete-pathway--4-months",
       "course-ms-word-complete-pathway-beginner-to-advanced--2-months",
-      "course-python-mastery-beginner-to-advanced--3-months",
+      "course-python-mastery",
       "course-python-backend-development-mastery-combo--8-months",
       "course-data-analysis-mastery-combo-course--12-months",
       "course-power-bi-mastery-beginner-to-advanced--3-months",
@@ -105,6 +105,7 @@
       "course-o-level",
       "course-full-stack-development",
       "course-sql-mysql-mastery-beginner-to-advanced--3-months",
+      "course-javascript-mastery",
       "course-markdown-mastery",
       "course-pandas-complete-course",
       "course-nodejs-and-express-backend",
@@ -224,7 +225,7 @@
       "profileUrl": "https://maps.google.com/?q=Agra+Uttar+Pradesh"
     },
     "availableCourseIds": [
-      "course-python-mastery-beginner-to-advanced--3-months",
+      "course-python-mastery",
       "course-full-stack-development",
       "course-data-analysis-mastery-combo-course--12-months",
       "course-ccc-nielit",

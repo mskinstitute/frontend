@@ -21,7 +21,7 @@ tags:
 relatedCourses:
   - "adca"
   - "ccc"
-  - "python-mastery-beginner-to-advanced--3-months"
+  - "python-mastery"
 ---
 
 For decades, Indian society pushed a singular narrative: *"If you want a respectable job in the IT sector, you must spend 4 years and lakhs of rupees obtaining a B.Tech or BCA degree."*
@@ -103,7 +103,7 @@ flowchart TD
 - **क्या सीखते हैं:** प्रोग्रामिंग लॉजिक, डेटा स्ट्रक्चर्स, ऑटोमेशन स्क्रिप्ट्स, और डेटाबेस कनेक्शन।
 - **फायदा:** 12वीं के बाद से ही आप फ्रीलांसिंग प्रोजेक्ट्स कर सकते हैं या सॉफ्टवेयर कंपनियों में इंटर्नशिप पा सकते हैं।
 
-👉 **[पाइथन मास्टरी बैच (Starts 1 Nov) का सिलेबस देखें](/courses/python-mastery-beginner-to-advanced--3-months)**
+👉 **[पाइथन मास्टरी बैच (Starts 1 Nov) का सिलेबस देखें](/courses/python-mastery)**
 
 ---
 

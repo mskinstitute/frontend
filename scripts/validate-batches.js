@@ -130,10 +130,16 @@ async function runValidation() {
 
     const idx = `Row #${r} (${courseId || title || 'unnamed'})`;
 
+    const courseAliases = {
+      'python-mastery-beginner-to-advanced--3-months': 'python-mastery',
+      'course-python-mastery-beginner-to-advanced--3-months': 'course-python-mastery'
+    };
+    const resolvedCourseId = courseAliases[courseId] || courseId;
+
     if (!courseId) {
       console.error(`[ERROR] ${idx}: Missing 'courseid'`);
       errors++;
-    } else if (!validSlugs.has(courseId) && !validIds.has(courseId)) {
+    } else if (!validSlugs.has(resolvedCourseId) && !validIds.has(resolvedCourseId)) {
       console.warn(`[WARN] ${idx}: courseid '${courseId}' not found in all-courses.json`);
       warnings++;
     }

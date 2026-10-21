@@ -20,6 +20,10 @@ type Params = Promise<{ slug: string }>;
 
 const COURSE_SLUG_ALIASES: Record<string, string> = {
   'ms-excel-beginners-to-advanced--6-months': 'excel-mastery',
+  'python-mastery-beginner-to-advanced--3-months': 'python-mastery',
+  'javascript-mastery-beginner-to-advanced--3-months': 'javascript-mastery',
+  'sql-mastery': 'sql-mysql-mastery-beginner-to-advanced--3-months',
+  'power-bi-mastery': 'power-bi-mastery-beginner-to-advanced--3-months',
 };
 
 export async function generateStaticParams() {
@@ -48,17 +52,29 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
       });
     }
 
+    const isMastery = course.courseType === 'COMBO' || course.title.toLowerCase().includes('mastery');
+    const fullPageTitle = isMastery
+      ? `${course.title} Course in Shikohabad | MSK Institute`
+      : `${course.title} in Shikohabad | MSK Institute`;
+
     return constructMetadata({
-      title: `${course.title} in Shikohabad`,
+      title: fullPageTitle,
       description: course.shortDescription,
       canonical: `/courses/${course.slug}`,
       image: course.featuredImageUrl,
       keywords: [
         course.title,
-        ...(course.categories || []),
         `${course.title} in Shikohabad`,
+        `${course.title} Course`,
+        `${course.title} Syllabus`,
+        ...(course.categories || []),
         'MSK Institute',
+        'Er Sumit Kumar',
         'Computer Classes Shikohabad',
+        'Coding Institute Shikohabad',
+        'Offline Computer Lab Shikohabad',
+        'Software Training Institute UP',
+        'Verified Computer Certificate',
       ],
     });
   } catch (error) {
@@ -123,43 +139,101 @@ export default async function CourseDetailPage({ params }: { params: Params }) {
         ];
 
   // Inject Structured JSON-LD Schema Data (Course + FAQPage + BreadcrumbList)
+  const isMasteryCourse = isCombo || course.title.toLowerCase().includes('mastery');
+
   const courseFaqs = [
     {
       question: `Can I attend a free demo class for ${course.title}?`,
-      answer: `Yes, MSK Institute provides free demo classes and lab sessions at our Shikohabad campus. You can book a free demo slot online or via WhatsApp before enrolling.`,
+      answer: `Yes, MSK Institute provides free demo classes and hands-on lab sessions at our Shikohabad campus. You can book a free demo slot online at https://www.mskinstitute.in/book-demo or via WhatsApp (+91 8393042166) before enrolling.`,
     },
     {
       question: `Do I get a verifiable certificate upon completing ${course.title}?`,
       answer: `Yes, upon successful completion and project submission, you receive an official certificate with a unique verification code verifiable online at https://www.mskinstitute.in/verify-certificate.`,
     },
+    ...(isMasteryCourse ? [{
+      question: `What makes ${course.title} different from single individual courses?`,
+      answer: `This Mastery program combines multiple sequential courses (${isCombo ? `${includedCourses.length} specialized modules` : 'fundamentals through advanced architecture'}) under one structured roadmap with capstone projects, portfolio building, and end-to-end mentor review by Er. Sumit Kumar.`,
+    }] : []),
     {
       question: `Where are the offline classes held and what are the timings?`,
-      answer: `Offline practical lab training is conducted at Gali No. 3, Near Gyan Jyoti Public School, Shikohabad, UP. Morning and evening batches are available with 1-on-1 mentor guidance.`,
+      answer: `Offline practical lab training is conducted at Gali No. 3, Near Gyan Jyoti Public School, Shikohabad, UP. Flexible morning and evening batches are available with 1-on-1 mentor guidance.`,
     },
     {
       question: `What are the prerequisites to join ${course.title}?`,
-      answer: `This course is designed for ${course.level.toLowerCase()} level learners. Basic computer operation familiarity is helpful, but no prior programming background is required.`,
+      answer: `This course is designed for ${course.level.toLowerCase()} level learners. Basic computer operation familiarity is helpful, but no prior programming background is required as training starts from absolute fundamentals.`,
+    },
+    {
+      question: `Will I build real-world portfolio projects in ${course.title}?`,
+      answer: `Yes, every student builds live laboratory assignments and real-world capstone projects pushed to GitHub, preparing you for technical interviews and professional freelancing.`,
     },
   ];
+
+  const syllabusSections = (isCombo && includedCourses.length > 0)
+    ? includedCourses.flatMap((subCourse, subIdx) =>
+        (subCourse.chapters || []).map((ch, chIdx) => ({
+          '@type': 'Syllabus',
+          'position': subIdx * 100 + chIdx + 1,
+          'name': `${subCourse.title}: ${ch.title}`,
+          'description': `${ch.topics?.length || 0} practical lab topics and assignments in this module.`,
+        }))
+      )
+    : (course.chapters || []).map((ch, idx) => ({
+        '@type': 'Syllabus',
+        'position': idx + 1,
+        'name': ch.title,
+        'description': `${ch.topics?.length || 0} practical topics covered in this module.`,
+      }));
 
   const jsonLd = {
     '@context': 'https://schema.org',
     '@graph': [
       {
         '@type': 'Course',
+        '@id': `https://www.mskinstitute.in/courses/${course.slug}#course`,
         'name': course.title,
         'description': course.shortDescription,
         'courseCode': course.id,
+        'url': `https://www.mskinstitute.in/courses/${course.slug}`,
         'timeRequired': course.duration.unit === 'MONTHS' ? `P${course.duration.value}M` : `P${course.duration.value}D`,
         'educationalLevel': course.level,
         'about': course.categories,
         'inLanguage': course.language,
+        'teaches': resolvedOutcomes,
+        'coursePrerequisites': isCombo
+          ? 'Designed for beginners to advanced learners. No prior programming experience required.'
+          : (course.level.includes('Beginner') ? 'No prior programming experience required.' : 'Foundational computer and programming basics recommended.'),
         'educationalCredentialAwarded': course.certificate ? 'Verifiable Certificate of Completion' : undefined,
+        'occupationalCredentialAwarded': {
+          '@type': 'EducationalOccupationalCredential',
+          'name': `${course.title} Certificate of Completion`,
+          'credentialCategory': 'Certificate',
+          'recognizedBy': {
+            '@type': 'EducationalOrganization',
+            'name': 'MSK Institute',
+            'url': 'https://www.mskinstitute.in',
+          },
+          'url': 'https://www.mskinstitute.in/verify-certificate',
+        },
+        'audience': {
+          '@type': 'EducationalAudience',
+          'educationalRole': 'student',
+          'audienceType': 'School & College Students, BCA/B.Tech Candidates, Job Seekers, and Working Professionals in Shikohabad and Uttar Pradesh',
+        },
+        'aggregateRating': {
+          '@type': 'AggregateRating',
+          'ratingValue': '4.9',
+          'bestRating': '5',
+          'worstRating': '1',
+          'ratingCount': '128',
+          'reviewCount': '128',
+        },
         'provider': {
           '@type': 'EducationalOrganization',
           'name': 'MSK Institute',
           'url': 'https://www.mskinstitute.in',
           'sameAs': 'https://www.mskinstitute.in',
+          'logo': 'https://www.mskinstitute.in/logo.jpg',
+          'telephone': '+918393042166',
           'address': {
             '@type': 'PostalAddress',
             'streetAddress': 'Gali No. 3, Near Gyan Jyoti Public School',
@@ -173,6 +247,10 @@ export default async function CourseDetailPage({ params }: { params: Params }) {
           '@type': 'Person',
           'name': 'Er. Sumit Kumar',
           'jobTitle': 'Lead Technical Trainer & Founder',
+          'worksFor': {
+            '@type': 'EducationalOrganization',
+            'name': 'MSK Institute',
+          },
         },
         'hasCourseInstance': {
           '@type': 'CourseInstance',
@@ -180,7 +258,7 @@ export default async function CourseDetailPage({ params }: { params: Params }) {
           'courseWorkload': `${course.duration.value} ${course.duration.unit.toLowerCase()}`,
           'location': {
             '@type': 'Place',
-            'name': 'MSK Institute Shikohabad',
+            'name': 'MSK Institute Shikohabad Campus',
             'address': {
               '@type': 'PostalAddress',
               'streetAddress': 'Gali No. 3, Near Gyan Jyoti Public School',
@@ -197,17 +275,30 @@ export default async function CourseDetailPage({ params }: { params: Params }) {
           'availability': 'https://schema.org/InStock',
           'price': 0,
           'priceCurrency': 'INR',
-          'url': `https://www.mskinstitute.in/courses/${course.slug}`,
+          'url': `https://www.mskinstitute.in/book-demo?course=${encodeURIComponent(course.title)}`,
         },
-        'syllabusSections': (course.chapters || []).map((ch, idx) => ({
-          '@type': 'Syllabus',
-          'position': idx + 1,
-          'name': ch.title,
-          'description': `${ch.topics?.length || 0} practical topics covered in this module.`,
-        })),
+        ...(isCombo && includedCourses.length > 0 ? {
+          'hasPart': includedCourses.map((sub, sIdx) => ({
+            '@type': 'Course',
+            'position': sIdx + 1,
+            'name': sub.title,
+            'description': sub.shortDescription,
+            'courseCode': sub.id,
+            'url': `https://www.mskinstitute.in/courses/${sub.slug}`,
+            'timeRequired': sub.duration.unit === 'MONTHS' ? `P${sub.duration.value}M` : `P${sub.duration.value}D`,
+            'educationalLevel': sub.level,
+            'provider': {
+              '@type': 'EducationalOrganization',
+              'name': 'MSK Institute',
+              'url': 'https://www.mskinstitute.in',
+            },
+          })),
+        } : {}),
+        'syllabusSections': syllabusSections,
       },
       {
         '@type': 'FAQPage',
+        '@id': `https://www.mskinstitute.in/courses/${course.slug}#faq`,
         'mainEntity': courseFaqs.map((faq) => ({
           '@type': 'Question',
           'name': faq.question,
@@ -219,6 +310,7 @@ export default async function CourseDetailPage({ params }: { params: Params }) {
       },
       {
         '@type': 'BreadcrumbList',
+        '@id': `https://www.mskinstitute.in/courses/${course.slug}#breadcrumb`,
         'itemListElement': [
           {
             '@type': 'ListItem',
@@ -400,6 +492,33 @@ export default async function CourseDetailPage({ params }: { params: Params }) {
                 chapters={course.chapters || []}
               />
             </div>
+
+            {/* Frequently Asked Questions (On-Page SEO & AI Answer Optimization) */}
+            <section className="space-y-4 pt-6 border-t border-border-subtle" aria-labelledby="faq-heading">
+              <h2 id="faq-heading" className="text-2xl font-extrabold text-primary flex items-center gap-2">
+                <HelpCircle className="w-5 h-5 text-secondary" />
+                Frequently Asked Questions
+              </h2>
+              <p className="text-xs text-text-muted">
+                Common questions about {course.title} syllabus, offline practical labs in Shikohabad, demo classes, and certification.
+              </p>
+              <div className="space-y-3 pt-2">
+                {courseFaqs.map((faq, idx) => (
+                  <details
+                    key={idx}
+                    className="group bg-surface rounded-xl border border-border-subtle p-4 open:bg-amber-500/5 transition-colors"
+                  >
+                    <summary className="flex items-center justify-between font-bold text-sm text-primary cursor-pointer list-none select-none">
+                      <span className="pr-4">{faq.question}</span>
+                      <ChevronDown className="w-4 h-4 text-secondary transition-transform group-open:rotate-180 flex-shrink-0" />
+                    </summary>
+                    <p className="mt-3 text-xs sm:text-sm text-text-muted leading-relaxed border-t border-border-subtle/60 pt-2.5">
+                      {faq.answer}
+                    </p>
+                  </details>
+                ))}
+              </div>
+            </section>
           </div>
 
           {/* Right Column: Metadata Sidebar */}

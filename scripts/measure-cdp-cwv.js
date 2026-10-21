@@ -8,7 +8,7 @@ const BASE_URL = 'http://localhost:3005';
 const TARGET_ROUTES = [
   { name: 'Homepage', path: '/' },
   { name: 'Courses Listing', path: '/courses' },
-  { name: 'Python Course', path: '/courses/python-mastery-beginner-to-advanced--3-months' },
+  { name: 'Python Course', path: '/courses/python-mastery' },
   { name: 'Data Analytics Course', path: '/courses/data-analysis-mastery-combo-course--12-months' },
   { name: 'Full Stack Course', path: '/courses/full-stack-web-dev-bootcamp' },
   { name: 'Live Batches', path: '/live-batches' },

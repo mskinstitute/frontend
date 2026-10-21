@@ -903,7 +903,8 @@
       "course-django-for-backend-development",
       "course-sql-for-beginners",
       "course-sql-for-intermediate"
-    ]
+    ],
+    "isCombo": true
   },
   {
     "id": "course-adca",
@@ -1207,7 +1208,8 @@
       "Statistical hypothesis testing, normal distribution, and A/B test formulation",
       "Predictive machine learning modeling: Linear/Logistic Regression, Decision Trees, and K-Means",
       "Resume-ready GitHub portfolio projects, verifiable certificate, and interview preparation"
-    ]
+    ],
+    "isCombo": true
   },
   {
     "id": "course-full-stack-mern-mastery--12-months",
@@ -1255,7 +1257,8 @@
       "course-react-js-for-intermediate",
       "course-nodejs-and-express-backend",
       "course-mongodb-and-mongoose-database"
-    ]
+    ],
+    "isCombo": true
   },
   {
     "id": "course-full-stack-python-mastery--12-months",
@@ -1303,7 +1306,8 @@
       "course-django-for-backend-development",
       "course-rest-api-development-with-django",
       "course-sql-for-beginners"
-    ]
+    ],
+    "isCombo": true
   },
   {
     "id": "course-python-backend-development-mastery-combo--8-months",
@@ -1346,7 +1350,8 @@
       "RESTful API development using Django REST Framework (DRF), serializers, and viewsets",
       "Secure user authentication, role-based authorization, and JSON Web Token (JWT) integration",
       "Production backend deployment: Linux server setup, Gunicorn, Nginx, and cloud hosting"
-    ]
+    ],
+    "isCombo": true
   },
   {
     "id": "course-frontend-development--8-months",
@@ -1387,7 +1392,8 @@
       "React.js component engineering: hooks (useState, useEffect, useContext), props, and state",
       "Version control with Git & GitHub, branch workflows, and team collaboration best practices",
       "Building responsive Single Page Applications (SPAs) and deploying to production cloud platforms"
-    ]
+    ],
+    "isCombo": true
   },
   {
     "id": "course-excel-mastery",
@@ -1717,7 +1723,8 @@
       "Executive presentation design, charts, animations, and corporate slide decks in PowerPoint",
       "File management, document security, PDF conversions, and cloud sharing with OneDrive",
       "Practical office simulation assignments preparing students for administrative careers"
-    ]
+    ],
+    "isCombo": true
   },
   {
     "id": "course-web-designing-complete-pathway--4-months",
@@ -1755,7 +1762,8 @@
       "Cross-device mobile responsiveness, fluid typography, and modern browser testing",
       "Web typography, color theory, hero sections, navigation bars, and footer structuring",
       "Publishing live responsive portfolio websites to GitHub Pages and production hosting"
-    ]
+    ],
+    "isCombo": true
   },
   {
     "id": "course-dsa-mastery-course",
@@ -3080,10 +3088,10 @@
     ]
   },
   {
-    "id": "course-python-mastery-beginner-to-advanced--3-months",
+    "id": "course-python-mastery",
     "status": "PUBLISH",
     "title": "Python Mastery (Beginner to Advanced) - 3 Months",
-    "slug": "python-mastery-beginner-to-advanced--3-months",
+    "slug": "python-mastery",
     "featuredImageUrl": "https://images.unsplash.com/photo-1526379095098-d400fd0bf935?q=80&w=800&auto=format&fit=crop",
     "shortDescription": "Master Python programming from zero fundamentals to enterprise software engineering in 3 months. This comprehensive 3-in-1 Grand Mastery Combo bundles Python for Beginners, Python for Intermediate, and Python for Advanced — spanning 45 chapters, 218 structured topics, 1,099 interactive quiz questions, and 14 production portfolio projects across OOP, multithreading, asyncio, networking, and databases.",
     "categories": [
@@ -3168,7 +3176,8 @@
         "question": "What kind of certificate is awarded upon completion, and how is it verified?",
         "answer": "Graduates receive the official MSK Institute Certificate of Completion in Python Mastery. Each certificate includes a unique verification identifier that employers and academic institutions can verify online at https://www.mskinstitute.in/verify-certificate."
       }
-    ]
+    ],
+    "isCombo": true
   },
   {
     "id": "course-power-bi-mastery-beginner-to-advanced--3-months",
@@ -3205,7 +3214,8 @@
       "DAX formula mastery: CALCULATE, filter contexts, time intelligence, and dynamic KPI metrics",
       "Visual report design: custom charts, drillthrough navigation, slicers, and interactive tooltips",
       "Enterprise report deployment, scheduled data refresh, and Row-Level Security (RLS) policies"
-    ]
+    ],
+    "isCombo": true
   },
   {
     "id": "course-sql-mysql-mastery-beginner-to-advanced--3-months",
@@ -3246,6 +3256,50 @@
       "Advanced analytical queries with Common Table Expressions (CTEs) and Window Functions",
       "Database constraints, primary/foreign keys, schema normalization (1NF, 2NF, 3NF), and ACID",
       "Query performance optimization, B-Tree indexes, execution plan profiling, and transactions"
+    ],
+    "isCombo": true
+  },
+  {
+    "id": "course-javascript-mastery",
+    "status": "PUBLISH",
+    "title": "JavaScript Mastery (Beginner to Advanced) - 3 Months",
+    "slug": "javascript-mastery",
+    "featuredImageUrl": "https://images.unsplash.com/photo-1579468118864-ddb621292981?q=80&w=800&auto=format&fit=crop",
+    "shortDescription": "Master modern JavaScript from foundational variables to advanced full-stack software architecture in 3 months. This comprehensive 3-in-1 combo bundles JavaScript for Beginners, Intermediate, and Advanced — covering ES6+, DOM manipulation, asynchronous programming, Closures, Promises, async/await, Prototypes, OOP, Browser Web APIs, and production application engineering with hands-on lab training in Shikohabad.",
+    "categories": [
+      "Programming",
+      "Web Development",
+      "Frontend",
+      "JavaScript",
+      "Software Engineering",
+      "Combo"
+    ],
+    "level": "Beginner to Advanced",
+    "language": [
+      "English",
+      "Hindi"
+    ],
+    "duration": {
+      "value": 3,
+      "unit": "MONTHS"
+    },
+    "certificate": true,
+    "mode": "BOTH",
+    "courseType": "COMBO",
+    "isCombo": true,
+    "includedCourseIds": [
+      "course-javascript-for-beginners",
+      "course-javascript-for-intermediate",
+      "course-javascript-for-advanced"
+    ],
+    "learningOutcomes": [
+      "Master modern JavaScript syntax, primitive types, operators, scope, and closures from scratch",
+      "Advanced DOM engineering, event delegation, bubbling, and dynamic UI component construction",
+      "Asynchronous mastery with Promises, async/await, microtasks, Event Loop, and Fetch REST APIs",
+      "Object-Oriented and Functional paradigms: ES6 Classes, prototypal inheritance, and immutability",
+      "Modern tooling, ES Modules, browser storage (LocalStorage, IndexedDB), and clean code standards",
+      "Frontend application performance optimization, memory leak mitigation, and Chrome DevTools debugging",
+      "Build real-world capstone portfolio web applications with verifiable certification from MSK Institute"
     ]
   },
   {
@@ -5505,7 +5559,8 @@
       "Automated Mail Merge for personalized certificates, letters, labels, and envelopes",
       "Academic and legal document tools: Table of Contents, footnotes, citations, and indexing",
       "Collaborative reviewing, track changes, comment workflows, and professional publishing"
-    ]
+    ],
+    "isCombo": true
   },
   {
     "id": "course-nodejs-and-express-backend",

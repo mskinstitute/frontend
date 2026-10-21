@@ -21,8 +21,8 @@ export interface CourseMockTestConfig {
 
 export const COURSE_MOCK_TESTS: Record<string, CourseMockTestConfig> = {
   // 1. Python Programming Mastery
-  'python-mastery-beginner-to-advanced--3-months': {
-    courseSlug: 'python-mastery-beginner-to-advanced--3-months',
+  'python-mastery': {
+    courseSlug: 'python-mastery',
     courseTitle: 'Python Programming Mastery',
     category: 'Programming & Software Development',
     durationMinutes: 20,
@@ -786,7 +786,7 @@ export function getCourseMockTest(courseSlug: string, fallbackTitle?: string): C
 
   // Alias Matching:
   if (normalized.includes('python')) {
-    const base = COURSE_MOCK_TESTS['python-mastery-beginner-to-advanced--3-months'];
+    const base = COURSE_MOCK_TESTS['python-mastery'] || COURSE_MOCK_TESTS['python-mastery-beginner-to-advanced--3-months'];
     return {
       ...base,
       courseSlug,
@@ -1033,7 +1033,7 @@ export function getCourseMockTest(courseSlug: string, fallbackTitle?: string): C
 export function getAllAvailableMockTests(): { slug: string; title: string; category: string; questionsCount: number; duration: number }[] {
   return [
     {
-      slug: 'python-mastery-beginner-to-advanced--3-months',
+      slug: 'python-mastery',
       title: 'Python Programming Mastery',
       category: 'Programming',
       questionsCount: 15,

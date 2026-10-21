@@ -405,7 +405,7 @@ export default function SearchModal({ isOpen, onClose }: SearchModalProps) {
       title: 'Python Programming Online Mock Test',
       description: 'Timed assessment covering Python syntax, data types, functions, OOP, and code output debugging.',
       category: 'Mock Test Simulator • Python',
-      url: '/mock-test/python-mastery-beginner-to-advanced--3-months',
+      url: '/mock-test/python-mastery',
       badge: 'Mock Test',
       actionLabel: 'Take Python Test',
     });
