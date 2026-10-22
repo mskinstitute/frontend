@@ -133,9 +133,17 @@ export function LiveStatusProvider({ children }: { children: React.ReactNode }) 
     }
   }, []);
 
-  // Fetch immediately on client mount
+  // Fetch during idle/deferred phase to avoid competing with initial LCP
   useEffect(() => {
-    fetchClasses();
+    let timer: NodeJS.Timeout | null = null;
+    if (typeof window !== 'undefined' && 'requestIdleCallback' in window) {
+      (window as any).requestIdleCallback(() => fetchClasses(), { timeout: 4000 });
+    } else {
+      timer = setTimeout(fetchClasses, 2000);
+    }
+    return () => {
+      if (timer) clearTimeout(timer);
+    };
   }, [fetchClasses]);
 
   // Background refresh of live classes schedule every 60 seconds

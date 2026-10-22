@@ -67,8 +67,22 @@ export function ServerStatusProvider({ children }: { children: React.ReactNode }
   }, []);
 
   useEffect(() => {
-    // Initial verification on mount
-    checkServerStatus();
+    const isInteractiveRoute = () => {
+      if (typeof window === 'undefined') return false;
+      const p = window.location.pathname;
+      return p.startsWith('/dashboard') || p.startsWith('/login') || p.startsWith('/register') || p.startsWith('/profile') || p.startsWith('/forgot-password') || p.startsWith('/admin');
+    };
+
+    let initialTimer: NodeJS.Timeout | null = null;
+    if (isInteractiveRoute()) {
+      checkServerStatus();
+    } else {
+      if ('requestIdleCallback' in window) {
+        (window as any).requestIdleCallback(() => checkServerStatus(), { timeout: 5000 });
+      } else {
+        initialTimer = setTimeout(checkServerStatus, 4000);
+      }
+    }
 
     // Heartbeat check every 30 seconds
     const interval = setInterval(() => {
@@ -84,6 +98,7 @@ export function ServerStatusProvider({ children }: { children: React.ReactNode }
     document.addEventListener('visibilitychange', handleVisibilityChange);
 
     return () => {
+      if (initialTimer) clearTimeout(initialTimer);
       clearInterval(interval);
       document.removeEventListener('visibilitychange', handleVisibilityChange);
     };

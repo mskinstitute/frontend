@@ -28,7 +28,7 @@ export default function Analytics() {
       {/* 1. Global dataLayer & gtag initialization script */}
       <Script
         id="datalayer-init"
-        strategy="beforeInteractive"
+        strategy="afterInteractive"
         dangerouslySetInnerHTML={{
           __html: `
             window.dataLayer = window.dataLayer || [];

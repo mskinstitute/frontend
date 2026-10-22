@@ -2,6 +2,9 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   output: 'standalone',
+  experimental: {
+    optimizePackageImports: ['lucide-react', 'qrcode.react'],
+  },
   images: {
     formats: ['image/avif', 'image/webp'],
     remotePatterns: [
@@ -256,7 +259,7 @@ const nextConfig: NextConfig = {
         ],
       },
       {
-        source: '/(brand|icons|images|content|assets)/:path*',
+        source: '/(brand|icons|images|content|assets|logo.jpg)/:path*',
         headers: [
           {
             key: 'Cache-Control',

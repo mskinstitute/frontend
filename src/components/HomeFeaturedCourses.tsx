@@ -3,10 +3,23 @@
 import { useState } from 'react';
 import Link from 'next/link';
 import { Clock, ArrowRight, Sparkles, BookOpen, Laptop, CheckCircle2, ChevronRight } from 'lucide-react';
-import { Course } from '@/types';
+export interface FeaturedCourseCardData {
+  id: string;
+  slug: string;
+  title: string;
+  categories: string[];
+  duration: { value: number; unit: 'HOURS' | 'DAYS' | 'MONTHS' };
+  level: string;
+  mode?: string;
+  featuredImageUrl: string;
+  certificate?: boolean;
+  shortDescription: string;
+  isPopular?: boolean;
+}
 
 interface HomeFeaturedCoursesProps {
-  courses: Course[];
+  categorizedCourses: Record<string, FeaturedCourseCardData[]>;
+  totalCoursesCount?: number;
 }
 
 const CATEGORY_TABS = [
@@ -16,53 +29,8 @@ const CATEGORY_TABS = [
   { id: 'diploma', label: '1-Year Diplomas (ADCA)' },
 ];
 
-export default function HomeFeaturedCourses({ courses }: HomeFeaturedCoursesProps) {
+export default function HomeFeaturedCourses({ categorizedCourses, totalCoursesCount = 66 }: HomeFeaturedCoursesProps) {
   const [activeTab, setActiveTab] = useState('all');
-
-  const filteredCourses = courses.filter((course) => {
-    if (activeTab === 'all') return true;
-    const title = course.title.toLowerCase();
-    const cats = course.categories.map((c) => c.toLowerCase());
-    const slug = course.slug.toLowerCase();
-
-    if (activeTab === 'coding') {
-      return (
-        title.includes('python') ||
-        title.includes('web') ||
-        title.includes('html') ||
-        title.includes('mern') ||
-        title.includes('javascript') ||
-        cats.some((c) => c.includes('programming') || c.includes('web') || c.includes('developer'))
-      );
-    }
-
-    if (activeTab === 'nielit') {
-      return (
-        title.includes('ccc') ||
-        slug.includes('ccc') ||
-        cats.some((c) => c.includes('literacy') || c.includes('digital') || c.includes('nielit'))
-      );
-    }
-
-    if (activeTab === 'diploma') {
-      return (
-        title.includes('adca') ||
-        title.includes('dca') ||
-        title.includes('diploma') ||
-        slug.includes('adca') ||
-        course.duration.value >= 6
-      );
-    }
-
-    return true;
-  });
-
-  const toDays = (d: { value: number; unit: 'HOURS' | 'DAYS' | 'MONTHS' }) => {
-    if (!d) return 0;
-    if (d.unit === 'MONTHS') return d.value * 30;
-    if (d.unit === 'DAYS') return d.value;
-    return d.value / 24;
-  };
 
   const getDurationMonths = (d: { value: number; unit: 'HOURS' | 'DAYS' | 'MONTHS' }) => {
     if (!d) return 0;
@@ -71,10 +39,7 @@ export default function HomeFeaturedCourses({ courses }: HomeFeaturedCoursesProp
     return d.value / (24 * 30);
   };
 
-  // Display top courses for selected tab, sorted by duration descending (longest to shortest)
-  const displayCourses = [...filteredCourses]
-    .sort((a, b) => toDays(b.duration) - toDays(a.duration))
-    .slice(0, 6);
+  const displayCourses = categorizedCourses[activeTab] || categorizedCourses.all || [];
 
   return (
     <div className="space-y-8">
@@ -115,6 +80,7 @@ export default function HomeFeaturedCourses({ courses }: HomeFeaturedCoursesProp
                   width={600}
                   height={340}
                   loading="lazy"
+                  decoding="async"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-60" />
@@ -205,7 +171,7 @@ export default function HomeFeaturedCourses({ courses }: HomeFeaturedCoursesProp
           href="/courses"
           className="inline-flex items-center gap-2 px-6 py-3 border border-border-subtle hover:bg-surface text-primary font-bold text-sm rounded-xl transition-colors shadow-2xs hover:shadow-xs"
         >
-          <span>Explore All {courses.length > 0 ? `${courses.length}+` : '65+'} Professional Computer Courses</span>
+          <span>Explore All {totalCoursesCount > 0 ? `${totalCoursesCount}+` : '65+'} Professional Computer Courses</span>
           <ArrowRight className="w-4 h-4 text-secondary" />
         </Link>
       </div>

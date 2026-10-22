@@ -4,8 +4,6 @@ import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import MobileBottomNav from '@/components/MobileBottomNav';
 import PwaRegister from '@/components/PwaRegister';
-import InstallAppModal from '@/components/InstallAppModal';
-import PwaUpdateToast from '@/components/PwaUpdateToast';
 import { PwaProvider } from '@/context/PwaContext';
 import { LiveStatusProvider } from '@/context/LiveStatusContext';
 import { AuthProvider } from '@/context/AuthContext';
@@ -13,8 +11,8 @@ import { ServerStatusProvider } from '@/context/ServerStatusContext';
 import { Plus_Jakarta_Sans } from 'next/font/google';
 import Analytics from '@/components/Analytics';
 import { GoogleTagManagerNoScript } from '@/components/GoogleTagManager';
-import FloatingWhatsAppCTA from '@/components/FloatingWhatsAppCTA';
 import GlobalNavigationLoader from '@/components/GlobalNavigationLoader';
+import ClientOverlays from '@/components/ClientOverlays';
 import socialRegistry from '../../public/data/social-links.json';
 import './globals.css';
 
@@ -164,20 +162,6 @@ export default function RootLayout({
                 window.deferredPrompt = e;
                 window.dispatchEvent(new CustomEvent('pwa-prompt-ready'));
               });
-              if ('serviceWorker' in navigator && window.location.hostname !== 'localhost' && window.location.hostname !== '127.0.0.1') {
-                var registerSW = function() {
-                  navigator.serviceWorker.register('/sw.js', { scope: '/' })
-                    .catch(function(err) {
-                      console.warn('Early SW registration fail', err);
-                    });
-                };
-                if (document.readyState === 'complete' || document.readyState === 'interactive') {
-                  registerSW();
-                } else {
-                  window.addEventListener('DOMContentLoaded', registerSW);
-                  window.addEventListener('load', registerSW);
-                }
-              }
             `,
           }}
         />
@@ -191,14 +175,12 @@ export default function RootLayout({
               <LiveStatusProvider>
                 <Analytics />
                 <PwaRegister />
-                <InstallAppModal />
-                <PwaUpdateToast />
                 <Navbar />
                 <main className="flex-grow pb-20 md:pb-0 relative">
                   {children}
                 </main>
                 <Footer />
-                <FloatingWhatsAppCTA />
+                <ClientOverlays />
                 <MobileBottomNav />
                 <Toaster position="top-right" toastOptions={{ duration: 4000 }} />
               </LiveStatusProvider>

@@ -255,7 +255,7 @@ export default function HomeHeroBatchCard({ initialBatches }: HomeHeroBatchCardP
                         alt={batch.instructor || 'Instructor'}
                         width={44}
                         height={44}
-                        loading="lazy"
+                        decoding="async"
                         className="w-11 h-11 rounded-full object-cover border-2 border-secondary shadow-xs"
                       />
                       <span className="absolute bottom-0 right-0 w-3 h-3 rounded-full bg-green-500 border border-white" />

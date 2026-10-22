@@ -40,26 +40,20 @@ export default function CountdownTimer({
     return () => clearInterval(timer);
   }, [targetDate, onComplete]);
 
-  // Prevent server-side vs client-side mismatch by returning placeholder during SSR
-  if (!isMounted || !timeLeft) {
-    return (
-      <div className="flex gap-2 justify-center text-sm font-semibold text-secondary animate-pulse">
-        <span>Loading countdown...</span>
-      </div>
-    );
-  }
-
   return (
-    <div className="flex items-center justify-center gap-2">
+    <div className="flex items-center justify-center gap-2" aria-live="polite">
       {[
-        { label: 'Days', value: timeLeft.days },
-        { label: 'Hrs', value: timeLeft.hours },
-        { label: 'Mins', value: timeLeft.minutes },
-        { label: 'Secs', value: timeLeft.seconds },
+        { label: 'Days', value: isMounted && timeLeft ? timeLeft.days.toString().padStart(2, '0') : '--' },
+        { label: 'Hrs', value: isMounted && timeLeft ? timeLeft.hours.toString().padStart(2, '0') : '--' },
+        { label: 'Mins', value: isMounted && timeLeft ? timeLeft.minutes.toString().padStart(2, '0') : '--' },
+        { label: 'Secs', value: isMounted && timeLeft ? timeLeft.seconds.toString().padStart(2, '0') : '--' },
       ].map((item, idx) => (
         <div key={idx} className="flex flex-col items-center">
-          <div className="bg-primary text-white font-mono font-bold text-base sm:text-lg px-2.5 py-1 rounded shadow-sm border border-primary-light min-w-[40px] text-center">
-            {item.value.toString().padStart(2, '0')}
+          <div
+            className="bg-primary text-white font-mono font-bold text-base sm:text-lg px-2.5 py-1 rounded shadow-sm border border-primary-light min-w-[40px] text-center"
+            suppressHydrationWarning
+          >
+            {item.value}
           </div>
           <span className="text-[9px] sm:text-[10px] text-text-muted font-bold uppercase mt-0.5">{item.label}</span>
         </div>

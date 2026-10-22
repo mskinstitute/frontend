@@ -49,11 +49,19 @@ export default function PwaRegister() {
         });
     };
 
-    if (document.readyState === 'complete' || document.readyState === 'interactive') {
-      registerWorker();
+    const scheduleRegistration = () => {
+      if ('requestIdleCallback' in window) {
+        (window as any).requestIdleCallback(() => registerWorker(), { timeout: 3000 });
+      } else {
+        setTimeout(registerWorker, 2000);
+      }
+    };
+
+    if (document.readyState === 'complete') {
+      scheduleRegistration();
     } else {
-      window.addEventListener('load', registerWorker);
-      return () => window.removeEventListener('load', registerWorker);
+      window.addEventListener('load', scheduleRegistration);
+      return () => window.removeEventListener('load', scheduleRegistration);
     }
   }, []);
 

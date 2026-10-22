@@ -5,26 +5,10 @@ const CONTENT_CACHE = `msk-content-${CACHE_VERSION}`;
 const OFFLINE_LESSONS_CACHE = 'msk-offline-lessons';
 
 const urlsToCache = [
-  '/',
-  '/?source=pwa',
-  '/courses',
-  '/live',
-  '/live-batches',
-  '/study-material',
-  '/blogs',
-  '/verify-certificate',
   '/offline.html',
-  '/manifest.webmanifest',
-  '/manifest.json',
   '/logo.jpg',
-  '/brand/icon-192x192.png',
-  '/brand/icon-512x512.png',
-  '/brand/maskable-icon-512x512.png',
+  '/manifest.json',
   '/brand/android-icon-192x192.png',
-  '/brand/android-icon-512x512.png',
-  '/icons/icon-192x192.png',
-  '/icons/icon-512x512.png',
-  '/icons/icon-maskable-512x512.png'
 ];
 
 // Install: pre-cache critical shell assets & activate immediately

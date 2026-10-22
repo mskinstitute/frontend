@@ -30,13 +30,14 @@ import {
 } from 'lucide-react';
 
 import InstallAppButton from '@/components/InstallAppButton';
-import SearchModal from '@/components/SearchModal';
+import dynamic from 'next/dynamic';
 import { useLiveStatus } from '@/context/LiveStatusContext';
 import { useAuth } from '@/context/AuthContext';
-import { useServerStatus } from '@/context/ServerStatusContext';
 import { SocialIconPills } from '@/components/SocialLinks';
 import { getRoleDashboardUrl } from '@/lib/roleNavigation';
 import { affiliateApi } from '@/services/affiliateApi';
+
+const SearchModal = dynamic(() => import('@/components/SearchModal'), { ssr: false });
 
 interface Announcement {
   id: string;
@@ -56,7 +57,6 @@ export default function Navbar() {
   const [announcements, setAnnouncements] = useState<Announcement[]>([]);
   const { isLiveNow } = useLiveStatus();
   const { user, isAuthenticated, logout } = useAuth();
-  const { isServerOnline } = useServerStatus();
 
   useEffect(() => {
     async function loadAnnouncements() {

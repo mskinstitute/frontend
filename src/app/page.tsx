@@ -10,7 +10,7 @@ import { fetchCourses, fetchLiveBatches } from '@/services/api';
 import { getBranchSummaries } from '@/lib/branches';
 import HomeHeroBatchCard from '@/components/HomeHeroBatchCard';
 import HomeDemoBookingSection from '@/components/HomeDemoBookingSection';
-import HomeFeaturedCourses from '@/components/HomeFeaturedCourses';
+import HomeFeaturedCourses, { FeaturedCourseCardData } from '@/components/HomeFeaturedCourses';
 import { parseBatchStartTimestamp } from '@/lib/batchUtils';
 import CountdownTimer from '@/components/CountdownTimer';
 import HomeFaqAccordion from '@/components/HomeFaqAccordion';
@@ -102,6 +102,67 @@ export default async function HomePage() {
   } catch (error) {
     console.error('Failed to load courses or live batches for homepage', error);
   }
+
+  // Pre-filter lightweight course cards for the 4 homepage tabs to prevent serializing 600KB+ syllabus JSON
+  const toCardData = (course: Course): FeaturedCourseCardData => ({
+    id: course.id,
+    slug: course.slug,
+    title: course.title,
+    categories: course.categories || [],
+    duration: course.duration,
+    level: course.level,
+    mode: course.mode,
+    featuredImageUrl: course.featuredImageUrl,
+    certificate: course.certificate,
+    shortDescription: course.shortDescription,
+    isPopular: (course as any).isPopular,
+  });
+
+  const categorizedCourses: Record<string, FeaturedCourseCardData[]> = {
+    all: allPublishedCourses.slice(0, 6).map(toCardData),
+    coding: allPublishedCourses
+      .filter((course) => {
+        const title = course.title.toLowerCase();
+        const cats = (course.categories || []).map((c) => c.toLowerCase());
+        return (
+          title.includes('python') ||
+          title.includes('web') ||
+          title.includes('html') ||
+          title.includes('mern') ||
+          title.includes('javascript') ||
+          cats.some((c) => c.includes('programming') || c.includes('web') || c.includes('developer'))
+        );
+      })
+      .slice(0, 6)
+      .map(toCardData),
+    nielit: allPublishedCourses
+      .filter((course) => {
+        const title = course.title.toLowerCase();
+        const cats = (course.categories || []).map((c) => c.toLowerCase());
+        const slug = course.slug.toLowerCase();
+        return (
+          title.includes('ccc') ||
+          slug.includes('ccc') ||
+          cats.some((c) => c.includes('literacy') || c.includes('digital') || c.includes('nielit'))
+        );
+      })
+      .slice(0, 6)
+      .map(toCardData),
+    diploma: allPublishedCourses
+      .filter((course) => {
+        const title = course.title.toLowerCase();
+        const slug = course.slug.toLowerCase();
+        return (
+          title.includes('adca') ||
+          title.includes('dca') ||
+          title.includes('diploma') ||
+          slug.includes('adca') ||
+          (course.duration && course.duration.value >= 6)
+        );
+      })
+      .slice(0, 6)
+      .map(toCardData),
+  };
 
   const now = Date.now();
   const upcomingBatches = [...allBatches]
@@ -562,7 +623,7 @@ export default async function HomePage() {
             </p>
           </div>
 
-          <HomeFeaturedCourses courses={allPublishedCourses} />
+          <HomeFeaturedCourses categorizedCourses={categorizedCourses} totalCoursesCount={publishedCoursesCount} />
         </section>
 
         {/* 5. Features Grid */}
