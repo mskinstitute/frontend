@@ -1,9 +1,9 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
-import { 
-  GraduationCap, Award, Users, Laptop, CheckCircle2, 
-  MapPin, Phone, Mail, Sparkles, BookOpen, Trophy, 
-  ChevronRight, HeartHandshake, ShieldCheck, Target, 
+import {
+  GraduationCap, Award, Users, Laptop, CheckCircle2,
+  MapPin, Phone, Mail, Sparkles, BookOpen, Trophy,
+  ChevronRight, HeartHandshake, ShieldCheck, Target,
   Lightbulb, ExternalLink, Linkedin, Github, Youtube
 } from 'lucide-react';
 import { SocialCommunitySection } from '@/components/SocialLinks';
@@ -180,7 +180,7 @@ export default function AboutPage() {
                 <div className="w-40 h-40 sm:w-48 sm:h-48 rounded-full bg-secondary/10 p-2 border-4 border-secondary/20 shadow-lg overflow-hidden">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
-                    src="/logo.jpg"
+                    src="/assets/img/instructors/sumit-kumar.webp"
                     alt="Er. Sumit Kumar - Founder MSK Institute"
                     className="w-full h-full object-cover rounded-full"
                   />
