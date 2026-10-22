@@ -1,4 +1,5 @@
 import { Course, Certificate, Student, Note, LiveClass, LiveBatch, Instructor, StudyMaterial, BlogPost, TutorialItem, TutorialTopicFrontmatter, CareerOpportunity, Branch, SocialLinksRegistry } from '@/types';
+import { getCoursePricing } from '@/data/coursePricing';
 
 const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || '';
 
@@ -68,15 +69,33 @@ export async function fetchCareerById(id: string): Promise<CareerOpportunity | n
 }
 
 export async function fetchCourses(): Promise<Course[]> {
+  let courses: Course[] = [];
   if (API_BASE_URL) {
     try {
       const res = await fetch(`${API_BASE_URL}/api/courses/`, { next: { revalidate: 3600 } });
-      if (res.ok) return await res.json();
+      if (res.ok) courses = await res.json();
     } catch (err) {
       console.warn('API fetch courses failed, falling back to local data:', err);
     }
   }
-  return getLocalData<Course[]>('all-courses.json');
+  if (!courses || courses.length === 0) {
+    courses = await getLocalData<Course[]>('all-courses.json');
+  }
+
+  return (courses || []).map((c) => {
+    const pricing = getCoursePricing(c.id, {
+      title: c.title,
+      durationValue: c.duration?.value,
+      durationUnit: c.duration?.unit,
+      mode: c.mode,
+    });
+    return {
+      ...c,
+      marketPrice: c.marketPrice ?? pricing.marketPrice,
+      ourPrice: c.ourPrice ?? pricing.ourPrice,
+      installments: c.installments ?? pricing.installments,
+    };
+  });
 }
 
 export async function fetchTutorials(): Promise<TutorialItem[]> {

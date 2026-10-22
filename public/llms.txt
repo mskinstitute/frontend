@@ -1,17 +1,37 @@
 # MSK Institute — Mastering Software Knowledge
 > MSK Institute is a premier coding academy and computer training institute located in Shikohabad, Uttar Pradesh, India. Founded and mentored by Er. Sumit Kumar, MSK Institute provides practical, project-based classroom training, offline computer lab sessions, verifiable graduation certifications, and extensive free online programming tutorials.
 
-## Core Mastery & Professional Programs
-- [JavaScript Mastery (Beginner to Advanced)](https://www.mskinstitute.in/courses/javascript-mastery): 3-Month complete JavaScript masterclass covering modern ES6+, DOM engineering, async/await, closures, prototypes, Web APIs, and production application development.
-- [Excel Mastery Course (Beginner to Advanced)](https://www.mskinstitute.in/courses/excel-mastery): 6-Month complete spreadsheet engineering pathway covering formulas (XLOOKUP, INDEX-MATCH), dynamic arrays, Pivot Tables, Power Query ETL, executive KPI dashboards, and automation.
-- [Python Mastery (Beginner to Advanced)](https://www.mskinstitute.in/courses/python-mastery): 3-Month grand mastery spanning 45 chapters across OOP, concurrent multithreading, asyncio, databases, and capstone software projects.
-- [Full-Stack Web Development Grand Mastery](https://www.mskinstitute.in/courses/full-stack-development): 18-Month multi-stack architect curriculum covering HTML5, CSS3, Tailwind, JavaScript, React, Next.js, Node.js, Express, MongoDB, Python, Django, and SQL.
-- [Full-Stack MERN Stack Mastery](https://www.mskinstitute.in/courses/full-stack-mern-mastery--12-months): 12-Month professional specialization in MongoDB, Express.js, React.js, and Node.js with live client applications.
-- [Data Analysis Mastery Combo](https://www.mskinstitute.in/courses/data-analysis-mastery-combo-course--12-months): 12-Month analytics program bundling Advanced Excel, SQL, Python, Pandas, NumPy, Power BI, and Tableau.
-- [SQL & MySQL Mastery (Beginner to Advanced)](https://www.mskinstitute.in/courses/sql-mysql-mastery-beginner-to-advanced--3-months): 3-Month relational database engineering, CTEs, Window Functions, indexing, and DBA query tuning.
-- [Power BI Mastery (Beginner to Advanced)](https://www.mskinstitute.in/courses/power-bi-mastery-beginner-to-advanced--3-months): 3-Month business intelligence track covering Power Query ETL, DAX formulas, and executive dashboards.
+## Core Mastery & Professional Programs (Fee Structure & Syllabi)
+*All courses include 100% free 3-day demo class before formal enrollment. Fees can be paid in flexible monthly installments.*
+
+- [ADCA (1-Year Diploma)](https://www.mskinstitute.in/courses/adca): Complete 1-Year ISO certified Advance Diploma in Computer Applications (Office Suite, Tally Prime, Graphic Design, Web Basics).
+  - **Market Course Fee:** ₹15,000 | **MSK Institute Fee:** ₹9,999 (Installment: ₹900/month) | **Duration:** 12 Months
 - [NIELIT CCC Course](https://www.mskinstitute.in/courses/ccc): Government-recognized Course on Computer Concepts preparation for UPSSSC, banking, and government examinations.
-- [ADCA (1-Year Diploma)](https://www.mskinstitute.in/courses/adca): Advanced Diploma in Computer Applications covering Office Suite, Tally Prime, Photoshop, and Web Basics.
+  - **Market Course Fee:** ₹4,000 | **MSK Institute Fee:** ₹2,499 (Installment: ₹800/month) | **Duration:** 3 Months
+- [Python Mastery (Beginner to Advanced)](https://www.mskinstitute.in/courses/python-mastery): 3-Month grand mastery spanning 45 chapters across OOP, concurrent multithreading, asyncio, databases, and capstone software projects.
+  - **Market Course Fee:** ₹9,000 | **MSK Institute Fee:** ₹4,999 (Installment: ₹1,750/month) | **Duration:** 3 Months
+- [Full-Stack MERN Stack Mastery](https://www.mskinstitute.in/courses/full-stack-mern-mastery--12-months): 12-Month professional specialization in MongoDB, Express.js, React.js, and Node.js with live client applications.
+  - **Market Course Fee:** ₹38,000 | **MSK Institute Fee:** ₹19,999 (Installment: ₹1,800/month) | **Duration:** 12 Months
+- [Full-Stack Web Development Grand Mastery](https://www.mskinstitute.in/courses/full-stack-development): 18-Month multi-stack architect curriculum covering HTML5, CSS3, Tailwind, JavaScript, React, Next.js, Node.js, Express, MongoDB, Python, Django, and SQL.
+  - **Market Course Fee:** ₹45,000 | **MSK Institute Fee:** ₹22,999 (Installment: ₹1,400/month) | **Duration:** 18 Months
+- [Cyber Security & Ethical Hacking](https://www.mskinstitute.in/courses/cyber-security-ethical-hacking-professional-program): 18-Month comprehensive security operations, Linux, networking, penetration testing, and digital forensics.
+  - **Market Course Fee:** ₹48,000 | **MSK Institute Fee:** ₹24,999 (Installment: ₹1,500/month) | **Duration:** 18 Months
+- [Data Analysis Mastery Combo](https://www.mskinstitute.in/courses/data-analysis-mastery-combo-course--12-months): 12-Month analytics program bundling Advanced Excel, SQL, Python, Pandas, NumPy, Power BI, and Tableau.
+  - **Market Course Fee:** ₹32,000 | **MSK Institute Fee:** ₹16,999 (Installment: ₹1,500/month) | **Duration:** 12 Months
+- [Excel Mastery Course (Beginner to Advanced)](https://www.mskinstitute.in/courses/excel-mastery): 6-Month complete spreadsheet engineering pathway covering formulas (XLOOKUP, INDEX-MATCH), dynamic arrays, Pivot Tables, Power Query ETL, executive KPI dashboards, and automation.
+  - **Market Course Fee:** ₹7,000 | **MSK Institute Fee:** ₹3,999 (Installment: ₹750/month) | **Duration:** 6 Months
+- [JavaScript Mastery (Beginner to Advanced)](https://www.mskinstitute.in/courses/javascript-mastery): 3-Month complete JavaScript masterclass covering modern ES6+, DOM engineering, async/await, closures, prototypes, Web APIs, and production application development.
+  - **Market Course Fee:** ₹8,000 | **MSK Institute Fee:** ₹4,499 (Installment: ₹1,500/month) | **Duration:** 3 Months
+- [SQL & MySQL Mastery (Beginner to Advanced)](https://www.mskinstitute.in/courses/sql-mysql-mastery-beginner-to-advanced--3-months): 3-Month relational database engineering, CTEs, Window Functions, indexing, and DBA query tuning.
+  - **Market Course Fee:** ₹7,500 | **MSK Institute Fee:** ₹3,999 (Installment: ₹1,400/month) | **Duration:** 3 Months
+- [Power BI Mastery (Beginner to Advanced)](https://www.mskinstitute.in/courses/power-bi-mastery-beginner-to-advanced--3-months): 3-Month business intelligence track covering Power Query ETL, DAX formulas, and executive dashboards.
+  - **Market Course Fee:** ₹8,500 | **MSK Institute Fee:** ₹4,499 (Installment: ₹1,500/month) | **Duration:** 3 Months
+- [O Level - Information Technology](https://www.mskinstitute.in/courses/o-level): 12-Month NIELIT recognized O-Level IT diploma.
+  - **Market Course Fee:** ₹20,000 | **MSK Institute Fee:** ₹12,999 (Installment: ₹1,100/month) | **Duration:** 12 Months
+- [MS Office - 4 Months](https://www.mskinstitute.in/courses/ms-office--4-months): Word, Excel, PowerPoint, and typing basics.
+  - **Market Course Fee:** ₹5,500 | **MSK Institute Fee:** ₹2,999 (Installment: ₹700/month) | **Duration:** 4 Months
+- [1-Month Modular Focus Courses](https://www.mskinstitute.in/courses): HTML5, CSS3, React.js Basics, Git & GitHub, Bootstrap, Python Beginners.
+  - **Market Course Fee:** ₹2,000 - ₹3,000 | **MSK Institute Fee:** ₹999 - ₹1,499 per module.
 - [All Courses](https://www.mskinstitute.in/courses): Browse all active online and offline training programs.
 
 ## Free Tutorials & Coding Documentation
@@ -33,5 +53,5 @@ MSK Institute provides over 1,600+ structured, interactive programming tutorials
 - **Contact Admissions:** Phone / WhatsApp: +91 8393042166 | Email: mskshikohabad@gmail.com
 - **Website:** [https://mskinstitute.in](https://mskinstitute.in)
 
-## Admissions & Demo Classes
-Weekly free 2-day trial demo classes and hands-on coding workshops are conducted online live and at the Shikohabad campus. Any student, parent, or working professional can book a free demo class with zero login required at [https://mskinstitute.in/book-demo](https://mskinstitute.in/book-demo) or contact admissions on WhatsApp (+91 8393042166).
+## Admissions & Free Demo Classes
+Weekly free 3-day trial demo classes and hands-on coding workshops are conducted online live and at the Shikohabad campus. Any student, parent, or working professional can book a free demo class with zero login required at [https://mskinstitute.in/book-demo](https://mskinstitute.in/book-demo) or contact admissions on WhatsApp (+91 8393042166). Enrolled students manage their tuition payments and course modules directly within the student dashboard.

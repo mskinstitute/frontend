@@ -8,6 +8,8 @@ import { affiliateApi, StudentJourney, SuggestedCourse } from '@/services/affili
 import { fetchCourses, fetchLiveBatches } from '@/services/api';
 import { Course, LiveBatch } from '@/types';
 import DashboardLayout, { NavSectionConfig } from '@/components/dashboard/DashboardLayout';
+import StudentCourseFeesTable from '@/components/dashboard/StudentCourseFeesTable';
+import { getCoursePricing, formatINR } from '@/data/coursePricing';
 import {
   LayoutGrid,
   BookOpen,
@@ -869,6 +871,27 @@ function StudentDashboardContent() {
                         <p className="text-xs text-slate-400 line-clamp-2 mt-1">
                           {c.shortDescription}
                         </p>
+                        {(() => {
+                          const cPrice = getCoursePricing(c.id, {
+                            title: c.title,
+                            durationValue: c.duration?.value,
+                            durationUnit: c.duration?.unit,
+                            mode: c.mode,
+                          });
+                          const ourP = c.ourPrice || cPrice.ourPrice;
+                          const mktP = c.marketPrice || cPrice.marketPrice;
+                          return (
+                            <div className="flex items-center justify-between pt-2 border-t border-white/10 text-xs">
+                              <div className="flex items-baseline gap-1.5">
+                                <span className="font-extrabold text-[#FF8533]">{formatINR(ourP)}</span>
+                                <span className="text-[10px] text-slate-400 line-through">{formatINR(mktP)}</span>
+                              </div>
+                              <span className="text-[10px] font-bold text-emerald-400 bg-emerald-500/10 px-1.5 py-0.5 rounded">
+                                Save {Math.round(((mktP - ourP) / mktP) * 100)}%
+                              </span>
+                            </div>
+                          );
+                        })()}
                       </div>
 
                       <button
@@ -1135,6 +1158,15 @@ function StudentDashboardContent() {
               </div>
             </div>
           )}
+
+          {/* Complete Course Fee Schedule & Installment Calculator (Exclusive after login) */}
+          <div className="pt-4">
+            <StudentCourseFeesTable
+              courses={allCourses}
+              onSelectDemoCourse={(courseTitle) => handleOpenDemoModal(courseTitle)}
+              hasActiveUncompletedDemo={hasActiveUncompletedDemo}
+            />
+          </div>
         </div>
       )}
 
@@ -1425,6 +1457,15 @@ function StudentDashboardContent() {
               </p>
             </div>
           )}
+
+          {/* Complete Course Fee Schedule & Payment Modes (Exclusive after login) */}
+          <div className="pt-4">
+            <StudentCourseFeesTable
+              courses={allCourses}
+              onSelectDemoCourse={(courseTitle) => handleOpenDemoModal(courseTitle)}
+              hasActiveUncompletedDemo={hasActiveUncompletedDemo}
+            />
+          </div>
         </div>
       )}
 

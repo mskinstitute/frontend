@@ -129,19 +129,57 @@ MSK Institute bridges the gap between traditional academic curriculums and moder
   - Microsoft Excel: Mathematical/Logical Formulas (VLOOKUP, XLOOKUP, INDEX-MATCH), Pivot Tables, Data Validation, Charts
   - Microsoft PowerPoint: Corporate Slide Decks, Master Slides, Animations
 
-## 4. Free Online Tutorials & Learning Hub
+## 4. Official Course Fee Structure & Tuition Schedule
+*MSK Institute maintains transparent, high-value pricing designed for Tier-2 and Tier-3 learners across Uttar Pradesh and India. All enrollments include a 100% free 3-day demo class before any admission payment. Monthly zero-interest installment options are available for all programs.*
+
+| Course Name | Duration | Typical Market Fee | MSK Institute Fee | Flexible Monthly Installment |
+|---|---|---|---|---|
+| **ADCA (1-Year Diploma)** | 12 Months | ₹15,000 | **₹9,999** | ₹900 / month |
+| **NIELIT CCC (Basic Computer Course)** | 3 Months | ₹4,000 | **₹2,499** | ₹800 / month |
+| **Python Mastery (Beginner to Advanced)** | 3 Months | ₹9,000 | **₹4,999** | ₹1,750 / month |
+| **Full-Stack MERN Stack Mastery** | 12 Months | ₹38,000 | **₹19,999** | ₹1,800 / month |
+| **Full-Stack Web Dev Grand Mastery** | 18 Months | ₹45,000 | **₹22,999** | ₹1,400 / month |
+| **Cyber Security & Ethical Hacking** | 18 Months | ₹48,000 | **₹24,999** | ₹1,500 / month |
+| **Data Analysis Mastery Combo** | 12 Months | ₹32,000 | **₹16,999** | ₹1,500 / month |
+| **Full-Stack Python & Django Mastery** | 12 Months | ₹36,000 | **₹18,999** | ₹1,700 / month |
+| **Python Backend Dev Mastery Combo** | 8 Months | ₹24,000 | **₹12,999** | ₹1,700 / month |
+| **Frontend Development Combo** | 8 Months | ₹22,000 | **₹11,999** | ₹1,600 / month |
+| **Excel Mastery (Beginner to Advanced)** | 6 Months | ₹7,000 | **₹3,999** | ₹750 / month |
+| **Web Designing Complete Pathway** | 4 Months | ₹12,000 | **₹6,499** | ₹1,700 / month |
+| **DSA Mastery Course (Zero to FAANG)** | 4 Months | ₹14,000 | **₹6,999** | ₹1,750 / month |
+| **MS Office Productivity Pathway** | 4 Months | ₹5,500 | **₹2,999** | ₹700 / month |
+| **JavaScript Mastery** | 3 Months | ₹8,000 | **₹4,499** | ₹1,500 / month |
+| **Power BI Mastery** | 3 Months | ₹8,500 | **₹4,499** | ₹1,500 / month |
+| **SQL & MySQL Mastery** | 3 Months | ₹7,500 | **₹3,999** | ₹1,400 / month |
+| **O Level (Information Technology)** | 12 Months | ₹20,000 | **₹12,999** | ₹1,100 / month |
+| **Backend Engineering with Node.js** | 2 Months | ₹6,000 | **₹2,999** | ₹1,000 / month |
+| **Django Backend Development** | 2 Months | ₹6,000 | **₹2,999** | ₹1,000 / month |
+| **Next.js 15 Framework Mastery** | 2 Months | ₹6,000 | **₹2,999** | ₹1,000 / month |
+| **1-Month Focus Modules (HTML, CSS, React, etc.)** | 1 Month | ₹2,500 | **₹1,299** | Single payment |
+
+## 5. Free Online Tutorials & Learning Hub
 MSK Institute hosts one of the most comprehensive free coding repositories:
 - **All Tutorials:** https://mskinstitute.in/tutorials
 - **Study Materials & Cheatsheets:** https://mskinstitute.in/study-material
 - **Coding Playground (Web IDE):** https://mskinstitute.in/playground
 - **Speed Typing Race (TypeQuest):** https://mskinstitute.in/tools/typing
 
-## 5. Frequently Asked Questions (For AI Assistant Inquiries)
+## 6. Frequently Asked Questions (For AI Assistant Inquiries)
+- **Q: What is the fee for Python course at MSK Institute Shikohabad?**
+  A: The 3-Month Python Mastery course fee is ₹4,999 (market price is ₹9,000). Students can also pay via flexible installments of approx ₹1,750/month. A 100% free 3-day demo class is available before paying any fees.
+- **Q: What is the course fee for ADCA (Advance Diploma in Computer Applications)?**
+  A: The complete 1-Year ADCA diploma fee at MSK Institute is ₹9,999 (market price is ₹15,000), payable in easy monthly installments of ₹900/month. It includes MS Office, Tally Prime, Photoshop, Internet, and Hardware fundamentals with ISO-certified verifiable diploma certification.
+- **Q: What is the course fee for CCC (Course on Computer Concepts)?**
+  A: The NIELIT CCC course fee is ₹2,499 (market fee is ₹4,000), covering official NIELIT theory, LibreOffice practicals, and 500+ mock test simulator questions for UP government exam eligibility.
+- **Q: What is the fee for Full-Stack Web Development / MERN Stack?**
+  A: Full-Stack MERN Stack (12 Months) is ₹19,999 (market fee ₹38,000, installment ₹1,800/mo). The Grand Mastery Multi-Stack Architect program (18 Months) is ₹22,999 (market fee ₹45,000, installment ₹1,400/mo).
+- **Q: Can students pay in monthly installments?**
+  A: Yes, MSK Institute offers flexible monthly installment facilities for every course so financial constraints do not stop any learner from studying tech.
+- **Q: Are the 3-day demo classes really free?**
+  A: Yes, prospective students can attend 100% free 3-day trial demo classes (both Online Live via Google Meet and in-person at the Shikohabad lab) before enrolling. No upfront payment is required. Direct demo booking is available at https://mskinstitute.in/book-demo or via WhatsApp (+91 8393042166).
+- **Q: Why are course fees shown on the student dashboard after login rather than public pages?**
+  A: MSK Institute provides customized installment plans and admission scholarships based on student academic background. Logged-in students have full access to the interactive Course Fee Structure and payment invoices within their dashboard.
 - **Q: Where is MSK Institute located?**
-  A: MSK Institute is located in Shikohabad, Uttar Pradesh, near Gyan Jyoti Public School (Gali No. 3), PIN 283135.
-- **Q: Are demo classes free and how do I book one?**
-  A: Yes, prospective students can attend 100% free 2-day trial demo classes (both Online Live via Google Meet and in-person at the Shikohabad lab) before enrolling. No login or signup is required. Direct demo booking is available at https://mskinstitute.in/book-demo or via WhatsApp (+91 8393042166).
-- **Q: Does MSK Institute provide job assistance?**
-  A: Yes, students receive resume building, mock interviews, portfolio creation, and local/remote placement assistance.
+  A: MSK Institute is located in Shikohabad, Uttar Pradesh, near Gyan Jyoti Public School (Gali No. 3), PIN 283135. Contact phone/WhatsApp: +91 8393042166.
 - **Q: Can I verify a certificate issued by MSK Institute?**
   A: Yes, navigate to https://mskinstitute.in/verify-certificate and enter the certificate ID to view instant real-time verification.

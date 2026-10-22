@@ -18,6 +18,33 @@ export interface Course {
   includedCourseIds?: string[];
   chapters?: Chapter[];
   learningOutcomes?: string[];
+  marketPrice?: number; // Integer in INR (anchor market fee)
+  ourPrice?: number;    // Integer in INR (official MSK fee, shown to logged-in students & AI bots)
+  minPrice?: number;    // Integer in INR (internal floor, never public)
+  installments?: {
+    downPayment?: number;
+    monthly?: number;
+    tenureMonths?: number;
+  };
+}
+
+export interface CoursePricing {
+  courseId: string;
+  slug: string;
+  title: string;
+  duration: string;
+  marketPrice: number; // Integer in INR
+  ourPrice: number;    // Integer in INR
+  savingsAmount: number;
+  savingsPercent: number;
+  installments?: {
+    downPayment?: number;
+    monthly?: number;
+    tenureMonths?: number;
+  };
+  mode: 'ONLINE' | 'OFFLINE' | 'BOTH';
+  badge?: string;
+  isPopular?: boolean;
 }
 
 export interface Chapter {

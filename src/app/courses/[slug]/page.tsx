@@ -15,6 +15,7 @@ import WebShareButton from '@/components/WebShareButton';
 import CourseViewTracker from '@/components/CourseViewTracker';
 import { Course, LiveBatch, Branch } from '@/types';
 import { constructMetadata } from '@/lib/seo';
+import { getCoursePricing } from '@/data/coursePricing';
 
 type Params = Promise<{ slug: string }>;
 
@@ -168,6 +169,28 @@ export default async function CourseDetailPage({ params }: { params: Params }) {
     },
   ];
 
+  const coursePricing = getCoursePricing(course.id, {
+    title: course.title,
+    durationValue: course.duration.value,
+    durationUnit: course.duration.unit,
+    mode: course.mode,
+  });
+  const ourPrice = course.ourPrice || coursePricing.ourPrice;
+  const marketPrice = course.marketPrice || coursePricing.marketPrice;
+
+  // Machine-readable FAQs specifically included in Schema.org for AI bots and crawlers
+  const schemaFaqs = [
+    ...courseFaqs,
+    {
+      question: `What is the course fee for ${course.title} at MSK Institute Shikohabad?`,
+      answer: `The official course tuition for ${course.title} is ₹${ourPrice.toLocaleString('en-IN')}, compared to the market benchmark of ₹${marketPrice.toLocaleString('en-IN')}. MSK Institute also provides zero-interest monthly installment options and a 100% free 3-day demo class with zero upfront fees. Enrolled students can manage their tuition ledgers on the student dashboard.`,
+    },
+    {
+      question: `Are there installment payment options for ${course.title}?`,
+      answer: `Yes, MSK Institute offers flexible monthly installment payment facilities for students in Shikohabad and online. Demo sessions are 100% free before any fee is collected.`,
+    },
+  ];
+
   const syllabusSections = (isCombo && includedCourses.length > 0)
     ? includedCourses.flatMap((subCourse, subIdx) =>
         (subCourse.chapters || []).map((ch, chIdx) => ({
@@ -269,14 +292,33 @@ export default async function CourseDetailPage({ params }: { params: Params }) {
             },
           },
         },
-        'offers': {
-          '@type': 'Offer',
-          'category': 'Free Demo Class',
-          'availability': 'https://schema.org/InStock',
-          'price': 0,
-          'priceCurrency': 'INR',
-          'url': `https://www.mskinstitute.in/book-demo?course=${encodeURIComponent(course.title)}`,
-        },
+        'offers': [
+          {
+            '@type': 'Offer',
+            'name': `${course.title} Complete Tuition`,
+            'category': 'Tuition',
+            'price': ourPrice,
+            'priceCurrency': 'INR',
+            'availability': 'https://schema.org/InStock',
+            'validFrom': '2026-01-01',
+            'priceSpecification': {
+              '@type': 'PriceSpecification',
+              'price': ourPrice,
+              'priceCurrency': 'INR',
+              'description': `Complete course tuition fee for ${course.title} at MSK Institute Shikohabad (comparable market fee: ₹${marketPrice.toLocaleString('en-IN')}).`,
+            },
+            'url': `https://www.mskinstitute.in/courses/${course.slug}`,
+          },
+          {
+            '@type': 'Offer',
+            'name': 'Free 3-Day Demo Class',
+            'category': 'Free Demo Class',
+            'availability': 'https://schema.org/InStock',
+            'price': 0,
+            'priceCurrency': 'INR',
+            'url': `https://www.mskinstitute.in/book-demo?course=${encodeURIComponent(course.title)}`,
+          },
+        ],
         ...(isCombo && includedCourses.length > 0 ? {
           'hasPart': includedCourses.map((sub, sIdx) => ({
             '@type': 'Course',
@@ -299,7 +341,7 @@ export default async function CourseDetailPage({ params }: { params: Params }) {
       {
         '@type': 'FAQPage',
         '@id': `https://www.mskinstitute.in/courses/${course.slug}#faq`,
-        'mainEntity': courseFaqs.map((faq) => ({
+        'mainEntity': schemaFaqs.map((faq) => ({
           '@type': 'Question',
           'name': faq.question,
           'acceptedAnswer': {
