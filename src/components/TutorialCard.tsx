@@ -250,6 +250,26 @@ export default function TutorialCard({ tutorial }: TutorialCardProps) {
             JS
           </div>
         );
+      case 'c':
+      case 'c-programming':
+        return (
+          <div className="w-11 h-11 rounded-2xl bg-blue-50 border border-blue-200 flex items-center justify-center text-blue-700 shadow-2xs font-mono font-black text-base">
+            C
+          </div>
+        );
+      case 'cpp':
+      case 'c++':
+        return (
+          <div className="w-11 h-11 rounded-2xl bg-indigo-50 border border-indigo-200 flex items-center justify-center text-indigo-700 shadow-2xs font-mono font-black text-sm">
+            C++
+          </div>
+        );
+      case 'java':
+        return (
+          <div className="w-11 h-11 rounded-2xl bg-red-50 border border-red-200 flex items-center justify-center text-red-600 shadow-2xs font-mono font-black text-sm">
+            Java
+          </div>
+        );
       default:
         return (
           <div className="w-11 h-11 rounded-2xl bg-amber-50 border border-amber-100 flex items-center justify-center text-amber-600 shadow-2xs font-mono font-black text-sm">

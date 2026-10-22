@@ -159,6 +159,27 @@ export const COURSE_PRICE_CATALOG: Record<string, CoursePriceDefinition> = {
     installments: { downPayment: 1499, monthly: 1500, tenureMonths: 2 },
     badge: 'Web App Engineering',
   },
+  'course-c-programming-mastery': {
+    marketPrice: 9000,
+    ourPrice: 4999,
+    installments: { downPayment: 1499, monthly: 1750, tenureMonths: 2 },
+    badge: 'Systems Programming Track',
+    isPopular: true,
+  },
+  'course-cpp-mastery': {
+    marketPrice: 9000,
+    ourPrice: 4999,
+    installments: { downPayment: 1499, monthly: 1750, tenureMonths: 2 },
+    badge: 'High Performance Track',
+    isPopular: true,
+  },
+  'course-java-mastery': {
+    marketPrice: 9000,
+    ourPrice: 4999,
+    installments: { downPayment: 1499, monthly: 1750, tenureMonths: 2 },
+    badge: 'Enterprise Backend Track',
+    isPopular: true,
+  },
 
   // 6. 2-Month Specialized Modules
   'course-backend-node': {
@@ -244,6 +265,15 @@ export const COURSE_PRICE_CATALOG: Record<string, CoursePriceDefinition> = {
   'course-pandas-complete-course': { marketPrice: 2500, ourPrice: 1299 },
   'course-mongodb-and-mongoose-database': { marketPrice: 2500, ourPrice: 1299 },
   'course-tailwind-css-mastery': { marketPrice: 2500, ourPrice: 1299 },
+  'course-c-programming-for-beginners': { marketPrice: 3000, ourPrice: 1499, badge: 'C Fundamentals' },
+  'course-c-programming-for-intermediate': { marketPrice: 3000, ourPrice: 1499 },
+  'course-c-programming-for-advanced': { marketPrice: 3000, ourPrice: 1499 },
+  'course-cpp-for-beginners': { marketPrice: 3000, ourPrice: 1499, badge: 'C++ Foundations' },
+  'course-cpp-for-intermediate': { marketPrice: 3000, ourPrice: 1499 },
+  'course-cpp-for-advanced': { marketPrice: 3000, ourPrice: 1499 },
+  'course-java-for-beginners': { marketPrice: 3000, ourPrice: 1499, badge: 'Core Java Starter' },
+  'course-java-for-intermediate': { marketPrice: 3000, ourPrice: 1499 },
+  'course-java-for-advanced': { marketPrice: 3000, ourPrice: 1499 },
 };
 
 // Aliases for slug-based lookups
@@ -269,6 +299,9 @@ const SLUG_PRICE_MAP: Record<string, string> = {
   'sql-mastery': 'course-sql-mysql-mastery-beginner-to-advanced--3-months',
   'sql-mysql-mastery-beginner-to-advanced--3-months': 'course-sql-mysql-mastery-beginner-to-advanced--3-months',
   'javascript-mastery': 'course-javascript-mastery',
+  'c-programming-mastery': 'course-c-programming-mastery',
+  'cpp-mastery': 'course-cpp-mastery',
+  'java-mastery': 'course-java-mastery',
   'backend-node': 'course-backend-node',
   'nextjs-complete-course': 'course-nextjs-complete-course',
 };

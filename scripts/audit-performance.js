@@ -3,7 +3,7 @@
 /**
  * MSK Institute — Automated Performance & Resource Budget Auditor
  *
- * Enforces strict performance budgets from docs/performance-budget.md:
+ * Enforces strict performance budgets:
  * 1. Verifies that Next.js client chunks do not exceed size ceilings.
  * 2. Checks static image weights in public/ to prevent large uncompressed assets.
  * 3. Enforces < 0.1 CLS architectural invariants (no full-page suspense wrappers on query-sync pages).

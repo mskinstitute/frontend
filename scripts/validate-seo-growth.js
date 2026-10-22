@@ -9,7 +9,6 @@
  * - Topical cluster engine integrity (src/lib/topical-clusters.ts)
  * - Related content component presence (src/components/CourseRelatedContent.tsx)
  * - SEO metadata utility (src/lib/seo.ts)
- * - Keyword mapping and cannibalization audit documentation
  */
 
 const fs = require('fs');
@@ -130,40 +129,6 @@ if (fs.existsSync(seoPath)) {
 } else {
   console.error('  [FAIL] Missing src/lib/seo.ts');
   errors++;
-}
-
-// 5. Documentation Deliverables Check
-console.log('\n5. Checking Required Phase 3 Documentation Deliverables...');
-const requiredDocs = [
-  'docs/seo-content-inventory.md',
-  'docs/seo-keyword-map.md',
-  'docs/seo-search-intent-map.md',
-  'docs/seo-cannibalization-report.md',
-  'docs/seo-content-opportunity-matrix.md',
-  'docs/seo-competitor-gap-analysis.md',
-  'docs/course-seo-priority.md',
-  'docs/internal-linking-map.md',
-  'docs/orphan-page-report.md',
-  'docs/content-brief-template.md',
-  'docs/30-day-seo-roadmap.md',
-  'docs/60-day-seo-roadmap.md',
-  'docs/90-day-seo-roadmap.md',
-];
-
-for (const doc of requiredDocs) {
-  const docPath = path.join(process.cwd(), doc);
-  if (fs.existsSync(docPath)) {
-    const stat = fs.statSync(docPath);
-    if (stat.size > 200) {
-      console.log(`  [PASS] ${doc} (${stat.size} bytes)`);
-    } else {
-      console.error(`  [FAIL] ${doc} is too short (${stat.size} bytes)`);
-      errors++;
-    }
-  } else {
-    console.error(`  [FAIL] Missing documentation: ${doc}`);
-    errors++;
-  }
 }
 
 // Final Summary

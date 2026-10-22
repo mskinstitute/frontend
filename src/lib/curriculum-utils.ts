@@ -1,5 +1,14 @@
 export const TUTORIAL_SLUGS = new Set([
   'html5-complete-course',
+  'java-for-beginners',
+  'java-for-intermediate',
+  'java-for-advanced',
+  'cpp-for-beginners',
+  'cpp-for-intermediate',
+  'cpp-for-advanced',
+  'c-programming-for-beginners',
+  'c-programming-for-intermediate',
+  'c-programming-for-advanced',
   'css-for-beginners',
   'css-for-intermediate',
   'css-for-advanced',
@@ -65,7 +74,29 @@ export function resolveTopicTutorialUrl(
 
   let tutorialSlug: string | null = null;
 
-  if (cSlug === 'html5-complete-course' || cSlug.includes('html5-complete') || (cSlug.includes('html') && !chTitle.includes('css') && !chTitle.includes('tailwind'))) {
+  if (cSlug === 'java-for-advanced' || cSlug.includes('java-for-advanced')) {
+    tutorialSlug = 'java-for-advanced';
+  } else if (cSlug === 'java-for-intermediate' || cSlug.includes('java-for-intermediate')) {
+    tutorialSlug = 'java-for-intermediate';
+  } else if (cSlug === 'java-for-beginners' || (cSlug.includes('java') && !cSlug.includes('javascript') && !cSlug.includes('intermediate') && !cSlug.includes('advanced'))) {
+    tutorialSlug = 'java-for-beginners';
+  } else if (cSlug === 'cpp-for-advanced' || cSlug.includes('cpp-for-advanced')) {
+    tutorialSlug = 'cpp-for-advanced';
+  } else if (cSlug === 'cpp-for-intermediate' || cSlug.includes('cpp-for-intermediate')) {
+    tutorialSlug = 'cpp-for-intermediate';
+  } else if (cSlug === 'cpp-for-beginners' || cSlug.includes('cpp-for-beginners')) {
+    tutorialSlug = 'cpp-for-beginners';
+  } else if (cSlug === 'c-programming-for-advanced' || cSlug.includes('c-programming-for-advanced')) {
+    tutorialSlug = 'c-programming-for-advanced';
+  } else if (cSlug === 'c-programming-for-intermediate' || cSlug.includes('c-programming-for-intermediate')) {
+    tutorialSlug = 'c-programming-for-intermediate';
+
+
+
+  } else if (cSlug === 'c-programming-for-beginners' || cSlug.includes('c-programming-for-beginners') || (cSlug.includes('c-programming') && !cSlug.includes('intermediate') && !cSlug.includes('advanced'))) {
+    tutorialSlug = 'c-programming-for-beginners';
+
+  } else if (cSlug === 'html5-complete-course' || cSlug.includes('html5-complete') || (cSlug.includes('html') && !chTitle.includes('css') && !chTitle.includes('tailwind'))) {
     tutorialSlug = 'html5-complete-course';
   } else if (cSlug === 'python-for-advanced' || cSlug.includes('python-for-advanced')) {
     tutorialSlug = 'python-for-advanced';

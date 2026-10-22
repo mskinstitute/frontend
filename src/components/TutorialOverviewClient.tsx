@@ -69,6 +69,27 @@ export default function TutorialOverviewClient({
         </div>
       );
     }
+    if (tutorial.icon === 'c' || tutorial.title?.toLowerCase() === 'c' || tutorial.title?.toLowerCase().includes('c programming')) {
+      return (
+        <div className="w-16 h-16 rounded-3xl bg-blue-50 border border-blue-200 flex items-center justify-center text-blue-700 shadow-sm font-mono font-black text-2xl">
+          C
+        </div>
+      );
+    }
+    if (tutorial.icon === 'cpp' || tutorial.icon === 'c++' || tutorial.title?.toLowerCase().includes('c++')) {
+      return (
+        <div className="w-16 h-16 rounded-3xl bg-indigo-50 border border-indigo-200 flex items-center justify-center text-indigo-700 shadow-sm font-mono font-black text-2xl">
+          C++
+        </div>
+      );
+    }
+    if (tutorial.icon === 'java' || tutorial.title?.toLowerCase().includes('java')) {
+      return (
+        <div className="w-16 h-16 rounded-3xl bg-red-50 border border-red-200 flex items-center justify-center text-red-600 shadow-sm font-mono font-black text-2xl">
+          Java
+        </div>
+      );
+    }
     return (
       <div className="w-16 h-16 rounded-3xl bg-orange-50 border border-orange-100 flex items-center justify-center text-secondary shadow-sm">
         <BookOpen className="w-8 h-8" />

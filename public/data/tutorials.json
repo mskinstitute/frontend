@@ -5814,5 +5814,1851 @@
         "duration": "35 mins"
       }
     ]
+  },
+  {
+    "featured": true,
+    "id": "tut-c-programming-for-beginners",
+    "slug": "c-programming-for-beginners",
+    "courseSlug": "c-programming-for-beginners",
+    "title": "C Programming",
+    "icon": "c",
+    "badge": "Beginner to Pro",
+    "tags": [
+      "Beginner",
+      "programming",
+      "c",
+      "systems",
+      "low-level",
+      "core"
+    ],
+    "documentationTitle": "Complete C Programming for Beginners Tutorial & Interactive Documentation",
+    "shortDescription": "Master C programming foundations from scratch in 1 month. Comprehensive beginner tutorial covering compilation, variables, operators, control flow, loops, arrays, strings, functions, and 4 practical console projects.",
+    "lessonsCount": 8,
+    "totalHours": "25h",
+    "topicsCount": 40,
+    "githubRepo": "github.com/msk-institute/c-programming-for-beginners",
+    "updatedAt": "2026-10-22",
+    "topics": [
+      {
+        "id": "c-beg-t1.1",
+        "title": "History and Evolution of C Programming",
+        "slug": "history-and-evolution-of-c-programming"
+      },
+      {
+        "id": "c-beg-t1.2",
+        "title": "C Compilation Architecture: Preprocessor, Compiler, Assembler, Linker",
+        "slug": "c-compilation-architecture"
+      },
+      {
+        "id": "c-beg-t1.3",
+        "title": "Setting up GCC, MinGW, and VS Code for C Development",
+        "slug": "setting-up-gcc-mingw-vscode"
+      },
+      {
+        "id": "c-beg-t1.4",
+        "title": "Structure of a C Program & The main() Function",
+        "slug": "structure-of-c-program-main-function"
+      },
+      {
+        "id": "c-beg-t1.5",
+        "title": "Standard I/O: printf(), scanf(), and Escape Sequences",
+        "slug": "standard-io-printf-scanf-escape-sequences"
+      },
+      {
+        "id": "c-beg-t2.1",
+        "title": "Primitive Data Types (int, float, double, char) & Size Modifiers",
+        "slug": "primitive-data-types-size-modifiers"
+      },
+      {
+        "id": "c-beg-t2.2",
+        "title": "Variables, Identifiers, and Memory Layout Basics",
+        "slug": "variables-identifiers-memory-layout"
+      },
+      {
+        "id": "c-beg-t2.3",
+        "title": "Constants, Literals, and the const Qualifier",
+        "slug": "constants-literals-const-qualifier"
+      },
+      {
+        "id": "c-beg-t2.4",
+        "title": "Type Conversion: Implicit Coercion and Explicit Type Casting",
+        "slug": "type-conversion-implicit-explicit-casting"
+      },
+      {
+        "id": "c-beg-t2.5",
+        "title": "Format Specifiers and Precision Formatting in printf",
+        "slug": "format-specifiers-precision-formatting"
+      },
+      {
+        "id": "c-beg-t3.1",
+        "title": "Arithmetic and Assignment Operators",
+        "slug": "arithmetic-and-assignment-operators"
+      },
+      {
+        "id": "c-beg-t3.2",
+        "title": "Relational and Equality Operators",
+        "slug": "relational-and-equality-operators"
+      },
+      {
+        "id": "c-beg-t3.3",
+        "title": "Logical Operators (AND, OR, NOT) & Short-Circuit Evaluation",
+        "slug": "logical-operators-short-circuit-evaluation"
+      },
+      {
+        "id": "c-beg-t3.4",
+        "title": "Increment and Decrement Operators (Prefix vs Postfix)",
+        "slug": "increment-decrement-operators-prefix-postfix"
+      },
+      {
+        "id": "c-beg-t3.5",
+        "title": "Bitwise Operators Basics (&, |, ^, ~, <<, >>)",
+        "slug": "bitwise-operators-basics"
+      },
+      {
+        "id": "c-beg-t3.6",
+        "title": "Operator Precedence, Associativity, and Parentheses",
+        "slug": "operator-precedence-associativity"
+      },
+      {
+        "id": "c-beg-t4.1",
+        "title": "Simple if and if-else Decision Structures",
+        "slug": "simple-if-and-if-else-structures"
+      },
+      {
+        "id": "c-beg-t4.2",
+        "title": "Nested if Statements and if-else-if Ladders",
+        "slug": "nested-if-and-if-else-if-ladders"
+      },
+      {
+        "id": "c-beg-t4.3",
+        "title": "The Conditional (Ternary) Operator (? :)",
+        "slug": "conditional-ternary-operator"
+      },
+      {
+        "id": "c-beg-t4.4",
+        "title": "The switch-case Statement, Fallthrough, and default Case",
+        "slug": "switch-case-statement-fallthrough"
+      },
+      {
+        "id": "c-beg-t4.5",
+        "title": "Menu-Driven Console Application Patterns",
+        "slug": "menu-driven-console-application-patterns"
+      },
+      {
+        "id": "c-beg-t5.1",
+        "title": "The while Loop: Pre-Test Iteration",
+        "slug": "while-loop-pre-test-iteration"
+      },
+      {
+        "id": "c-beg-t5.2",
+        "title": "The do-while Loop: Post-Test Iteration",
+        "slug": "do-while-loop-post-test-iteration"
+      },
+      {
+        "id": "c-beg-t5.3",
+        "title": "The for Loop: Counter-Controlled Iteration",
+        "slug": "for-loop-counter-controlled-iteration"
+      },
+      {
+        "id": "c-beg-t5.4",
+        "title": "Loop Jump Statements: break and continue",
+        "slug": "loop-jump-statements-break-continue"
+      },
+      {
+        "id": "c-beg-t5.5",
+        "title": "Nested Loops and Pattern Printing Algorithms",
+        "slug": "nested-loops-pattern-printing-algorithms"
+      },
+      {
+        "id": "c-beg-t6.1",
+        "title": "One-Dimensional Arrays: Declaration, Storage, and Indexing",
+        "slug": "one-dimensional-arrays-indexing"
+      },
+      {
+        "id": "c-beg-t6.2",
+        "title": "Array Traversal, Linear Search, and Bubble Sort",
+        "slug": "array-traversal-linear-search-bubble-sort"
+      },
+      {
+        "id": "c-beg-t6.3",
+        "title": "Two-Dimensional Arrays and Matrix Operations (Addition, Multiplication)",
+        "slug": "two-dimensional-arrays-matrix-operations"
+      },
+      {
+        "id": "c-beg-t6.4",
+        "title": "Character Arrays and the Null Terminator (\\0)",
+        "slug": "character-arrays-null-terminator"
+      },
+      {
+        "id": "c-beg-t6.5",
+        "title": "String Handling with string.h (strlen, strcpy, strcat, strcmp)",
+        "slug": "string-handling-string-h-functions"
+      },
+      {
+        "id": "c-beg-t7.1",
+        "title": "Function Prototypes, Definitions, and Return Values",
+        "slug": "function-prototypes-definitions-return-values"
+      },
+      {
+        "id": "c-beg-t7.2",
+        "title": "Function Parameters and Call-by-Value Semantics",
+        "slug": "function-parameters-call-by-value"
+      },
+      {
+        "id": "c-beg-t7.3",
+        "title": "Passing 1D and 2D Arrays to Functions",
+        "slug": "passing-arrays-to-functions"
+      },
+      {
+        "id": "c-beg-t7.4",
+        "title": "Variable Scope, Lifetime, and Storage Classes (auto, static, extern, register)",
+        "slug": "variable-scope-lifetime-storage-classes"
+      },
+      {
+        "id": "c-beg-t7.5",
+        "title": "Introduction to Recursion with Factorial and Fibonacci",
+        "slug": "introduction-to-recursion-factorial-fibonacci"
+      },
+      {
+        "id": "c-beg-t8.1",
+        "title": "Project 1: Command-Line Menu Calculator",
+        "slug": "project-1-command-line-calculator"
+      },
+      {
+        "id": "c-beg-t8.2",
+        "title": "Project 2: Number Analysis and Prime Number Checker",
+        "slug": "project-2-number-analysis-prime-checker"
+      },
+      {
+        "id": "c-beg-t8.3",
+        "title": "Project 3: Student Marksheet and Grading Engine",
+        "slug": "project-3-student-marksheet-grading-engine"
+      },
+      {
+        "id": "c-beg-t8.4",
+        "title": "Project 4: Text-Based Tic-Tac-Toe Game with 2D Arrays",
+        "slug": "project-4-tic-tac-toe-game"
+      }
+    ],
+    "seo": {
+      "title": "C Programming for Beginners Tutorial: Complete Step-by-Step Guide | MSK Institute",
+      "description": "Master C programming foundations from scratch with hands-on tutorials. Learn compilation, data types, operators, loops, arrays, strings, functions, and 4 practical console projects.",
+      "keywords": [
+        "c programming for beginners",
+        "c language tutorial",
+        "learn c programming step by step",
+        "c programming notes",
+        "c course shikohabad",
+        "c basics with examples",
+        "c programming compiler gcc",
+        "c functions and arrays"
+      ]
+    }
+  },
+  {
+    "featured": true,
+    "id": "tut-c-programming-for-intermediate",
+    "slug": "c-programming-for-intermediate",
+    "courseSlug": "c-programming-for-intermediate",
+    "title": "C Programming for Intermediate",
+    "icon": "c",
+    "badge": "Intermediate (Level 2)",
+    "tags": [
+      "Intermediate",
+      "programming",
+      "c",
+      "pointers",
+      "memory",
+      "structs",
+      "file-handling"
+    ],
+    "documentationTitle": "Complete C Programming for Intermediate Tutorial & Interactive Documentation",
+    "shortDescription": "Elevate your C programming skills in 1 month: Pointers, dynamic memory allocation (malloc, calloc, realloc, free), structs, unions, binary file handling, preprocessor macros, and multi-file projects.",
+    "lessonsCount": 7,
+    "totalHours": "25h",
+    "topicsCount": 33,
+    "githubRepo": "github.com/msk-institute/c-programming-for-intermediate",
+    "updatedAt": "2026-10-22",
+    "topics": [
+      {
+        "id": "c-int-t1.1",
+        "title": "Memory Architecture: Stack, Addresses, and Address-Of Operator (&)",
+        "slug": "memory-architecture-stack-addresses"
+      },
+      {
+        "id": "c-int-t1.2",
+        "title": "Pointer Declaration, Initialization, and Dereferencing (*)",
+        "slug": "pointer-declaration-initialization-dereferencing"
+      },
+      {
+        "id": "c-int-t1.3",
+        "title": "Pointer Arithmetic and Type Scaling",
+        "slug": "pointer-arithmetic-type-scaling"
+      },
+      {
+        "id": "c-int-t1.4",
+        "title": "Pointers to Pointers (Double Pointers) and Indirection Levels",
+        "slug": "pointers-to-pointers-double-pointers"
+      },
+      {
+        "id": "c-int-t1.5",
+        "title": "NULL Pointers, Void Pointers (void*), and Wild Pointers",
+        "slug": "null-void-wild-pointers"
+      },
+      {
+        "id": "c-int-t2.1",
+        "title": "Array Decay and the Equivalence of Arrays and Pointers",
+        "slug": "array-decay-equivalence-arrays-pointers"
+      },
+      {
+        "id": "c-int-t2.2",
+        "title": "Pointer-Based String Manipulation without Library Functions",
+        "slug": "pointer-based-string-manipulation"
+      },
+      {
+        "id": "c-int-t2.3",
+        "title": "Call-by-Reference: Passing Pointers to Functions",
+        "slug": "call-by-reference-passing-pointers"
+      },
+      {
+        "id": "c-int-t2.4",
+        "title": "Returning Pointers from Functions & Dangling Pointer Pitfalls",
+        "slug": "returning-pointers-dangling-pointer-pitfalls"
+      },
+      {
+        "id": "c-int-t2.5",
+        "title": "Function Pointers: Syntax, Arrays of Function Pointers, and Callbacks",
+        "slug": "function-pointers-syntax-callbacks"
+      },
+      {
+        "id": "c-int-t3.1",
+        "title": "Heap vs Stack Memory Lifecycles",
+        "slug": "heap-vs-stack-memory-lifecycles"
+      },
+      {
+        "id": "c-int-t3.2",
+        "title": "malloc() vs calloc(): Contiguous and Zeroed Allocation",
+        "slug": "malloc-vs-calloc-allocation"
+      },
+      {
+        "id": "c-int-t3.3",
+        "title": "realloc(): Dynamic Array Resizing and In-Place Expansion",
+        "slug": "realloc-dynamic-array-resizing"
+      },
+      {
+        "id": "c-int-t3.4",
+        "title": "free() and Memory Hygiene: Avoiding Memory Leaks and Double Free",
+        "slug": "free-memory-hygiene-avoiding-leaks"
+      },
+      {
+        "id": "c-int-t3.5",
+        "title": "Building a Self-Resizing Dynamic Array (Vector) in C",
+        "slug": "building-dynamic-array-vector-in-c"
+      },
+      {
+        "id": "c-int-t4.1",
+        "title": "Defining Structures, Dot Operator (.), and Typedef Aliasing",
+        "slug": "defining-structures-dot-operator-typedef"
+      },
+      {
+        "id": "c-int-t4.2",
+        "title": "Structure Pointers and Arrow Operator (->)",
+        "slug": "structure-pointers-arrow-operator"
+      },
+      {
+        "id": "c-int-t4.3",
+        "title": "Nested Structures and Arrays of Structures",
+        "slug": "nested-structures-arrays-of-structures"
+      },
+      {
+        "id": "c-int-t4.4",
+        "title": "Memory Padding, Structure Alignment, and sizeof(struct)",
+        "slug": "memory-padding-structure-alignment"
+      },
+      {
+        "id": "c-int-t4.5",
+        "title": "Unions and Bit-Fields for Space-Efficient Data Packing",
+        "slug": "unions-and-bit-fields-data-packing"
+      },
+      {
+        "id": "c-int-t5.1",
+        "title": "File Streams in C: FILE Pointer, fopen(), and fclose()",
+        "slug": "file-streams-file-pointer-fopen-fclose"
+      },
+      {
+        "id": "c-int-t5.2",
+        "title": "Text File Modes (r, w, a, r+) and Formatted I/O (fprintf, fscanf)",
+        "slug": "text-file-modes-fprintf-fscanf"
+      },
+      {
+        "id": "c-int-t5.3",
+        "title": "Character and Line I/O: fgetc(), fputc(), fgets(), fputs()",
+        "slug": "character-and-line-io-fgets-fputs"
+      },
+      {
+        "id": "c-int-t5.4",
+        "title": "Binary File I/O: fread() and fwrite() for Struct Serialization",
+        "slug": "binary-file-io-fread-fwrite"
+      },
+      {
+        "id": "c-int-t5.5",
+        "title": "Random Access in Files: fseek(), ftell(), and rewind()",
+        "slug": "random-access-files-fseek-ftell-rewind"
+      },
+      {
+        "id": "c-int-t6.1",
+        "title": "#define Object-Like and Function-Like Macros",
+        "slug": "define-object-and-function-macros"
+      },
+      {
+        "id": "c-int-t6.2",
+        "title": "Stringification (#) and Token-Pasting (##) Preprocessor Operators",
+        "slug": "stringification-and-token-pasting"
+      },
+      {
+        "id": "c-int-t6.3",
+        "title": "Conditional Compilation (#ifdef, #ifndef, #endif, #pragma once)",
+        "slug": "conditional-compilation-header-guards"
+      },
+      {
+        "id": "c-int-t6.4",
+        "title": "Organizing Multi-File C Projects with Custom Header (.h) Files",
+        "slug": "organizing-multi-file-c-projects-headers"
+      },
+      {
+        "id": "c-int-t6.5",
+        "title": "Makefiles & Build Automation Fundamentals for C",
+        "slug": "makefiles-build-automation-fundamentals"
+      },
+      {
+        "id": "c-int-t7.1",
+        "title": "Project 1: Command-Line Contact Book with Binary File Storage",
+        "slug": "project-1-contact-book-binary-storage"
+      },
+      {
+        "id": "c-int-t7.2",
+        "title": "Project 2: Dynamic Integer Vector Library (C Container)",
+        "slug": "project-2-dynamic-vector-library"
+      },
+      {
+        "id": "c-int-t7.3",
+        "title": "Project 3: Student Database System with Search, Edit, and Sort",
+        "slug": "project-3-student-database-system"
+      }
+    ],
+    "seo": {
+      "title": "C Programming for Intermediate Tutorial: Pointers, Memory & Structs | MSK Institute",
+      "description": "Master intermediate C programming: pointers, dynamic memory management (malloc, free), structs, unions, binary file handling, preprocessor macros, and portfolio projects.",
+      "keywords": [
+        "c programming for intermediate",
+        "c pointers tutorial",
+        "dynamic memory allocation in c",
+        "malloc free realloc c",
+        "structures and unions in c",
+        "c file handling tutorial",
+        "c notes intermediate"
+      ]
+    }
+  },
+  {
+    "featured": true,
+    "id": "tut-c-programming-for-advanced",
+    "slug": "c-programming-for-advanced",
+    "courseSlug": "c-programming-for-advanced",
+    "title": "C Programming for Advanced",
+    "icon": "c",
+    "badge": "Advanced (Level 3)",
+    "tags": [
+      "Advanced",
+      "programming",
+      "c",
+      "data-structures",
+      "concurrency",
+      "networking",
+      "systems"
+    ],
+    "documentationTitle": "Complete C Programming for Advanced Tutorial & Interactive Documentation",
+    "shortDescription": "Master systems-level C engineering in 1 month: data structures (linked lists, BSTs, queues), bitwise systems programming, POSIX threads, socket programming, memory profilers (Valgrind, AddressSanitizer), and low-level optimization.",
+    "lessonsCount": 7,
+    "totalHours": "25h",
+    "topicsCount": 29,
+    "githubRepo": "github.com/msk-institute/c-programming-for-advanced",
+    "updatedAt": "2026-10-22",
+    "topics": [
+      {
+        "id": "c-adv-t1.1",
+        "title": "Singly Linked List Architecture: Node Creation and Memory Links",
+        "slug": "singly-linked-list-architecture"
+      },
+      {
+        "id": "c-adv-t1.2",
+        "title": "Insertion at Head, Tail, and Arbitrary Index in Linked Lists",
+        "slug": "insertion-linked-lists"
+      },
+      {
+        "id": "c-adv-t1.3",
+        "title": "Deletion, Searching, and Memory Deallocation in Linked Lists",
+        "slug": "deletion-searching-memory-deallocation-linked-lists"
+      },
+      {
+        "id": "c-adv-t1.4",
+        "title": "Doubly Linked Lists & Circular Linked Lists",
+        "slug": "doubly-circular-linked-lists"
+      },
+      {
+        "id": "c-adv-t1.5",
+        "title": "Reversing a Linked List In-Place: Pointer Manipulation",
+        "slug": "reversing-linked-list-in-place"
+      },
+      {
+        "id": "c-adv-t2.1",
+        "title": "Stack Implementation using Dynamic Arrays and Linked Lists",
+        "slug": "stack-implementation-dynamic-arrays-linked-lists"
+      },
+      {
+        "id": "c-adv-t2.2",
+        "title": "Queue Implementation: Linear, Circular, and Priority Queues",
+        "slug": "queue-implementation-linear-circular-priority"
+      },
+      {
+        "id": "c-adv-t2.3",
+        "title": "Binary Search Tree (BST) Construction and Node Traversal (Inorder, Preorder, Postorder)",
+        "slug": "bst-construction-node-traversal"
+      },
+      {
+        "id": "c-adv-t2.4",
+        "title": "BST Insertion, Deletion, and Node Search Algorithms",
+        "slug": "bst-insertion-deletion-search"
+      },
+      {
+        "id": "c-adv-t2.5",
+        "title": "Memory Cleanup: Recursive Tree Deallocation",
+        "slug": "recursive-tree-memory-deallocation"
+      },
+      {
+        "id": "c-adv-t3.1",
+        "title": "Bit Masking, Setting, Clearing, and Toggling Specific Bits",
+        "slug": "bit-masking-setting-clearing-toggling"
+      },
+      {
+        "id": "c-adv-t3.2",
+        "title": "Bitwise Flags, Permission Systems, and Fast Bit Tricks",
+        "slug": "bitwise-flags-permission-systems"
+      },
+      {
+        "id": "c-adv-t3.3",
+        "title": "Endianness (Big Endian vs Little Endian) Detection and Conversion",
+        "slug": "endianness-detection-conversion"
+      },
+      {
+        "id": "c-adv-t3.4",
+        "title": "Binary Data Packing and Serialization Protocols",
+        "slug": "binary-data-packing-serialization"
+      },
+      {
+        "id": "c-adv-t4.1",
+        "title": "Processes vs Threads and POSIX System Calls (fork, exec, wait)",
+        "slug": "processes-vs-threads-posix-calls"
+      },
+      {
+        "id": "c-adv-t4.2",
+        "title": "Creating and Joining Threads with pthreads (pthread_create, pthread_join)",
+        "slug": "creating-joining-threads-pthreads"
+      },
+      {
+        "id": "c-adv-t4.3",
+        "title": "Race Conditions and Thread Synchronization with Mutexes (pthread_mutex)",
+        "slug": "race-conditions-mutex-synchronization"
+      },
+      {
+        "id": "c-adv-t4.4",
+        "title": "Condition Variables and Producer-Consumer Pattern in C",
+        "slug": "condition-variables-producer-consumer"
+      },
+      {
+        "id": "c-adv-t5.1",
+        "title": "BSD Sockets Model: socket(), bind(), listen(), accept()",
+        "slug": "bsd-sockets-model-socket-bind-listen-accept"
+      },
+      {
+        "id": "c-adv-t5.2",
+        "title": "Building a TCP Echo Server and Client in C",
+        "slug": "building-tcp-echo-server-client"
+      },
+      {
+        "id": "c-adv-t5.3",
+        "title": "Multi-Client Concurrency with select() or Threads",
+        "slug": "multi-client-concurrency-select-threads"
+      },
+      {
+        "id": "c-adv-t5.4",
+        "title": "Handling Network Endianness with htons(), htonl(), ntohs()",
+        "slug": "network-endianness-htons-htonl"
+      },
+      {
+        "id": "c-adv-t6.1",
+        "title": "Interactive Debugging with GDB: Breakpoints, Step, and Backtraces",
+        "slug": "interactive-debugging-gdb-breakpoints"
+      },
+      {
+        "id": "c-adv-t6.2",
+        "title": "Detecting Memory Leaks with Valgrind Memcheck",
+        "slug": "detecting-memory-leaks-valgrind"
+      },
+      {
+        "id": "c-adv-t6.3",
+        "title": "GCC/Clang Sanitizers: AddressSanitizer and UndefinedBehaviorSanitizer",
+        "slug": "gcc-clang-address-sanitizer"
+      },
+      {
+        "id": "c-adv-t6.4",
+        "title": "Compiler Optimizations (-O1, -O2, -O3) and Inline Assembly Basics",
+        "slug": "compiler-optimizations-inline-assembly"
+      },
+      {
+        "id": "c-adv-t7.1",
+        "title": "Capstone 1: High-Performance In-Memory Key-Value Store",
+        "slug": "capstone-1-in-memory-key-value-store"
+      },
+      {
+        "id": "c-adv-t7.2",
+        "title": "Capstone 2: Multi-Client Concurrent Socket Chat Server",
+        "slug": "capstone-2-multi-client-socket-chat-server"
+      },
+      {
+        "id": "c-adv-t7.3",
+        "title": "Capstone 3: Custom Unix-Style Shell with Command Parsing and Pipes",
+        "slug": "capstone-3-custom-unix-shell"
+      }
+    ],
+    "seo": {
+      "title": "C Programming for Advanced Tutorial: Systems, Concurrency & Sockets | MSK Institute",
+      "description": "Master advanced C programming: linked lists, binary search trees, bit manipulation, POSIX multithreading (pthreads), BSD network sockets, Valgrind, and systems capstones.",
+      "keywords": [
+        "c programming for advanced",
+        "data structures in c",
+        "c linked lists tutorial",
+        "pthreads c tutorial",
+        "socket programming in c",
+        "c systems programming",
+        "c notes advanced"
+      ]
+    }
+  },
+  {
+    "featured": true,
+    "id": "tut-cpp-for-beginners",
+    "slug": "cpp-for-beginners",
+    "courseSlug": "cpp-for-beginners",
+    "title": "C++ for Beginners",
+    "icon": "cpp",
+    "badge": "Beginner to Intermediate",
+    "tags": [
+      "Beginner",
+      "C++",
+      "Modern C++",
+      "OOP",
+      "Programming",
+      "Systems",
+      "Standard Library"
+    ],
+    "documentationTitle": "Complete Modern C++ for Beginners Tutorial & Interactive Documentation",
+    "shortDescription": "Master Modern C++ syntax, iostream streams, auto type deduction, references, const-correctness, constexpr, loops, functions, std::string, std::array, and 4 practical console capstones from scratch.",
+    "lessonsCount": 8,
+    "totalHours": "25h",
+    "topicsCount": 36,
+    "githubRepo": "github.com/msk-institute/cpp-for-beginners",
+    "updatedAt": "2026-10-22",
+    "topics": [
+      {
+        "id": "cpp-beg-t1.1",
+        "title": "Evolution of C++: From C with Classes to Modern C++ (C++20/C++23)",
+        "slug": "evolution-of-cpp-modern-standards"
+      },
+      {
+        "id": "cpp-beg-t1.2",
+        "title": "Setting up GCC, Clang, VS Code, and Modern C++ Compilers",
+        "slug": "setting-up-gcc-clang-vscode-cpp"
+      },
+      {
+        "id": "cpp-beg-t1.3",
+        "title": "Structure of a Modern C++ Program & iostream Streams (std::cin, std::cout, std::cerr)",
+        "slug": "structure-of-modern-cpp-iostream"
+      },
+      {
+        "id": "cpp-beg-t1.4",
+        "title": "Namespaces: Purpose, using namespace std Trade-offs, and Custom Namespaces",
+        "slug": "namespaces-std-custom-namespaces"
+      },
+      {
+        "id": "cpp-beg-t1.5",
+        "title": "Comments, Indentation, and Modern C++ Coding Guidelines",
+        "slug": "comments-indentation-cpp-guidelines"
+      },
+      {
+        "id": "cpp-beg-t2.1",
+        "title": "Primitive Types (int, double, char, bool) & Fixed-Width Integers (cstdint)",
+        "slug": "primitive-types-fixed-width-integers"
+      },
+      {
+        "id": "cpp-beg-t2.2",
+        "title": "Type Deduction with auto and decltype",
+        "slug": "type-deduction-auto-decltype"
+      },
+      {
+        "id": "cpp-beg-t2.3",
+        "title": "The const Qualifier, Const-Correctness, and constexpr Compile-Time Constants",
+        "slug": "const-qualifier-constexpr"
+      },
+      {
+        "id": "cpp-beg-t2.4",
+        "title": "Modern C++ Type Casting: static_cast vs C-Style Casts",
+        "slug": "static-cast-vs-c-style-casts"
+      },
+      {
+        "id": "cpp-beg-t2.5",
+        "title": "Variable Scope, Initialization Styles (Uniform Initializer {}), and Lifetime",
+        "slug": "variable-scope-uniform-initialization"
+      },
+      {
+        "id": "cpp-beg-t3.1",
+        "title": "Arithmetic, Assignment, and Compound Operators",
+        "slug": "arithmetic-assignment-compound-operators"
+      },
+      {
+        "id": "cpp-beg-t3.2",
+        "title": "Relational, Equality, and Three-Way Comparison (Spaceship Operator <=>)",
+        "slug": "relational-three-way-comparison-spaceship"
+      },
+      {
+        "id": "cpp-beg-t3.3",
+        "title": "Logical Operators and Short-Circuiting",
+        "slug": "logical-operators-short-circuiting"
+      },
+      {
+        "id": "cpp-beg-t3.4",
+        "title": "Math Functions with <cmath> (pow, sqrt, round, ceil, floor)",
+        "slug": "math-functions-cmath"
+      },
+      {
+        "id": "cpp-beg-t3.5",
+        "title": "Operator Precedence and Associativity Rules",
+        "slug": "operator-precedence-associativity-cpp"
+      },
+      {
+        "id": "cpp-beg-t4.1",
+        "title": "if and else-if Branching with Modern Init-Statements",
+        "slug": "if-else-branching-init-statements"
+      },
+      {
+        "id": "cpp-beg-t4.2",
+        "title": "The Conditional (Ternary) Operator",
+        "slug": "conditional-ternary-operator-cpp"
+      },
+      {
+        "id": "cpp-beg-t4.3",
+        "title": "switch-case Statements and [[fallthrough]] Attribute",
+        "slug": "switch-case-fallthrough-cpp"
+      },
+      {
+        "id": "cpp-beg-t4.4",
+        "title": "Building Interactive Console Menus with Input Validation",
+        "slug": "interactive-console-menus-input-validation"
+      },
+      {
+        "id": "cpp-beg-t5.1",
+        "title": "while and do-while Loops",
+        "slug": "while-and-do-while-loops-cpp"
+      },
+      {
+        "id": "cpp-beg-t5.2",
+        "title": "Traditional for Loops with Multiple Counters",
+        "slug": "traditional-for-loops-cpp"
+      },
+      {
+        "id": "cpp-beg-t5.3",
+        "title": "Modern Range-Based for Loops (for (const auto& item : items))",
+        "slug": "range-based-for-loops"
+      },
+      {
+        "id": "cpp-beg-t5.4",
+        "title": "Loop Control: break, continue, and Nested Iteration Patterns",
+        "slug": "loop-control-break-continue-nested"
+      },
+      {
+        "id": "cpp-beg-t6.1",
+        "title": "Function Declarations, Definitions, and Return Types",
+        "slug": "function-declarations-definitions-returns"
+      },
+      {
+        "id": "cpp-beg-t6.2",
+        "title": "Pass-by-Value vs Pass-by-Reference (&)",
+        "slug": "pass-by-value-vs-reference"
+      },
+      {
+        "id": "cpp-beg-t6.3",
+        "title": "Pass-by-Const-Reference (const Type&) for Efficiency",
+        "slug": "pass-by-const-reference"
+      },
+      {
+        "id": "cpp-beg-t6.4",
+        "title": "Default Arguments and Function Overloading",
+        "slug": "default-arguments-function-overloading"
+      },
+      {
+        "id": "cpp-beg-t6.5",
+        "title": "Inline Functions and Intro to Recursion",
+        "slug": "inline-functions-recursion-cpp"
+      },
+      {
+        "id": "cpp-beg-t7.1",
+        "title": "std::string Basics: Concatenation, length(), size(), and empty()",
+        "slug": "std-string-basics-methods"
+      },
+      {
+        "id": "cpp-beg-t7.2",
+        "title": "String Substrings, Searching (find()), and Modification (replace, erase)",
+        "slug": "string-substrings-search-modification"
+      },
+      {
+        "id": "cpp-beg-t7.3",
+        "title": "Fixed-Size Arrays with std::array vs C-Style Arrays",
+        "slug": "std-array-vs-c-arrays"
+      },
+      {
+        "id": "cpp-beg-t7.4",
+        "title": "Multi-Dimensional Arrays and Grid Traversal",
+        "slug": "multidimensional-arrays-grid-traversal"
+      },
+      {
+        "id": "cpp-beg-t8.1",
+        "title": "Project 1: Scientific Calculator with Memory Registers",
+        "slug": "project-1-scientific-calculator"
+      },
+      {
+        "id": "cpp-beg-t8.2",
+        "title": "Project 2: Number Guessing Game with High Score Tracking",
+        "slug": "project-2-number-guessing-game"
+      },
+      {
+        "id": "cpp-beg-t8.3",
+        "title": "Project 3: Student Grade Report & GPA Calculator",
+        "slug": "project-3-student-grade-report"
+      },
+      {
+        "id": "cpp-beg-t8.4",
+        "title": "Project 4: Text-Based Console ATM Simulator",
+        "slug": "project-4-console-atm-simulator"
+      }
+    ],
+    "seo": {
+      "metaTitle": "C++ for Beginners Tutorial | Learn Modern C++ Online - MSK Institute",
+      "metaDescription": "Free comprehensive Modern C++ for Beginners tutorial. Learn C++20/C++23 syntax, iostream, auto, references, constexpr, arrays, functions, and console projects.",
+      "keywords": [
+        "c++ for beginners",
+        "learn modern cpp",
+        "c++ tutorial hindi english",
+        "c++20 tutorial",
+        "c++ basics msk institute",
+        "c++ programming online course"
+      ]
+    }
+  },
+  {
+    "featured": true,
+    "id": "tut-cpp-for-intermediate",
+    "slug": "cpp-for-intermediate",
+    "courseSlug": "cpp-for-intermediate",
+    "title": "C++ for Intermediate",
+    "icon": "cpp",
+    "badge": "Intermediate to Advanced",
+    "tags": [
+      "Intermediate",
+      "C++",
+      "OOP",
+      "Polymorphism",
+      "STL",
+      "RAII",
+      "File IO"
+    ],
+    "documentationTitle": "Complete C++ for Intermediate Tutorial & Object-Oriented STL Documentation",
+    "shortDescription": "Master C++ classes, constructors, destructors, RAII, copy semantics, operator overloading, inheritance, virtual functions, STL containers and algorithms, exceptions, and file streams.",
+    "lessonsCount": 7,
+    "totalHours": "30h",
+    "topicsCount": 32,
+    "githubRepo": "github.com/msk-institute/cpp-for-intermediate",
+    "updatedAt": "2026-10-22",
+    "topics": [
+      {
+        "id": "cpp-int-t1.1",
+        "title": "Classes vs Structs in C++ and Access Specifiers (public, private, protected)",
+        "slug": "classes-vs-structs-access-specifiers"
+      },
+      {
+        "id": "cpp-int-t1.2",
+        "title": "Member Variables and Member Methods",
+        "slug": "member-variables-and-methods"
+      },
+      {
+        "id": "cpp-int-t1.3",
+        "title": "Constructors: Default, Parameterized, and Member Initializer Lists",
+        "slug": "constructors-member-initializer-lists"
+      },
+      {
+        "id": "cpp-int-t1.4",
+        "title": "Destructors and Resource Cleanup Basics",
+        "slug": "destructors-resource-cleanup-basics"
+      },
+      {
+        "id": "cpp-int-t1.5",
+        "title": "The this Pointer and Const Member Functions",
+        "slug": "this-pointer-const-member-functions"
+      },
+      {
+        "id": "cpp-int-t2.1",
+        "title": "Shallow Copy vs Deep Copy and Memory Double Free Bug",
+        "slug": "shallow-copy-vs-deep-copy-double-free"
+      },
+      {
+        "id": "cpp-int-t2.2",
+        "title": "Copy Constructor and Copy Assignment Operator (Rule of Three)",
+        "slug": "copy-constructor-assignment-rule-of-three"
+      },
+      {
+        "id": "cpp-int-t2.3",
+        "title": "Overloading Arithmetic Operators (+, -, *, /)",
+        "slug": "overloading-arithmetic-operators"
+      },
+      {
+        "id": "cpp-int-t2.4",
+        "title": "Overloading Comparison Operators (==, !=, <) and Subscript Operator ([])",
+        "slug": "overloading-comparison-subscript-operators"
+      },
+      {
+        "id": "cpp-int-t2.5",
+        "title": "Overloading Stream Insertion (<<) and Extraction (>>) Operators with friend Functions",
+        "slug": "overloading-stream-insertion-extraction-friend"
+      },
+      {
+        "id": "cpp-int-t3.1",
+        "title": "Base Classes and Derived Classes (Single and Multi-Level Inheritance)",
+        "slug": "base-and-derived-classes-inheritance"
+      },
+      {
+        "id": "cpp-int-t3.2",
+        "title": "Constructor and Destructor Call Order in Inheritance",
+        "slug": "constructor-destructor-call-order-inheritance"
+      },
+      {
+        "id": "cpp-int-t3.3",
+        "title": "Virtual Functions, Dynamic Dispatch, and the vtable Mechanism",
+        "slug": "virtual-functions-dynamic-dispatch-vtable"
+      },
+      {
+        "id": "cpp-int-t3.4",
+        "title": "Pure Virtual Functions, Abstract Classes, and Interface Design",
+        "slug": "pure-virtual-functions-abstract-classes"
+      },
+      {
+        "id": "cpp-int-t3.5",
+        "title": "The override and final Specifiers, and Virtual Destructors",
+        "slug": "override-final-specifiers-virtual-destructors"
+      },
+      {
+        "id": "cpp-int-t4.1",
+        "title": "Overview of the STL: Containers, Iterators, and Algorithms",
+        "slug": "stl-overview-containers-iterators-algorithms"
+      },
+      {
+        "id": "cpp-int-t4.2",
+        "title": "std::vector: Dynamic Resizing, capacity() vs size(), and push_back vs emplace_back",
+        "slug": "std-vector-capacity-push-back-emplace-back"
+      },
+      {
+        "id": "cpp-int-t4.3",
+        "title": "std::deque and std::list (Doubly-Linked Sequence)",
+        "slug": "std-deque-and-std-list"
+      },
+      {
+        "id": "cpp-int-t4.4",
+        "title": "Associative Containers: std::set, std::multiset, std::map, and std::multimap",
+        "slug": "associative-containers-map-set-multimap"
+      },
+      {
+        "id": "cpp-int-t4.5",
+        "title": "Unordered Containers: std::unordered_map and std::unordered_set (Hash Tables)",
+        "slug": "unordered-containers-hash-tables"
+      },
+      {
+        "id": "cpp-int-t5.1",
+        "title": "Iterator Types: begin(), end(), rbegin(), rend(), cbegin()",
+        "slug": "iterator-types-begin-end-rbegin-cbegin"
+      },
+      {
+        "id": "cpp-int-t5.2",
+        "title": "Sorting and Searching: std::sort, std::stable_sort, std::binary_search",
+        "slug": "sorting-searching-std-sort-binary-search"
+      },
+      {
+        "id": "cpp-int-t5.3",
+        "title": "Transforming and Accumulating: std::transform, std::accumulate, std::count_if",
+        "slug": "transforming-accumulating-algorithms"
+      },
+      {
+        "id": "cpp-int-t5.4",
+        "title": "Lambda Expressions: Syntax, Capture Clauses ([=], [&]), and Predicates",
+        "slug": "lambda-expressions-capture-clauses-predicates"
+      },
+      {
+        "id": "cpp-int-t6.1",
+        "title": "Exception Handling with try, catch, and throw",
+        "slug": "exception-handling-try-catch-throw"
+      },
+      {
+        "id": "cpp-int-t6.2",
+        "title": "Standard Exception Hierarchy (std::exception, std::runtime_error)",
+        "slug": "standard-exception-hierarchy"
+      },
+      {
+        "id": "cpp-int-t6.3",
+        "title": "File I/O with std::ifstream and std::ofstream",
+        "slug": "file-io-ifstream-ofstream"
+      },
+      {
+        "id": "cpp-int-t6.4",
+        "title": "Reading/Writing Binary Files with read() and write()",
+        "slug": "reading-writing-binary-files"
+      },
+      {
+        "id": "cpp-int-t6.5",
+        "title": "String Streams with std::stringstream for Parsing",
+        "slug": "string-streams-stringstream-parsing"
+      },
+      {
+        "id": "cpp-int-t7.1",
+        "title": "Project 1: Object-Oriented Student Management System with File Persistence",
+        "slug": "project-1-student-management-system-files"
+      },
+      {
+        "id": "cpp-int-t7.2",
+        "title": "Project 2: Inventory & Billing Engine Using STL Map and Vector",
+        "slug": "project-2-inventory-billing-stl-map"
+      },
+      {
+        "id": "cpp-int-t7.3",
+        "title": "Project 3: Bank Account Class System with Polymorphic Savings/Checking Accounts",
+        "slug": "project-3-polymorphic-bank-account-system"
+      }
+    ],
+    "seo": {
+      "metaTitle": "C++ for Intermediate Tutorial | Learn OOP & STL - MSK Institute",
+      "metaDescription": "Free comprehensive C++ for Intermediate tutorial. Master OOP, inheritance, virtual functions, operator overloading, STL containers, iterators, and file I/O.",
+      "keywords": [
+        "c++ for intermediate",
+        "c++ oop tutorial",
+        "c++ stl tutorial",
+        "learn c++ virtual functions",
+        "c++ operator overloading msk institute",
+        "c++ programming intermediate course"
+      ]
+    }
+  },
+  {
+    "featured": true,
+    "id": "tut-cpp-for-advanced",
+    "slug": "cpp-for-advanced",
+    "courseSlug": "cpp-for-advanced",
+    "title": "C++ for Advanced",
+    "icon": "cpp",
+    "badge": "Advanced Mastery",
+    "tags": [
+      "Advanced",
+      "C++",
+      "Move Semantics",
+      "Smart Pointers",
+      "Templates",
+      "Concurrency",
+      "C++20 Concepts"
+    ],
+    "documentationTitle": "Complete Modern C++ for Advanced Tutorial & Systems Architecture Documentation",
+    "shortDescription": "Master modern C++ move semantics, rvalue references, smart pointers, generic templates, SFINAE, C++20 concepts, multithreading concurrency, condition variables, and high-performance capstones.",
+    "lessonsCount": 6,
+    "totalHours": "35h",
+    "topicsCount": 28,
+    "githubRepo": "github.com/msk-institute/cpp-for-advanced",
+    "updatedAt": "2026-10-22",
+    "topics": [
+      {
+        "id": "cpp-adv-t1.1",
+        "title": "Lvalues vs Rvalues, Value Categories (glvalue, prvalue, xvalue)",
+        "slug": "lvalues-vs-rvalues-value-categories"
+      },
+      {
+        "id": "cpp-adv-t1.2",
+        "title": "Rvalue References (&&) and std::move Mechanics",
+        "slug": "rvalue-references-std-move-mechanics"
+      },
+      {
+        "id": "cpp-adv-t1.3",
+        "title": "Move Constructor and Move Assignment Operator",
+        "slug": "move-constructor-and-assignment-operator"
+      },
+      {
+        "id": "cpp-adv-t1.4",
+        "title": "The Rule of Five and Rule of Zero in Modern C++",
+        "slug": "rule-of-five-and-rule-of-zero"
+      },
+      {
+        "id": "cpp-adv-t1.5",
+        "title": "Perfect Forwarding with std::forward and Universal References",
+        "slug": "perfect-forwarding-universal-references"
+      },
+      {
+        "id": "cpp-adv-t2.1",
+        "title": "Resource Acquisition Is Initialization (RAII) Principle",
+        "slug": "raii-principle-resource-management"
+      },
+      {
+        "id": "cpp-adv-t2.2",
+        "title": "std::unique_ptr: Exclusive Ownership and std::make_unique",
+        "slug": "std-unique-ptr-make-unique"
+      },
+      {
+        "id": "cpp-adv-t2.3",
+        "title": "std::shared_ptr: Shared Reference-Counted Ownership and std::make_shared",
+        "slug": "std-shared-ptr-make-shared"
+      },
+      {
+        "id": "cpp-adv-t2.4",
+        "title": "std::weak_ptr: Breaking Circular References and Observer Patterns",
+        "slug": "std-weak-ptr-circular-references"
+      },
+      {
+        "id": "cpp-adv-t2.5",
+        "title": "Custom Deleters for Smart Pointers (C APIs, File Handles)",
+        "slug": "custom-deleters-smart-pointers"
+      },
+      {
+        "id": "cpp-adv-t3.1",
+        "title": "Function Templates and Class Templates",
+        "slug": "function-and-class-templates"
+      },
+      {
+        "id": "cpp-adv-t3.2",
+        "title": "Template Specialization (Full and Partial Specialization)",
+        "slug": "template-specialization-full-partial"
+      },
+      {
+        "id": "cpp-adv-t3.3",
+        "title": "Variadic Templates and Fold Expressions in Modern C++",
+        "slug": "variadic-templates-fold-expressions"
+      },
+      {
+        "id": "cpp-adv-t3.4",
+        "title": "Type Traits (<type_traits>), std::enable_if, and SFINAE",
+        "slug": "type-traits-sfinae-enable-if"
+      },
+      {
+        "id": "cpp-adv-t3.5",
+        "title": "Modern C++20 Concepts and Constraints (requires Clause)",
+        "slug": "cpp20-concepts-and-constraints"
+      },
+      {
+        "id": "cpp-adv-t4.1",
+        "title": "Creating and Joining Threads with std::thread and std::jthread",
+        "slug": "std-thread-and-std-jthread"
+      },
+      {
+        "id": "cpp-adv-t4.2",
+        "title": "Data Races and Thread Synchronization with std::mutex",
+        "slug": "data-races-mutex-synchronization"
+      },
+      {
+        "id": "cpp-adv-t4.3",
+        "title": "RAII Lock Wrappers: std::lock_guard, std::unique_lock, std::scoped_lock",
+        "slug": "raii-lock-wrappers-scoped-lock"
+      },
+      {
+        "id": "cpp-adv-t4.4",
+        "title": "Thread Signaling with std::condition_variable",
+        "slug": "thread-signaling-condition-variable"
+      },
+      {
+        "id": "cpp-adv-t4.5",
+        "title": "Asynchronous Tasks with std::async, std::future, and std::promise",
+        "slug": "async-tasks-future-promise"
+      },
+      {
+        "id": "cpp-adv-t5.1",
+        "title": "std::string_view: Zero-Copy String Passing",
+        "slug": "std-string-view-zero-copy"
+      },
+      {
+        "id": "cpp-adv-t5.2",
+        "title": "std::optional: Safe Representation of Nullable Values",
+        "slug": "std-optional-nullable-values"
+      },
+      {
+        "id": "cpp-adv-t5.3",
+        "title": "std::variant and std::visit: Type-Safe Tagged Unions",
+        "slug": "std-variant-visit-type-safe-unions"
+      },
+      {
+        "id": "cpp-adv-t5.4",
+        "title": "Structured Bindings (auto [a, b] = pair)",
+        "slug": "structured-bindings-tuples-maps"
+      },
+      {
+        "id": "cpp-adv-t5.5",
+        "title": "Introduction to C++20 Ranges & Views",
+        "slug": "cpp20-ranges-and-views"
+      },
+      {
+        "id": "cpp-adv-t6.1",
+        "title": "Capstone 1: Thread-Safe Concurrent Task Queue & Thread Pool",
+        "slug": "capstone-1-thread-pool-task-queue"
+      },
+      {
+        "id": "cpp-adv-t6.2",
+        "title": "Capstone 2: High-Performance LRU (Least Recently Used) Cache Engine",
+        "slug": "capstone-2-lru-cache-engine"
+      },
+      {
+        "id": "cpp-adv-t6.3",
+        "title": "Capstone 3: Custom Generic Expression Evaluator using Modern Templates",
+        "slug": "capstone-3-generic-expression-evaluator"
+      }
+    ],
+    "seo": {
+      "metaTitle": "C++ for Advanced Tutorial | Move Semantics, Templates & Concurrency - MSK Institute",
+      "metaDescription": "Free comprehensive C++ for Advanced tutorial. Master move semantics, smart pointers, templates, C++20 concepts, multithreading, and systems programming.",
+      "keywords": [
+        "c++ for advanced",
+        "c++ move semantics tutorial",
+        "c++ smart pointers unique shared weak",
+        "c++ multithreading concurrency",
+        "c++20 concepts tutorial msk institute",
+        "c++ systems programming"
+      ]
+    }
+  },
+  {
+    "featured": true,
+    "id": "tut-java-for-beginners",
+    "slug": "java-for-beginners",
+    "courseSlug": "java-for-beginners",
+    "title": "Java for Beginners",
+    "icon": "java",
+    "badge": "Beginner to Intermediate",
+    "tags": [
+      "Beginner",
+      "Java",
+      "JVM",
+      "Programming",
+      "Core Java",
+      "Standard Library"
+    ],
+    "documentationTitle": "Complete Java for Beginners Tutorial & Interactive Core Java Documentation",
+    "shortDescription": "Master Java 21 fundamentals from scratch: JVM architecture, primitive types, operators, Scanner console I/O, control flow, loops, arrays, strings, methods, and 4 practical capstone projects.",
+    "lessonsCount": 8,
+    "totalHours": "25h",
+    "topicsCount": 38,
+    "githubRepo": "github.com/msk-institute/java-for-beginners",
+    "updatedAt": "2026-10-22",
+    "topics": [
+      {
+        "id": "java-beg-t1.1",
+        "title": "History and Write Once, Run Anywhere (WORA) Philosophy",
+        "slug": "history-and-wora-philosophy"
+      },
+      {
+        "id": "java-beg-t1.2",
+        "title": "JVM, JRE, and JDK Architecture & Bytecode Execution",
+        "slug": "jvm-jre-jdk-bytecode-architecture"
+      },
+      {
+        "id": "java-beg-t1.3",
+        "title": "Setting up OpenJDK 21, Environment Variables (JAVA_HOME, PATH)",
+        "slug": "setting-up-openjdk-environment-variables"
+      },
+      {
+        "id": "java-beg-t1.4",
+        "title": "Setting up VS Code / IntelliJ IDEA for Java Development",
+        "slug": "setting-up-vscode-intellij-java"
+      },
+      {
+        "id": "java-beg-t1.5",
+        "title": "Structure of a Java Class & public static void main(String[] args)",
+        "slug": "structure-of-java-class-main-method"
+      },
+      {
+        "id": "java-beg-t2.1",
+        "title": "Primitive Data Types (byte, short, int, long, float, double, char, boolean)",
+        "slug": "primitive-data-types-java"
+      },
+      {
+        "id": "java-beg-t2.2",
+        "title": "Widening and Narrowing Type Casting & Type Safety",
+        "slug": "widening-narrowing-type-casting"
+      },
+      {
+        "id": "java-beg-t2.3",
+        "title": "Type Inference with var (Java 10+)",
+        "slug": "type-inference-var-java"
+      },
+      {
+        "id": "java-beg-t2.4",
+        "title": "Arithmetic, Assignment, Relational, and Logical Operators",
+        "slug": "operators-arithmetic-relational-logical-java"
+      },
+      {
+        "id": "java-beg-t2.5",
+        "title": "Standard Console Input: java.util.Scanner and System.out Formatting",
+        "slug": "console-input-scanner-formatting"
+      },
+      {
+        "id": "java-beg-t3.1",
+        "title": "if, if-else, and if-else-if Decision Ladders",
+        "slug": "if-else-decision-ladders-java"
+      },
+      {
+        "id": "java-beg-t3.2",
+        "title": "Ternary Operator (? :)",
+        "slug": "ternary-operator-java"
+      },
+      {
+        "id": "java-beg-t3.3",
+        "title": "Traditional switch-case and break Statements",
+        "slug": "traditional-switch-case-java"
+      },
+      {
+        "id": "java-beg-t3.4",
+        "title": "Modern Java Switch Expressions (Arrow Syntax & yield)",
+        "slug": "modern-switch-expressions-arrow-yield"
+      },
+      {
+        "id": "java-beg-t3.5",
+        "title": "Menu-Driven Console Application Logic",
+        "slug": "menu-driven-console-applications-java"
+      },
+      {
+        "id": "java-beg-t4.1",
+        "title": "The while Loop and do-while Loop",
+        "slug": "while-and-do-while-loops-java"
+      },
+      {
+        "id": "java-beg-t4.2",
+        "title": "The Standard for Loop and Decrement Counters",
+        "slug": "standard-for-loops-java"
+      },
+      {
+        "id": "java-beg-t4.3",
+        "title": "Enhanced for-each Loop for Arrays and Collections",
+        "slug": "enhanced-for-each-loop-java"
+      },
+      {
+        "id": "java-beg-t4.4",
+        "title": "Loop Jump Statements: break, continue, and Labeled Breaks",
+        "slug": "loop-jump-statements-labeled-breaks"
+      },
+      {
+        "id": "java-beg-t4.5",
+        "title": "Nested Loops and Algorithmic Pattern Output",
+        "slug": "nested-loops-pattern-output-java"
+      },
+      {
+        "id": "java-beg-t5.1",
+        "title": "Array Declaration, Allocation, and Default Values",
+        "slug": "array-declaration-allocation-default-values"
+      },
+      {
+        "id": "java-beg-t5.2",
+        "title": "Array Iteration, Linear Search, and Min/Max Algorithms",
+        "slug": "array-iteration-linear-search-min-max"
+      },
+      {
+        "id": "java-beg-t5.3",
+        "title": "Two-Dimensional Arrays (Matrices) and Jagged Arrays",
+        "slug": "two-dimensional-and-jagged-arrays-java"
+      },
+      {
+        "id": "java-beg-t5.4",
+        "title": "The java.util.Arrays Utility Class (sort, binarySearch, toString, copyOf)",
+        "slug": "arrays-utility-class-methods"
+      },
+      {
+        "id": "java-beg-t6.1",
+        "title": "String Creation, String Pool, and Immutability in Java",
+        "slug": "string-creation-string-pool-immutability"
+      },
+      {
+        "id": "java-beg-t6.2",
+        "title": "String Equality: == vs .equals() and .equalsIgnoreCase()",
+        "slug": "string-equality-vs-equals-method"
+      },
+      {
+        "id": "java-beg-t6.3",
+        "title": "Essential String Methods (substring, indexOf, replace, split, trim)",
+        "slug": "essential-string-methods-java"
+      },
+      {
+        "id": "java-beg-t6.4",
+        "title": "Mutable Strings: StringBuilder vs StringBuffer for Performance",
+        "slug": "mutable-strings-stringbuilder-stringbuffer"
+      },
+      {
+        "id": "java-beg-t6.5",
+        "title": "Modern Text Blocks (\"\"\") in Java 15+",
+        "slug": "modern-text-blocks-java"
+      },
+      {
+        "id": "java-beg-t7.1",
+        "title": "Method Syntax, Return Types, and Formal Parameters",
+        "slug": "method-syntax-return-types-parameters"
+      },
+      {
+        "id": "java-beg-t7.2",
+        "title": "Pass-by-Value Semantics in Java (Primitives vs Object References)",
+        "slug": "pass-by-value-semantics-java"
+      },
+      {
+        "id": "java-beg-t7.3",
+        "title": "Method Overloading and Signature Rules",
+        "slug": "method-overloading-signature-rules-java"
+      },
+      {
+        "id": "java-beg-t7.4",
+        "title": "Variable-Length Arguments (Varargs ...)",
+        "slug": "variable-length-arguments-varargs-java"
+      },
+      {
+        "id": "java-beg-t7.5",
+        "title": "Recursive Methods and Call Stack Execution",
+        "slug": "recursive-methods-call-stack-java"
+      },
+      {
+        "id": "java-beg-t8.1",
+        "title": "Project 1: Command-Line ATM Banking Simulator",
+        "slug": "project-1-command-line-atm-simulator"
+      },
+      {
+        "id": "java-beg-t8.2",
+        "title": "Project 2: Student GPA & Grade Card Generator",
+        "slug": "project-2-student-gpa-grade-generator"
+      },
+      {
+        "id": "java-beg-t8.3",
+        "title": "Project 3: Number Guessing Game with Turn Limits",
+        "slug": "project-3-number-guessing-game-turn-limits"
+      },
+      {
+        "id": "java-beg-t8.4",
+        "title": "Project 4: Simple Point-of-Sale Billing Terminal",
+        "slug": "project-4-point-of-sale-billing-terminal"
+      }
+    ],
+    "seo": {
+      "metaTitle": "Java for Beginners Tutorial | Learn Core Java Online - MSK Institute",
+      "metaDescription": "Free comprehensive Java for Beginners tutorial. Learn Java 21 fundamentals, JVM architecture, Scanner I/O, arrays, loops, strings, and build 4 terminal projects.",
+      "keywords": [
+        "java for beginners",
+        "learn java online",
+        "core java tutorial hindi english",
+        "java 21 basics",
+        "java programming msk institute",
+        "java beginner course"
+      ]
+    }
+  },
+  {
+    "featured": true,
+    "id": "tut-java-for-intermediate",
+    "slug": "java-for-intermediate",
+    "courseSlug": "java-for-intermediate",
+    "title": "Java for Intermediate",
+    "icon": "java",
+    "badge": "Intermediate to Advanced",
+    "tags": [
+      "Intermediate",
+      "Java",
+      "OOP",
+      "Collections Framework",
+      "Inheritance",
+      "Exception Handling",
+      "File IO"
+    ],
+    "documentationTitle": "Complete Java for Intermediate Tutorial & Object-Oriented Collections Documentation",
+    "shortDescription": "Master Java OOP principles, inheritance, runtime polymorphism, abstract classes, interfaces, exception handling, the Java Collections Framework (List, Set, Map), File I/O, and serialization.",
+    "lessonsCount": 7,
+    "totalHours": "30h",
+    "topicsCount": 32,
+    "githubRepo": "github.com/msk-institute/java-for-intermediate",
+    "updatedAt": "2026-10-22",
+    "topics": [
+      {
+        "id": "java-int-t1.1",
+        "title": "Class Definition, Object Instantiation, and Heap vs Stack Allocation",
+        "slug": "class-definition-object-heap-stack"
+      },
+      {
+        "id": "java-int-t1.2",
+        "title": "Instance Variables vs Static Variables & Static Methods",
+        "slug": "instance-vs-static-variables-methods"
+      },
+      {
+        "id": "java-int-t1.3",
+        "title": "Constructors: Default, Parameterized, and Constructor Chaining (this())",
+        "slug": "constructors-constructor-chaining-this"
+      },
+      {
+        "id": "java-int-t1.4",
+        "title": "Encapsulation: Access Modifiers (private, default, protected, public) and Getters/Setters",
+        "slug": "encapsulation-access-modifiers-getters-setters"
+      },
+      {
+        "id": "java-int-t1.5",
+        "title": "The java.lang.Object Class: toString(), equals(), and hashCode()",
+        "slug": "object-class-tostring-equals-hashcode"
+      },
+      {
+        "id": "java-int-t2.1",
+        "title": "Inheritance with extends and the super Keyword",
+        "slug": "inheritance-extends-super-keyword"
+      },
+      {
+        "id": "java-int-t2.2",
+        "title": "Method Overriding and Dynamic Method Dispatch (Runtime Polymorphism)",
+        "slug": "method-overriding-runtime-polymorphism"
+      },
+      {
+        "id": "java-int-t2.3",
+        "title": "The final Keyword: Final Variables, Methods, and Classes",
+        "slug": "final-keyword-variables-methods-classes"
+      },
+      {
+        "id": "java-int-t2.4",
+        "title": "Abstract Classes vs Concrete Classes",
+        "slug": "abstract-classes-vs-concrete-classes"
+      },
+      {
+        "id": "java-int-t2.5",
+        "title": "Interfaces: Declaration, Multiple Interface Implementation, and default/static Methods",
+        "slug": "interfaces-multiple-implementation-default-methods"
+      },
+      {
+        "id": "java-int-t3.1",
+        "title": "Package Architecture, package Declaration, and import Statements",
+        "slug": "package-architecture-import-statements"
+      },
+      {
+        "id": "java-int-t3.2",
+        "title": "Package Scope and Information Hiding",
+        "slug": "package-scope-information-hiding"
+      },
+      {
+        "id": "java-int-t3.3",
+        "title": "Java Enums: Defining Enum Types with Custom Fields and Methods",
+        "slug": "java-enums-fields-methods"
+      },
+      {
+        "id": "java-int-t3.4",
+        "title": "Modern Java Records (Java 14+) for Immutable Data Modeling",
+        "slug": "modern-java-records-immutable-data"
+      },
+      {
+        "id": "java-int-t4.1",
+        "title": "Exception Hierarchy: Throwable, Exception, RuntimeException, and Error",
+        "slug": "exception-hierarchy-throwable-runtime"
+      },
+      {
+        "id": "java-int-t4.2",
+        "title": "Checked vs Unchecked Exceptions",
+        "slug": "checked-vs-unchecked-exceptions"
+      },
+      {
+        "id": "java-int-t4.3",
+        "title": "Handling Exceptions with try, catch, and finally Blocks",
+        "slug": "handling-exceptions-try-catch-finally"
+      },
+      {
+        "id": "java-int-t4.4",
+        "title": "Automatic Resource Management: try-with-resources and AutoCloseable",
+        "slug": "try-with-resources-autocloseable"
+      },
+      {
+        "id": "java-int-t4.5",
+        "title": "Throwing Exceptions with throw, throws, and Creating Custom Exception Classes",
+        "slug": "throw-throws-custom-exception-classes"
+      },
+      {
+        "id": "java-int-t5.1",
+        "title": "Overview of java.util.Collection Hierarchy",
+        "slug": "java-util-collection-hierarchy-overview"
+      },
+      {
+        "id": "java-int-t5.2",
+        "title": "List Interface: ArrayList vs LinkedList (Performance & Internal Arrays)",
+        "slug": "list-interface-arraylist-vs-linkedlist"
+      },
+      {
+        "id": "java-int-t5.3",
+        "title": "Set Interface: HashSet (Hashing), LinkedHashSet, and TreeSet (Red-Black Tree)",
+        "slug": "set-interface-hashset-linkedhashset-treeset"
+      },
+      {
+        "id": "java-int-t5.4",
+        "title": "Iterators, ListIterators, and ConcurrentModificationException",
+        "slug": "iterators-listiterators-concurrentmodification"
+      },
+      {
+        "id": "java-int-t5.5",
+        "title": "Sorting Objects: Comparable<T> and Comparator<T>",
+        "slug": "sorting-objects-comparable-comparator"
+      },
+      {
+        "id": "java-int-t6.1",
+        "title": "Map Interface: HashMap Internal Working (Buckets, Hash Codes, Collisions)",
+        "slug": "map-interface-hashmap-internal-working"
+      },
+      {
+        "id": "java-int-t6.2",
+        "title": "LinkedHashMap and TreeMap for Sorted Key-Value Pairs",
+        "slug": "linkedhashmap-and-treemap-sorted-pairs"
+      },
+      {
+        "id": "java-int-t6.3",
+        "title": "File Streams: FileReader, FileWriter, BufferedReader, and BufferedWriter",
+        "slug": "file-streams-bufferedreader-bufferedwriter"
+      },
+      {
+        "id": "java-int-t6.4",
+        "title": "Modern Java NIO: java.nio.file.Path and java.nio.file.Files",
+        "slug": "modern-java-nio-path-files"
+      },
+      {
+        "id": "java-int-t6.5",
+        "title": "Object Serialization with Serializable, ObjectOutputStream, and transient Keyword",
+        "slug": "object-serialization-serializable-transient"
+      },
+      {
+        "id": "java-int-t7.1",
+        "title": "Project 1: Bank Account Management System with Polymorphism and Serialization",
+        "slug": "project-1-bank-account-polymorphism-serialization"
+      },
+      {
+        "id": "java-int-t7.2",
+        "title": "Project 2: Library Book Inventory & Lending System with Collections",
+        "slug": "project-2-library-inventory-lending-collections"
+      },
+      {
+        "id": "java-int-t7.3",
+        "title": "Project 3: Employee Payroll & Performance Evaluation Terminal",
+        "slug": "project-3-employee-payroll-performance-terminal"
+      }
+    ],
+    "seo": {
+      "metaTitle": "Java for Intermediate Tutorial | Learn OOP & Collections - MSK Institute",
+      "metaDescription": "Free comprehensive Java for Intermediate tutorial. Master Java OOP, inheritance, interfaces, exception handling, collections framework, and file persistence.",
+      "keywords": [
+        "java for intermediate",
+        "java oop tutorial",
+        "java collections framework tutorial",
+        "java exception handling msk institute",
+        "java intermediate course"
+      ]
+    }
+  },
+  {
+    "id": "tut-java-for-advanced",
+    "slug": "java-for-advanced",
+    "courseSlug": "java-for-advanced",
+    "title": "Java for Advanced Tutorial",
+    "icon": "java",
+    "badge": "Advanced",
+    "tags": [
+      "Java",
+      "Generics",
+      "Streams API",
+      "Multithreading",
+      "JDBC",
+      "Reflection",
+      "Concurrency"
+    ],
+    "documentationTitle": "Java for Advanced Developer Guide",
+    "shortDescription": "Master enterprise Java engineering: generics type variance, lambda expressions, Stream API pipelines, high-performance multithreading with ExecutorService, JDBC transactional persistence, reflection, and concurrent data architectures.",
+    "lessonsCount": 31,
+    "totalHours": 32,
+    "topicsCount": 31,
+    "githubRepo": "https://github.com/mskinstitute/java-for-advanced",
+    "updatedAt": "2025-01-15T00:00:00.000Z",
+    "topics": [
+      {
+        "id": "java-adv-t1.1",
+        "title": "The Need for Generics: Compile-Time Type Safety and Elimination of Casts",
+        "slug": "generics-type-safety-elimination-of-casts"
+      },
+      {
+        "id": "java-adv-t1.2",
+        "title": "Generic Classes and Generic Interfaces",
+        "slug": "generic-classes-and-generic-interfaces"
+      },
+      {
+        "id": "java-adv-t1.3",
+        "title": "Generic Methods and Bounded Type Parameters (<T extends Number>)",
+        "slug": "generic-methods-and-bounded-type-parameters"
+      },
+      {
+        "id": "java-adv-t1.4",
+        "title": "Wildcards in Generics: Upper Bounded (? extends) and Lower Bounded (? super)",
+        "slug": "wildcards-in-generics-upper-lower-bounded"
+      },
+      {
+        "id": "java-adv-t1.5",
+        "title": "Type Erasure and Bridge Methods Behind the Scenes",
+        "slug": "type-erasure-and-bridge-methods"
+      },
+      {
+        "id": "java-adv-t2.1",
+        "title": "Introduction to Functional Programming in Java",
+        "slug": "functional-programming-in-java-paradigms"
+      },
+      {
+        "id": "java-adv-t2.2",
+        "title": "Functional Interfaces & the @FunctionalInterface Annotation",
+        "slug": "functional-interfaces-annotation"
+      },
+      {
+        "id": "java-adv-t2.3",
+        "title": "Core Built-In Functional Interfaces: Predicate, Function, Consumer, Supplier",
+        "slug": "built-in-functional-interfaces-predicate-function-consumer-supplier"
+      },
+      {
+        "id": "java-adv-t2.4",
+        "title": "Lambda Expression Syntax, Scope, and Variable Capture",
+        "slug": "lambda-expressions-syntax-scope-variable-capture"
+      },
+      {
+        "id": "java-adv-t2.5",
+        "title": "Method References (Class::method, instance::method, Class::new)",
+        "slug": "method-references-syntax-and-use-cases"
+      },
+      {
+        "id": "java-adv-t3.1",
+        "title": "Stream Pipeline Lifecycle: Source -> Intermediate Operations -> Terminal Operation",
+        "slug": "stream-pipeline-lifecycle-source-intermediate-terminal"
+      },
+      {
+        "id": "java-adv-t3.2",
+        "title": "Intermediate Operations: filter(), map(), flatMap(), sorted(), distinct()",
+        "slug": "stream-intermediate-operations-filter-map-flatmap"
+      },
+      {
+        "id": "java-adv-t3.3",
+        "title": "Terminal Operations: collect(), forEach(), reduce(), count(), anyMatch()",
+        "slug": "stream-terminal-operations-collect-reduce-foreach"
+      },
+      {
+        "id": "java-adv-t3.4",
+        "title": "Collectors Utility: groupingBy(), partitioningBy(), joining(), toList()",
+        "slug": "collectors-groupingby-partitioningby-joining"
+      },
+      {
+        "id": "java-adv-t3.5",
+        "title": "Parallel Streams and the Fork/Join Framework",
+        "slug": "parallel-streams-and-fork-join-framework"
+      },
+      {
+        "id": "java-adv-t4.1",
+        "title": "Thread Lifecycle, Creating Threads with Thread Class and Runnable Interface",
+        "slug": "thread-lifecycle-thread-class-runnable-interface"
+      },
+      {
+        "id": "java-adv-t4.2",
+        "title": "Thread Synchronization, Critical Sections, and synchronized Methods/Blocks",
+        "slug": "thread-synchronization-critical-sections-synchronized"
+      },
+      {
+        "id": "java-adv-t4.3",
+        "title": "Inter-Thread Communication: wait(), notify(), and notifyAll()",
+        "slug": "inter-thread-communication-wait-notify-notifyall"
+      },
+      {
+        "id": "java-adv-t4.4",
+        "title": "java.util.concurrent: ReentrantLock, ReadWriteLock, and Condition",
+        "slug": "locks-reentrantlock-readwritelock-condition"
+      },
+      {
+        "id": "java-adv-t4.5",
+        "title": "Thread Pools with ExecutorService, Callable<T>, and Future<T>",
+        "slug": "thread-pools-executorservice-callable-future"
+      },
+      {
+        "id": "java-adv-t5.1",
+        "title": "JDBC Architecture, Drivers, and DriverManager Connection",
+        "slug": "jdbc-architecture-drivers-drivermanager-connection"
+      },
+      {
+        "id": "java-adv-t5.2",
+        "title": "Executing Queries: Statement vs PreparedStatement (SQL Injection Prevention)",
+        "slug": "statement-vs-preparedstatement-sql-injection-prevention"
+      },
+      {
+        "id": "java-adv-t5.3",
+        "title": "ResultSet Navigation and Mapping Rows to Java Domain Models",
+        "slug": "resultset-navigation-mapping-domain-models"
+      },
+      {
+        "id": "java-adv-t5.4",
+        "title": "Transaction Management: setAutoCommit(false), commit(), and rollback()",
+        "slug": "jdbc-transaction-management-commit-rollback"
+      },
+      {
+        "id": "java-adv-t5.5",
+        "title": "Connection Pooling Concepts with HikariCP",
+        "slug": "connection-pooling-concepts-hikaricp"
+      },
+      {
+        "id": "java-adv-t6.1",
+        "title": "Java Reflection API: Class<T>, Methods, Fields, and Constructors",
+        "slug": "reflection-api-class-methods-fields-constructors"
+      },
+      {
+        "id": "java-adv-t6.2",
+        "title": "Invoking Methods and Accessing Private Fields via Reflection",
+        "slug": "invoking-methods-accessing-private-fields-reflection"
+      },
+      {
+        "id": "java-adv-t6.3",
+        "title": "Custom Annotations: @Retention, @Target, and Runtime Processing",
+        "slug": "custom-annotations-retention-target-runtime-processing"
+      },
+      {
+        "id": "java-adv-t7.1",
+        "title": "Capstone 1: Multithreaded Web Downloader & File Processor with ExecutorService",
+        "slug": "project-1-multithreaded-downloader-file-processor"
+      },
+      {
+        "id": "java-adv-t7.2",
+        "title": "Capstone 2: Student ERP System with JDBC, PreparedStatement, and MySQL",
+        "slug": "project-2-student-erp-jdbc-mysql"
+      },
+      {
+        "id": "java-adv-t7.3",
+        "title": "Capstone 3: Custom In-Memory Object Cache with Generics and Concurrency",
+        "slug": "project-3-in-memory-object-cache-generics-concurrency"
+      }
+    ],
+    "seo": {
+      "metaTitle": "Java for Advanced Tutorial - MSK Institute",
+      "metaDescription": "Master enterprise Java programming with tutorials on Generics, Lambdas, Stream API, Multithreading, JDBC, Reflection, and Capstone projects at MSK Institute.",
+      "keywords": [
+        "java advanced tutorial",
+        "java generics",
+        "java stream api",
+        "java multithreading",
+        "jdbc tutorial",
+        "msk institute"
+      ]
+    }
   }
 ]
