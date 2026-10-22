@@ -190,12 +190,12 @@ export default function AboutPage() {
                 </span>
               </div>
               <div>
-                <h2 className="text-2xl font-black text-primary">Er. Sumit Kumar</h2>
+                <h2 className="text-2xl font-black text-primary">Mr. Sumit Kumar</h2>
                 <p className="text-xs font-bold text-secondary uppercase tracking-wider mt-0.5">
-                  Founder & Senior Software Educator
+                  Founder & Educator
                 </p>
                 <p className="text-xs text-text-muted mt-1">
-                  B.Tech (Computer Science & Engineering)
+                  (Computer Science & Engineering)
                 </p>
               </div>
               <div className="flex items-center gap-2 text-xs font-semibold text-text-muted bg-surface px-4 py-2 rounded-xl border border-border-subtle">
