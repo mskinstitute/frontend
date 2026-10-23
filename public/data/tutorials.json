@@ -18,7 +18,7 @@
     "lessonsCount": 12,
     "totalHours": "30h",
     "topicsCount": 31,
-    "githubRepo": "github.com/msk-institute/html5-complete-course",
+    "githubRepo": "https://github.com/msk-html/beginner",
     "updatedAt": "2026-09-30",
     "seo": {
       "title": "HTML5 Complete Course Tutorial: Step-by-Step Web Development Guide | MSK Institute",
@@ -59,7 +59,7 @@
     "lessonsCount": 12,
     "totalHours": "25h",
     "topicsCount": 37,
-    "githubRepo": "github.com/msk-institute/css-for-beginners",
+    "githubRepo": "https://github.com/msk-css/beginner",
     "updatedAt": "2026-10-01",
     "seo": {
       "title": "CSS for Beginners Tutorial: Complete Step-by-Step Styling Guide | MSK Institute",
@@ -101,7 +101,7 @@
     "lessonsCount": 12,
     "totalHours": "30h",
     "topicsCount": 36,
-    "githubRepo": "github.com/msk-institute/css-for-intermediate",
+    "githubRepo": "https://github.com/msk-css/intermediate",
     "updatedAt": "2026-09-10",
     "seo": {
       "title": "CSS for Intermediate: Level 2 Course & Notes - MSK Notes | MSK Institute",
@@ -139,7 +139,7 @@
     "lessonsCount": 12,
     "totalHours": "35h",
     "topicsCount": 36,
-    "githubRepo": "github.com/msk-institute/css-for-advanced",
+    "githubRepo": "https://github.com/msk-css/advance",
     "updatedAt": "2026-09-10",
     "seo": {
       "title": "CSS for Advanced: Level 3 Course & Notes - MSK Notes | MSK Institute",
@@ -176,8 +176,8 @@
     "shortDescription": "Master Python programming from the ground up in 1 month. Comprehensive beginner tutorial covering syntax, variables, data structures (lists, tuples, sets, dicts), control flow, loops, functions, file handling, and 4 practical capstone projects.",
     "lessonsCount": 16,
     "totalHours": "30h",
-    "topicsCount": 85,
-    "githubRepo": "github.com/msk-institute/python-for-beginners",
+    "topicsCount": 88,
+    "githubRepo": "https://github.com/msk-python/beginner",
     "updatedAt": "2026-09-30",
     "seo": {
       "title": "Python for Beginners Tutorial: Complete Step-by-Step Programming Guide | MSK Institute",
@@ -220,8 +220,8 @@
     "shortDescription": "Elevate your Python skills to professional software engineering. Master advanced comprehensions, closures, decorators, modular packages, OOP inheritance, custom exceptions, iterators, REST APIs, logging, SQLite databases, data visualization, and 5 real-world projects.",
     "lessonsCount": 15,
     "totalHours": "35h",
-    "topicsCount": 70,
-    "githubRepo": "github.com/msk-institute/python-for-intermediate",
+    "topicsCount": 76,
+    "githubRepo": "https://github.com/msk-python/intermediate",
     "updatedAt": "2026-10-01",
     "seo": {
       "title": "Python for Intermediate Tutorial: Complete Step-by-Step Practical Guide | MSK Institute",
@@ -265,8 +265,8 @@
     "shortDescription": "Master enterprise-grade Python software engineering. Deep dive into advanced OOP & descriptors, magic methods, concurrency (threading, multiprocessing, asyncio), networking sockets, SQLAlchemy ORM, testing with pytest & TDD, Tkinter GUIs, and 3 production capstones.",
     "lessonsCount": 15,
     "totalHours": "40h",
-    "topicsCount": 63,
-    "githubRepo": "github.com/msk-institute/python-for-advanced",
+    "topicsCount": 69,
+    "githubRepo": "https://github.com/msk-python/advance",
     "updatedAt": "2026-10-01",
     "seo": {
       "title": "Python for Advanced Tutorial: Complete Step-by-Step Engineering Guide | MSK Institute",
@@ -672,7 +672,7 @@
     "lessonsCount": 9,
     "totalHours": "15h",
     "topicsCount": 27,
-    "githubRepo": "github.com/msk-institute/ms-word-for-beginners",
+    "githubRepo": "https://github.com/msk-word/beginner",
     "updatedAt": "2026-09-12",
     "seo": {
       "title": "MS Word for Beginners Tutorial & Notes - MSK Notes | MSK Institute",
@@ -708,7 +708,7 @@
     "lessonsCount": 9,
     "totalHours": "15h",
     "topicsCount": 27,
-    "githubRepo": "github.com/msk-institute/ms-word-for-advanced",
+    "githubRepo": "https://github.com/msk-word/advance",
     "updatedAt": "2026-09-12",
     "seo": {
       "title": "MS Word for Advanced Tutorial & Notes - MSK Notes | MSK Institute",
@@ -744,7 +744,7 @@
     "lessonsCount": 9,
     "totalHours": "15h",
     "topicsCount": 27,
-    "githubRepo": "github.com/msk-institute/ms-powerpoint-for-beginners",
+    "githubRepo": "https://github.com/msk-powerpoint/beginner",
     "updatedAt": "2026-09-12",
     "seo": {
       "title": "MS PowerPoint for Beginners Tutorial & Notes - MSK Notes | MSK Institute",
@@ -782,7 +782,7 @@
     "lessonsCount": 9,
     "totalHours": "15h",
     "topicsCount": 27,
-    "githubRepo": "github.com/msk-institute/ms-excel-for-beginners",
+    "githubRepo": "https://github.com/msk-excel/beginner",
     "updatedAt": "2026-09-13",
     "seo": {
       "title": "MS Excel for Beginners Tutorial & Notes - MSK Notes | MSK Institute",
@@ -817,7 +817,7 @@
     "lessonsCount": 10,
     "totalHours": "18h",
     "topicsCount": 30,
-    "githubRepo": "github.com/msk-institute/ms-excel-for-intermediate",
+    "githubRepo": "https://github.com/msk-excel/intermediate",
     "updatedAt": "2026-09-13",
     "seo": {
       "title": "MS Excel for Intermediate Tutorial & Notes - MSK Notes | MSK Institute",
@@ -854,7 +854,7 @@
     "lessonsCount": 10,
     "totalHours": "24h",
     "topicsCount": 35,
-    "githubRepo": "github.com/msk-institute/ms-excel-for-advanced",
+    "githubRepo": "https://github.com/msk-excel/advance",
     "updatedAt": "2026-09-13",
     "seo": {
       "title": "MS Excel for Advanced Tutorial & Notes - MSK Notes | MSK Institute",
@@ -1349,7 +1349,7 @@
     "lessonsCount": 8,
     "totalHours": 25,
     "topicsCount": 27,
-    "githubRepo": "https://github.com/msk-institute/markdown-mastery-notes",
+    "githubRepo": "https://github.com/msk-markdown/beginner",
     "updatedAt": "2026-09-13",
     "seo": {
       "title": "Markdown Complete Course & GFM Cheatsheet | MSK Institute",
@@ -1747,7 +1747,7 @@
     "lessonsCount": 10,
     "totalHours": "30h",
     "topicsCount": 30,
-    "githubRepo": "github.com/msk-institute/power-bi-for-beginners",
+    "githubRepo": "https://github.com/msk-powerbi/beginner",
     "updatedAt": "2026-09-14",
     "seo": {
       "title": "Power BI Complete Course & DAX Notes - MSK Notes | MSK Institute",
@@ -2924,7 +2924,7 @@
     "lessonsCount": 10,
     "totalHours": "30h",
     "topicsCount": 29,
-    "githubRepo": "github.com/msk-institute/power-bi-for-intermediate",
+    "githubRepo": "https://github.com/msk-powerbi/intermediate",
     "updatedAt": "2026-09-15",
     "topics": [
       {
@@ -3094,7 +3094,7 @@
     "lessonsCount": 11,
     "totalHours": "35h",
     "topicsCount": 32,
-    "githubRepo": "github.com/msk-institute/power-bi-for-advanced",
+    "githubRepo": "https://github.com/msk-powerbi/advance",
     "updatedAt": "2026-09-15",
     "topics": [
       {
@@ -3481,7 +3481,7 @@
     "lessonsCount": 12,
     "totalHours": "25h",
     "topicsCount": 38,
-    "githubRepo": "github.com/msk-institute/javascript-for-beginners",
+    "githubRepo": "https://github.com/msk-javascript/beginner",
     "updatedAt": "2026-09-15",
     "topics": [
       {
@@ -3710,7 +3710,7 @@
     "lessonsCount": 15,
     "totalHours": "30h",
     "topicsCount": 53,
-    "githubRepo": "github.com/msk-institute/javascript-for-intermediate",
+    "githubRepo": "https://github.com/msk-javascript/intermediate",
     "updatedAt": "2026-09-15",
     "topics": [
       {
@@ -4387,7 +4387,8 @@
         "title": "Production Bundling, Testing & Deployment",
         "slug": "production-bundling-testing-and-deployment"
       }
-    ]
+    ],
+    "githubRepo": "https://github.com/msk-javascript/advance"
   },
   {
     "id": "tut-react-js-for-beginners",
@@ -4617,7 +4618,8 @@
         "title": "Capstone Project: Comprehensive Task and Todo Application",
         "slug": "capstone-project-comprehensive-task-and-todo-application"
       }
-    ]
+    ],
+    "githubRepo": "https://github.com/msk-react/beginner"
   },
   {
     "id": "tut-react-js-for-intermediate",
@@ -4882,7 +4884,8 @@
         "title": "Capstone Project: Interactive E-Commerce Store with Cart & Router",
         "slug": "capstone-project-interactive-e-commerce-store-with-cart-and-router"
       }
-    ]
+    ],
+    "githubRepo": "https://github.com/msk-react/intermediate"
   },
   {
     "id": "tut-react-js-for-advanced",
@@ -5217,7 +5220,8 @@
         "title": "Enterprise Capstone Project: Collaborative Cloud Workspace",
         "slug": "enterprise-capstone-project-collaborative-cloud-workspace"
       }
-    ]
+    ],
+    "githubRepo": "https://github.com/msk-react/advance"
   },
   {
     "id": "tut-django-for-backend-development",
@@ -5425,7 +5429,8 @@
         "slug": "django-capstone-authentication-and-rest-api-integration",
         "sortOrder": 3
       }
-    ]
+    ],
+    "githubRepo": "https://github.com/msk-django/beginner"
   },
   {
     "id": "tut-rest-api-development-with-django",
@@ -5615,7 +5620,8 @@
         "slug": "drf-capstone-automated-test-suite-and-production-swagger-docs",
         "sortOrder": 3
       }
-    ]
+    ],
+    "githubRepo": "https://github.com/msk-django/intermediate"
   },
   {
     "featured": true,
@@ -7063,7 +7069,7 @@
     "lessonsCount": 8,
     "totalHours": "25h",
     "topicsCount": 38,
-    "githubRepo": "github.com/msk-institute/java-for-beginners",
+    "githubRepo": "https://github.com/msk-java/beginner",
     "updatedAt": "2026-10-22",
     "topics": [
       {
@@ -7292,7 +7298,7 @@
     "lessonsCount": 7,
     "totalHours": "30h",
     "topicsCount": 32,
-    "githubRepo": "github.com/msk-institute/java-for-intermediate",
+    "githubRepo": "https://github.com/msk-java/intermediate",
     "updatedAt": "2026-10-22",
     "topics": [
       {
@@ -7489,7 +7495,7 @@
     "lessonsCount": 31,
     "totalHours": 32,
     "topicsCount": 31,
-    "githubRepo": "https://github.com/mskinstitute/java-for-advanced",
+    "githubRepo": "https://github.com/msk-java/advance",
     "updatedAt": "2025-01-15T00:00:00.000Z",
     "topics": [
       {

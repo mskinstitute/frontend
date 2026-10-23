@@ -3093,7 +3093,7 @@
     "title": "Python Mastery (Beginner to Advanced) - 3 Months",
     "slug": "python-mastery",
     "featuredImageUrl": "https://images.unsplash.com/photo-1526379095098-d400fd0bf935?q=80&w=800&auto=format&fit=crop",
-    "shortDescription": "Master Python programming from zero fundamentals to enterprise software engineering in 3 months. This comprehensive 3-in-1 Grand Mastery Combo bundles Python for Beginners, Python for Intermediate, and Python for Advanced — spanning 45 chapters, 218 structured topics, 1,099 interactive quiz questions, and 14 production portfolio projects across OOP, multithreading, asyncio, networking, and databases.",
+    "shortDescription": "Master Python programming from zero fundamentals to enterprise software engineering in 3 months. This comprehensive 3-in-1 Grand Mastery Combo bundles Python for Beginners, Python for Intermediate, and Python for Advanced — spanning 45 chapters, 233 structured topics, 1,174 interactive quiz questions, and 14 production portfolio projects across OOP, multithreading, free-threaded No-GIL Python 3.13, asyncio, networking, and databases.",
     "categories": [
       "Programming",
       "Python",
@@ -3134,7 +3134,7 @@
       "Month 3: Build raw TCP/UDP socket networks, enterprise ORM models with SQLAlchemy 2.0, write automated test suites with Pytest & TDD, and develop Tkinter desktop GUIs",
       "Month 3: Deliver 3 production-grade capstones: an Inventory Management System, an Async Weather Dashboard, and a Personal Finance Tracker with SQLAlchemy"
     ],
-    "description": "# Python Mastery (Beginner to Advanced): Complete 3-Month Software Engineering Bootcamp\n\nWelcome to **Python Mastery (Beginner to Advanced)**, the premier 3-month comprehensive software engineering program engineered by **MSK Institute**. \n\nThis flagship **3-in-1 Grand Mastery Combo** unites our three acclaimed Python curricula into one seamless, continuous learning path:\n1. **Python for Beginners (Level 1)**: Zero-to-hero fundamentals, algorithmic thinking, and core syntax.\n2. **Python for Intermediate (Level 2)**: Professional OOP architecture, decorators, generators, REST APIs, SQLite, and data visualization.\n3. **Python for Advanced (Level 3)**: High-performance systems engineering, concurrency (threading, multiprocessing, asyncio), network sockets, SQLAlchemy 2.0 ORM, and automated testing with Pytest.\n\nSpanning **45 chapters**, **218 structured tutorial topics**, **1,099 interactive quiz questions**, and **14 real-world portfolio projects**, this bootcamp is designed to transform enthusiastic beginners into job-ready software developers, backend engineers, and data automation specialists.\n\n---\n\n## 🎯 Program Overview & Educational Philosophy\n\nPython is the undisputed leader across cloud computing, web development, data engineering, and artificial intelligence. However, surface-level syntax tutorials leave aspiring developers ill-prepared for the technical demands of modern engineering teams.\n\nAt MSK Institute, our training philosophy is founded on **deep conceptual mechanics coupled with continuous practical execution**:\n- **Zero to Production Roadmap**: We start with the absolute basics (how code executes on a CPU) and culminate in complex distributed systems (multi-core multiprocessing and async event loops).\n- **The \"Learn by Doing\" Laboratory Model**: Theory is immediately validated with hands-on coding. Students run real scripts in VS Code, debug live runtime exceptions, and inspect memory allocation.\n- **1,099 Formative Knowledge Checks**: Every single topic in the curriculum features 5 verified multiple-choice questions testing output prediction, edge cases, and architectural trade-offs.\n- **14 Production-Grade Portfolio Projects**: You graduate with an extensive GitHub repository showcasing command-line utilities, relational database engines, multithreaded network downloaders, and asynchronous scrapers.\n\n---\n\n## 👥 Who Should Enroll in This 3-Month Bootcamp?\n\n- **Absolute Beginners & Non-Programmers**: Individuals with zero coding experience seeking a supportive, structured, and thorough on-ramp into software development.\n- **BCA, B.Tech, MCA & Polytechnic Students**: University students seeking practical industry skills, interview preparation, and impressive academic capstone projects.\n- **Working Professionals Seeking Career Transition**: Accountants, data entry operators, and support engineers aiming to transition into high-paying software engineering and data analytics roles.\n- **Aspiring Web & Backend Engineers**: Developers preparing to learn modern web frameworks like Django, FastAPI, or Flask who want a rock-solid Pythonic foundation first.\n- **Future Data Scientists & AI Practitioners**: Anyone planning to specialize in Pandas, NumPy, Scikit-Learn, or PyTorch where advanced Python fluency is mandatory.\n\n---\n\n## 🗺️ The Complete 3-Month Month-by-Month Roadmap\n\n```text\n┌─────────────────────────────────────────────────────────────────────────────┐\n│                    3-MONTH PYTHON MASTERY TIMELINE                          │\n├────────────────────────┬──────────────────────────┬─────────────────────────┤\n│   MONTH 1: LEVEL 1     │     MONTH 2: LEVEL 2     │    MONTH 3: LEVEL 3     │\n│   Python Fundamentals  │  Intermediate Engineering│  Advanced Systems & Arch│\n├────────────────────────┼──────────────────────────┼─────────────────────────┤\n│ • Syntax & Variables   │ • Advanced Comprehensions│ • Descriptors & MRO     │\n│ • Control Flow (Loops) │ • Closures & Decorators  │ • Magic Methods (Dunder)│\n│ • Lists, Dicts, Tuples │ • Packages & Modules     │ • Threading & Locks     │\n│ • Functions & Scope    │ • File Handling (CSV/JSON│ • Multiprocessing & GIL │\n│ • File I/O & Exceptions│ • OOP (Inheritance/Poly) │ • Asyncio Event Loops   │\n│ • VS Code Debugging    │ • Custom Exceptions      │ • SQLAlchemy 2.0 ORM    │\n│ • 4 Beginner Projects  │ • Iterators & Generators │ • Network Sockets (TCP) │\n│                        │ • REST APIs & Requests   │ • Regex Mastery         │\n│                        │ • SQLite3 Relational DB  │ • Pytest & TDD          │\n│                        │ • Matplotlib Charts      │ • Tkinter Desktop GUIs  │\n│                        │ • 7 Projects & Capstones │ • 3 Enterprise Capstones│\n│                        │                          │                         │\n│ 15 Chapters | 85 Topics│ 15 Chapters | 70 Topics │ 15 Chapters | 63 Topics │\n│ 434 Quiz Questions     │ 350 Quiz Questions       │ 315 Quiz Questions      │\n└────────────────────────┴──────────────────────────┴─────────────────────────┘\n```\n\n---\n\n## 📦 The 3 Included Specialized Curricula\n\nBy enrolling in this 3-Month Combo, you receive complete access to 3 specialized courses:\n\n### 1. Python for Beginners (Month 1 | 15 Chapters | 85 Topics)\n- **Chapter 1: Introduction to Python**: Language philosophy, Python 3.12+ installation, environment PATH, VS Code setup, and writing your first script.\n- **Chapter 2: Variables & Data Types**: Dynamic typing, integers, floats, strings, booleans, type casting (`int()`, `str()`), and formatted string interpolation.\n- **Chapter 3: Operators & Expressions**: Arithmetic, assignment, comparison, logical (`and`, `or`, `not`), identity (`is`), and membership (`in`).\n- **Chapter 4: Conditional Statements**: Boolean expressions, `if`, `elif`, `else` branching, and nested conditionals.\n- **Chapter 5: Loops & Iterations**: `while` loops, `for` loops with `range()`, `break`, `continue`, and loop `else` clauses.\n- **Chapter 6: Strings Deep Dive**: String immutability, slicing, string methods (`split`, `join`, `replace`), and Unicode handling.\n- **Chapter 7: Lists Deep Dive**: List mutability, indexing, slicing, methods (`append`, `extend`, `pop`, `sort`), and 2D matrices.\n- **Chapter 8: Tuples & Sets**: Tuple immutability, tuple packing/unpacking, set uniqueness, and mathematical set operations (`union`, `intersection`).\n- **Chapter 9: Dictionaries**: Key-value mappings, dictionary methods (`get`, `items`, `keys`), and nested dictionaries.\n- **Chapter 10: Functions Basics**: Function definitions, parameters, return values, default arguments, and local vs global scope.\n- **Chapter 11: File Handling Basics**: Reading and writing text files, file modes (`r`, `w`, `a`), and line iteration.\n- **Chapter 12: Basic Error Handling**: `try`, `except`, catching specific exceptions (`ValueError`, `ZeroDivisionError`), and safe user input.\n- **Chapter 13: Modules Basics**: Importing standard modules (`math`, `random`, `datetime`), and creating custom helper modules.\n- **Chapter 14: Practical Beginner Projects**: Building the Command-Line Calculator, Student Grade Calculator, Number Analyzer, and Simple Billing System.\n- **Chapter 15: Revision & Final Assessment**: Comprehensive syntax review, best practices checklist, and foundational programming exam.\n\n### 2. Python for Intermediate (Month 2 | 15 Chapters | 70 Topics)\n- **Chapter 1: Advanced Data Types & Comprehensions**: Nested list comprehensions, set comprehensions, dictionary comprehensions, and walrus operator optimization.\n- **Chapter 2: Functions Deep Dive**: `*args` and `**kwargs`, mutable default argument pitfalls, lexical closures (`nonlocal`), and custom decorators with arguments.\n- **Chapter 3: Modules and Packages**: Package structure, `__init__.py`, relative imports, module namespace exports (`__all__`), and execution guards (`if __name__ == '__main__':`).\n- **Chapter 4: File Handling Advanced**: Context managers (`with`), parsing CSV tabular data with `csv.DictReader`/`DictWriter`, Windows `newline=''` hygiene, and JSON serialization.\n- **Chapter 5: Object-Oriented Programming (OOP)**: Classes, instances, constructors, multi-level inheritance, method overriding, `super()`, encapsulation, and polymorphism.\n- **Chapter 6: Exception Handling**: Complete `try-except-else-finally` blocks, custom exception classes, and exception chaining (`raise ... from`).\n- **Chapter 7: Iterators & Generators**: The Iterator Protocol (`__iter__`, `__next__`), custom iterable classes, `yield`, lazy evaluation, and generator expressions.\n- **Chapter 8: Working with APIs**: Client-server architecture, consuming REST APIs with `requests`, handling HTTP status codes, query parameters, and parsing nested JSON.\n- **Chapter 9: Debugging & Logging**: Industrial `logging` module, severity levels, file handlers, formatting, interactive debugging with `pdb`, and defensive assertions.\n- **Chapter 10: Python Standard Libraries**: Deep dive into `collections` (`defaultdict`, `Counter`, `namedtuple`), `datetime` arithmetic, and `os`/`sys` system operations.\n- **Chapter 11: Database Basics with SQLite**: Relational database principles, `sqlite3` handles, parameterized CRUD queries (SQL injection prevention), and transaction management.\n- **Chapter 12: Virtual Environments & Pip**: Dependency isolation with `venv`, package management with `pip`, and freezing reproducible environments with `requirements.txt`.\n- **Chapter 13: Data Visualization Basics**: Matplotlib Pyplot figures and axes, line/bar/pie charts, visual styling, and Seaborn statistical distributions.\n- **Chapter 14: Intermediate Projects**: Expense Tracker with CSV, API-Based Dictionary Application, and CLI Task Manager.\n- **Chapter 15: Intermediate Capstones**: Object-Oriented Library Management System and Automated Student Report Card PDF/PNG Generator.\n\n### 3. Python for Advanced (Month 3 | 15 Chapters | 63 Topics)\n- **Chapter 1: Advanced OOP Concepts**: Descriptors, bound methods under the hood, polymorphic factory constructors with `TypeVar`, Method Resolution Order (MRO), and mixin architecture.\n- **Chapter 2: Magic Methods & Operator Overloading**: Object allocation hooks (`__new__` vs `__init__`), developer diagnostics (`__repr__`), operator overloading, and sequence/mapping protocols.\n- **Chapter 3: Advanced Decorators and Context Managers**: Three-tier decorator factories, class decorators, resource management with `__enter__`/`__exit__`, and `contextlib.ExitStack`.\n- **Chapter 4: Itertools and Functools**: Infinite stream iterators, combinatorial generators, functional pipelines with `functools.reduce`, `singledispatch`, and bounded `@lru_cache`.\n- **Chapter 5: Generators & Coroutines**: Generator state inspection (`inspect.getgeneratorstate`), delegation with `yield from`, two-way coroutine communication via `.send()`, and stream processors.\n- **Chapter 6: Multithreading in Python**: OS threading model, CPython Global Interpreter Lock (GIL), thread synchronization with `Lock`/`RLock`/`Semaphore`, and thread pools.\n- **Chapter 7: Multiprocessing in Python**: Bypassing the GIL with isolated process memory, IPC with `multiprocessing.Queue`, shared memory, and multi-core `Pool.map`.\n- **Chapter 8: Asynchronous Programming (Asyncio)**: Cooperative multitasking, single-threaded event loops, non-blocking coroutines, task scheduling with `asyncio.gather()`, and timeouts.\n- **Chapter 9: Advanced Database Handling**: SQLAlchemy 2.0 Declarative Base modeling, mapped columns, One-to-Many/Many-to-Many relationships, N+1 query elimination (`selectinload`), and session rollbacks.\n- **Chapter 10: Networking with Python**: Berkeley sockets (`AF_INET`, `SOCK_STREAM`), `SO_REUSEADDR`, TCP framing vs UDP datagrams, multi-client broadcast chat engines, and client-server protocols.\n- **Chapter 11: Regular Expressions Advanced**: Named capture groups, non-capturing groups, greedy vs lazy matching, callback substitutions (`re.sub`), and catastrophic backtracking prevention.\n- **Chapter 12: Data Serialization & File Formats**: Pickle object serialization security risks (`__reduce__`), custom `JSONEncoder` for Decimals/sets, and safe YAML parsing.\n- **Chapter 13: Testing & Best Practices**: Unit testing with `unittest`, Pythonic testing with `pytest`, custom fixtures, dependency mocking with `unittest.mock`, and Test-Driven Development (TDD).\n- **Chapter 14: GUI Development with Tkinter**: Tk root window event loops, geometry managers (`grid` vs `pack`), event binding, lambda late-binding fixes, and threaded UI responsiveness.\n- **Chapter 15: Final Capstone Projects**: Multi-Tier Inventory Management System, Live Desktop Weather Analytics Station, and Personal Finance & Investment Ledger with SQLAlchemy 2.0.\n\n---\n\n## 🛠️ Complete 14-Project Portfolio Breakdown\n\nThroughout this 3-month bootcamp, you build 14 real-world software applications:\n\n| # | Project Name | Level | Primary Competencies |\n| :-: | :--- | :-: | :--- |\n| **1** | **Command-Line Calculator** | Beginner | Functions, conditionals, arithmetic validation |\n| **2** | **Student Grade Calculator** | Beginner | Lists, loops, numeric thresholds, formatting |\n| **3** | **Number Analyzer & Prime Checker** | Beginner | Algorithmic logic, while loops, mathematical optimization |\n| **4** | **Simple Billing & Invoice System** | Beginner | Dictionaries, text file exports, formatted receipts |\n| **5** | **Data Filtering Engine** | Intermediate | Advanced list/set comprehensions, walrus operator |\n| **6** | **Execution Audit & Timing Decorator** | Intermediate | Closures, function wrappers, `@functools.wraps` |\n| **7** | **Custom Utility Package** | Intermediate | `__init__.py`, module packaging, namespaces |\n| **8** | **CSV Contact Manager** | Intermediate | Context managers, `csv.DictReader`/`DictWriter` |\n| **9** | **Bank Account Class System** | Intermediate | Encapsulation, inheritance, polymorphism, `@property` |\n| **10** | **Error-Handled Math Calculator** | Intermediate | `try-except-else-finally`, custom exception classes |\n| **11** | **Infinite Log Stream Generator** | Intermediate | Iterators, generators, `yield`, lazy evaluation |\n| **12** | **Weather Data Fetcher & CLI Dictionary** | Intermediate | REST APIs, HTTP requests, nested JSON navigation |\n| **13** | **Student Records Database & Visualizer** | Intermediate | SQLite3 CRUD queries, SQL injection prevention, Matplotlib |\n| **14** | **Three Enterprise Capstones**: | Advanced | Systems-level engineering: |\n| | *a) Multi-Tier Inventory Management System* | Advanced | Relational inventory schema, transactional deductions |\n| | *b) Asynchronous Weather Dashboard* | Advanced | Asyncio event loop, desktop GUI with Tkinter |\n| | *c) Personal Finance & Investment Ledger* | Advanced | Modern SQLAlchemy 2.0, atomic transfers, Pytest suite |\n\n---\n\n## 💼 Career Paths & Industry Roles\n\nGraduates of the 3-Month Python Mastery program are qualified for high-demand developer roles:\n- **Full-Stack Python Backend Developer**: Build scalable microservices and APIs with Django, FastAPI, or Flask.\n- **Python Automation Specialist**: Automate complex enterprise workflows, extract web intelligence, and orchestrate systems.\n- **Junior Data Analyst / Data Engineer**: Clean, transform, inspect, and visualize multi-gigabyte datasets using SQLite, standard libraries, and Matplotlib.\n- **Software QA & Test Automation Engineer**: Write robust automated test suites, mock external dependencies, and enforce code quality using Pytest.\n\n---\n\n## 🏆 Official Certification & Assessment\n\nUpon completing the 3-month curriculum, passing all topic assessments, and submitting the capstone portfolio projects, students receive the verified **MSK Institute Certificate of Completion in Python Mastery (Beginner to Advanced)**. The certificate includes a unique online verification code verifiable at [https://www.mskinstitute.in/verify-certificate](https://www.mskinstitute.in/verify-certificate).\n",
+    "description": "# Python Mastery (Beginner to Advanced): Complete 3-Month Software Engineering Bootcamp\n\nWelcome to **Python Mastery (Beginner to Advanced)**, the premier 3-month comprehensive software engineering program engineered by **MSK Institute**. \n\nThis flagship **3-in-1 Grand Mastery Combo** unites our three acclaimed Python curricula into one seamless, continuous learning path:\n1. **Python for Beginners (Level 1)**: Zero-to-hero fundamentals, algorithmic thinking, and core syntax.\n2. **Python for Intermediate (Level 2)**: Professional OOP architecture, decorators, generators, REST APIs, SQLite, and data visualization.\n3. **Python for Advanced (Level 3)**: High-performance systems engineering, concurrency (threading, multiprocessing, asyncio), network sockets, SQLAlchemy 2.0 ORM, and automated testing with Pytest.\n\nSpanning **45 chapters**, **233 structured tutorial topics**, **1,174 interactive quiz questions**, and **14 real-world portfolio projects**, this bootcamp is designed to transform enthusiastic beginners into job-ready software developers, backend engineers, and data automation specialists.\n\n---\n\n## 🎯 Program Overview & Educational Philosophy\n\nPython is the undisputed leader across cloud computing, web development, data engineering, and artificial intelligence. However, surface-level syntax tutorials leave aspiring developers ill-prepared for the technical demands of modern engineering teams.\n\nAt MSK Institute, our training philosophy is founded on **deep conceptual mechanics coupled with continuous practical execution**:\n- **Zero to Production Roadmap**: We start with the absolute basics (how code executes on a CPU) and culminate in complex distributed systems (multi-core multiprocessing and async event loops).\n- **The \"Learn by Doing\" Laboratory Model**: Theory is immediately validated with hands-on coding. Students run real scripts in VS Code, debug live runtime exceptions, and inspect memory allocation.\n- **1,174 Formative Knowledge Checks**: Every single topic in the curriculum features 5 verified multiple-choice questions testing output prediction, edge cases, and architectural trade-offs.\n- **14 Production-Grade Portfolio Projects**: You graduate with an extensive GitHub repository showcasing command-line utilities, relational database engines, multithreaded network downloaders, and asynchronous scrapers.\n\n---\n\n## 👥 Who Should Enroll in This 3-Month Bootcamp?\n\n- **Absolute Beginners & Non-Programmers**: Individuals with zero coding experience seeking a supportive, structured, and thorough on-ramp into software development.\n- **BCA, B.Tech, MCA & Polytechnic Students**: University students seeking practical industry skills, interview preparation, and impressive academic capstone projects.\n- **Working Professionals Seeking Career Transition**: Accountants, data entry operators, and support engineers aiming to transition into high-paying software engineering and data analytics roles.\n- **Aspiring Web & Backend Engineers**: Developers preparing to learn modern web frameworks like Django, FastAPI, or Flask who want a rock-solid Pythonic foundation first.\n- **Future Data Scientists & AI Practitioners**: Anyone planning to specialize in Pandas, NumPy, Scikit-Learn, or PyTorch where advanced Python fluency is mandatory.\n\n---\n\n## 🗺️ The Complete 3-Month Month-by-Month Roadmap\n\n```text\n┌─────────────────────────────────────────────────────────────────────────────┐\n│                    3-MONTH PYTHON MASTERY TIMELINE                          │\n├────────────────────────┬──────────────────────────┬─────────────────────────┤\n│   MONTH 1: LEVEL 1     │     MONTH 2: LEVEL 2     │    MONTH 3: LEVEL 3     │\n│   Python Fundamentals  │  Intermediate Engineering│  Advanced Systems & Arch│\n├────────────────────────┼──────────────────────────┼─────────────────────────┤\n│ • Syntax & Variables   │ • Advanced Comprehensions│ • Descriptors & MRO     │\n│ • Control Flow (Loops) │ • Closures & Decorators  │ • Magic Methods (Dunder)│\n│ • Lists, Dicts, Tuples │ • Packages & Modules     │ • Threading & Locks     │\n│ • Functions & Scope    │ • File Handling (CSV/JSON│ • Multiprocessing & GIL │\n│ • File I/O & Exceptions│ • OOP (Inheritance/Poly) │ • Asyncio Event Loops   │\n│ • VS Code Debugging    │ • Custom Exceptions      │ • SQLAlchemy 2.0 ORM    │\n│ • 4 Beginner Projects  │ • Iterators & Generators │ • Network Sockets (TCP) │\n│                        │ • REST APIs & Requests   │ • Regex Mastery         │\n│                        │ • SQLite3 Relational DB  │ • Pytest & TDD          │\n│                        │ • Matplotlib Charts      │ • Tkinter Desktop GUIs  │\n│                        │ • 7 Projects & Capstones │ • 3 Enterprise Capstones│\n│                        │                          │                         │\n│ 16 Chapters | 88 Topics│ 15 Chapters | 76 Topics │ 15 Chapters | 69 Topics │\n│ 434 Quiz Questions     │ 350 Quiz Questions       │ 315 Quiz Questions      │\n└────────────────────────┴──────────────────────────┴─────────────────────────┘\n```\n\n---\n\n## 📦 The 3 Included Specialized Curricula\n\nBy enrolling in this 3-Month Combo, you receive complete access to 3 specialized courses:\n\n### 1. Python for Beginners (Month 1 | 16 Chapters | 88 Topics)\n- **Chapter 1: Introduction to Python**: Language philosophy, Python 3.12+ installation, environment PATH, VS Code setup, and writing your first script.\n- **Chapter 2: Variables & Data Types**: Dynamic typing, integers, floats, strings, booleans, type casting (`int()`, `str()`), and formatted string interpolation.\n- **Chapter 3: Operators & Expressions**: Arithmetic, assignment, comparison, logical (`and`, `or`, `not`), identity (`is`), and membership (`in`).\n- **Chapter 4: Conditional Statements**: Boolean expressions, `if`, `elif`, `else` branching, and nested conditionals.\n- **Chapter 5: Loops & Iterations**: `while` loops, `for` loops with `range()`, `break`, `continue`, and loop `else` clauses.\n- **Chapter 6: Strings Deep Dive**: String immutability, slicing, string methods (`split`, `join`, `replace`), and Unicode handling.\n- **Chapter 7: Lists Deep Dive**: List mutability, indexing, slicing, methods (`append`, `extend`, `pop`, `sort`), and 2D matrices.\n- **Chapter 8: Tuples & Sets**: Tuple immutability, tuple packing/unpacking, set uniqueness, and mathematical set operations (`union`, `intersection`).\n- **Chapter 9: Dictionaries**: Key-value mappings, dictionary methods (`get`, `items`, `keys`), and nested dictionaries.\n- **Chapter 10: Functions Basics**: Function definitions, parameters, return values, default arguments, and local vs global scope.\n- **Chapter 11: File Handling Basics**: Reading and writing text files, file modes (`r`, `w`, `a`), and line iteration.\n- **Chapter 12: Basic Error Handling**: `try`, `except`, catching specific exceptions (`ValueError`, `ZeroDivisionError`), and safe user input.\n- **Chapter 13: Modules Basics**: Importing standard modules (`math`, `random`, `datetime`), and creating custom helper modules.\n- **Chapter 14: Practical Beginner Projects**: Building the Command-Line Calculator, Student Grade Calculator, Number Analyzer, and Simple Billing System.\n- **Chapter 15: Revision & Final Assessment**: Comprehensive syntax review, best practices checklist, and foundational programming exam.\n\n### 2. Python for Intermediate (Month 2 | 15 Chapters | 76 Topics)\n- **Chapter 1: Advanced Data Types & Comprehensions**: Nested list comprehensions, set comprehensions, dictionary comprehensions, and walrus operator optimization.\n- **Chapter 2: Functions Deep Dive**: `*args` and `**kwargs`, mutable default argument pitfalls, lexical closures (`nonlocal`), and custom decorators with arguments.\n- **Chapter 3: Modules and Packages**: Package structure, `__init__.py`, relative imports, module namespace exports (`__all__`), and execution guards (`if __name__ == '__main__':`).\n- **Chapter 4: File Handling Advanced**: Context managers (`with`), parsing CSV tabular data with `csv.DictReader`/`DictWriter`, Windows `newline=''` hygiene, and JSON serialization.\n- **Chapter 5: Object-Oriented Programming (OOP)**: Classes, instances, constructors, multi-level inheritance, method overriding, `super()`, encapsulation, and polymorphism.\n- **Chapter 6: Exception Handling**: Complete `try-except-else-finally` blocks, custom exception classes, and exception chaining (`raise ... from`).\n- **Chapter 7: Iterators & Generators**: The Iterator Protocol (`__iter__`, `__next__`), custom iterable classes, `yield`, lazy evaluation, and generator expressions.\n- **Chapter 8: Working with APIs**: Client-server architecture, consuming REST APIs with `requests`, handling HTTP status codes, query parameters, and parsing nested JSON.\n- **Chapter 9: Debugging & Logging**: Industrial `logging` module, severity levels, file handlers, formatting, interactive debugging with `pdb`, and defensive assertions.\n- **Chapter 10: Python Standard Libraries**: Deep dive into `collections` (`defaultdict`, `Counter`, `namedtuple`), `datetime` arithmetic, and `os`/`sys` system operations.\n- **Chapter 11: Database Basics with SQLite**: Relational database principles, `sqlite3` handles, parameterized CRUD queries (SQL injection prevention), and transaction management.\n- **Chapter 12: Virtual Environments & Pip**: Dependency isolation with `venv`, package management with `pip`, and freezing reproducible environments with `requirements.txt`.\n- **Chapter 13: Data Visualization Basics**: Matplotlib Pyplot figures and axes, line/bar/pie charts, visual styling, and Seaborn statistical distributions.\n- **Chapter 14: Intermediate Projects**: Expense Tracker with CSV, API-Based Dictionary Application, and CLI Task Manager.\n- **Chapter 15: Intermediate Capstones**: Object-Oriented Library Management System and Automated Student Report Card PDF/PNG Generator.\n\n### 3. Python for Advanced (Month 3 | 15 Chapters | 69 Topics)\n- **Chapter 1: Advanced OOP Concepts**: Descriptors, bound methods under the hood, polymorphic factory constructors with `TypeVar`, Method Resolution Order (MRO), and mixin architecture.\n- **Chapter 2: Magic Methods & Operator Overloading**: Object allocation hooks (`__new__` vs `__init__`), developer diagnostics (`__repr__`), operator overloading, and sequence/mapping protocols.\n- **Chapter 3: Advanced Decorators and Context Managers**: Three-tier decorator factories, class decorators, resource management with `__enter__`/`__exit__`, and `contextlib.ExitStack`.\n- **Chapter 4: Itertools and Functools**: Infinite stream iterators, combinatorial generators, functional pipelines with `functools.reduce`, `singledispatch`, and bounded `@lru_cache`.\n- **Chapter 5: Generators & Coroutines**: Generator state inspection (`inspect.getgeneratorstate`), delegation with `yield from`, two-way coroutine communication via `.send()`, and stream processors.\n- **Chapter 6: Multithreading in Python**: OS threading model, CPython Global Interpreter Lock (GIL), thread synchronization with `Lock`/`RLock`/`Semaphore`, and thread pools.\n- **Chapter 7: Multiprocessing in Python**: Bypassing the GIL with isolated process memory, IPC with `multiprocessing.Queue`, shared memory, and multi-core `Pool.map`.\n- **Chapter 8: Asynchronous Programming (Asyncio)**: Cooperative multitasking, single-threaded event loops, non-blocking coroutines, task scheduling with `asyncio.gather()`, and timeouts.\n- **Chapter 9: Advanced Database Handling**: SQLAlchemy 2.0 Declarative Base modeling, mapped columns, One-to-Many/Many-to-Many relationships, N+1 query elimination (`selectinload`), and session rollbacks.\n- **Chapter 10: Networking with Python**: Berkeley sockets (`AF_INET`, `SOCK_STREAM`), `SO_REUSEADDR`, TCP framing vs UDP datagrams, multi-client broadcast chat engines, and client-server protocols.\n- **Chapter 11: Regular Expressions Advanced**: Named capture groups, non-capturing groups, greedy vs lazy matching, callback substitutions (`re.sub`), and catastrophic backtracking prevention.\n- **Chapter 12: Data Serialization & File Formats**: Pickle object serialization security risks (`__reduce__`), custom `JSONEncoder` for Decimals/sets, and safe YAML parsing.\n- **Chapter 13: Testing & Best Practices**: Unit testing with `unittest`, Pythonic testing with `pytest`, custom fixtures, dependency mocking with `unittest.mock`, and Test-Driven Development (TDD).\n- **Chapter 14: GUI Development with Tkinter**: Tk root window event loops, geometry managers (`grid` vs `pack`), event binding, lambda late-binding fixes, and threaded UI responsiveness.\n- **Chapter 15: Final Capstone Projects**: Multi-Tier Inventory Management System, Live Desktop Weather Analytics Station, and Personal Finance & Investment Ledger with SQLAlchemy 2.0.\n\n---\n\n## 🛠️ Complete 14-Project Portfolio Breakdown\n\nThroughout this 3-month bootcamp, you build 14 real-world software applications:\n\n| # | Project Name | Level | Primary Competencies |\n| :-: | :--- | :-: | :--- |\n| **1** | **Command-Line Calculator** | Beginner | Functions, conditionals, arithmetic validation |\n| **2** | **Student Grade Calculator** | Beginner | Lists, loops, numeric thresholds, formatting |\n| **3** | **Number Analyzer & Prime Checker** | Beginner | Algorithmic logic, while loops, mathematical optimization |\n| **4** | **Simple Billing & Invoice System** | Beginner | Dictionaries, text file exports, formatted receipts |\n| **5** | **Data Filtering Engine** | Intermediate | Advanced list/set comprehensions, walrus operator |\n| **6** | **Execution Audit & Timing Decorator** | Intermediate | Closures, function wrappers, `@functools.wraps` |\n| **7** | **Custom Utility Package** | Intermediate | `__init__.py`, module packaging, namespaces |\n| **8** | **CSV Contact Manager** | Intermediate | Context managers, `csv.DictReader`/`DictWriter` |\n| **9** | **Bank Account Class System** | Intermediate | Encapsulation, inheritance, polymorphism, `@property` |\n| **10** | **Error-Handled Math Calculator** | Intermediate | `try-except-else-finally`, custom exception classes |\n| **11** | **Infinite Log Stream Generator** | Intermediate | Iterators, generators, `yield`, lazy evaluation |\n| **12** | **Weather Data Fetcher & CLI Dictionary** | Intermediate | REST APIs, HTTP requests, nested JSON navigation |\n| **13** | **Student Records Database & Visualizer** | Intermediate | SQLite3 CRUD queries, SQL injection prevention, Matplotlib |\n| **14** | **Three Enterprise Capstones**: | Advanced | Systems-level engineering: |\n| | *a) Multi-Tier Inventory Management System* | Advanced | Relational inventory schema, transactional deductions |\n| | *b) Asynchronous Weather Dashboard* | Advanced | Asyncio event loop, desktop GUI with Tkinter |\n| | *c) Personal Finance & Investment Ledger* | Advanced | Modern SQLAlchemy 2.0, atomic transfers, Pytest suite |\n\n---\n\n## 💼 Career Paths & Industry Roles\n\nGraduates of the 3-Month Python Mastery program are qualified for high-demand developer roles:\n- **Full-Stack Python Backend Developer**: Build scalable microservices and APIs with Django, FastAPI, or Flask.\n- **Python Automation Specialist**: Automate complex enterprise workflows, extract web intelligence, and orchestrate systems.\n- **Junior Data Analyst / Data Engineer**: Clean, transform, inspect, and visualize multi-gigabyte datasets using SQLite, standard libraries, and Matplotlib.\n- **Software QA & Test Automation Engineer**: Write robust automated test suites, mock external dependencies, and enforce code quality using Pytest.\n\n---\n\n## 🏆 Official Certification & Assessment\n\nUpon completing the 3-month curriculum, passing all topic assessments, and submitting the capstone portfolio projects, students receive the verified **MSK Institute Certificate of Completion in Python Mastery (Beginner to Advanced)**. The certificate includes a unique online verification code verifiable at [https://www.mskinstitute.in/verify-certificate](https://www.mskinstitute.in/verify-certificate).\n",
     "faqs": [
       {
         "question": "Why should I choose the 3-Month Python Mastery Combo instead of taking individual courses separately?",
@@ -3468,8 +3468,32 @@
           },
           {
             "id": "python-for-advanced-t1.5",
-            "title": "Project: Employee Management System",
+            "title": "Abstract Base Classes (abc.ABC) and Protocols for Structural Subtyping",
             "sortOrder": 5,
+            "slug": "abstract-base-classes-and-protocols",
+            "notes": [
+              {
+                "title": "Tutorial & Notes",
+                "url": "/tutorials/python-for-advanced/abstract-base-classes-and-protocols"
+              }
+            ]
+          },
+          {
+            "id": "python-for-advanced-t1.6",
+            "title": "Metaclasses and Class Creation Hooks with __init_subclass__",
+            "sortOrder": 6,
+            "slug": "metaclasses-and-init-subclass",
+            "notes": [
+              {
+                "title": "Tutorial & Notes",
+                "url": "/tutorials/python-for-advanced/metaclasses-and-init-subclass"
+              }
+            ]
+          },
+          {
+            "id": "python-for-advanced-t1.7",
+            "title": "Project: Employee Management System",
+            "sortOrder": 7,
             "slug": "project-employee-management-system",
             "notes": [
               {
@@ -3535,8 +3559,20 @@
           },
           {
             "id": "python-for-advanced-t2.5",
+            "title": "CPython Internals: Memory Management, Garbage Collection, and __slots__",
+            "sortOrder": 5,
+            "slug": "cpython-internals-memory-gc-slots",
+            "notes": [
+              {
+                "title": "Tutorial & Notes",
+                "url": "/tutorials/python-for-advanced/cpython-internals-memory-gc-slots"
+              }
+            ]
+          },
+          {
+            "id": "python-for-advanced-t2.6",
             "title": "Project: Vector Class with Overloaded Operators",
-            "sortOrder": 10,
+            "sortOrder": 6,
             "slug": "project-vector-class-with-overloaded-operators",
             "notes": [
               {
@@ -3767,8 +3803,20 @@
           },
           {
             "id": "python-for-advanced-t6.4",
+            "title": "Python 3.13+ Free-Threaded Execution (No-GIL PEP 703) and JIT Compiler",
+            "sortOrder": 4,
+            "slug": "free-threaded-python-no-gil-and-jit",
+            "notes": [
+              {
+                "title": "Tutorial & Notes",
+                "url": "/tutorials/python-for-advanced/free-threaded-python-no-gil-and-jit"
+              }
+            ]
+          },
+          {
+            "id": "python-for-advanced-t6.5",
             "title": "Project: Multithreaded Downloader",
-            "sortOrder": 27,
+            "sortOrder": 5,
             "slug": "project-multithreaded-downloader",
             "notes": [
               {
@@ -3877,8 +3925,20 @@
           },
           {
             "id": "python-for-advanced-t8.4",
+            "title": "Structured Concurrency in Asyncio: TaskGroup and asyncio.timeout()",
+            "sortOrder": 4,
+            "slug": "asyncio-taskgroup-and-structured-concurrency",
+            "notes": [
+              {
+                "title": "Tutorial & Notes",
+                "url": "/tutorials/python-for-advanced/asyncio-taskgroup-and-structured-concurrency"
+              }
+            ]
+          },
+          {
+            "id": "python-for-advanced-t8.5",
             "title": "Project: Async Web Scraper",
-            "sortOrder": 35,
+            "sortOrder": 5,
             "slug": "project-async-web-scraper",
             "notes": [
               {
@@ -4097,8 +4157,20 @@
           },
           {
             "id": "python-for-advanced-t12.4",
+            "title": "Modern Python Packaging with pyproject.toml and Wheel Distribution",
+            "sortOrder": 4,
+            "slug": "modern-python-packaging-pyproject-toml",
+            "notes": [
+              {
+                "title": "Tutorial & Notes",
+                "url": "/tutorials/python-for-advanced/modern-python-packaging-pyproject-toml"
+              }
+            ]
+          },
+          {
+            "id": "python-for-advanced-t12.5",
             "title": "Project: Config File Manager",
-            "sortOrder": 51,
+            "sortOrder": 5,
             "slug": "project-config-file-manager",
             "notes": [
               {
@@ -8713,9 +8785,21 @@
           },
           {
             "id": "py-t12.5",
+            "title": "Structural Pattern Matching: Match-Case Statement",
+            "slug": "match-case-statement",
+            "sortOrder": 5,
+            "notes": [
+              {
+                "title": "Tutorial & Notes",
+                "url": "/tutorials/python-for-beginners/match-case-statement"
+              }
+            ]
+          },
+          {
+            "id": "py-t12.6",
             "title": "Project: Grading System",
             "slug": "project-grading-system",
-            "sortOrder": 5,
+            "sortOrder": 6,
             "notes": [
               {
                 "title": "Tutorial & Notes",
@@ -8828,9 +8912,21 @@
           },
           {
             "id": "py-t13.9",
+            "title": "Looping Techniques with enumerate() and zip()",
+            "slug": "enumerate-and-zip-functions",
+            "sortOrder": 9,
+            "notes": [
+              {
+                "title": "Tutorial & Notes",
+                "url": "/tutorials/python-for-beginners/enumerate-and-zip-functions"
+              }
+            ]
+          },
+          {
+            "id": "py-t13.10",
             "title": "Project: Multiplication Table Generator",
             "slug": "project-multiplication-table-generator",
-            "sortOrder": 9,
+            "sortOrder": 10,
             "notes": [
               {
                 "title": "Tutorial & Notes",
@@ -8931,9 +9027,21 @@
           },
           {
             "id": "py-t14.8",
+            "title": "Positional-Only, Keyword-Only Arguments & Basic Type Hints",
+            "slug": "positional-only-keyword-only-and-type-hints",
+            "sortOrder": 8,
+            "notes": [
+              {
+                "title": "Tutorial & Notes",
+                "url": "/tutorials/python-for-beginners/positional-only-keyword-only-and-type-hints"
+              }
+            ]
+          },
+          {
+            "id": "py-t14.9",
             "title": "Project: Calculator",
             "slug": "project-calculator",
-            "sortOrder": 8,
+            "sortOrder": 9,
             "notes": [
               {
                 "title": "Tutorial & Notes",
@@ -9187,8 +9295,20 @@
           },
           {
             "id": "python-for-intermediate-t1.5",
-            "title": "Project: Data Filtering with Comprehensions",
+            "title": "Advanced Structural Pattern Matching with Guards and Class Patterns",
             "sortOrder": 5,
+            "slug": "pattern-matching-guards-and-classes",
+            "notes": [
+              {
+                "title": "Tutorial & Notes",
+                "url": "/tutorials/python-for-intermediate/pattern-matching-guards-and-classes"
+              }
+            ]
+          },
+          {
+            "id": "python-for-intermediate-t1.6",
+            "title": "Project: Data Filtering with Comprehensions",
+            "sortOrder": 6,
             "slug": "project-data-filtering-with-comprehensions",
             "notes": [
               {
@@ -9388,8 +9508,20 @@
           },
           {
             "id": "python-for-intermediate-t4.5",
+            "title": "Modern Filesystem Handling with pathlib.Path",
+            "sortOrder": 5,
+            "slug": "pathlib-modern-filesystem",
+            "notes": [
+              {
+                "title": "Tutorial & Notes",
+                "url": "/tutorials/python-for-intermediate/pathlib-modern-filesystem"
+              }
+            ]
+          },
+          {
+            "id": "python-for-intermediate-t4.6",
             "title": "Project: CSV Contact Manager",
-            "sortOrder": 20,
+            "sortOrder": 6,
             "slug": "project-csv-contact-manager",
             "notes": [
               {
@@ -9455,8 +9587,32 @@
           },
           {
             "id": "python-for-intermediate-t5.5",
+            "title": "Dataclasses: Clean Data Models with @dataclass",
+            "sortOrder": 5,
+            "slug": "dataclasses-module",
+            "notes": [
+              {
+                "title": "Tutorial & Notes",
+                "url": "/tutorials/python-for-intermediate/dataclasses-module"
+              }
+            ]
+          },
+          {
+            "id": "python-for-intermediate-t5.6",
+            "title": "Object Mutability: Shallow Copy vs Deep Copy",
+            "sortOrder": 6,
+            "slug": "shallow-vs-deep-copy",
+            "notes": [
+              {
+                "title": "Tutorial & Notes",
+                "url": "/tutorials/python-for-intermediate/shallow-vs-deep-copy"
+              }
+            ]
+          },
+          {
+            "id": "python-for-intermediate-t5.7",
             "title": "Project: Bank Account Class System",
-            "sortOrder": 25,
+            "sortOrder": 7,
             "slug": "project-bank-account-class-system",
             "notes": [
               {
@@ -9522,8 +9678,20 @@
           },
           {
             "id": "python-for-intermediate-t6.5",
+            "title": "Modern Exception Handling: Exception Groups, except*, and add_note()",
+            "sortOrder": 5,
+            "slug": "exception-groups-notes-except-star",
+            "notes": [
+              {
+                "title": "Tutorial & Notes",
+                "url": "/tutorials/python-for-intermediate/exception-groups-notes-except-star"
+              }
+            ]
+          },
+          {
+            "id": "python-for-intermediate-t6.6",
             "title": "Project: Error-Handled Calculator",
-            "sortOrder": 30,
+            "sortOrder": 6,
             "slug": "project-error-handled-calculator",
             "notes": [
               {
@@ -9790,8 +9958,20 @@
           },
           {
             "id": "python-for-intermediate-t10.5",
+            "title": "Building Professional CLI Tools with argparse",
+            "sortOrder": 5,
+            "slug": "argparse-command-line-parsing",
+            "notes": [
+              {
+                "title": "Tutorial & Notes",
+                "url": "/tutorials/python-for-intermediate/argparse-command-line-parsing"
+              }
+            ]
+          },
+          {
+            "id": "python-for-intermediate-t10.6",
             "title": "Project: File & Directory Utility Tool",
-            "sortOrder": 50,
+            "sortOrder": 6,
             "slug": "project-file-directory-utility-tool",
             "notes": [
               {

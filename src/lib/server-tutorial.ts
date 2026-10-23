@@ -3,6 +3,11 @@ import path from 'path';
 import { parseFrontmatter } from '@/lib/markdown';
 import { fetchTutorialBySlug } from '@/services/api';
 import { TutorialTopicFrontmatter, Course, TutorialItem } from '@/types';
+import githubManifest from '@/data/githubTutorialManifest.json';
+
+// In-memory cache for fast repeated reads during server execution
+const memoryCache = new Map<string, { content: string; timestamp: number }>();
+const CACHE_TTL_MS = 60 * 60 * 1000; // 1 hour cache
 
 export async function fetchTutorialTopic(
   tutorialSlug: string,
@@ -123,58 +128,119 @@ export async function fetchTutorialTopic(
     'introduction-to-python.md',
   ].filter(Boolean) as string[];
 
-  // Read the markdown file from disk
   let rawMarkdown = '';
-  const tutorialDir = path.join(
-    process.cwd(),
-    'public',
-    'content',
-    'tutorials',
-    tutorial.slug
-  );
 
-  for (const filename of candidates) {
-    try {
-      const filePath = path.join(tutorialDir, filename);
-      rawMarkdown = await fs.readFile(filePath, 'utf8');
-      if (rawMarkdown) break;
-    } catch {
-      // Continue to next candidate
+  // 1. Check if tutorial is backed by GitHub repository via githubTutorialManifest
+  const manifest = githubManifest as Record<string, { org: string; repo: string; branch: string; files: Record<string, string> }>;
+  const ghConfig = manifest[tutorial.slug];
+
+  if (ghConfig && ghConfig.files) {
+    // Try candidate matches in GitHub manifest
+    let matchedRelPath: string | null = null;
+    const lookupKeys = [
+      normalizedSlug,
+      topicSlug,
+      currentTopic?.slug,
+      ...candidates.map((c) => c.replace(/\.md$/, '').replace(/^\d+-/, '')),
+      ...candidates.map((c) => c.replace(/\.md$/, ''))
+    ].filter(Boolean) as string[];
+
+    for (const key of lookupKeys) {
+      if (ghConfig.files[key]) {
+        matchedRelPath = ghConfig.files[key];
+        break;
+      }
+      if (ghConfig.files[key.toLowerCase()]) {
+        matchedRelPath = ghConfig.files[key.toLowerCase()];
+        break;
+      }
+    }
+
+    if (matchedRelPath) {
+      const cacheKey = `${ghConfig.org}/${ghConfig.repo}/${matchedRelPath}`;
+      const cached = memoryCache.get(cacheKey);
+      if (cached && Date.now() - cached.timestamp < CACHE_TTL_MS) {
+        rawMarkdown = cached.content;
+      } else {
+        try {
+          const rawUrl = `https://raw.githubusercontent.com/${ghConfig.org}/${ghConfig.repo}/${ghConfig.branch || 'main'}/${matchedRelPath}`;
+          const res = await fetch(rawUrl, {
+            next: { revalidate: 3600 }, // 1-hour ISR cache
+          });
+          if (res.ok) {
+            rawMarkdown = await res.text();
+            // Automatically rewrite local image paths to GitHub Raw CDN images
+            const rawBase = `https://raw.githubusercontent.com/${ghConfig.org}/${ghConfig.repo}/${ghConfig.branch || 'main'}`;
+            rawMarkdown = rawMarkdown.replace(
+              new RegExp(`/content/tutorials/${tutorial.slug}/images/`, 'g'),
+              `${rawBase}/images/`
+            );
+            rawMarkdown = rawMarkdown.replace(
+              /\(images\//g,
+              `(${rawBase}/images/`
+            );
+            memoryCache.set(cacheKey, { content: rawMarkdown, timestamp: Date.now() });
+          }
+        } catch (fetchErr) {
+          console.error(`Failed to fetch tutorial markdown from GitHub (${cacheKey}):`, fetchErr);
+        }
+      }
     }
   }
 
-  // If not found in tutorial root, search in chapter subdirectories
+  // 2. If not found in GitHub manifest or fetch failed, fallback to local disk
   if (!rawMarkdown) {
-    try {
-      const entries = await fs.readdir(tutorialDir, { withFileTypes: true });
-      const subdirs = entries
-        .filter((e) => e.isDirectory() && e.name !== 'images')
-        .map((e) => e.name);
+    const tutorialDir = path.join(
+      process.cwd(),
+      'public',
+      'content',
+      'tutorials',
+      tutorial.slug
+    );
 
-      for (const sub of subdirs) {
-        try {
-          const subFiles = await fs.readdir(path.join(tutorialDir, sub));
-          for (const filename of candidates) {
-            const cleanCandidate = filename.replace(/^\d+-/, '');
-            const matchedFile = subFiles.find((f) => {
-              if (f === filename) return true;
-              const cleanF = f.replace(/^\d+-/, '');
-              return cleanF === filename || cleanF === cleanCandidate;
-            });
-
-            if (matchedFile) {
-              const subFilePath = path.join(tutorialDir, sub, matchedFile);
-              rawMarkdown = await fs.readFile(subFilePath, 'utf8');
-              if (rawMarkdown) break;
-            }
-          }
-          if (rawMarkdown) break;
-        } catch {
-          // Continue to next subdir
-        }
+    for (const filename of candidates) {
+      try {
+        const filePath = path.join(tutorialDir, filename);
+        rawMarkdown = await fs.readFile(filePath, 'utf8');
+        if (rawMarkdown) break;
+      } catch {
+        // Continue to next candidate
       }
-    } catch {
-      // Directory read failed
+    }
+
+    // If not found in tutorial root, search in chapter subdirectories
+    if (!rawMarkdown) {
+      try {
+        const entries = await fs.readdir(tutorialDir, { withFileTypes: true });
+        const subdirs = entries
+          .filter((e) => e.isDirectory() && e.name !== 'images')
+          .map((e) => e.name);
+
+        for (const sub of subdirs) {
+          try {
+            const subFiles = await fs.readdir(path.join(tutorialDir, sub));
+            for (const filename of candidates) {
+              const cleanCandidate = filename.replace(/^\d+-/, '');
+              const matchedFile = subFiles.find((f) => {
+                if (f === filename) return true;
+                const cleanF = f.replace(/^\d+-/, '');
+                return cleanF === filename || cleanF === cleanCandidate;
+              });
+
+              if (matchedFile) {
+                const subFilePath = path.join(tutorialDir, sub, matchedFile);
+                rawMarkdown = await fs.readFile(subFilePath, 'utf8');
+                if (rawMarkdown) break;
+              }
+            }
+            if (rawMarkdown) break;
+          } catch {
+            // Continue to next subdir
+          }
+        }
+      } catch {
+        // Directory read failed
+      }
     }
   }
 

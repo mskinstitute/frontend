@@ -12,11 +12,33 @@ interface TutorialTopicPageProps {
   params: Promise<{ slug: string; topicSlug: string }>;
 }
 
+import githubManifest from '@/data/githubTutorialManifest.json';
+
 export async function generateStaticParams() {
   const tutorials = await fetchTutorials();
   const paramsList: { slug: string; topicSlug: string }[] = [];
 
   for (const tut of tutorials) {
+    // 1. If tutorial is backed by GitHub repository in manifest, use mapped slugs
+    const manifest = githubManifest as Record<string, { files: Record<string, string> }>;
+    const ghConfig = manifest[tut.slug];
+    if (ghConfig && ghConfig.files) {
+      const seen = new Set<string>();
+      for (const tSlug of Object.keys(ghConfig.files)) {
+        // filter out numeric prefix versions like 01- or 05-
+        const clean = tSlug.replace(/^\d+-/, '').toLowerCase();
+        if (!seen.has(clean)) {
+          seen.add(clean);
+          paramsList.push({
+            slug: tut.slug,
+            topicSlug: clean,
+          });
+        }
+      }
+      continue;
+    }
+
+    // 2. Otherwise scan local disk
     try {
       const dirPath = path.join(process.cwd(), 'public', 'content', 'tutorials', tut.slug);
       const entries = await fs.readdir(dirPath, { withFileTypes: true });
