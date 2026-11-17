@@ -20,6 +20,7 @@ const tutorials = JSON.parse(fs.readFileSync(path.join(process.cwd(), 'public', 
 const validRoutes = new Set([
   '/',
   '/courses',
+  '/tutorials',
   '/verify-certificate',
   '/study-material',
   '/careers',
@@ -93,6 +94,20 @@ tutorials.forEach(t => {
     });
   }
 });
+
+// Also register cloud-hosted tutorial topics from githubTutorialManifest.json
+const manifestPath = path.join(process.cwd(), 'src', 'data', 'githubTutorialManifest.json');
+if (fs.existsSync(manifestPath)) {
+  const manifest = JSON.parse(fs.readFileSync(manifestPath, 'utf8'));
+  Object.entries(manifest).forEach(([tutSlug, tutData]) => {
+    if (tutData && tutData.files) {
+      Object.keys(tutData.files).forEach(f => {
+        const cleanSlug = f.replace(/^\d+-/, '').replace(/\.md$/, '');
+        validRoutes.add(`/tutorials/${tutSlug}/${cleanSlug}`);
+      });
+    }
+  });
+}
 
 // Load redirects from next.config.ts
 const nextConfig = fs.readFileSync(path.join(process.cwd(), 'next.config.ts'), 'utf8');

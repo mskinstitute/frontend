@@ -20,46 +20,48 @@ import { Course, LiveBatch } from '@/types';
 export const revalidate = 60; // Refresh live batch schedules every 60s
 
 export const metadata: Metadata = {
-  title: 'MSK Institute | Premier Computer Training & Coding Academy in Shikohabad',
-  description: 'Learn Python programming, Full-Stack MERN Web Development, NIELIT CCC, and ADCA with hands-on lab training at MSK Institute Shikohabad. Live mentorship by Er. Sumit Kumar and verifiable graduation certificates.',
+  title: 'MSK Institute | Computer Training & Coding Academy (Shikohabad & Global Live Online)',
+  description: 'Learn Python, Full-Stack MERN Web Development, Data Analytics, NIELIT CCC, and ADCA via offline computer labs in Shikohabad or live online classes worldwide in Hindi & English with Er. Sumit Kumar.',
   keywords: [
     'MSK Institute',
     'Computer Institute Shikohabad',
     'Best Coding Classes in Shikohabad',
     'Computer Training Centre Shikohabad',
+    'Live Online Coding Classes in Hindi and English',
+    'Online Python Coaching Worldwide',
     'Python Coaching Shikohabad',
-    'MERN Stack Development Shikohabad',
+    'MERN Stack Development Online and Offline',
     'NIELIT CCC Course Shikohabad',
     'ADCA Diploma Shikohabad',
     'Er. Sumit Kumar Shikohabad',
-    'Computer Center Near Station Road Shikohabad',
-    'Web Development Institute UP',
-    'Online Computer Classes UP'
+    'Computer Center Firozabad Sirsaganj Jasrana',
+    'Web Development Institute India',
+    'Online Computer Classes Hindi English'
   ],
   alternates: {
     canonical: 'https://www.mskinstitute.in',
   },
   openGraph: {
-    title: 'MSK Institute | Computer Training & Coding Academy in Shikohabad',
-    description: 'Learn Python, Full-Stack Web Development, CCC, and MS Office with practical labs and mentorship at MSK Institute Shikohabad.',
+    title: 'MSK Institute | Computer Training & Coding Academy (Shikohabad & Live Online)',
+    description: 'Learn Python, Full-Stack Web Development, Data Analytics, CCC & ADCA via offline labs in Shikohabad or live online classes worldwide in Hindi & English.',
     url: 'https://www.mskinstitute.in',
     siteName: 'MSK Institute',
     locale: 'en_IN',
     type: 'website',
     images: [
       {
-        url: 'https://www.mskinstitute.in/logo.jpg',
+        url: 'https://www.mskinstitute.in/brand/og-banner.png',
         width: 1200,
         height: 630,
-        alt: 'MSK Institute Shikohabad Computer & Coding Academy',
+        alt: 'MSK Institute — Coding & Computer Training Academy (Shikohabad & Global Live Online)',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'MSK Institute | Computer Training & Coding Academy',
-    description: 'Learn Python, Web Development, CCC, and ADCA with practical offline lab sessions at MSK Institute, Shikohabad.',
-    images: ['https://www.mskinstitute.in/logo.jpg'],
+    description: 'Learn Python, Web Development, CCC & ADCA via practical offline labs in Shikohabad or live online classes worldwide in Hindi & English.',
+    images: ['https://www.mskinstitute.in/brand/og-banner.png'],
   },
   robots: {
     index: true,
@@ -284,8 +286,8 @@ export default async function HomePage() {
         "alternateName": ["MSK Computer Institute", "MSK Institute Shikohabad", "MSK Coding Academy"],
         "url": "https://www.mskinstitute.in",
         "logo": "https://www.mskinstitute.in/logo.jpg",
-        "image": "https://www.mskinstitute.in/logo.jpg",
-        "description": "Premier Computer & Coding Training Institute in Shikohabad providing practical software engineering bootcamps, Python programming, MERN full-stack development, and government certified computer courses.",
+        "image": "https://www.mskinstitute.in/brand/og-banner.png",
+        "description": "Premier Computer & Coding Training Institute in Shikohabad providing practical offline lab training plus live interactive online coding classes worldwide in Hindi & English.",
         "telephone": "+91-8393042166",
         "email": "mskshikohabad@gmail.com",
         "priceRange": "₹₹",
@@ -302,7 +304,7 @@ export default async function HomePage() {
           "latitude": 27.1157743,
           "longitude": 78.5829716
         },
-        "hasMap": "https://maps.google.com/?q=MSK+Institute+Shikohabad",
+        "hasMap": "https://maps.google.com/?cid=12440673232057670688",
         "openingHoursSpecification": [
           {
             "@type": "OpeningHoursSpecification",
@@ -791,7 +793,7 @@ export default async function HomePage() {
 
           <div className="text-center pt-2">
             <a
-              href="https://maps.google.com/?q=MSK+Institute+Shikohabad"
+              href="https://maps.app.goo.gl/MyER29LFmibVkPe47"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 text-xs sm:text-sm font-bold text-secondary hover:text-secondary-light transition-colors"
@@ -918,7 +920,7 @@ export default async function HomePage() {
                   <span>Call Us: +91 83930 42166</span>
                 </a>
                 <a
-                  href="https://maps.google.com/?q=MSK+Institute+Shikohabad"
+                  href="https://maps.app.goo.gl/MyER29LFmibVkPe47"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 px-5 py-3 border border-border-subtle hover:bg-surface text-primary font-bold text-xs rounded-xl transition-colors"

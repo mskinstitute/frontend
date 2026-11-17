@@ -23,7 +23,9 @@
     "validate:branches": "node scripts/validate-branches.js",
     "validate:locations": "node scripts/validate-locations.js",
     "validate:branch-schema": "node scripts/validate-branch-schema.js",
-    "validate:branch-content": "node scripts/validate-branch-content.js"
+    "validate:branch-content": "node scripts/validate-branch-content.js",
+    "seo:indexnow": "node scripts/submit-indexnow.js",
+    "seo:indexnow:dry": "node scripts/submit-indexnow.js --dry-run"
   },
   "dependencies": {
     "@monaco-editor/react": "^4.7.0",

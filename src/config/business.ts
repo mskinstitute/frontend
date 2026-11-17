@@ -32,7 +32,8 @@ export const BUSINESS_CONFIG = {
     rawPhone: '+918393042166',
     cleanWhatsApp: '918393042166',
     email: 'mskshikohabad@gmail.com',
-    mapsUrl: 'https://maps.google.com/?q=MSK+Institute+Shikohabad',
+    mapsUrl: 'https://maps.app.goo.gl/MyER29LFmibVkPe47',
+    googleCidUrl: 'https://maps.google.com/?cid=12440673232057670688',
   },
 
   // Canonical Address (HQ - Shikohabad)
@@ -89,7 +90,7 @@ export const BUSINESS_CONFIG = {
     facebook: socialRegistry.channels.find((c) => c.id === 'facebook')?.url || 'https://www.facebook.com/mskinstitute',
     github: socialRegistry.channels.find((c) => c.id === 'github')?.url || 'https://github.com/mskinstitute',
     whatsapp: socialRegistry.whatsAppSupport?.cleanNumber ? `https://wa.me/${socialRegistry.whatsAppSupport.cleanNumber}` : 'https://wa.me/918393042166',
-    maps: socialRegistry.googleReviews?.mapsUrl || 'https://maps.google.com/?q=MSK+Institute+Shikohabad',
+    maps: socialRegistry.googleReviews?.mapsUrl || 'https://maps.app.goo.gl/MyER29LFmibVkPe47',
   },
 
   // Service Areas for Local SEO
@@ -144,7 +145,7 @@ export function getCanonicalBusinessSchema() {
       latitude: BUSINESS_CONFIG.geo.latitude,
       longitude: BUSINESS_CONFIG.geo.longitude,
     },
-    hasMap: BUSINESS_CONFIG.contact.mapsUrl,
+    hasMap: BUSINESS_CONFIG.contact.googleCidUrl,
     openingHoursSpecification: BUSINESS_CONFIG.hours.schemaSpecifications,
     aggregateRating: {
       '@type': 'AggregateRating',

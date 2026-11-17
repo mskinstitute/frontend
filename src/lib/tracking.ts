@@ -119,7 +119,7 @@ export function trackContactClick(channel: 'call' | 'whatsapp' | 'email' | 'maps
     case 'maps':
       pushToDataLayer('outbound_click', {
         destination: 'google_maps',
-        link_url: 'https://maps.google.com/?q=MSK+Institute+Shikohabad',
+        link_url: 'https://maps.app.goo.gl/MyER29LFmibVkPe47',
       });
       break;
   }

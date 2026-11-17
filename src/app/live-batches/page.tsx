@@ -6,46 +6,46 @@ import LiveBatchesClient from '@/components/LiveBatchesClient';
 import { BUSINESS_INFO } from '@/config/business';
 
 export const metadata: Metadata = {
-  title: "Upcoming Live Coding Batches & Cohorts Admissions | MSK Institute Shikohabad",
-  description: "Join upcoming live computer cohorts in Shikohabad & online with Er. Sumit Kumar. Check Python, Full-Stack Web Development, Data Analytics & CCC batch schedules, fees, and verified seats.",
+  title: "Live Online & Offline Coding Batches (Hindi & English) | MSK Institute",
+  description: "Join live interactive coding batches in Hindi & English with Er. Sumit Kumar. Attend offline computer labs in Shikohabad or join live online worldwide (India, UAE, UK, USA, Canada) for Python, MERN, Data Analytics & CCC.",
   keywords: [
+    "Live Online Coding Classes Hindi English",
+    "Global Live Python Classes Online",
     "Live Coding Batches Shikohabad",
+    "Online Coding Bootcamp India Worldwide",
     "Upcoming Computer Batches Shikohabad",
     "MSK Institute Live Batches",
-    "Python Live Training Shikohabad",
-    "Full Stack MERN Cohort Shikohabad",
-    "Data Analytics Course Shikohabad",
-    "NIELIT CCC Live Batch",
-    "Computer Institute Near Me",
+    "Python Live Training Hindi English",
+    "Full Stack MERN Live Cohort Online",
+    "Data Analytics Live Batch India",
+    "NIELIT CCC Live Online Batch",
     "Er. Sumit Kumar Live Batches",
-    "Offline Lab Coding Classes Shikohabad",
-    "Live Interactive Software Training",
-    "Best Computer Center Station Road Shikohabad"
+    "Live Interactive Software Training"
   ],
   alternates: {
     canonical: "https://www.mskinstitute.in/live-batches",
   },
   openGraph: {
-    title: "Upcoming Live Coding Batches & Admissions | MSK Institute",
-    description: "Join interactive live coding cohorts with 100% practical lab training in Shikohabad and online. Check batch schedules, fees, and limited seats.",
+    title: "Live Online & Offline Coding Batches (Hindi & English) | MSK Institute",
+    description: "Interactive live coding cohorts in Hindi & English — offline labs in Shikohabad and live online worldwide. Check schedules, fees, and free demo seats.",
     url: "https://www.mskinstitute.in/live-batches",
     siteName: "MSK Institute",
     locale: "en_IN",
     type: "website",
     images: [
       {
-        url: "https://www.mskinstitute.in/logo.jpg",
+        url: "https://www.mskinstitute.in/brand/og-live-batches.png",
         width: 1200,
         height: 630,
-        alt: "MSK Institute Upcoming Live Coding Batches",
+        alt: "MSK Institute Live Coding Batches in Hindi & English (Offline + Global Online)",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Upcoming Live Coding Batches & Admissions | MSK Institute",
-    description: "Enroll in live coding cohorts with Er. Sumit Kumar in Shikohabad. 100% practical lab training with verified certification.",
-    images: ["https://www.mskinstitute.in/logo.jpg"],
+    title: "Live Online & Offline Coding Batches (Hindi & English) | MSK Institute",
+    description: "Join live coding cohorts with Er. Sumit Kumar in Hindi & English from Shikohabad, across India, or worldwide. 100% practical training with verifiable certification.",
+    images: ["https://www.mskinstitute.in/brand/og-live-batches.png"],
   },
   robots: {
     index: true,

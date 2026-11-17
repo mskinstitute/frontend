@@ -72,7 +72,9 @@
   "googleReviews": {
     "rating": "4.9",
     "reviewCount": "128+",
-    "mapsUrl": "https://maps.google.com/?q=MSK+Institute+Shikohabad",
+    "mapsUrl": "https://maps.app.goo.gl/MyER29LFmibVkPe47",
+    "cidUrl": "https://maps.google.com/?cid=12440673232057670688",
+    "cid": "12440673232057670688",
     "label": "Google Verified Reviews",
     "enabled": true
   },

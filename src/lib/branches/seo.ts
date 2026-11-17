@@ -21,7 +21,10 @@ export function generateBranchMetadata(branch: Branch): Metadata {
     branch.localSeo?.description ||
     `Visit ${branch.name} in ${branch.city}, ${branch.state}. Learn Python, Full Stack Web Development, CCC, and Data Analytics with hands-on lab training.`;
 
-  const ogImage = branch.localSeo?.ogImage || `${SITE_URL}/logo.jpg`;
+  const ogImage =
+    branch.localSeo?.ogImage && !branch.localSeo.ogImage.endsWith('/logo.jpg')
+      ? branch.localSeo.ogImage
+      : `${SITE_URL}/brand/og-banner.png`;
 
   return {
     title,
@@ -81,10 +84,19 @@ export function generateBranchSchema(branch: Branch) {
     description: branch.localDescription,
     url: branchUrl,
     logo: `${SITE_URL}/logo.jpg`,
-    image: branch.gallery && branch.gallery.length > 0 ? `${SITE_URL}${branch.gallery[0].url}` : `${SITE_URL}/logo.jpg`,
+    image:
+      branch.gallery && branch.gallery.length > 0 && !branch.gallery[0].url.endsWith('/logo.jpg')
+        ? `${SITE_URL}${branch.gallery[0].url}`
+        : `${SITE_URL}/brand/og-banner.png`,
     telephone: branch.phone,
     email: branch.email,
     priceRange: '₹₹',
+    areaServed:
+      branch.slug === 'shikohabad'
+        ? ['Shikohabad', 'Firozabad', 'Sirsaganj', 'Jasrana', 'Tundla', 'Mainpuri', 'Etawah', 'Uttar Pradesh']
+        : branch.slug === 'agra'
+          ? ['Agra', 'Sanjay Place', 'Sikandra', 'Dayalbagh', 'Firozabad', 'Mathura', 'Uttar Pradesh']
+          : [branch.city, branch.state],
     parentOrganization: {
       '@type': 'EducationalOrganization',
       '@id': `${SITE_URL}/#organization`,
@@ -120,8 +132,10 @@ export function generateBranchSchema(branch: Branch) {
     }));
   }
 
-  if (branch.googleBusiness?.profileUrl) {
-    schema.hasMap = branch.googleBusiness.profileUrl;
+  const gbpCidUrl = (branch.googleBusiness as { profileUrl?: string; cidUrl?: string } | undefined)?.cidUrl;
+  if (gbpCidUrl || branch.googleBusiness?.profileUrl) {
+    schema.hasMap = gbpCidUrl || branch.googleBusiness?.profileUrl;
+    schema.sameAs = [branch.googleBusiness?.profileUrl, gbpCidUrl].filter(Boolean);
   }
 
   return schema;

@@ -1,9 +1,9 @@
 import { Metadata } from 'next';
 
 const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.mskinstitute.in';
-const DEFAULT_TITLE = 'MSK Institute | Shikohabad\'s Leading Coding & Computer Training Academy';
-const DEFAULT_DESCRIPTION = 'Learn Python programming, Full-Stack Web Development, CCC, and MS Office with practical offline lab training at MSK Institute in Shikohabad. Verified graduation certificates.';
-const DEFAULT_IMAGE = `${BASE_URL}/logo.jpg`;
+const DEFAULT_TITLE = "MSK Institute | Coding & Computer Training Academy (Shikohabad & Live Online)";
+const DEFAULT_DESCRIPTION = 'Learn Python, Full-Stack Web Development (MERN/Next.js), Data Analytics, SQL, NIELIT CCC, and ADCA via offline computer labs in Shikohabad or live online classes worldwide in Hindi & English.';
+const DEFAULT_IMAGE = `${BASE_URL}/brand/og-banner.png`;
 
 export interface SeoMetadataOptions {
   title?: string;
@@ -13,6 +13,7 @@ export interface SeoMetadataOptions {
   type?: 'website' | 'article';
   keywords?: string[];
   publishedTime?: string;
+  modifiedTime?: string;
   authors?: string[];
   noIndex?: boolean;
 }
@@ -36,12 +37,14 @@ export function constructMetadata({
     'MSK Institute',
     'Computer Center Shikohabad',
     'Coding Classes Shikohabad',
-    'Python Training Shikohabad',
-    'Full Stack Web Development',
+    'Live Online Coding Classes Hindi English',
+    'Python Training Online and Offline',
+    'Full Stack Web Development Course',
     'NIELIT CCC Coaching',
     'Er Sumit Kumar',
   ],
   publishedTime,
+  modifiedTime,
   authors,
   noIndex = false,
 }: SeoMetadataOptions = {}): Metadata {
@@ -79,6 +82,7 @@ export function constructMetadata({
         },
       ],
       ...(publishedTime && { publishedTime }),
+      ...(modifiedTime && { modifiedTime }),
       ...(authors && { authors }),
     },
     twitter: {

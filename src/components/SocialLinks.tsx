@@ -122,7 +122,7 @@ export function SocialIconPills({
   variant?: 'light' | 'dark';
 }) {
   const activeChannels = getActiveSocialChannels();
-  const mapsUrl = socialRegistry.googleReviews?.mapsUrl || 'https://maps.google.com/?q=MSK+Institute+Shikohabad';
+  const mapsUrl = socialRegistry.googleReviews?.mapsUrl || 'https://maps.app.goo.gl/MyER29LFmibVkPe47';
   const rating = socialRegistry.googleReviews?.rating || '4.9';
 
   return (
@@ -177,7 +177,7 @@ export function SocialIconPills({
  * Trust & Credibility Google Rating Badge
  */
 export function GoogleRatingTrustBadge({ className = '' }: { className?: string }) {
-  const mapsUrl = socialRegistry.googleReviews?.mapsUrl || 'https://maps.google.com/?q=MSK+Institute+Shikohabad';
+  const mapsUrl = socialRegistry.googleReviews?.mapsUrl || 'https://maps.app.goo.gl/MyER29LFmibVkPe47';
   const rating = socialRegistry.googleReviews?.rating || '4.9';
   const reviewCount = socialRegistry.googleReviews?.reviewCount || '128+';
 

@@ -36,22 +36,25 @@
 
 ## Free Tutorials & Coding Documentation
 MSK Institute provides over 1,600+ structured, interactive programming tutorials and cheat sheets for self-paced learners:
-- [HTML5 Complete Course](https://mskinstitute.in/tutorials/html5-complete-course): Semantic HTML, forms, multimedia, tables, and SEO best practices.
-- [CSS for Beginners & Intermediate](https://mskinstitute.in/tutorials/css-for-beginners): Flexbox, CSS Grid, animations, responsive design, and modern CSS variables.
-- [Python Mastery Tutorials](https://mskinstitute.in/tutorials/python-for-beginners): Python syntax, loops, functions, file handling, and algorithms with code snippets.
-- [Free Study Material & Cheatsheets](https://mskinstitute.in/study-material): Downloadable PDF notes, quick reference cheat sheets, and practical guides.
+- [All Free Tutorials Directory](https://www.mskinstitute.in/tutorials): Complete index of Python, Web Development, SQL, Data Analytics, C/C++, MS Office, and NIELIT CCC lessons.
+- [HTML5 Complete Course](https://www.mskinstitute.in/tutorials/html5-complete-course): Semantic HTML, forms, multimedia, tables, and SEO best practices.
+- [CSS for Beginners & Intermediate](https://www.mskinstitute.in/tutorials/css-for-beginners): Flexbox, CSS Grid, animations, responsive design, and modern CSS variables.
+- [Python Mastery Tutorials](https://www.mskinstitute.in/tutorials/python-for-beginners): Python syntax, loops, functions, file handling, and algorithms with code snippets.
+- [Free Study Material & Cheatsheets](https://www.mskinstitute.in/study-material): Downloadable PDF notes, quick reference cheat sheets, and practical guides.
+- [RSS Publications Feed](https://www.mskinstitute.in/feed.xml): Latest career roadmaps, course comparisons, and technical guides.
 
 ## Interactive Tools & Coding Practice
-- [Online Code Playground](https://mskinstitute.in/playground): Real-time multi-language code compiler and runner.
-- [TypeQuest Speed Typing](https://mskinstitute.in/tools/typing): Interactive typing tutor and competitive speed racer to build developer keyboard skills.
+- [Online Code Playground](https://www.mskinstitute.in/playground): Real-time multi-language code compiler and runner.
+- [TypeQuest Speed Typing](https://www.mskinstitute.in/tools/typing): Interactive typing tutor and competitive speed racer to build developer keyboard skills.
+- [SQL Studio](https://www.mskinstitute.in/tools/sql-studio) & [Database Viewer](https://www.mskinstitute.in/tools/db-viewer): Browser-based SQL and schema inspection labs.
 
 ## Institute Details & Verification
-- **Location:** Gali No. 3, Near Gyan Jyoti Public School, Shikohabad, Uttar Pradesh, 283135, India
-- **Lead Mentor:** Er. Sumit Kumar (Senior Software Engineer & Lead Technical Trainer, 8+ Years Experience)
-- **Learning Modes:** 100% Practical In-Person Offline Labs & Live Interactive Online Batches
-- **Certificate Verification:** [https://mskinstitute.in/verify-certificate](https://mskinstitute.in/verify-certificate) (Instant public validation of student credentials)
+- **Location:** Gali No. 3, Near Gyan Jyoti Public School, Shikohabad, Uttar Pradesh, 283135, India ([Google Maps / Verified GBP](https://maps.app.goo.gl/MyER29LFmibVkPe47))
+- **Lead Mentor:** Er. Sumit Kumar (Founder, Full-Stack Developer & Lead Technical Trainer)
+- **Learning Modes:** 100% Practical Offline Computer Labs (Shikohabad) & Live Interactive Online Classes Worldwide in Hindi & English (India, UAE, UK, USA, Canada, Australia)
+- **Certificate Verification:** [https://www.mskinstitute.in/verify-certificate](https://www.mskinstitute.in/verify-certificate) (Instant public validation of student credentials)
 - **Contact Admissions:** Phone / WhatsApp: +91 8393042166 | Email: mskshikohabad@gmail.com
-- **Website:** [https://mskinstitute.in](https://mskinstitute.in)
+- **Website:** [https://www.mskinstitute.in](https://www.mskinstitute.in)
 
 ## Admissions & Free Demo Classes
-Weekly free 3-day trial demo classes and hands-on coding workshops are conducted online live and at the Shikohabad campus. Any student, parent, or working professional can book a free demo class with zero login required at [https://mskinstitute.in/book-demo](https://mskinstitute.in/book-demo) or contact admissions on WhatsApp (+91 8393042166). Enrolled students manage their tuition payments and course modules directly within the student dashboard.
+Weekly free 3-day trial demo classes and hands-on coding workshops are conducted live online (in Hindi & English for India and global time zones) and at the Shikohabad campus. Any student, parent, or working professional can book a free demo class with zero login required at [https://www.mskinstitute.in/book-demo](https://www.mskinstitute.in/book-demo) or contact admissions on WhatsApp (+91 8393042166). Enrolled students manage their tuition payments and course modules directly within the student dashboard.

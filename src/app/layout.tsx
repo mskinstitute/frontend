@@ -31,11 +31,25 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  title: "MSK Institute | Shikohabad's Leading Coding & Computer Training Academy",
+  title: "MSK Institute | Coding & Computer Training (Shikohabad & Global Live Online)",
   applicationName: 'MSK Institute',
-  description: 'Learn Python programming, Full-Stack Web Development, CCC, and MS Office with practical, offline lab training at MSK Institute in Shikohabad. Verified graduation certificates.',
-  keywords: ['MSK Institute', 'Computer Center Shikohabad', 'Coding Classes Shikohabad', 'Python Training', 'Web Development Shikohabad', 'NIELIT CCC Course'],
+  description: 'Learn Python programming, Full-Stack Web Development, Data Analytics, NIELIT CCC, and ADCA with practical offline labs in Shikohabad and live online classes worldwide in Hindi & English.',
+  keywords: [
+    'MSK Institute',
+    'Computer Center Shikohabad',
+    'Coding Classes Shikohabad',
+    'Live Online Coding Classes Hindi English',
+    'Python Training Online India',
+    'Web Development Course Shikohabad',
+    'NIELIT CCC Course',
+    'ADCA Diploma Course',
+  ],
   metadataBase: new URL('https://www.mskinstitute.in'),
+  alternates: {
+    types: {
+      'application/rss+xml': 'https://www.mskinstitute.in/feed.xml',
+    },
+  },
   manifest: '/manifest.json',
   appleWebApp: {
     capable: true,
@@ -61,26 +75,42 @@ export const metadata: Metadata = {
     ],
   },
   openGraph: {
-    title: 'MSK Institute | Computer Training & Coding Academy',
-    description: 'Learn Python, Web Development, CCC, and MS Office with practical labs at MSK Institute, Shikohabad.',
+    title: 'MSK Institute | Coding & Computer Training (Offline Labs & Global Live Online)',
+    description: 'Learn Python, Full-Stack Web Development, Data Analytics, CCC & ADCA with practical labs in Shikohabad and live online classes worldwide in Hindi & English.',
     url: 'https://www.mskinstitute.in',
     siteName: 'MSK Institute',
     locale: 'en_IN',
     type: 'website',
+    images: [
+      {
+        url: 'https://www.mskinstitute.in/brand/og-banner.png',
+        width: 1200,
+        height: 630,
+        alt: 'MSK Institute — Coding & Computer Training Academy (Shikohabad & Global Live Online)',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'MSK Institute | Computer Training & Coding Academy',
-    description: 'Learn Python, Web Development, CCC, and MS Office with practical labs at MSK Institute, Shikohabad.',
+    title: 'MSK Institute | Coding & Computer Training Academy',
+    description: 'Learn Python, Full-Stack Web Development, CCC & ADCA via offline labs in Shikohabad or live online classes worldwide in Hindi & English.',
+    images: ['https://www.mskinstitute.in/brand/og-banner.png'],
   },
   other: {
     'msapplication-TileColor': '#0A2540',
     'msapplication-TileImage': '/brand/ms-icon-144x144.png',
     'msapplication-config': '/browserconfig.xml',
     'mobile-web-app-capable': 'yes',
+    ...(process.env.NEXT_PUBLIC_BING_SITE_VERIFICATION
+      ? { 'msvalidate.01': process.env.NEXT_PUBLIC_BING_SITE_VERIFICATION }
+      : {}),
   },
   verification: {
     google: process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION || undefined,
+    yandex: process.env.NEXT_PUBLIC_YANDEX_VERIFICATION || undefined,
+    other: process.env.NEXT_PUBLIC_BING_SITE_VERIFICATION
+      ? { 'msvalidate.01': process.env.NEXT_PUBLIC_BING_SITE_VERIFICATION }
+      : undefined,
   },
 };
 
@@ -102,8 +132,8 @@ export default function RootLayout({
               alternateName: 'MSK Computer Training & Coding Academy',
               url: 'https://www.mskinstitute.in',
               logo: 'https://www.mskinstitute.in/logo.jpg',
-              image: 'https://www.mskinstitute.in/logo.jpg',
-              description: "Shikohabad's Leading Coding & Computer Training Academy with 100% practical lab training in Python, Web Development, CCC, and MS Office.",
+              image: 'https://www.mskinstitute.in/brand/og-banner.png',
+              description: "Shikohabad's Leading Coding & Computer Training Academy offering 100% practical offline lab training in Shikohabad & Agra plus live interactive online classes worldwide in Hindi & English.",
               telephone: '+918393042166',
               email: 'mskshikohabad@gmail.com',
               priceRange: '₹₹',
@@ -139,15 +169,30 @@ export default function RootLayout({
                 name: 'Er. Sumit Kumar',
                 jobTitle: 'Founder & Lead Technical Trainer',
               },
+              hasMap: 'https://maps.google.com/?cid=12440673232057670688',
               sameAs: socialRegistry.channels
                 .filter((c) => c.enabled !== false && c.id !== 'whatsapp')
                 .map((c) => c.url)
-                .concat([socialRegistry.googleReviews?.mapsUrl || 'https://maps.google.com/?q=MSK+Institute+Shikohabad']),
+                .concat([
+                  socialRegistry.googleReviews?.mapsUrl || 'https://maps.app.goo.gl/MyER29LFmibVkPe47',
+                  'https://maps.google.com/?cid=12440673232057670688',
+                ]),
+              areaServed: [
+                'Shikohabad',
+                'Firozabad',
+                'Sirsaganj',
+                'Jasrana',
+                'Tundla',
+                'Agra',
+                'Uttar Pradesh',
+                'India',
+                'Worldwide',
+              ],
               contactPoint: {
                 '@type': 'ContactPoint',
                 telephone: '+918393042166',
                 contactType: 'admissions',
-                areaServed: ['Shikohabad', 'Firozabad', 'Sirsaganj', 'Jasrana', 'Uttar Pradesh'],
+                areaServed: ['Shikohabad', 'Firozabad', 'Sirsaganj', 'Jasrana', 'Agra', 'Uttar Pradesh', 'India', 'Worldwide'],
                 availableLanguage: ['en', 'hi'],
               },
             }),

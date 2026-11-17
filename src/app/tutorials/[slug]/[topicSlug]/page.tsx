@@ -5,6 +5,7 @@ import { notFound } from 'next/navigation';
 import { fetchTutorials } from '@/services/api';
 import { fetchTutorialTopic } from '@/lib/server-tutorial';
 import TutorialReader from '@/components/TutorialReader';
+import { constructMetadata } from '@/lib/seo';
 
 export const revalidate = 3600; // Cache for 1 hour (ISR)
 
@@ -76,22 +77,27 @@ export async function generateStaticParams() {
 export async function generateMetadata({ params }: TutorialTopicPageProps): Promise<Metadata> {
   const { slug, topicSlug } = await params;
   const topicData = await fetchTutorialTopic(slug, topicSlug);
-  if (!topicData) return { title: 'Lesson Not Found | MSK Institute' };
+  if (!topicData) {
+    return constructMetadata({ title: 'Lesson Not Found', noIndex: true });
+  }
 
   const { frontmatter, tutorial } = topicData;
-  return {
-    title: `${frontmatter.title} - ${tutorial.title} Tutorial | MSK Notes`,
-    description: frontmatter.description || `Read ${frontmatter.title} lesson with code examples, explanations, and practice quiz at MSK Institute.`,
-    keywords: frontmatter.keywords || [tutorial.title?.toLowerCase() || 'code', 'tutorial', frontmatter.slug],
-    alternates: {
-      canonical: `https://www.mskinstitute.in/tutorials/${slug}/${topicSlug}`,
-    },
-    openGraph: {
-      title: `${frontmatter.title} | ${tutorial.title} Tutorial`,
-      description: frontmatter.description,
-      url: `https://www.mskinstitute.in/tutorials/${slug}/${topicSlug}`,
-    },
-  };
+  return constructMetadata({
+    title: `${frontmatter.title} - ${tutorial.title} Tutorial`,
+    description:
+      frontmatter.description ||
+      `Read ${frontmatter.title} lesson with code examples, explanations, and practice quiz at MSK Institute.`,
+    canonical: `/tutorials/${slug}/${topicSlug}`,
+    image: '/brand/og-tutorials.png',
+    type: 'article',
+    authors: ['Er. Sumit Kumar'],
+    keywords: frontmatter.keywords || [
+      tutorial.title?.toLowerCase() || 'code',
+      'tutorial',
+      frontmatter.slug,
+      'MSK Institute',
+    ],
+  });
 }
 
 export default async function TutorialTopicPage({ params }: TutorialTopicPageProps) {
@@ -109,15 +115,25 @@ export default async function TutorialTopicPage({ params }: TutorialTopicPagePro
         '@type': 'TechArticle',
         headline: `${topicData.frontmatter.title} - ${topicData.tutorial.title}`,
         description: topicData.frontmatter.description || `Learn ${topicData.frontmatter.title} with practical examples and code tutorials at MSK Institute.`,
+        image: 'https://www.mskinstitute.in/brand/og-tutorials.png',
         inLanguage: 'en-IN',
+        dateModified: topicData.tutorial.updatedAt || '2026-11-18',
         mainEntityOfPage: `https://www.mskinstitute.in/tutorials/${slug}/${topicSlug}`,
         author: {
-          '@type': 'EducationalOrganization',
-          name: 'MSK Institute',
-          url: 'https://www.mskinstitute.in',
+          '@type': 'Person',
+          name: 'Er. Sumit Kumar',
+          jobTitle: 'Founder & Lead Technical Trainer',
+          url: 'https://www.mskinstitute.in/about',
+          worksFor: {
+            '@type': 'EducationalOrganization',
+            '@id': 'https://www.mskinstitute.in/#organization',
+            name: 'MSK Institute',
+            url: 'https://www.mskinstitute.in',
+          },
         },
         publisher: {
           '@type': 'EducationalOrganization',
+          '@id': 'https://www.mskinstitute.in/#organization',
           name: 'MSK Institute',
           url: 'https://www.mskinstitute.in',
           logo: {

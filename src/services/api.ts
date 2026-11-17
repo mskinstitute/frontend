@@ -511,7 +511,7 @@ export async function fetchLiveBatches(): Promise<LiveBatch[]> {
     const lookupKey = (batch.courseSlug || batch.courseId || batch.id).toLowerCase();
     const resolvedKey =
       lookupKey === 'python-mastery-beginner-to-advanced--3-months' ||
-      lookupKey === 'course-python-mastery-beginner-to-advanced--3-months'
+        lookupKey === 'course-python-mastery-beginner-to-advanced--3-months'
         ? 'python-mastery'
         : lookupKey;
     const matchedCourse = courses.find(
@@ -596,8 +596,8 @@ export async function fetchLiveBatchById(id: string): Promise<{ batch: LiveBatch
   const isCombo = course?.courseType === 'COMBO';
   const includedCourses: Course[] = isCombo && course?.includedCourseIds
     ? course.includedCourseIds
-        .map((cId) => allCourses.find((c) => c.id === cId))
-        .filter((c): c is Course => Boolean(c))
+      .map((cId) => allCourses.find((c) => c.id === cId))
+      .filter((c): c is Course => Boolean(c))
     : [];
 
   const instructor = allInstructors.find(
@@ -891,7 +891,7 @@ export function parseGoogleSheetBatchesCsv(csvText: string): LiveBatch[] {
     if (!courseId && !title && !startDateTimeRaw && !explicitId) continue;
 
     const parsedDT = parseStartDateTime(startDateTimeRaw);
-    
+
     // Determine batch ID cleanly
     let batchId = explicitId;
     if (!batchId) {
@@ -1206,7 +1206,7 @@ export async function fetchSocialLinks(): Promise<SocialLinksRegistry> {
       googleReviews: {
         rating: '4.9',
         reviewCount: '128+',
-        mapsUrl: 'https://maps.google.com/?q=MSK+Institute+Shikohabad',
+        mapsUrl: 'https://maps.app.goo.gl/MyER29LFmibVkPe47',
         enabled: true,
       },
       whatsAppSupport: {

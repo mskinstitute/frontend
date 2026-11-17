@@ -24,7 +24,7 @@ const CANONICAL_EMAIL = 'mskshikohabad@gmail.com';
 const CANONICAL_PINCODE = '283135';
 const CANONICAL_LOCALITY = 'Shikohabad';
 const CANONICAL_STREET = 'Gali No. 3, Near Gyan Jyoti Public School';
-const CANONICAL_MAPS = 'https://maps.google.com/?q=MSK+Institute+Shikohabad';
+const CANONICAL_MAPS = 'https://maps.app.goo.gl/MyER29LFmibVkPe47';
 
 // 1. Verify Root Layout Schema (src/app/layout.tsx)
 console.log('1. Checking Root Layout JSON-LD Schema (src/app/layout.tsx)...');

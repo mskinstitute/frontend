@@ -28,7 +28,7 @@ const PHONE_NUMBER = '+91 83930 42166';
 const CLEAN_PHONE = '918393042166';
 const EMAIL_ADDRESS = 'mskshikohabad@gmail.com';
 const ADDRESS_TEXT = 'Gali No. 3, Near Gyan Jyoti Public School, Shikohabad, Firozabad, UP - 283135';
-const MAPS_URL = 'https://maps.google.com/?q=MSK+Institute+Shikohabad';
+const MAPS_URL = 'https://maps.app.goo.gl/MyER29LFmibVkPe47';
 
 const COURSE_INTERESTS = [
   'General Enquiry & Counseling',

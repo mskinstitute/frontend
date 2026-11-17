@@ -120,7 +120,11 @@ export default function AnalyticsTracker() {
       }
 
       // 4. Google Maps & Direction Links
-      if (href.includes('maps.google.com') || href.includes('google.com/maps')) {
+      if (
+        href.includes('maps.google.com') ||
+        href.includes('google.com/maps') ||
+        href.includes('maps.app.goo.gl')
+      ) {
         pushToDataLayer('outbound_click', {
           destination: 'google_maps',
           link_url: href,
