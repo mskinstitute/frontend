@@ -1,4 +1,24 @@
-# Decision Trees & Feature Importance Interpretation
+---
+id: decision-trees-and-feature-importance
+slug: decision-trees-and-feature-importance
+course: data-analysis--advanced-pandas--ml-basics
+chapter: "4: Regression & Classification Modeling"
+topic: "4.4 Decision Trees & Feature Importance Interpretation"
+title: "Decision Trees & Feature Importance Interpretation"
+description: "Decision Trees are non-parametric supervised learning models that partition feature space into rectangular regions using hierarchical if-then rules."
+difficulty: Advanced
+readingTime: 6
+order: 4
+keywords:
+  - decision trees feature importance interpretation
+  - data science & machine learning tutorial
+  - decision trees and feature importance
+  - data analysis course
+  - MSK Institute
+lastUpdated: 2026-11-18
+author: "Er. Sumit Kumar (MSK Institute)"
+version: 1.1.0
+---
 
 **Decision Trees** are non-parametric supervised learning models that partition feature space into rectangular regions using hierarchical if-then rules. Because they mimic human logical reasoning and automatically capture non-linear relationships and feature interactions, decision trees are one of the most interpretable tools in a business analyst's toolkit.
 
@@ -78,8 +98,7 @@ plt.show()
 
 ---
 
-# Multiple Choice Questions
-
+## Practice Quiz
 ### 1. What is the value of the Gini Impurity for a completely pure leaf node where all observations belong to the same class?
 A. 1.0
 B. 0.50

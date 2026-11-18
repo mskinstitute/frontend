@@ -1,6 +1,24 @@
-# Chart Annotations, Callouts & High-Resolution Exports
-
-*Reading Time: 8 Mins* | *Level: Intermediate*
+---
+id: annotations-and-publication-exports
+slug: annotations-and-publication-exports
+course: data-analysis--visualization--statistics
+chapter: "6: Storytelling & Executive Dashboard Project"
+topic: "6.2 Chart Annotations, Callouts & High-Resolution Exports"
+title: "Chart Annotations, Callouts & High-Resolution Exports"
+description: "Learn Chart Annotations, Callouts & High-Resolution Exports in Data Visualization & Statistics with practical examples, analyst workflows, and interactive."
+difficulty: Intermediate
+readingTime: 6
+order: 2
+keywords:
+  - chart annotations callouts high-resolution exports
+  - data visualization & statistics tutorial
+  - annotations and publication exports
+  - data analysis course
+  - MSK Institute
+lastUpdated: 2026-11-18
+author: "Er. Sumit Kumar (MSK Institute)"
+version: 1.1.0
+---
 
 ---
 
@@ -48,8 +66,7 @@ fig.savefig('Marketing_Deck.png', dpi=300, bbox_inches='tight', transparent=Fals
 
 ---
 
-# Multiple Choice Questions
-
+## Practice Quiz
 ### 1. Which method in Matplotlib attaches a text label with an pointing arrow to a specific coordinate?
 A. `ax.annotate()`
 B. `ax.pointer()`

@@ -1,4 +1,24 @@
-# Exponential Smoothing & Moving Average Baseline Models
+---
+id: baseline-time-series-forecasting
+slug: baseline-time-series-forecasting
+course: data-analysis--advanced-pandas--ml-basics
+chapter: "2: Time Series Forecasting & Seasonality"
+topic: "2.3 Exponential Smoothing & Moving Average Baseline Models"
+title: "Exponential Smoothing & Moving Average Baseline Models"
+description: "Before training complex machine learning models (like Random Forests or Gradient Boosted Trees), data analysts must establish robust statistical."
+difficulty: Advanced
+readingTime: 6
+order: 3
+keywords:
+  - exponential smoothing moving average baseline models
+  - data science & machine learning tutorial
+  - baseline time series forecasting
+  - data analysis course
+  - MSK Institute
+lastUpdated: 2026-11-18
+author: "Er. Sumit Kumar (MSK Institute)"
+version: 1.1.0
+---
 
 Before training complex machine learning models (like Random Forests or Gradient Boosted Trees), data analysts must establish robust statistical **baseline models**. Simple baseline forecasts set the performance floor that any advanced algorithm must decisively beat to justify its implementation complexity and computational overhead.
 
@@ -76,8 +96,7 @@ If an advanced ML model scores an RMSE of 120 while a Naïve forecast scores 115
 
 ---
 
-# Multiple Choice Questions
-
+## Practice Quiz
 ### 1. Why must time-series data NEVER be split into train and test sets using standard random train_test_split from scikit-learn?
 A. Random splitting raises a syntax error with date objects.
 B. Random shuffling shuffles future data into the training set (lookahead leakage) and tests the model on past dates, invalidating real-world predictive validity.

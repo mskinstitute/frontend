@@ -23,16 +23,13 @@ MSK Institute bridges the gap between traditional academic curriculums and moder
 ### A. Python Mastery (Beginner to Advanced)
 - **URL:** https://www.mskinstitute.in/courses/python-mastery
 - **Level:** Beginner to Advanced
-- **Duration:** 3 Months (Daily Lab & Theory)
+- **Duration:** 3 Months (Daily Lab & Live Online)
+- **Scope:** 46 Chapters, 236 Structured Topics, 14 Portfolio Projects (Python 3.12 / 3.13)
 - **Key Modules:**
-  - Python Environment Setup & Syntax Basics
-  - Control Flow, Conditional Statements, and Loops
-  - Functions, Scope, and Modular Programming
-  - Data Structures: Lists, Tuples, Dictionaries, Sets
-  - Object-Oriented Programming (OOP) in Python
-  - File Handling, Exception Management & Debugging
-  - Intro to Data Analysis with NumPy & Pandas
-  - Capstone Real-World Automation Projects
+  - Month 1 (Beginners — 16 Chapters, 90 Topics): Setup, Variables, User Input (`input()`), Data Types, Strings, Operators, Lists, Tuples, Sets, Dictionaries, `match-case`, Loops, Functions & Type Hints, File Handling, `try-except` Error Handling, 4 Beginner Projects
+  - Month 2 (Intermediate — 15 Chapters, 76 Topics): Advanced Comprehensions, Closures & Decorators, Packages, `pathlib` & CSV/JSON, OOP & `@dataclass`, Custom Exceptions & `ExceptionGroup`, Generators, REST APIs, Logging, `argparse`, SQLite3, `venv`/`pip`, Matplotlib/Seaborn, 5 Projects
+  - Month 3 (Advanced — 15 Chapters, 70 Topics): Descriptors, MRO, Protocols & Metaclasses, Dunder Methods & CPython Internals, Threading, Python 3.13 No-GIL (PEP 703), Multiprocessing, `asyncio.TaskGroup`, SQLAlchemy 2.0 ORM, TCP/UDP Sockets, Advanced Regex, `pyproject.toml` Packaging, `pytest` TDD, `mypy` & `Ruff`, Tkinter GUIs, 3 Enterprise Capstones
+- **Free Companion Tutorials:** https://www.mskinstitute.in/tutorials/python-for-beginners | https://www.mskinstitute.in/tutorials/python-for-intermediate | https://www.mskinstitute.in/tutorials/python-for-advanced
 
 ### B. Full-Stack Web Development
 - **URL:** https://mskinstitute.in/courses/full-stack-web-development
@@ -110,15 +107,17 @@ MSK Institute bridges the gap between traditional academic curriculums and moder
 
 ### H. Data Analysis Mastery Combo Course
 - **URL:** https://www.mskinstitute.in/courses/data-analysis-mastery-combo-course--12-months
-- **Level:** Comprehensive / Career Track
-- **Duration:** 12 Months
+- **Level:** Beginner to Advanced (Career Track)
+- **Duration:** 12 Months (Offline Lab in Shikohabad & Live Online)
+- **Scope:** 15 Specialized Courses, 150 Chapters, 541 Structured Topics
 - **Key Modules:**
-  - Advanced Excel Modeling & Dashboards
-  - SQL Database Engineering & Analytics Queries
-  - Python Programming with NumPy & Pandas Data Wrangling
-  - Exploratory Data Analysis (EDA) & Data Visualization (Matplotlib, Seaborn)
-  - Power BI & Tableau Business Intelligence Dashboards
-  - Machine Learning Fundamentals for Analysts
+  - Months 1–3: MS Excel Mastery (Beginner to Advanced — 29 Chapters, 92 Topics: XLOOKUP, Pivot Tables, Power Query ETL, Dashboards)
+  - Months 4–5: SQL & MySQL Mastery (Beginner to Advanced — 37 Chapters, 147 Topics: JOINs, CTEs, Window Functions, 3NF, Indexing)
+  - Month 6: Python for Beginners (16 Chapters, 90 Topics: Syntax, User Input, Collections, Loops, Functions, File I/O, `try-except`)
+  - Months 7–8: NumPy (36 Topics), Pandas EDA (24 Topics), Data Visualization & Applied Statistics (23 Topics: Matplotlib, Seaborn, Plotly, Streamlit, Hypothesis & A/B Testing)
+  - Months 9–10: Power BI Mastery (Beginner to Advanced — 31 Chapters, 91 Topics: Star Schema, DAX, RLS/OLS) & Tableau Desktop (18 Topics: VizQL, LODs, Stories)
+  - Months 11–12: Advanced Pandas (PyArrow/Copy-on-Write), Time-Series Forecasting, Scikit-Learn Regression/Classification/K-Means RFM, AI-Assisted SQL & Data Privacy (20 Topics)
+- **Free Companion Tutorials:** https://www.mskinstitute.in/tutorials/pandas-complete-course | https://www.mskinstitute.in/tutorials/numpy-complete-course | https://www.mskinstitute.in/tutorials/data-analysis--visualization--statistics | https://www.mskinstitute.in/tutorials/tableau-for-beginners | https://www.mskinstitute.in/tutorials/data-analysis--advanced-pandas--ml-basics | https://www.mskinstitute.in/tutorials/power-bi-for-beginners
 
 ### I. Mastering Microsoft Office Suite
 - **URL:** https://www.mskinstitute.in/courses/ms-office--4-months

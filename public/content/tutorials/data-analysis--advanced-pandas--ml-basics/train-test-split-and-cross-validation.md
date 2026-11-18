@@ -1,4 +1,24 @@
-# Train-Test Split, Cross-Validation & Avoiding Data Leakage
+---
+id: train-test-split-and-cross-validation
+slug: train-test-split-and-cross-validation
+course: data-analysis--advanced-pandas--ml-basics
+chapter: "3: Machine Learning Concepts & Scikit-Learn Pipeline"
+topic: "3.3 Train-Test Split, Cross-Validation & Avoiding Data Leakage"
+title: "Train-Test Split, Cross-Validation & Avoiding Data Leakage"
+description: "The true measure of a machine learning model is its ability to generalize to unseen future data. Evaluating a model on the same data it was trained on."
+difficulty: Advanced
+readingTime: 8
+order: 3
+keywords:
+  - train-test split cross-validation avoiding data leakage
+  - data science & machine learning tutorial
+  - train test split and cross validation
+  - data analysis course
+  - MSK Institute
+lastUpdated: 2026-11-18
+author: "Er. Sumit Kumar (MSK Institute)"
+version: 1.1.0
+---
 
 The true measure of a machine learning model is its ability to generalize to **unseen future data**. Evaluating a model on the same data it was trained on produces overly optimistic performance estimates due to **overfitting**. Mastering holdout splitting, Stratified K-Fold Cross-Validation, and rigorous leakage prevention is a core competency for data analysts.
 
@@ -85,8 +105,7 @@ cv_scores = cross_val_score(pipeline, X_train, y_train, cv=5, scoring='accuracy'
 
 ---
 
-# Multiple Choice Questions
-
+## Practice Quiz
 ### 1. What is the primary purpose of setting `stratify=y` in `train_test_split` for classification?
 A. It speeds up the splitting operation by parallelizing it.
 B. It ensures that the class distribution proportions in the train and test sets mirror the original dataset proportions.

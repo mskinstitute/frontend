@@ -1,6 +1,24 @@
-# Reading & Writing CSV and TSV Files
-
-*Reading Time: 8 Mins* | *Level: Beginner to Advanced*
+---
+id: reading-writing-csv-tsv
+slug: reading-writing-csv-tsv
+course: pandas-complete-course
+chapter: "2: Data Ingestion & Storage Formats"
+topic: "2.1 Reading & Writing CSV and TSV Files"
+title: "Reading & Writing CSV and TSV Files"
+description: "Learn Reading & Writing CSV and TSV Files in Pandas with practical examples, analyst workflows, and interactive practice quizzes at MSK Institute."
+difficulty: Intermediate
+readingTime: 6
+order: 1
+keywords:
+  - reading writing csv and tsv files
+  - pandas tutorial
+  - reading writing csv tsv
+  - data analysis course
+  - MSK Institute
+lastUpdated: 2026-11-18
+author: "Er. Sumit Kumar (MSK Institute)"
+version: 1.1.0
+---
 
 ---
 
@@ -57,8 +75,7 @@ df.to_csv('cleaned_sales_report.csv', index=False, encoding='utf-8')
 
 ---
 
-# Multiple Choice Questions
-
+## Practice Quiz
 ### 1. What does setting `index=False` accomplish when calling `df.to_csv('output.csv', index=False)`?
 A. It deletes the first row of column headers
 B. It prevents Pandas from writing the row index numbers as an unwanted column in the CSV file

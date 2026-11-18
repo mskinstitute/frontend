@@ -1,6 +1,24 @@
-# Categorical Plots: boxplot, violinplot, and countplot
-
-*Reading Time: 8 Mins* | *Level: Intermediate*
+---
+id: seaborn-categorical-box-violin
+slug: seaborn-categorical-box-violin
+course: data-analysis--visualization--statistics
+chapter: "3: Statistical Visualizations with Seaborn"
+topic: "3.3 Categorical Plots: boxplot, violinplot, and countplot"
+title: "Categorical Plots: boxplot, violinplot, and countplot"
+description: "Learn Categorical Plots: boxplot, violinplot, and countplot in Data Visualization & Statistics with practical examples, analyst workflows, and interactive."
+difficulty: Intermediate
+readingTime: 6
+order: 3
+keywords:
+  - categorical plots boxplot violinplot and countplot
+  - data visualization & statistics tutorial
+  - seaborn categorical box violin
+  - data analysis course
+  - MSK Institute
+lastUpdated: 2026-11-18
+author: "Er. Sumit Kumar (MSK Institute)"
+version: 1.1.0
+---
 
 ---
 
@@ -41,8 +59,7 @@ plt.show()
 
 ---
 
-# Multiple Choice Questions
-
+## Practice Quiz
 ### 1. In a standard Tukey Box Plot, how is the Interquartile Range (IQR) calculated?
 A. $IQR = Q3 - Q1$
 B. $IQR = Max - Min$

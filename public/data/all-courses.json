@@ -1159,7 +1159,7 @@
     "title": "Data Analysis Mastery Combo Course - 12 Months",
     "slug": "data-analysis-mastery-combo-course--12-months",
     "featuredImageUrl": "https://images.unsplash.com/photo-1551836022-d5d88e9218df?q=80&w=600&auto=format&fit=crop",
-    "shortDescription": "Master data analytics from scratch to an industry-ready professional level. This comprehensive 12-month program covers Advanced Excel, SQL, Python Programming, NumPy, Pandas, Data Wrangling, Exploratory Data Analysis (EDA), Matplotlib, Seaborn, Power BI, Tableau, Applied Statistics, and Machine Learning Capstones.",
+    "shortDescription": "Master full-stack Data Analytics in 12 months across 15 specialized courses, 150 chapters, and 541 structured topics—covering Excel, SQL, Python, NumPy, Pandas, Statistics, Matplotlib/Seaborn/Plotly, Power BI, Tableau, and Machine Learning.",
     "categories": [
       "Data Analytics",
       "Business Intelligence",
@@ -1202,14 +1202,73 @@
       "course-data-analysis--advanced-pandas--ml-basics"
     ],
     "learningOutcomes": [
-      "Full-stack Data Analytics: Advanced Excel, SQL, Python, Pandas, NumPy, Power BI & Tableau",
-      "Automated data cleaning, ETL pipelines, and Exploratory Data Analysis (EDA)",
-      "Executive Business Intelligence dashboards with DAX, LOD expressions, and KPI metrics",
-      "Statistical hypothesis testing, normal distribution, and A/B test formulation",
-      "Predictive machine learning modeling: Linear/Logistic Regression, Decision Trees, and K-Means",
-      "Resume-ready GitHub portfolio projects, verifiable certificate, and interview preparation"
+      "Months 1–3 (Excel Mastery): Clean messy spreadsheets, automate lookups with XLOOKUP & INDEX-MATCH, build Pivot Tables, Power Query ETL flows, and KPI dashboards",
+      "Months 4–5 (SQL & MySQL): Write complex multi-table JOINs, CTEs, Window Functions (RANK, LEAD, LAG), 3NF schemas, and optimize queries with EXPLAIN plans",
+      "Month 6 (Python Foundations): Build strong coding fundamentals—variables, user input, collections, loops, functions, file handling, and try-except error handling",
+      "Months 7–8 (NumPy, Pandas & Visualization): Engineer vectorized NumPy computations, Pandas wrangling/EDA pipelines, PyArrow/Copy-on-Write workflows, and Plotly/Streamlit dashboards",
+      "Months 7–8 (Applied Statistics): Apply descriptive metrics, Z-scores, Central Limit Theorem, T-tests, Chi-Square, ANOVA, and A/B testing for business decisions",
+      "Months 9–10 (Power BI & Tableau): Design star-schema BI models, Time Intelligence & CALCULATE DAX measures, Row-Level Security, Tableau LOD expressions, and Stories",
+      "Months 11–12 (ML Basics & Capstones): Build time-series baselines, Scikit-Learn linear/logistic regression, K-Means RFM customer segmentation, and safe AI-assisted analytics pipelines",
+      "Portfolio & Certification: Publish end-to-end GitHub repositories, Tableau Public dashboards, and earn a verifiable MSK Institute Data Analysis Mastery Certificate"
     ],
-    "isCombo": true
+    "isCombo": true,
+    "seo": {
+      "title": "Data Analysis Mastery (Shikohabad & Online) | MSK Institute",
+      "description": "Master Data Analytics in 12 months: Excel, SQL, Python, Pandas, NumPy, Power BI, Tableau, Statistics & ML. 15 courses, 150 chapters. Book free demo.",
+      "keywords": [
+        "Data Analysis Course in Shikohabad",
+        "Data Analytics Mastery Course Online India",
+        "12 Month Data Analyst Course Hindi English",
+        "Excel SQL Python Power BI Tableau Course",
+        "Data Analyst Syllabus Fees Shikohabad",
+        "Pandas NumPy Statistics Machine Learning Course",
+        "MSK Institute Data Analytics",
+        "Er Sumit Kumar Data Analyst Mentor"
+      ]
+    },
+    "description": "**Data Analysis Mastery at MSK Institute is a 12-month, mentor-led career program bundling 15 specialized courses, 150 chapters, and 541 practical lessons across Excel, SQL, Python, NumPy, Pandas, Statistics, Power BI, Tableau, and Machine Learning.** Taught in simple Hinglish (Hindi explanations with English industry terminology) via offline computer labs in Shikohabad and live interactive online classes across India, it takes complete beginners to portfolio-ready data analytics.\n\n---\n\n## Why Choose This 12-Month Data Analysis Mastery Track?\n\nReal-world Data Analysts rarely use just one tool—hiring teams expect you to extract records with **SQL**, clean and model datasets in **Excel** or **Python (Pandas/NumPy)**, validate findings with **Applied Statistics**, and present live KPIs in **Power BI** or **Tableau**. Instead of disjointed short courses, founder **Er. Sumit Kumar** structured all 15 modules into one continuous pipeline:\n\n- **Complete Industry Analytics Stack:** Covers every core tool asked in Indian and global Data Analyst interviews—Excel, SQL/MySQL, Python, NumPy, Pandas (including modern PyArrow & Copy-on-Write), Matplotlib, Seaborn, Plotly, Streamlit, Power BI (DAX + RLS), Tableau (LODs + Stories), Statistics, and Scikit-Learn.\n- **Built-In Browser Practice Labs:** Practice live queries right in our free [SQL Studio](/tools/sql-studio), inspect schemas in [Database Viewer](/tools/db-viewer), and run Python scripts in the [Code Playground](/playground).\n- **Zero-Hype, Portfolio-First Learning:** Every phase ends with real business deliverables—SQL sales warehouses, executive Excel/Power BI/Tableau dashboards, EDA notebooks, RFM segmentation, and churn models pushed to GitHub.\n- **Demo-First Admissions:** Attend a **100% free 3-day demo class** (at our Shikohabad lab or live online) before paying any course fee.\n\n---\n\n## 12-Month Data Analysis Mastery Roadmap\n\n| Timeline | Phase & Bundled Courses | Chapters | Topics | Key Tools & Competencies |\n| :--- | :--- | :---: | :---: | :--- |\n| **Months 1–3** | **Spreadsheet & BI Foundations** ([Excel Beginner](/courses/ms-excel-for-beginners), [Intermediate](/courses/ms-excel-for-intermediate), [Advanced](/courses/ms-excel-for-advanced)) | 29 | 92 | Formulas, VLOOKUP/XLOOKUP, INDEX-MATCH, Pivot Tables, Power Query ETL, Power Pivot, Executive Dashboards |\n| **Months 4–5** | **Relational Databases & Querying** ([SQL Beginner](/courses/sql-for-beginners), [Intermediate](/courses/sql-for-intermediate), [Advanced](/courses/sql-for-advanced)) | 37 | 147 | MySQL CRUD, Multi-table JOINs, Subqueries, CTEs, Window Functions, Views, 3NF, Indexing & Query Tuning |\n| **Month 6** | **Python Programming Foundations** ([Python for Beginners](/courses/python-for-beginners)) | 16 | 90 | Python 3.12+ syntax, `input()`, Lists/Dicts/Sets, Loops, Functions, File I/O, `try-except`, 4 Projects |\n| **Months 7–8** | **Python Data Science & Statistics** ([NumPy](/courses/numpy-complete-course), [Pandas](/courses/pandas-complete-course), [Visualization & Statistics](/courses/data-analysis--visualization--statistics)) | 26 | 83 | Vectorized `ndarray`, Pandas EDA/GroupBy/Merge, Matplotlib, Seaborn, Plotly/Streamlit, Hypothesis & A/B Testing |\n| **Months 9–10** | **Enterprise Business Intelligence** ([Power BI Beginner](/courses/power-bi-for-beginners), [Intermediate](/courses/power-bi-for-intermediate), [Advanced](/courses/power-bi-for-advanced), [Tableau](/courses/tableau-for-beginners)) | 36 | 109 | Star Schema, DAX (`CALCULATE`, `SUMX`, Time Intelligence), RLS/OLS, Tableau VizQL, LOD Expressions, Stories |\n| **Months 11–12** | **Advanced Analytics, ML & Capstones** ([Advanced Pandas & ML Basics](/courses/data-analysis--advanced-pandas--ml-basics)) | 6 | 20 | PyArrow/Copy-on-Write, Time-Series Forecasting, Scikit-Learn Regression/Classification, K-Means RFM, AI-Assisted SQL & Privacy |\n| **Total** | **15 Complete Specialized Courses** | **150** | **541** | **Full-Stack Data Analytics & BI Portfolio** |\n\n---\n\n## Real-World Portfolio Projects You Will Build\n\nGraduates leave with verifiable, public deliverables across GitHub and Tableau Public:\n\n| # | Capstone Project | Primary Tools | Business Outcome Demonstrated |\n| :-: | :--- | :--- | :--- |\n| 1 | **Executive Retail KPI & Sales Dashboard** | MS Excel, Power Query, Pivot Tables | Automated monthly refresh with dynamic slicers & margin KPIs |\n| 2 | **E-Commerce Relational Analytics Warehouse** | MySQL, CTEs, Window Functions | Customer cohort retention, YoY growth, and top-SKU rankings |\n| 3 | **End-to-End Exploratory Data Analysis (EDA)** | Python, NumPy, Pandas, Seaborn | Missing-value imputation, outlier detection & statistical insights |\n| 4 | **Interactive Regional Revenue Web App** | Plotly Express, Streamlit | Live browser dashboard with KPI cards and CSV export |\n| 5 | **Enterprise Power BI Sales & Margin Suite** | Power BI, Star Schema, DAX, RLS | Role-secured multi-page BI reporting with Time Intelligence |\n| 6 | **Tableau Public Executive Story** | Tableau Desktop, LODs, Actions | Multi-slide narrative walkthrough published to Tableau Public |\n| 7 | **Customer Churn & RFM Segmentation Pipeline** | SQLAlchemy, Pandas, Scikit-Learn | End-to-end SQL → Pandas → Logistic Regression & K-Means pipeline |\n\n---\n\n## Who Should Join & Career Pathways\n\nThis program is designed for **college students (B.Com, BBA, B.Sc, BCA, B.Tech, MBA)**, **MIS/Excel professionals upgrading to BI & Python**, and **beginners starting from zero coding experience**.\n\nCompleting the 12-month track prepares you with practical portfolio skills for roles such as:\n- **Junior Data Analyst / Business Analyst**\n- **Power BI / Tableau BI Developer**\n- **SQL & MIS Reporting Analyst**\n- **Operations / Marketing Analytics Associate**\n\n---\n\n## Certification & Free Self-Assessment\n\nUpon finishing the modules and submitting your capstone projects, you receive the official **MSK Institute Data Analysis Mastery Certificate**, publicly verifiable anytime at [/verify-certificate](/verify-certificate). Start testing your current analytics readiness today with our [Free Data Analysis Mock Test](/mock-test/data-analysis-mastery-combo-course--12-months) or explore our [SQL Studio](/tools/sql-studio) and free chapter-by-chapter tutorials below.\n",
+    "faqs": [
+      {
+        "question": "Can a non-technical student (B.Com, BA, BBA) join the 12-Month Data Analysis Mastery Course?",
+        "answer": "Yes. The program starts with Microsoft Excel from scratch in Months 1–3, builds SQL database logic in Months 4–5, and introduces Python from zero fundamentals in Month 6. No prior coding or advanced math degree is required."
+      },
+      {
+        "question": "What is included in the 12-Month Data Analysis Mastery Combo?",
+        "answer": "You get 15 complete courses covering 150 chapters and 541 structured topics: MS Excel (Beginner to Advanced), SQL & MySQL (Beginner to Advanced), Python for Beginners, NumPy, Pandas, Data Visualization & Applied Statistics (Matplotlib, Seaborn, Plotly, Streamlit), Power BI (Beginner to Advanced), Tableau Desktop, and Advanced Pandas & Machine Learning Basics."
+      },
+      {
+        "question": "Why does this course teach both Power BI and Tableau instead of just one BI tool?",
+        "answer": "Indian IT services, finance, and enterprise teams heavily hire for Power BI (Microsoft ecosystem + DAX), while product startups and global analytics teams frequently use Tableau (VizQL + LOD expressions). Learning both makes you eligible for a much wider pool of Data Analyst and BI openings."
+      },
+      {
+        "question": "Can I attend Data Analysis classes offline in Shikohabad or live online?",
+        "answer": "Yes. Offline hands-on lab batches run at MSK Institute, Gali No. 3, Near Gyan Jyoti Public School, Shikohabad (UP), and live interactive online classes are taught in Hindi & English for students across India."
+      },
+      {
+        "question": "Can I take a free demo class before enrolling?",
+        "answer": "Yes, MSK Institute offers a 100% free 3-day demo class (offline lab or live online) with zero upfront fee. Book your demo at https://www.mskinstitute.in/book-demo or WhatsApp +91 8393042166."
+      },
+      {
+        "question": "What is the course fee and are monthly installments available?",
+        "answer": "The official MSK Institute fee for the 12-Month Data Analysis Mastery Combo is ₹16,999 (compared to the ₹32,000 market benchmark), with flexible monthly installments available (₹3,499 down payment + ₹1,500/month for 10 months)."
+      },
+      {
+        "question": "What laptop or PC configuration do I need for Power BI, SQL, and Python?",
+        "answer": "A Windows 10/11 laptop with at least 8 GB RAM (Power BI Desktop runs natively on Windows) and 10 GB free disk space is recommended. Offline students at our Shikohabad campus also get dedicated institute lab systems."
+      },
+      {
+        "question": "Will I build a real Data Analyst portfolio for GitHub and interviews?",
+        "answer": "Yes. You build 7+ portfolio projects across Excel, SQL, Python EDA, Plotly/Streamlit web dashboards, Power BI DAX reports, Tableau Public stories, and Scikit-Learn RFM segmentation/churn models."
+      },
+      {
+        "question": "Does the course cover modern 2026 skills like Pandas PyArrow, Plotly/Streamlit, and AI-assisted SQL?",
+        "answer": "Yes. Our updated curriculum includes modern Pandas 2.x/3.0 (PyArrow backend & Copy-on-Write), interactive Plotly & Streamlit dashboards, and safe AI-assisted SQL/Pandas prompting with PII data privacy and verification checklists."
+      },
+      {
+        "question": "How is the MSK Institute Data Analysis Certificate verified?",
+        "answer": "Every graduate receives an official certificate with a unique verification code that recruiters and institutions can validate anytime at https://www.mskinstitute.in/verify-certificate."
+      }
+    ]
   },
   {
     "id": "course-full-stack-mern-mastery--12-months",
@@ -3093,7 +3152,7 @@
     "title": "Python Mastery (Beginner to Advanced) - 3 Months",
     "slug": "python-mastery",
     "featuredImageUrl": "https://images.unsplash.com/photo-1526379095098-d400fd0bf935?q=80&w=800&auto=format&fit=crop",
-    "shortDescription": "Master Python programming from zero fundamentals to enterprise software engineering in 3 months. This comprehensive 3-in-1 Grand Mastery Combo bundles Python for Beginners, Python for Intermediate, and Python for Advanced — spanning 45 chapters, 233 structured topics, 1,174 interactive quiz questions, and 14 production portfolio projects across OOP, multithreading, free-threaded No-GIL Python 3.13, asyncio, networking, and databases.",
+    "shortDescription": "Master Python 3.12/3.13 from zero fundamentals to production software engineering in 3 months. Bundles Beginner, Intermediate, and Advanced Python across 46 chapters, 236 structured topics, interactive quizzes, and 14 portfolio projects—offline in Shikohabad & live online.",
     "categories": [
       "Programming",
       "Python",
@@ -3118,66 +3177,80 @@
       "course-python-for-advanced"
     ],
     "learningOutcomes": [
-      "Month 1: Master Python 3.12+ syntax, variables, primitive types, explicit casting, arithmetic operations, and PEP 8 style standards",
-      "Month 1: Command core data structures: Lists, Tuples, Dictionaries, and Sets with deep indexing, slicing, and mutation rules",
-      "Month 1: Implement conditional logic, while loops, for loops with range(), break/continue control, and modular functions with docstrings",
-      "Month 1: Build foundational file I/O scripts, handle basic exceptions, debug code in VS Code, and deliver 4 standalone beginner projects",
-      "Month 2: Master advanced list, set, and dictionary comprehensions with multi-predicate filtering and walrus operator (:=) caching",
-      "Month 2: Implement first-class functions, closures, lexical scoping, custom decorators with arguments, and modular package architecture",
-      "Month 2: Design scalable object-oriented software with multi-level inheritance, method overriding, super(), and duck-typed polymorphism",
-      "Month 2: Enforce encapsulation using @property getters/setters, class/static methods, and custom domain-specific exception hierarchies",
-      "Month 2: Harness the Iterator Protocol, lazy evaluation with generators (yield), and generator expressions for memory-efficient pipelines",
-      "Month 2: Consume third-party REST APIs using requests, execute parameterized SQLite3 database CRUD queries, and plot business charts with Matplotlib",
-      "Month 3: Master advanced OOP mechanics: descriptors (__get__/__set__), property decorators, and Method Resolution Order (MRO) with C3 linearization",
-      "Month 3: Overload dunder magic methods (__str__, __repr__, __len__, __call__, __add__) for expressive mathematical and domain modeling",
-      "Month 3: Engineer concurrent architectures: thread synchronization with Locks/Semaphores, multi-core CPU parallelism with multiprocessing, and asynchronous I/O with asyncio",
-      "Month 3: Build raw TCP/UDP socket networks, enterprise ORM models with SQLAlchemy 2.0, write automated test suites with Pytest & TDD, and develop Tkinter desktop GUIs",
-      "Month 3: Deliver 3 production-grade capstones: an Inventory Management System, an Async Weather Dashboard, and a Personal Finance Tracker with SQLAlchemy"
+      "Month 1: Install Python 3.12/3.13, configure VS Code, write PEP 8 code, handle live user input(), variables, data types, and explicit casting",
+      "Month 1: Command core Python collections—Lists, Tuples, Sets, and Dictionaries—with indexing, slicing, nesting, and built-in methods",
+      "Month 1: Build logic using if-elif-else, match-case pattern matching, loops, comprehensions, enumerate()/zip(), and modular functions with type hints",
+      "Month 1: Read and write text files safely using with open(), prevent crashes with try-except error handling, and ship 4 beginner projects",
+      "Month 2: Write expressive list, set, and dictionary comprehensions, closures, custom decorators, and modular Python packages with __init__.py",
+      "Month 2: Process CSV/JSON files and modern paths with pathlib.Path, design OOP systems with inheritance, polymorphism, @property, and @dataclass",
+      "Month 2: Build custom exception hierarchies & ExceptionGroups, memory-efficient generators (yield), REST API clients (requests), and industrial logging",
+      "Month 2: Design relational SQLite3 databases with parameterized CRUD queries, isolate dependencies via venv/pip, and plot charts with Matplotlib/Seaborn",
+      "Month 3: Master advanced OOP mechanics—descriptors, Method Resolution Order (MRO), abc.ABC, Protocols, metaclasses, and CPython __slots__/GC internals",
+      "Month 3: Overload dunder magic methods (__repr__, __len__, __add__, __call__), write context managers, and build functional pipelines with itertools/functools",
+      "Month 3: Engineer concurrent systems using threading Locks, Python 3.13 Free-Threaded (No-GIL) concepts, multiprocessing Pools, and asyncio TaskGroup",
+      "Month 3: Build SQLAlchemy 2.0 ORM models, TCP/UDP socket client-server apps, advanced regex log analyzers, and pyproject.toml wheel packages",
+      "Month 3: Enforce production quality with pytest, mocking, Test-Driven Development (TDD), mypy static type checking, and Ruff linting/formatting",
+      "Month 3: Develop responsive Tkinter desktop GUIs and deliver 3 production capstones: Inventory System, Async Weather Dashboard, and Finance Tracker"
     ],
-    "description": "# Python Mastery (Beginner to Advanced): Complete 3-Month Software Engineering Bootcamp\n\nWelcome to **Python Mastery (Beginner to Advanced)**, the premier 3-month comprehensive software engineering program engineered by **MSK Institute**. \n\nThis flagship **3-in-1 Grand Mastery Combo** unites our three acclaimed Python curricula into one seamless, continuous learning path:\n1. **Python for Beginners (Level 1)**: Zero-to-hero fundamentals, algorithmic thinking, and core syntax.\n2. **Python for Intermediate (Level 2)**: Professional OOP architecture, decorators, generators, REST APIs, SQLite, and data visualization.\n3. **Python for Advanced (Level 3)**: High-performance systems engineering, concurrency (threading, multiprocessing, asyncio), network sockets, SQLAlchemy 2.0 ORM, and automated testing with Pytest.\n\nSpanning **45 chapters**, **233 structured tutorial topics**, **1,174 interactive quiz questions**, and **14 real-world portfolio projects**, this bootcamp is designed to transform enthusiastic beginners into job-ready software developers, backend engineers, and data automation specialists.\n\n---\n\n## 🎯 Program Overview & Educational Philosophy\n\nPython is the undisputed leader across cloud computing, web development, data engineering, and artificial intelligence. However, surface-level syntax tutorials leave aspiring developers ill-prepared for the technical demands of modern engineering teams.\n\nAt MSK Institute, our training philosophy is founded on **deep conceptual mechanics coupled with continuous practical execution**:\n- **Zero to Production Roadmap**: We start with the absolute basics (how code executes on a CPU) and culminate in complex distributed systems (multi-core multiprocessing and async event loops).\n- **The \"Learn by Doing\" Laboratory Model**: Theory is immediately validated with hands-on coding. Students run real scripts in VS Code, debug live runtime exceptions, and inspect memory allocation.\n- **1,174 Formative Knowledge Checks**: Every single topic in the curriculum features 5 verified multiple-choice questions testing output prediction, edge cases, and architectural trade-offs.\n- **14 Production-Grade Portfolio Projects**: You graduate with an extensive GitHub repository showcasing command-line utilities, relational database engines, multithreaded network downloaders, and asynchronous scrapers.\n\n---\n\n## 👥 Who Should Enroll in This 3-Month Bootcamp?\n\n- **Absolute Beginners & Non-Programmers**: Individuals with zero coding experience seeking a supportive, structured, and thorough on-ramp into software development.\n- **BCA, B.Tech, MCA & Polytechnic Students**: University students seeking practical industry skills, interview preparation, and impressive academic capstone projects.\n- **Working Professionals Seeking Career Transition**: Accountants, data entry operators, and support engineers aiming to transition into high-paying software engineering and data analytics roles.\n- **Aspiring Web & Backend Engineers**: Developers preparing to learn modern web frameworks like Django, FastAPI, or Flask who want a rock-solid Pythonic foundation first.\n- **Future Data Scientists & AI Practitioners**: Anyone planning to specialize in Pandas, NumPy, Scikit-Learn, or PyTorch where advanced Python fluency is mandatory.\n\n---\n\n## 🗺️ The Complete 3-Month Month-by-Month Roadmap\n\n```text\n┌─────────────────────────────────────────────────────────────────────────────┐\n│                    3-MONTH PYTHON MASTERY TIMELINE                          │\n├────────────────────────┬──────────────────────────┬─────────────────────────┤\n│   MONTH 1: LEVEL 1     │     MONTH 2: LEVEL 2     │    MONTH 3: LEVEL 3     │\n│   Python Fundamentals  │  Intermediate Engineering│  Advanced Systems & Arch│\n├────────────────────────┼──────────────────────────┼─────────────────────────┤\n│ • Syntax & Variables   │ • Advanced Comprehensions│ • Descriptors & MRO     │\n│ • Control Flow (Loops) │ • Closures & Decorators  │ • Magic Methods (Dunder)│\n│ • Lists, Dicts, Tuples │ • Packages & Modules     │ • Threading & Locks     │\n│ • Functions & Scope    │ • File Handling (CSV/JSON│ • Multiprocessing & GIL │\n│ • File I/O & Exceptions│ • OOP (Inheritance/Poly) │ • Asyncio Event Loops   │\n│ • VS Code Debugging    │ • Custom Exceptions      │ • SQLAlchemy 2.0 ORM    │\n│ • 4 Beginner Projects  │ • Iterators & Generators │ • Network Sockets (TCP) │\n│                        │ • REST APIs & Requests   │ • Regex Mastery         │\n│                        │ • SQLite3 Relational DB  │ • Pytest & TDD          │\n│                        │ • Matplotlib Charts      │ • Tkinter Desktop GUIs  │\n│                        │ • 7 Projects & Capstones │ • 3 Enterprise Capstones│\n│                        │                          │                         │\n│ 16 Chapters | 88 Topics│ 15 Chapters | 76 Topics │ 15 Chapters | 69 Topics │\n│ 434 Quiz Questions     │ 350 Quiz Questions       │ 315 Quiz Questions      │\n└────────────────────────┴──────────────────────────┴─────────────────────────┘\n```\n\n---\n\n## 📦 The 3 Included Specialized Curricula\n\nBy enrolling in this 3-Month Combo, you receive complete access to 3 specialized courses:\n\n### 1. Python for Beginners (Month 1 | 16 Chapters | 88 Topics)\n- **Chapter 1: Introduction to Python**: Language philosophy, Python 3.12+ installation, environment PATH, VS Code setup, and writing your first script.\n- **Chapter 2: Variables & Data Types**: Dynamic typing, integers, floats, strings, booleans, type casting (`int()`, `str()`), and formatted string interpolation.\n- **Chapter 3: Operators & Expressions**: Arithmetic, assignment, comparison, logical (`and`, `or`, `not`), identity (`is`), and membership (`in`).\n- **Chapter 4: Conditional Statements**: Boolean expressions, `if`, `elif`, `else` branching, and nested conditionals.\n- **Chapter 5: Loops & Iterations**: `while` loops, `for` loops with `range()`, `break`, `continue`, and loop `else` clauses.\n- **Chapter 6: Strings Deep Dive**: String immutability, slicing, string methods (`split`, `join`, `replace`), and Unicode handling.\n- **Chapter 7: Lists Deep Dive**: List mutability, indexing, slicing, methods (`append`, `extend`, `pop`, `sort`), and 2D matrices.\n- **Chapter 8: Tuples & Sets**: Tuple immutability, tuple packing/unpacking, set uniqueness, and mathematical set operations (`union`, `intersection`).\n- **Chapter 9: Dictionaries**: Key-value mappings, dictionary methods (`get`, `items`, `keys`), and nested dictionaries.\n- **Chapter 10: Functions Basics**: Function definitions, parameters, return values, default arguments, and local vs global scope.\n- **Chapter 11: File Handling Basics**: Reading and writing text files, file modes (`r`, `w`, `a`), and line iteration.\n- **Chapter 12: Basic Error Handling**: `try`, `except`, catching specific exceptions (`ValueError`, `ZeroDivisionError`), and safe user input.\n- **Chapter 13: Modules Basics**: Importing standard modules (`math`, `random`, `datetime`), and creating custom helper modules.\n- **Chapter 14: Practical Beginner Projects**: Building the Command-Line Calculator, Student Grade Calculator, Number Analyzer, and Simple Billing System.\n- **Chapter 15: Revision & Final Assessment**: Comprehensive syntax review, best practices checklist, and foundational programming exam.\n\n### 2. Python for Intermediate (Month 2 | 15 Chapters | 76 Topics)\n- **Chapter 1: Advanced Data Types & Comprehensions**: Nested list comprehensions, set comprehensions, dictionary comprehensions, and walrus operator optimization.\n- **Chapter 2: Functions Deep Dive**: `*args` and `**kwargs`, mutable default argument pitfalls, lexical closures (`nonlocal`), and custom decorators with arguments.\n- **Chapter 3: Modules and Packages**: Package structure, `__init__.py`, relative imports, module namespace exports (`__all__`), and execution guards (`if __name__ == '__main__':`).\n- **Chapter 4: File Handling Advanced**: Context managers (`with`), parsing CSV tabular data with `csv.DictReader`/`DictWriter`, Windows `newline=''` hygiene, and JSON serialization.\n- **Chapter 5: Object-Oriented Programming (OOP)**: Classes, instances, constructors, multi-level inheritance, method overriding, `super()`, encapsulation, and polymorphism.\n- **Chapter 6: Exception Handling**: Complete `try-except-else-finally` blocks, custom exception classes, and exception chaining (`raise ... from`).\n- **Chapter 7: Iterators & Generators**: The Iterator Protocol (`__iter__`, `__next__`), custom iterable classes, `yield`, lazy evaluation, and generator expressions.\n- **Chapter 8: Working with APIs**: Client-server architecture, consuming REST APIs with `requests`, handling HTTP status codes, query parameters, and parsing nested JSON.\n- **Chapter 9: Debugging & Logging**: Industrial `logging` module, severity levels, file handlers, formatting, interactive debugging with `pdb`, and defensive assertions.\n- **Chapter 10: Python Standard Libraries**: Deep dive into `collections` (`defaultdict`, `Counter`, `namedtuple`), `datetime` arithmetic, and `os`/`sys` system operations.\n- **Chapter 11: Database Basics with SQLite**: Relational database principles, `sqlite3` handles, parameterized CRUD queries (SQL injection prevention), and transaction management.\n- **Chapter 12: Virtual Environments & Pip**: Dependency isolation with `venv`, package management with `pip`, and freezing reproducible environments with `requirements.txt`.\n- **Chapter 13: Data Visualization Basics**: Matplotlib Pyplot figures and axes, line/bar/pie charts, visual styling, and Seaborn statistical distributions.\n- **Chapter 14: Intermediate Projects**: Expense Tracker with CSV, API-Based Dictionary Application, and CLI Task Manager.\n- **Chapter 15: Intermediate Capstones**: Object-Oriented Library Management System and Automated Student Report Card PDF/PNG Generator.\n\n### 3. Python for Advanced (Month 3 | 15 Chapters | 69 Topics)\n- **Chapter 1: Advanced OOP Concepts**: Descriptors, bound methods under the hood, polymorphic factory constructors with `TypeVar`, Method Resolution Order (MRO), and mixin architecture.\n- **Chapter 2: Magic Methods & Operator Overloading**: Object allocation hooks (`__new__` vs `__init__`), developer diagnostics (`__repr__`), operator overloading, and sequence/mapping protocols.\n- **Chapter 3: Advanced Decorators and Context Managers**: Three-tier decorator factories, class decorators, resource management with `__enter__`/`__exit__`, and `contextlib.ExitStack`.\n- **Chapter 4: Itertools and Functools**: Infinite stream iterators, combinatorial generators, functional pipelines with `functools.reduce`, `singledispatch`, and bounded `@lru_cache`.\n- **Chapter 5: Generators & Coroutines**: Generator state inspection (`inspect.getgeneratorstate`), delegation with `yield from`, two-way coroutine communication via `.send()`, and stream processors.\n- **Chapter 6: Multithreading in Python**: OS threading model, CPython Global Interpreter Lock (GIL), thread synchronization with `Lock`/`RLock`/`Semaphore`, and thread pools.\n- **Chapter 7: Multiprocessing in Python**: Bypassing the GIL with isolated process memory, IPC with `multiprocessing.Queue`, shared memory, and multi-core `Pool.map`.\n- **Chapter 8: Asynchronous Programming (Asyncio)**: Cooperative multitasking, single-threaded event loops, non-blocking coroutines, task scheduling with `asyncio.gather()`, and timeouts.\n- **Chapter 9: Advanced Database Handling**: SQLAlchemy 2.0 Declarative Base modeling, mapped columns, One-to-Many/Many-to-Many relationships, N+1 query elimination (`selectinload`), and session rollbacks.\n- **Chapter 10: Networking with Python**: Berkeley sockets (`AF_INET`, `SOCK_STREAM`), `SO_REUSEADDR`, TCP framing vs UDP datagrams, multi-client broadcast chat engines, and client-server protocols.\n- **Chapter 11: Regular Expressions Advanced**: Named capture groups, non-capturing groups, greedy vs lazy matching, callback substitutions (`re.sub`), and catastrophic backtracking prevention.\n- **Chapter 12: Data Serialization & File Formats**: Pickle object serialization security risks (`__reduce__`), custom `JSONEncoder` for Decimals/sets, and safe YAML parsing.\n- **Chapter 13: Testing & Best Practices**: Unit testing with `unittest`, Pythonic testing with `pytest`, custom fixtures, dependency mocking with `unittest.mock`, and Test-Driven Development (TDD).\n- **Chapter 14: GUI Development with Tkinter**: Tk root window event loops, geometry managers (`grid` vs `pack`), event binding, lambda late-binding fixes, and threaded UI responsiveness.\n- **Chapter 15: Final Capstone Projects**: Multi-Tier Inventory Management System, Live Desktop Weather Analytics Station, and Personal Finance & Investment Ledger with SQLAlchemy 2.0.\n\n---\n\n## 🛠️ Complete 14-Project Portfolio Breakdown\n\nThroughout this 3-month bootcamp, you build 14 real-world software applications:\n\n| # | Project Name | Level | Primary Competencies |\n| :-: | :--- | :-: | :--- |\n| **1** | **Command-Line Calculator** | Beginner | Functions, conditionals, arithmetic validation |\n| **2** | **Student Grade Calculator** | Beginner | Lists, loops, numeric thresholds, formatting |\n| **3** | **Number Analyzer & Prime Checker** | Beginner | Algorithmic logic, while loops, mathematical optimization |\n| **4** | **Simple Billing & Invoice System** | Beginner | Dictionaries, text file exports, formatted receipts |\n| **5** | **Data Filtering Engine** | Intermediate | Advanced list/set comprehensions, walrus operator |\n| **6** | **Execution Audit & Timing Decorator** | Intermediate | Closures, function wrappers, `@functools.wraps` |\n| **7** | **Custom Utility Package** | Intermediate | `__init__.py`, module packaging, namespaces |\n| **8** | **CSV Contact Manager** | Intermediate | Context managers, `csv.DictReader`/`DictWriter` |\n| **9** | **Bank Account Class System** | Intermediate | Encapsulation, inheritance, polymorphism, `@property` |\n| **10** | **Error-Handled Math Calculator** | Intermediate | `try-except-else-finally`, custom exception classes |\n| **11** | **Infinite Log Stream Generator** | Intermediate | Iterators, generators, `yield`, lazy evaluation |\n| **12** | **Weather Data Fetcher & CLI Dictionary** | Intermediate | REST APIs, HTTP requests, nested JSON navigation |\n| **13** | **Student Records Database & Visualizer** | Intermediate | SQLite3 CRUD queries, SQL injection prevention, Matplotlib |\n| **14** | **Three Enterprise Capstones**: | Advanced | Systems-level engineering: |\n| | *a) Multi-Tier Inventory Management System* | Advanced | Relational inventory schema, transactional deductions |\n| | *b) Asynchronous Weather Dashboard* | Advanced | Asyncio event loop, desktop GUI with Tkinter |\n| | *c) Personal Finance & Investment Ledger* | Advanced | Modern SQLAlchemy 2.0, atomic transfers, Pytest suite |\n\n---\n\n## 💼 Career Paths & Industry Roles\n\nGraduates of the 3-Month Python Mastery program are qualified for high-demand developer roles:\n- **Full-Stack Python Backend Developer**: Build scalable microservices and APIs with Django, FastAPI, or Flask.\n- **Python Automation Specialist**: Automate complex enterprise workflows, extract web intelligence, and orchestrate systems.\n- **Junior Data Analyst / Data Engineer**: Clean, transform, inspect, and visualize multi-gigabyte datasets using SQLite, standard libraries, and Matplotlib.\n- **Software QA & Test Automation Engineer**: Write robust automated test suites, mock external dependencies, and enforce code quality using Pytest.\n\n---\n\n## 🏆 Official Certification & Assessment\n\nUpon completing the 3-month curriculum, passing all topic assessments, and submitting the capstone portfolio projects, students receive the verified **MSK Institute Certificate of Completion in Python Mastery (Beginner to Advanced)**. The certificate includes a unique online verification code verifiable at [https://www.mskinstitute.in/verify-certificate](https://www.mskinstitute.in/verify-certificate).\n",
+    "description": "**Python Mastery (Beginner to Advanced) at MSK Institute is a 3-month, mentor-led software engineering program covering 46 chapters, 236 structured topics, and 14 hands-on portfolio projects across Beginner, Intermediate, and Advanced Python 3.12/3.13.** Delivered in Hinglish (simple Hindi explanations with English technical terms) via offline computer labs in Shikohabad and live interactive online batches across India, the course takes complete beginners to production-ready Python engineering.\n\n---\n\n## Why Choose This 3-in-1 Python Mastery Program?\n\nMost short Python courses stop at basic loops and lists—leaving students stuck the moment they face Django, FastAPI, data pipelines, or technical interviews. At **MSK Institute**, founder and full-stack developer **Er. Sumit Kumar** structured this 3-in-1 Mastery track to connect every layer of Python cleanly:\n\n- **Structured Zero-to-Production Path:** Start from installing Python and writing your first `print()` and `input()` scripts, then progress step by step into OOP, SQLite, REST APIs, concurrency, SQLAlchemy 2.0, `mypy`, `Ruff`, and `pytest`.\n- **100% Practical Lab & Live Coding Model:** Every topic pairs concise explanation with runnable Python code, common mistake callouts, interactive self-check quizzes, and mentor code review.\n- **2026 Modern Python Standards:** Covers modern Python 3.12/3.13 features including `match-case` pattern matching, `pathlib.Path`, `@dataclass`, `ExceptionGroup` / `except*`, `asyncio.TaskGroup`, `pyproject.toml` packaging, Free-Threaded No-GIL (PEP 703), `mypy --strict`, and `Ruff`.\n- **Transparent Demo-First Admissions:** Attend a **100% free 3-day demo class** (at our Shikohabad lab or live online) before paying any tuition fee.\n\n---\n\n## 3-Month Python Mastery Roadmap at a Glance\n\n| Phase | Included Course Tier | Chapters | Topics | Core Focus Areas | Major Deliverables |\n| :--- | :--- | :---: | :---: | :--- | :--- |\n| **Month 1** | [Python for Beginners](/courses/python-for-beginners) | 16 | 90 | Setup, variables, `input()`, data types, strings, lists/tuples/sets/dicts, `match-case`, loops, functions, file I/O, `try-except` | 4 Beginner Projects (Contact Book, Quiz App, Expense Tracker, Student Management System) |\n| **Month 2** | [Python for Intermediate](/courses/python-for-intermediate) | 15 | 76 | Advanced comprehensions, closures, decorators, packages, `pathlib`, CSV/JSON, OOP & `@dataclass`, generators, REST APIs, logging, `argparse`, SQLite3, `venv`, Matplotlib/Seaborn | 5 Intermediate Projects & Capstones (CSV Expense Tracker, API Dictionary, CLI To-Do, Library System, Report Card Generator) |\n| **Month 3** | [Python for Advanced](/courses/python-for-advanced) | 15 | 70 | Descriptors, MRO, ABCs/Protocols, metaclasses, dunder methods, CPython internals, threading, No-GIL 3.13, multiprocessing, `asyncio.TaskGroup`, SQLAlchemy 2.0, TCP/UDP sockets, regex, `pyproject.toml`, `pytest` TDD, `mypy` & `Ruff`, Tkinter | 3 Advanced Capstones + 2 Engineering Utilities (Inventory System, Async Weather Dashboard, SQLAlchemy Finance Tracker) |\n| **Total** | **Python Mastery Combo** | **46** | **236** | **Complete Python 3.12 / 3.13 Engineering Stack** | **14 Portfolio Projects + Verifiable Certificate** |\n\n---\n\n## What Is Included in Each Curriculum Tier?\n\n### Level 1: Python for Beginners (Month 1 — 16 Chapters, 90 Topics)\n1. **Introduction & Setup:** Python overview, VS Code & Python 3.12/3.13 setup, syntax, comments, PEP 8.\n2. **Variables & User Input:** Variable rules, printing techniques, multiple assignments, constants, and `input()` interactive programs.\n3. **Data Types, Numbers & Casting:** Built-in types, `type()`, `isinstance()`, `math`/`random`, implicit vs explicit casting.\n4. **Strings & Operators:** Indexing, slicing, f-strings, string methods, arithmetic, logical, identity, membership, and bitwise operators.\n5. **Core Data Structures:** Deep hands-on mastery of **Lists**, **Tuples**, **Sets**, and **Dictionaries** (including a Student Records mini-project).\n6. **Control Flow & Loops:** `if-elif-else`, ternary operators, `match-case` pattern matching, `while`/`for` loops, list/set comprehensions, `enumerate()`, and `zip()`.\n7. **Functions:** Positional/keyword arguments, `*args`/`**kwargs`, lambda, recursion, variable scope, positional/keyword-only parameters, and basic type hints.\n8. **File Handling & Basic Error Handling:** Reading/writing files with `with open()`, file methods, and preventing crashes with `try-except-else-finally`.\n9. **4 Beginner Projects:** Contact Book, Quiz Application, Expense Tracker, and Basic Student Management System.\n\n### Level 2: Python for Intermediate (Month 2 — 15 Chapters, 76 Topics)\n1. **Advanced Comprehensions & Pattern Matching:** Nested comprehensions, walrus operator (`:=`), and `match-case` guards/class patterns.\n2. **Functions Deep Dive, Modules & Packages:** Closures, decorators, `__name__ == '__main__'`, package architecture with `__init__.py`.\n3. **Advanced File I/O & `pathlib`:** Context managers, CSV `DictReader`/`DictWriter`, JSON workflows, and `pathlib.Path`.\n4. **Object-Oriented Programming (OOP):** Classes, inheritance, method overriding, polymorphism, encapsulation, `@dataclass`, and shallow vs deep copy.\n5. **Exception Handling & Generators:** Custom exception classes, Python 3.11+ `ExceptionGroup`/`except*`, custom iterators, `yield`, and lazy generator pipelines.\n6. **APIs, Logging, CLI & SQLite:** REST APIs with `requests`, industrial `logging` & `pdb`, `collections`/`datetime`/`argparse`, parameterized SQLite3 CRUD, `venv`/`pip`, and Matplotlib/Seaborn charts.\n7. **Intermediate Projects & Capstones:** CSV Expense Tracker, API Dictionary App, CLI To-Do App, Library Management System, and Student Report Card Generator.\n\n### Level 3: Python for Advanced (Month 3 — 15 Chapters, 70 Topics)\n1. **Advanced OOP & CPython Internals:** Descriptors, `@property`, MRO, `abc.ABC`, `Protocol`, metaclasses, dunder operator overloading, memory management, GC, and `__slots__`.\n2. **Metaprogramming & Functional Pipelines:** Decorator factories, class decorators, `contextlib`, `itertools`, `functools.lru_cache`, `yield from`, and coroutines.\n3. **Concurrency & Parallelism:** Multithreading & synchronization Locks, Python 3.13 Free-Threaded (No-GIL PEP 703) & JIT overview, `multiprocessing` shared memory, and `asyncio` with `TaskGroup` & `asyncio.timeout()`.\n4. **Databases, Networking, Regex & Packaging:** SQLAlchemy 2.0 ORM & transactions, TCP/UDP sockets & chat servers, advanced regex groups & lookarounds, JSON/YAML/Pickle serialization, and modern `pyproject.toml` wheel packaging.\n5. **Testing, Typing, Linting & Desktop GUIs:** `unittest`, `pytest` fixtures/mocking, TDD, **`mypy --strict` static type checking & `Ruff` linting/formatting**, and Tkinter desktop apps.\n6. **3 Final Enterprise Capstones:** Inventory Management System, API-Based Async Weather Dashboard, and Personal Finance Tracker with SQLAlchemy 2.0.\n\n---\n\n## Complete 14-Project GitHub Portfolio\n\nEvery student builds and documents real working code suitable for a public GitHub portfolio:\n\n| # | Project | Level | Key Skills Demonstrated |\n| :-: | :--- | :---: | :--- |\n| 1 | **Contact Book CLI** | Beginner | Dictionaries, CRUD menu flow, file persistence |\n| 2 | **Interactive Quiz Application** | Beginner | Loops, functions, input validation, scoring logic |\n| 3 | **Personal Expense Tracker** | Beginner | File I/O, `try-except`, category totals |\n| 4 | **Student Management System** | Beginner | Structured data handling, search & reporting |\n| 5 | **CSV Contact & Expense Manager** | Intermediate | `pathlib`, `csv.DictReader`/`DictWriter`, context managers |\n| 6 | **OOP Bank Account System** | Intermediate | Encapsulation, inheritance, `@property`, `@dataclass` |\n| 7 | **API-Based Dictionary & Weather Fetcher** | Intermediate | `requests`, HTTP status handling, JSON parsing |\n| 8 | **CLI To-Do Manager with `argparse`** | Intermediate | Command-line flags, subcommands, JSON storage |\n| 9 | **SQLite Student Records & Sales Visualizer** | Intermediate | Parameterized SQLite3 CRUD, Matplotlib/Seaborn |\n| 10 | **Library Management System (Capstone)** | Intermediate | Multi-class OOP architecture & database persistence |\n| 11 | **Student Report Card Generator (Capstone)** | Intermediate | Automated data processing & structured output |\n| 12 | **Multi-Tier Inventory Management System** | Advanced | SQLAlchemy 2.0 ORM, atomic transactions, relationships |\n| 13 | **Async API Weather Dashboard** | Advanced | `asyncio.TaskGroup`, non-blocking I/O, Tkinter GUI |\n| 14 | **Personal Finance Tracker with Database** | Advanced | SQLAlchemy 2.0, `pytest` + `mypy` + `Ruff` quality gates |\n\n---\n\n## Who Should Join & Next Career Paths\n\nThis course is built for **school & college students (Class 9–12, BCA, B.Tech, MCA, Polytechnic)**, **career switchers**, and **aspiring developers** who want strong practical coding skills instead of theory-only notes.\n\nAfter completing Python Mastery, you are prepared to specialize cleanly in:\n- **Backend Web Development:** [Django](/courses/django-for-backend-development), Django REST Framework, or [Flask](/courses/flask-complete-course).\n- **Data Analytics & AI Foundations:** [NumPy](/courses/numpy-complete-course), [Pandas](/courses/pandas-complete-course), SQL, and Machine Learning pipelines.\n- **Automation & QA Engineering:** Scripting repetitive office/business workflows, web scraping, and automated `pytest` test suites.\n\n---\n\n## Official Verification & Free Practice Ecosystem\n\nUpon completing the curriculum and submitting your capstone projects, you earn the **MSK Institute Certificate of Completion in Python Mastery**, verifiable anytime online at [/verify-certificate](/verify-certificate). You can also start exploring free lessons right now across our [Beginner](/tutorials/python-for-beginners), [Intermediate](/tutorials/python-for-intermediate), and [Advanced](/tutorials/python-for-advanced) Python tutorials or test your current level with the [Free Python Mock Test](/mock-test/python-mastery).\n",
     "faqs": [
       {
-        "question": "Why should I choose the 3-Month Python Mastery Combo instead of taking individual courses separately?",
-        "answer": "The 3-Month Python Mastery Combo offers a seamless, unbroken learning journey from Day 1 beginner syntax to Month 3 senior software engineering. It combines all 3 specialized levels (Beginner, Intermediate, and Advanced) under a unified curriculum at substantial tuition savings compared to enrolling in separate courses, while ensuring you build a massive 14-project engineering portfolio."
+        "question": "Why should I choose the 3-Month Python Mastery Combo instead of taking individual levels separately?",
+        "answer": "The 3-Month Python Mastery Combo connects Beginner (16 chapters), Intermediate (15 chapters), and Advanced (15 chapters) into one continuous 46-chapter roadmap at a lower combined tuition fee (₹4,999 vs ₹5,497 separately), with unified mentorship and a 14-project GitHub portfolio."
       },
       {
-        "question": "Can I join this program with zero prior coding or computer science experience?",
-        "answer": "Yes, absolutely! Month 1 assumes zero prior programming knowledge. We start with fundamental concepts: installing Python 3.12, setting up VS Code, understanding variables, and writing simple scripts. Concepts are introduced with relatable real-world analogies before advancing into intermediate and advanced engineering."
+        "question": "Can I join Python Mastery with zero prior coding experience?",
+        "answer": "Yes. Month 1 starts from complete scratch—installing Python 3.12/3.13, configuring VS Code, printing output, taking user input(), and building logic step by step in simple Hindi + English (Hinglish) explanations."
       },
       {
-        "question": "What is the expected weekly time commitment for this 3-month bootcamp?",
-        "answer": "We recommend dedicating 6 to 10 hours per week. This includes 2 to 3 hours of conceptual lecture/reading, 3 to 4 hours of hands-on laboratory coding, and 1 to 2 hours of topic quiz assessments and portfolio project implementation."
+        "question": "How many chapters, topics, and practice quizzes are included in Python Mastery?",
+        "answer": "The complete curriculum spans 46 chapters and 236 structured tutorial topics (90 Beginner + 76 Intermediate + 70 Advanced), with interactive self-check quizzes, runnable code examples, and a timed Python Mastery Mock Test."
       },
       {
-        "question": "How do the 1,099 interactive quiz questions help my learning?",
-        "answer": "Every single one of the 218 curriculum topics concludes with 5 targeted multiple-choice questions. These quizzes test code output prediction, syntax boundaries, and debugging logic. Instant automated scoring provides feedback on your understanding before you proceed to subsequent modules."
+        "question": "Can I attend Python Mastery both Offline in Shikohabad and Live Online?",
+        "answer": "Yes. You can attend practical offline computer lab sessions at MSK Institute, Gali No. 3, Near Gyan Jyoti Public School, Shikohabad (UP), or join interactive live online classes in Hindi & English from anywhere in India."
       },
       {
-        "question": "Can I attend this course both Online and In-Person at MSK Institute?",
-        "answer": "Yes! The program is offered in full hybrid mode (BOTH). You can follow the interactive online tutorials, code walkthroughs, and quizzes from anywhere in the world, or join our hands-on in-person classroom bootcamps at the MSK Institute campus in Shikohabad, UP with dedicated lab computers and 1-on-1 mentor guidance."
+        "question": "Can I attend a free demo class before enrolling?",
+        "answer": "Yes, MSK Institute provides a 100% free 3-day demo class (offline in Shikohabad or live online) with zero upfront fee. Book your slot at https://www.mskinstitute.in/book-demo or WhatsApp +91 8393042166."
       },
       {
-        "question": "What computer hardware and operating system do I need for this course?",
-        "answer": "Any computer running Windows 10/11, macOS, or modern Linux with at least 4 GB RAM (8 GB recommended for Month 3 multiprocessing labs), a dual-core processor, and 4 GB of free storage. All software utilized (Python 3.12, VS Code, Git, SQLite) is 100% free and open-source."
+        "question": "What laptop or computer specifications are needed for this course?",
+        "answer": "Any Windows 10/11, macOS, or Linux computer with at least 4 GB RAM (8 GB recommended for Month 3 multiprocessing labs) and 4 GB free disk space. Offline students in Shikohabad get dedicated lab computers at the institute."
       },
       {
-        "question": "How does the curriculum teach concurrency (Threading, Multiprocessing, and Asyncio)?",
-        "answer": "Month 3 dedicates three complete modules to concurrency: Threading for I/O-bound operations with mutex Locks and Semaphores; Multiprocessing for bypassing the Global Interpreter Lock (GIL) across multiple CPU cores; and Asyncio for high-concurrency non-blocking event loop execution."
+        "question": "Does the syllabus cover modern Python 3.12 and 3.13 engineering practices?",
+        "answer": "Yes. Beyond core syntax and OOP, the syllabus teaches match-case pattern matching, pathlib, @dataclass, ExceptionGroups, asyncio.TaskGroup, Python 3.13 Free-Threaded (No-GIL) concepts, SQLAlchemy 2.0, pyproject.toml packaging, mypy static type checking, Ruff linting, and pytest TDD."
       },
       {
-        "question": "Will I build a complete portfolio of projects by the end of the 3 months?",
-        "answer": "Yes! You will build 14 complete projects: 4 beginner automation scripts, 7 intermediate utilities (including a Bank Account System, CSV Contact Manager, and SQLite Database), and 3 advanced enterprise capstones (an Inventory Management System, an Async Weather Dashboard, and a Personal Finance Tracker with SQLAlchemy 2.0). All projects can be published to your GitHub portfolio."
+        "question": "Will I build real portfolio projects for my GitHub and resume?",
+        "answer": "Yes. You build 14 projects across all three levels—including a Contact Book, Quiz App, Expense Tracker, Student Management System, OOP Bank Account System, API Dictionary App, SQLite Student Database, Library Management System, Inventory Management System, Async Weather Dashboard, and SQLAlchemy Personal Finance Tracker."
       },
       {
-        "question": "How does this course prepare me for specialization in Django, Data Science, or AI?",
-        "answer": "Frameworks like Django and libraries like Pandas or PyTorch require advanced Python fluency (OOP inheritance, decorators, iterators, args/kwargs, and exception handling). By mastering these underlying mechanisms first, you will find learning Django or Data Science intuitive and fast, without struggling with language syntax."
+        "question": "How does Python Mastery prepare me for Django, Data Science, or AI?",
+        "answer": "Frameworks like Django, FastAPI, Pandas, and PyTorch rely heavily on OOP, decorators, generators, virtual environments, typing, and exception handling. Mastering core and advanced Python first ensures you learn web frameworks and AI/data libraries without getting stuck on language mechanics."
       },
       {
-        "question": "What kind of certificate is awarded upon completion, and how is it verified?",
-        "answer": "Graduates receive the official MSK Institute Certificate of Completion in Python Mastery. Each certificate includes a unique verification identifier that employers and academic institutions can verify online at https://www.mskinstitute.in/verify-certificate."
+        "question": "How can employers or colleges verify my MSK Institute Python certificate?",
+        "answer": "Every graduate who completes the modules and capstone projects receives an official MSK Institute Certificate with a unique verification ID that anyone can validate instantly at https://www.mskinstitute.in/verify-certificate."
       }
     ],
-    "isCombo": true
+    "isCombo": true,
+    "seo": {
+      "title": "Python Mastery Course (Shikohabad & Online) | MSK Institute",
+      "description": "Learn Python from basics to advanced in 3 months: 46 chapters, 236 topics, OOP, asyncio, SQLAlchemy, mypy & 14 projects. Book a free 3-day demo class.",
+      "keywords": [
+        "Python Mastery Course",
+        "Python Course in Shikohabad",
+        "Python Training Online India",
+        "Python Beginner to Advanced Syllabus",
+        "3 Month Python Bootcamp Hindi English",
+        "Python 3.13 Asyncio SQLAlchemy Course",
+        "Python Programming Classes Firozabad UP",
+        "MSK Institute Shikohabad",
+        "Er Sumit Kumar Python Mentor"
+      ]
+    }
   },
   {
     "id": "course-power-bi-mastery-beginner-to-advanced--3-months",
@@ -3395,7 +3468,7 @@
     "title": "Python for Advanced",
     "slug": "python-for-advanced",
     "featuredImageUrl": "https://drive.google.com/thumbnail?id=1AXwGPZPx7EeEGJiANSxXYAIxoFua_clU&sz=w1000",
-    "shortDescription": "Master enterprise-grade Python software engineering. Deep dive into advanced OOP & descriptors, magic methods, concurrency (threading, multiprocessing, asyncio), networking sockets, SQLAlchemy ORM, testing with pytest & TDD, Tkinter GUIs, and 3 production capstones.",
+    "shortDescription": "Master enterprise Python engineering across 15 chapters and 70 topics: OOP descriptors, CPython internals, dunder methods, threading, Python 3.13 No-GIL, multiprocessing, asyncio TaskGroup, SQLAlchemy 2.0 ORM, sockets, mypy & Ruff, pytest TDD, Tkinter GUIs, and 3 capstones.",
     "categories": [
       "Programming",
       "Python"
@@ -3512,7 +3585,7 @@
           {
             "id": "python-for-advanced-t2.1",
             "title": "Introduction to Dunder Methods",
-            "sortOrder": 6,
+            "sortOrder": 1,
             "slug": "introduction-to-dunder-methods",
             "notes": [
               {
@@ -3524,7 +3597,7 @@
           {
             "id": "python-for-advanced-t2.2",
             "title": "__str__, __repr__, __len__",
-            "sortOrder": 7,
+            "sortOrder": 2,
             "slug": "str-repr-len",
             "notes": [
               {
@@ -3536,7 +3609,7 @@
           {
             "id": "python-for-advanced-t2.3",
             "title": "Operator Overloading",
-            "sortOrder": 8,
+            "sortOrder": 3,
             "slug": "operator-overloading",
             "notes": [
               {
@@ -3548,7 +3621,7 @@
           {
             "id": "python-for-advanced-t2.4",
             "title": "Customizing Classes with Magic Methods",
-            "sortOrder": 9,
+            "sortOrder": 4,
             "slug": "customizing-classes-with-magic-methods",
             "notes": [
               {
@@ -3591,7 +3664,7 @@
           {
             "id": "python-for-advanced-t3.1",
             "title": "Function Decorators Deep Dive",
-            "sortOrder": 11,
+            "sortOrder": 1,
             "slug": "function-decorators-deep-dive",
             "notes": [
               {
@@ -3603,7 +3676,7 @@
           {
             "id": "python-for-advanced-t3.2",
             "title": "Class Decorators",
-            "sortOrder": 12,
+            "sortOrder": 2,
             "slug": "class-decorators",
             "notes": [
               {
@@ -3615,7 +3688,7 @@
           {
             "id": "python-for-advanced-t3.3",
             "title": "Context Managers with __enter__ and __exit__",
-            "sortOrder": 13,
+            "sortOrder": 3,
             "slug": "context-managers-with-enter-and-exit",
             "notes": [
               {
@@ -3627,7 +3700,7 @@
           {
             "id": "python-for-advanced-t3.4",
             "title": "Using contextlib",
-            "sortOrder": 14,
+            "sortOrder": 4,
             "slug": "using-contextlib",
             "notes": [
               {
@@ -3639,7 +3712,7 @@
           {
             "id": "python-for-advanced-t3.5",
             "title": "Project: Resource Manager with Context Manager",
-            "sortOrder": 15,
+            "sortOrder": 5,
             "slug": "project-resource-manager-with-context-manager",
             "notes": [
               {
@@ -3658,7 +3731,7 @@
           {
             "id": "python-for-advanced-t4.1",
             "title": "Itertools for Iteration Tools",
-            "sortOrder": 16,
+            "sortOrder": 1,
             "slug": "itertools-for-iteration-tools",
             "notes": [
               {
@@ -3670,7 +3743,7 @@
           {
             "id": "python-for-advanced-t4.2",
             "title": "functools for Higher-Order Functions",
-            "sortOrder": 17,
+            "sortOrder": 2,
             "slug": "functools-for-higher-order-functions",
             "notes": [
               {
@@ -3682,7 +3755,7 @@
           {
             "id": "python-for-advanced-t4.3",
             "title": "lru_cache and Partial Functions",
-            "sortOrder": 18,
+            "sortOrder": 3,
             "slug": "lru-cache-and-partial-functions",
             "notes": [
               {
@@ -3694,7 +3767,7 @@
           {
             "id": "python-for-advanced-t4.4",
             "title": "Project: Data Pipeline with Itertools",
-            "sortOrder": 19,
+            "sortOrder": 4,
             "slug": "project-data-pipeline-with-itertools",
             "notes": [
               {
@@ -3713,7 +3786,7 @@
           {
             "id": "python-for-advanced-t5.1",
             "title": "Advanced Generator Patterns",
-            "sortOrder": 20,
+            "sortOrder": 1,
             "slug": "advanced-generator-patterns",
             "notes": [
               {
@@ -3725,7 +3798,7 @@
           {
             "id": "python-for-advanced-t5.2",
             "title": "Yield from Expression",
-            "sortOrder": 21,
+            "sortOrder": 2,
             "slug": "yield-from-expression",
             "notes": [
               {
@@ -3737,7 +3810,7 @@
           {
             "id": "python-for-advanced-t5.3",
             "title": "Coroutines with send()",
-            "sortOrder": 22,
+            "sortOrder": 3,
             "slug": "coroutines-with-send",
             "notes": [
               {
@@ -3749,7 +3822,7 @@
           {
             "id": "python-for-advanced-t5.4",
             "title": "Project: Stream Data Processor",
-            "sortOrder": 23,
+            "sortOrder": 4,
             "slug": "project-stream-data-processor",
             "notes": [
               {
@@ -3768,7 +3841,7 @@
           {
             "id": "python-for-advanced-t6.1",
             "title": "Threading Module Basics",
-            "sortOrder": 24,
+            "sortOrder": 1,
             "slug": "threading-module-basics",
             "notes": [
               {
@@ -3780,7 +3853,7 @@
           {
             "id": "python-for-advanced-t6.2",
             "title": "Thread Synchronization",
-            "sortOrder": 25,
+            "sortOrder": 2,
             "slug": "thread-synchronization",
             "notes": [
               {
@@ -3792,7 +3865,7 @@
           {
             "id": "python-for-advanced-t6.3",
             "title": "Daemon vs Non-Daemon Threads",
-            "sortOrder": 26,
+            "sortOrder": 3,
             "slug": "daemon-vs-non-daemon-threads",
             "notes": [
               {
@@ -3835,7 +3908,7 @@
           {
             "id": "python-for-advanced-t7.1",
             "title": "Multiprocessing Basics",
-            "sortOrder": 28,
+            "sortOrder": 1,
             "slug": "multiprocessing-basics",
             "notes": [
               {
@@ -3847,7 +3920,7 @@
           {
             "id": "python-for-advanced-t7.2",
             "title": "Process vs Thread",
-            "sortOrder": 29,
+            "sortOrder": 2,
             "slug": "process-vs-thread",
             "notes": [
               {
@@ -3859,7 +3932,7 @@
           {
             "id": "python-for-advanced-t7.3",
             "title": "Shared Memory & Queues",
-            "sortOrder": 30,
+            "sortOrder": 3,
             "slug": "shared-memory-queues",
             "notes": [
               {
@@ -3871,7 +3944,7 @@
           {
             "id": "python-for-advanced-t7.4",
             "title": "Project: Parallel File Processor",
-            "sortOrder": 31,
+            "sortOrder": 4,
             "slug": "project-parallel-file-processor",
             "notes": [
               {
@@ -3890,7 +3963,7 @@
           {
             "id": "python-for-advanced-t8.1",
             "title": "Introduction to Asyncio",
-            "sortOrder": 32,
+            "sortOrder": 1,
             "slug": "introduction-to-asyncio",
             "notes": [
               {
@@ -3902,7 +3975,7 @@
           {
             "id": "python-for-advanced-t8.2",
             "title": "Async and Await Syntax",
-            "sortOrder": 33,
+            "sortOrder": 2,
             "slug": "async-and-await-syntax",
             "notes": [
               {
@@ -3914,7 +3987,7 @@
           {
             "id": "python-for-advanced-t8.3",
             "title": "Creating and Managing Tasks",
-            "sortOrder": 34,
+            "sortOrder": 3,
             "slug": "creating-and-managing-tasks",
             "notes": [
               {
@@ -3957,7 +4030,7 @@
           {
             "id": "python-for-advanced-t9.1",
             "title": "SQLAlchemy ORM Basics",
-            "sortOrder": 36,
+            "sortOrder": 1,
             "slug": "sqlalchemy-orm-basics",
             "notes": [
               {
@@ -3969,7 +4042,7 @@
           {
             "id": "python-for-advanced-t9.2",
             "title": "Relationships in Databases",
-            "sortOrder": 37,
+            "sortOrder": 2,
             "slug": "relationships-in-databases",
             "notes": [
               {
@@ -3981,7 +4054,7 @@
           {
             "id": "python-for-advanced-t9.3",
             "title": "Transactions and Rollbacks",
-            "sortOrder": 38,
+            "sortOrder": 3,
             "slug": "transactions-and-rollbacks",
             "notes": [
               {
@@ -3993,7 +4066,7 @@
           {
             "id": "python-for-advanced-t9.4",
             "title": "Project: Blogging Platform Database",
-            "sortOrder": 39,
+            "sortOrder": 4,
             "slug": "project-blogging-platform-database",
             "notes": [
               {
@@ -4012,7 +4085,7 @@
           {
             "id": "python-for-advanced-t10.1",
             "title": "Socket Programming Basics",
-            "sortOrder": 40,
+            "sortOrder": 1,
             "slug": "socket-programming-basics",
             "notes": [
               {
@@ -4024,7 +4097,7 @@
           {
             "id": "python-for-advanced-t10.2",
             "title": "TCP vs UDP",
-            "sortOrder": 41,
+            "sortOrder": 2,
             "slug": "tcp-vs-udp",
             "notes": [
               {
@@ -4036,7 +4109,7 @@
           {
             "id": "python-for-advanced-t10.3",
             "title": "Building a Chat Server",
-            "sortOrder": 42,
+            "sortOrder": 3,
             "slug": "building-a-chat-server",
             "notes": [
               {
@@ -4048,7 +4121,7 @@
           {
             "id": "python-for-advanced-t10.4",
             "title": "Project: Simple Client-Server Application",
-            "sortOrder": 43,
+            "sortOrder": 4,
             "slug": "project-simple-client-server-application",
             "notes": [
               {
@@ -4067,7 +4140,7 @@
           {
             "id": "python-for-advanced-t11.1",
             "title": "Regex Patterns and Groups",
-            "sortOrder": 44,
+            "sortOrder": 1,
             "slug": "regex-patterns-and-groups",
             "notes": [
               {
@@ -4079,7 +4152,7 @@
           {
             "id": "python-for-advanced-t11.2",
             "title": "Greedy vs Non-Greedy Matching",
-            "sortOrder": 45,
+            "sortOrder": 2,
             "slug": "greedy-vs-non-greedy-matching",
             "notes": [
               {
@@ -4091,7 +4164,7 @@
           {
             "id": "python-for-advanced-t11.3",
             "title": "Substitution and Splitting",
-            "sortOrder": 46,
+            "sortOrder": 3,
             "slug": "substitution-and-splitting",
             "notes": [
               {
@@ -4103,7 +4176,7 @@
           {
             "id": "python-for-advanced-t11.4",
             "title": "Project: Log File Analyzer",
-            "sortOrder": 47,
+            "sortOrder": 4,
             "slug": "project-log-file-analyzer",
             "notes": [
               {
@@ -4122,7 +4195,7 @@
           {
             "id": "python-for-advanced-t12.1",
             "title": "Pickle Module",
-            "sortOrder": 48,
+            "sortOrder": 1,
             "slug": "pickle-module",
             "notes": [
               {
@@ -4134,7 +4207,7 @@
           {
             "id": "python-for-advanced-t12.2",
             "title": "Working with JSON",
-            "sortOrder": 49,
+            "sortOrder": 2,
             "slug": "working-with-json",
             "notes": [
               {
@@ -4146,7 +4219,7 @@
           {
             "id": "python-for-advanced-t12.3",
             "title": "Working with YAML",
-            "sortOrder": 50,
+            "sortOrder": 3,
             "slug": "working-with-yaml",
             "notes": [
               {
@@ -4183,13 +4256,13 @@
       },
       {
         "id": "python-for-advanced-ch13",
-        "title": "13: Testing & Best Practices",
+        "title": "13: Testing, Typing & Code Quality",
         "sortOrder": 13,
         "topics": [
           {
             "id": "python-for-advanced-t13.1",
             "title": "Unit Testing with unittest",
-            "sortOrder": 52,
+            "sortOrder": 1,
             "slug": "unit-testing-with-unittest",
             "notes": [
               {
@@ -4201,7 +4274,7 @@
           {
             "id": "python-for-advanced-t13.2",
             "title": "Pytest for Advanced Testing",
-            "sortOrder": 53,
+            "sortOrder": 2,
             "slug": "pytest-for-advanced-testing",
             "notes": [
               {
@@ -4213,7 +4286,7 @@
           {
             "id": "python-for-advanced-t13.3",
             "title": "Mocking and Fixtures",
-            "sortOrder": 54,
+            "sortOrder": 3,
             "slug": "mocking-and-fixtures",
             "notes": [
               {
@@ -4225,7 +4298,7 @@
           {
             "id": "python-for-advanced-t13.4",
             "title": "Test-Driven Development",
-            "sortOrder": 55,
+            "sortOrder": 4,
             "slug": "test-driven-development",
             "notes": [
               {
@@ -4235,9 +4308,17 @@
             ]
           },
           {
+            "id": "topic-py-adv-mypy-ruff",
+            "title": "Static Type Checking (mypy), Ruff Linting & Code Quality",
+            "slug": "static-type-checking-mypy-ruff-linting",
+            "sortOrder": 5,
+            "notes": [],
+            "videos": []
+          },
+          {
             "id": "python-for-advanced-t13.5",
             "title": "Project: Tested Calculator Application",
-            "sortOrder": 56,
+            "sortOrder": 6,
             "slug": "project-tested-calculator-application",
             "notes": [
               {
@@ -4256,7 +4337,7 @@
           {
             "id": "python-for-advanced-t14.1",
             "title": "Tkinter Basics",
-            "sortOrder": 57,
+            "sortOrder": 1,
             "slug": "tkinter-basics",
             "notes": [
               {
@@ -4268,7 +4349,7 @@
           {
             "id": "python-for-advanced-t14.2",
             "title": "Common Widgets",
-            "sortOrder": 58,
+            "sortOrder": 2,
             "slug": "common-widgets",
             "notes": [
               {
@@ -4280,7 +4361,7 @@
           {
             "id": "python-for-advanced-t14.3",
             "title": "Event Handling",
-            "sortOrder": 59,
+            "sortOrder": 3,
             "slug": "event-handling",
             "notes": [
               {
@@ -4292,7 +4373,7 @@
           {
             "id": "python-for-advanced-t14.4",
             "title": "Project: GUI-based To-Do App",
-            "sortOrder": 60,
+            "sortOrder": 4,
             "slug": "project-gui-based-to-do-app",
             "notes": [
               {
@@ -4311,7 +4392,7 @@
           {
             "id": "python-for-advanced-t15.1",
             "title": "Project 1: Inventory Management System",
-            "sortOrder": 61,
+            "sortOrder": 1,
             "slug": "project-1-inventory-management-system",
             "notes": [
               {
@@ -4323,7 +4404,7 @@
           {
             "id": "python-for-advanced-t15.2",
             "title": "Project 2: API-based Weather Dashboard",
-            "sortOrder": 62,
+            "sortOrder": 2,
             "slug": "project-2-api-based-weather-dashboard",
             "notes": [
               {
@@ -4335,7 +4416,7 @@
           {
             "id": "python-for-advanced-t15.3",
             "title": "Project 3: Personal Finance Tracker with Database",
-            "sortOrder": 63,
+            "sortOrder": 3,
             "slug": "project-3-personal-finance-tracker-with-database",
             "notes": [
               {
@@ -4406,7 +4487,19 @@
         "question": "Is an official certificate provided upon completing Python for Advanced?",
         "answer": "Yes. Students enrolled at MSK Institute who complete the curriculum, pass the chapter assessments, and successfully submit the capstone assignments receive a verified Certificate of Completion with a unique digital verification ID suitable for technical resumes and LinkedIn."
       }
-    ]
+    ],
+    "seo": {
+      "title": "Advanced Python Course (Concurrency & ORM) | MSK Institute",
+      "description": "Master advanced Python: OOP descriptors, threading, No-GIL 3.13, asyncio, SQLAlchemy 2.0, mypy, Ruff, Pytest & 3 capstones. Live online & Shikohabad lab.",
+      "keywords": [
+        "advanced python course",
+        "python concurrency asyncio course",
+        "python sqlalchemy pytest training",
+        "python 3.13 no-gil course",
+        "advanced python classes shikohabad online",
+        "MSK Institute Python"
+      ]
+    }
   },
   {
     "id": "course-ms-excel-for-intermediate",
@@ -4690,7 +4783,11 @@
       "Date and time formulas: TODAY, NOW, DATEDIF, EDATE, and date difference calculations",
       "Pivot Tables fundamentals: creating dynamic summary tables, field rows, columns, and values",
       "Data visualization: column charts, bar charts, line graphs, and pie chart presentations"
-    ]
+    ],
+    "seo": {
+      "title": "MS Excel Intermediate Course (Pivots) | MSK Institute",
+      "description": "Master intermediate Excel across 10 chapters & 30 topics: IF/AND/OR logic, VLOOKUP, INDEX-MATCH, data validation, conditional formatting & Pivot Tables."
+    }
   },
   {
     "id": "course-ms-excel-for-advanced",
@@ -5004,7 +5101,11 @@
       "What-If Analysis tools: Goal Seek, Data Tables, and Scenario Manager for financial modeling",
       "Power Query ETL: importing data from multiple sheets, cleaning, unpivoting, and transforming",
       "Foundational macro recording, automating repetitive reporting tasks, and formula auditing"
-    ]
+    ],
+    "seo": {
+      "title": "Advanced MS Excel Course (Power Query) | MSK Institute",
+      "description": "Master advanced Excel across 10 chapters & 35 topics: XLOOKUP, dynamic arrays, Power Query ETL, Power Pivot, interactive KPI dashboards & workflow automation."
+    }
   },
   {
     "id": "course-django-for-backend-development",
@@ -7973,7 +8074,7 @@
     "title": "Python for Beginners",
     "slug": "python-for-beginners",
     "featuredImageUrl": "https://images.unsplash.com/photo-1526379095098-d400fd0bf935?q=80&w=450&auto=format&fit=crop",
-    "shortDescription": "Master Python programming from scratch in 1 month. Comprehensive hands-on curriculum covering variables, data types, numbers, strings, operators, data structures (lists, tuples, sets, dicts), control flow, loops, functions, file handling, and 4 real-world projects.",
+    "shortDescription": "Master Python programming from scratch in 1 month across 16 chapters and 90 hands-on topics: variables, user input, data types, strings, lists, tuples, sets, dicts, loops, functions, file handling, basic try-except error handling, and 4 real-world projects.",
     "categories": [
       "Programming",
       "Python",
@@ -8124,6 +8225,14 @@
                 "url": "/tutorials/python-for-beginners/constants-python-convention"
               }
             ]
+          },
+          {
+            "id": "topic-py-beg-user-input",
+            "title": "User Input & Interactive Programs (input())",
+            "slug": "user-input-interactive-programs",
+            "sortOrder": 6,
+            "notes": [],
+            "videos": []
           }
         ]
       },
@@ -9053,7 +9162,7 @@
       },
       {
         "id": "py-ch15",
-        "title": "15: File Handling",
+        "title": "15: File Handling & Basic Error Handling",
         "sortOrder": 15,
         "topics": [
           {
@@ -9103,6 +9212,14 @@
                 "url": "/tutorials/python-for-beginners/file-methods-read-readline-write"
               }
             ]
+          },
+          {
+            "id": "topic-py-beg-basic-error-handling",
+            "title": "Basic Error Handling with try-except",
+            "slug": "basic-error-handling-try-except",
+            "sortOrder": 5,
+            "notes": [],
+            "videos": []
           }
         ]
       },
@@ -9214,7 +9331,20 @@
         "question": "What learning path should I pursue after completing Python for Beginners?",
         "answer": "After mastering Python fundamentals, you can choose to specialize in: (1) Full-Stack Web Development with Django & React, (2) Data Analytics & Visualization with Pandas, NumPy, and Power BI, or (3) Data Structures & Algorithms (DSA) for software engineering interviews."
       }
-    ]
+    ],
+    "seo": {
+      "title": "Python for Beginners Course (Online & Lab) | MSK Institute",
+      "description": "Learn Python from scratch in 1 month: variables, user input, lists, loops, functions, file handling, try-except & 4 projects. Free demo at MSK Institute.",
+      "keywords": [
+        "python for beginners course",
+        "python course in shikohabad",
+        "learn python online hindi english",
+        "python basics syllabus",
+        "python programming beginner classes",
+        "MSK Institute Python",
+        "Er Sumit Kumar Python"
+      ]
+    }
   },
   {
     "id": "course-python-for-intermediate",
@@ -9222,7 +9352,7 @@
     "title": "Python for Intermediate",
     "slug": "python-for-intermediate",
     "featuredImageUrl": "https://drive.google.com/thumbnail?id=1AXwGPZPx7EeEGJiANSxXYAIxoFua_clU&sz=w1000",
-    "shortDescription": "Elevate your Python skills to professional software engineering. Master advanced comprehensions, closures, decorators, modular packages, OOP inheritance & polymorphism, custom exceptions, iterators, REST APIs, logging, SQLite databases, data visualization, and 5 production-grade portfolio projects.",
+    "shortDescription": "Level up to professional Python engineering across 15 chapters and 76 topics: advanced comprehensions, closures, decorators, modular packages, pathlib, OOP & dataclasses, custom exceptions, iterators, REST APIs, logging, SQLite databases, Matplotlib, and 5 real-world projects.",
     "categories": [
       "Programming",
       "Python"
@@ -9327,7 +9457,7 @@
           {
             "id": "python-for-intermediate-t2.1",
             "title": "Arguments Recap (*args, **kwargs)",
-            "sortOrder": 6,
+            "sortOrder": 1,
             "slug": "arguments-recap-args-kwargs",
             "notes": [
               {
@@ -9339,7 +9469,7 @@
           {
             "id": "python-for-intermediate-t2.2",
             "title": "Default vs Keyword Arguments",
-            "sortOrder": 7,
+            "sortOrder": 2,
             "slug": "default-vs-keyword-arguments",
             "notes": [
               {
@@ -9351,7 +9481,7 @@
           {
             "id": "python-for-intermediate-t2.3",
             "title": "Closures",
-            "sortOrder": 8,
+            "sortOrder": 3,
             "slug": "closures",
             "notes": [
               {
@@ -9363,7 +9493,7 @@
           {
             "id": "python-for-intermediate-t2.4",
             "title": "Decorators Basics",
-            "sortOrder": 9,
+            "sortOrder": 4,
             "slug": "decorators-basics",
             "notes": [
               {
@@ -9375,7 +9505,7 @@
           {
             "id": "python-for-intermediate-t2.5",
             "title": "Project: Function Decorator Example",
-            "sortOrder": 10,
+            "sortOrder": 5,
             "slug": "project-function-decorator-example",
             "notes": [
               {
@@ -9394,7 +9524,7 @@
           {
             "id": "python-for-intermediate-t3.1",
             "title": "Creating and Importing Modules",
-            "sortOrder": 11,
+            "sortOrder": 1,
             "slug": "creating-and-importing-modules",
             "notes": [
               {
@@ -9406,7 +9536,7 @@
           {
             "id": "python-for-intermediate-t3.2",
             "title": "Using __name__ == '__main__'",
-            "sortOrder": 12,
+            "sortOrder": 2,
             "slug": "using-name-main",
             "notes": [
               {
@@ -9418,7 +9548,7 @@
           {
             "id": "python-for-intermediate-t3.3",
             "title": "Package Structure and __init__.py",
-            "sortOrder": 13,
+            "sortOrder": 3,
             "slug": "package-structure-and-init-py",
             "notes": [
               {
@@ -9430,7 +9560,7 @@
           {
             "id": "python-for-intermediate-t3.4",
             "title": "Popular Python Modules Overview",
-            "sortOrder": 14,
+            "sortOrder": 4,
             "slug": "popular-python-modules-overview",
             "notes": [
               {
@@ -9442,7 +9572,7 @@
           {
             "id": "python-for-intermediate-t3.5",
             "title": "Project: Custom Utility Package",
-            "sortOrder": 15,
+            "sortOrder": 5,
             "slug": "project-custom-utility-package",
             "notes": [
               {
@@ -9461,7 +9591,7 @@
           {
             "id": "python-for-intermediate-t4.1",
             "title": "Working with Context Managers (with statement)",
-            "sortOrder": 16,
+            "sortOrder": 1,
             "slug": "working-with-context-managers-with-statement",
             "notes": [
               {
@@ -9473,7 +9603,7 @@
           {
             "id": "python-for-intermediate-t4.2",
             "title": "Reading & Writing CSV Files",
-            "sortOrder": 17,
+            "sortOrder": 2,
             "slug": "reading-writing-csv-files",
             "notes": [
               {
@@ -9485,7 +9615,7 @@
           {
             "id": "python-for-intermediate-t4.3",
             "title": "Working with JSON Files",
-            "sortOrder": 18,
+            "sortOrder": 3,
             "slug": "working-with-json-files",
             "notes": [
               {
@@ -9497,7 +9627,7 @@
           {
             "id": "python-for-intermediate-t4.4",
             "title": "File Exceptions and Error Handling",
-            "sortOrder": 19,
+            "sortOrder": 4,
             "slug": "file-exceptions-and-error-handling",
             "notes": [
               {
@@ -9540,7 +9670,7 @@
           {
             "id": "python-for-intermediate-t5.1",
             "title": "Creating Classes & Objects (Review)",
-            "sortOrder": 21,
+            "sortOrder": 1,
             "slug": "creating-classes-objects-review",
             "notes": [
               {
@@ -9552,7 +9682,7 @@
           {
             "id": "python-for-intermediate-t5.2",
             "title": "Inheritance & Method Overriding",
-            "sortOrder": 22,
+            "sortOrder": 2,
             "slug": "inheritance-method-overriding",
             "notes": [
               {
@@ -9564,7 +9694,7 @@
           {
             "id": "python-for-intermediate-t5.3",
             "title": "Polymorphism Basics",
-            "sortOrder": 23,
+            "sortOrder": 3,
             "slug": "polymorphism-basics",
             "notes": [
               {
@@ -9576,7 +9706,7 @@
           {
             "id": "python-for-intermediate-t5.4",
             "title": "Encapsulation and Abstraction",
-            "sortOrder": 24,
+            "sortOrder": 4,
             "slug": "encapsulation-and-abstraction",
             "notes": [
               {
@@ -9631,7 +9761,7 @@
           {
             "id": "python-for-intermediate-t6.1",
             "title": "Types of Exceptions",
-            "sortOrder": 26,
+            "sortOrder": 1,
             "slug": "types-of-exceptions",
             "notes": [
               {
@@ -9643,7 +9773,7 @@
           {
             "id": "python-for-intermediate-t6.2",
             "title": "Try-Except-Else-Finally",
-            "sortOrder": 27,
+            "sortOrder": 2,
             "slug": "try-except-else-finally",
             "notes": [
               {
@@ -9655,7 +9785,7 @@
           {
             "id": "python-for-intermediate-t6.3",
             "title": "Raising Exceptions",
-            "sortOrder": 28,
+            "sortOrder": 3,
             "slug": "raising-exceptions",
             "notes": [
               {
@@ -9667,7 +9797,7 @@
           {
             "id": "python-for-intermediate-t6.4",
             "title": "Creating Custom Exceptions",
-            "sortOrder": 29,
+            "sortOrder": 4,
             "slug": "creating-custom-exceptions",
             "notes": [
               {
@@ -9710,7 +9840,7 @@
           {
             "id": "python-for-intermediate-t7.1",
             "title": "Understanding Iterators",
-            "sortOrder": 31,
+            "sortOrder": 1,
             "slug": "understanding-iterators",
             "notes": [
               {
@@ -9722,7 +9852,7 @@
           {
             "id": "python-for-intermediate-t7.2",
             "title": "Custom Iterators",
-            "sortOrder": 32,
+            "sortOrder": 2,
             "slug": "custom-iterators",
             "notes": [
               {
@@ -9734,7 +9864,7 @@
           {
             "id": "python-for-intermediate-t7.3",
             "title": "Using Generators with yield",
-            "sortOrder": 33,
+            "sortOrder": 3,
             "slug": "using-generators-with-yield",
             "notes": [
               {
@@ -9746,7 +9876,7 @@
           {
             "id": "python-for-intermediate-t7.4",
             "title": "Generator Expressions",
-            "sortOrder": 34,
+            "sortOrder": 4,
             "slug": "generator-expressions",
             "notes": [
               {
@@ -9758,7 +9888,7 @@
           {
             "id": "python-for-intermediate-t7.5",
             "title": "Project: Infinite Sequence Generator",
-            "sortOrder": 35,
+            "sortOrder": 5,
             "slug": "project-infinite-sequence-generator",
             "notes": [
               {
@@ -9777,7 +9907,7 @@
           {
             "id": "python-for-intermediate-t8.1",
             "title": "HTTP Requests using requests",
-            "sortOrder": 36,
+            "sortOrder": 1,
             "slug": "http-requests-using-requests",
             "notes": [
               {
@@ -9789,7 +9919,7 @@
           {
             "id": "python-for-intermediate-t8.2",
             "title": "GET & POST Methods",
-            "sortOrder": 37,
+            "sortOrder": 2,
             "slug": "get-post-methods",
             "notes": [
               {
@@ -9801,7 +9931,7 @@
           {
             "id": "python-for-intermediate-t8.3",
             "title": "Parsing JSON Data",
-            "sortOrder": 38,
+            "sortOrder": 3,
             "slug": "parsing-json-data",
             "notes": [
               {
@@ -9813,7 +9943,7 @@
           {
             "id": "python-for-intermediate-t8.4",
             "title": "Practical API Example",
-            "sortOrder": 39,
+            "sortOrder": 4,
             "slug": "practical-api-example",
             "notes": [
               {
@@ -9825,7 +9955,7 @@
           {
             "id": "python-for-intermediate-t8.5",
             "title": "Project: Weather Data Fetcher",
-            "sortOrder": 40,
+            "sortOrder": 5,
             "slug": "project-weather-data-fetcher",
             "notes": [
               {
@@ -9844,7 +9974,7 @@
           {
             "id": "python-for-intermediate-t9.1",
             "title": "Using print vs logging",
-            "sortOrder": 41,
+            "sortOrder": 1,
             "slug": "using-print-vs-logging",
             "notes": [
               {
@@ -9856,7 +9986,7 @@
           {
             "id": "python-for-intermediate-t9.2",
             "title": "Logging Levels",
-            "sortOrder": 42,
+            "sortOrder": 2,
             "slug": "logging-levels",
             "notes": [
               {
@@ -9868,7 +9998,7 @@
           {
             "id": "python-for-intermediate-t9.3",
             "title": "Basic Debugging with pdb",
-            "sortOrder": 43,
+            "sortOrder": 3,
             "slug": "basic-debugging-with-pdb",
             "notes": [
               {
@@ -9880,7 +10010,7 @@
           {
             "id": "python-for-intermediate-t9.4",
             "title": "Assertions",
-            "sortOrder": 44,
+            "sortOrder": 4,
             "slug": "assertions",
             "notes": [
               {
@@ -9892,7 +10022,7 @@
           {
             "id": "python-for-intermediate-t9.5",
             "title": "Project: Debugging a Student Grading App",
-            "sortOrder": 45,
+            "sortOrder": 5,
             "slug": "project-debugging-a-student-grading-app",
             "notes": [
               {
@@ -9911,7 +10041,7 @@
           {
             "id": "python-for-intermediate-t10.1",
             "title": "Math and Random Module",
-            "sortOrder": 46,
+            "sortOrder": 1,
             "slug": "math-and-random-module",
             "notes": [
               {
@@ -9923,7 +10053,7 @@
           {
             "id": "python-for-intermediate-t10.2",
             "title": "Datetime Module",
-            "sortOrder": 47,
+            "sortOrder": 2,
             "slug": "datetime-module",
             "notes": [
               {
@@ -9935,7 +10065,7 @@
           {
             "id": "python-for-intermediate-t10.3",
             "title": "Collections Module",
-            "sortOrder": 48,
+            "sortOrder": 3,
             "slug": "collections-module",
             "notes": [
               {
@@ -9947,7 +10077,7 @@
           {
             "id": "python-for-intermediate-t10.4",
             "title": "OS and Sys Modules",
-            "sortOrder": 49,
+            "sortOrder": 4,
             "slug": "os-and-sys-modules",
             "notes": [
               {
@@ -9990,7 +10120,7 @@
           {
             "id": "python-for-intermediate-t11.1",
             "title": "Introduction to Databases",
-            "sortOrder": 51,
+            "sortOrder": 1,
             "slug": "introduction-to-databases",
             "notes": [
               {
@@ -10002,7 +10132,7 @@
           {
             "id": "python-for-intermediate-t11.2",
             "title": "SQLite Installation & Setup",
-            "sortOrder": 52,
+            "sortOrder": 2,
             "slug": "sqlite-installation-setup",
             "notes": [
               {
@@ -10014,7 +10144,7 @@
           {
             "id": "python-for-intermediate-t11.3",
             "title": "Connecting Python with SQLite",
-            "sortOrder": 53,
+            "sortOrder": 3,
             "slug": "connecting-python-with-sqlite",
             "notes": [
               {
@@ -10026,7 +10156,7 @@
           {
             "id": "python-for-intermediate-t11.4",
             "title": "CRUD Operations",
-            "sortOrder": 54,
+            "sortOrder": 4,
             "slug": "crud-operations",
             "notes": [
               {
@@ -10038,7 +10168,7 @@
           {
             "id": "python-for-intermediate-t11.5",
             "title": "Project: Student Records Database",
-            "sortOrder": 55,
+            "sortOrder": 5,
             "slug": "project-student-records-database",
             "notes": [
               {
@@ -10057,7 +10187,7 @@
           {
             "id": "python-for-intermediate-t12.1",
             "title": "Why Use Virtual Environments",
-            "sortOrder": 56,
+            "sortOrder": 1,
             "slug": "why-use-virtual-environments",
             "notes": [
               {
@@ -10069,7 +10199,7 @@
           {
             "id": "python-for-intermediate-t12.2",
             "title": "Creating Virtual Environments",
-            "sortOrder": 57,
+            "sortOrder": 2,
             "slug": "creating-virtual-environments",
             "notes": [
               {
@@ -10081,7 +10211,7 @@
           {
             "id": "python-for-intermediate-t12.3",
             "title": "Using pip for Package Management",
-            "sortOrder": 58,
+            "sortOrder": 3,
             "slug": "using-pip-for-package-management",
             "notes": [
               {
@@ -10093,7 +10223,7 @@
           {
             "id": "python-for-intermediate-t12.4",
             "title": "Requirements.txt",
-            "sortOrder": 59,
+            "sortOrder": 4,
             "slug": "requirements-txt",
             "notes": [
               {
@@ -10105,7 +10235,7 @@
           {
             "id": "python-for-intermediate-t12.5",
             "title": "Project: Package-Ready Mini App",
-            "sortOrder": 60,
+            "sortOrder": 5,
             "slug": "project-package-ready-mini-app",
             "notes": [
               {
@@ -10124,7 +10254,7 @@
           {
             "id": "python-for-intermediate-t13.1",
             "title": "Introduction to Matplotlib",
-            "sortOrder": 61,
+            "sortOrder": 1,
             "slug": "introduction-to-matplotlib",
             "notes": [
               {
@@ -10136,7 +10266,7 @@
           {
             "id": "python-for-intermediate-t13.2",
             "title": "Line, Bar and Pie Charts",
-            "sortOrder": 62,
+            "sortOrder": 2,
             "slug": "line-bar-and-pie-charts",
             "notes": [
               {
@@ -10148,7 +10278,7 @@
           {
             "id": "python-for-intermediate-t13.3",
             "title": "Customizing Graphs",
-            "sortOrder": 63,
+            "sortOrder": 3,
             "slug": "customizing-graphs",
             "notes": [
               {
@@ -10160,7 +10290,7 @@
           {
             "id": "python-for-intermediate-t13.4",
             "title": "Seaborn Basics",
-            "sortOrder": 64,
+            "sortOrder": 4,
             "slug": "seaborn-basics",
             "notes": [
               {
@@ -10172,7 +10302,7 @@
           {
             "id": "python-for-intermediate-t13.5",
             "title": "Project: Visualizing Sales Data",
-            "sortOrder": 65,
+            "sortOrder": 5,
             "slug": "project-visualizing-sales-data",
             "notes": [
               {
@@ -10191,7 +10321,7 @@
           {
             "id": "python-for-intermediate-t14.1",
             "title": "Project 1: Expense Tracker with CSV",
-            "sortOrder": 66,
+            "sortOrder": 1,
             "slug": "project-1-expense-tracker-with-csv",
             "notes": [
               {
@@ -10203,7 +10333,7 @@
           {
             "id": "python-for-intermediate-t14.2",
             "title": "Project 2: API-based Dictionary App",
-            "sortOrder": 67,
+            "sortOrder": 2,
             "slug": "project-2-api-based-dictionary-app",
             "notes": [
               {
@@ -10215,7 +10345,7 @@
           {
             "id": "python-for-intermediate-t14.3",
             "title": "Project 3: CLI-based To-do App",
-            "sortOrder": 68,
+            "sortOrder": 3,
             "slug": "project-3-cli-based-to-do-app",
             "notes": [
               {
@@ -10234,7 +10364,7 @@
           {
             "id": "python-for-intermediate-t15.1",
             "title": "Library Management System",
-            "sortOrder": 69,
+            "sortOrder": 1,
             "slug": "library-management-system",
             "notes": [
               {
@@ -10246,7 +10376,7 @@
           {
             "id": "python-for-intermediate-t15.2",
             "title": "Student Report Card Generator",
-            "sortOrder": 70,
+            "sortOrder": 2,
             "slug": "student-report-card-generator",
             "notes": [
               {
@@ -10317,7 +10447,19 @@
         "question": "What advanced learning paths should I pursue after finishing this course?",
         "answer": "After completing Python for Intermediate, you are ideally prepared for three high-growth specializations: 1) Full-Stack Web Development with Django & FastAPI, 2) Data Science & Machine Learning with NumPy, Pandas, and Scikit-Learn, or 3) Advanced Python Software Architecture & Design Patterns."
       }
-    ]
+    ],
+    "seo": {
+      "title": "Python Intermediate Course (Online & Lab) | MSK Institute",
+      "description": "Master intermediate Python in 1 month: comprehensions, OOP, decorators, generators, REST APIs, SQLite, Matplotlib & 5 projects. Offline & live online batches.",
+      "keywords": [
+        "python intermediate course",
+        "python oop course shikohabad",
+        "python decorators generators course",
+        "python sqlite rest api training",
+        "intermediate python live online classes",
+        "MSK Institute Python"
+      ]
+    }
   },
   {
     "id": "course-numpy-complete-course",
@@ -10653,7 +10795,11 @@
       "Broadcasting rules for arithmetic operations between different array dimensions",
       "Linear algebra operations with np.linalg: dot products, matrix inversion, and eigenvalues",
       "Statistical aggregations: mean, median, standard deviation, percentile, and sorting"
-    ]
+    ],
+    "seo": {
+      "title": "NumPy Complete Course (Online & Lab) | MSK Institute",
+      "description": "Master NumPy in 1 month across 12 chapters & 36 topics: ndarrays, vectorization, broadcasting, linear algebra, random sampling & data projects at MSK Institute."
+    }
   },
   {
     "id": "course-javascript-for-beginners",
@@ -14291,7 +14437,11 @@
       "Data summarization using aggregate functions: COUNT, SUM, AVG, MIN, and MAX",
       "Grouped data analysis using GROUP BY and filtering aggregated results with HAVING",
       "Data definition and manipulation: CREATE TABLE, INSERT INTO, UPDATE, and DELETE"
-    ]
+    ],
+    "seo": {
+      "title": "SQL & MySQL for Beginners Course | MSK Institute",
+      "description": "Learn SQL & MySQL from scratch across 14 chapters & 56 practical lessons: SELECT, WHERE, aggregates, joins, constraints & hands-on browser SQL Studio labs."
+    }
   },
   {
     "id": "course-sql-for-intermediate",
@@ -14705,7 +14855,11 @@
       "Set operations: combining query results using UNION, UNION ALL, INTERSECT, and EXCEPT",
       "Single-row and multi-row subqueries in WHERE, FROM, and SELECT clauses",
       "Database constraints: PRIMARY KEY, FOREIGN KEY, UNIQUE, NOT NULL, and CHECK"
-    ]
+    ],
+    "seo": {
+      "title": "SQL & MySQL Intermediate Course | MSK Institute",
+      "description": "Master intermediate SQL across 12 chapters & 49 lessons: multi-table joins, subqueries, CTEs, window functions (RANK, LEAD/LAG), views & 3NF normalization."
+    }
   },
   {
     "id": "course-sql-for-advanced",
@@ -15071,7 +15225,11 @@
       "Database indexing strategies: B-Tree indexes, composite indexes, and EXPLAIN query plans",
       "ACID transactional integrity: BEGIN TRANSACTION, COMMIT, and ROLLBACK mechanisms",
       "Stored procedures, user-defined functions, triggers, and query performance optimization"
-    ]
+    ],
+    "seo": {
+      "title": "Advanced SQL & MySQL Engineering Course | MSK Institute",
+      "description": "Master advanced SQL across 11 chapters & 42 lessons: indexing, EXPLAIN query plans, stored procedures, triggers, partitioning & production database tuning."
+    }
   },
   {
     "id": "course-ms-word-for-beginners",
@@ -16398,7 +16556,11 @@
       "Essential functions: SUM, AVERAGE, COUNT, COUNTA, MIN, MAX, and basic mathematical functions",
       "Formatting cells, currency formatting, number precision, borders, and conditional cell highlights",
       "Sorting data, basic filtering, freeze panes, print area setup, and workbook management"
-    ]
+    ],
+    "seo": {
+      "title": "MS Excel for Beginners Course | MSK Institute",
+      "description": "Learn MS Excel fundamentals across 9 chapters & 27 practical topics: workbook navigation, core formulas, formatting, sorting, filtering & office spreadsheets."
+    }
   },
   {
     "id": "course-power-bi-for-beginners",
@@ -16692,7 +16854,11 @@
       "DAX formula mastery: CALCULATE, filter contexts, and Time Intelligence metrics",
       "Interactive dashboard design: Visual cross-filtering, slicers, drillthrough, and tooltips",
       "Enterprise deployment: Row-Level Security (RLS) and Power BI Service publishing"
-    ]
+    ],
+    "seo": {
+      "title": "Power BI for Beginners Course (DAX & ETL) | MSK Institute",
+      "description": "Learn Power BI Desktop from scratch across 10 chapters & 30 topics: Power Query ETL, star schema modeling, basic DAX measures & interactive business dashboards."
+    }
   },
   {
     "id": "course-power-bi-for-intermediate",
@@ -16745,19 +16911,19 @@
           {
             "id": "pbi-int-t3",
             "title": "Time Intelligence Functions",
-            "sortOrder": 3,
+            "sortOrder": 1,
             "slug": "pbi-int-time-intelligence-functions"
           },
           {
             "id": "pbi-int-t4",
             "title": "Iterators (SUMX, AVERAGEX)",
-            "sortOrder": 4,
+            "sortOrder": 2,
             "slug": "pbi-int-iterators-sumx-averagex"
           },
           {
             "id": "pbi-int-t5",
             "title": "CALCULATE and FILTER Functions",
-            "sortOrder": 5,
+            "sortOrder": 3,
             "slug": "pbi-int-calculate-and-filter-functions"
           }
         ]
@@ -16770,19 +16936,19 @@
           {
             "id": "pbi-int-t6",
             "title": "Many-to-Many Relationships",
-            "sortOrder": 6,
+            "sortOrder": 1,
             "slug": "pbi-int-many-to-many-relationships"
           },
           {
             "id": "pbi-int-t7",
             "title": "Role-Playing Dimensions",
-            "sortOrder": 7,
+            "sortOrder": 2,
             "slug": "pbi-int-role-playing-dimensions"
           },
           {
             "id": "pbi-int-t8",
             "title": "Composite Models",
-            "sortOrder": 8,
+            "sortOrder": 3,
             "slug": "pbi-int-composite-models"
           }
         ]
@@ -16795,19 +16961,19 @@
           {
             "id": "pbi-int-t9",
             "title": "What is RLS?",
-            "sortOrder": 9,
+            "sortOrder": 1,
             "slug": "pbi-int-what-is-rls"
           },
           {
             "id": "pbi-int-t10",
             "title": "Creating Roles and Filters",
-            "sortOrder": 10,
+            "sortOrder": 2,
             "slug": "pbi-int-creating-roles-and-filters"
           },
           {
             "id": "pbi-int-t11",
             "title": "Testing Security",
-            "sortOrder": 11,
+            "sortOrder": 3,
             "slug": "pbi-int-testing-security"
           }
         ]
@@ -16820,19 +16986,19 @@
           {
             "id": "pbi-int-t12",
             "title": "Drillthrough Reports",
-            "sortOrder": 12,
+            "sortOrder": 1,
             "slug": "pbi-int-drillthrough-reports"
           },
           {
             "id": "pbi-int-t13",
             "title": "Tooltips and Bookmarks",
-            "sortOrder": 13,
+            "sortOrder": 2,
             "slug": "pbi-int-tooltips-and-bookmarks"
           },
           {
             "id": "pbi-int-t14",
             "title": "Advanced Slicers and Filters",
-            "sortOrder": 14,
+            "sortOrder": 3,
             "slug": "pbi-int-advanced-slicers-and-filters"
           }
         ]
@@ -16845,19 +17011,19 @@
           {
             "id": "pbi-int-t15",
             "title": "Optimizing Data Models",
-            "sortOrder": 15,
+            "sortOrder": 1,
             "slug": "pbi-int-optimizing-data-models"
           },
           {
             "id": "pbi-int-t16",
             "title": "Query Diagnostics",
-            "sortOrder": 16,
+            "sortOrder": 2,
             "slug": "pbi-int-query-diagnostics"
           },
           {
             "id": "pbi-int-t17",
             "title": "Best Practices for Report Performance",
-            "sortOrder": 17,
+            "sortOrder": 3,
             "slug": "pbi-int-best-practices-for-report-performance"
           }
         ]
@@ -16870,19 +17036,19 @@
           {
             "id": "pbi-int-t18",
             "title": "Workspaces and Apps",
-            "sortOrder": 18,
+            "sortOrder": 1,
             "slug": "pbi-int-workspaces-and-apps"
           },
           {
             "id": "pbi-int-t19",
             "title": "Dataflows and Scheduled Refresh",
-            "sortOrder": 19,
+            "sortOrder": 2,
             "slug": "pbi-int-dataflows-and-scheduled-refresh"
           },
           {
             "id": "pbi-int-t20",
             "title": "Collaboration Features",
-            "sortOrder": 20,
+            "sortOrder": 3,
             "slug": "pbi-int-collaboration-features"
           }
         ]
@@ -16895,19 +17061,19 @@
           {
             "id": "pbi-int-t21",
             "title": "Creating Mobile Views",
-            "sortOrder": 21,
+            "sortOrder": 1,
             "slug": "pbi-int-creating-mobile-views"
           },
           {
             "id": "pbi-int-t22",
             "title": "Introduction to Power BI Embedded",
-            "sortOrder": 22,
+            "sortOrder": 2,
             "slug": "pbi-int-introduction-to-power-bi-embedded"
           },
           {
             "id": "pbi-int-t23",
             "title": "Use Cases",
-            "sortOrder": 23,
+            "sortOrder": 3,
             "slug": "pbi-int-use-cases"
           }
         ]
@@ -16920,19 +17086,19 @@
           {
             "id": "pbi-int-t24",
             "title": "Finance Dashboard",
-            "sortOrder": 24,
+            "sortOrder": 1,
             "slug": "pbi-int-finance-dashboard"
           },
           {
             "id": "pbi-int-t25",
             "title": "HR Analytics Dashboard",
-            "sortOrder": 25,
+            "sortOrder": 2,
             "slug": "pbi-int-hr-analytics-dashboard"
           },
           {
             "id": "pbi-int-t26",
             "title": "Sales Performance Dashboard",
-            "sortOrder": 26,
+            "sortOrder": 3,
             "slug": "pbi-int-sales-performance-dashboard"
           }
         ]
@@ -16945,19 +17111,19 @@
           {
             "id": "pbi-int-t27",
             "title": "End-to-End Project with Real Dataset",
-            "sortOrder": 27,
+            "sortOrder": 1,
             "slug": "pbi-int-end-to-end-project-with-real-dataset"
           },
           {
             "id": "pbi-int-t28",
             "title": "Data Modeling, DAX, Visualization",
-            "sortOrder": 28,
+            "sortOrder": 2,
             "slug": "pbi-int-data-modeling-dax-visualization"
           },
           {
             "id": "pbi-int-t29",
             "title": "Publishing and Sharing Reports",
-            "sortOrder": 29,
+            "sortOrder": 3,
             "slug": "pbi-int-publishing-and-sharing-reports"
           }
         ]
@@ -16970,7 +17136,11 @@
       "Custom KPI indicators, cards, gauge charts, and matrix visual styling with conditional rules",
       "Dynamic report interactivity: Drillthrough pages, bookmark navigation buttons, and custom tooltips",
       "Optimizing report query performance with DAX Studio and the Power BI Performance Analyzer"
-    ]
+    ],
+    "seo": {
+      "title": "Power BI Intermediate Course (DAX & RLS) | MSK Institute",
+      "description": "Master intermediate Power BI across 10 chapters & 29 topics: Time Intelligence DAX, SUMX/CALCULATE iterators, composite models & Row-Level Security (RLS)."
+    }
   },
   {
     "id": "course-power-bi-for-advanced",
@@ -17023,19 +17193,19 @@
           {
             "id": "pbi-adv-t3",
             "title": "Context Transition in DAX",
-            "sortOrder": 3,
+            "sortOrder": 1,
             "slug": "pbi-adv-context-transition-in-dax"
           },
           {
             "id": "pbi-adv-t4",
             "title": "Advanced Time Intelligence",
-            "sortOrder": 4,
+            "sortOrder": 2,
             "slug": "pbi-adv-advanced-time-intelligence"
           },
           {
             "id": "pbi-adv-t5",
             "title": "Parent-Child Hierarchies",
-            "sortOrder": 5,
+            "sortOrder": 3,
             "slug": "pbi-adv-parent-child-hierarchies"
           }
         ]
@@ -17048,19 +17218,19 @@
           {
             "id": "pbi-adv-t6",
             "title": "Row-Level Security (Advanced)",
-            "sortOrder": 6,
+            "sortOrder": 1,
             "slug": "pbi-adv-row-level-security-advanced"
           },
           {
             "id": "pbi-adv-t7",
             "title": "Object-Level Security",
-            "sortOrder": 7,
+            "sortOrder": 2,
             "slug": "pbi-adv-object-level-security"
           },
           {
             "id": "pbi-adv-t8",
             "title": "Dynamic Security Implementation",
-            "sortOrder": 8,
+            "sortOrder": 3,
             "slug": "pbi-adv-dynamic-security-implementation"
           }
         ]
@@ -17073,19 +17243,19 @@
           {
             "id": "pbi-adv-t9",
             "title": "Optimizing DAX Queries",
-            "sortOrder": 9,
+            "sortOrder": 1,
             "slug": "pbi-adv-optimizing-dax-queries"
           },
           {
             "id": "pbi-adv-t10",
             "title": "Aggregations and Incremental Refresh",
-            "sortOrder": 10,
+            "sortOrder": 2,
             "slug": "pbi-adv-aggregations-and-incremental-refresh"
           },
           {
             "id": "pbi-adv-t11",
             "title": "Performance Analyzer Tool",
-            "sortOrder": 11,
+            "sortOrder": 3,
             "slug": "pbi-adv-performance-analyzer-tool"
           }
         ]
@@ -17098,19 +17268,19 @@
           {
             "id": "pbi-adv-t12",
             "title": "What are Deployment Pipelines?",
-            "sortOrder": 12,
+            "sortOrder": 1,
             "slug": "pbi-adv-what-are-deployment-pipelines"
           },
           {
             "id": "pbi-adv-t13",
             "title": "Dev-Test-Prod Lifecycle",
-            "sortOrder": 13,
+            "sortOrder": 2,
             "slug": "pbi-adv-dev-test-prod-lifecycle"
           },
           {
             "id": "pbi-adv-t14",
             "title": "Best Practices for Version Control",
-            "sortOrder": 14,
+            "sortOrder": 3,
             "slug": "pbi-adv-best-practices-for-version-control"
           }
         ]
@@ -17123,19 +17293,19 @@
           {
             "id": "pbi-adv-t15",
             "title": "Introduction to Paginated Reports",
-            "sortOrder": 15,
+            "sortOrder": 1,
             "slug": "pbi-adv-introduction-to-paginated-reports"
           },
           {
             "id": "pbi-adv-t16",
             "title": "SSRS and Power BI Integration",
-            "sortOrder": 16,
+            "sortOrder": 2,
             "slug": "pbi-adv-ssrs-and-power-bi-integration"
           },
           {
             "id": "pbi-adv-t17",
             "title": "Creating Pixel-Perfect Reports",
-            "sortOrder": 17,
+            "sortOrder": 3,
             "slug": "pbi-adv-creating-pixel-perfect-reports"
           }
         ]
@@ -17148,19 +17318,19 @@
           {
             "id": "pbi-adv-t18",
             "title": "AI Visuals in Power BI",
-            "sortOrder": 18,
+            "sortOrder": 1,
             "slug": "pbi-adv-ai-visuals-in-power-bi"
           },
           {
             "id": "pbi-adv-t19",
             "title": "Q&A Visual (Natural Language Queries)",
-            "sortOrder": 19,
+            "sortOrder": 2,
             "slug": "pbi-adv-qa-visual-natural-language-queries"
           },
           {
             "id": "pbi-adv-t20",
             "title": "Cognitive Services Integration",
-            "sortOrder": 20,
+            "sortOrder": 3,
             "slug": "pbi-adv-cognitive-services-integration"
           }
         ]
@@ -17173,19 +17343,19 @@
           {
             "id": "pbi-adv-t21",
             "title": "Connecting to Azure SQL Database",
-            "sortOrder": 21,
+            "sortOrder": 1,
             "slug": "pbi-adv-connecting-to-azure-sql-database"
           },
           {
             "id": "pbi-adv-t22",
             "title": "Azure Synapse Analytics",
-            "sortOrder": 22,
+            "sortOrder": 2,
             "slug": "pbi-adv-azure-synapse-analytics"
           },
           {
             "id": "pbi-adv-t23",
             "title": "Power BI and Azure Machine Learning",
-            "sortOrder": 23,
+            "sortOrder": 3,
             "slug": "pbi-adv-power-bi-and-azure-machine-learning"
           }
         ]
@@ -17198,19 +17368,19 @@
           {
             "id": "pbi-adv-t24",
             "title": "Workspace Roles & Governance",
-            "sortOrder": 24,
+            "sortOrder": 1,
             "slug": "pbi-adv-workspace-roles-governance"
           },
           {
             "id": "pbi-adv-t25",
             "title": "Data Lineage & Impact Analysis",
-            "sortOrder": 25,
+            "sortOrder": 2,
             "slug": "pbi-adv-data-lineage-impact-analysis"
           },
           {
             "id": "pbi-adv-t26",
             "title": "Enterprise Deployment Strategies",
-            "sortOrder": 26,
+            "sortOrder": 3,
             "slug": "pbi-adv-enterprise-deployment-strategies"
           }
         ]
@@ -17223,19 +17393,19 @@
           {
             "id": "pbi-adv-t27",
             "title": "Enterprise Financial Reporting",
-            "sortOrder": 27,
+            "sortOrder": 1,
             "slug": "pbi-adv-enterprise-financial-reporting"
           },
           {
             "id": "pbi-adv-t28",
             "title": "Customer Segmentation Dashboard",
-            "sortOrder": 28,
+            "sortOrder": 2,
             "slug": "pbi-adv-customer-segmentation-dashboard"
           },
           {
             "id": "pbi-adv-t29",
             "title": "Supply Chain & Inventory Dashboard",
-            "sortOrder": 29,
+            "sortOrder": 3,
             "slug": "pbi-adv-supply-chain-inventory-dashboard"
           }
         ]
@@ -17248,19 +17418,19 @@
           {
             "id": "pbi-adv-t30",
             "title": "Full Enterprise BI Solution",
-            "sortOrder": 30,
+            "sortOrder": 1,
             "slug": "pbi-adv-full-enterprise-bi-solution"
           },
           {
             "id": "pbi-adv-t31",
             "title": "Advanced DAX + Security + Azure Integration",
-            "sortOrder": 31,
+            "sortOrder": 2,
             "slug": "pbi-adv-advanced-dax-security-azure-integration"
           },
           {
             "id": "pbi-adv-t32",
             "title": "Deployment Pipeline Implementation",
-            "sortOrder": 32,
+            "sortOrder": 3,
             "slug": "pbi-adv-deployment-pipeline-implementation"
           }
         ]
@@ -17273,7 +17443,11 @@
       "Building executive BI apps, workspace collaboration, and sharing dashboards securely",
       "Paginated Reports design using Power BI Report Builder for pixel-perfect printing",
       "Composite models, incremental data refresh, and enterprise business intelligence best practices"
-    ]
+    ],
+    "seo": {
+      "title": "Advanced Power BI Course (Optimization) | MSK Institute",
+      "description": "Master advanced Power BI across 11 chapters & 32 topics: DAX context transition, OLS, incremental refresh, query optimization & enterprise BI governance."
+    }
   },
   {
     "id": "course-data-analysis--basics--pandas",
@@ -17720,6 +17894,14 @@
             "title": "Mini Project: Executive Sales & Profitability Dashboard",
             "slug": "executive-sales-dashboard-project",
             "sortOrder": 3
+          },
+          {
+            "id": "topic-da-viz-plotly-streamlit",
+            "title": "Interactive Charts with Plotly & Sharing Apps with Streamlit",
+            "slug": "interactive-plotly-streamlit-dashboards",
+            "sortOrder": 4,
+            "notes": [],
+            "videos": []
           }
         ]
       }
@@ -17731,7 +17913,11 @@
       "Central Limit Theorem, empirical rule, and normal distribution applications",
       "Hypothesis testing: T-tests, ANOVA, Chi-Square, and p-value interpretation",
       "Outlier detection using IQR, Z-scores, and executive storytelling"
-    ]
+    ],
+    "seo": {
+      "title": "Data Visualization & Applied Statistics | MSK Institute",
+      "description": "Master Matplotlib, Seaborn, Plotly, Streamlit dashboards, descriptive statistics, hypothesis testing & A/B testing across 6 chapters and 23 topics."
+    }
   },
   {
     "id": "course-data-analysis--advanced-pandas--ml-basics",
@@ -17781,6 +17967,14 @@
             "title": "Window Functions & Moving Averages in Pandas",
             "slug": "pandas-window-and-expanding-functions",
             "sortOrder": 3
+          },
+          {
+            "id": "topic-da-ml-pyarrow-cow",
+            "title": "Modern Pandas 2.x/3.0: PyArrow Backend & Copy-on-Write",
+            "slug": "pandas-pyarrow-copy-on-write",
+            "sortOrder": 4,
+            "notes": [],
+            "videos": []
           }
         ]
       },
@@ -17902,7 +18096,7 @@
           },
           {
             "id": "da-adv-t6.2",
-            "title": "Data Pipeline: SQL Extraction $\\to$ Pandas Cleaning $\\to$ Modeling",
+            "title": "Data Pipeline: SQL Extraction → Pandas Cleaning → Modeling",
             "slug": "full-stack-data-pipeline",
             "sortOrder": 2
           },
@@ -17911,6 +18105,14 @@
             "title": "GitHub Portfolio Documentation & Technical Interview Presentation",
             "slug": "github-portfolio-and-interview-prep",
             "sortOrder": 3
+          },
+          {
+            "id": "topic-da-ml-ai-privacy",
+            "title": "AI-Assisted Data Analysis, SQL/Pandas Prompting & Data Privacy",
+            "slug": "ai-assisted-analytics-and-data-privacy",
+            "sortOrder": 4,
+            "notes": [],
+            "videos": []
           }
         ]
       }
@@ -17922,7 +18124,11 @@
       "Feature engineering: Scaling (StandardScaler/MinMax), One-Hot Encoding, and CV pipelines",
       "Supervised learning: Linear Regression for revenue, Logistic Regression for churn",
       "Unsupervised clustering: K-Means with Elbow method, RFM customer segmentation, and STAR interview prep"
-    ]
+    ],
+    "seo": {
+      "title": "Advanced Pandas & Machine Learning Course | MSK Institute",
+      "description": "Master PyArrow Pandas, time-series forecasting, Scikit-Learn regression, churn classification, K-Means RFM clustering, AI-assisted SQL & capstone pipelines."
+    }
   },
   {
     "id": "course-tableau-for-beginners",
@@ -18104,7 +18310,11 @@
       "Advanced charting: Treemaps, heatmaps, dual-axis charts, and trendlines",
       "Calculated fields, quick table calculations, and Level of Detail (LOD) expressions",
       "Interactive dashboards, actions (filter, highlight, URL), stories, and Tableau Public"
-    ]
+    ],
+    "seo": {
+      "title": "Tableau Desktop Course for Data Analysts | MSK Institute",
+      "description": "Learn Tableau Desktop from scratch: VizQL, Live vs Hyper extracts, calculated fields, LOD expressions, interactive actions, stories & Tableau Public portfolios."
+    }
   },
   {
     "id": "course-orm-concepts-for-backend-development",
@@ -20333,7 +20543,11 @@
       "Aggregation and grouping: groupby mechanics, multi-aggregations, and pivot table analysis",
       "Time series analysis: DatetimeIndex, resampling, rolling calculations, and date parsing",
       "Exploratory Data Analysis (EDA) pipelines using method chaining and descriptive statistics"
-    ]
+    ],
+    "seo": {
+      "title": "Pandas Data Analysis & EDA Course | MSK Institute",
+      "description": "Learn Pandas data wrangling & EDA across 8 chapters and 24 practical topics: DataFrames, cleaning, groupby, merge joins, pivot tables & time series analysis."
+    }
   },
   {
     "id": "course-mongodb-and-mongoose-database",

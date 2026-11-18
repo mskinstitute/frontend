@@ -1,4 +1,24 @@
-# Lag Features, Autocorrelation & Stationarity Checks
+---
+id: lag-features-and-stationarity
+slug: lag-features-and-stationarity
+course: data-analysis--advanced-pandas--ml-basics
+chapter: "2: Time Series Forecasting & Seasonality"
+topic: "2.2 Lag Features, Autocorrelation & Stationarity Checks"
+title: "Lag Features, Autocorrelation & Stationarity Checks"
+description: "Machine learning algorithms (such as XGBoost, Random Forest, or Ridge Regression) do not naturally understand chronological sequence order. To enable."
+difficulty: Advanced
+readingTime: 7
+order: 2
+keywords:
+  - lag features autocorrelation stationarity checks
+  - data science & machine learning tutorial
+  - lag features and stationarity
+  - data analysis course
+  - MSK Institute
+lastUpdated: 2026-11-18
+author: "Er. Sumit Kumar (MSK Institute)"
+version: 1.1.0
+---
 
 Machine learning algorithms (such as XGBoost, Random Forest, or Ridge Regression) do not naturally understand chronological sequence order. To enable supervised learning models to forecast future timestamps, data analysts engineer **lag features** and **rolling statistics**, while validating **stationarity** using statistical tests like the Augmented Dickey-Fuller (ADF) test.
 
@@ -94,8 +114,7 @@ check_stationarity(df['sales_diff'])
 
 ---
 
-# Multiple Choice Questions
-
+## Practice Quiz
 ### 1. In time series feature engineering, what error occurs if you compute `df['sales'].rolling(7).mean()` without shifting by 1 period before forecasting $t$?
 A. Target Data Leakage (the model cheats by including the actual target value in the input feature).
 B. Integer overflow error.

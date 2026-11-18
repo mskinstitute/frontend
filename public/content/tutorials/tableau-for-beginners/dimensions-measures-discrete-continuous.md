@@ -1,6 +1,24 @@
-# Dimensions vs Measures & Discrete (Blue) vs Continuous (Green) Pills
-
-*Reading Time: 8 Mins* | *Level: Beginner to Advanced*
+---
+id: dimensions-measures-discrete-continuous
+slug: dimensions-measures-discrete-continuous
+course: tableau-for-beginners
+chapter: "2: Data Preparation & Relationships"
+topic: "2.3 Dimensions vs Measures & Discrete (Blue) vs Continuous (Green) Pills"
+title: "Dimensions vs Measures & Discrete (Blue) vs Continuous (Green) Pills"
+description: "Learn Dimensions vs Measures & Discrete (Blue) vs Continuous (Green) Pills in Tableau with practical examples, analyst workflows, and interactive practice."
+difficulty: Beginner
+readingTime: 6
+order: 3
+keywords:
+  - dimensions vs measures discrete blue vs continuous green pills
+  - tableau tutorial
+  - dimensions measures discrete continuous
+  - data analysis course
+  - MSK Institute
+lastUpdated: 2026-11-18
+author: "Er. Sumit Kumar (MSK Institute)"
+version: 1.1.0
+---
 
 ---
 
@@ -19,8 +37,7 @@ Every field in Tableau has **two independent attributes**:
 
 ---
 
-# Multiple Choice Questions
-
+## Practice Quiz
 ### 1. In Tableau, what does a Blue pill represent?
 A. A Discrete field (creates categorical headers and dividers)
 B. Only text fields

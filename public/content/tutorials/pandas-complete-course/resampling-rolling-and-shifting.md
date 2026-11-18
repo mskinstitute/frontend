@@ -1,6 +1,24 @@
-# Resampling, Rolling Windows & Shifting
-
-*Reading Time: 8 Mins* | *Level: Beginner to Advanced*
+---
+id: resampling-rolling-and-shifting
+slug: resampling-rolling-and-shifting
+course: pandas-complete-course
+chapter: "8: Time Series Analysis & Real-World Capstone EDA"
+topic: "8.2 Resampling, Rolling Windows & Shifting"
+title: "Resampling, Rolling Windows & Shifting"
+description: "Learn Resampling, Rolling Windows & Shifting in Pandas with practical examples, analyst workflows, and interactive practice quizzes at MSK Institute."
+difficulty: Intermediate
+readingTime: 6
+order: 2
+keywords:
+  - resampling rolling windows shifting
+  - pandas tutorial
+  - resampling rolling and shifting
+  - data analysis course
+  - MSK Institute
+lastUpdated: 2026-11-18
+author: "Er. Sumit Kumar (MSK Institute)"
+version: 1.1.0
+---
 
 ---
 
@@ -56,8 +74,7 @@ df['DoD_Growth_Shortcut'] = df['Daily_Sales'].pct_change() * 100
 
 ---
 
-# Multiple Choice Questions
-
+## Practice Quiz
 ### 1. Which method performs time-based frequency aggregation (e.g. converting hourly or daily records into monthly summaries)?
 A. `df.resample()`
 B. `df.time_group()`

@@ -1,6 +1,24 @@
-# Line Charts, Trend Lines & Date Hierarchies
-
-*Reading Time: 8 Mins* | *Level: Beginner to Advanced*
+---
+id: line-charts-and-trend-lines
+slug: line-charts-and-trend-lines
+course: tableau-for-beginners
+chapter: "3: Core Visualizations & Chart Types"
+topic: "3.2 Line Charts, Trend Lines & Date Hierarchies"
+title: "Line Charts, Trend Lines & Date Hierarchies"
+description: "Learn Line Charts, Trend Lines & Date Hierarchies in Tableau with practical examples, analyst workflows, and interactive practice quizzes at MSK Institute."
+difficulty: Beginner
+readingTime: 6
+order: 2
+keywords:
+  - line charts trend lines date hierarchies
+  - tableau tutorial
+  - line charts and trend lines
+  - data analysis course
+  - MSK Institute
+lastUpdated: 2026-11-18
+author: "Er. Sumit Kumar (MSK Institute)"
+version: 1.1.0
+---
 
 ---
 
@@ -23,8 +41,7 @@ Right-clicking a date pill reveals two distinct sections of dates:
 
 ---
 
-# Multiple Choice Questions
-
+## Practice Quiz
 ### 1. In Tableau, what does the top section of options in a Date field's right-click menu represent?
 A. Discrete Date Parts (e.g. cyclical Month independent of year: all Januarys aggregated together)
 B. Continuous timeline

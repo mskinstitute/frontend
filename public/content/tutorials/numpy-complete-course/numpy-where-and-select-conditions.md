@@ -1,4 +1,24 @@
-# Conditional Selection with np.where() & np.select()
+---
+id: numpy-where-and-select-conditions
+slug: numpy-where-and-select-conditions
+course: numpy-complete-course
+chapter: "5: Advanced Indexing & Boolean Filtering"
+topic: "5.3 Conditional Selectors: np.where(), np.select() & np.extract()"
+title: "Conditional Selectors: np.where(), np.select() & np.extract()"
+description: "Conditional logic is the backbone of data engineering and scientific pipelines. Often, you need to assign values depending on whether conditions are."
+difficulty: Intermediate
+readingTime: 8
+order: 3
+keywords:
+  - conditional selectors npwhere npselect npextract
+  - numpy tutorial
+  - numpy where and select conditions
+  - data analysis course
+  - MSK Institute
+lastUpdated: 2026-11-18
+author: "Er. Sumit Kumar (MSK Institute)"
+version: 1.1.0
+---
 
 Conditional logic is the backbone of data engineering and scientific pipelines. Often, you need to assign values depending on whether conditions are met—similar to Excel's `IF()` function or SQL's `CASE WHEN ... THEN ... ELSE` statements.
 
@@ -138,8 +158,7 @@ print("Tax liability per bracket:
 
 ---
 
-# Multiple Choice Questions
-
+## Practice Quiz
 ### 1. What does `np.where(arr > 5, 1, 0)` return?
 A. A tuple of row and column indices where elements exceed 5
 B. A new array where elements > 5 become 1 and all other elements become 0

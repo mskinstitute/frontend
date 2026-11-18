@@ -1,6 +1,24 @@
-# Reading Excel Spreadsheets & Multiple Sheets
-
-*Reading Time: 8 Mins* | *Level: Beginner to Advanced*
+---
+id: reading-excel-and-multi-sheets
+slug: reading-excel-and-multi-sheets
+course: pandas-complete-course
+chapter: "2: Data Ingestion & Storage Formats"
+topic: "2.2 Reading Excel Spreadsheets & Multiple Sheets"
+title: "Reading Excel Spreadsheets & Multiple Sheets"
+description: "Learn Reading Excel Spreadsheets & Multiple Sheets in Pandas with practical examples, analyst workflows, and interactive practice quizzes at MSK Institute."
+difficulty: Intermediate
+readingTime: 6
+order: 2
+keywords:
+  - reading excel spreadsheets multiple sheets
+  - pandas tutorial
+  - reading excel and multi sheets
+  - data analysis course
+  - MSK Institute
+lastUpdated: 2026-11-18
+author: "Er. Sumit Kumar (MSK Institute)"
+version: 1.1.0
+---
 
 ---
 
@@ -80,8 +98,7 @@ print("Workbook with multiple sheets saved successfully!")
 
 ---
 
-# Multiple Choice Questions
-
+## Practice Quiz
 ### 1. Which Python library is required by Pandas to read and write modern `.xlsx` Excel files?
 A. `xlwt`
 B. `openpyxl`

@@ -54,6 +54,25 @@ export function parseFrontmatter<T = Record<string, any>>(rawContent: string): {
       } else {
         inList = false;
         currentKey = key;
+        if (val.startsWith('[') && val.endsWith(']')) {
+          try {
+            const parsedArr = JSON.parse(val);
+            if (Array.isArray(parsedArr)) {
+              frontmatter[key] = parsedArr.map((item) => String(item).trim()).filter(Boolean);
+              return;
+            }
+          } catch {
+            // Fallback for single-quoted YAML inline arrays like ['a', 'b']
+            const inner = val.slice(1, -1).trim();
+            frontmatter[key] = inner
+              ? inner
+                  .split(',')
+                  .map((s) => s.trim().replace(/^['"]|['"]$/g, ''))
+                  .filter(Boolean)
+              : [];
+            return;
+          }
+        }
         val = val.replace(/^['"]|['"]$/g, '');
         if (val === 'true') frontmatter[key] = true;
         else if (val === 'false') frontmatter[key] = false;
@@ -66,12 +85,46 @@ export function parseFrontmatter<T = Record<string, any>>(rawContent: string): {
   return { frontmatter: frontmatter as T, content };
 }
 
+export function extractMetaDescription(markdown: string, fallback: string): string {
+  const withoutCode = markdown.replace(/```[\s\S]*?```/g, '');
+  const paragraphs = withoutCode
+    .split(/\r?\n\s*\r?\n/)
+    .map((p) => p.trim())
+    .filter((p) => {
+      if (!p) return false;
+      if (p.startsWith('#') || p.startsWith('!') || p.startsWith('|') || p.startsWith('---') || p.startsWith('>')) {
+        return false;
+      }
+      if (/^[-*+]\s/.test(p) || /^\d+\.\s/.test(p)) return false;
+      return true;
+    });
+
+  for (const raw of paragraphs) {
+    const cleaned = raw
+      .replace(/\[([^\]]+)\]\([^)]+\)/g, '$1')
+      .replace(/[`*_~]/g, '')
+      .replace(/\s+/g, ' ')
+      .trim();
+
+    if (cleaned.length >= 60) {
+      if (cleaned.length <= 158) return cleaned;
+      const truncated = cleaned.slice(0, 155);
+      const lastSpace = truncated.lastIndexOf(' ');
+      return `${(lastSpace > 100 ? truncated.slice(0, lastSpace) : truncated).replace(/[.,;:!?-]+$/, '')}.`;
+    }
+  }
+
+  return fallback;
+}
+
 export function extractHeadings(markdown: string): HeadingItem[] {
+  // Strip fenced code blocks so Python/Shell `# comments` are never mistaken for markdown headings
+  const withoutCodeBlocks = markdown.replace(/```[\s\S]*?```/g, '');
   const headingRegex = /^(#{1,3})\s+(.+)$/gm;
   const headings: HeadingItem[] = [];
   let match;
 
-  while ((match = headingRegex.exec(markdown)) !== null) {
+  while ((match = headingRegex.exec(withoutCodeBlocks)) !== null) {
     const level = match[1].length;
     const rawText = match[2].trim();
     const cleanText = rawText.replace(/\*\*/g, '').replace(/`/g, '');

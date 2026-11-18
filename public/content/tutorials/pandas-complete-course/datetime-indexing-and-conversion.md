@@ -1,6 +1,24 @@
-# DateTime Parsing, Indexing & .dt Accessor
-
-*Reading Time: 8 Mins* | *Level: Beginner to Advanced*
+---
+id: datetime-indexing-and-conversion
+slug: datetime-indexing-and-conversion
+course: pandas-complete-course
+chapter: "8: Time Series Analysis & Real-World Capstone EDA"
+topic: "8.1 DateTime Parsing, Indexing & .dt Accessor"
+title: "DateTime Parsing, Indexing & .dt Accessor"
+description: "Learn DateTime Parsing, Indexing & .dt Accessor in Pandas with practical examples, analyst workflows, and interactive practice quizzes at MSK Institute."
+difficulty: Intermediate
+readingTime: 6
+order: 1
+keywords:
+  - datetime parsing indexing dt accessor
+  - pandas tutorial
+  - datetime indexing and conversion
+  - data analysis course
+  - MSK Institute
+lastUpdated: 2026-11-18
+author: "Er. Sumit Kumar (MSK Institute)"
+version: 1.1.0
+---
 
 ---
 
@@ -63,8 +81,7 @@ print(jan_sales)
 
 ---
 
-# Multiple Choice Questions
-
+## Practice Quiz
 ### 1. Which function converts strings or Unix epoch integers into Pandas DateTime objects?
 A. `pd.parse_time()`
 B. `pd.to_datetime()`

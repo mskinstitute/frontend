@@ -1,4 +1,24 @@
-# Mastering the axis Parameter: Reductions & keepdims
+---
+id: directional-aggregations-axis-parameter
+slug: directional-aggregations-axis-parameter
+course: numpy-complete-course
+chapter: "9: Universal Functions (ufuncs) & Mathematical Methods"
+topic: "9.3 Directional Aggregations with the axis Parameter"
+title: "Directional Aggregations with the axis Parameter"
+description: "One of the most essential concepts in multi-dimensional computing is understanding how aggregation functions operate across specific axes."
+difficulty: Intermediate
+readingTime: 8
+order: 3
+keywords:
+  - directional aggregations with the axis parameter
+  - numpy tutorial
+  - directional aggregations axis parameter
+  - data analysis course
+  - MSK Institute
+lastUpdated: 2026-11-18
+author: "Er. Sumit Kumar (MSK Institute)"
+version: 1.1.0
+---
 
 One of the most essential concepts in multi-dimensional computing is understanding how aggregation functions operate across specific **axes**. 
 
@@ -106,8 +126,7 @@ print("Values:", reduced)               # Each element is 2 * 8 = 16
 
 ---
 
-# Multiple Choice Questions
-
+## Practice Quiz
 ### 1. What is the output shape of `np.sum(arr, axis=0)` for an array of shape (10, 20)?
 A. (10, 20)
 B. (10,)

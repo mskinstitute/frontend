@@ -1,4 +1,24 @@
-# Set Operations: unique(), intersect1d(), isin()
+---
+id: set-operations-unique-and-isin
+slug: set-operations-unique-and-isin
+course: numpy-complete-course
+chapter: "10: Sorting, Searching & Set Operations"
+topic: "10.3 Set Operations & Distinct Elements (np.unique, intersect1d, isin)"
+title: "Set Operations & Distinct Elements (np.unique, intersect1d, isin)"
+description: "Working with categorical variables, database identifiers, and discrete groups frequently requires set-theoretic operations—such as finding distinct."
+difficulty: Intermediate
+readingTime: 7
+order: 3
+keywords:
+  - set operations distinct elements npunique intersect1d isin
+  - numpy tutorial
+  - set operations unique and isin
+  - data analysis course
+  - MSK Institute
+lastUpdated: 2026-11-18
+author: "Er. Sumit Kumar (MSK Institute)"
+version: 1.1.0
+---
 
 Working with categorical variables, database identifiers, and discrete groups frequently requires set-theoretic operations—such as finding distinct values, computing intersections between user cohorts, and testing membership across master lists.
 
@@ -98,8 +118,7 @@ print("Exclusive (A XOR B):      ", exclusive)  # [1 2 3 7 8 9]
 
 ---
 
-# Multiple Choice Questions
-
+## Practice Quiz
 ### 1. In what order does `np.unique()` return the distinct elements?
 A. In order of first appearance
 B. In sorted ascending order

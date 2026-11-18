@@ -1,4 +1,24 @@
-# NumPy Data Types (dtype) & Type Casting (astype)
+---
+id: numpy-datatypes-and-typecasting
+slug: numpy-datatypes-and-typecasting
+course: numpy-complete-course
+chapter: "3: Data Types & Array Inspection"
+topic: "3.1 NumPy Data Types (dtype) & Type Casting (astype)"
+title: "NumPy Data Types (dtype) & Type Casting (astype)"
+description: "Because NumPy allocates contiguous memory buffers, it cannot store dynamic arbitrary types in individual cells. Instead, it relies on fixed-width."
+difficulty: Intermediate
+readingTime: 6
+order: 1
+keywords:
+  - numpy data types dtype type casting astype
+  - numpy tutorial
+  - numpy datatypes and typecasting
+  - data analysis course
+  - MSK Institute
+lastUpdated: 2026-11-18
+author: "Er. Sumit Kumar (MSK Institute)"
+version: 1.1.0
+---
 
 Because NumPy allocates contiguous memory buffers, it cannot store dynamic arbitrary types in individual cells. Instead, it relies on fixed-width, low-level **C-compatible data types** known as **dtypes**. Understanding dtypes is vital for preventing integer overflows and optimizing memory consumption.
 
@@ -71,8 +91,7 @@ print(overflowed)  # [255, 3, 4]  <-- 255 wrapped around to 4!
 
 ---
 
-# Multiple Choice Questions
-
+## Practice Quiz
 ### 1. What does the 'astype()' method do to an existing NumPy array?
 A. Modifies the array in-place without copying
 B. Creates and returns a brand new copy of the array converted to the requested dtype

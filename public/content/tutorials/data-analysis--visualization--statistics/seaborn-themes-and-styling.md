@@ -1,6 +1,24 @@
-# Seaborn Themes, Palettes & Aesthetics
-
-*Reading Time: 8 Mins* | *Level: Intermediate*
+---
+id: seaborn-themes-and-styling
+slug: seaborn-themes-and-styling
+course: data-analysis--visualization--statistics
+chapter: "3: Statistical Visualizations with Seaborn"
+topic: "3.1 Seaborn Themes, Palettes & Aesthetics"
+title: "Seaborn Themes, Palettes & Aesthetics"
+description: "Learn Seaborn Themes, Palettes & Aesthetics in Data Visualization & Statistics with practical examples, analyst workflows, and interactive practice quizzes."
+difficulty: Intermediate
+readingTime: 6
+order: 1
+keywords:
+  - seaborn themes palettes aesthetics
+  - data visualization & statistics tutorial
+  - seaborn themes and styling
+  - data analysis course
+  - MSK Institute
+lastUpdated: 2026-11-18
+author: "Er. Sumit Kumar (MSK Institute)"
+version: 1.1.0
+---
 
 ---
 
@@ -43,8 +61,7 @@ sns.set_palette('crest')
 
 ---
 
-# Multiple Choice Questions
-
+## Practice Quiz
 ### 1. Which Seaborn context preset is designed to maximize font sizes and line weights for viewing on large projector screens or conference talks?
 A. `'talk'` (or `'poster'`)
 B. `'micro'`

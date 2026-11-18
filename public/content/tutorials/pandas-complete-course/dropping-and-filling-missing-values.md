@@ -1,6 +1,24 @@
-# Dropping & Filling Missing Values (dropna, fillna)
-
-*Reading Time: 8 Mins* | *Level: Beginner to Advanced*
+---
+id: dropping-and-filling-missing-values
+slug: dropping-and-filling-missing-values
+course: pandas-complete-course
+chapter: "4: Data Cleaning & Missing Value Imputation"
+topic: "4.2 Dropping & Filling Missing Values (dropna, fillna)"
+title: "Dropping & Filling Missing Values (dropna, fillna)"
+description: "Learn Dropping & Filling Missing Values (dropna, fillna) in Pandas with practical examples, analyst workflows, and interactive practice quizzes at MSK Inst."
+difficulty: Intermediate
+readingTime: 6
+order: 2
+keywords:
+  - dropping filling missing values dropna fillna
+  - pandas tutorial
+  - dropping and filling missing values
+  - data analysis course
+  - MSK Institute
+lastUpdated: 2026-11-18
+author: "Er. Sumit Kumar (MSK Institute)"
+version: 1.1.0
+---
 
 ---
 
@@ -68,8 +86,7 @@ df_filled = df.ffill()
 
 ---
 
-# Multiple Choice Questions
-
+## Practice Quiz
 ### 1. What is the default behavior of `df.dropna()`?
 A. Drops a row if any column in that row contains a NaN
 B. Drops a row only if all columns are NaN

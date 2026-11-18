@@ -1,6 +1,24 @@
-# Table Calculations: Running Total, Percent of Total, Rank & Moving Average
-
-*Reading Time: 8 Mins* | *Level: Beginner to Advanced*
+---
+id: quick-table-calculations
+slug: quick-table-calculations
+course: tableau-for-beginners
+chapter: "4: Calculations, Parameters & LOD Expressions"
+topic: "4.2 Table Calculations: Running Total, Percent of Total, Rank & Moving Average"
+title: "Table Calculations: Running Total, Percent of Total, Rank & Moving Average"
+description: "Learn Table Calculations: Running Total, Percent of Total, Rank & Moving Average in Tableau with practical examples, analyst workflows, and interactive pra."
+difficulty: Beginner
+readingTime: 6
+order: 2
+keywords:
+  - table calculations running total percent of total rank moving average
+  - tableau tutorial
+  - quick table calculations
+  - data analysis course
+  - MSK Institute
+lastUpdated: 2026-11-18
+author: "Er. Sumit Kumar (MSK Institute)"
+version: 1.1.0
+---
 
 ---
 
@@ -25,8 +43,7 @@ Right-click any Measure on a shelf $	o$ **Quick Table Calculation**:
 
 ---
 
-# Multiple Choice Questions
-
+## Practice Quiz
 ### 1. When are Table Calculations evaluated in Tableau's Order of Operations?
 A. Very late in the pipeline, on the already-aggregated numbers in the view's visual cache
 B. In the raw database before loading

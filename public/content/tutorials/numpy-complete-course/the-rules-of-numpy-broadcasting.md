@@ -1,4 +1,24 @@
-# The Rules of NumPy Broadcasting Explained
+---
+id: the-rules-of-numpy-broadcasting
+slug: the-rules-of-numpy-broadcasting
+course: numpy-complete-course
+chapter: "8: Vectorized Operations & Broadcasting"
+topic: "8.3 The Rules of NumPy Broadcasting Explained"
+title: "The Rules of NumPy Broadcasting Explained"
+description: "Broadcasting is NumPy's most powerful and elegant mechanism. It describes how NumPy treats arrays with different shapes during arithmetic operations."
+difficulty: Intermediate
+readingTime: 10
+order: 3
+keywords:
+  - the rules of numpy broadcasting explained
+  - numpy tutorial
+  - the rules of numpy broadcasting
+  - data analysis course
+  - MSK Institute
+lastUpdated: 2026-11-18
+author: "Er. Sumit Kumar (MSK Institute)"
+version: 1.1.0
+---
 
 **Broadcasting** is NumPy's most powerful and elegant mechanism. It describes how NumPy treats arrays with different shapes during arithmetic operations. Subject to certain constraints, the smaller array is "broadcast" across the larger array so that they have compatible shapes—**without actually copying data in memory**.
 
@@ -181,8 +201,7 @@ This means broadcasting an array of 1000 numbers across 1,000,000 rows consumes 
 
 ---
 
-# Multiple Choice Questions
-
+## Practice Quiz
 ### 1. In what order does NumPy compare dimensions when determining broadcasting compatibility?
 A. Left-to-right starting from dimension 0
 B. Right-to-left starting from trailing dimensions

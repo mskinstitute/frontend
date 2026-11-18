@@ -1,4 +1,24 @@
-# Boolean Masking & Conditional Filtering
+---
+id: boolean-masking-and-filtering
+slug: boolean-masking-and-filtering
+course: numpy-complete-course
+chapter: "5: Advanced Indexing & Boolean Filtering"
+topic: "5.1 Boolean Masking & Conditional Filtering"
+title: "Boolean Masking & Conditional Filtering"
+description: "In real-world data analysis, machine learning preprocessing, and scientific pipelines, one of the most frequent operations is extracting or mutating."
+difficulty: Intermediate
+readingTime: 10
+order: 1
+keywords:
+  - boolean masking conditional filtering
+  - numpy tutorial
+  - boolean masking and filtering
+  - data analysis course
+  - MSK Institute
+lastUpdated: 2026-11-18
+author: "Er. Sumit Kumar (MSK Institute)"
+version: 1.1.0
+---
 
 In real-world data analysis, machine learning preprocessing, and scientific pipelines, one of the most frequent operations is extracting or mutating subsets of data based on specific conditions—such as removing outliers, selecting positive sensor readings, or filtering high-value financial transactions.
 
@@ -128,8 +148,7 @@ print("Valid data points:", valid_data)
 
 ---
 
-# Multiple Choice Questions
-
+## Practice Quiz
 ### 1. What does applying a comparison operator like `arr > 10` to a NumPy array produce?
 A. A Python list of elements greater than 10
 B. A boolean NumPy array of the same shape indicating element-wise truth values

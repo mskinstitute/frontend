@@ -173,30 +173,26 @@
       "scripting"
     ],
     "documentationTitle": "Complete Python for Beginners Tutorial & Interactive Documentation",
-    "shortDescription": "Master Python programming from the ground up in 1 month. Comprehensive beginner tutorial covering syntax, variables, data structures (lists, tuples, sets, dicts), control flow, loops, functions, file handling, and 4 practical capstone projects.",
+    "shortDescription": "Master Python from scratch across 16 chapters and 90 lessons: syntax, variables, user input(), data types, strings, lists, tuples, sets, dicts, loops, functions, file handling, try-except error handling, and 4 real-world projects.",
     "lessonsCount": 16,
-    "totalHours": "30h",
-    "topicsCount": 88,
+    "totalHours": "32h",
+    "topicsCount": 90,
     "githubRepo": "https://github.com/msk-python/beginner",
-    "updatedAt": "2026-09-30",
+    "updatedAt": "2026-11-18",
     "seo": {
-      "title": "Python for Beginners Tutorial: Complete Step-by-Step Programming Guide | MSK Institute",
-      "description": "Master Python programming from scratch with our beginner-friendly tutorial. Learn variables, data structures, loops, functions, file handling, interactive quizzes, and 4 real-world projects.",
+      "title": "Python for Beginners Tutorial (90 Lessons) | MSK Institute",
+      "description": "Free Python for Beginners tutorial with 90 interactive lessons: syntax, user input, lists, loops, functions, file handling, try-except, quizzes & 4 projects.",
       "keywords": [
         "python for beginners",
         "python tutorial for beginners",
         "learn python step by step",
         "python programming tutorial",
+        "python input and try except",
         "python course shikohabad",
         "python notes",
-        "python full course",
-        "python basics with examples",
-        "python practice exercises",
         "python projects for beginners",
-        "python data types",
         "python lists and dictionaries",
-        "python functions tutorial",
-        "python file handling"
+        "python functions tutorial"
       ]
     }
   },
@@ -217,30 +213,24 @@
       "sqlite"
     ],
     "documentationTitle": "Python for Intermediate: Complete Practical Course & Reference Manual",
-    "shortDescription": "Elevate your Python skills to professional software engineering. Master advanced comprehensions, closures, decorators, modular packages, OOP inheritance, custom exceptions, iterators, REST APIs, logging, SQLite databases, data visualization, and 5 real-world projects.",
+    "shortDescription": "Level up your Python engineering across 15 chapters and 76 lessons: advanced comprehensions, closures, decorators, modular packages, pathlib, OOP & dataclasses, custom exceptions, generators, REST APIs, logging, SQLite, Matplotlib, and 5 projects.",
     "lessonsCount": 15,
     "totalHours": "35h",
     "topicsCount": 76,
     "githubRepo": "https://github.com/msk-python/intermediate",
-    "updatedAt": "2026-10-01",
+    "updatedAt": "2026-11-18",
     "seo": {
-      "title": "Python for Intermediate Tutorial: Complete Step-by-Step Practical Guide | MSK Institute",
-      "description": "Level up your Python programming with our intermediate guide. Master comprehensions, decorators, OOP, exceptions, generators, REST APIs, SQLite, and 5 projects with interactive quizzes at MSK Institute.",
+      "title": "Intermediate Python Tutorial (76 Lessons) | MSK Institute",
+      "description": "Free Intermediate Python tutorial with 76 lessons: comprehensions, decorators, OOP, dataclasses, generators, REST APIs, SQLite, Matplotlib & 5 projects.",
       "keywords": [
         "python for intermediate",
         "python intermediate tutorial",
-        "learn intermediate python",
-        "python oop tutorial",
-        "python decorators explained",
-        "python closures",
+        "python oop dataclasses tutorial",
+        "python decorators closures",
         "python generators yield",
-        "python sqlite tutorial",
-        "python requests api",
-        "python logging vs print",
+        "python sqlite requests api",
         "python intermediate course shikohabad",
-        "python projects for intermediate",
-        "python notes",
-        "msk notes"
+        "python notes"
       ]
     }
   },
@@ -262,29 +252,24 @@
       "metaprogramming"
     ],
     "documentationTitle": "Python for Advanced: Complete Engineering Course & Reference Manual",
-    "shortDescription": "Master enterprise-grade Python software engineering. Deep dive into advanced OOP & descriptors, magic methods, concurrency (threading, multiprocessing, asyncio), networking sockets, SQLAlchemy ORM, testing with pytest & TDD, Tkinter GUIs, and 3 production capstones.",
+    "shortDescription": "Master enterprise Python engineering across 15 chapters and 70 lessons: OOP descriptors, CPython internals, dunder methods, threading, Python 3.13 No-GIL, multiprocessing, asyncio TaskGroup, SQLAlchemy 2.0, sockets, mypy & Ruff, pytest TDD, Tkinter, and 3 capstones.",
     "lessonsCount": 15,
-    "totalHours": "40h",
-    "topicsCount": 69,
+    "totalHours": "42h",
+    "topicsCount": 70,
     "githubRepo": "https://github.com/msk-python/advance",
-    "updatedAt": "2026-10-01",
+    "updatedAt": "2026-11-18",
     "seo": {
-      "title": "Python for Advanced Tutorial: Complete Step-by-Step Engineering Guide | MSK Institute",
-      "description": "Master advanced Python engineering: descriptors, dunder methods, threading, multiprocessing, asyncio, sockets, SQLAlchemy, pytest, and 3 capstone projects at MSK Institute.",
+      "title": "Advanced Python Tutorial (70 Lessons) | MSK Institute",
+      "description": "Free Advanced Python tutorial: OOP descriptors, dunder methods, threading, No-GIL 3.13, asyncio, SQLAlchemy 2.0, mypy, Ruff, pytest & 3 capstones.",
       "keywords": [
         "python for advanced",
         "advanced python tutorial",
-        "python concurrency",
-        "python asyncio tutorial",
-        "python multithreading vs multiprocessing",
-        "python descriptors",
-        "python magic methods",
-        "python sqlalchemy tutorial",
-        "python pytest tutorial",
-        "python socket programming",
-        "python advanced course shikohabad",
-        "python notes",
-        "msk notes"
+        "python concurrency asyncio tutorial",
+        "python 3.13 no-gil tutorial",
+        "python descriptors magic methods",
+        "python sqlalchemy 2.0 tutorial",
+        "python mypy ruff pytest tutorial",
+        "python advanced course shikohabad"
       ]
     }
   },
@@ -310,19 +295,15 @@
     "totalHours": "24h",
     "topicsCount": 36,
     "githubRepo": "github.com/msk-institute/numpy-complete-course",
-    "updatedAt": "2026-09-13",
+    "updatedAt": "2026-11-18",
     "seo": {
-      "title": "NumPy Complete Course: From Beginner to Advanced - MSK Notes | MSK Institute",
-      "description": "Learn NumPy from scratch to pro with structured lessons, memory architecture diagrams, interactive code snippets, and quizzes based on the NumPy Complete Course at MSK Institute.",
+      "title": "NumPy Complete Tutorial (36 Lessons & Quizzes) | MSK Institute",
+      "description": "Free NumPy tutorial with 36 lessons: ndarrays, slicing, boolean masking, vectorization, broadcasting, linear algebra & numerical computing projects.",
       "keywords": [
-        "numpy complete course",
-        "numpy tutorial",
-        "learn numpy python",
-        "numpy beginner to advanced",
-        "numpy documentation",
-        "numpy ndarrays",
-        "numpy broadcasting",
-        "msk notes"
+        "numpy tutorial python",
+        "numpy complete course notes",
+        "numpy broadcasting vectorization",
+        "python scientific computing numpy"
       ]
     },
     "topics": [
@@ -565,17 +546,15 @@
     "totalHours": "30h",
     "topicsCount": 56,
     "githubRepo": "github.com/msk-institute/sql-for-beginners",
-    "updatedAt": "2026-09-12",
+    "updatedAt": "2026-11-18",
     "seo": {
-      "title": "SQL & MySQL for Beginners Tutorial & Notes - MSK Notes | MSK Institute",
-      "description": "Complete SQL and MySQL for Beginners tutorial notes. Master database and table creation, constraints, queries, filtering, sorting, functions, and backups.",
+      "title": "SQL & MySQL for Beginners Tutorial (56 Lessons) | MSK Institute",
+      "description": "Free SQL & MySQL Beginner tutorial with 56 lessons: SELECT, WHERE, GROUP BY, aggregates, primary keys, joins & live browser SQL Studio practice.",
       "keywords": [
-        "sql tutorial",
-        "sql for beginners",
-        "mysql tutorial",
-        "learn sql",
-        "mysql database tutorial",
-        "sql notes"
+        "sql for beginners tutorial",
+        "mysql tutorial step by step",
+        "learn sql queries online",
+        "sql course shikohabad"
       ]
     }
   },
@@ -601,17 +580,15 @@
     "totalHours": "35h",
     "topicsCount": 49,
     "githubRepo": "github.com/msk-institute/sql-for-intermediate",
-    "updatedAt": "2026-09-12",
+    "updatedAt": "2026-11-18",
     "seo": {
-      "title": "SQL & MySQL for Intermediate Tutorial & Notes - MSK Notes | MSK Institute",
-      "description": "Intermediate SQL and MySQL tutorial. Master multi-table Joins, Subqueries, Normalization, Views, CTEs, Window Functions, and ACID transactions with interactive quizzes.",
+      "title": "Intermediate SQL Tutorial: Joins, CTEs & Windows | MSK Institute",
+      "description": "Free Intermediate SQL tutorial with 49 lessons: multi-table JOINs, subqueries, CTEs, Window Functions (RANK, LEAD/LAG), views & 3NF normalization.",
       "keywords": [
-        "sql intermediate",
-        "sql joins tutorial",
-        "sql cte tutorial",
-        "mysql normalization",
-        "sql window functions",
-        "sql notes"
+        "intermediate sql tutorial",
+        "sql window functions cte tutorial",
+        "sql joins subqueries examples",
+        "sql normalization 3nf"
       ]
     }
   },
@@ -638,17 +615,15 @@
     "totalHours": "40h",
     "topicsCount": 42,
     "githubRepo": "github.com/msk-institute/sql-for-advanced",
-    "updatedAt": "2026-09-12",
+    "updatedAt": "2026-11-18",
     "seo": {
-      "title": "SQL & MySQL for Advanced Tutorial & Notes - MSK Notes | MSK Institute",
-      "description": "Advanced SQL and MySQL DBA tutorial. Master indexing, EXPLAIN query optimization, stored procedures, triggers, locking, deadlocks, and partitioning with interactive quizzes.",
+      "title": "Advanced SQL Tutorial: Indexing & Query Tuning | MSK Institute",
+      "description": "Free Advanced SQL & MySQL tutorial with 42 lessons: B-Tree indexes, EXPLAIN query plans, stored procedures, triggers, partitioning & ACID tuning.",
       "keywords": [
         "advanced sql tutorial",
-        "mysql indexing",
-        "mysql stored procedures",
-        "mysql triggers",
-        "mysql performance tuning",
-        "sql notes"
+        "mysql indexing query optimization",
+        "sql stored procedures triggers",
+        "database performance tuning sql"
       ]
     }
   },
@@ -783,16 +758,16 @@
     "totalHours": "15h",
     "topicsCount": 27,
     "githubRepo": "https://github.com/msk-excel/beginner",
-    "updatedAt": "2026-09-13",
+    "updatedAt": "2026-11-18",
     "seo": {
-      "title": "MS Excel for Beginners Tutorial & Notes - MSK Notes | MSK Institute",
-      "description": "Complete MS Excel for Beginners tutorial notes with interface screenshots, formula breakdowns, basic functions, cell formatting, and interactive quizzes.",
+      "title": "MS Excel for Beginners Tutorial (27 Lessons) | MSK Institute",
+      "description": "Free MS Excel for Beginners tutorial with 27 practical lessons: cell formatting, SUM/AVERAGE formulas, sorting, filtering, charts & office exercises.",
       "keywords": [
-        "ms excel tutorial",
         "ms excel for beginners",
-        "learn microsoft excel",
-        "excel formulas beginner",
-        "excel notes"
+        "excel tutorial for beginners",
+        "basic excel formulas tutorial",
+        "excel notes pdf",
+        "excel course shikohabad"
       ]
     }
   },
@@ -818,16 +793,15 @@
     "totalHours": "18h",
     "topicsCount": 30,
     "githubRepo": "https://github.com/msk-excel/intermediate",
-    "updatedAt": "2026-09-13",
+    "updatedAt": "2026-11-18",
     "seo": {
-      "title": "MS Excel for Intermediate Tutorial & Notes - MSK Notes | MSK Institute",
-      "description": "Intermediate Excel tutorial covering VLOOKUP, Pivot Tables, Excel Tables, conditional formatting, data validation dropdowns, and interactive quizzes.",
+      "title": "MS Excel Intermediate Tutorial (30 Lessons) | MSK Institute",
+      "description": "Free Intermediate Excel tutorial with 30 lessons: IF/AND/OR logic, VLOOKUP, INDEX-MATCH, conditional formatting, data validation & Pivot Tables.",
       "keywords": [
-        "ms excel intermediate",
-        "vlookup tutorial",
-        "pivot table tutorial",
-        "excel conditional formatting",
-        "data validation excel"
+        "ms excel intermediate tutorial",
+        "vlookup index match tutorial",
+        "excel pivot tables guide",
+        "excel data validation conditional formatting"
       ]
     }
   },
@@ -855,17 +829,15 @@
     "totalHours": "24h",
     "topicsCount": 35,
     "githubRepo": "https://github.com/msk-excel/advance",
-    "updatedAt": "2026-09-13",
+    "updatedAt": "2026-11-18",
     "seo": {
-      "title": "MS Excel for Advanced Tutorial & Notes - MSK Notes | MSK Institute",
-      "description": "Advanced Excel tutorial notes with XLOOKUP, dynamic arrays, Power Query, Power Pivot DAX, VBA macros, interactive dashboards, and practice quizzes.",
+      "title": "Advanced MS Excel Tutorial (35 Lessons) | MSK Institute",
+      "description": "Free Advanced Excel tutorial with 35 lessons: XLOOKUP, dynamic arrays, Power Query ETL, Power Pivot DAX, interactive KPI dashboards & macros.",
       "keywords": [
         "advanced excel tutorial",
-        "xlookup guide",
-        "power query tutorial",
-        "power pivot dax",
-        "excel vba macros",
-        "excel dashboard tutorial"
+        "xlookup dynamic arrays excel",
+        "power query etl tutorial",
+        "excel executive dashboard course"
       ]
     }
   },
@@ -1389,19 +1361,15 @@
     "totalHours": "24h",
     "topicsCount": 24,
     "githubRepo": "github.com/msk-institute/pandas-complete-course",
-    "updatedAt": "2026-09-14",
+    "updatedAt": "2026-11-18",
     "seo": {
-      "title": "Pandas Complete Course: From Beginner to Advanced Data Analyst - MSK Notes | MSK Institute",
-      "description": "Learn Pandas data manipulation from scratch to pro with structured lessons, memory architecture diagrams, interactive code snippets, and quizzes based on the Pandas Complete Course at MSK Institute.",
+      "title": "Pandas Data Analysis & EDA Tutorial (24 Lessons) | MSK Institute",
+      "description": "Free Pandas tutorial with 24 lessons: DataFrames, CSV/Excel/SQL ingestion, loc/iloc, cleaning nulls, GroupBy, merge joins, pivot tables & EDA.",
       "keywords": [
-        "pandas complete course",
-        "pandas tutorial",
-        "learn pandas python",
-        "pandas dataframes",
-        "pandas groupby",
-        "pandas data wrangling",
-        "exploratory data analysis",
-        "msk notes"
+        "pandas tutorial python",
+        "pandas data cleaning eda",
+        "pandas groupby merge pivot table",
+        "python data analysis tutorial"
       ]
     },
     "topics": [
@@ -1570,23 +1538,20 @@
       "python"
     ],
     "documentationTitle": "Data Visualization & Applied Statistics Masterclass",
-    "shortDescription": "Master Python data visualization and applied business statistics. Learn Matplotlib, Seaborn, statistical distributions, hypothesis testing, A/B testing, and data storytelling.",
+    "shortDescription": "Master data visualization & applied statistics across 6 chapters and 23 lessons: Matplotlib, Seaborn, Plotly & Streamlit interactive dashboards, descriptive stats, hypothesis testing, and A/B testing.",
     "lessonsCount": 6,
     "totalHours": "20h",
-    "topicsCount": 22,
+    "topicsCount": 23,
     "githubRepo": "github.com/msk-institute/data-visualization-statistics",
-    "updatedAt": "2026-09-14",
+    "updatedAt": "2026-11-18",
     "seo": {
-      "title": "Data Visualization & Applied Statistics Course & Notes - MSK Notes | MSK Institute",
-      "description": "Learn Matplotlib, Seaborn, and statistical hypothesis testing for data analysis with structured lessons, formulas, and quizzes at MSK Institute.",
+      "title": "Data Visualization & Statistics Tutorial | MSK Institute",
+      "description": "Free Data Visualization & Applied Statistics tutorial (23 lessons): Matplotlib, Seaborn, Plotly, Streamlit, Z-scores, T-tests, ANOVA & A/B testing.",
       "keywords": [
-        "data visualization python",
-        "matplotlib tutorial",
-        "seaborn tutorial",
-        "statistics for data analysis",
-        "hypothesis testing python",
-        "ab testing",
-        "msk notes"
+        "matplotlib seaborn plotly tutorial",
+        "applied statistics for data analysis",
+        "hypothesis testing ab testing python",
+        "streamlit dashboard tutorial"
       ]
     },
     "topics": [
@@ -1748,17 +1713,15 @@
     "totalHours": "30h",
     "topicsCount": 30,
     "githubRepo": "https://github.com/msk-powerbi/beginner",
-    "updatedAt": "2026-09-14",
+    "updatedAt": "2026-11-18",
     "seo": {
-      "title": "Power BI Complete Course & DAX Notes - MSK Notes | MSK Institute",
-      "description": "Master Microsoft Power BI: Power Query, Data Modeling, DAX measures, and interactive dashboards with lessons and quizzes at MSK Institute.",
+      "title": "Power BI for Beginners Tutorial (30 Lessons) | MSK Institute",
+      "description": "Free Power BI Beginner tutorial with 30 lessons: Power Query ETL, star schema modeling, foundational DAX measures & interactive KPI dashboards.",
       "keywords": [
-        "power bi tutorial",
-        "learn power bi",
-        "power bi dax tutorial",
-        "power query tutorial",
-        "power bi dashboards",
-        "msk notes"
+        "power bi tutorial for beginners",
+        "power query etl dax basics",
+        "power bi dashboard course",
+        "power bi notes"
       ]
     },
     "topics": [
@@ -1963,22 +1926,20 @@
       "storytelling"
     ],
     "documentationTitle": "Tableau Desktop for Data Analysts Masterclass",
-    "shortDescription": "Master Tableau Desktop from fundamentals to advanced visual analytics. Learn dimensions vs measures, dual axis charts, calculated fields, LOD expressions, and dashboard storytelling.",
+    "shortDescription": "Master Tableau Desktop for Data Analysts across 5 chapters and 18 lessons: VizQL architecture, Live vs Hyper extracts, calculated fields, LOD expressions, interactive actions, Stories, and Tableau Public portfolios.",
     "lessonsCount": 5,
     "totalHours": "20h",
     "topicsCount": 18,
     "githubRepo": "github.com/msk-institute/tableau-for-beginners",
-    "updatedAt": "2026-09-14",
+    "updatedAt": "2026-11-18",
     "seo": {
-      "title": "Tableau Desktop Complete Course & Notes - MSK Notes | MSK Institute",
-      "description": "Learn Tableau from scratch: calculated fields, LOD expressions, parameters, and interactive dashboards at MSK Institute.",
+      "title": "Tableau Desktop Tutorial for Analysts (18 Lessons) | MSK Institute",
+      "description": "Free Tableau tutorial with 18 lessons: VizQL, Live vs Hyper extracts, calculated fields, LOD expressions, Filter/URL actions, Stories & Tableau Public.",
       "keywords": [
-        "tableau tutorial",
-        "learn tableau desktop",
-        "tableau lod expressions",
-        "tableau calculated fields",
-        "tableau dashboards",
-        "msk notes"
+        "tableau tutorial for beginners",
+        "tableau lod expressions tutorial",
+        "tableau live vs hyper extract",
+        "tableau dashboard actions stories"
       ]
     },
     "topics": [
@@ -2111,22 +2072,20 @@
       "regression"
     ],
     "documentationTitle": "Advanced Analytics & Machine Learning Basics for Analysts",
-    "shortDescription": "Master predictive analytics and machine learning for data analysts. Learn memory optimization, time series forecasting, Scikit-Learn pipelines, regression, clustering, and portfolio projects.",
+    "shortDescription": "Master advanced analytics & ML basics across 6 chapters and 20 lessons: PyArrow & Copy-on-Write Pandas, time-series forecasting, Scikit-Learn regression & churn classification, K-Means RFM clustering, AI-assisted SQL privacy, and end-to-end capstones.",
     "lessonsCount": 6,
     "totalHours": "22h",
-    "topicsCount": 18,
+    "topicsCount": 20,
     "githubRepo": "github.com/msk-institute/advanced-data-analysis-ml",
-    "updatedAt": "2026-09-14",
+    "updatedAt": "2026-11-18",
     "seo": {
-      "title": "Advanced Data Analysis & Machine Learning Basics Course - MSK Notes | MSK Institute",
-      "description": "Master machine learning basics for data analysts with Scikit-Learn: regression, classification, clustering, and capstone portfolio projects at MSK Institute.",
+      "title": "Advanced Pandas & ML Basics Tutorial (20 Lessons) | MSK Institute",
+      "description": "Free Advanced Pandas & ML tutorial (20 lessons): PyArrow, Copy-on-Write, forecasting, Scikit-Learn regression/churn, K-Means RFM & safe AI analytics.",
       "keywords": [
-        "machine learning for data analysts",
-        "scikit-learn tutorial",
-        "linear regression python",
-        "k-means clustering tutorial",
-        "time series forecasting python",
-        "msk notes"
+        "advanced pandas pyarrow tutorial",
+        "scikit learn for data analysts",
+        "rfm customer segmentation python",
+        "ai assisted data analysis sql privacy"
       ]
     },
     "topics": [
@@ -2925,7 +2884,7 @@
     "totalHours": "30h",
     "topicsCount": 29,
     "githubRepo": "https://github.com/msk-powerbi/intermediate",
-    "updatedAt": "2026-09-15",
+    "updatedAt": "2026-11-18",
     "topics": [
       {
         "id": "pbi-int-t1",
@@ -3073,7 +3032,17 @@
         "slug": "pbi-int-publishing-and-sharing-reports"
       }
     ],
-    "icon": "powerbi"
+    "icon": "powerbi",
+    "seo": {
+      "title": "Power BI Intermediate Tutorial: DAX & RLS | MSK Institute",
+      "description": "Free Intermediate Power BI tutorial with 29 lessons: Time Intelligence DAX, CALCULATE & SUMX iterators, composite models & Row-Level Security.",
+      "keywords": [
+        "power bi intermediate tutorial",
+        "dax calculate time intelligence",
+        "power bi row level security rls",
+        "power bi data modeling"
+      ]
+    }
   },
   {
     "id": "tut-power-bi-for-advanced",
@@ -3095,7 +3064,7 @@
     "totalHours": "35h",
     "topicsCount": 32,
     "githubRepo": "https://github.com/msk-powerbi/advance",
-    "updatedAt": "2026-09-15",
+    "updatedAt": "2026-11-18",
     "topics": [
       {
         "id": "pbi-adv-t1",
@@ -3258,7 +3227,17 @@
         "slug": "pbi-adv-deployment-pipeline-implementation"
       }
     ],
-    "icon": "powerbi"
+    "icon": "powerbi",
+    "seo": {
+      "title": "Advanced Power BI Tutorial: Optimization & OLS | MSK Institute",
+      "description": "Free Advanced Power BI tutorial with 32 lessons: DAX context transition, Object-Level Security, incremental refresh, aggregations & query tuning.",
+      "keywords": [
+        "advanced power bi tutorial",
+        "dax context transition optimization",
+        "power bi incremental refresh",
+        "power bi object level security"
+      ]
+    }
   },
   {
     "featured": true,

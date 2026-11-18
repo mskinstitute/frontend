@@ -1,6 +1,24 @@
-# Boolean Indexing & DataFrame Querying
-
-*Reading Time: 8 Mins* | *Level: Beginner to Advanced*
+---
+id: boolean-indexing-and-query
+slug: boolean-indexing-and-query
+course: pandas-complete-course
+chapter: "3: Indexing, Selection & Conditional Filtering"
+topic: "3.2 Boolean Indexing & DataFrame Querying"
+title: "Boolean Indexing & DataFrame Querying"
+description: "Learn Boolean Indexing & DataFrame Querying in Pandas with practical examples, analyst workflows, and interactive practice quizzes at MSK Institute."
+difficulty: Intermediate
+readingTime: 6
+order: 2
+keywords:
+  - boolean indexing dataframe querying
+  - pandas tutorial
+  - boolean indexing and query
+  - data analysis course
+  - MSK Institute
+lastUpdated: 2026-11-18
+author: "Er. Sumit Kumar (MSK Institute)"
+version: 1.1.0
+---
 
 ---
 
@@ -83,8 +101,7 @@ result2 = df.query("Salary >= @min_sal and Age < 30")
 
 ---
 
-# Multiple Choice Questions
-
+## Practice Quiz
 ### 1. Which operator must be used for logical AND when combining Boolean conditions in Pandas?
 A. `and`
 B. `&&`

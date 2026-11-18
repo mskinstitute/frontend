@@ -1,6 +1,24 @@
-# Basic Calculated Fields in Tableau
-
-*Reading Time: 8 Mins* | *Level: Beginner to Advanced*
+---
+id: basic-calculated-fields
+slug: basic-calculated-fields
+course: tableau-for-beginners
+chapter: "4: Calculations, Parameters & LOD Expressions"
+topic: "4.1 Basic Calculated Fields (String, Number & Date Math)"
+title: "Basic Calculated Fields (String, Number & Date Math)"
+description: "Learn Basic Calculated Fields (String, Number & Date Math) in Tableau with practical examples, analyst workflows, and interactive practice quizzes at MSK I."
+difficulty: Beginner
+readingTime: 6
+order: 1
+keywords:
+  - basic calculated fields string number date math
+  - tableau tutorial
+  - basic calculated fields
+  - data analysis course
+  - MSK Institute
+lastUpdated: 2026-11-18
+author: "Er. Sumit Kumar (MSK Institute)"
+version: 1.1.0
+---
 
 ---
 
@@ -39,8 +57,7 @@ DATEDIFF('day', [Order Date], [Ship Date])
 
 ---
 
-# Multiple Choice Questions
-
+## Practice Quiz
 ### 1. What keyword must always terminate an `IF...THEN...ELSE` logical block in Tableau calculations?
 A. `END`
 B. `FINISH`

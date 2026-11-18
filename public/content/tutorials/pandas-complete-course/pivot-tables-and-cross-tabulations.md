@@ -1,6 +1,24 @@
-# Pivot Tables & Cross-Tabulations (pivot_table, crosstab)
-
-*Reading Time: 8 Mins* | *Level: Beginner to Advanced*
+---
+id: pivot-tables-and-cross-tabulations
+slug: pivot-tables-and-cross-tabulations
+course: pandas-complete-course
+chapter: "6: Grouping, Aggregation & Pivot Tables"
+topic: "6.3 Pivot Tables & Cross-Tabulations (pivot_table, crosstab)"
+title: "Pivot Tables & Cross-Tabulations (pivot_table, crosstab)"
+description: "Learn Pivot Tables & Cross-Tabulations (pivot_table, crosstab) in Pandas with practical examples, analyst workflows, and interactive practice quizzes at MS."
+difficulty: Intermediate
+readingTime: 6
+order: 3
+keywords:
+  - pivot tables cross-tabulations pivottable crosstab
+  - pandas tutorial
+  - pivot tables and cross tabulations
+  - data analysis course
+  - MSK Institute
+lastUpdated: 2026-11-18
+author: "Er. Sumit Kumar (MSK Institute)"
+version: 1.1.0
+---
 
 ---
 
@@ -64,8 +82,7 @@ print(pct_table)
 
 ---
 
-# Multiple Choice Questions
-
+## Practice Quiz
 ### 1. What parameter in `df.pivot_table()` specifies the mathematical aggregation to apply (defaulting to 'mean')?
 A. `operation`
 B. `aggfunc`

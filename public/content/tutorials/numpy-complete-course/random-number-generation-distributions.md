@@ -1,4 +1,24 @@
-# Modern Random Sampling: Generator & BitGenerator
+---
+id: random-number-generation-distributions
+slug: random-number-generation-distributions
+course: numpy-complete-course
+chapter: "12: Random Sampling, File I/O & Capstone Project"
+topic: "12.1 Random Number Generation with default_rng & Distributions"
+title: "Random Number Generation with default_rng & Distributions"
+description: "Random number generation is indispensable across scientific computing: simulating physical stochastic processes, initializing weights in deep learning."
+difficulty: Intermediate
+readingTime: 6
+order: 1
+keywords:
+  - random number generation with defaultrng distributions
+  - numpy tutorial
+  - random number generation distributions
+  - data analysis course
+  - MSK Institute
+lastUpdated: 2026-11-18
+author: "Er. Sumit Kumar (MSK Institute)"
+version: 1.1.0
+---
 
 Random number generation is indispensable across scientific computing: simulating physical stochastic processes, initializing weights in deep learning networks, shuffling datasets for cross-validation, and conducting Monte Carlo risk assessments.
 
@@ -97,8 +117,7 @@ print("Lottery winners:", lottery_winners)
 
 ---
 
-# Multiple Choice Questions
-
+## Practice Quiz
 ### 1. What is the recommended modern method to instantiate a random number generator in NumPy?
 A. `np.random.seed(42)`
 B. `np.random.default_rng(seed)`

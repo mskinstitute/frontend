@@ -1,6 +1,24 @@
-# Connecting to Data: Excel, CSV, Google Sheets & SQL Databases
-
-*Reading Time: 8 Mins* | *Level: Beginner to Advanced*
+---
+id: connecting-to-data-sources
+slug: connecting-to-data-sources
+course: tableau-for-beginners
+chapter: "1: Introduction to Tableau & Visual Analytics"
+topic: "1.3 Connecting to Data: Excel, CSV, Google Sheets & SQL Databases"
+title: "Connecting to Data: Excel, CSV, Google Sheets & SQL Databases"
+description: "Learn Connecting to Data: Excel, CSV, Google Sheets & SQL Databases in Tableau with practical examples, analyst workflows, and interactive practice quizzes."
+difficulty: Beginner
+readingTime: 6
+order: 3
+keywords:
+  - connecting to data excel csv google sheets sql databases
+  - tableau tutorial
+  - connecting to data sources
+  - data analysis course
+  - MSK Institute
+lastUpdated: 2026-11-18
+author: "Er. Sumit Kumar (MSK Institute)"
+version: 1.1.0
+---
 
 ---
 
@@ -19,8 +37,7 @@ Upon connection, the **Data Source Page** allows you to:
 
 ---
 
-# Multiple Choice Questions
-
+## Practice Quiz
 ### 1. Can Tableau directly connect to live Google Sheets spreadsheets?
 A. Yes, using the native Google Sheets connector with cloud authentication
 B. No, must be exported to Excel first

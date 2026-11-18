@@ -1,6 +1,24 @@
-# Bar Charts, Horizontal Bars & Stacked Bars
-
-*Reading Time: 8 Mins* | *Level: Intermediate*
+---
+id: bar-charts-and-categorical-comparisons
+slug: bar-charts-and-categorical-comparisons
+course: data-analysis--visualization--statistics
+chapter: "2: Matplotlib Architecture & Core Plotting"
+topic: "2.3 Bar Charts, Horizontal Bars & Stacked Bars"
+title: "Bar Charts, Horizontal Bars & Stacked Bars"
+description: "Learn Bar Charts, Horizontal Bars & Stacked Bars in Data Visualization & Statistics with practical examples, analyst workflows, and interactive practice qu."
+difficulty: Intermediate
+readingTime: 6
+order: 3
+keywords:
+  - bar charts horizontal bars stacked bars
+  - data visualization & statistics tutorial
+  - bar charts and categorical comparisons
+  - data analysis course
+  - MSK Institute
+lastUpdated: 2026-11-18
+author: "Er. Sumit Kumar (MSK Institute)"
+version: 1.1.0
+---
 
 ---
 
@@ -36,8 +54,7 @@ plt.show()
 
 ---
 
-# Multiple Choice Questions
-
+## Practice Quiz
 ### 1. Which Matplotlib method renders a horizontal bar chart?
 A. `ax.bar()`
 B. `ax.barh()`

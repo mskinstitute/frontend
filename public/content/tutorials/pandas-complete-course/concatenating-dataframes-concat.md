@@ -1,6 +1,24 @@
-# Concatenating DataFrames (pd.concat)
-
-*Reading Time: 8 Mins* | *Level: Beginner to Advanced*
+---
+id: concatenating-dataframes-concat
+slug: concatenating-dataframes-concat
+course: pandas-complete-course
+chapter: "7: Combining, Merging & Reshaping DataFrames"
+topic: "7.1 Concatenating DataFrames (pd.concat)"
+title: "Concatenating DataFrames (pd.concat)"
+description: "Learn Concatenating DataFrames (pd.concat) in Pandas with practical examples, analyst workflows, and interactive practice quizzes at MSK Institute."
+difficulty: Intermediate
+readingTime: 6
+order: 1
+keywords:
+  - concatenating dataframes pdconcat
+  - pandas tutorial
+  - concatenating dataframes concat
+  - data analysis course
+  - MSK Institute
+lastUpdated: 2026-11-18
+author: "Er. Sumit Kumar (MSK Institute)"
+version: 1.1.0
+---
 
 ---
 
@@ -62,8 +80,7 @@ print(df_combined)
 
 ---
 
-# Multiple Choice Questions
-
+## Practice Quiz
 ### 1. Which function is used in Pandas to concatenate multiple DataFrames together along an axis?
 A. `pd.append()`
 B. `pd.concat()`

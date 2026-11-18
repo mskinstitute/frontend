@@ -1,6 +1,24 @@
-# Dashboard Layout: Tiled vs Floating, Containers & Alignment
-
-*Reading Time: 8 Mins* | *Level: Beginner to Advanced*
+---
+id: dashboard-layout-and-containers
+slug: dashboard-layout-and-containers
+course: tableau-for-beginners
+chapter: "5: Interactive Dashboards & Storytelling"
+topic: "5.1 Dashboard Layout: Tiled vs Floating, Containers & Alignment"
+title: "Dashboard Layout: Tiled vs Floating, Containers & Alignment"
+description: "Learn Dashboard Layout: Tiled vs Floating, Containers & Alignment in Tableau with practical examples, analyst workflows, and interactive practice quizzes a."
+difficulty: Beginner
+readingTime: 6
+order: 1
+keywords:
+  - dashboard layout tiled vs floating containers alignment
+  - tableau tutorial
+  - dashboard layout and containers
+  - data analysis course
+  - MSK Institute
+lastUpdated: 2026-11-18
+author: "Er. Sumit Kumar (MSK Institute)"
+version: 1.1.0
+---
 
 ---
 
@@ -18,8 +36,7 @@ Never drop visuals randomly on a canvas. Structure your dashboard using **Layout
 
 ---
 
-# Multiple Choice Questions
-
+## Practice Quiz
 ### 1. What layout mode in Tableau snaps visual elements into a responsive, non-overlapping structured grid?
 A. Tiled layout
 B. Floating layout

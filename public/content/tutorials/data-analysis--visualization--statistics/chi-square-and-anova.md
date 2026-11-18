@@ -1,6 +1,24 @@
-# Chi-Square Test of Independence & ANOVA Basics
-
-*Reading Time: 8 Mins* | *Level: Intermediate*
+---
+id: chi-square-and-anova
+slug: chi-square-and-anova
+course: data-analysis--visualization--statistics
+chapter: "5: Hypothesis Testing & A/B Testing"
+topic: "5.3 Chi-Square Test of Independence & ANOVA Basics"
+title: "Chi-Square Test of Independence & ANOVA Basics"
+description: "Instead, use ANOVA (Analysis of Variance), which uses the F-statistic to evaluate whether at least one group mean differs:"
+difficulty: Intermediate
+readingTime: 6
+order: 3
+keywords:
+  - chi-square test of independence anova basics
+  - data visualization & statistics tutorial
+  - chi square and anova
+  - data analysis course
+  - MSK Institute
+lastUpdated: 2026-11-18
+author: "Er. Sumit Kumar (MSK Institute)"
+version: 1.1.0
+---
 
 ---
 
@@ -42,8 +60,7 @@ print(f"ANOVA F-Stat: {f_stat:.4f}, P-Value: {p_val:.4f}")
 
 ---
 
-# Multiple Choice Questions
-
+## Practice Quiz
 ### 1. Which statistical test evaluates whether two categorical variables are independent of each other?
 A. Student's t-test
 B. Chi-Square Test of Independence (`stats.chi2_contingency`)

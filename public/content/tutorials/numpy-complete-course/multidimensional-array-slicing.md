@@ -1,4 +1,24 @@
-# Multi-Dimensional Array Slicing (Row, Column & Matrix Slices)
+---
+id: multidimensional-array-slicing
+slug: multidimensional-array-slicing
+course: numpy-complete-course
+chapter: "4: Basic Indexing, Slicing & Views"
+topic: "4.2 Multi-Dimensional Array Slicing (Row, Column & Matrix Slices)"
+title: "Multi-Dimensional Array Slicing (Row, Column & Matrix Slices)"
+description: "In multi-dimensional arrays, slicing generalizes across multiple axes. Unlike standard Python (which requires clumsy chained brackets like."
+difficulty: Intermediate
+readingTime: 7
+order: 2
+keywords:
+  - multi-dimensional array slicing row column matrix slices
+  - numpy tutorial
+  - multidimensional array slicing
+  - data analysis course
+  - MSK Institute
+lastUpdated: 2026-11-18
+author: "Er. Sumit Kumar (MSK Institute)"
+version: 1.1.0
+---
 
 In multi-dimensional arrays, slicing generalizes across multiple axes. Unlike standard Python (which requires clumsy chained brackets like `matrix[row][col]`), NumPy allows clean comma-separated slicing along every axis simultaneously: **`arr[row_slice, col_slice]`**.
 
@@ -90,8 +110,7 @@ print(red_channel.shape)     # (32, 100, 1080, 1920)
 
 ---
 
-# Multiple Choice Questions
-
+## Practice Quiz
 ### 1. In a 2D NumPy array 'arr', how do you extract the entire third column across all rows?
 A. arr[3, :]
 B. arr[:, 2]

@@ -1,4 +1,24 @@
-# Solving Linear Systems: inv(), det(), & solve()
+---
+id: matrix-inversion-determinant-solve
+slug: matrix-inversion-determinant-solve
+course: numpy-complete-course
+chapter: "11: Linear Algebra with numpy.linalg"
+topic: "11.2 Matrix Determinant, Inversion & Solving Linear Systems"
+title: "Matrix Determinant, Inversion & Solving Linear Systems"
+description: "Systems of simultaneous linear equations arise everywhere: in engineering simulations, structural load calculations, econometric models, and machine."
+difficulty: Intermediate
+readingTime: 7
+order: 2
+keywords:
+  - matrix determinant inversion solving linear systems
+  - numpy tutorial
+  - matrix inversion determinant solve
+  - data analysis course
+  - MSK Institute
+lastUpdated: 2026-11-18
+author: "Er. Sumit Kumar (MSK Institute)"
+version: 1.1.0
+---
 
 Systems of simultaneous linear equations arise everywhere: in engineering simulations, structural load calculations, econometric models, and machine learning normal equations.
 
@@ -125,8 +145,7 @@ print(f"Fitted Line: y = {slope:.2f}x + {intercept:.2f}")
 
 ---
 
-# Multiple Choice Questions
-
+## Practice Quiz
 ### 1. What does a matrix determinant equal to zero ($det(A) = 0$) indicate?
 A. The matrix is symmetric
 B. The matrix is singular and cannot be inverted

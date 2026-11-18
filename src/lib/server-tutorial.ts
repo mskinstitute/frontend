@@ -1,6 +1,6 @@
 import fs from 'fs/promises';
 import path from 'path';
-import { parseFrontmatter } from '@/lib/markdown';
+import { parseFrontmatter, extractMetaDescription } from '@/lib/markdown';
 import { fetchTutorialBySlug } from '@/services/api';
 import { TutorialTopicFrontmatter, Course, TutorialItem } from '@/types';
 import githubManifest from '@/data/githubTutorialManifest.json';
@@ -25,10 +25,12 @@ export async function fetchTutorialTopic(
 
   const { tutorial, course } = tutorialData;
 
-  // Flatten course topics to find current, previous, and next
+  // Flatten course topics in deterministic curriculum order to find current, previous, and next
   const flatTopics: { title: string; slug: string }[] = [];
-  course.chapters?.forEach((ch) => {
-    ch.topics?.forEach((t) => {
+  const sortedChapters = [...(course.chapters || [])].sort((a, b) => (a.sortOrder ?? 0) - (b.sortOrder ?? 0));
+  sortedChapters.forEach((ch) => {
+    const sortedTopics = [...(ch.topics || [])].sort((a, b) => (a.sortOrder ?? 0) - (b.sortOrder ?? 0));
+    sortedTopics.forEach((t) => {
       const s =
         (t as any).slug ||
         t.title
@@ -250,10 +252,46 @@ export async function fetchTutorialTopic(
 
   const { frontmatter, content } = parseFrontmatter<TutorialTopicFrontmatter>(rawMarkdown);
 
+  const cleanedTopicTitle =
+    typeof frontmatter.topic === 'string'
+      ? frontmatter.topic.replace(/^\d+\.\d+\s+/, '').trim()
+      : '';
+  const resolvedTitle =
+    (frontmatter.title && String(frontmatter.title).trim()) ||
+    cleanedTopicTitle ||
+    flatTopics[currentIndex]?.title ||
+    'Lesson';
+
+  const resolvedDescription =
+    (frontmatter.description && String(frontmatter.description).trim()) ||
+    extractMetaDescription(
+      content,
+      `Learn ${resolvedTitle} in ${tutorial.title} with clear code examples, common mistakes to avoid, and practice quiz at MSK Institute.`
+    );
+
+  const rawAuthor = frontmatter.author ? String(frontmatter.author).trim() : '';
+  const resolvedAuthor =
+    !rawAuthor || /antigravity/i.test(rawAuthor)
+      ? 'Er. Sumit Kumar (MSK Institute)'
+      : rawAuthor;
+
+  const resolvedKeywords = Array.isArray(frontmatter.keywords)
+    ? frontmatter.keywords
+    : typeof frontmatter.keywords === 'string'
+    ? (frontmatter.keywords as string)
+        .replace(/^\[|\]$/g, '')
+        .split(',')
+        .map((k) => k.trim().replace(/^['"]|['"]$/g, ''))
+        .filter(Boolean)
+    : undefined;
+
   return {
     frontmatter: {
       ...frontmatter,
-      title: frontmatter.title || flatTopics[currentIndex]?.title || 'Lesson',
+      title: resolvedTitle,
+      description: resolvedDescription,
+      author: resolvedAuthor,
+      keywords: resolvedKeywords,
       slug: topicSlug,
     },
     content,

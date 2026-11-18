@@ -1,4 +1,24 @@
-# Locating Extrema: argmax(), argmin(), & nonzero()
+---
+id: searching-argmax-argmin-nonzero
+slug: searching-argmax-argmin-nonzero
+course: numpy-complete-course
+chapter: "10: Sorting, Searching & Set Operations"
+topic: "10.2 Searching & Counting (argmax, argmin, nonzero, count_nonzero)"
+title: "Searching & Counting (argmax, argmin, nonzero, count_nonzero)"
+description: "Finding where extreme values occur—such as locating the maximum probability class in neural network classification, pinpointing the peak signal in a."
+difficulty: Intermediate
+readingTime: 7
+order: 2
+keywords:
+  - searching counting argmax argmin nonzero countnonzero
+  - numpy tutorial
+  - searching argmax argmin nonzero
+  - data analysis course
+  - MSK Institute
+lastUpdated: 2026-11-18
+author: "Er. Sumit Kumar (MSK Institute)"
+version: 1.1.0
+---
 
 Finding where extreme values occur—such as locating the maximum probability class in neural network classification, pinpointing the peak signal in a spectroscopy scan, or identifying active sensor triggers—is a standard task across numerical science.
 
@@ -97,8 +117,7 @@ print("Total non-zero count:", np.count_nonzero(sparse_grid))  # 3
 
 ---
 
-# Multiple Choice Questions
-
+## Practice Quiz
 ### 1. In the case of multiple identical maximum values in an array, which index does `np.argmax()` return?
 A. The last occurrence
 B. The first occurrence

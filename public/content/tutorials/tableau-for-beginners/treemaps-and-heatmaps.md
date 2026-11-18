@@ -1,6 +1,24 @@
-# Treemaps, Heatmaps & Highlight Tables
-
-*Reading Time: 8 Mins* | *Level: Beginner to Advanced*
+---
+id: treemaps-and-heatmaps
+slug: treemaps-and-heatmaps
+course: tableau-for-beginners
+chapter: "3: Core Visualizations & Chart Types"
+topic: "3.3 Treemaps, Heatmaps & Highlight Tables"
+title: "Treemaps, Heatmaps & Highlight Tables"
+description: "Learn Treemaps, Heatmaps & Highlight Tables in Tableau with practical examples, analyst workflows, and interactive practice quizzes at MSK Institute."
+difficulty: Beginner
+readingTime: 6
+order: 3
+keywords:
+  - treemaps heatmaps highlight tables
+  - tableau tutorial
+  - treemaps and heatmaps
+  - data analysis course
+  - MSK Institute
+lastUpdated: 2026-11-18
+author: "Er. Sumit Kumar (MSK Institute)"
+version: 1.1.0
+---
 
 ---
 
@@ -18,8 +36,7 @@ A **Highlight Table** is a numerical matrix where cell background colors are sha
 
 ---
 
-# Multiple Choice Questions
-
+## Practice Quiz
 ### 1. What two dimensions of data are simultaneously encoded in a standard Tableau Treemap?
 A. Rectangle Area (Size) and Rectangle Color (Hue gradient)
 B. Border width and font style

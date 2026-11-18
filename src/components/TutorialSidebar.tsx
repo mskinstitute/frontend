@@ -93,11 +93,57 @@ export default function TutorialSidebar({
               <span>Study Materials</span>
             </Link>
 
-            {tutorialSlug === 'python-for-beginners' && (
+            {tutorialSlug.startsWith('python-for-') && (
               <Link
                 href="/study-material?id=cheat-python-beginners&type=cheatsheet"
                 className="inline-flex items-center gap-1 px-2 py-1 rounded-lg text-[11px] font-bold text-purple-700 bg-purple-50 hover:bg-purple-100 border border-purple-200 transition-colors"
                 title="Open Python Cheatsheet"
+              >
+                <Layers className="w-3 h-3 text-purple-600" />
+                <span>Cheatsheet</span>
+              </Link>
+            )}
+
+            {(tutorialSlug === 'pandas-complete-course' ||
+              tutorialSlug === 'numpy-complete-course' ||
+              tutorialSlug.startsWith('data-analysis--')) && (
+              <Link
+                href="/study-material?id=cheat-pandas-data-science&type=cheatsheet"
+                className="inline-flex items-center gap-1 px-2 py-1 rounded-lg text-[11px] font-bold text-purple-700 bg-purple-50 hover:bg-purple-100 border border-purple-200 transition-colors"
+                title="Open Pandas & Data Science Cheatsheet"
+              >
+                <Layers className="w-3 h-3 text-purple-600" />
+                <span>Cheatsheet</span>
+              </Link>
+            )}
+
+            {tutorialSlug.startsWith('power-bi-for-') && (
+              <Link
+                href="/study-material?id=cheat-power-bi-dax-modeling&type=cheatsheet"
+                className="inline-flex items-center gap-1 px-2 py-1 rounded-lg text-[11px] font-bold text-purple-700 bg-purple-50 hover:bg-purple-100 border border-purple-200 transition-colors"
+                title="Open Power BI & DAX Cheatsheet"
+              >
+                <Layers className="w-3 h-3 text-purple-600" />
+                <span>Cheatsheet</span>
+              </Link>
+            )}
+
+            {tutorialSlug.startsWith('sql-for-') && (
+              <Link
+                href="/study-material?id=cheat-sql-data-analytics&type=cheatsheet"
+                className="inline-flex items-center gap-1 px-2 py-1 rounded-lg text-[11px] font-bold text-purple-700 bg-purple-50 hover:bg-purple-100 border border-purple-200 transition-colors"
+                title="Open SQL Data Analytics Cheatsheet"
+              >
+                <Layers className="w-3 h-3 text-purple-600" />
+                <span>Cheatsheet</span>
+              </Link>
+            )}
+
+            {tutorialSlug.startsWith('ms-excel-for-') && (
+              <Link
+                href="/study-material?id=cheat-excel-top50&type=cheatsheet"
+                className="inline-flex items-center gap-1 px-2 py-1 rounded-lg text-[11px] font-bold text-purple-700 bg-purple-50 hover:bg-purple-100 border border-purple-200 transition-colors"
+                title="Open Excel Formulas Cheatsheet"
               >
                 <Layers className="w-3 h-3 text-purple-600" />
                 <span>Cheatsheet</span>
@@ -164,8 +210,13 @@ export default function TutorialSidebar({
 
       {/* Chapters & Topics List */}
       <div className="flex-1 overflow-y-auto p-3 space-y-3">
-        {chapters.map((chapter, chapterIndex) => {
+        {[...chapters]
+          .sort((a, b) => (a.sortOrder ?? 0) - (b.sortOrder ?? 0))
+          .map((chapter, chapterIndex) => {
           const isExpanded = expandedChapters[chapter.id] !== false;
+          const sortedTopics = [...(chapter.topics || [])].sort(
+            (a, b) => (a.sortOrder ?? 0) - (b.sortOrder ?? 0)
+          );
 
           return (
             <div key={chapter.id} className="space-y-1">
@@ -192,7 +243,7 @@ export default function TutorialSidebar({
               {/* Topics List with Hierarchical Numbering */}
               {isExpanded && (
                 <div className="space-y-0.5 pl-2">
-                  {chapter.topics.map((topic, topicIndex) => {
+                  {sortedTopics.map((topic, topicIndex) => {
                     const topicSlug =
                       (topic as any).slug ||
                       topic.title

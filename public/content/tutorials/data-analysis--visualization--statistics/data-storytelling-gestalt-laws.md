@@ -1,6 +1,24 @@
-# Data Storytelling Principles: Gestalt Laws & Cognitive Load
-
-*Reading Time: 8 Mins* | *Level: Intermediate*
+---
+id: data-storytelling-gestalt-laws
+slug: data-storytelling-gestalt-laws
+course: data-analysis--visualization--statistics
+chapter: "6: Storytelling & Executive Dashboard Project"
+topic: "6.1 Data Storytelling Principles: Gestalt Laws & Cognitive Load"
+title: "Data Storytelling Principles: Gestalt Laws & Cognitive Load"
+description: "Learn Data Storytelling Principles: Gestalt Laws & Cognitive Load in Data Visualization & Statistics with practical examples, analyst workflows, and intera."
+difficulty: Intermediate
+readingTime: 6
+order: 1
+keywords:
+  - data storytelling principles gestalt laws cognitive load
+  - data visualization & statistics tutorial
+  - data storytelling gestalt laws
+  - data analysis course
+  - MSK Institute
+lastUpdated: 2026-11-18
+author: "Er. Sumit Kumar (MSK Institute)"
+version: 1.1.0
+---
 
 ---
 
@@ -25,8 +43,7 @@ The human visual cortex groups visual stimuli based on fundamental psychological
 
 ---
 
-# Multiple Choice Questions
-
+## Practice Quiz
 ### 1. According to Edward Tufte's data-ink ratio principle, what should a data analyst maximize?
 A. The proportion of graphic ink devoted to presenting actual data vs non-data decorative clutter
 B. The brightness of colors

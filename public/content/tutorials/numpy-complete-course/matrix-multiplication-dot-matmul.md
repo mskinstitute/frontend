@@ -1,4 +1,24 @@
-# Vector & Matrix Multiplication: dot(), matmul(), and @
+---
+id: matrix-multiplication-dot-matmul
+slug: matrix-multiplication-dot-matmul
+course: numpy-complete-course
+chapter: "11: Linear Algebra with numpy.linalg"
+topic: "11.1 Dot Products & Matrix Multiplication (dot, @ operator, matmul)"
+title: "Dot Products & Matrix Multiplication (dot, @ operator, matmul)"
+description: "In linear algebra, machine learning (neural networks, linear regression), and 3D computer graphics, matrix multiplication is the foundational building."
+difficulty: Intermediate
+readingTime: 8
+order: 1
+keywords:
+  - dot products matrix multiplication dot operator matmul
+  - numpy tutorial
+  - matrix multiplication dot matmul
+  - data analysis course
+  - MSK Institute
+lastUpdated: 2026-11-18
+author: "Er. Sumit Kumar (MSK Institute)"
+version: 1.1.0
+---
 
 In linear algebra, machine learning (neural networks, linear regression), and 3D computer graphics, matrix multiplication is the foundational building block. 
 
@@ -93,8 +113,7 @@ print("M @ v result:", result)       # [1*10 + 2*20 + 3*30, 4*10 + 5*20 + 6*30] 
 
 ---
 
-# Multiple Choice Questions
-
+## Practice Quiz
 ### 1. Which Python operator is designated for matrix multiplication?
 A. `*`
 B. `**`

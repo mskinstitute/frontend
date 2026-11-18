@@ -1,6 +1,24 @@
-# Distribution Plots: histplot, kdeplot, and ecdfplot
-
-*Reading Time: 8 Mins* | *Level: Intermediate*
+---
+id: seaborn-distribution-plots
+slug: seaborn-distribution-plots
+course: data-analysis--visualization--statistics
+chapter: "3: Statistical Visualizations with Seaborn"
+topic: "3.2 Distribution Plots: histplot, kdeplot, and ecdfplot"
+title: "Distribution Plots: histplot, kdeplot, and ecdfplot"
+description: "Learn Distribution Plots: histplot, kdeplot, and ecdfplot in Data Visualization & Statistics with practical examples, analyst workflows, and interactive pr."
+difficulty: Intermediate
+readingTime: 6
+order: 2
+keywords:
+  - distribution plots histplot kdeplot and ecdfplot
+  - data visualization & statistics tutorial
+  - seaborn distribution plots
+  - data analysis course
+  - MSK Institute
+lastUpdated: 2026-11-18
+author: "Er. Sumit Kumar (MSK Institute)"
+version: 1.1.0
+---
 
 ---
 
@@ -49,8 +67,7 @@ plt.show()
 
 ---
 
-# Multiple Choice Questions
-
+## Practice Quiz
 ### 1. Which modern Seaborn function replaces the legacy `sns.distplot()` for plotting histograms and density curves?
 A. `sns.histplot()`
 B. `sns.plot_distribution()`

@@ -1,6 +1,24 @@
-# Pandas Installation & Environment Setup
-
-*Reading Time: 8 Mins* | *Level: Beginner to Advanced*
+---
+id: pandas-installation-and-environment
+slug: pandas-installation-and-environment
+course: pandas-complete-course
+chapter: "1: Introduction to Pandas & Data Structures"
+topic: "1.2 Pandas Installation & Environment Setup"
+title: "Pandas Installation & Environment Setup"
+description: "In this lesson, we will set up our local Python data environment using modern package managers (pip or conda)."
+difficulty: Intermediate
+readingTime: 6
+order: 2
+keywords:
+  - pandas installation environment setup
+  - pandas tutorial
+  - pandas installation and environment
+  - data analysis course
+  - MSK Institute
+lastUpdated: 2026-11-18
+author: "Er. Sumit Kumar (MSK Institute)"
+version: 1.1.0
+---
 
 ---
 
@@ -72,8 +90,7 @@ pd.set_option('display.float_format', lambda x: f'₹{x:,.2f}')
 
 ---
 
-# Multiple Choice Questions
-
+## Practice Quiz
 ### 1. Which command correctly installs Pandas along with Excel reading support using pip?
 A. `pip install pandas openpyxl`
 B. `pip install pandas-excel`

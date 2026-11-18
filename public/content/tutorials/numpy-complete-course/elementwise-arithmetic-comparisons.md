@@ -1,4 +1,24 @@
-# Element-wise Arithmetic & Logical Operators
+---
+id: elementwise-arithmetic-comparisons
+slug: elementwise-arithmetic-comparisons
+course: numpy-complete-course
+chapter: "8: Vectorized Operations & Broadcasting"
+topic: "8.2 Element-Wise Arithmetic & Comparison Operations"
+title: "Element-Wise Arithmetic & Comparison Operations"
+description: "In NumPy, mathematical and comparison operators applied to arrays operate element-by-element (element-wise) by default. This contrasts with linear."
+difficulty: Intermediate
+readingTime: 8
+order: 2
+keywords:
+  - element-wise arithmetic comparison operations
+  - numpy tutorial
+  - elementwise arithmetic comparisons
+  - data analysis course
+  - MSK Institute
+lastUpdated: 2026-11-18
+author: "Er. Sumit Kumar (MSK Institute)"
+version: 1.1.0
+---
 
 In NumPy, mathematical and comparison operators applied to arrays operate **element-by-element** (element-wise) by default. This contrasts with linear algebra matrix conventions (where multiplication denotes dot products) or standard Python lists (where `+` concatenates lists and `*` duplicates them).
 
@@ -108,8 +128,7 @@ print("np.allclose:", np.allclose(val1, val2))           # True
 
 ---
 
-# Multiple Choice Questions
-
+## Practice Quiz
 ### 1. What is the output of `np.array([1, 2, 3]) * np.array([2, 3, 4])`?
 A. A scalar dot product: 20
 B. A 1D array: `[2, 6, 12]`

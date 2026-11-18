@@ -1,4 +1,24 @@
-# Linear Regression: Coefficients, R-Squared & MSE
+---
+id: linear-regression-for-revenue-prediction
+slug: linear-regression-for-revenue-prediction
+course: data-analysis--advanced-pandas--ml-basics
+chapter: "4: Regression & Classification Modeling"
+topic: "4.1 Linear Regression: Coefficients, R-Squared & MSE"
+title: "Linear Regression: Coefficients, R-Squared & MSE"
+description: "Ordinary Least Squares (OLS) Linear Regression is the foundation of predictive modeling in business analytics. Whether forecasting quarterly corporate."
+difficulty: Advanced
+readingTime: 7
+order: 1
+keywords:
+  - linear regression coefficients r-squared mse
+  - data science & machine learning tutorial
+  - linear regression for revenue prediction
+  - data analysis course
+  - MSK Institute
+lastUpdated: 2026-11-18
+author: "Er. Sumit Kumar (MSK Institute)"
+version: 1.1.0
+---
 
 **Ordinary Least Squares (OLS) Linear Regression** is the foundation of predictive modeling in business analytics. Whether forecasting quarterly corporate revenue, estimating customer lifetime value (LTV), or quantifying price elasticity, linear regression provides an interpretable, transparent mathematical model that executive leadership can trust.
 
@@ -85,8 +105,7 @@ print(f"RMSE: ${rmse:,.2f}")
 
 ---
 
-# Multiple Choice Questions
-
+## Practice Quiz
 ### 1. In a multiple linear regression model, what does a coefficient of $\beta = 3.50$ for the feature `email_campaigns` mean?
 A. Total company revenue will increase by 3.50% every year.
 B. For each additional email campaign sent, revenue is expected to increase by $3.50, holding all other features constant.

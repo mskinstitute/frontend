@@ -1,6 +1,24 @@
-# Tableau Desktop Interface: Data Pane, Shelves & Canvas Tour
-
-*Reading Time: 8 Mins* | *Level: Beginner to Advanced*
+---
+id: tableau-desktop-interface-tour
+slug: tableau-desktop-interface-tour
+course: tableau-for-beginners
+chapter: "1: Introduction to Tableau & Visual Analytics"
+topic: "1.2 Tableau Desktop Interface: Data Pane, Shelves & Canvas Tour"
+title: "Tableau Desktop Interface: Data Pane, Shelves & Canvas Tour"
+description: "Learn Tableau Desktop Interface: Data Pane, Shelves & Canvas Tour in Tableau with practical examples, analyst workflows, and interactive practice quizzes a."
+difficulty: Beginner
+readingTime: 6
+order: 2
+keywords:
+  - tableau desktop interface data pane shelves canvas tour
+  - tableau tutorial
+  - tableau desktop interface tour
+  - data analysis course
+  - MSK Institute
+lastUpdated: 2026-11-18
+author: "Er. Sumit Kumar (MSK Institute)"
+version: 1.1.0
+---
 
 ---
 
@@ -16,8 +34,7 @@ The Tableau Desktop authoring window is structured into distinct functional zone
 
 ---
 
-# Multiple Choice Questions
-
+## Practice Quiz
 ### 1. In Tableau Desktop, what happens when you drag a Measure onto the 'Rows' shelf and a Dimension onto the 'Columns' shelf?
 A. Tableau draws a vertical bar chart
 B. Tableau creates a map

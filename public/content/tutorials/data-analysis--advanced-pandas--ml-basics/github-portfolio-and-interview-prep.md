@@ -1,4 +1,24 @@
-# GitHub Portfolio Documentation & Technical Interview Presentation
+---
+id: github-portfolio-and-interview-prep
+slug: github-portfolio-and-interview-prep
+course: data-analysis--advanced-pandas--ml-basics
+chapter: "6: End-to-End Capstone Portfolio Project"
+topic: "6.3 GitHub Portfolio Documentation & Technical Interview Presentation"
+title: "GitHub Portfolio Documentation & Technical Interview Presentation"
+description: "Technical skill alone will not land your dream Data Analyst role—how you document, communicate, and present your work is what gets you hired. A."
+difficulty: Advanced
+readingTime: 8
+order: 3
+keywords:
+  - github portfolio documentation technical interview presentation
+  - data science & machine learning tutorial
+  - github portfolio and interview prep
+  - data analysis course
+  - MSK Institute
+lastUpdated: 2026-11-18
+author: "Er. Sumit Kumar (MSK Institute)"
+version: 1.1.0
+---
 
 Technical skill alone will not land your dream Data Analyst role—**how you document, communicate, and present your work is what gets you hired**. A disorganized GitHub repository with raw messy code and no README is an immediate rejection from hiring managers. In this capstone guide, you will master the structure of a world-class analytics portfolio project and how to ace technical case study interviews.
 
@@ -61,8 +81,7 @@ When interviewers ask: *"Tell me about a complex data project you completed"*, s
 
 ---
 
-# Multiple Choice Questions
-
+## Practice Quiz
 ### 1. When a hiring manager evaluates your GitHub repository, which file is the single most critical asset that determines whether you get interviewed?
 A. `.gitignore`
 B. `README.md` (well-structured with business context, key visual findings, and clear takeaways)

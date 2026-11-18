@@ -1,6 +1,24 @@
-# Formulating Null & Alternative Hypotheses & p-values
-
-*Reading Time: 8 Mins* | *Level: Intermediate*
+---
+id: hypothesis-testing-and-p-values
+slug: hypothesis-testing-and-p-values
+course: data-analysis--visualization--statistics
+chapter: "5: Hypothesis Testing & A/B Testing"
+topic: "5.1 Formulating Null & Alternative Hypotheses & p-values"
+title: "Formulating Null & Alternative Hypotheses & p-values"
+description: "Hypothesis Testing is a formal statistical framework for evaluating whether an observed difference is genuine or merely random sample fluctuation."
+difficulty: Intermediate
+readingTime: 6
+order: 1
+keywords:
+  - formulating null alternative hypotheses p-values
+  - data visualization & statistics tutorial
+  - hypothesis testing and p values
+  - data analysis course
+  - MSK Institute
+lastUpdated: 2026-11-18
+author: "Er. Sumit Kumar (MSK Institute)"
+version: 1.1.0
+---
 
 ---
 
@@ -33,8 +51,7 @@ In business analytics, we constantly test assumptions (e.g. "Did our new website
 
 ---
 
-# Multiple Choice Questions
-
+## Practice Quiz
 ### 1. What does a p-value of $p = 0.018$ indicate when evaluated against a significance level of $alpha = 0.05$?
 A. Reject the null hypothesis ($H_0$); the difference is statistically significant
 B. Fail to reject the null hypothesis

@@ -1,4 +1,24 @@
-# Stacking Arrays: np.vstack(), np.hstack(), & np.concatenate()
+---
+id: joining-stacking-arrays-vstack-hstack
+slug: joining-stacking-arrays-vstack-hstack
+course: numpy-complete-course
+chapter: "7: Joining, Stacking & Splitting Arrays"
+topic: "7.1 Concatenating & Stacking Arrays (concatenate, vstack, hstack)"
+title: "Concatenating & Stacking Arrays (concatenate, vstack, hstack)"
+description: "Combining multiple datasets, merging feature matrices with target labels, and assembling image tiles are fundamental tasks in numerical data pipelines."
+difficulty: Intermediate
+readingTime: 7
+order: 1
+keywords:
+  - concatenating stacking arrays concatenate vstack hstack
+  - numpy tutorial
+  - joining stacking arrays vstack hstack
+  - data analysis course
+  - MSK Institute
+lastUpdated: 2026-11-18
+author: "Er. Sumit Kumar (MSK Institute)"
+version: 1.1.0
+---
 
 Combining multiple datasets, merging feature matrices with target labels, and assembling image tiles are fundamental tasks in numerical data pipelines.
 
@@ -123,8 +143,7 @@ except ValueError as e:
 
 ---
 
-# Multiple Choice Questions
-
+## Practice Quiz
 ### 1. What is the required argument format for arrays passed to `np.concatenate()`?
 A. Individual positional arguments: `np.concatenate(a, b, c)`
 B. A tuple or list sequence: `np.concatenate((a, b, c))`

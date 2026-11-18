@@ -1,6 +1,24 @@
-# Renaming Columns, Replacing Values & Sorting
-
-*Reading Time: 8 Mins* | *Level: Beginner to Advanced*
+---
+id: renaming-replacing-and-sorting
+slug: renaming-replacing-and-sorting
+course: pandas-complete-course
+chapter: "5: Data Transformation & String Operations"
+topic: "5.3 Renaming Columns, Replacing Values & Sorting"
+title: "Renaming Columns, Replacing Values & Sorting"
+description: "Learn Renaming Columns, Replacing Values & Sorting in Pandas with practical examples, analyst workflows, and interactive practice quizzes at MSK Institute."
+difficulty: Intermediate
+readingTime: 6
+order: 3
+keywords:
+  - renaming columns replacing values sorting
+  - pandas tutorial
+  - renaming replacing and sorting
+  - data analysis course
+  - MSK Institute
+lastUpdated: 2026-11-18
+author: "Er. Sumit Kumar (MSK Institute)"
+version: 1.1.0
+---
 
 ---
 
@@ -82,8 +100,7 @@ bottom_3 = df.nsmallest(3, 'Revenue')
 
 ---
 
-# Multiple Choice Questions
-
+## Practice Quiz
 ### 1. Which parameter in `df.sort_values()` determines whether sorting is lowest-to-highest or highest-to-lowest?
 A. `reverse=True`
 B. `ascending=True`

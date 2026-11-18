@@ -1,4 +1,24 @@
-# What is NumPy & Why It Powers Data Science
+---
+id: what-is-numpy-and-architecture
+slug: what-is-numpy-and-architecture
+course: numpy-complete-course
+chapter: "1: Introduction to NumPy & Numerical Computing"
+topic: "1.1 What is NumPy & Why It Powers Data Science"
+title: "What is NumPy & Why It Powers Data Science"
+description: "NumPy (short for Numerical Python) is the fundamental, foundational library for scientific computing, data analysis, and machine learning in Python."
+difficulty: Intermediate
+readingTime: 8
+order: 1
+keywords:
+  - what is numpy why it powers data science
+  - numpy tutorial
+  - what is numpy and architecture
+  - data analysis course
+  - MSK Institute
+lastUpdated: 2026-11-18
+author: "Er. Sumit Kumar (MSK Institute)"
+version: 1.1.0
+---
 
 **NumPy** (short for *Numerical Python*) is the fundamental, foundational library for scientific computing, data analysis, and machine learning in Python. Created in 2005 by Travis Oliphant by unifying the legacy *Numeric* and *Numarray* libraries, NumPy provides the computational backbone for virtually every modern data science package—including **Pandas, SciPy, Scikit-Learn, TensorFlow, PyTorch, and OpenCV**.
 
@@ -60,8 +80,7 @@ Without NumPy, the modern Python AI and Data ecosystem could not exist:
 
 ---
 
-# Multiple Choice Questions
-
+## Practice Quiz
 ### 1. In what year and by whom was NumPy originally created by unifying Numeric and Numarray?
 A. 1991 by Guido van Rossum
 B. 2005 by Travis Oliphant

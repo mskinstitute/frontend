@@ -1,6 +1,24 @@
-# Publishing to Tableau Public & Creating Portfolios
-
-*Reading Time: 8 Mins* | *Level: Beginner to Advanced*
+---
+id: publishing-to-tableau-public
+slug: publishing-to-tableau-public
+course: tableau-for-beginners
+chapter: "5: Interactive Dashboards & Storytelling"
+topic: "5.4 Publishing to Tableau Public & Creating Shareable Portfolios"
+title: "Publishing to Tableau Public & Creating Shareable Portfolios"
+description: "Learn Publishing to Tableau Public & Creating Shareable Portfolios in Tableau with practical examples, analyst workflows, and interactive practice quizzes."
+difficulty: Beginner
+readingTime: 6
+order: 4
+keywords:
+  - publishing to tableau public creating shareable portfolios
+  - tableau tutorial
+  - publishing to tableau public
+  - data analysis course
+  - MSK Institute
+lastUpdated: 2026-11-18
+author: "Er. Sumit Kumar (MSK Institute)"
+version: 1.1.0
+---
 
 ---
 
@@ -16,8 +34,7 @@
 
 ---
 
-# Multiple Choice Questions
-
+## Practice Quiz
 ### 1. What connection requirement must be met before a workbook can be published to Tableau Public?
 A. The data source must be an active Data Extract (`.hyper`)
 B. Must be a live SQL Server connection

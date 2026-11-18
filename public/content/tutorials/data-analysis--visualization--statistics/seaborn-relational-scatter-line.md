@@ -1,6 +1,24 @@
-# Relational Plots: scatterplot with hue & size mapping
-
-*Reading Time: 8 Mins* | *Level: Intermediate*
+---
+id: seaborn-relational-scatter-line
+slug: seaborn-relational-scatter-line
+course: data-analysis--visualization--statistics
+chapter: "3: Statistical Visualizations with Seaborn"
+topic: "3.4 Relational Plots: scatterplot with hue & size mapping"
+title: "Relational Plots: scatterplot with hue & size mapping"
+description: "Learn Relational Plots: scatterplot with hue & size mapping in Data Visualization & Statistics with practical examples, analyst workflows, and interactive."
+difficulty: Intermediate
+readingTime: 6
+order: 4
+keywords:
+  - relational plots scatterplot with hue size mapping
+  - data visualization & statistics tutorial
+  - seaborn relational scatter line
+  - data analysis course
+  - MSK Institute
+lastUpdated: 2026-11-18
+author: "Er. Sumit Kumar (MSK Institute)"
+version: 1.1.0
+---
 
 ---
 
@@ -46,8 +64,7 @@ plt.show()
 
 ---
 
-# Multiple Choice Questions
-
+## Practice Quiz
 ### 1. Which parameter in `sns.scatterplot()` scales the diameter of points based on a numeric column (creating a bubble chart)?
 A. `size`
 B. `diameter`

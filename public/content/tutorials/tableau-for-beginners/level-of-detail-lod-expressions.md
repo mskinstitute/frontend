@@ -1,6 +1,24 @@
-# Level of Detail (LOD) Expressions: FIXED, INCLUDE & EXCLUDE
-
-*Reading Time: 8 Mins* | *Level: Beginner to Advanced*
+---
+id: level-of-detail-lod-expressions
+slug: level-of-detail-lod-expressions
+course: tableau-for-beginners
+chapter: "4: Calculations, Parameters & LOD Expressions"
+topic: "4.4 Level of Detail (LOD) Expressions: FIXED, INCLUDE & EXCLUDE"
+title: "Level of Detail (LOD) Expressions: FIXED, INCLUDE & EXCLUDE"
+description: "Level of Detail (LOD) Expressions allow you to compute values at a different level of granularity than what is displayed on the chart!"
+difficulty: Beginner
+readingTime: 6
+order: 4
+keywords:
+  - level of detail lod expressions fixed include exclude
+  - tableau tutorial
+  - level of detail lod expressions
+  - data analysis course
+  - MSK Institute
+lastUpdated: 2026-11-18
+author: "Er. Sumit Kumar (MSK Institute)"
+version: 1.1.0
+---
 
 ![Tableau LOD Expressions](/images/tutorials/tableau-for-beginners/tableau-lod-expressions-visual.svg)
 
@@ -31,8 +49,7 @@ In standard Tableau charts, computations are performed at the **Viz Level of Det
 
 ---
 
-# Multiple Choice Questions
-
+## Practice Quiz
 ### 1. Which LOD expression computes values at the specified dimension level, completely independent of whatever dimensions are placed on the visualization shelves?
 A. `FIXED`
 B. `INCLUDE`

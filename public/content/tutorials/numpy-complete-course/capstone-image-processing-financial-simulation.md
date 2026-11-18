@@ -1,4 +1,24 @@
-# Capstone Project: Computer Vision & Monte Carlo Simulation
+---
+id: capstone-image-processing-financial-simulation
+slug: capstone-image-processing-financial-simulation
+course: numpy-complete-course
+chapter: "12: Random Sampling, File I/O & Capstone Project"
+topic: "12.3 Capstone: Image Manipulation & Monte Carlo Simulation"
+title: "Capstone: Image Manipulation & Monte Carlo Simulation"
+description: "To solidify your mastery of NumPy, this comprehensive Capstone brings together every core concept you have learned—vectorization, multi-dimensional."
+difficulty: Intermediate
+readingTime: 12
+order: 3
+keywords:
+  - capstone image manipulation monte carlo simulation
+  - numpy tutorial
+  - capstone image processing financial simulation
+  - data analysis course
+  - MSK Institute
+lastUpdated: 2026-11-18
+author: "Er. Sumit Kumar (MSK Institute)"
+version: 1.1.0
+---
 
 To solidify your mastery of NumPy, this comprehensive Capstone brings together every core concept you have learned—vectorization, multi-dimensional array slicing, broadcasting, linear algebra, universal functions, and random generators—across **two complete end-to-end industry applications**:
 
@@ -175,8 +195,7 @@ You are now fully equipped to build cutting-edge data science, artificial intell
 
 ---
 
-# Multiple Choice Questions
-
+## Practice Quiz
 ### 1. In the grayscale conversion equation `grayscale = rgb_image @ weights`, why does the `@` operator successfully contract the color channels?
 A. It flattens the image into a 1D vector
 B. It computes an inner dot product between the 3 color channels of each pixel and the 3 weights, reducing shape `(H, W, 3)` to `(H, W)`

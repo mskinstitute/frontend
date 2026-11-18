@@ -1,6 +1,24 @@
-# End-to-End Exploratory Data Analysis (EDA) Project
-
-*Reading Time: 8 Mins* | *Level: Beginner to Advanced*
+---
+id: end-to-end-eda-case-study
+slug: end-to-end-eda-case-study
+course: pandas-complete-course
+chapter: "8: Time Series Analysis & Real-World Capstone EDA"
+topic: "8.3 End-to-End Exploratory Data Analysis (EDA) Project"
+title: "End-to-End Exploratory Data Analysis (EDA) Project"
+description: "In this capstone lesson, we walk through a complete, production-ready EDA project on an Indian E-Commerce Transactions dataset."
+difficulty: Intermediate
+readingTime: 6
+order: 3
+keywords:
+  - end-to-end exploratory data analysis eda project
+  - pandas tutorial
+  - end to end eda case study
+  - data analysis course
+  - MSK Institute
+lastUpdated: 2026-11-18
+author: "Er. Sumit Kumar (MSK Institute)"
+version: 1.1.0
+---
 
 ![EDA Pipeline Workflow](/images/tutorials/pandas/pandas-eda-workflow.svg)
 
@@ -76,8 +94,7 @@ print("\n--- Monthly Revenue Trend ---\n", monthly_trend)
 
 ---
 
-# Multiple Choice Questions
-
+## Practice Quiz
 ### 1. What is the primary purpose of Exploratory Data Analysis (EDA)?
 A. To deploy machine learning models to production servers
 B. To explore, clean, summarize, and understand data structure and anomalies before modeling

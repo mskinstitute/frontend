@@ -1,4 +1,24 @@
-# Expanding & Squeezing Dimensions: np.newaxis & expand_dims
+---
+id: adding-removing-dimensions-newaxis
+slug: adding-removing-dimensions-newaxis
+course: numpy-complete-course
+chapter: "6: Array Reshaping, Flattening & Dimensions"
+topic: "6.3 Expanding & Squeezing Dimensions (np.newaxis, expand_dims, squeeze)"
+title: "Expanding & Squeezing Dimensions (np.newaxis, expand_dims, squeeze)"
+description: "In linear algebra, matrix multiplication, and deep learning libraries (TensorFlow, PyTorch), the dimensionality of an array must frequently be adjusted."
+difficulty: Intermediate
+readingTime: 8
+order: 3
+keywords:
+  - expanding squeezing dimensions npnewaxis expanddims squeeze
+  - numpy tutorial
+  - adding removing dimensions newaxis
+  - data analysis course
+  - MSK Institute
+lastUpdated: 2026-11-18
+author: "Er. Sumit Kumar (MSK Institute)"
+version: 1.1.0
+---
 
 In linear algebra, matrix multiplication, and deep learning libraries (TensorFlow, PyTorch), the dimensionality of an array must frequently be adjusted to satisfy shape requirements. For example, multiplying a 1D vector of length $N$ by a 2D matrix of shape $(N, M)$ requires expanding the 1D vector into a formal 2D column matrix of shape $(N, 1)$ or row matrix of shape $(1, N)$.
 
@@ -102,8 +122,7 @@ print("Squeeze axis 0 only:", partially_squeezed.shape)  # (28, 28, 1)
 
 ---
 
-# Multiple Choice Questions
-
+## Practice Quiz
 ### 1. What does `np.newaxis` evaluate to in Python?
 A. An integer 0
 B. `None`

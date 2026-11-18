@@ -1,4 +1,24 @@
-# Flattening Arrays: ravel() vs flatten()
+---
+id: flattening-arrays-flatten-vs-ravel
+slug: flattening-arrays-flatten-vs-ravel
+course: numpy-complete-course
+chapter: "6: Array Reshaping, Flattening & Dimensions"
+topic: "6.2 Flattening Multi-Dimensional Arrays (flatten vs ravel)"
+title: "Flattening Multi-Dimensional Arrays (flatten vs ravel)"
+description: "Flattening transforms a multi-dimensional array (2D matrix, 3D image tensor, or higher-order volume) into a continuous, 1-dimensional array. This."
+difficulty: Intermediate
+readingTime: 7
+order: 2
+keywords:
+  - flattening multi-dimensional arrays flatten vs ravel
+  - numpy tutorial
+  - flattening arrays flatten vs ravel
+  - data analysis course
+  - MSK Institute
+lastUpdated: 2026-11-18
+author: "Er. Sumit Kumar (MSK Institute)"
+version: 1.1.0
+---
 
 Flattening transforms a multi-dimensional array (2D matrix, 3D image tensor, or higher-order volume) into a continuous, 1-dimensional array. This operation is ubiquitous before feeding image pixels into dense neural network layers, computing histograms, or serializing data.
 
@@ -120,8 +140,7 @@ print("Col-major (F):", sample.flatten(order='F'))  # [1, 3, 2, 4]
 
 ---
 
-# Multiple Choice Questions
-
+## Practice Quiz
 ### 1. What is the primary difference between `arr.ravel()` and `arr.flatten()`?
 A. `ravel()` only works on 2D arrays, whereas `flatten()` works on any dimension
 B. `ravel()` returns a view whenever possible, while `flatten()` always returns an independent copy

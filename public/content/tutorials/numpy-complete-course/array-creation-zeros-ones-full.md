@@ -1,4 +1,24 @@
-# Built-in Creation Routines (zeros, ones, full, empty)
+---
+id: array-creation-zeros-ones-full
+slug: array-creation-zeros-ones-full
+course: numpy-complete-course
+chapter: "2: NumPy Ndarrays & Array Creation Routines"
+topic: "2.2 Built-in Creation Routines (zeros, ones, full, empty)"
+title: "Built-in Creation Routines (zeros, ones, full, empty)"
+description: "Converting Python lists is convenient for small tests, but in production machine learning and scientific simulations, allocating arrays containing."
+difficulty: Intermediate
+readingTime: 7
+order: 2
+keywords:
+  - built-in creation routines zeros ones full empty
+  - numpy tutorial
+  - array creation zeros ones full
+  - data analysis course
+  - MSK Institute
+lastUpdated: 2026-11-18
+author: "Er. Sumit Kumar (MSK Institute)"
+version: 1.1.0
+---
 
 Converting Python lists is convenient for small tests, but in production machine learning and scientific simulations, allocating arrays containing millions of pre-initialized cells must be done without allocating Python objects first. NumPy provides specialized **built-in memory allocation routines**.
 
@@ -94,8 +114,7 @@ f_like = np.full_like(ref, 500)
 
 ---
 
-# Multiple Choice Questions
-
+## Practice Quiz
 ### 1. What is the default data type (dtype) created by 'np.zeros(5)' if no explicit dtype is provided?
 A. int32
 B. float64

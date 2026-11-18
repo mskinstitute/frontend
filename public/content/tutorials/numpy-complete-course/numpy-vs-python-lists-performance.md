@@ -1,4 +1,24 @@
-# NumPy vs Python Lists: Memory & Speed Benchmarks
+---
+id: numpy-vs-python-lists-performance
+slug: numpy-vs-python-lists-performance
+course: numpy-complete-course
+chapter: "1: Introduction to NumPy & Numerical Computing"
+topic: "1.3 NumPy vs Python Lists: Memory & Speed Benchmarks"
+title: "NumPy vs Python Lists: Memory & Speed Benchmarks"
+description: "To appreciate why data science is built on NumPy, you must measure the concrete differences in memory footprint and execution latency between standard."
+difficulty: Intermediate
+readingTime: 7
+order: 3
+keywords:
+  - numpy vs python lists memory speed benchmarks
+  - numpy tutorial
+  - numpy vs python lists performance
+  - data analysis course
+  - MSK Institute
+lastUpdated: 2026-11-18
+author: "Er. Sumit Kumar (MSK Institute)"
+version: 1.1.0
+---
 
 To appreciate why data science is built on NumPy, you must measure the concrete differences in **memory footprint** and **execution latency** between standard Python lists and NumPy arrays.
 
@@ -79,8 +99,7 @@ print(f"NumPy is {py_time / np_time:.1f}x FASTER!")  # ~80x to 100x Speedup!
 
 ---
 
-# Multiple Choice Questions
-
+## Practice Quiz
 ### 1. What does the '+' operator do when applied between two standard Python lists: '[1, 2] + [3, 4]'?
 A. Calculates element-wise addition: [4, 6]
 B. Concatenates the lists together: [1, 2, 3, 4]

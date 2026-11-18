@@ -1,4 +1,24 @@
-# Array Reshaping with reshape() & -1 Dimension
+---
+id: reshaping-arrays-reshape-dimensions
+slug: reshaping-arrays-reshape-dimensions
+course: numpy-complete-course
+chapter: "6: Array Reshaping, Flattening & Dimensions"
+topic: "6.1 Reshaping Arrays (reshape with -1 auto-dimension)"
+title: "Reshaping Arrays (reshape with -1 auto-dimension)"
+description: "In machine learning models, computer vision pipelines, and matrix algebra, manipulating the dimensions and geometric layout of arrays is a ubiquitous."
+difficulty: Intermediate
+readingTime: 9
+order: 1
+keywords:
+  - reshaping arrays reshape with -1 auto-dimension
+  - numpy tutorial
+  - reshaping arrays reshape dimensions
+  - data analysis course
+  - MSK Institute
+lastUpdated: 2026-11-18
+author: "Er. Sumit Kumar (MSK Institute)"
+version: 1.1.0
+---
 
 In machine learning models, computer vision pipelines, and matrix algebra, manipulating the dimensions and geometric layout of arrays is a ubiquitous daily requirement. For instance, a neural network layer may require flattening a 2D image matrix of `(28, 28)` pixels into a 1D vector of `784` features, or batching `1000` samples into mini-batches of `(32, 10, 10)`.
 
@@ -128,8 +148,7 @@ Shared base: True
 
 ---
 
-# Multiple Choice Questions
-
+## Practice Quiz
 ### 1. What is the fundamental requirement when reshaping an array using `arr.reshape(new_shape)`?
 A. The number of dimensions must always increase
 B. The product of the dimensions in `new_shape` must equal `arr.size`

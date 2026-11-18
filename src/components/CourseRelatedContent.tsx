@@ -98,7 +98,7 @@ export default function CourseRelatedContent({ course, batches = [] }: CourseRel
                 Exam preparation guides, technical interview roadmaps, and viva answers written by lead mentors:
               </p>
               <ul className="space-y-2 text-xs">
-                {cluster.blogSlugs.map((bSlug) => (
+                {cluster.blogSlugs.slice(0, 6).map((bSlug) => (
                   <li key={bSlug}>
                     <Link
                       href={`/blogs/${bSlug}`}
@@ -111,13 +111,23 @@ export default function CourseRelatedContent({ course, batches = [] }: CourseRel
                 ))}
               </ul>
             </div>
-            <div className="pt-4 mt-4 border-t border-border-subtle">
+            <div className="pt-4 mt-4 border-t border-border-subtle flex items-center justify-between gap-2 flex-wrap">
               <Link
                 href="/blogs"
                 className="inline-flex items-center gap-1.5 text-xs font-bold text-secondary hover:text-secondary-light transition-colors"
               >
                 <span>Read All Publications</span>
                 <ArrowRight className="w-3.5 h-3.5" />
+              </Link>
+              <Link
+                href={cluster.clusterId === 'data-analytics' || cluster.clusterId === 'sql' ? '/tools/sql-studio' : '/playground'}
+                className="inline-flex items-center gap-1 text-xs font-bold text-primary hover:text-secondary transition-colors"
+              >
+                <span>
+                  {cluster.clusterId === 'data-analytics' || cluster.clusterId === 'sql'
+                    ? 'Try Browser SQL Studio →'
+                    : 'Try Code Playground →'}
+                </span>
               </Link>
             </div>
           </div>

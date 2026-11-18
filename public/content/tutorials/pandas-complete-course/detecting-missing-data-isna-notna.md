@@ -1,6 +1,24 @@
-# Detecting Missing Values (isna, notna, isnull)
-
-*Reading Time: 8 Mins* | *Level: Beginner to Advanced*
+---
+id: detecting-missing-data-isna-notna
+slug: detecting-missing-data-isna-notna
+course: pandas-complete-course
+chapter: "4: Data Cleaning & Missing Value Imputation"
+topic: "4.1 Detecting Missing Values (isna, notna, isnull)"
+title: "Detecting Missing Values (isna, notna, isnull)"
+description: "Learn Detecting Missing Values (isna, notna, isnull) in Pandas with practical examples, analyst workflows, and interactive practice quizzes at MSK Institute."
+difficulty: Intermediate
+readingTime: 6
+order: 1
+keywords:
+  - detecting missing values isna notna isnull
+  - pandas tutorial
+  - detecting missing data isna notna
+  - data analysis course
+  - MSK Institute
+lastUpdated: 2026-11-18
+author: "Er. Sumit Kumar (MSK Institute)"
+version: 1.1.0
+---
 
 ---
 
@@ -72,8 +90,7 @@ dtype: int64
 
 ---
 
-# Multiple Choice Questions
-
+## Practice Quiz
 ### 1. What is the standard representation of missing floating-point values in Pandas?
 A. `null`
 B. `np.nan`

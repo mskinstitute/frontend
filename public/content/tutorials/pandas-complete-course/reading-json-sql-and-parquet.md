@@ -1,6 +1,24 @@
-# Reading JSON, SQL Databases & Parquet Files
-
-*Reading Time: 8 Mins* | *Level: Beginner to Advanced*
+---
+id: reading-json-sql-and-parquet
+slug: reading-json-sql-and-parquet
+course: pandas-complete-course
+chapter: "2: Data Ingestion & Storage Formats"
+topic: "2.3 Reading JSON, SQL Databases & Parquet Files"
+title: "Reading JSON, SQL Databases & Parquet Files"
+description: "Learn Reading JSON, SQL Databases & Parquet Files in Pandas with practical examples, analyst workflows, and interactive practice quizzes at MSK Institute."
+difficulty: Intermediate
+readingTime: 6
+order: 3
+keywords:
+  - reading json sql databases parquet files
+  - pandas tutorial
+  - reading json sql and parquet
+  - data analysis course
+  - MSK Institute
+lastUpdated: 2026-11-18
+author: "Er. Sumit Kumar (MSK Institute)"
+version: 1.1.0
+---
 
 ---
 
@@ -85,8 +103,7 @@ df_fast = pd.read_parquet('students.parquet', engine='pyarrow')
 
 ---
 
-# Multiple Choice Questions
-
+## Practice Quiz
 ### 1. Which function flattens semi-structured, nested JSON dictionaries into a flat 2D DataFrame?
 A. `pd.flatten_json()`
 B. `pd.json_normalize()`

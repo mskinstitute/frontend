@@ -20,15 +20,16 @@ export async function generateStaticParams() {
   const paramsList: { slug: string; topicSlug: string }[] = [];
 
   for (const tut of tutorials) {
-    // 1. If tutorial is backed by GitHub repository in manifest, use mapped slugs
+    const seen = new Set<string>();
+
+    // 1. Cloud-hosted GitHub repository topics from manifest
     const manifest = githubManifest as Record<string, { files: Record<string, string> }>;
     const ghConfig = manifest[tut.slug];
     if (ghConfig && ghConfig.files) {
-      const seen = new Set<string>();
       for (const tSlug of Object.keys(ghConfig.files)) {
         // filter out numeric prefix versions like 01- or 05-
         const clean = tSlug.replace(/^\d+-/, '').toLowerCase();
-        if (!seen.has(clean)) {
+        if (clean && !seen.has(clean)) {
           seen.add(clean);
           paramsList.push({
             slug: tut.slug,
@@ -36,35 +37,41 @@ export async function generateStaticParams() {
           });
         }
       }
-      continue;
     }
 
-    // 2. Otherwise scan local disk
+    // 2. Also scan local disk (supports both local-only courses and newly added local lessons for GitHub-backed courses)
     try {
       const dirPath = path.join(process.cwd(), 'public', 'content', 'tutorials', tut.slug);
       const entries = await fs.readdir(dirPath, { withFileTypes: true });
       for (const entry of entries) {
         if (entry.isFile() && entry.name.endsWith('.md')) {
-          paramsList.push({
-            slug: tut.slug,
-            topicSlug: entry.name.replace(/\.md$/, ''),
-          });
+          const cleanSlug = entry.name.replace(/\.md$/, '').replace(/^\d+-/, '').toLowerCase();
+          if (cleanSlug && !seen.has(cleanSlug)) {
+            seen.add(cleanSlug);
+            paramsList.push({
+              slug: tut.slug,
+              topicSlug: cleanSlug,
+            });
+          }
         } else if (entry.isDirectory() && entry.name !== 'images') {
           const subFiles = await fs.readdir(path.join(dirPath, entry.name));
           for (const subFile of subFiles) {
             if (subFile.endsWith('.md')) {
-              const cleanSlug = subFile.replace(/\.md$/, '').replace(/^\d+-/, '');
-              paramsList.push({
-                slug: tut.slug,
-                topicSlug: cleanSlug,
-              });
+              const cleanSlug = subFile.replace(/\.md$/, '').replace(/^\d+-/, '').toLowerCase();
+              if (cleanSlug && !seen.has(cleanSlug)) {
+                seen.add(cleanSlug);
+                paramsList.push({
+                  slug: tut.slug,
+                  topicSlug: cleanSlug,
+                });
+              }
             }
           }
         }
       }
     } catch {
-      // Fallback defaults if directory doesn't exist
-      if (tut.slug === 'python-for-beginners') {
+      // Local directory does not exist (expected for 100% GitHub-backed tutorials)
+      if (seen.size === 0 && tut.slug === 'python-for-beginners') {
         paramsList.push({ slug: tut.slug, topicSlug: 'introduction-to-python' });
         paramsList.push({ slug: tut.slug, topicSlug: 'vscode-setup' });
       }
@@ -82,14 +89,17 @@ export async function generateMetadata({ params }: TutorialTopicPageProps): Prom
   }
 
   const { frontmatter, tutorial } = topicData;
+  const baseTitle = `${frontmatter.title} | ${tutorial.title} Tutorial`;
+  const seoTitle = baseTitle.length <= 58 ? baseTitle : frontmatter.title;
+
   return constructMetadata({
-    title: `${frontmatter.title} - ${tutorial.title} Tutorial`,
-    description:
-      frontmatter.description ||
-      `Read ${frontmatter.title} lesson with code examples, explanations, and practice quiz at MSK Institute.`,
+    title: seoTitle,
+    description: frontmatter.description,
     canonical: `/tutorials/${slug}/${topicSlug}`,
     image: '/brand/og-tutorials.png',
     type: 'article',
+    publishedTime: frontmatter.lastUpdated || tutorial.updatedAt || '2026-10-01',
+    modifiedTime: frontmatter.lastUpdated || tutorial.updatedAt || '2026-11-18',
     authors: ['Er. Sumit Kumar'],
     keywords: frontmatter.keywords || [
       tutorial.title?.toLowerCase() || 'code',
@@ -108,17 +118,55 @@ export default async function TutorialTopicPage({ params }: TutorialTopicPagePro
     notFound();
   }
 
+  const isPythonTrack = slug.startsWith('python-for-');
+  const isDataAnalysisTrack =
+    slug === 'numpy-complete-course' ||
+    slug === 'pandas-complete-course' ||
+    slug === 'data-analysis--visualization--statistics' ||
+    slug === 'tableau-for-beginners' ||
+    slug === 'data-analysis--advanced-pandas--ml-basics' ||
+    slug.startsWith('power-bi-for-');
+  const canonicalUrl = `https://www.mskinstitute.in/tutorials/${slug}/${topicSlug}`;
+
   const articleJsonLd = {
     '@context': 'https://schema.org',
     '@graph': [
       {
         '@type': 'TechArticle',
-        headline: `${topicData.frontmatter.title} - ${topicData.tutorial.title}`,
-        description: topicData.frontmatter.description || `Learn ${topicData.frontmatter.title} with practical examples and code tutorials at MSK Institute.`,
+        '@id': `${canonicalUrl}#article`,
+        headline: `${topicData.frontmatter.title} — ${topicData.tutorial.title}`,
+        description: topicData.frontmatter.description,
         image: 'https://www.mskinstitute.in/brand/og-tutorials.png',
         inLanguage: 'en-IN',
-        dateModified: topicData.tutorial.updatedAt || '2026-11-18',
-        mainEntityOfPage: `https://www.mskinstitute.in/tutorials/${slug}/${topicSlug}`,
+        proficiencyLevel: topicData.frontmatter.difficulty || 'Beginner',
+        datePublished: topicData.frontmatter.lastUpdated || topicData.tutorial.updatedAt || '2026-10-01',
+        dateModified: topicData.frontmatter.lastUpdated || topicData.tutorial.updatedAt || '2026-11-18',
+        mainEntityOfPage: canonicalUrl,
+        isPartOf: {
+          '@type': 'LearningResource',
+          '@id': `https://www.mskinstitute.in/tutorials/${slug}#resource`,
+          name: topicData.tutorial.title,
+          url: `https://www.mskinstitute.in/tutorials/${slug}`,
+        },
+        ...(isPythonTrack
+          ? {
+              about: {
+                '@type': 'Course',
+                '@id': 'https://www.mskinstitute.in/courses/python-mastery#course',
+                name: 'Python Mastery (Beginner to Advanced) - 3 Months',
+                url: 'https://www.mskinstitute.in/courses/python-mastery',
+              },
+            }
+          : isDataAnalysisTrack
+          ? {
+              about: {
+                '@type': 'Course',
+                '@id': 'https://www.mskinstitute.in/courses/data-analysis-mastery-combo-course--12-months#course',
+                name: 'Data Analysis Mastery Combo Course - 12 Months',
+                url: 'https://www.mskinstitute.in/courses/data-analysis-mastery-combo-course--12-months',
+              },
+            }
+          : {}),
         author: {
           '@type': 'Person',
           name: 'Er. Sumit Kumar',

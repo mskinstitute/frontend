@@ -1,4 +1,24 @@
-# Supervised vs Unsupervised Learning for Business Analysts
+---
+id: supervised-vs-unsupervised-learning
+slug: supervised-vs-unsupervised-learning
+course: data-analysis--advanced-pandas--ml-basics
+chapter: "3: Machine Learning Concepts & Scikit-Learn Pipeline"
+topic: "3.1 Supervised vs Unsupervised Learning for Business Analysts"
+title: "Supervised vs Unsupervised Learning for Business Analysts"
+description: "Machine Learning (ML) transforms raw institutional data into predictive and prescriptive business intelligence. To choose the right algorithm and design."
+difficulty: Advanced
+readingTime: 7
+order: 1
+keywords:
+  - supervised vs unsupervised learning for business analysts
+  - data science & machine learning tutorial
+  - supervised vs unsupervised learning
+  - data analysis course
+  - MSK Institute
+lastUpdated: 2026-11-18
+author: "Er. Sumit Kumar (MSK Institute)"
+version: 1.1.0
+---
 
 Machine Learning (ML) transforms raw institutional data into predictive and prescriptive business intelligence. To choose the right algorithm and design a successful analytical pipeline, data analysts must distinguish between **Supervised Learning** (guided by labeled historical outcomes) and **Unsupervised Learning** (discovering latent structures and clusters without pre-existing labels).
 
@@ -74,8 +94,7 @@ In unsupervised learning, there is no target column $y$. The algorithm is fed fe
 
 ---
 
-# Multiple Choice Questions
-
+## Practice Quiz
 ### 1. A fintech company wants to predict whether an applicant will repay or default on a personal loan based on credit history. Which branch of machine learning is this?
 A. Unsupervised Clustering
 B. Supervised Classification

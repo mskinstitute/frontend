@@ -1,6 +1,24 @@
-# A/B Testing Framework for Business & Product Decisions
-
-*Reading Time: 8 Mins* | *Level: Intermediate*
+---
+id: ab-testing-business-framework
+slug: ab-testing-business-framework
+course: data-analysis--visualization--statistics
+chapter: "5: Hypothesis Testing & A/B Testing"
+topic: "5.4 A/B Testing Framework for Business & Product Decisions"
+title: "A/B Testing Framework for Business & Product Decisions"
+description: "Learn A/B Testing Framework for Business & Product Decisions in Data Visualization & Statistics with practical examples, analyst workflows, and interactive."
+difficulty: Intermediate
+readingTime: 6
+order: 4
+keywords:
+  - ab testing framework for business product decisions
+  - data visualization & statistics tutorial
+  - ab testing business framework
+  - data analysis course
+  - MSK Institute
+lastUpdated: 2026-11-18
+author: "Er. Sumit Kumar (MSK Institute)"
+version: 1.1.0
+---
 
 ---
 
@@ -29,8 +47,7 @@ print(f"Z-Stat: {z_stat:.4f}, P-Value: {p_val:.4f}")
 
 ---
 
-# Multiple Choice Questions
-
+## Practice Quiz
 ### 1. Why must an A/B test run for a minimum duration of at least 1 to 2 full business cycles (e.g. 14 days)?
 A. To account for day-of-week seasonality (e.g. weekend vs weekday shopping behavior) and novelty effects
 B. Because Python scripts take 2 weeks to run

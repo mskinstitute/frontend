@@ -18,6 +18,16 @@ export interface Course {
   includedCourseIds?: string[];
   chapters?: Chapter[];
   learningOutcomes?: string[];
+  description?: string;
+  faqs?: {
+    question: string;
+    answer: string;
+  }[];
+  seo?: {
+    title?: string;
+    description?: string;
+    keywords?: string[];
+  };
   marketPrice?: number; // Integer in INR (anchor market fee)
   ourPrice?: number;    // Integer in INR (official MSK fee, shown to logged-in students & AI bots)
   minPrice?: number;    // Integer in INR (internal floor, never public)

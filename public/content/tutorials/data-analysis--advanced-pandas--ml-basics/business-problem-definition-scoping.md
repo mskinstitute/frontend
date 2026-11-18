@@ -1,4 +1,24 @@
-# Business Problem Definition & KPI Scoping
+---
+id: business-problem-definition-scoping
+slug: business-problem-definition-scoping
+course: data-analysis--advanced-pandas--ml-basics
+chapter: "6: End-to-End Capstone Portfolio Project"
+topic: "6.1 Business Problem Definition & KPI Scoping"
+title: "Business Problem Definition & KPI Scoping"
+description: "A data project rarely fails because of bad code or weak machine learning algorithms—it fails because it solved the wrong problem. Top data analysts."
+difficulty: Advanced
+readingTime: 8
+order: 1
+keywords:
+  - business problem definition kpi scoping
+  - data science & machine learning tutorial
+  - business problem definition scoping
+  - data analysis course
+  - MSK Institute
+lastUpdated: 2026-11-18
+author: "Er. Sumit Kumar (MSK Institute)"
+version: 1.1.0
+---
 
 A data project rarely fails because of bad code or weak machine learning algorithms—**it fails because it solved the wrong problem**. Top data analysts bridge the gap between vague corporate executive requests (*"Our customer churn is too high, fix it"*) and rigorous, measurable data engineering and analytics deliverables.
 
@@ -53,8 +73,7 @@ Showing an executive a cost-benefit calculation wins budget approval 100 times f
 
 ---
 
-# Multiple Choice Questions
-
+## Practice Quiz
 ### 1. In the CRISP-DM lifecycle, what is the mandatory first phase of any data analytics project?
 A. Data Preparation
 B. Business Understanding

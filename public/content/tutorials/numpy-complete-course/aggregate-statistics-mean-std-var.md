@@ -1,4 +1,24 @@
-# Summary Statistics: sum(), prod(), mean(), std(), var()
+---
+id: aggregate-statistics-mean-std-var
+slug: aggregate-statistics-mean-std-var
+course: numpy-complete-course
+chapter: "9: Universal Functions (ufuncs) & Mathematical Methods"
+topic: "9.2 Aggregate Statistics (sum, mean, median, std, var)"
+title: "Aggregate Statistics (sum, mean, median, std, var)"
+description: "Descriptive statistics summarize, describe, and reveal properties of numerical datasets. In data science, feature engineering, and statistical modeling."
+difficulty: Intermediate
+readingTime: 6
+order: 2
+keywords:
+  - aggregate statistics sum mean median std var
+  - numpy tutorial
+  - aggregate statistics mean std var
+  - data analysis course
+  - MSK Institute
+lastUpdated: 2026-11-18
+author: "Er. Sumit Kumar (MSK Institute)"
+version: 1.1.0
+---
 
 Descriptive statistics summarize, describe, and reveal properties of numerical datasets. In data science, feature engineering, and statistical modeling, calculating aggregates—such as totals, averages, standard deviations, and variances—is a fundamental first step.
 
@@ -99,8 +119,7 @@ print("NaN-safe min:  ", np.nanmin(dirty_data))   # 10.0
 
 ---
 
-# Multiple Choice Questions
-
+## Practice Quiz
 ### 1. What is the default value of the Delta Degrees of Freedom (`ddof`) parameter in `np.std()` and `np.var()`?
 A. 1
 B. 0

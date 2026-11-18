@@ -1,6 +1,24 @@
-# Measures of Central Tendency & Dispersion
-
-*Reading Time: 8 Mins* | *Level: Intermediate*
+---
+id: central-tendency-and-dispersion
+slug: central-tendency-and-dispersion
+course: data-analysis--visualization--statistics
+chapter: "4: Descriptive & Inferential Statistics for Analysts"
+topic: "4.1 Measures of Central Tendency & Dispersion (Mean, Median, Std, IQR)"
+title: "Measures of Central Tendency & Dispersion (Mean, Median, Std, IQR)"
+description: "Learn Measures of Central Tendency & Dispersion (Mean, Median, Std, IQR) in Data Visualization & Statistics with practical examples, analyst workflows, and."
+difficulty: Intermediate
+readingTime: 6
+order: 1
+keywords:
+  - measures of central tendency dispersion mean median std iqr
+  - data visualization & statistics tutorial
+  - central tendency and dispersion
+  - data analysis course
+  - MSK Institute
+lastUpdated: 2026-11-18
+author: "Er. Sumit Kumar (MSK Institute)"
+version: 1.1.0
+---
 
 ---
 
@@ -33,8 +51,7 @@ print(f"IQR:    ₹{salaries.quantile(0.75) - salaries.quantile(0.25):,.2f}")
 
 ---
 
-# Multiple Choice Questions
-
+## Practice Quiz
 ### 1. In a dataset with extreme high outliers (e.g. employee salaries with a billionaire CEO), which measure of central tendency is the most reliable?
 A. Mean
 B. Median

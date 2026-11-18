@@ -1,6 +1,24 @@
-# Multiple Aggregations & NamedAgg
-
-*Reading Time: 8 Mins* | *Level: Beginner to Advanced*
+---
+id: multiple-aggregations-agg-named-agg
+slug: multiple-aggregations-agg-named-agg
+course: pandas-complete-course
+chapter: "6: Grouping, Aggregation & Pivot Tables"
+topic: "6.2 Multiple Aggregations & NamedAgg"
+title: "Multiple Aggregations & NamedAgg"
+description: "Pandas provides the .agg() (or .aggregate()) method to compute multiple metrics simultaneously across different columns."
+difficulty: Intermediate
+readingTime: 6
+order: 2
+keywords:
+  - multiple aggregations namedagg
+  - pandas tutorial
+  - multiple aggregations agg named agg
+  - data analysis course
+  - MSK Institute
+lastUpdated: 2026-11-18
+author: "Er. Sumit Kumar (MSK Institute)"
+version: 1.1.0
+---
 
 ---
 
@@ -74,8 +92,7 @@ print(clean_report)
 
 ---
 
-# Multiple Choice Questions
-
+## Practice Quiz
 ### 1. Which method allows computing multiple statistical aggregations (e.g. sum, mean, max) simultaneously in a GroupBy?
 A. `.agg()`
 B. `.compute_all()`

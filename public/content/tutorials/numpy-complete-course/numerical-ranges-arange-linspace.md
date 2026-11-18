@@ -1,4 +1,24 @@
-# Generating Numerical Sequences (arange, linspace, logspace)
+---
+id: numerical-ranges-arange-linspace
+slug: numerical-ranges-arange-linspace
+course: numpy-complete-course
+chapter: "2: NumPy Ndarrays & Array Creation Routines"
+topic: "2.3 Generating Numerical Sequences (arange, linspace, logspace)"
+title: "Generating Numerical Sequences (arange, linspace, logspace)"
+description: "Mathematical modeling, data plotting, and algorithm testing often require continuous sequences of evenly distributed numbers. NumPy provides three core."
+difficulty: Intermediate
+readingTime: 7
+order: 3
+keywords:
+  - generating numerical sequences arange linspace logspace
+  - numpy tutorial
+  - numerical ranges arange linspace
+  - data analysis course
+  - MSK Institute
+lastUpdated: 2026-11-18
+author: "Er. Sumit Kumar (MSK Institute)"
+version: 1.1.0
+---
 
 Mathematical modeling, data plotting, and algorithm testing often require continuous sequences of evenly distributed numbers. NumPy provides three core sequence generation engines: **`np.arange()`**, **`np.linspace()`**, and **`np.logspace()`**.
 
@@ -75,8 +95,7 @@ print(powers_of_two)  # [  1.   2.   4.   8.  16.  32.  64. 128. 256.]
 
 ---
 
-# Multiple Choice Questions
-
+## Practice Quiz
 ### 1. What will 'np.arange(2, 10, 2)' return?
 A. array([2, 4, 6, 8, 10])
 B. array([2, 4, 6, 8])

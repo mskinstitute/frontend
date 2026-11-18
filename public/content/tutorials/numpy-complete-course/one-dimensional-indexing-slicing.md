@@ -1,4 +1,24 @@
-# 1D Array Indexing, Slicing & Step Strides
+---
+id: one-dimensional-indexing-slicing
+slug: one-dimensional-indexing-slicing
+course: numpy-complete-course
+chapter: "4: Basic Indexing, Slicing & Views"
+topic: "4.1 1D Array Indexing, Slicing & Step Strides"
+title: "1D Array Indexing, Slicing & Step Strides"
+description: "Indexing and slicing allow you to extract individual elements, sub-ranges, and strided patterns from arrays. While 1D NumPy slicing closely resembles."
+difficulty: Intermediate
+readingTime: 6
+order: 1
+keywords:
+  - 1d array indexing slicing step strides
+  - numpy tutorial
+  - one dimensional indexing slicing
+  - data analysis course
+  - MSK Institute
+lastUpdated: 2026-11-18
+author: "Er. Sumit Kumar (MSK Institute)"
+version: 1.1.0
+---
 
 Indexing and slicing allow you to extract individual elements, sub-ranges, and strided patterns from arrays. While 1D NumPy slicing closely resembles Python list slicing, it introduces fundamental differences in **memory handling and performance**.
 
@@ -72,8 +92,7 @@ print(numbers)  # [-1  0 -1 99 -1 99 -1  0]
 
 ---
 
-# Multiple Choice Questions
-
+## Practice Quiz
 ### 1. What will 'arr[1:5]' extract from 'arr = np.array([10, 20, 30, 40, 50, 60])'?
 A. array([10, 20, 30, 40, 50])
 B. array([20, 30, 40, 50])

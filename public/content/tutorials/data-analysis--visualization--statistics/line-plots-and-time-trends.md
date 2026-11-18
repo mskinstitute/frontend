@@ -1,15 +1,46 @@
-# Line Plots, Markers, Line Styles & Multiple Series
+---
+id: line-plots-and-time-trends
+slug: line-plots-and-time-trends
+course: data-analysis--visualization--statistics
+chapter: "2: Matplotlib Architecture & Core Plotting"
+topic: "2.2 Line Plots, Markers, Line Styles & Multiple Series"
+title: "Matplotlib Line Plots: Multi-Series Trends, Markers & fill_between()"
+description: "Create clear time-series line plots in Matplotlib using custom linestyle, markers, legends, subtle grids, and shaded variance bands with ax.fill_between()."
+difficulty: Intermediate
+readingTime: 9
+order: 2
+keywords:
+  - matplotlib line plot tutorial
+  - matplotlib linestyle markers
+  - matplotlib multiple series legend
+  - ax.fill_between python
+  - time series plotting python
+lastUpdated: 2026-11-18
+author: "Er. Sumit Kumar (MSK Institute)"
+version: 1.1.0
+---
 
-*Reading Time: 8 Mins* | *Level: Intermediate*
+**Line plots in Matplotlib (`ax.plot()`) track continuous numerical measurements across ordered intervals—most commonly time (days, months, quarters, or fiscal years)—making upward momentum, seasonality, and year-over-year gaps immediately visible.**
+
+Never use a line plot for unordered categories (like comparing cities or product names—use a bar chart for those). Reserve line plots for ordered sequences where slopes between consecutive points carry real meaning.
 
 ---
 
-## 1. When to Use Line Plots
-Line plots are the gold standard for tracking continuous numerical measurements over ordered sequences—most commonly chronological time (hours, days, months, fiscal years).
+## 1. Essential Line Styling & Marker Reference
+
+| Parameter | Common Values | Visual Purpose |
+| :--- | :--- | :--- |
+| `linestyle` (`ls`) | `'-'` (solid), `'--'` (dashed), `':'` (dotted), `'-.'` (dash-dot) | Distinguish baseline vs current year or actual vs forecast |
+| `marker` | `'o'` (circle), `'s'` (square), `'^'` (triangle), `'D'` (diamond) | Emphasize exact measurement timestamps |
+| `linewidth` (`lw`) | `1.5` to `3.5` | Give primary KPI series stronger visual weight |
+| `alpha` | `0.15` to `1.0` | Keep gridlines and shaded bands subtle and readable |
 
 ---
 
-## 2. Plotting Multi-Series Trends with Custom Styling
+## 2. Multi-Series Comparison & Shaded Variance with `ax.fill_between()`
+
+When comparing two series—such as FY 2025 vs FY 2026 revenue, or forecast confidence intervals—combine distinct `linestyle`/`marker` styles with `ax.fill_between()` to highlight the growth gap visually:
+
 ```python
 import matplotlib.pyplot as plt
 
@@ -17,26 +48,35 @@ months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun']
 sales_2025 = [45, 52, 58, 65, 72, 80]
 sales_2026 = [50, 60, 68, 79, 88, 98]
 
-fig, ax = plt.subplots(figsize=(9, 5))
+fig, ax = plt.subplots(figsize=(10, 5.5), dpi=150)
 
-# Series 1: Dashed line with circle markers
+# Series 1: Previous year baseline (dashed line + circle markers)
 ax.plot(months, sales_2025, label='FY 2025', color='#64748b', linestyle='--', marker='o', linewidth=2)
 
-# Series 2: Solid line with square markers
-ax.plot(months, sales_2026, label='FY 2026', color='#2563eb', linestyle='-', marker='s', linewidth=3)
+# Series 2: Current year primary focus (solid line + square markers)
+ax.plot(months, sales_2026, label='FY 2026', color='#0A2540', linestyle='-', marker='s', linewidth=3)
 
-ax.set_title('Year-over-Year Revenue Trajectory (in Lakhs INR)')
+# Shade the YoY revenue gain between the two series
+ax.fill_between(months, sales_2025, sales_2026, color='#FF6B00', alpha=0.15, label='YoY Growth Gap')
+
+ax.set_title('Year-over-Year Revenue Trajectory (₹ Lakhs)')
 ax.set_xlabel('Month')
-ax.set_ylabel('Net Revenue (Lakhs)')
+ax.set_ylabel('Net Revenue (₹ Lakhs)')
 ax.legend(loc='upper left', frameon=True)
-ax.grid(True, linestyle=':', alpha=0.6)
+ax.grid(True, linestyle=':', alpha=0.5)
 
+plt.tight_layout()
 plt.show()
 ```
 
+### Design Best Practices for Executive Line Charts
+1. **Limit to 3–4 lines per chart** to avoid "spaghetti charts" that executives cannot parse.
+2. **Use muted gray + dashed lines** for historical baselines, and a bold brand color for the current period.
+3. **Keep gridlines subtle** (`linestyle=':', alpha=0.5`) so data lines remain the unmistakable hero.
+
 ---
 
-# Multiple Choice Questions
+## Practice Quiz
 
 ### 1. Which parameter in `ax.plot()` controls whether a line is solid, dashed, or dotted?
 A. `line_type`
@@ -81,4 +121,3 @@ C. `ax.paint_gap()`
 D. `ax.color_band()`
 **Answer:** B
 **Explanation:** `ax.fill_between()` fills the region between two horizontal curves or lines.
----

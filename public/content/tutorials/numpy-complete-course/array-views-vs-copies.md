@@ -1,4 +1,24 @@
-# Memory Views vs Deep Copies (view() vs copy())
+---
+id: array-views-vs-copies
+slug: array-views-vs-copies
+course: numpy-complete-course
+chapter: "4: Basic Indexing, Slicing & Views"
+topic: "4.3 Memory Views vs Deep Copies (view() vs copy())"
+title: "Memory Views vs Deep Copies (view() vs copy())"
+description: "One of the most frequent causes of bugs for developers transitioning from Python lists to NumPy is failing to understand the difference between a View."
+difficulty: Intermediate
+readingTime: 6
+order: 3
+keywords:
+  - memory views vs deep copies view vs copy
+  - numpy tutorial
+  - array views vs copies
+  - data analysis course
+  - MSK Institute
+lastUpdated: 2026-11-18
+author: "Er. Sumit Kumar (MSK Institute)"
+version: 1.1.0
+---
 
 One of the most frequent causes of bugs for developers transitioning from Python lists to NumPy is failing to understand the difference between a **View** and a **Deep Copy**.
 
@@ -80,8 +100,7 @@ print(raw_sensor_data)    # [100.5 102.3 99.8 104.2] (Protected!)
 
 ---
 
-# Multiple Choice Questions
-
+## Practice Quiz
 ### 1. What happens to the original array 'a' if you execute 'b = a[1:4]' followed by 'b[0] = 99'?
 A. Nothing; 'b' is an independent copy
 B. Element 'a[1]' is modified to 99 because basic slicing returns a view sharing the original memory buffer

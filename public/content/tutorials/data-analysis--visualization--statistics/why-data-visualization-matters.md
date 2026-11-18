@@ -1,6 +1,24 @@
-# Why Data Visualization Matters in Decision Making
-
-*Reading Time: 8 Mins* | *Level: Intermediate*
+---
+id: why-data-visualization-matters
+slug: why-data-visualization-matters
+course: data-analysis--visualization--statistics
+chapter: "1: Data Visualization Foundations & Python Ecosystem"
+topic: "1.1 Why Data Visualization Matters in Decision Making"
+title: "Why Data Visualization Matters in Decision Making"
+description: "Learn Why Data Visualization Matters in Decision Making in Data Visualization & Statistics with practical examples, analyst workflows, and interactive prac."
+difficulty: Intermediate
+readingTime: 6
+order: 1
+keywords:
+  - why data visualization matters in decision making
+  - data visualization & statistics tutorial
+  - why data visualization matters
+  - data analysis course
+  - MSK Institute
+lastUpdated: 2026-11-18
+author: "Er. Sumit Kumar (MSK Institute)"
+version: 1.1.0
+---
 
 ---
 
@@ -16,8 +34,7 @@ Consider an executive reviewing monthly sales across 50 Indian cities. A raw Exc
 
 ---
 
-# Multiple Choice Questions
-
+## Practice Quiz
 ### 1. What famous statistical demonstration proves that datasets with identical means and variances can have drastically different distributions when visualized?
 A. Benford's Law
 B. Anscombe's Quartet

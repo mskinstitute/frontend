@@ -1,6 +1,24 @@
-# Bar Charts, Stacked Bars & Side-by-Side Bars
-
-*Reading Time: 8 Mins* | *Level: Beginner to Advanced*
+---
+id: bar-charts-and-sorting
+slug: bar-charts-and-sorting
+course: tableau-for-beginners
+chapter: "3: Core Visualizations & Chart Types"
+topic: "3.1 Bar Charts, Stacked Bars & Side-by-Side Bars"
+title: "Bar Charts, Stacked Bars & Side-by-Side Bars"
+description: "Learn Bar Charts, Stacked Bars & Side-by-Side Bars in Tableau with practical examples, analyst workflows, and interactive practice quizzes at MSK Institute."
+difficulty: Beginner
+readingTime: 6
+order: 1
+keywords:
+  - bar charts stacked bars side-by-side bars
+  - tableau tutorial
+  - bar charts and sorting
+  - data analysis course
+  - MSK Institute
+lastUpdated: 2026-11-18
+author: "Er. Sumit Kumar (MSK Institute)"
+version: 1.1.0
+---
 
 ---
 
@@ -19,8 +37,7 @@
 
 ---
 
-# Multiple Choice Questions
-
+## Practice Quiz
 ### 1. How do you switch a vertical bar chart into a horizontal bar chart with one click in Tableau Desktop?
 A. Click the 'Swap Rows and Columns' icon on the toolbar (Ctrl + W)
 B. Delete and rebuild the chart

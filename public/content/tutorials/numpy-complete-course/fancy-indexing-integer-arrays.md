@@ -1,4 +1,24 @@
-# Fancy Indexing with Integer Arrays
+---
+id: fancy-indexing-integer-arrays
+slug: fancy-indexing-integer-arrays
+course: numpy-complete-course
+chapter: "5: Advanced Indexing & Boolean Filtering"
+topic: "5.2 Fancy Indexing with Integer Arrays"
+title: "Fancy Indexing with Integer Arrays"
+description: "In NumPy terminology, Fancy Indexing refers to indexing an array using arrays or sequences of integer indices rather than basic integer scalars or slice."
+difficulty: Intermediate
+readingTime: 9
+order: 2
+keywords:
+  - fancy indexing with integer arrays
+  - numpy tutorial
+  - fancy indexing integer arrays
+  - data analysis course
+  - MSK Institute
+lastUpdated: 2026-11-18
+author: "Er. Sumit Kumar (MSK Institute)"
+version: 1.1.0
+---
 
 In NumPy terminology, **Fancy Indexing** refers to indexing an array using arrays or sequences of integer indices rather than basic integer scalars or slice objects (`start:stop:step`). 
 
@@ -145,8 +165,7 @@ print("np.add.at() result:", counter)   # [0 3 0 1 0] -> incremented 3 times!
 
 ---
 
-# Multiple Choice Questions
-
+## Practice Quiz
 ### 1. What does fancy indexing in NumPy return when selecting elements from an array?
 A. Always a view sharing the original memory buffer
 B. Always a copy with a newly allocated memory buffer

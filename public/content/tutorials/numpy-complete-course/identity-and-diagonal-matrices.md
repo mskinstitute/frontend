@@ -1,4 +1,24 @@
-# Identity Matrices & Diagonal Arrays (eye, identity, diag)
+---
+id: identity-and-diagonal-matrices
+slug: identity-and-diagonal-matrices
+course: numpy-complete-course
+chapter: "3: Data Types & Array Inspection"
+topic: "3.3 Identity Matrices & Diagonal Arrays (eye, identity, diag)"
+title: "Identity Matrices & Diagonal Arrays (eye, identity, diag)"
+description: "In linear algebra, statistics, and machine learning, square matrices with ones along the main diagonal—known as Identity Matrices—act as the."
+difficulty: Intermediate
+readingTime: 6
+order: 3
+keywords:
+  - identity matrices diagonal arrays eye identity diag
+  - numpy tutorial
+  - identity and diagonal matrices
+  - data analysis course
+  - MSK Institute
+lastUpdated: 2026-11-18
+author: "Er. Sumit Kumar (MSK Institute)"
+version: 1.1.0
+---
 
 In linear algebra, statistics, and machine learning, square matrices with ones along the main diagonal—known as **Identity Matrices**—act as the multiplicative identity element (analogous to the number 1 in scalar arithmetic). NumPy provides dedicated functions to construct identity matrices and manipulate matrix diagonals.
 
@@ -85,8 +105,7 @@ print(scaling_matrix)
 
 ---
 
-# Multiple Choice Questions
-
+## Practice Quiz
 ### 1. What is the multiplicative property of an identity matrix 'I' when multiplied with a compatible matrix 'A': 'A @ I'?
 A. It returns zero
 B. It returns matrix A unchanged (A @ I = A)

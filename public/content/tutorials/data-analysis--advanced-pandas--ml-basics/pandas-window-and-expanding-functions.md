@@ -1,4 +1,24 @@
-# Window Functions & Moving Averages in Pandas
+---
+id: pandas-window-and-expanding-functions
+slug: pandas-window-and-expanding-functions
+course: data-analysis--advanced-pandas--ml-basics
+chapter: "1: Advanced Pandas Performance & Memory Optimization"
+topic: "1.3 Window Functions & Moving Averages in Pandas"
+title: "Window Functions & Moving Averages in Pandas"
+description: "In business intelligence and algorithmic finance, static metrics (like total monthly sales) hide critical intra-period dynamics. Window functions allow."
+difficulty: Advanced
+readingTime: 7
+order: 3
+keywords:
+  - window functions moving averages in pandas
+  - data science & machine learning tutorial
+  - pandas window and expanding functions
+  - data analysis course
+  - MSK Institute
+lastUpdated: 2026-11-18
+author: "Er. Sumit Kumar (MSK Institute)"
+version: 1.1.0
+---
 
 In business intelligence and algorithmic finance, static metrics (like total monthly sales) hide critical intra-period dynamics. **Window functions** allow analysts to calculate moving averages, rolling volatility, cumulative totals, and exponential trends across temporal and partitioned sequences without collapsing the underlying dataset.
 
@@ -81,8 +101,7 @@ df['ewma_12'] = df['revenue'].ewm(span=12, adjust=False).mean()
 
 ---
 
-# Multiple Choice Questions
-
+## Practice Quiz
 ### 1. What does the `min_periods` parameter in `df['sales'].rolling(window=7, min_periods=3).mean()` do?
 A. Forces the rolling calculation to only calculate every 3rd day.
 B. Requires at least 3 non-null observations in the 7-day window to calculate a mean, otherwise returning `NaN`.

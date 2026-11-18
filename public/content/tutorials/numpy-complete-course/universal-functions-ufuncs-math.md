@@ -1,4 +1,24 @@
-# Mathematical ufuncs: Trigonometric, Exponential, Logarithmic
+---
+id: universal-functions-ufuncs-math
+slug: universal-functions-ufuncs-math
+course: numpy-complete-course
+chapter: "9: Universal Functions (ufuncs) & Mathematical Methods"
+topic: "9.1 Universal Functions (ufuncs), Trigonometry & Logarithms"
+title: "Universal Functions (ufuncs), Trigonometry & Logarithms"
+description: "At the technical core of NumPy's blazing numerical speed lies the concept of Universal Functions (commonly abbreviated as ufuncs)."
+difficulty: Intermediate
+readingTime: 7
+order: 1
+keywords:
+  - universal functions ufuncs trigonometry logarithms
+  - numpy tutorial
+  - universal functions ufuncs math
+  - data analysis course
+  - MSK Institute
+lastUpdated: 2026-11-18
+author: "Er. Sumit Kumar (MSK Institute)"
+version: 1.1.0
+---
 
 At the technical core of NumPy's blazing numerical speed lies the concept of **Universal Functions** (commonly abbreviated as **ufuncs**). 
 
@@ -101,8 +121,7 @@ print("Buffer successfully populated in-place. Mean:", output_buffer.mean())
 
 ---
 
-# Multiple Choice Questions
-
+## Practice Quiz
 ### 1. In what unit of measurement do trigonometric ufuncs like `np.sin()` and `np.cos()` expect input angles?
 A. Degrees
 B. Radians

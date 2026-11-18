@@ -1,4 +1,24 @@
-# Efficient File I/O: .npy, .npz, & CSV/Text Files
+---
+id: saving-loading-arrays-npy-npz
+slug: saving-loading-arrays-npy-npz
+course: numpy-complete-course
+chapter: "12: Random Sampling, File I/O & Capstone Project"
+topic: "12.2 File I/O: Saving & Loading Native Arrays (.npy, .npz, Text)"
+title: "File I/O: Saving & Loading Native Arrays (.npy, .npz, Text)"
+description: "Scientific workflows require saving intermediate computations, persisting trained model parameters (such as neural network weights), and loading."
+difficulty: Intermediate
+readingTime: 8
+order: 2
+keywords:
+  - file io saving loading native arrays npy npz text
+  - numpy tutorial
+  - saving loading arrays npy npz
+  - data analysis course
+  - MSK Institute
+lastUpdated: 2026-11-18
+author: "Er. Sumit Kumar (MSK Institute)"
+version: 1.1.0
+---
 
 Scientific workflows require saving intermediate computations, persisting trained model parameters (such as neural network weights), and loading experimental measurement files.
 
@@ -125,8 +145,7 @@ os.remove("records.csv")
 
 ---
 
-# Multiple Choice Questions
-
+## Practice Quiz
 ### 1. Which file extension represents NumPy's single binary array storage format?
 A. `.npz`
 B. `.npy`

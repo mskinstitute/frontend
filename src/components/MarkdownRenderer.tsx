@@ -45,6 +45,28 @@ const PlaygroundModal = dynamic(() => import('@/features/playground/PlaygroundMo
 
 interface MarkdownRendererProps {
   content: string;
+  /** Demote markdown `#` H1 headings to `<h2>` (and skip a leading duplicate H1) so the parent page preserves a single semantic `<h1>`. */
+  demoteH1?: boolean;
+  /** Optional page title used to skip a redundant leading H1 in markdown body. */
+  pageTitle?: string;
+}
+
+/**
+ * Normalizes common inline LaTeX arrow/math tokens (e.g. $\to$, $\le$) outside code spans
+ * into crisp Unicode characters so tutorial prose never renders raw LaTeX delimiters.
+ */
+function normalizeInlineMathTokens(raw: string): string {
+  if (!raw.includes('$')) return raw;
+  return raw
+    .replace(/\$\\(?:to|rightarrow)\$/g, '→')
+    .replace(/\$\\leftarrow\$/g, '←')
+    .replace(/\$\\leftrightarrow\$/g, '↔')
+    .replace(/\$\\Rightarrow\$/g, '⇒')
+    .replace(/\$\\le(?:q)?\$/g, '≤')
+    .replace(/\$\\ge(?:q)?\$/g, '≥')
+    .replace(/\$\\neq?\$/g, '≠')
+    .replace(/\$\\times\$/g, '×')
+    .replace(/\$\\approx\$/g, '≈');
 }
 
 /**
@@ -66,7 +88,7 @@ export function renderFormattedText(text: string): React.ReactNode {
 
   while ((match = regex.exec(text)) !== null) {
     if (match.index > lastIndex) {
-      parts.push(text.substring(lastIndex, match.index));
+      parts.push(normalizeInlineMathTokens(text.substring(lastIndex, match.index)));
     }
     const token = match[0];
 
@@ -143,10 +165,10 @@ export function renderFormattedText(text: string): React.ReactNode {
   }
 
   if (lastIndex < text.length) {
-    parts.push(text.substring(lastIndex));
+    parts.push(normalizeInlineMathTokens(text.substring(lastIndex)));
   }
 
-  return parts.length > 0 ? parts : text;
+  return parts.length > 0 ? parts : normalizeInlineMathTokens(text);
 }
 
 const PLAYGROUND_SUPPORTED_LANGS: Record<string, SupportedLanguage> = {
@@ -208,7 +230,11 @@ type Block =
   | { type: 'image'; alt: string; src: string }
   | { type: 'paragraph'; lines: string[] };
 
-export default function MarkdownRenderer({ content }: MarkdownRendererProps) {
+export default function MarkdownRenderer({
+  content,
+  demoteH1 = false,
+  pageTitle,
+}: MarkdownRendererProps) {
   const [copiedIndex, setCopiedIndex] = useState<number | null>(null);
   const [zoomedImage, setZoomedImage] = useState<{ src: string; alt: string } | null>(null);
   const [userActiveLang, setUserActiveLang] = useState<string>('python');
@@ -866,6 +892,29 @@ export default function MarkdownRenderer({ content }: MarkdownRendererProps) {
 
           switch (block.level) {
             case 1:
+              if (demoteH1) {
+                // Skip leading H1 if it duplicates the parent page's <h1> title
+                if (idx === 0 && pageTitle) {
+                  const normBlock = block.text.replace(/[^\w\s]/g, '').trim().toLowerCase();
+                  const normPage = pageTitle.replace(/[^\w\s]/g, '').trim().toLowerCase();
+                  if (
+                    normBlock === normPage ||
+                    normPage.includes(normBlock) ||
+                    normBlock.includes(normPage)
+                  ) {
+                    return null;
+                  }
+                }
+                return (
+                  <h2
+                    key={idx}
+                    id={block.cleanId}
+                    className="text-2xl sm:text-3xl font-extrabold text-primary tracking-tight mt-10 mb-4 scroll-mt-24 border-b border-border-subtle/70 pb-3"
+                  >
+                    {renderFormattedText(block.text)}
+                  </h2>
+                );
+              }
               return (
                 <h1
                   key={idx}

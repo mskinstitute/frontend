@@ -1,6 +1,24 @@
-# Creating Series & DataFrames from Scratch
-
-*Reading Time: 8 Mins* | *Level: Beginner to Advanced*
+---
+id: creating-series-and-dataframes
+slug: creating-series-and-dataframes
+course: pandas-complete-course
+chapter: "1: Introduction to Pandas & Data Structures"
+topic: "1.3 Creating Series & DataFrames from Scratch"
+title: "Creating Series & DataFrames from Scratch"
+description: "Learn Creating Series & DataFrames from Scratch in Pandas with practical examples, analyst workflows, and interactive practice quizzes at MSK Institute."
+difficulty: Intermediate
+readingTime: 6
+order: 3
+keywords:
+  - creating series dataframes from scratch
+  - pandas tutorial
+  - creating series and dataframes
+  - data analysis course
+  - MSK Institute
+lastUpdated: 2026-11-18
+author: "Er. Sumit Kumar (MSK Institute)"
+version: 1.1.0
+---
 
 ---
 
@@ -99,8 +117,7 @@ print(df.dtypes)   # Datatypes for each column
 
 ---
 
-# Multiple Choice Questions
-
+## Practice Quiz
 ### 1. When creating a Pandas Series from a standard Python dictionary, what do the dictionary keys become?
 A. The Series values
 B. The Series Index labels

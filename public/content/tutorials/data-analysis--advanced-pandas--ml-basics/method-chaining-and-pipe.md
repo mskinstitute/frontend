@@ -1,4 +1,24 @@
-# Method Chaining (pipe, assign) for Clean Production Pipelines
+---
+id: method-chaining-and-pipe
+slug: method-chaining-and-pipe
+course: data-analysis--advanced-pandas--ml-basics
+chapter: "1: Advanced Pandas Performance & Memory Optimization"
+topic: "1.2 Method Chaining (pipe, assign) for Clean Production Pipelines"
+title: "Method Chaining (pipe, assign) for Clean Production Pipelines"
+description: "In production data engineering and predictive modeling workflows, clean and testable transformations are essential. Rather than creating endless."
+difficulty: Advanced
+readingTime: 7
+order: 2
+keywords:
+  - method chaining pipe assign for clean production pipelines
+  - data science & machine learning tutorial
+  - method chaining and pipe
+  - data analysis course
+  - MSK Institute
+lastUpdated: 2026-11-18
+author: "Er. Sumit Kumar (MSK Institute)"
+version: 1.1.0
+---
 
 In production data engineering and predictive modeling workflows, clean and testable transformations are essential. Rather than creating endless temporary intermediate variables (`df1`, `df2`, `df_clean`, `df_final`) that clutter memory and cause silent state mutation bugs, modern Python practitioners write **declarative method chains** using `.assign()`, `.pipe()`, and `.query()`.
 
@@ -92,8 +112,7 @@ df_result = (
 
 ---
 
-# Multiple Choice Questions
-
+## Practice Quiz
 ### 1. Why is passing a `lambda` function recommended inside `.assign()` when creating multiple derived columns in a method chain?
 A. Lambdas execute in parallel across all CPU cores.
 B. Lambdas access the current state of the transformed DataFrame at that step rather than the original un-evaluated DataFrame.

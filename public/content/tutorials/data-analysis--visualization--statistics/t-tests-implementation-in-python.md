@@ -1,6 +1,24 @@
-# T-Tests Implementation in Python (scipy.stats)
-
-*Reading Time: 8 Mins* | *Level: Intermediate*
+---
+id: t-tests-implementation-in-python
+slug: t-tests-implementation-in-python
+course: data-analysis--visualization--statistics
+chapter: "5: Hypothesis Testing & A/B Testing"
+topic: "5.2 T-Tests (One-sample, Two-sample independent & Paired)"
+title: "T-Tests (One-sample, Two-sample independent & Paired)"
+description: "Learn T-Tests (One-sample, Two-sample independent & Paired) in Data Visualization & Statistics with practical examples, analyst workflows, and interactive."
+difficulty: Intermediate
+readingTime: 6
+order: 2
+keywords:
+  - t-tests one-sample two-sample independent paired
+  - data visualization & statistics tutorial
+  - t tests implementation in python
+  - data analysis course
+  - MSK Institute
+lastUpdated: 2026-11-18
+author: "Er. Sumit Kumar (MSK Institute)"
+version: 1.1.0
+---
 
 ---
 
@@ -47,8 +65,7 @@ Conclusion: Reject H0! Variant B produces statistically significantly higher con
 
 ---
 
-# Multiple Choice Questions
-
+## Practice Quiz
 ### 1. Which function in `scipy.stats` conducts an independent two-sample t-test between two groups?
 A. `stats.ttest_ind()`
 B. `stats.ttest_rel()`

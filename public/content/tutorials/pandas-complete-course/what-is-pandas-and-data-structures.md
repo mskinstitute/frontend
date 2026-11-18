@@ -1,6 +1,24 @@
-# What is Pandas & Core Architecture
-
-*Reading Time: 8 Mins* | *Level: Beginner to Advanced*
+---
+id: what-is-pandas-and-data-structures
+slug: what-is-pandas-and-data-structures
+course: pandas-complete-course
+chapter: "1: Introduction to Pandas & Data Structures"
+topic: "1.1 What is Pandas & Core Architecture"
+title: "What is Pandas & Core Architecture"
+description: "In simple Indian English terms: > Jaise Excel me aapke paas sheets, rows, columns aur formulas hote hain, bilkul waise hi Python ke andar Pandas aapko."
+difficulty: Intermediate
+readingTime: 8
+order: 1
+keywords:
+  - what is pandas core architecture
+  - pandas tutorial
+  - what is pandas and data structures
+  - data analysis course
+  - MSK Institute
+lastUpdated: 2026-11-18
+author: "Er. Sumit Kumar (MSK Institute)"
+version: 1.1.0
+---
 
 ![Pandas Architecture](/images/tutorials/pandas/pandas-series-dataframe-anatomy.svg)
 
@@ -85,8 +103,7 @@ One of the most frequent points of confusion for beginners is understanding axis
 
 ---
 
-# Multiple Choice Questions
-
+## Practice Quiz
 ### 1. What is the fundamental difference between a NumPy ndarray and a Pandas DataFrame?
 A. NumPy is written in C whereas Pandas is written only in pure Python
 B. A NumPy array must have a homogeneous data type across all elements, whereas a Pandas DataFrame can store different data types in different columns

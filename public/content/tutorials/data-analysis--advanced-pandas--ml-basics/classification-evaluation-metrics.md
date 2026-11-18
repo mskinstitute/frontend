@@ -1,4 +1,24 @@
-# Classification Metrics: Confusion Matrix, Precision, Recall, F1 & ROC-AUC
+---
+id: classification-evaluation-metrics
+slug: classification-evaluation-metrics
+course: data-analysis--advanced-pandas--ml-basics
+chapter: "4: Regression & Classification Modeling"
+topic: "4.3 Classification Metrics: Confusion Matrix, Precision, Recall, F1 & ROC-AUC"
+title: "Classification Metrics: Confusion Matrix, Precision, Recall, F1 & ROC-AUC"
+description: "In enterprise data science, raw accuracy is often a dangerous illusion. In imbalanced business problems—such as fraud detection (0.1% fraud), disease."
+difficulty: Advanced
+readingTime: 7
+order: 3
+keywords:
+  - classification metrics confusion matrix precision recall f1 roc-auc
+  - data science & machine learning tutorial
+  - classification evaluation metrics
+  - data analysis course
+  - MSK Institute
+lastUpdated: 2026-11-18
+author: "Er. Sumit Kumar (MSK Institute)"
+version: 1.1.0
+---
 
 In enterprise data science, **raw accuracy is often a dangerous illusion**. In imbalanced business problems—such as fraud detection (0.1% fraud), disease diagnosis, or churn prediction—a dummy model predicting "No Fraud" 100% of the time achieves 99.9% accuracy while delivering zero business value. Professional data analysts evaluate classification systems using the **Confusion Matrix**, **Precision**, **Recall**, **F1-Score**, and **ROC-AUC**.
 
@@ -76,8 +96,7 @@ print(f"ROC-AUC: {auc:.3f}")
 
 ---
 
-# Multiple Choice Questions
-
+## Practice Quiz
 ### 1. In a medical screening test where undetected cancer carries fatal consequences, which metric must data analysts prioritize maximizing?
 A. Precision
 B. Recall (Sensitivity)

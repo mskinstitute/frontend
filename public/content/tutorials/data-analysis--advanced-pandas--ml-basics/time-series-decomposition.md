@@ -1,4 +1,24 @@
-# Trend, Seasonality & Residual Decomposition
+---
+id: time-series-decomposition
+slug: time-series-decomposition
+course: data-analysis--advanced-pandas--ml-basics
+chapter: "2: Time Series Forecasting & Seasonality"
+topic: "2.1 Trend, Seasonality & Residual Decomposition"
+title: "Trend, Seasonality & Residual Decomposition"
+description: "Time series data in business contexts (e.g., e-commerce order volumes, server API loads, electricity demand) is driven by multiple overlapping dynamics."
+difficulty: Advanced
+readingTime: 6
+order: 1
+keywords:
+  - trend seasonality residual decomposition
+  - data science & machine learning tutorial
+  - time series decomposition
+  - data analysis course
+  - MSK Institute
+lastUpdated: 2026-11-18
+author: "Er. Sumit Kumar (MSK Institute)"
+version: 1.1.0
+---
 
 Time series data in business contexts (e.g., e-commerce order volumes, server API loads, electricity demand) is driven by multiple overlapping dynamics. **Classical Time Series Decomposition** untangles raw metrics into three distinct, interpretable components: **Trend**, **Seasonality**, and **Residual Noise**.
 
@@ -74,8 +94,7 @@ plt.show()
 
 ---
 
-# Multiple Choice Questions
-
+## Practice Quiz
 ### 1. When should an analyst choose a **multiplicative** decomposition model over an additive one?
 A. When the time series has only 3 data points.
 B. When the seasonal variations expand proportionally as the overall level of the trend increases.

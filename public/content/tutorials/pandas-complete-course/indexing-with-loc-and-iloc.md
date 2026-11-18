@@ -1,6 +1,24 @@
-# Indexing with loc & iloc
-
-*Reading Time: 8 Mins* | *Level: Beginner to Advanced*
+---
+id: indexing-with-loc-and-iloc
+slug: indexing-with-loc-and-iloc
+course: pandas-complete-course
+chapter: "3: Indexing, Selection & Conditional Filtering"
+topic: "3.1 Indexing with loc & iloc"
+title: "Indexing with loc & iloc"
+description: "Learn Indexing with loc & iloc in Pandas with practical examples, analyst workflows, and interactive practice quizzes at MSK Institute."
+difficulty: Intermediate
+readingTime: 6
+order: 1
+keywords:
+  - indexing with loc iloc
+  - pandas tutorial
+  - indexing with loc and iloc
+  - data analysis course
+  - MSK Institute
+lastUpdated: 2026-11-18
+author: "Er. Sumit Kumar (MSK Institute)"
+version: 1.1.0
+---
 
 ---
 
@@ -79,8 +97,7 @@ print(sub_matrix)
 
 ---
 
-# Multiple Choice Questions
-
+## Practice Quiz
 ### 1. What does the 'i' in `.iloc` stand for?
 A. Index
 B. Integer position

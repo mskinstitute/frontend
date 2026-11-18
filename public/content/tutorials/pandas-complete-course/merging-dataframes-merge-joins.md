@@ -1,6 +1,24 @@
-# Relational Joins with pd.merge (Inner, Left, Right, Outer)
-
-*Reading Time: 8 Mins* | *Level: Beginner to Advanced*
+---
+id: merging-dataframes-merge-joins
+slug: merging-dataframes-merge-joins
+course: pandas-complete-course
+chapter: "7: Combining, Merging & Reshaping DataFrames"
+topic: "7.2 Relational Joins with pd.merge (Inner, Left, Right, Outer)"
+title: "Relational Joins with pd.merge (Inner, Left, Right, Outer)"
+description: "Learn Relational Joins with pd.merge (Inner, Left, Right, Outer) in Pandas with practical examples, analyst workflows, and interactive practice quizzes at."
+difficulty: Intermediate
+readingTime: 6
+order: 2
+keywords:
+  - relational joins with pdmerge inner left right outer
+  - pandas tutorial
+  - merging dataframes merge joins
+  - data analysis course
+  - MSK Institute
+lastUpdated: 2026-11-18
+author: "Er. Sumit Kumar (MSK Institute)"
+version: 1.1.0
+---
 
 ![Pandas Merge Joins](/images/tutorials/pandas/pandas-merge-join-types.svg)
 
@@ -87,8 +105,7 @@ Name: _merge, dtype: int64
 
 ---
 
-# Multiple Choice Questions
-
+## Practice Quiz
 ### 1. What is the default join type used in `pd.merge(df1, df2, on='key')`?
 A. Left join
 B. Inner join

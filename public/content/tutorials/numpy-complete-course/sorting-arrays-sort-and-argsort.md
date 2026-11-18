@@ -1,4 +1,24 @@
-# Sorting Arrays: np.sort() vs np.argsort()
+---
+id: sorting-arrays-sort-and-argsort
+slug: sorting-arrays-sort-and-argsort
+course: numpy-complete-course
+chapter: "10: Sorting, Searching & Set Operations"
+topic: "10.1 Sorting Arrays & Extracting Indices (np.sort vs np.argsort)"
+title: "Sorting Arrays & Extracting Indices (np.sort vs np.argsort)"
+description: "Sorting data is a core algorithmic primitive in numerical computing. In scientific pipelines, sorting enables ranking, percentile calculation, quantile."
+difficulty: Intermediate
+readingTime: 7
+order: 1
+keywords:
+  - sorting arrays extracting indices npsort vs npargsort
+  - numpy tutorial
+  - sorting arrays sort and argsort
+  - data analysis course
+  - MSK Institute
+lastUpdated: 2026-11-18
+author: "Er. Sumit Kumar (MSK Institute)"
+version: 1.1.0
+---
 
 Sorting data is a core algorithmic primitive in numerical computing. In scientific pipelines, sorting enables ranking, percentile calculation, quantile binning, nearest-neighbor searches, and ordering multi-column tables.
 
@@ -129,8 +149,7 @@ Sorted by Last Name, then First Name:
 
 ---
 
-# Multiple Choice Questions
-
+## Practice Quiz
 ### 1. What is the return value of `arr.sort()`?
 A. A new sorted array
 B. `None` (it sorts the array in-place)

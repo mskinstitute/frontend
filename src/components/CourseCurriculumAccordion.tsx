@@ -199,9 +199,11 @@ export default function CourseCurriculumAccordion({
                     </div>
                   </button>
 
-                  {/* Course Body (Chapters List) */}
-                  {isCourseOpen && (
-                    <div className="p-5 bg-surface/30 space-y-4 animate-in fade-in duration-200">
+                  {/* Course Body (Chapters List — kept in SSR DOM with hidden attr for SEO/AI crawler accessibility) */}
+                  <div
+                    hidden={!isCourseOpen}
+                    className={isCourseOpen ? 'p-5 bg-surface/30 space-y-4 animate-in fade-in duration-200' : 'hidden'}
+                  >
                       {/* Standalone course quick summary bar */}
                       <div className="flex flex-col sm:flex-row sm:items-center justify-between p-3.5 bg-white rounded-xl border border-border-subtle gap-3">
                         <p className="text-xs text-text-muted leading-relaxed max-w-xl">
@@ -224,10 +226,11 @@ export default function CourseCurriculumAccordion({
                             <span>Modules & Chapters ({courseChapters.length})</span>
                           </div>
 
-                          {courseChapters
+                          {[...courseChapters]
                             .sort((a, b) => a.sortOrder - b.sortOrder)
-                            .map((chapter) => {
+                            .map((chapter, chIdx) => {
                               const isChapterOpen = activeChapterId === chapter.id;
+                              const sortedTopics = [...chapter.topics].sort((a, b) => a.sortOrder - b.sortOrder);
 
                               return (
                                 <div
@@ -256,7 +259,7 @@ export default function CourseCurriculumAccordion({
                                             : 'bg-primary/5 text-primary'
                                         }`}
                                       >
-                                        {chapter.sortOrder}
+                                        {chIdx + 1}
                                       </span>
                                       <span className="text-sm font-bold text-primary">
                                         {chapter.title || (chapter as any).chapterTitle}
@@ -265,7 +268,7 @@ export default function CourseCurriculumAccordion({
 
                                     <div className="flex items-center gap-3">
                                       <span className="text-[11px] font-semibold text-text-muted bg-surface px-2 py-0.5 rounded border border-border-subtle">
-                                        {chapter.topics.length} Topics
+                                        {sortedTopics.length} Topics
                                       </span>
                                       <ChevronDown
                                         className={`w-4 h-4 transition-transform duration-200 ${
@@ -275,13 +278,13 @@ export default function CourseCurriculumAccordion({
                                     </div>
                                   </button>
 
-                                  {/* Chapter Topics list */}
-                                  {isChapterOpen && (
-                                    <div className="p-4 border-t border-border-subtle bg-surface/50 space-y-3 animate-in fade-in duration-150">
+                                  {/* Chapter Topics list (in SSR DOM for full syllabus crawlability) */}
+                                  <div
+                                    hidden={!isChapterOpen}
+                                    className={isChapterOpen ? 'p-4 border-t border-border-subtle bg-surface/50 space-y-3 animate-in fade-in duration-150' : 'hidden'}
+                                  >
                                       <ul className="space-y-2.5">
-                                        {chapter.topics
-                                          .sort((a, b) => a.sortOrder - b.sortOrder)
-                                          .map((topic) => (
+                                        {sortedTopics.map((topic, tIdx) => (
                                             <li
                                               key={topic.id}
                                               id={topic.id}
@@ -290,7 +293,7 @@ export default function CourseCurriculumAccordion({
                                               <span className="flex items-center gap-2 font-medium">
                                                 <Check className="w-3.5 h-3.5 text-green-600 flex-shrink-0" />
                                                 <span className="font-mono text-[11px] text-slate-400 font-bold flex-shrink-0">
-                                                  {chapter.sortOrder}.{topic.sortOrder}
+                                                  {chIdx + 1}.{tIdx + 1}
                                                 </span>
                                                 <span className="font-semibold text-text-main">{topic.title}</span>
                                               </span>
@@ -361,7 +364,6 @@ export default function CourseCurriculumAccordion({
                                           ))}
                                       </ul>
                                     </div>
-                                  )}
                                 </div>
                               );
                             })}
@@ -372,7 +374,6 @@ export default function CourseCurriculumAccordion({
                         </p>
                       )}
                     </div>
-                  )}
                 </div>
               );
             })}
@@ -418,10 +419,11 @@ export default function CourseCurriculumAccordion({
       </div>
 
       <div className="space-y-3">
-        {chapters
+        {[...chapters]
           .sort((a, b) => a.sortOrder - b.sortOrder)
-          .map((chapter) => {
+          .map((chapter, chIdx) => {
             const isChapterOpen = activeChapterId === chapter.id;
+            const sortedTopics = [...chapter.topics].sort((a, b) => a.sortOrder - b.sortOrder);
 
             return (
               <div
@@ -445,14 +447,14 @@ export default function CourseCurriculumAccordion({
                         isChapterOpen ? 'bg-secondary text-white' : 'bg-primary/5 text-primary'
                       }`}
                     >
-                      {chapter.sortOrder}
+                      {chIdx + 1}
                     </span>
                     <span className="text-base font-bold text-primary">{chapter.title || (chapter as any).chapterTitle}</span>
                   </span>
 
                   <div className="flex items-center gap-3">
                     <span className="text-xs font-semibold text-text-muted bg-surface px-2.5 py-1 rounded-md border border-border-subtle">
-                      {chapter.topics.length} Topics
+                      {sortedTopics.length} Topics
                     </span>
                     <ChevronDown
                       className={`w-5 h-5 transition-transform duration-200 ${
@@ -462,12 +464,12 @@ export default function CourseCurriculumAccordion({
                   </div>
                 </button>
 
-                {isChapterOpen && (
-                  <div className="p-5 border-t border-border-subtle bg-surface/50 space-y-4 animate-in fade-in duration-150">
+                <div
+                  hidden={!isChapterOpen}
+                  className={isChapterOpen ? 'p-5 border-t border-border-subtle bg-surface/50 space-y-4 animate-in fade-in duration-150' : 'hidden'}
+                >
                     <ul className="space-y-3">
-                      {chapter.topics
-                        .sort((a, b) => a.sortOrder - b.sortOrder)
-                        .map((topic) => (
+                      {sortedTopics.map((topic, tIdx) => (
                           <li
                             key={topic.id}
                             id={topic.id}
@@ -476,7 +478,7 @@ export default function CourseCurriculumAccordion({
                             <span className="flex items-center gap-2">
                               <Check className="w-4 h-4 text-green-600 flex-shrink-0" />
                               <span className="font-mono text-xs text-slate-400 font-bold flex-shrink-0">
-                                {chapter.sortOrder}.{topic.sortOrder}
+                                {chIdx + 1}.{tIdx + 1}
                               </span>
                               <span className="font-semibold text-text-main">{topic.title}</span>
                             </span>
@@ -546,7 +548,6 @@ export default function CourseCurriculumAccordion({
                         ))}
                     </ul>
                   </div>
-                )}
               </div>
             );
           })}

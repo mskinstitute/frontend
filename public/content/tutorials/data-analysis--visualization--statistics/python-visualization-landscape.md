@@ -1,6 +1,24 @@
-# Python Visualization Landscape: Matplotlib vs Seaborn vs Plotly
-
-*Reading Time: 8 Mins* | *Level: Intermediate*
+---
+id: python-visualization-landscape
+slug: python-visualization-landscape
+course: data-analysis--visualization--statistics
+chapter: "1: Data Visualization Foundations & Python Ecosystem"
+topic: "1.2 Python Visualization Landscape: Matplotlib vs Seaborn vs Plotly"
+title: "Python Visualization Landscape: Matplotlib vs Seaborn vs Plotly"
+description: "Learn Python Visualization Landscape: Matplotlib vs Seaborn vs Plotly in Data Visualization & Statistics with practical examples, analyst workflows, and in."
+difficulty: Intermediate
+readingTime: 6
+order: 2
+keywords:
+  - python visualization landscape matplotlib vs seaborn vs plotly
+  - data visualization & statistics tutorial
+  - python visualization landscape
+  - data analysis course
+  - MSK Institute
+lastUpdated: 2026-11-18
+author: "Er. Sumit Kumar (MSK Institute)"
+version: 1.1.0
+---
 
 ---
 
@@ -22,8 +40,7 @@ Python offers three primary libraries for visual analytics:
 
 ---
 
-# Multiple Choice Questions
-
+## Practice Quiz
 ### 1. Which library forms the low-level foundation upon which Seaborn is built?
 A. Plotly
 B. Matplotlib

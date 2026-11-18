@@ -1,4 +1,24 @@
-# Inspecting Array Attributes (shape, ndim, size, itemsize)
+---
+id: inspecting-array-attributes
+slug: inspecting-array-attributes
+course: numpy-complete-course
+chapter: "3: Data Types & Array Inspection"
+topic: "3.2 Inspecting Array Attributes (shape, ndim, size, itemsize)"
+title: "Inspecting Array Attributes (shape, ndim, size, itemsize)"
+description: "Every NumPy ndarray encapsulates a lightweight metadata header describing its structure in memory. Being able to inspect an array’s shape, dimensions."
+difficulty: Intermediate
+readingTime: 6
+order: 2
+keywords:
+  - inspecting array attributes shape ndim size itemsize
+  - numpy tutorial
+  - inspecting array attributes
+  - data analysis course
+  - MSK Institute
+lastUpdated: 2026-11-18
+author: "Er. Sumit Kumar (MSK Institute)"
+version: 1.1.0
+---
 
 Every NumPy ndarray encapsulates a lightweight metadata header describing its structure in memory. Being able to inspect an array’s **shape, dimensions, memory strides, and byte layout** is essential for debugging data pipelines and optimizing neural networks.
 
@@ -69,8 +89,7 @@ inspect_array("FeatureMatrix", x)
 
 ---
 
-# Multiple Choice Questions
-
+## Practice Quiz
 ### 1. What does the 'shape' attribute return for an array created with 'np.zeros((4, 7, 3))'?
 A. 84
 B. 3

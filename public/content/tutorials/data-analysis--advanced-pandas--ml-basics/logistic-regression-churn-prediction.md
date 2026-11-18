@@ -1,4 +1,24 @@
-# Logistic Regression: Odds Ratios & Customer Churn Prediction
+---
+id: logistic-regression-churn-prediction
+slug: logistic-regression-churn-prediction
+course: data-analysis--advanced-pandas--ml-basics
+chapter: "4: Regression & Classification Modeling"
+topic: "4.2 Logistic Regression: Odds Ratios & Customer Churn Prediction"
+title: "Logistic Regression: Odds Ratios & Customer Churn Prediction"
+description: "While linear regression predicts continuous numerical outcomes, Logistic Regression is the industry standard for modeling binary categorical decisions."
+difficulty: Advanced
+readingTime: 7
+order: 2
+keywords:
+  - logistic regression odds ratios customer churn prediction
+  - data science & machine learning tutorial
+  - logistic regression churn prediction
+  - data analysis course
+  - MSK Institute
+lastUpdated: 2026-11-18
+author: "Er. Sumit Kumar (MSK Institute)"
+version: 1.1.0
+---
 
 While linear regression predicts continuous numerical outcomes, **Logistic Regression** is the industry standard for modeling binary categorical decisions (e.g., Churn vs Retain, Fraud vs Legitimate, Default vs Repay). By compressing linear combinations through the **Sigmoid (Logit) function**, logistic regression outputs calibrated probabilities bounded strictly between 0 and 1.
 
@@ -84,8 +104,7 @@ custom_predictions = (churn_probs >= 0.35).astype(int)
 
 ---
 
-# Multiple Choice Questions
-
+## Practice Quiz
 ### 1. What mathematical function maps real numbers from $(-\infty, +\infty)$ to the probability interval $[0, 1]$ in logistic regression?
 A. Rectified Linear Unit (ReLU)
 B. Sigmoid (Logit) function

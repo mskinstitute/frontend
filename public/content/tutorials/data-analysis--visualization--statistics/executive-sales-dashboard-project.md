@@ -1,6 +1,24 @@
-# Mini Project: Executive Sales & Profitability Dashboard
-
-*Reading Time: 8 Mins* | *Level: Intermediate*
+---
+id: executive-sales-dashboard-project
+slug: executive-sales-dashboard-project
+course: data-analysis--visualization--statistics
+chapter: "6: Storytelling & Executive Dashboard Project"
+topic: "6.3 Mini Project: Executive Sales & Profitability Dashboard"
+title: "Mini Project: Executive Sales & Profitability Dashboard"
+description: "Learn Mini Project: Executive Sales & Profitability Dashboard in Data Visualization & Statistics with practical examples, analyst workflows, and interactiv."
+difficulty: Intermediate
+readingTime: 6
+order: 3
+keywords:
+  - mini project executive sales profitability dashboard
+  - data visualization & statistics tutorial
+  - executive sales dashboard project
+  - data analysis course
+  - MSK Institute
+lastUpdated: 2026-11-18
+author: "Er. Sumit Kumar (MSK Institute)"
+version: 1.1.0
+---
 
 ---
 
@@ -60,8 +78,7 @@ plt.show()
 
 ---
 
-# Multiple Choice Questions
-
+## Practice Quiz
 ### 1. In a 2x2 subplot layout created with `fig, axes = plt.subplots(2, 2)`, how is the bottom-left subplot referenced?
 A. `axes[1, 0]`
 B. `axes[0, 1]`

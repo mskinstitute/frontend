@@ -1,6 +1,24 @@
-# Dual Axis & Combined Axis Charts
-
-*Reading Time: 8 Mins* | *Level: Beginner to Advanced*
+---
+id: dual-axis-charts-in-tableau
+slug: dual-axis-charts-in-tableau
+course: tableau-for-beginners
+chapter: "3: Core Visualizations & Chart Types"
+topic: "3.4 Dual Axis & Combined Axis Charts"
+title: "Dual Axis & Combined Axis Charts"
+description: "Learn Dual Axis & Combined Axis Charts in Tableau with practical examples, analyst workflows, and interactive practice quizzes at MSK Institute."
+difficulty: Beginner
+readingTime: 6
+order: 4
+keywords:
+  - dual axis combined axis charts
+  - tableau tutorial
+  - dual axis charts in tableau
+  - data analysis course
+  - MSK Institute
+lastUpdated: 2026-11-18
+author: "Er. Sumit Kumar (MSK Institute)"
+version: 1.1.0
+---
 
 ---
 
@@ -18,8 +36,7 @@ A **Dual Axis Chart** overlays two independent measures on the same visual canva
 
 ---
 
-# Multiple Choice Questions
-
+## Practice Quiz
 ### 1. What step must you always take when plotting two measures that share the same scale on a Dual Axis chart to prevent misleading comparisons?
 A. Right-click the secondary axis and select 'Synchronize Axis'
 B. Delete the left axis

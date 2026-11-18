@@ -1,4 +1,24 @@
-# Splitting Arrays: split(), hsplit(), & vsplit()
+---
+id: splitting-arrays-hsplit-vsplit
+slug: splitting-arrays-hsplit-vsplit
+course: numpy-complete-course
+chapter: "7: Joining, Stacking & Splitting Arrays"
+topic: "7.3 Splitting Arrays into Chunks (split, hsplit, vsplit)"
+title: "Splitting Arrays into Chunks (split, hsplit, vsplit)"
+description: "The reverse of array joining is array splitting—breaking a large array into multiple smaller sub-arrays. This is standard in machine learning pipelines."
+difficulty: Intermediate
+readingTime: 8
+order: 3
+keywords:
+  - splitting arrays into chunks split hsplit vsplit
+  - numpy tutorial
+  - splitting arrays hsplit vsplit
+  - data analysis course
+  - MSK Institute
+lastUpdated: 2026-11-18
+author: "Er. Sumit Kumar (MSK Institute)"
+version: 1.1.0
+---
 
 The reverse of array joining is **array splitting**—breaking a large array into multiple smaller sub-arrays. This is standard in machine learning pipelines when splitting feature matrices $X$ from label vectors $y$, or dividing a dataset into equal batches.
 
@@ -119,8 +139,7 @@ Worker 2 chunk (size 3): [7 8 9]
 
 ---
 
-# Multiple Choice Questions
-
+## Practice Quiz
 ### 1. What happens if you call `np.split(np.arange(10), 3)`?
 A. The last element is discarded and three arrays of 3 elements are returned
 B. A ValueError is raised because 10 is not evenly divisible by 3

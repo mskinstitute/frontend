@@ -1,4 +1,24 @@
-# RFM (Recency, Frequency, Monetary) Customer Segmentation
+---
+id: rfm-customer-segmentation-project
+slug: rfm-customer-segmentation-project
+course: data-analysis--advanced-pandas--ml-basics
+chapter: "5: Customer Segmentation & Unsupervised Learning"
+topic: "5.2 RFM (Recency, Frequency, Monetary) Customer Segmentation"
+title: "RFM (Recency, Frequency, Monetary) Customer Segmentation"
+description: "RFM (Recency, Frequency, Monetary) Analysis is an empirically proven behavioral segmentation framework used by premier e-commerce, banking, and retail."
+difficulty: Advanced
+readingTime: 8
+order: 2
+keywords:
+  - rfm recency frequency monetary customer segmentation
+  - data science & machine learning tutorial
+  - rfm customer segmentation project
+  - data analysis course
+  - MSK Institute
+lastUpdated: 2026-11-18
+author: "Er. Sumit Kumar (MSK Institute)"
+version: 1.1.0
+---
 
 **RFM (Recency, Frequency, Monetary) Analysis** is an empirically proven behavioral segmentation framework used by premier e-commerce, banking, and retail enterprises. By transforming transactional purchase histories into three quantitative pillars, businesses can identify top VIP spenders, churn-risk accounts, and reactivation targets for precision marketing campaigns.
 
@@ -87,8 +107,7 @@ rfm['Customer_Segment'] = rfm.apply(map_rfm_persona, axis=1)
 
 ---
 
-# Multiple Choice Questions
-
+## Practice Quiz
 ### 1. Why are the quintile score labels for **Recency** assigned in reverse order ($5, 4, 3, 2, 1$) compared to Frequency and Monetary?
 A. Recency has a negative correlation with customer satisfaction.
 B. Fewer elapsed days since the last purchase indicates a more engaged, active customer who deserves the highest score (5).

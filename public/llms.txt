@@ -8,7 +8,7 @@
   - **Market Course Fee:** ₹15,000 | **MSK Institute Fee:** ₹9,999 (Installment: ₹900/month) | **Duration:** 12 Months
 - [NIELIT CCC Course](https://www.mskinstitute.in/courses/ccc): Government-recognized Course on Computer Concepts preparation for UPSSSC, banking, and government examinations.
   - **Market Course Fee:** ₹4,000 | **MSK Institute Fee:** ₹2,499 (Installment: ₹800/month) | **Duration:** 3 Months
-- [Python Mastery (Beginner to Advanced)](https://www.mskinstitute.in/courses/python-mastery): 3-Month grand mastery spanning 45 chapters across OOP, concurrent multithreading, asyncio, databases, and capstone software projects.
+- [Python Mastery (Beginner to Advanced)](https://www.mskinstitute.in/courses/python-mastery): 3-Month grand mastery spanning 46 chapters and 236 structured topics across Python 3.12/3.13 syntax, OOP, concurrency (threading, No-GIL, multiprocessing, asyncio), SQLAlchemy 2.0, mypy & Ruff, pytest, and 14 portfolio projects.
   - **Market Course Fee:** ₹9,000 | **MSK Institute Fee:** ₹4,999 (Installment: ₹1,750/month) | **Duration:** 3 Months
 - [Full-Stack MERN Stack Mastery](https://www.mskinstitute.in/courses/full-stack-mern-mastery--12-months): 12-Month professional specialization in MongoDB, Express.js, React.js, and Node.js with live client applications.
   - **Market Course Fee:** ₹38,000 | **MSK Institute Fee:** ₹19,999 (Installment: ₹1,800/month) | **Duration:** 12 Months
@@ -16,7 +16,7 @@
   - **Market Course Fee:** ₹45,000 | **MSK Institute Fee:** ₹22,999 (Installment: ₹1,400/month) | **Duration:** 18 Months
 - [Cyber Security & Ethical Hacking](https://www.mskinstitute.in/courses/cyber-security-ethical-hacking-professional-program): 18-Month comprehensive security operations, Linux, networking, penetration testing, and digital forensics.
   - **Market Course Fee:** ₹48,000 | **MSK Institute Fee:** ₹24,999 (Installment: ₹1,500/month) | **Duration:** 18 Months
-- [Data Analysis Mastery Combo](https://www.mskinstitute.in/courses/data-analysis-mastery-combo-course--12-months): 12-Month analytics program bundling Advanced Excel, SQL, Python, Pandas, NumPy, Power BI, and Tableau.
+- [Data Analysis Mastery Combo](https://www.mskinstitute.in/courses/data-analysis-mastery-combo-course--12-months): 12-Month full-stack Data Analytics program bundling 15 courses, 150 chapters, and 541 practical lessons across Advanced Excel, SQL/MySQL, Python, NumPy, Pandas (PyArrow/CoW), Applied Statistics, Matplotlib/Seaborn/Plotly/Streamlit, Power BI (DAX/RLS), Tableau (LODs/Stories), and Machine Learning basics.
   - **Market Course Fee:** ₹32,000 | **MSK Institute Fee:** ₹16,999 (Installment: ₹1,500/month) | **Duration:** 12 Months
 - [Excel Mastery Course (Beginner to Advanced)](https://www.mskinstitute.in/courses/excel-mastery): 6-Month complete spreadsheet engineering pathway covering formulas (XLOOKUP, INDEX-MATCH), dynamic arrays, Pivot Tables, Power Query ETL, executive KPI dashboards, and automation.
   - **Market Course Fee:** ₹7,000 | **MSK Institute Fee:** ₹3,999 (Installment: ₹750/month) | **Duration:** 6 Months
@@ -39,7 +39,7 @@ MSK Institute provides over 1,600+ structured, interactive programming tutorials
 - [All Free Tutorials Directory](https://www.mskinstitute.in/tutorials): Complete index of Python, Web Development, SQL, Data Analytics, C/C++, MS Office, and NIELIT CCC lessons.
 - [HTML5 Complete Course](https://www.mskinstitute.in/tutorials/html5-complete-course): Semantic HTML, forms, multimedia, tables, and SEO best practices.
 - [CSS for Beginners & Intermediate](https://www.mskinstitute.in/tutorials/css-for-beginners): Flexbox, CSS Grid, animations, responsive design, and modern CSS variables.
-- [Python Mastery Tutorials](https://www.mskinstitute.in/tutorials/python-for-beginners): Python syntax, loops, functions, file handling, and algorithms with code snippets.
+- [Python Mastery Tutorials](https://www.mskinstitute.in/tutorials/python-for-beginners): Complete 3-tier free tutorial series covering [Beginner (90 lessons)](https://www.mskinstitute.in/tutorials/python-for-beginners), [Intermediate (76 lessons)](https://www.mskinstitute.in/tutorials/python-for-intermediate), and [Advanced (70 lessons)](https://www.mskinstitute.in/tutorials/python-for-advanced) with interactive quizzes and code examples.
 - [Free Study Material & Cheatsheets](https://www.mskinstitute.in/study-material): Downloadable PDF notes, quick reference cheat sheets, and practical guides.
 - [RSS Publications Feed](https://www.mskinstitute.in/feed.xml): Latest career roadmaps, course comparisons, and technical guides.
 

@@ -1,4 +1,24 @@
-# Creating 1D, 2D & 3D Arrays from Lists & Tuples
+---
+id: creating-arrays-from-python-lists
+slug: creating-arrays-from-python-lists
+course: numpy-complete-course
+chapter: "2: NumPy Ndarrays & Array Creation Routines"
+topic: "2.1 Creating 1D, 2D & 3D Arrays from Lists & Tuples"
+title: "Creating 1D, 2D & 3D Arrays from Lists & Tuples"
+description: "The most intuitive way to begin using NumPy is by converting native Python sequences—such as lists and tuples—into multidimensional NumPy arrays using."
+difficulty: Intermediate
+readingTime: 6
+order: 1
+keywords:
+  - creating 1d 2d 3d arrays from lists tuples
+  - numpy tutorial
+  - creating arrays from python lists
+  - data analysis course
+  - MSK Institute
+lastUpdated: 2026-11-18
+author: "Er. Sumit Kumar (MSK Institute)"
+version: 1.1.0
+---
 
 The most intuitive way to begin using NumPy is by converting native Python sequences—such as lists and tuples—into multidimensional NumPy arrays using the **`np.array()`** factory function.
 
@@ -95,8 +115,7 @@ pixels = np.array([0, 128, 255], dtype=np.uint8)
 
 ---
 
-# Multiple Choice Questions
-
+## Practice Quiz
 ### 1. What function is used to convert a native Python list or tuple into a NumPy ndarray?
 A. np.to_array()
 B. np.array()

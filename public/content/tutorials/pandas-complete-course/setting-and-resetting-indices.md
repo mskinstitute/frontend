@@ -1,6 +1,24 @@
-# Setting, Resetting & Managing Indices
-
-*Reading Time: 8 Mins* | *Level: Beginner to Advanced*
+---
+id: setting-and-resetting-indices
+slug: setting-and-resetting-indices
+course: pandas-complete-course
+chapter: "3: Indexing, Selection & Conditional Filtering"
+topic: "3.3 Setting, Resetting & Managing Indices"
+title: "Setting, Resetting & Managing Indices"
+description: "By default, when creating or loading a DataFrame, Pandas assigns a default zero-indexed integer range: RangeIndex(0, 1, 2, ...)."
+difficulty: Intermediate
+readingTime: 6
+order: 3
+keywords:
+  - setting resetting managing indices
+  - pandas tutorial
+  - setting and resetting indices
+  - data analysis course
+  - MSK Institute
+lastUpdated: 2026-11-18
+author: "Er. Sumit Kumar (MSK Institute)"
+version: 1.1.0
+---
 
 ---
 
@@ -74,8 +92,7 @@ print(df_multi)
 
 ---
 
-# Multiple Choice Questions
-
+## Practice Quiz
 ### 1. What does the `df.set_index('Customer_ID')` method do?
 A. Renames the column 'Customer_ID' to 'Index'
 B. Moves the 'Customer_ID' column to become the row index of the DataFrame

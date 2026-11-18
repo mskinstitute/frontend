@@ -1,4 +1,24 @@
-# Downcasting Dtypes & Category Encoding for 10x Memory Savings
+---
+id: memory-downcasting-and-category-dtypes
+slug: memory-downcasting-and-category-dtypes
+course: data-analysis--advanced-pandas--ml-basics
+chapter: "1: Advanced Pandas Performance & Memory Optimization"
+topic: "1.1 Downcasting Dtypes & Category Encoding for 10x Memory Savings"
+title: "Downcasting Dtypes & Category Encoding for 10x Memory Savings"
+description: "When working with production datasets exceeding millions of rows in Pandas, the default data types assigned during pd.readcsv() or SQL reads frequently."
+difficulty: Advanced
+readingTime: 8
+order: 1
+keywords:
+  - downcasting dtypes category encoding for 10x memory savings
+  - data science & machine learning tutorial
+  - memory downcasting and category dtypes
+  - data analysis course
+  - MSK Institute
+lastUpdated: 2026-11-18
+author: "Er. Sumit Kumar (MSK Institute)"
+version: 1.1.0
+---
 
 When working with production datasets exceeding millions of rows in Pandas, the default data types assigned during `pd.read_csv()` or SQL reads frequently lead to severe memory bloat and out-of-memory (`OOM`) crashes. By mastering numerical downcasting and string categorical conversion, you can routinely reduce DataFrame RAM consumption by **70% to 90%** without sacrificing numerical precision or data integrity.
 
@@ -82,8 +102,7 @@ for col in df.select_dtypes(include=['object']).columns:
 
 ---
 
-# Multiple Choice Questions
-
+## Practice Quiz
 ### 1. Why does `df.info()` underestimate memory usage for DataFrame columns containing strings unless `memory_usage='deep'` is specified?
 A. String columns are automatically compressed by gzip in Pandas.
 B. Without `deep=True`, Pandas only counts the memory of Python object pointers, ignoring the actual string contents stored in heap memory.

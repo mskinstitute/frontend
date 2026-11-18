@@ -1,6 +1,24 @@
-# Applying Custom Functions (apply, map, applymap)
-
-*Reading Time: 8 Mins* | *Level: Beginner to Advanced*
+---
+id: applying-functions-apply-map-applymap
+slug: applying-functions-apply-map-applymap
+course: pandas-complete-course
+chapter: "5: Data Transformation & String Operations"
+topic: "5.1 Applying Custom Functions (apply, map, applymap)"
+title: "Applying Custom Functions (apply, map, applymap)"
+description: "Always prefer native vectorized math where possible: - Fast: df['Total'] = df['Price'] df['Qty'] (Vectorized C speed) - Slow: df['Total'] =."
+difficulty: Intermediate
+readingTime: 6
+order: 1
+keywords:
+  - applying custom functions apply map applymap
+  - pandas tutorial
+  - applying functions apply map applymap
+  - data analysis course
+  - MSK Institute
+lastUpdated: 2026-11-18
+author: "Er. Sumit Kumar (MSK Institute)"
+version: 1.1.0
+---
 
 ---
 
@@ -63,8 +81,7 @@ Always prefer native vectorized math where possible:
 
 ---
 
-# Multiple Choice Questions
-
+## Practice Quiz
 ### 1. Which method is best suited for replacing values in a Series using a dictionary lookup table?
 A. `Series.map()`
 B. `Series.dict_replace()`

@@ -1,6 +1,24 @@
-# Handling Duplicates & Data Type Conversions
-
-*Reading Time: 8 Mins* | *Level: Beginner to Advanced*
+---
+id: handling-duplicates-and-data-types
+slug: handling-duplicates-and-data-types
+course: pandas-complete-course
+chapter: "4: Data Cleaning & Missing Value Imputation"
+topic: "4.3 Handling Duplicates & Data Type Conversions"
+title: "Handling Duplicates & Data Type Conversions"
+description: "Learn Handling Duplicates & Data Type Conversions in Pandas with practical examples, analyst workflows, and interactive practice quizzes at MSK Institute."
+difficulty: Intermediate
+readingTime: 6
+order: 3
+keywords:
+  - handling duplicates data type conversions
+  - pandas tutorial
+  - handling duplicates and data types
+  - data analysis course
+  - MSK Institute
+lastUpdated: 2026-11-18
+author: "Er. Sumit Kumar (MSK Institute)"
+version: 1.1.0
+---
 
 ---
 
@@ -65,8 +83,7 @@ df['User'] = df['User'].astype('category')
 
 ---
 
-# Multiple Choice Questions
-
+## Practice Quiz
 ### 1. Which method drops duplicate records from a DataFrame?
 A. `df.remove_repeats()`
 B. `df.drop_duplicates()`

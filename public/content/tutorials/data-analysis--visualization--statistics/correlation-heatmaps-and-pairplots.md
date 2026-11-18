@@ -1,6 +1,24 @@
-# Correlation Heatmaps & PairPlots for Multivariate EDA
-
-*Reading Time: 8 Mins* | *Level: Intermediate*
+---
+id: correlation-heatmaps-and-pairplots
+slug: correlation-heatmaps-and-pairplots
+course: data-analysis--visualization--statistics
+chapter: "3: Statistical Visualizations with Seaborn"
+topic: "3.5 Correlation Heatmaps & PairPlots for Multivariate EDA"
+title: "Correlation Heatmaps & PairPlots for Multivariate EDA"
+description: "Learn Correlation Heatmaps & PairPlots for Multivariate EDA in Data Visualization & Statistics with practical examples, analyst workflows, and interactive."
+difficulty: Intermediate
+readingTime: 6
+order: 5
+keywords:
+  - correlation heatmaps pairplots for multivariate eda
+  - data visualization & statistics tutorial
+  - correlation heatmaps and pairplots
+  - data analysis course
+  - MSK Institute
+lastUpdated: 2026-11-18
+author: "Er. Sumit Kumar (MSK Institute)"
+version: 1.1.0
+---
 
 ---
 
@@ -50,8 +68,7 @@ plt.show()
 
 ---
 
-# Multiple Choice Questions
-
+## Practice Quiz
 ### 1. What does a Pearson correlation coefficient value of $r = -0.92$ indicate?
 A. Strong negative linear relationship (as one variable rises, the other falls proportionally)
 B. Weak relationship

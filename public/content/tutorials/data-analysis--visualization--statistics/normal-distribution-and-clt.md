@@ -1,6 +1,24 @@
-# Normal Distribution, Z-Scores & Central Limit Theorem
-
-*Reading Time: 8 Mins* | *Level: Intermediate*
+---
+id: normal-distribution-and-clt
+slug: normal-distribution-and-clt
+course: data-analysis--visualization--statistics
+chapter: "4: Descriptive & Inferential Statistics for Analysts"
+topic: "4.3 Normal Distribution, Z-Scores & Central Limit Theorem"
+title: "Normal Distribution, Z-Scores & Central Limit Theorem"
+description: "As your sample size $n$ increases, your uncertainty ($SE$) shrinks by the square root of $n$."
+difficulty: Intermediate
+readingTime: 6
+order: 3
+keywords:
+  - normal distribution z-scores central limit theorem
+  - data visualization & statistics tutorial
+  - normal distribution and clt
+  - data analysis course
+  - MSK Institute
+lastUpdated: 2026-11-18
+author: "Er. Sumit Kumar (MSK Institute)"
+version: 1.1.0
+---
 
 ![Hypothesis Testing Curve](/images/tutorials/data-analysis--visualization--statistics/hypothesis-testing-bell-curve.svg)
 
@@ -28,8 +46,7 @@ As your sample size $n$ increases, your uncertainty ($SE$) shrinks by the square
 
 ---
 
-# Multiple Choice Questions
-
+## Practice Quiz
 ### 1. According to the Empirical Rule of a Normal Distribution, approximately what percentage of observations fall within $\pm 2$ standard deviations of the mean?
 A. 50%
 B. 68%

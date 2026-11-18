@@ -1,4 +1,24 @@
-# Depth & Column Stacking: dstack(), column_stack(), & stack()
+---
+id: depth-and-column-stacking
+slug: depth-and-column-stacking
+course: numpy-complete-course
+chapter: "7: Joining, Stacking & Splitting Arrays"
+topic: "7.2 Depth & Column Stacking (dstack, column_stack, stack)"
+title: "Depth & Column Stacking (dstack, column_stack, stack)"
+description: "While vstack and hstack handle basic 2D horizontal and vertical stacking, real-world data science and computer vision problems frequently require."
+difficulty: Intermediate
+readingTime: 8
+order: 2
+keywords:
+  - depth column stacking dstack columnstack stack
+  - numpy tutorial
+  - depth and column stacking
+  - data analysis course
+  - MSK Institute
+lastUpdated: 2026-11-18
+author: "Er. Sumit Kumar (MSK Institute)"
+version: 1.1.0
+---
 
 While `vstack` and `hstack` handle basic 2D horizontal and vertical stacking, real-world data science and computer vision problems frequently require working along other axes:
 - Merging independent grayscale channels into a multi-channel RGB or RGBA image tensor.
@@ -86,15 +106,14 @@ print("Stacked axis -1 shape:", video_channels.shape)
 | :--- | :--- | :--- | :--- |
 | `np.concatenate` | Joins along existing axis | Same `ndim` | Appending rows or columns |
 | `np.stack` | Joins along brand new axis | `ndim + 1` | Batching images, time-series frames |
-| `np.vstack` | Row-wise stacking | Promotes 1D $\to$ 2D | Appending sample rows |
+| `np.vstack` | Row-wise stacking | Promotes 1D → 2D | Appending sample rows |
 | `np.hstack` | Column-wise for 2D, 1D concat | Same or 2D | Horizontal image tiling |
 | `np.column_stack`| 1D arrays as columns | Always 2D | ML design matrices |
 | `np.dstack` | Stacks along 3rd axis (depth) | Promotes to 3D | RGB channel merging |
 
 ---
 
-# Multiple Choice Questions
-
+## Practice Quiz
 ### 1. How does `np.stack()` differ fundamentally from `np.concatenate()`?
 A. `np.stack()` runs faster because it does not allocate memory
 B. `np.stack()` joins arrays along a brand new axis, increasing dimensionality by 1

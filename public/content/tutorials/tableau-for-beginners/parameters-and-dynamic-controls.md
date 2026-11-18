@@ -1,6 +1,24 @@
-# Parameters & Dynamic Controls
-
-*Reading Time: 8 Mins* | *Level: Beginner to Advanced*
+---
+id: parameters-and-dynamic-controls
+slug: parameters-and-dynamic-controls
+course: tableau-for-beginners
+chapter: "4: Calculations, Parameters & LOD Expressions"
+topic: "4.3 Creating Dynamic Parameters for What-If Scenarios & Top N Filters"
+title: "Creating Dynamic Parameters for What-If Scenarios & Top N Filters"
+description: "Unlike filters (which are tied to existing data columns), parameters are global independent controls: $$ ext{Parameter Control} o ext{Calculated Field /."
+difficulty: Beginner
+readingTime: 6
+order: 3
+keywords:
+  - creating dynamic parameters for what-if scenarios top n filters
+  - tableau tutorial
+  - parameters and dynamic controls
+  - data analysis course
+  - MSK Institute
+lastUpdated: 2026-11-18
+author: "Er. Sumit Kumar (MSK Institute)"
+version: 1.1.0
+---
 
 ---
 
@@ -19,8 +37,7 @@ $$	ext{Parameter Control} 	o 	ext{Calculated Field / Filter} 	o 	ext{Visual Chan
 
 ---
 
-# Multiple Choice Questions
-
+## Practice Quiz
 ### 1. What is a Parameter in Tableau?
 A. A workbook-wide dynamic variable that allows users to pass custom input values into calculations, reference lines, and filters
 B. A database password

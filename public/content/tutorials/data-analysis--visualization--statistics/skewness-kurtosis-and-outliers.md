@@ -1,6 +1,24 @@
-# Skewness, Kurtosis & Identifying Outliers with Z-Score
-
-*Reading Time: 8 Mins* | *Level: Intermediate*
+---
+id: skewness-kurtosis-and-outliers
+slug: skewness-kurtosis-and-outliers
+course: data-analysis--visualization--statistics
+chapter: "4: Descriptive & Inferential Statistics for Analysts"
+topic: "4.2 Skewness, Kurtosis & Identifying Outliers with Z-Score"
+title: "Skewness, Kurtosis & Identifying Outliers with Z-Score"
+description: "Observations with $|Z| > 3.0$ are statistically classified as extreme outliers:"
+difficulty: Intermediate
+readingTime: 6
+order: 2
+keywords:
+  - skewness kurtosis identifying outliers with z-score
+  - data visualization & statistics tutorial
+  - skewness kurtosis and outliers
+  - data analysis course
+  - MSK Institute
+lastUpdated: 2026-11-18
+author: "Er. Sumit Kumar (MSK Institute)"
+version: 1.1.0
+---
 
 ---
 
@@ -34,8 +52,7 @@ print("Detected Outliers:\n", outliers)
 
 ---
 
-# Multiple Choice Questions
-
+## Practice Quiz
 ### 1. In a positively (right) skewed distribution, what is the typical relationship between the Mean and the Median?
 A. $Mean > Median$
 B. $Mean < Median$

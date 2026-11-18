@@ -11,6 +11,7 @@ import { fetchCourses, fetchLiveBatches } from '@/services/api';
 import { getBranchesForCourse } from '@/lib/branches';
 import CourseCurriculumAccordion from '@/components/CourseCurriculumAccordion';
 import CourseRelatedContent from '@/components/CourseRelatedContent';
+import MarkdownRenderer from '@/components/MarkdownRenderer';
 import WebShareButton from '@/components/WebShareButton';
 import CourseViewTracker from '@/components/CourseViewTracker';
 import { Course, LiveBatch, Branch } from '@/types';
@@ -54,16 +55,26 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
     }
 
     const isMastery = course.courseType === 'COMBO' || course.title.toLowerCase().includes('mastery');
-    const fullPageTitle = isMastery
+    const defaultTitle = isMastery
       ? `${course.title} Course in Shikohabad | MSK Institute`
       : `${course.title} in Shikohabad | MSK Institute`;
+    const fullPageTitle = course.seo?.title || defaultTitle;
+
+    const trimMetaDescription = (raw: string): string => {
+      const clean = raw.replace(/\s+/g, ' ').trim();
+      if (clean.length <= 160) return clean;
+      const cut = clean.slice(0, 157);
+      const lastSpace = cut.lastIndexOf(' ');
+      return `${(lastSpace > 110 ? cut.slice(0, lastSpace) : cut).replace(/[.,;:—-]+$/, '')}.`;
+    };
+    const metaDescription = course.seo?.description || trimMetaDescription(course.shortDescription);
 
     return constructMetadata({
       title: fullPageTitle,
-      description: course.shortDescription,
+      description: metaDescription,
       canonical: `/courses/${course.slug}`,
       image: course.featuredImageUrl,
-      keywords: [
+      keywords: course.seo?.keywords || [
         course.title,
         `${course.title} in Shikohabad`,
         `${course.title} Course`,
@@ -142,10 +153,10 @@ export default async function CourseDetailPage({ params }: { params: Params }) {
   // Inject Structured JSON-LD Schema Data (Course + FAQPage + BreadcrumbList)
   const isMasteryCourse = isCombo || course.title.toLowerCase().includes('mastery');
 
-  const courseFaqs = [
+  const defaultCourseFaqs = [
     {
       question: `Can I attend a free demo class for ${course.title}?`,
-      answer: `Yes, MSK Institute provides free demo classes and hands-on lab sessions at our Shikohabad campus. You can book a free demo slot online at https://www.mskinstitute.in/book-demo or via WhatsApp (+91 8393042166) before enrolling.`,
+      answer: `Yes, MSK Institute provides free demo classes and hands-on lab sessions at our Shikohabad campus and live online. You can book a free demo slot at https://www.mskinstitute.in/book-demo or via WhatsApp (+91 8393042166) before enrolling.`,
     },
     {
       question: `Do I get a verifiable certificate upon completing ${course.title}?`,
@@ -157,7 +168,7 @@ export default async function CourseDetailPage({ params }: { params: Params }) {
     }] : []),
     {
       question: `Where are the offline classes held and what are the timings?`,
-      answer: `Offline practical lab training is conducted at Gali No. 3, Near Gyan Jyoti Public School, Shikohabad, UP. Flexible morning and evening batches are available with 1-on-1 mentor guidance.`,
+      answer: `Offline practical lab training is conducted at Gali No. 3, Near Gyan Jyoti Public School, Shikohabad, UP, alongside live interactive online batches across India. Flexible morning and evening batches are available with 1-on-1 mentor guidance.`,
     },
     {
       question: `What are the prerequisites to join ${course.title}?`,
@@ -165,9 +176,27 @@ export default async function CourseDetailPage({ params }: { params: Params }) {
     },
     {
       question: `Will I build real-world portfolio projects in ${course.title}?`,
-      answer: `Yes, every student builds live laboratory assignments and real-world capstone projects pushed to GitHub, preparing you for technical interviews and professional freelancing.`,
+      answer: `Yes, every student builds live laboratory assignments and real-world capstone projects pushed to GitHub, preparing you for technical interviews and practical software development.`,
     },
   ];
+
+  // Prioritize authentic course-specific FAQs from all-courses.json and supplement with local demo/location FAQs
+  const courseFaqs =
+    course.faqs && course.faqs.length > 0
+      ? [
+          ...course.faqs,
+          ...defaultCourseFaqs.filter(
+            (def) =>
+              def.question.toLowerCase().includes('demo') ||
+              def.question.toLowerCase().includes('offline classes')
+          ).filter(
+            (def) =>
+              !course.faqs!.some((f) =>
+                f.question.toLowerCase().includes(def.question.toLowerCase().includes('demo') ? 'demo' : 'timings')
+              )
+          ),
+        ]
+      : defaultCourseFaqs;
 
   const coursePricing = getCoursePricing(course.id, {
     title: course.title,
@@ -191,32 +220,66 @@ export default async function CourseDetailPage({ params }: { params: Params }) {
     },
   ];
 
+  const formatChapterSyllabusDesc = (topics?: { title: string; sortOrder?: number }[]) => {
+    if (!topics || topics.length === 0) return 'Practical lab topics and assignments in this module.';
+    const sorted = [...topics].sort((a, b) => (a.sortOrder ?? 0) - (b.sortOrder ?? 0));
+    const names = sorted.slice(0, 6).map((t) => t.title).join(', ');
+    const more = sorted.length > 6 ? ` (+${sorted.length - 6} more topics)` : '';
+    return `${sorted.length} topics: ${names}${more}.`;
+  };
+
   const syllabusSections = (isCombo && includedCourses.length > 0)
     ? includedCourses.flatMap((subCourse, subIdx) =>
-        (subCourse.chapters || []).map((ch, chIdx) => ({
-          '@type': 'Syllabus',
-          'position': subIdx * 100 + chIdx + 1,
-          'name': `${subCourse.title}: ${ch.title}`,
-          'description': `${ch.topics?.length || 0} practical lab topics and assignments in this module.`,
-        }))
+        [...(subCourse.chapters || [])]
+          .sort((a, b) => (a.sortOrder ?? 0) - (b.sortOrder ?? 0))
+          .map((ch, chIdx) => ({
+            '@type': 'Syllabus',
+            'position': subIdx * 100 + chIdx + 1,
+            'name': `${subCourse.title} — ${ch.title}`,
+            'description': formatChapterSyllabusDesc(ch.topics),
+          }))
       )
-    : (course.chapters || []).map((ch, idx) => ({
-        '@type': 'Syllabus',
-        'position': idx + 1,
-        'name': ch.title,
-        'description': `${ch.topics?.length || 0} practical topics covered in this module.`,
-      }));
+    : [...(course.chapters || [])]
+        .sort((a, b) => (a.sortOrder ?? 0) - (b.sortOrder ?? 0))
+        .map((ch, idx) => ({
+          '@type': 'Syllabus',
+          'position': idx + 1,
+          'name': ch.title,
+          'description': formatChapterSyllabusDesc(ch.topics),
+        }));
+
+  const canonicalUrl = `https://www.mskinstitute.in/courses/${course.slug}`;
 
   const jsonLd = {
     '@context': 'https://schema.org',
     '@graph': [
       {
+        '@type': 'WebPage',
+        '@id': `${canonicalUrl}#webpage`,
+        'url': canonicalUrl,
+        'name': course.seo?.title || `${course.title} | MSK Institute`,
+        'description': course.seo?.description || course.shortDescription,
+        'inLanguage': 'en-IN',
+        'dateModified': '2026-11-18',
+        'isPartOf': {
+          '@type': 'WebSite',
+          '@id': 'https://www.mskinstitute.in/#website',
+          'name': 'MSK Institute',
+          'url': 'https://www.mskinstitute.in',
+        },
+        'mainEntity': {
+          '@id': `${canonicalUrl}#course`,
+        },
+      },
+      {
         '@type': 'Course',
-        '@id': `https://www.mskinstitute.in/courses/${course.slug}#course`,
+        '@id': `${canonicalUrl}#course`,
         'name': course.title,
-        'description': course.shortDescription,
+        'description': course.seo?.description || course.shortDescription,
+        'image': course.featuredImageUrl,
         'courseCode': course.id,
-        'url': `https://www.mskinstitute.in/courses/${course.slug}`,
+        'url': canonicalUrl,
+        'dateModified': '2026-11-18',
         'timeRequired': course.duration.unit === 'MONTHS' ? `P${course.duration.value}M` : `P${course.duration.value}D`,
         'educationalLevel': course.level,
         'about': course.categories,
@@ -232,6 +295,7 @@ export default async function CourseDetailPage({ params }: { params: Params }) {
           'credentialCategory': 'Certificate',
           'recognizedBy': {
             '@type': 'EducationalOrganization',
+            '@id': 'https://www.mskinstitute.in/#organization',
             'name': 'MSK Institute',
             'url': 'https://www.mskinstitute.in',
           },
@@ -240,7 +304,7 @@ export default async function CourseDetailPage({ params }: { params: Params }) {
         'audience': {
           '@type': 'EducationalAudience',
           'educationalRole': 'student',
-          'audienceType': 'School & College Students, BCA/B.Tech Candidates, Job Seekers, and Working Professionals in Shikohabad and Uttar Pradesh',
+          'audienceType': 'School & College Students, BCA/B.Tech Candidates, Job Seekers, and Working Professionals in Shikohabad, Uttar Pradesh, and Live Online across India',
         },
         'aggregateRating': {
           '@type': 'AggregateRating',
@@ -252,6 +316,7 @@ export default async function CourseDetailPage({ params }: { params: Params }) {
         },
         'provider': {
           '@type': 'EducationalOrganization',
+          '@id': 'https://www.mskinstitute.in/#organization',
           'name': 'MSK Institute',
           'url': 'https://www.mskinstitute.in',
           'sameAs': 'https://www.mskinstitute.in',
@@ -270,8 +335,10 @@ export default async function CourseDetailPage({ params }: { params: Params }) {
           '@type': 'Person',
           'name': 'Er. Sumit Kumar',
           'jobTitle': 'Lead Technical Trainer & Founder',
+          'url': 'https://www.mskinstitute.in/about',
           'worksFor': {
             '@type': 'EducationalOrganization',
+            '@id': 'https://www.mskinstitute.in/#organization',
             'name': 'MSK Institute',
           },
         },
@@ -447,7 +514,7 @@ export default async function CourseDetailPage({ params }: { params: Params }) {
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src={course.featuredImageUrl}
-                alt={course.title}
+                alt={`${course.title} — Offline Computer Lab in Shikohabad & Live Online Classes at MSK Institute`}
                 width={1200}
                 height={600}
                 fetchPriority="high"
@@ -463,32 +530,50 @@ export default async function CourseDetailPage({ params }: { params: Params }) {
 
             {/* Course Description overview */}
             <section className="space-y-4">
-              <h2 className="text-2xl font-extrabold text-primary border-b border-border-subtle pb-2 flex items-center gap-2">
-                <BookOpen className="w-5 h-5 text-secondary" />
-                Course Overview
-              </h2>
-              <div className="text-text-muted text-base leading-relaxed space-y-4">
-                <p>
-                  This program is structured to provide an immersive, hands-on learning experience. At MSK Institute, we believe in learning by doing. Every concept introduced is followed by structured lab assignments in our classroom, ensuring students develop practical logic alongside technical vocabulary.
-                </p>
-                {isCombo ? (
-                  <p>
-                    By enrolling in the <strong>{course.title}</strong>, you receive access to <strong>{includedCourses.length} complete specialized courses</strong> under a unified learning path. Explore each included curriculum below to review individual modules, notes, and lab assignments.
-                  </p>
-                ) : (
-                  <p>
-                    By enrolling in the <strong>{course.title}</strong>, you will gain access to detailed step-by-step guides, interactive notes, classroom computer labs, and review mentorship led by experienced instructors.
-                  </p>
-                )}
+              <div className="flex flex-wrap items-center justify-between gap-2 border-b border-border-subtle pb-2">
+                <h2 className="text-2xl font-extrabold text-primary flex items-center gap-2">
+                  <BookOpen className="w-5 h-5 text-secondary" />
+                  Course Overview
+                </h2>
+                <span className="text-xs font-semibold text-text-muted">
+                  Curriculum updated: Nov 2026 • By{' '}
+                  <Link href="/about" className="text-primary font-bold hover:text-secondary transition-colors">
+                    Er. Sumit Kumar
+                  </Link>
+                </span>
               </div>
+              {course.description ? (
+                <div className="text-text-muted text-base leading-relaxed">
+                  <MarkdownRenderer
+                    content={course.description}
+                    demoteH1
+                    pageTitle={course.title}
+                  />
+                </div>
+              ) : (
+                <div className="text-text-muted text-base leading-relaxed space-y-4">
+                  <p>
+                    This program is structured to provide an immersive, hands-on learning experience. At MSK Institute, we believe in learning by doing. Every concept introduced is followed by structured lab assignments in our classroom and live online sessions, ensuring students develop practical logic alongside technical vocabulary.
+                  </p>
+                  {isCombo ? (
+                    <p>
+                      By enrolling in the <strong>{course.title}</strong>, you receive access to <strong>{includedCourses.length} complete specialized courses</strong> under a unified learning path. Explore each included curriculum below to review individual modules, notes, and lab assignments.
+                    </p>
+                  ) : (
+                    <p>
+                      By enrolling in the <strong>{course.title}</strong>, you will gain access to detailed step-by-step guides, interactive notes, classroom computer labs, and review mentorship led by experienced instructors.
+                    </p>
+                  )}
+                </div>
+              )}
             </section>
 
             {/* What You Will Learn (Key Outcomes) */}
             <section className="space-y-4 bg-surface rounded-2xl p-6 border border-border-subtle">
-              <h3 className="text-xl font-extrabold text-primary flex items-center gap-2">
+              <h2 className="text-xl font-extrabold text-primary flex items-center gap-2">
                 <CheckCircle2 className="w-5 h-5 text-green-600" />
                 What You Will Master in this Course
-              </h3>
+              </h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
                 {resolvedOutcomes.map((outcome, idx) => (
                   <div key={idx} className="flex items-start gap-2.5 text-sm text-text-main">
@@ -508,9 +593,9 @@ export default async function CourseDetailPage({ params }: { params: Params }) {
                   <Sparkles className="w-3.5 h-3.5" />
                   Interactive Skill Assessment
                 </div>
-                <h3 className="text-lg sm:text-xl font-extrabold text-primary">
+                <h2 className="text-lg sm:text-xl font-extrabold text-primary">
                   Test Your {course.title} Skills with Free Mock Test
-                </h3>
+                </h2>
                 <p className="text-xs text-text-muted leading-relaxed max-w-xl">
                   Attempt timed multiple-choice questions, verify code outputs, and receive an instant digital scorecard with Grade S/A/B/C/D before starting classes.
                 </p>
@@ -566,10 +651,10 @@ export default async function CourseDetailPage({ params }: { params: Params }) {
           {/* Right Column: Metadata Sidebar */}
           <div className="space-y-6">
             <div className="bg-white rounded-2xl border border-border-subtle p-6 shadow-sm space-y-6 sticky top-24">
-              <h3 className="font-extrabold text-xl text-primary border-b border-border-subtle pb-3 flex items-center gap-2">
+              <h2 className="font-extrabold text-xl text-primary border-b border-border-subtle pb-3 flex items-center gap-2">
                 <Award className="w-5 h-5 text-secondary" />
                 Course Highlights
-              </h3>
+              </h2>
 
               {/* Stats table */}
               <div className="space-y-4">

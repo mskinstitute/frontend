@@ -1,6 +1,24 @@
-# Vectorized String Methods (.str accessor)
-
-*Reading Time: 8 Mins* | *Level: Beginner to Advanced*
+---
+id: vectorized-string-methods
+slug: vectorized-string-methods
+course: pandas-complete-course
+chapter: "5: Data Transformation & String Operations"
+topic: "5.2 Vectorized String Methods (.str accessor)"
+title: "Vectorized String Methods (.str accessor)"
+description: "Learn Vectorized String Methods (.str accessor) in Pandas with practical examples, analyst workflows, and interactive practice quizzes at MSK Institute."
+difficulty: Intermediate
+readingTime: 6
+order: 2
+keywords:
+  - vectorized string methods str accessor
+  - pandas tutorial
+  - vectorized string methods
+  - data analysis course
+  - MSK Institute
+lastUpdated: 2026-11-18
+author: "Er. Sumit Kumar (MSK Institute)"
+version: 1.1.0
+---
 
 ---
 
@@ -65,8 +83,7 @@ print(df[['Email', 'Domain']])
 
 ---
 
-# Multiple Choice Questions
-
+## Practice Quiz
 ### 1. Which accessor prefix is used to call vectorized string operations on a Pandas Series?
 A. `.text`
 B. `.str`

@@ -1,6 +1,24 @@
-# Histograms, Bins & Frequency Distributions
-
-*Reading Time: 8 Mins* | *Level: Intermediate*
+---
+id: histograms-and-frequency-distributions
+slug: histograms-and-frequency-distributions
+course: data-analysis--visualization--statistics
+chapter: "2: Matplotlib Architecture & Core Plotting"
+topic: "2.4 Histograms, Bins & Probability Density"
+title: "Histograms, Bins & Probability Density"
+description: "Learn Histograms, Bins & Probability Density in Data Visualization & Statistics with practical examples, analyst workflows, and interactive practice quizze."
+difficulty: Intermediate
+readingTime: 6
+order: 4
+keywords:
+  - histograms bins probability density
+  - data visualization & statistics tutorial
+  - histograms and frequency distributions
+  - data analysis course
+  - MSK Institute
+lastUpdated: 2026-11-18
+author: "Er. Sumit Kumar (MSK Institute)"
+version: 1.1.0
+---
 
 ---
 
@@ -41,8 +59,7 @@ plt.show()
 
 ---
 
-# Multiple Choice Questions
-
+## Practice Quiz
 ### 1. What is the key distinction between a bar chart and a histogram?
 A. Bar charts represent discrete categorical variables, whereas histograms represent the continuous distribution of numerical data divided into bins
 B. Histograms only work on text

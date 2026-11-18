@@ -1,4 +1,24 @@
-# K-Means Clustering & The Elbow Method
+---
+id: k-means-clustering-and-elbow-method
+slug: k-means-clustering-and-elbow-method
+course: data-analysis--advanced-pandas--ml-basics
+chapter: "5: Customer Segmentation & Unsupervised Learning"
+topic: "5.1 K-Means Clustering & The Elbow Method"
+title: "K-Means Clustering & The Elbow Method"
+description: "In modern commerce, treating all customers identically leads to suboptimal marketing returns and high churn. K-Means Clustering is the preeminent."
+difficulty: Advanced
+readingTime: 7
+order: 1
+keywords:
+  - k-means clustering the elbow method
+  - data science & machine learning tutorial
+  - k means clustering and elbow method
+  - data analysis course
+  - MSK Institute
+lastUpdated: 2026-11-18
+author: "Er. Sumit Kumar (MSK Institute)"
+version: 1.1.0
+---
 
 In modern commerce, treating all customers identically leads to suboptimal marketing returns and high churn. **K-Means Clustering** is the preeminent unsupervised machine learning algorithm used to partition unlabeled datasets into $K$ distinct, non-overlapping behavioral clusters based on geometric feature proximity.
 
@@ -82,8 +102,7 @@ print(cluster_profiles)
 
 ---
 
-# Multiple Choice Questions
-
+## Practice Quiz
 ### 1. Why is feature scaling mandatory before running K-Means clustering?
 A. K-Means algorithms will crash on unscaled data.
 B. K-Means uses Euclidean distance; unscaled features with large numerical magnitudes (e.g., annual revenue in thousands) will completely dominate the distance metric over features with small scales (e.g., age).

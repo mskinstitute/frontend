@@ -1,4 +1,24 @@
-# Feature Engineering: One-Hot Encoding, StandardScaler & MinMax
+---
+id: feature-engineering-and-scaling
+slug: feature-engineering-and-scaling
+course: data-analysis--advanced-pandas--ml-basics
+chapter: "3: Machine Learning Concepts & Scikit-Learn Pipeline"
+topic: "3.2 Feature Engineering: One-Hot Encoding, StandardScaler & MinMax"
+title: "Feature Engineering: One-Hot Encoding, StandardScaler & MinMax"
+description: "Raw business data (text strings, timestamps, disparate numerical scales) cannot be ingested directly into mathematical estimators like Linear."
+difficulty: Advanced
+readingTime: 8
+order: 2
+keywords:
+  - feature engineering one-hot encoding standardscaler minmax
+  - data science & machine learning tutorial
+  - feature engineering and scaling
+  - data analysis course
+  - MSK Institute
+lastUpdated: 2026-11-18
+author: "Er. Sumit Kumar (MSK Institute)"
+version: 1.1.0
+---
 
 Raw business data (text strings, timestamps, disparate numerical scales) cannot be ingested directly into mathematical estimators like Linear Regression, Logistic Regression, or Support Vector Machines. **Feature Engineering & Preprocessing** transforms raw columns into numerical representations while eliminating numerical scale distortion through feature scaling.
 
@@ -75,8 +95,7 @@ X_test_scaled = scaler.transform(X_test[['age', 'annual_salary']])
 
 ---
 
-# Multiple Choice Questions
-
+## Practice Quiz
 ### 1. Why must `scaler.fit_transform()` be called on `X_train`, but only `scaler.transform()` on `X_test`?
 A. Calling `fit_transform` on `X_test` causes a Python syntax error.
 B. To prevent data leakage; fitting on `X_test` would leak test distribution parameters (mean and standard deviation) into the model pipeline.

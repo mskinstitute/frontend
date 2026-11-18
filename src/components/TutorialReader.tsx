@@ -64,6 +64,8 @@ const TUTORIAL_CHEATSHEET_MAP: Record<string, string> = {
   'power-bi-for-advanced': 'cheat-power-bi-dax-modeling',
   'pandas-complete-course': 'cheat-pandas-data-science',
   'numpy-complete-course': 'cheat-pandas-data-science',
+  'data-analysis--visualization--statistics': 'cheat-pandas-data-science',
+  'data-analysis--advanced-pandas--ml-basics': 'cheat-pandas-data-science',
   'sql-for-beginners': 'cheat-sql-data-analytics',
   'sql-for-intermediate': 'cheat-sql-data-analytics',
   'sql-for-advanced': 'cheat-sql-data-analytics',
@@ -338,11 +340,11 @@ export default function TutorialReader({
         <main className={`flex-1 min-w-0 p-4 sm:p-8 lg:p-12 pb-28 md:pb-20 space-y-8 ${isCurriculumHidden ? 'lg:pl-20' : ''}`}>
           {/* Breadcrumb & Quick Next Navigation */}
           <div className="flex flex-wrap items-center justify-between gap-3 text-xs text-text-muted no-print">
-            <nav className="flex items-center gap-1.5 font-medium flex-wrap">
+            <nav className="flex items-center gap-1.5 font-medium flex-wrap" aria-label="Breadcrumb">
                 <Link href="/" className="hover:text-primary">Home</Link>
                 <ChevronRight className="w-3.5 h-3.5 text-slate-400" />
-                <Link href="/study-material" className="hover:text-secondary font-semibold text-secondary">
-                  Study Materials
+                <Link href="/tutorials" className="hover:text-secondary font-semibold text-secondary">
+                  Tutorials
                 </Link>
                 <ChevronRight className="w-3.5 h-3.5 text-slate-400" />
                 <Link href={`/tutorials/${tutorial.slug}`} className="hover:text-primary font-semibold text-primary">
@@ -382,8 +384,12 @@ export default function TutorialReader({
                 <span>•</span>
                 <span className="flex items-center gap-1 font-medium">
                   <Calendar className="w-3.5 h-3.5 text-text-muted" />
-                  Updated: {frontmatter.lastUpdated || 'Jul 11, 2026'}
+                  Updated: {frontmatter.lastUpdated || tutorial.updatedAt || '2026-11-18'}
                 </span>
+                <span>•</span>
+                <Link href="/about" className="font-semibold text-primary hover:text-secondary transition-colors">
+                  By {frontmatter.author || 'Er. Sumit Kumar (MSK Institute)'}
+                </Link>
               </div>
 
               {/* Action Buttons: Font Size, Save, Print, Share */}
@@ -495,7 +501,7 @@ export default function TutorialReader({
 
           {/* Rendered Markdown Body */}
           <div className={`py-2 transition-all duration-150 ${fontSize === 'large' ? 'text-lg leading-relaxed' : ''}`}>
-            <MarkdownRenderer content={markdownContent} />
+            <MarkdownRenderer content={markdownContent} demoteH1 pageTitle={frontmatter.title} />
           </div>
 
           {/* Next Lesson Preview Box (Image 5) */}
@@ -574,6 +580,72 @@ export default function TutorialReader({
               <ChevronRight className="w-4 h-4" />
             </button>
           </div>
+
+          {/* Course & Mentor Guidance Bridge CTA (Hub-and-Spoke Internal Linking) */}
+          {(() => {
+            const isPyTrack = tutorial.slug.startsWith('python-for-');
+            const isDaTrack =
+              tutorial.slug === 'numpy-complete-course' ||
+              tutorial.slug === 'pandas-complete-course' ||
+              tutorial.slug === 'data-analysis--visualization--statistics' ||
+              tutorial.slug === 'tableau-for-beginners' ||
+              tutorial.slug === 'data-analysis--advanced-pandas--ml-basics' ||
+              tutorial.slug.startsWith('power-bi-for-');
+
+            const badgeText = isPyTrack
+              ? '3-Month Python Mastery Program'
+              : isDaTrack
+              ? '12-Month Data Analysis Mastery Program'
+              : 'Mentor-Led Practical Training';
+            const headingText = isPyTrack
+              ? 'Learn Python Live with Er. Sumit Kumar (Offline Lab & Online)'
+              : isDaTrack
+              ? 'Master Full-Stack Data Analytics (Excel, SQL, Python, Power BI & Tableau)'
+              : `Master ${tutorial.title || course.title} with Hands-On Projects`;
+            const bodyText = isPyTrack
+              ? 'Go beyond self-study with 46 chapters, 236 practical topics, 14 portfolio projects, code reviews, and a verifiable certificate at MSK Institute Shikohabad or Live Online.'
+              : isDaTrack
+              ? 'Combine 15 complete courses, 150 chapters, 541 topics, live SQL/Power BI/Tableau dashboards, and Scikit-Learn capstones at MSK Institute Shikohabad or Live Online.'
+              : 'Practice in live mentor-led sessions with real projects, mock tests, and verifiable certification at MSK Institute.';
+            const targetCourseUrl = isPyTrack
+              ? '/courses/python-mastery'
+              : isDaTrack
+              ? '/courses/data-analysis-mastery-combo-course--12-months'
+              : `/courses/${tutorial.courseSlug}`;
+            const targetDemoUrl = isPyTrack
+              ? '/book-demo?course=Python%20Mastery%20(Beginner%20to%20Advanced)%20-%203%20Months'
+              : isDaTrack
+              ? '/book-demo?course=Data%20Analysis%20Mastery%20Combo%20Course%20-%2012%20Months'
+              : `/book-demo?course=${encodeURIComponent(course.title)}`;
+
+            return (
+              <div className="bg-primary text-white rounded-3xl p-6 sm:p-7 flex flex-col md:flex-row md:items-center justify-between gap-5 shadow-sm no-print">
+                <div className="space-y-1.5">
+                  <div className="inline-flex items-center gap-1.5 text-[11px] font-bold uppercase tracking-wider text-secondary">
+                    <GraduationCap className="w-4 h-4" />
+                    <span>{badgeText}</span>
+                  </div>
+                  <h3 className="text-lg sm:text-xl font-extrabold text-white">{headingText}</h3>
+                  <p className="text-xs sm:text-sm text-slate-300 max-w-2xl leading-relaxed">{bodyText}</p>
+                </div>
+                <div className="flex flex-wrap items-center gap-2.5 shrink-0">
+                  <Link
+                    href={targetCourseUrl}
+                    className="inline-flex items-center gap-1.5 px-4 py-2.5 bg-secondary hover:bg-secondary-light text-white font-bold text-xs sm:text-sm rounded-xl shadow transition-colors"
+                  >
+                    <span>View Full Course</span>
+                    <ArrowRight className="w-4 h-4" />
+                  </Link>
+                  <Link
+                    href={targetDemoUrl}
+                    className="inline-flex items-center gap-1.5 px-4 py-2.5 bg-white/10 hover:bg-white/20 text-white border border-white/20 font-bold text-xs sm:text-sm rounded-xl transition-colors"
+                  >
+                    <span>Book Free Demo</span>
+                  </Link>
+                </div>
+              </div>
+            );
+          })()}
 
           {/* Bottom Lesson Navigation Bar (Image 4 & 5) */}
           <div className="pt-6 border-t border-border-subtle flex flex-col sm:flex-row items-center justify-between gap-4 no-print">

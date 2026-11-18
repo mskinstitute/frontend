@@ -1,4 +1,24 @@
-# Setting Up NumPy: Installation & Environment
+---
+id: numpy-installation-and-setup
+slug: numpy-installation-and-setup
+course: numpy-complete-course
+chapter: "1: Introduction to NumPy & Numerical Computing"
+topic: "1.2 Setting Up NumPy: Installation & Environment"
+title: "Setting Up NumPy: Installation & Environment"
+description: "Getting started with NumPy requires setting up an isolated virtual environment and installing the pre-compiled binary wheels suitable for your operating."
+difficulty: Intermediate
+readingTime: 6
+order: 2
+keywords:
+  - setting up numpy installation environment
+  - numpy tutorial
+  - numpy installation and setup
+  - data analysis course
+  - MSK Institute
+lastUpdated: 2026-11-18
+author: "Er. Sumit Kumar (MSK Institute)"
+version: 1.1.0
+---
 
 Getting started with NumPy requires setting up an isolated virtual environment and installing the pre-compiled binary wheels suitable for your operating system and CPU architecture.
 
@@ -67,8 +87,7 @@ Never use `from numpy import *` as it pollutes your global namespace with over 6
 
 ---
 
-# Multiple Choice Questions
-
+## Practice Quiz
 ### 1. What is the universal, industry-standard import alias used for NumPy across all Python codebases?
 A. import numpy as n
 B. import numpy as np

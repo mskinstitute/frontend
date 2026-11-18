@@ -1,4 +1,24 @@
-# Data Pipeline: SQL Extraction -> Pandas Cleaning -> Modeling
+---
+id: full-stack-data-pipeline
+slug: full-stack-data-pipeline
+course: data-analysis--advanced-pandas--ml-basics
+chapter: "6: End-to-End Capstone Portfolio Project"
+topic: "6.2 Data Pipeline: SQL Extraction → Pandas Cleaning → Modeling"
+title: "Data Pipeline: SQL Extraction → Pandas Cleaning → Modeling"
+description: "A professional data analyst does not work in silos. In production environments, enterprise analytics requires connecting the entire modern data stack."
+difficulty: Advanced
+readingTime: 7
+order: 2
+keywords:
+  - data pipeline sql extraction pandas cleaning modeling
+  - data science & machine learning tutorial
+  - full stack data pipeline
+  - data analysis course
+  - MSK Institute
+lastUpdated: 2026-11-18
+author: "Er. Sumit Kumar (MSK Institute)"
+version: 1.1.0
+---
 
 A professional data analyst does not work in silos. In production environments, enterprise analytics requires connecting the entire **modern data stack**: querying relational operational data stores with **SQL**, transforming and feature engineering with **Pandas**, and generating predictions and statistical insights with **Scikit-Learn**.
 
@@ -132,8 +152,7 @@ print("Pipeline complete: Predictions exported to database!")
 
 ---
 
-# Multiple Choice Questions
-
+## Practice Quiz
 ### 1. In production data pipelines, why is database aggregation via SQL (`GROUP BY`, `SUM`, `COUNT`) strongly preferred over loading 100 million raw transaction rows into Pandas to group locally?
 A. Pandas does not have a groupby method.
 B. Relational database engines execute indexed distributed aggregations natively with optimized disk I/O, preventing catastrophic client-side memory exhaustion and massive network transfer latency.

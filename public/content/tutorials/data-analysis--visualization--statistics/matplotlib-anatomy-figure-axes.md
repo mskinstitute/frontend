@@ -1,6 +1,24 @@
-# Matplotlib Anatomy: Figure, Axes, Subplots & Ticks
-
-*Reading Time: 8 Mins* | *Level: Intermediate*
+---
+id: matplotlib-anatomy-figure-axes
+slug: matplotlib-anatomy-figure-axes
+course: data-analysis--visualization--statistics
+chapter: "2: Matplotlib Architecture & Core Plotting"
+topic: "2.1 Matplotlib Anatomy: Figure, Axes, Subplots & Ticks"
+title: "Matplotlib Anatomy: Figure, Axes, Subplots & Ticks"
+description: "Learn Matplotlib Anatomy: Figure, Axes, Subplots & Ticks in Data Visualization & Statistics with practical examples, analyst workflows, and interactive pra."
+difficulty: Intermediate
+readingTime: 6
+order: 1
+keywords:
+  - matplotlib anatomy figure axes subplots ticks
+  - data visualization & statistics tutorial
+  - matplotlib anatomy figure axes
+  - data analysis course
+  - MSK Institute
+lastUpdated: 2026-11-18
+author: "Er. Sumit Kumar (MSK Institute)"
+version: 1.1.0
+---
 
 ![Matplotlib Figure Anatomy](/images/tutorials/data-analysis--visualization--statistics/matplotlib-figure-anatomy.svg)
 
@@ -36,8 +54,7 @@ plt.show()
 
 ---
 
-# Multiple Choice Questions
-
+## Practice Quiz
 ### 1. In Matplotlib's Object-Oriented API, what does `fig` represent?
 A. A single data curve
 B. The top-level canvas window that contains all subplots, titles, and elements

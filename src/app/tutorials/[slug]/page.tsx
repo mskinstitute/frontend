@@ -50,6 +50,17 @@ export default async function TutorialOverviewPage({ params }: TutorialOverviewP
 
   const { tutorial, course } = data;
   const canonicalUrl = `https://www.mskinstitute.in/tutorials/${tutorial.slug}`;
+  const isPythonTrack = tutorial.slug.startsWith('python-for-');
+  const isDataAnalysisTrack =
+    tutorial.slug === 'numpy-complete-course' ||
+    tutorial.slug === 'pandas-complete-course' ||
+    tutorial.slug === 'data-analysis--visualization--statistics' ||
+    tutorial.slug === 'tableau-for-beginners' ||
+    tutorial.slug === 'data-analysis--advanced-pandas--ml-basics' ||
+    tutorial.slug.startsWith('power-bi-for-');
+  const sortedChapters = [...(course.chapters || [])].sort(
+    (a, b) => (a.sortOrder ?? 0) - (b.sortOrder ?? 0)
+  );
 
   const jsonLd = {
     '@context': 'https://schema.org',
@@ -62,9 +73,42 @@ export default async function TutorialOverviewPage({ params }: TutorialOverviewP
         url: canonicalUrl,
         image: 'https://www.mskinstitute.in/brand/og-tutorials.png',
         inLanguage: 'en-IN',
+        educationalLevel: course.level || tutorial.badge || 'Beginner',
         isAccessibleForFree: true,
         learningResourceType: 'Tutorial',
         dateModified: tutorial.updatedAt || '2026-11-18',
+        ...(course.learningOutcomes && course.learningOutcomes.length > 0
+          ? { teaches: course.learningOutcomes.slice(0, 8) }
+          : {}),
+        ...(isPythonTrack
+          ? {
+              isPartOf: {
+                '@type': 'Course',
+                '@id': 'https://www.mskinstitute.in/courses/python-mastery#course',
+                name: 'Python Mastery (Beginner to Advanced) - 3 Months',
+                url: 'https://www.mskinstitute.in/courses/python-mastery',
+              },
+            }
+          : isDataAnalysisTrack
+          ? {
+              isPartOf: {
+                '@type': 'Course',
+                '@id': 'https://www.mskinstitute.in/courses/data-analysis-mastery-combo-course--12-months#course',
+                name: 'Data Analysis Mastery Combo Course - 12 Months',
+                url: 'https://www.mskinstitute.in/courses/data-analysis-mastery-combo-course--12-months',
+              },
+            }
+          : {}),
+        ...(sortedChapters.length > 0
+          ? {
+              hasPart: sortedChapters.map((ch, idx) => ({
+                '@type': 'LearningResource',
+                position: idx + 1,
+                name: ch.title,
+                learningResourceType: 'Chapter',
+              })),
+            }
+          : {}),
         author: {
           '@type': 'Person',
           name: 'Er. Sumit Kumar',

@@ -1,6 +1,24 @@
-# GroupBy Mechanics: Split-Apply-Combine
-
-*Reading Time: 8 Mins* | *Level: Beginner to Advanced*
+---
+id: groupby-split-apply-combine
+slug: groupby-split-apply-combine
+course: pandas-complete-course
+chapter: "6: Grouping, Aggregation & Pivot Tables"
+topic: "6.1 GroupBy Mechanics: Split-Apply-Combine"
+title: "GroupBy Mechanics: Split-Apply-Combine"
+description: "The GroupBy architecture follows the Split-Apply-Combine paradigm: 1. Split: Divide the DataFrame into groups based on keys (e.g., City, Department."
+difficulty: Intermediate
+readingTime: 6
+order: 1
+keywords:
+  - groupby mechanics split-apply-combine
+  - pandas tutorial
+  - groupby split apply combine
+  - data analysis course
+  - MSK Institute
+lastUpdated: 2026-11-18
+author: "Er. Sumit Kumar (MSK Institute)"
+version: 1.1.0
+---
 
 ![GroupBy Mechanics](/images/tutorials/pandas/pandas-groupby-split-apply-combine.svg)
 
@@ -74,8 +92,7 @@ for region_name, group_df in df.groupby('Region'):
 
 ---
 
-# Multiple Choice Questions
-
+## Practice Quiz
 ### 1. What are the three phases of the GroupBy mechanism in Pandas?
 A. Load, Filter, Save
 B. Split, Apply, Combine

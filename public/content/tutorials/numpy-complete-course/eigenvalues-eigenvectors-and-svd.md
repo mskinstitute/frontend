@@ -1,4 +1,24 @@
-# Matrix Decompositions: eig(), eigh(), & SVD
+---
+id: eigenvalues-eigenvectors-and-svd
+slug: eigenvalues-eigenvectors-and-svd
+course: numpy-complete-course
+chapter: "11: Linear Algebra with numpy.linalg"
+topic: "11.3 Eigenvalues, Eigenvectors & Singular Value Decomposition (SVD)"
+title: "Eigenvalues, Eigenvectors & Singular Value Decomposition (SVD)"
+description: "Matrix decomposition (factorization) expresses a complex matrix as a product of canonical, interpretable constituent components. In modern computing."
+difficulty: Intermediate
+readingTime: 8
+order: 3
+keywords:
+  - eigenvalues eigenvectors singular value decomposition svd
+  - numpy tutorial
+  - eigenvalues eigenvectors and svd
+  - data analysis course
+  - MSK Institute
+lastUpdated: 2026-11-18
+author: "Er. Sumit Kumar (MSK Institute)"
+version: 1.1.0
+---
 
 Matrix decomposition (factorization) expresses a complex matrix as a product of canonical, interpretable constituent components. In modern computing, spectral decompositions and **Singular Value Decomposition (SVD)** power:
 - Principal Component Analysis (PCA) for dimensionality reduction.
@@ -122,8 +142,7 @@ print(f"Data reduction: {100*100} floats reduced to {10*(100 + 1 + 100)} floats!
 
 ---
 
-# Multiple Choice Questions
-
+## Practice Quiz
 ### 1. In NumPy's `np.linalg.eig()`, how is the $i$-th eigenvector accessed from the returned eigenvector matrix `v`?
 A. `v[i]`
 B. `v[:, i]`

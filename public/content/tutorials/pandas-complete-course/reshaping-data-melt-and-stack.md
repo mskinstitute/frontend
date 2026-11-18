@@ -1,6 +1,24 @@
-# Reshaping Data: Melt, Stack & Unstack
-
-*Reading Time: 8 Mins* | *Level: Beginner to Advanced*
+---
+id: reshaping-data-melt-and-stack
+slug: reshaping-data-melt-and-stack
+course: pandas-complete-course
+chapter: "7: Combining, Merging & Reshaping DataFrames"
+topic: "7.3 Reshaping Data: Melt, Stack & Unstack"
+title: "Reshaping Data: Melt, Stack & Unstack"
+description: "Learn Reshaping Data: Melt, Stack & Unstack in Pandas with practical examples, analyst workflows, and interactive practice quizzes at MSK Institute."
+difficulty: Intermediate
+readingTime: 6
+order: 3
+keywords:
+  - reshaping data melt stack unstack
+  - pandas tutorial
+  - reshaping data melt and stack
+  - data analysis course
+  - MSK Institute
+lastUpdated: 2026-11-18
+author: "Er. Sumit Kumar (MSK Institute)"
+version: 1.1.0
+---
 
 ---
 
@@ -65,8 +83,7 @@ restored = stacked.unstack()
 
 ---
 
-# Multiple Choice Questions
-
+## Practice Quiz
 ### 1. Which function converts a wide DataFrame into a long (tidy) DataFrame by unpivoting columns into rows?
 A. `pd.melt()`
 B. `pd.pivot()`

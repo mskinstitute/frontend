@@ -1,6 +1,24 @@
-# Tableau Data Model: Logical Layer vs Physical Layer
-
-*Reading Time: 8 Mins* | *Level: Beginner to Advanced*
+---
+id: tableau-logical-vs-physical-layer
+slug: tableau-logical-vs-physical-layer
+course: tableau-for-beginners
+chapter: "2: Data Preparation & Relationships"
+topic: "2.1 Tableau Data Model: Logical Layer vs Physical Layer"
+title: "Tableau Data Model: Logical Layer vs Physical Layer"
+description: "Learn Tableau Data Model: Logical Layer vs Physical Layer in Tableau with practical examples, analyst workflows, and interactive practice quizzes at MSK In."
+difficulty: Beginner
+readingTime: 6
+order: 1
+keywords:
+  - tableau data model logical layer vs physical layer
+  - tableau tutorial
+  - tableau logical vs physical layer
+  - data analysis course
+  - MSK Institute
+lastUpdated: 2026-11-18
+author: "Er. Sumit Kumar (MSK Institute)"
+version: 1.1.0
+---
 
 ---
 
@@ -18,8 +36,7 @@ In modern Tableau (2020.2+), data modeling operates across two distinct layers:
 
 ---
 
-# Multiple Choice Questions
-
+## Practice Quiz
 ### 1. In modern Tableau, what connects tables in the default Logical Layer?
 A. Relationships (flexible "noodles" that adaptively query data at the appropriate level of detail)
 B. Permanent SQL joins
