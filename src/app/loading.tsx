@@ -6,7 +6,7 @@ export default function Loading() {
     <div
       role="status"
       aria-live="polite"
-      className="min-h-[75vh] flex flex-col items-center justify-center p-6 bg-gradient-to-b from-white via-slate-50/50 to-white select-none"
+      className="min-h-screen flex flex-col items-center justify-center p-6 bg-gradient-to-b from-white via-slate-50/50 to-white select-none"
     >
       {/* Decorative ambient background glows */}
       <div className="absolute w-72 h-72 bg-secondary/10 rounded-full blur-3xl pointer-events-none -mt-20" />
@@ -30,18 +30,18 @@ export default function Loading() {
 
         {/* Heading & Subtitle */}
         <div className="space-y-2">
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-orange-50 border border-orange-200/70 text-secondary text-[11px] font-black uppercase tracking-wider">
+          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-orange-50 border border-orange-200/70 text-[#B83A00] text-[11px] font-black uppercase tracking-wider">
             <Sparkles className="w-3.5 h-3.5" />
             <span>MSK Institute • Shikohabad</span>
           </div>
 
-          <h2 className="text-xl sm:text-2xl font-black text-slate-900 tracking-tight">
+          <p className="text-xl sm:text-2xl font-black text-slate-900 tracking-tight">
             Loading Page Content...
-          </h2>
+          </p>
 
-          <p className="text-xs sm:text-sm text-slate-500 leading-relaxed max-w-xs mx-auto">
+          <p className="text-xs sm:text-sm text-slate-600 leading-relaxed max-w-xs mx-auto">
             Preparing courses, live labs, and learning resources.
-            <span className="block text-secondary font-medium mt-0.5">
+            <span className="block text-[#B83A00] font-medium mt-0.5">
               सामग्री लोड हो रही है, कृपया प्रतीक्षा करें...
             </span>
           </p>

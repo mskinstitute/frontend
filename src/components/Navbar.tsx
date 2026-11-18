@@ -36,6 +36,7 @@ import { useAuth } from '@/context/AuthContext';
 import { SocialIconPills } from '@/components/SocialLinks';
 import { getRoleDashboardUrl } from '@/lib/roleNavigation';
 import { affiliateApi } from '@/services/affiliateApi';
+import announcementsData from '../../public/data/announcements.json';
 
 const SearchModal = dynamic(() => import('@/components/SearchModal'), { ssr: false });
 
@@ -50,27 +51,18 @@ interface Announcement {
   endDate?: string;
 }
 
+const STATIC_ANNOUNCEMENTS: Announcement[] = announcementsData as Announcement[];
+
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const pathname = usePathname();
-  const [announcements, setAnnouncements] = useState<Announcement[]>([]);
+  const [todayStr, setTodayStr] = useState<string>('');
   const { isLiveNow } = useLiveStatus();
   const { user, isAuthenticated, logout } = useAuth();
 
   useEffect(() => {
-    async function loadAnnouncements() {
-      try {
-        const res = await fetch('/data/announcements.json');
-        if (res.ok) {
-          const data = await res.json();
-          setAnnouncements(data);
-        }
-      } catch (err) {
-        console.error('Failed to load announcements registry:', err);
-      }
-    }
-    loadAnnouncements();
+    setTodayStr(new Date().toISOString().split('T')[0]);
   }, []);
 
   // Global keyboard listener for Ctrl + K / Cmd + K to open search modal
@@ -85,14 +77,15 @@ export default function Navbar() {
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, []);
 
-  // Filter active announcements within date ranges dynamically
-  const todayStr = new Date().toISOString().split('T')[0];
-  const activeAnnouncements = announcements.filter(ann => {
-    if (!ann.active) return false;
-    if (ann.startDate && todayStr < ann.startDate) return false;
-    if (ann.endDate && todayStr > ann.endDate) return false;
-    return true;
-  });
+  // Filter active announcements deterministically after mount so SSR and initial hydration match
+  const activeAnnouncements = todayStr
+    ? STATIC_ANNOUNCEMENTS.filter((ann) => {
+        if (!ann.active) return false;
+        if (ann.startDate && todayStr < ann.startDate) return false;
+        if (ann.endDate && todayStr > ann.endDate) return false;
+        return true;
+      })
+    : [];
 
   interface DropdownItem {
     name: string;
@@ -425,11 +418,10 @@ export default function Navbar() {
                 alt="MSK Institute Logo"
                 width={40}
                 height={40}
-                fetchPriority="high"
                 className="w-10 h-10 object-contain rounded-lg shadow-sm group-hover:scale-105 transition-transform duration-200"
               />
               <span className="text-xl font-bold tracking-tight text-primary">
-                MSK<span className="text-secondary font-black">.</span>Institute
+                MSK<span className="text-[#B83A00] font-black">.</span>Institute
               </span>
             </Link>
           </div>
@@ -440,11 +432,11 @@ export default function Navbar() {
               onClick={() => setIsSearchOpen(true)}
               type="button"
               className="w-full flex items-center justify-between px-3 py-1.5 text-xs text-text-muted bg-surface hover:bg-slate-100 border border-border-subtle hover:border-slate-300 rounded-xl transition-all shadow-xs cursor-pointer group"
-              aria-label="Search resources (Ctrl + K)"
+              title="Search courses, tutorials, and study material (Ctrl + K)"
             >
               <div className="flex items-center gap-2 min-w-0">
-                <Search className="w-3.5 h-3.5 text-slate-400 group-hover:text-primary transition-colors flex-shrink-0" />
-                <span className="font-medium text-slate-500 group-hover:text-slate-800 truncate">
+                <Search className="w-3.5 h-3.5 text-slate-500 group-hover:text-primary transition-colors flex-shrink-0" />
+                <span className="font-medium text-slate-600 group-hover:text-slate-900 truncate">
                   <span className="hidden xl:inline">Search courses, material...</span>
                   <span className="xl:hidden">Search...</span>
                 </span>
@@ -453,7 +445,7 @@ export default function Navbar() {
                 <kbd className="inline-flex items-center justify-center px-1.5 py-0.5 text-[10px] font-mono font-bold text-slate-700 bg-white border border-slate-300 rounded shadow-xs group-hover:border-slate-400">
                   Ctrl
                 </kbd>
-                <span className="text-[10px] font-bold text-slate-400 px-0.5">+</span>
+                <span className="text-[10px] font-bold text-slate-500 px-0.5">+</span>
                 <kbd className="inline-flex items-center justify-center px-1.5 py-0.5 text-[10px] font-mono font-bold text-slate-700 bg-white border border-slate-300 rounded shadow-xs group-hover:border-slate-400">
                   K
                 </kbd>
@@ -462,7 +454,7 @@ export default function Navbar() {
           </div>
 
           {/* Desktop Navigation Links */}
-          <div ref={navRef} className="hidden md:flex items-center gap-0.5 lg:gap-1 xl:gap-2 flex-shrink-0">
+          <div className="hidden md:flex items-center gap-0.5 lg:gap-1 xl:gap-2 flex-shrink-0">
             {/* Direct Links (Home, Courses & Live) */}
             {directLinks.map((link) => {
               const Icon = link.icon;
@@ -474,9 +466,9 @@ export default function Navbar() {
                   href={link.href}
                   className={`relative flex items-center gap-1.5 px-2 py-1.5 lg:px-2.5 lg:py-2 xl:px-3 text-xs lg:text-sm font-medium rounded-md whitespace-nowrap transition-colors duration-150 ${
                     active
-                      ? 'text-secondary font-bold border-b-2 border-secondary rounded-none pb-1'
+                      ? 'text-[#B83A00] font-bold border-b-2 border-[#B83A00] rounded-none pb-1'
                       : isLive
-                      ? 'text-slate-800 hover:text-red-600 hover:bg-red-50/60 font-semibold'
+                      ? 'text-slate-800 hover:text-red-700 hover:bg-red-50/60 font-semibold'
                       : 'text-text-muted hover:text-primary hover:bg-surface'
                   }`}
                 >
@@ -619,7 +611,7 @@ export default function Navbar() {
             {!isAuthenticated && (
               <Link
                 href="/book-demo"
-                className="hidden md:inline-flex items-center gap-1.5 px-3 py-1.5 bg-secondary hover:bg-secondary-light text-white font-bold text-xs rounded-xl shadow-xs transition-colors whitespace-nowrap ml-1 flex-shrink-0"
+                className="hidden md:inline-flex items-center gap-1.5 px-3 py-1.5 bg-[#C2410C] hover:bg-[#9A3412] text-white font-bold text-xs rounded-xl shadow-xs transition-colors whitespace-nowrap ml-1 flex-shrink-0"
               >
                 <span className="whitespace-nowrap">Book Free Demo</span>
                 <span className="text-[11px] flex-shrink-0">➔</span>
@@ -944,8 +936,8 @@ export default function Navbar() {
             ) : (
               <Link
                 href="/book-demo"
-                className="inline-flex items-center gap-1 px-3 py-1.5 bg-secondary text-white rounded-full text-xs font-bold shadow-sm hover:bg-secondary-light active:scale-95 transition-all whitespace-nowrap flex-shrink-0"
-                aria-label="Book Free Demo"
+                className="inline-flex items-center gap-1 px-3 py-1.5 bg-[#C2410C] text-white rounded-full text-xs font-bold shadow-sm hover:bg-[#9A3412] active:scale-95 transition-all whitespace-nowrap flex-shrink-0"
+                aria-label="Free Demo — Book Free Demo Class"
               >
                 <span className="whitespace-nowrap">Free Demo</span>
                 <span className="text-[10px] flex-shrink-0">➔</span>
@@ -1041,7 +1033,7 @@ export default function Navbar() {
                   <Link
                     href="/register"
                     onClick={() => setIsOpen(false)}
-                    className="flex-1 py-1.5 px-3 text-center text-xs font-bold rounded-lg bg-secondary text-white shadow-xs hover:bg-secondary-light transition-colors"
+                    className="flex-1 py-1.5 px-3 text-center text-xs font-bold rounded-lg bg-[#C2410C] text-white shadow-xs hover:bg-[#9A3412] transition-colors"
                   >
                     Register
                   </Link>
@@ -1197,7 +1189,7 @@ export default function Navbar() {
               <Link
                 href="/book-demo"
                 onClick={() => setIsOpen(false)}
-                className="w-full flex items-center justify-center gap-2 py-2.5 bg-secondary hover:bg-secondary-light text-white font-bold text-xs rounded-xl shadow-xs transition-colors whitespace-nowrap"
+                className="w-full flex items-center justify-center gap-2 py-2.5 bg-[#C2410C] hover:bg-[#9A3412] text-white font-bold text-xs rounded-xl shadow-xs transition-colors whitespace-nowrap"
               >
                 <span>Book Free Demo Class</span>
                 <span>➔</span>
@@ -1230,7 +1222,7 @@ export default function Navbar() {
             {activeAnnouncements.map((ann, idx) => (
               <span key={ann.id} className={`inline-flex items-center gap-2.5 ${idx === 0 ? 'pl-4' : ''}`} >
                 <span className="text-sm select-none">{ann.icon}</span>
-                <span className="bg-secondary text-white text-[9px] font-black uppercase tracking-wider px-2 py-0.5 rounded shadow-sm border border-secondary/10">
+                <span className="bg-[#C2410C] text-white text-[9px] font-black uppercase tracking-wider px-2 py-0.5 rounded shadow-sm border border-white/15">
                   {ann.badge}
                 </span>
                 <span className="text-gray-100 font-medium tracking-tight">

@@ -25,8 +25,10 @@ export function parseBatchStartTimestamp(batch: LiveBatch): number {
 
     const [year, month, day] = batch.startDate.split('-').map(Number);
     if (year && month && day) {
-      const d = new Date(year, month - 1, day, hours, minutes, 0);
-      return d.getTime();
+      // Treat batch schedules deterministically as Indian Standard Time (IST, UTC+5:30)
+      // so SSR (UTC) and client browsers (IST or global) produce identical timestamps.
+      const istOffsetMs = (5 * 60 + 30) * 60 * 1000;
+      return Date.UTC(year, month - 1, day, hours, minutes, 0) - istOffsetMs;
     }
     const d = new Date(batch.startDate).getTime();
     if (!isNaN(d)) return d;

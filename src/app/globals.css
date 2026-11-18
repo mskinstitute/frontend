@@ -3,8 +3,10 @@
 @theme {
   --color-primary: #0A2540;       /* Logo Dark Navy */
   --color-primary-light: #1E3A5F; /* Lighter Navy for hovers */
-  --color-secondary: #FF6B00;     /* Logo Vibrant Orange */
+  --color-secondary: #FF6B00;     /* Logo Vibrant Orange (icons, borders, dark surfaces) */
   --color-secondary-light: #FF8533;
+  --color-secondary-btn: #C2410C; /* Accessible Brand Orange for white-text buttons (5.18:1) */
+  --color-secondary-dark: #B83A00;/* Accessible Brand Orange for light-surface text (5.80:1) */
   --color-background: #FFFFFF;    /* Pure White Canvas */
   --color-surface: #F8FAFC;       /* Off-white Slate for cards */
   --color-text-main: #0F172A;     /* Slate-900 for text readability */

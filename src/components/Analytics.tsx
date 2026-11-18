@@ -46,12 +46,12 @@ export default function Analytics() {
         <>
           <Script
             id="google-tag-js"
-            strategy="afterInteractive"
+            strategy="lazyOnload"
             src={`https://www.googletagmanager.com/gtag/js?id=${measurementId}`}
           />
           <Script
             id="google-tag-config"
-            strategy="afterInteractive"
+            strategy="lazyOnload"
             dangerouslySetInnerHTML={{
               __html: `
                 gtag('js', new Date());

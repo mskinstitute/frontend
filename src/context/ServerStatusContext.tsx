@@ -1,6 +1,7 @@
 'use client';
 
 import React, { createContext, useContext, useState, useEffect, useCallback, useMemo } from 'react';
+import { usePathname } from 'next/navigation';
 import { BACKEND_API_URL } from '@/config/api';
 
 interface ServerStatusContextType {
@@ -18,9 +19,22 @@ const ServerStatusContext = createContext<ServerStatusContextType>({
 });
 
 export function ServerStatusProvider({ children }: { children: React.ReactNode }) {
+  const pathname = usePathname();
   const [isServerOnline, setIsServerOnline] = useState<boolean>(false);
   const [isChecking, setIsChecking] = useState<boolean>(true);
   const [hasChecked, setHasChecked] = useState<boolean>(false);
+
+  const isInteractiveRoute = useMemo(() => {
+    if (!pathname) return false;
+    return (
+      pathname.startsWith('/dashboard') ||
+      pathname.startsWith('/login') ||
+      pathname.startsWith('/register') ||
+      pathname.startsWith('/profile') ||
+      pathname.startsWith('/forgot-password') ||
+      pathname.startsWith('/admin')
+    );
+  }, [pathname]);
 
   const checkServerStatus = useCallback(async (): Promise<boolean> => {
     setIsChecking(true);
@@ -67,22 +81,14 @@ export function ServerStatusProvider({ children }: { children: React.ReactNode }
   }, []);
 
   useEffect(() => {
-    const isInteractiveRoute = () => {
-      if (typeof window === 'undefined') return false;
-      const p = window.location.pathname;
-      return p.startsWith('/dashboard') || p.startsWith('/login') || p.startsWith('/register') || p.startsWith('/profile') || p.startsWith('/forgot-password') || p.startsWith('/admin');
-    };
-
-    let initialTimer: NodeJS.Timeout | null = null;
-    if (isInteractiveRoute()) {
-      checkServerStatus();
-    } else {
-      if ('requestIdleCallback' in window) {
-        (window as any).requestIdleCallback(() => checkServerStatus(), { timeout: 5000 });
-      } else {
-        initialTimer = setTimeout(checkServerStatus, 4000);
-      }
+    // Only poll backend health on authenticated / portal routes so public marketing pages
+    // stay fast with zero unnecessary background pings to cold backend servers.
+    if (!isInteractiveRoute) {
+      setIsChecking(false);
+      return;
     }
+
+    checkServerStatus();
 
     // Heartbeat check every 30 seconds
     const interval = setInterval(() => {
@@ -98,11 +104,10 @@ export function ServerStatusProvider({ children }: { children: React.ReactNode }
     document.addEventListener('visibilitychange', handleVisibilityChange);
 
     return () => {
-      if (initialTimer) clearTimeout(initialTimer);
       clearInterval(interval);
       document.removeEventListener('visibilitychange', handleVisibilityChange);
     };
-  }, [checkServerStatus]);
+  }, [checkServerStatus, isInteractiveRoute]);
 
   const value = useMemo(
     () => ({

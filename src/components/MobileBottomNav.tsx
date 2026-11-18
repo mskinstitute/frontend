@@ -76,18 +76,18 @@ export default function MobileBottomNav() {
               key={item.name}
               href={item.href}
               className={`relative flex flex-col items-center justify-center flex-1 py-1 px-1 rounded-2xl transition-all duration-200 select-none group active:scale-95 ${
-                active ? 'text-secondary' : 'text-slate-500 hover:text-primary active:bg-slate-50'
+                active ? 'text-[#B83A00]' : 'text-slate-600 hover:text-primary active:bg-slate-50'
               }`}
             >
               {/* Active Indicator Top Pill with smooth transition */}
               {active && (
-                <span className="absolute -top-1.5 w-7 h-1 bg-secondary rounded-full shadow-[0_1px_4px_rgba(255,107,0,0.4)] animate-in fade-in zoom-in-75 duration-200" />
+                <span className="absolute -top-1.5 w-7 h-1 bg-[#B83A00] rounded-full shadow-[0_1px_4px_rgba(184,58,0,0.4)] animate-in fade-in zoom-in-75 duration-200" />
               )}
 
               {/* Icon Container with subtle active pill background */}
               <div
                 className={`relative flex items-center justify-center w-10 h-7 rounded-full transition-all duration-200 ${
-                  active ? 'bg-orange-50 text-secondary' : 'group-hover:text-primary'
+                  active ? 'bg-orange-50 text-[#B83A00]' : 'group-hover:text-primary'
                 }`}
               >
                 <Icon
@@ -108,7 +108,7 @@ export default function MobileBottomNav() {
               {/* Label */}
               <span
                 className={`text-[10.5px] leading-tight mt-0.5 tracking-tight transition-all duration-200 ${
-                  active ? 'font-bold text-secondary scale-[1.02]' : 'font-medium text-slate-500'
+                  active ? 'font-bold text-[#B83A00] scale-[1.02]' : 'font-medium text-slate-600'
                 }`}
               >
                 {item.name}
@@ -123,16 +123,16 @@ export default function MobileBottomNav() {
             onClick={() => installApp()}
             type="button"
             aria-label="Install MSK Institute App"
-            className="relative flex flex-col items-center justify-center flex-1 py-1 px-1 rounded-2xl text-secondary select-none group active:scale-95 transition-all cursor-pointer"
+            className="relative flex flex-col items-center justify-center flex-1 py-1 px-1 rounded-2xl text-[#B83A00] select-none group active:scale-95 transition-all cursor-pointer"
           >
             <div className="relative flex items-center justify-center w-10 h-7 rounded-full bg-gradient-to-tr from-secondary/15 to-orange-100 group-hover:from-secondary/25 group-hover:to-orange-200 transition-colors">
-              <Download className="w-4 h-4 text-secondary stroke-[2.2] group-hover:translate-y-0.5 transition-transform duration-200" />
+              <Download className="w-4 h-4 text-[#B83A00] stroke-[2.2] group-hover:translate-y-0.5 transition-transform duration-200" />
               <span className="absolute -top-0.5 -right-0.5 flex h-2 w-2">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-orange-400 opacity-60" />
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-secondary" />
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-[#B83A00]" />
               </span>
             </div>
-            <span className="text-[10.5px] font-bold text-secondary leading-tight mt-0.5 tracking-tight">
+            <span className="text-[10.5px] font-bold text-[#B83A00] leading-tight mt-0.5 tracking-tight">
               Install
             </span>
           </button>

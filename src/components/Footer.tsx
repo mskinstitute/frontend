@@ -50,7 +50,7 @@ export default function Footer() {
 
             {/* Social Media & Trust Channels */}
             <div className="space-y-2 pt-2 border-t border-white/10">
-              <span className="block text-[11px] font-bold uppercase tracking-wider text-secondary">
+              <span className="block text-[11px] font-bold uppercase tracking-wider text-secondary-light">
                 Follow & Connect
               </span>
               <SocialIconPills variant="light" />
@@ -59,32 +59,32 @@ export default function Footer() {
 
           {/* Col 2: Programs & Admissions (Highest Priority for Prospective Students) */}
           <div className="space-y-4">
-            <h3 className="text-sm font-bold tracking-wider uppercase text-secondary">
+            <h2 className="text-sm font-bold tracking-wider uppercase text-secondary-light">
               Programs & Admissions
-            </h3>
+            </h2>
             <ul className="space-y-2.5 text-sm text-gray-300">
               <li>
                 <Link href="/courses" className="hover:text-white transition-colors duration-150 flex items-center justify-between group">
                   <span>All Courses</span>
-                  <span className="text-[10px] text-gray-400 group-hover:text-secondary transition-colors">Catalog</span>
+                  <span className="text-[10px] text-gray-300 group-hover:text-secondary-light transition-colors">Catalog</span>
                 </Link>
               </li>
               <li>
                 <Link href="/learning-paths" className="hover:text-white transition-colors duration-150 flex items-center justify-between group">
                   <span>Learning Paths</span>
-                  <span className="text-[10px] text-gray-400 group-hover:text-secondary transition-colors">Roadmaps</span>
+                  <span className="text-[10px] text-gray-300 group-hover:text-secondary-light transition-colors">Roadmaps</span>
                 </Link>
               </li>
               <li>
                 <Link href="/projects" className="hover:text-white transition-colors duration-150 flex items-center justify-between group">
                   <span>Student Projects</span>
-                  <span className="text-[10px] text-gray-400 group-hover:text-secondary transition-colors">Showcase</span>
+                  <span className="text-[10px] text-gray-300 group-hover:text-secondary-light transition-colors">Showcase</span>
                 </Link>
               </li>
               <li>
                 <Link href="/live" className="hover:text-white transition-colors duration-150 flex items-center gap-2">
                   <span>Live Classes & Schedule</span>
-                  <span className="bg-red-500 text-white text-[9px] font-black px-1.5 py-0.5 rounded leading-none uppercase">Live</span>
+                  <span className="bg-red-700 text-white text-[9px] font-black px-1.5 py-0.5 rounded leading-none uppercase">Live</span>
                 </Link>
               </li>
               <li>
@@ -114,9 +114,9 @@ export default function Footer() {
 
           {/* Col 3: Resources & Tools (Priority for Learners) */}
           <div className="space-y-4">
-            <h3 className="text-sm font-bold tracking-wider uppercase text-secondary">
+            <h2 className="text-sm font-bold tracking-wider uppercase text-secondary-light">
               Resources & Tools
-            </h3>
+            </h2>
             <ul className="space-y-2.5 text-sm text-gray-300">
               <li>
                 <Link href="/mock-test" className="hover:text-white transition-colors duration-150 flex items-center gap-2">
@@ -127,13 +127,13 @@ export default function Footer() {
               <li>
                 <Link href="/mock-test/ccc" className="hover:text-white transition-colors duration-150 flex items-center gap-2">
                   <span>NIELIT CCC Mock Test</span>
-                  <span className="bg-red-500 text-white text-[9px] font-black px-1.5 py-0.5 rounded leading-none uppercase">Free</span>
+                  <span className="bg-red-700 text-white text-[9px] font-black px-1.5 py-0.5 rounded leading-none uppercase">Free</span>
                 </Link>
               </li>
               <li>
                 <Link href="/career-finder" className="hover:text-white transition-colors duration-150 flex items-center gap-2">
                   <span>Course & Career Finder</span>
-                  <span className="bg-secondary text-white text-[9px] font-bold px-1.5 py-0.5 rounded leading-none">Quiz</span>
+                  <span className="bg-[#C2410C] text-white text-[9px] font-bold px-1.5 py-0.5 rounded leading-none">Quiz</span>
                 </Link>
               </li>
               <li>
@@ -144,13 +144,13 @@ export default function Footer() {
               <li>
                 <Link href="/tools" className="hover:text-white transition-colors duration-150 flex items-center gap-2">
                   <span>All MSK Tools</span>
-                  <span className="bg-secondary text-white text-[10px] font-bold px-1.5 py-0.5 rounded leading-none">Hub</span>
+                  <span className="bg-[#C2410C] text-white text-[10px] font-bold px-1.5 py-0.5 rounded leading-none">Hub</span>
                 </Link>
               </li>
               <li>
                 <Link href="/shortcuts" className="hover:text-white transition-colors duration-150 flex items-center gap-2">
                   <span>Keyboard Shortcuts</span>
-                  <span className="bg-secondary text-white text-[10px] font-bold px-1.5 py-0.5 rounded leading-none">New</span>
+                  <span className="bg-[#C2410C] text-white text-[10px] font-bold px-1.5 py-0.5 rounded leading-none">New</span>
                 </Link>
               </li>
               <li>
@@ -180,9 +180,9 @@ export default function Footer() {
 
           {/* Col 4: Institute & Contact */}
           <div className="space-y-4">
-            <h3 className="text-sm font-bold tracking-wider uppercase text-secondary">
+            <h2 className="text-sm font-bold tracking-wider uppercase text-secondary-light">
               Institute & Contact
-            </h3>
+            </h2>
             <ul className="space-y-2.5 text-sm text-gray-300">
               <li>
                 <Link href="/about" className="hover:text-white transition-colors duration-150">
@@ -241,9 +241,9 @@ export default function Footer() {
         </div>
 
         {/* Bottom Legal / Policy Bar */}
-        <div className="mt-12 pt-8 border-t border-primary-light flex flex-col lg:flex-row justify-between items-center gap-4 text-xs text-gray-400">
+        <div className="mt-12 pt-8 border-t border-primary-light flex flex-col lg:flex-row justify-between items-center gap-4 text-xs text-gray-300">
           <div className="flex flex-wrap items-center justify-center lg:justify-start gap-x-4 gap-y-2">
-            <span>&copy; {currentYear} MSK Institute. All rights reserved.</span>
+            <span suppressHydrationWarning>&copy; {currentYear} MSK Institute. All rights reserved.</span>
             <span className="hidden sm:inline text-gray-600">•</span>
             <Link href="/privacy-policy" className="hover:text-secondary transition-colors underline-offset-4 hover:underline">
               Privacy Policy

@@ -3,6 +3,24 @@ import { getCoursePricing } from '@/data/coursePricing';
 
 const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || '';
 
+/**
+ * Fetch wrapper with strict abort timeout so slow external APIs / cold servers
+ * never stall Next.js SSR or ISR revalidation.
+ */
+async function fetchWithTimeout(
+  url: string,
+  options: RequestInit & { next?: { revalidate?: number | false; tags?: string[] } } = {},
+  timeoutMs = 2500
+): Promise<Response> {
+  const controller = new AbortController();
+  const timer = setTimeout(() => controller.abort(), timeoutMs);
+  try {
+    return await fetch(url, { ...options, signal: controller.signal });
+  } finally {
+    clearTimeout(timer);
+  }
+}
+
 // Server-side lazy bundled JSON loader: zero-IO on Node/Serverless while keeping client bundles clean
 async function loadServerData<T>(fileName: string): Promise<T> {
   switch (fileName) {
@@ -53,7 +71,7 @@ async function getLocalData<T>(fileName: string): Promise<T> {
 export async function fetchCareers(): Promise<CareerOpportunity[]> {
   if (API_BASE_URL) {
     try {
-      const res = await fetch(`${API_BASE_URL}/api/careers/`, { next: { revalidate: 1800 } });
+      const res = await fetchWithTimeout(`${API_BASE_URL}/api/careers/`, { next: { revalidate: 1800 } }, 2000);
       if (res.ok) return await res.json();
     } catch (err) {
       console.warn('API fetch careers failed, falling back to local data:', err);
@@ -72,7 +90,7 @@ export async function fetchCourses(): Promise<Course[]> {
   let courses: Course[] = [];
   if (API_BASE_URL) {
     try {
-      const res = await fetch(`${API_BASE_URL}/api/courses/`, { next: { revalidate: 3600 } });
+      const res = await fetchWithTimeout(`${API_BASE_URL}/api/courses/`, { next: { revalidate: 3600 } }, 2000);
       if (res.ok) courses = await res.json();
     } catch (err) {
       console.warn('API fetch courses failed, falling back to local data:', err);
@@ -101,7 +119,7 @@ export async function fetchCourses(): Promise<Course[]> {
 export async function fetchTutorials(): Promise<TutorialItem[]> {
   if (API_BASE_URL) {
     try {
-      const res = await fetch(`${API_BASE_URL}/api/tutorials/`);
+      const res = await fetchWithTimeout(`${API_BASE_URL}/api/tutorials/`, { next: { revalidate: 3600 } }, 2000);
       if (res.ok) return await res.json();
     } catch (err) {
       console.warn('API fetch tutorials failed, falling back to local data:', err);
@@ -427,7 +445,7 @@ export async function fetchBlogBySlug(slug: string): Promise<BlogPost | null> {
 export async function fetchInstructors(): Promise<Instructor[]> {
   if (API_BASE_URL) {
     try {
-      const res = await fetch(`${API_BASE_URL}/api/instructors/`);
+      const res = await fetchWithTimeout(`${API_BASE_URL}/api/instructors/`, { next: { revalidate: 3600 } }, 2000);
       if (res.ok) return await res.json();
     } catch (err) {
       console.warn('API fetch instructors failed, falling back to local data:', err);
@@ -447,7 +465,7 @@ export const DEFAULT_GOOGLE_SHEET_LIVE_BATCHES_URL =
 // In-memory cache to ensure sub-millisecond response & resilience if Google Sheets is briefly unreachable
 let cachedBatches: LiveBatch[] = [];
 let lastBatchesFetchTime = 0;
-const BATCHES_CACHE_TTL_MS = 30 * 1000; // 30 seconds memory cache
+const BATCHES_CACHE_TTL_MS = 5 * 60 * 1000; // 5 minutes memory cache
 
 export async function fetchLiveBatches(): Promise<LiveBatch[]> {
   const now = Date.now();
@@ -468,7 +486,7 @@ export async function fetchLiveBatches(): Promise<LiveBatch[]> {
   if (sheetUrl) {
     try {
       const csvUrl = formatGoogleSheetCsvUrl(sheetUrl, { gid: '1194716609', sheet: 'Batches' });
-      const res = await fetch(csvUrl, { next: { revalidate: 60 } });
+      const res = await fetchWithTimeout(csvUrl, { next: { revalidate: 300 } }, 2500);
       if (res.ok) {
         const csvText = await res.text();
         // Check if returned CSV is valid (not HTML error or sign-in page)
@@ -487,7 +505,7 @@ export async function fetchLiveBatches(): Promise<LiveBatch[]> {
   // 2. Fallback to API if empty
   if (rawBatches.length === 0 && API_BASE_URL) {
     try {
-      const res = await fetch(`${API_BASE_URL}/api/live-batches/`);
+      const res = await fetchWithTimeout(`${API_BASE_URL}/api/live-batches/`, { next: { revalidate: 300 } }, 2000);
       if (res.ok) {
         rawBatches = await res.json();
       }
@@ -1086,7 +1104,7 @@ export async function fetchLiveClasses(): Promise<LiveClass[]> {
   if (sheetUrl) {
     try {
       const csvUrl = formatGoogleSheetCsvUrl(sheetUrl);
-      const res = await fetch(csvUrl, { next: { revalidate: 60 } });
+      const res = await fetchWithTimeout(csvUrl, { next: { revalidate: 120 } }, 2500);
       if (res.ok) {
         const csvText = await res.text();
         const parsed = parseGoogleSheetCsv(csvText);
@@ -1102,7 +1120,7 @@ export async function fetchLiveClasses(): Promise<LiveClass[]> {
   // 2. Check external API if configured and sheet didn't return classes
   if (rawClasses.length === 0 && API_BASE_URL) {
     try {
-      const res = await fetch(`${API_BASE_URL}/api/live-classes/`);
+      const res = await fetchWithTimeout(`${API_BASE_URL}/api/live-classes/`, { next: { revalidate: 120 } }, 2000);
       if (res.ok) {
         rawClasses = await res.json();
       }

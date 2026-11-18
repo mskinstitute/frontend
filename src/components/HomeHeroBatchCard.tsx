@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useMemo, useCallback } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { LiveBatch } from '@/types';
 import CountdownTimer from '@/components/CountdownTimer';
 import { parseBatchStartTimestamp } from '@/lib/batchUtils';
@@ -164,7 +165,7 @@ export default function HomeHeroBatchCard({ initialBatches }: HomeHeroBatchCardP
           className="flex flex-row transition-transform duration-700 ease-in-out"
           style={{ transform: `translateX(-${currentIndex * 100}%)` }}
         >
-          {scheduledBatches.map((batch) => {
+          {scheduledBatches.map((batch, idx) => {
             const startTs = parseBatchStartTimestamp(batch);
             const isStarted = mounted && nowTs > 0 ? startTs > 0 && startTs <= nowTs : batch.status === 'RUNNING';
             const countdownDateString =
@@ -172,6 +173,7 @@ export default function HomeHeroBatchCard({ initialBatches }: HomeHeroBatchCardP
               (startTs ? new Date(startTs).toISOString() : `${batch.startDate}T09:00:00`);
 
             const formattedStartDate = formatBatchStartDate(batch.startDate, startTs);
+            const isActiveSlide = idx === currentIndex;
 
             return (
               <div
@@ -181,15 +183,10 @@ export default function HomeHeroBatchCard({ initialBatches }: HomeHeroBatchCardP
                 {/* Top Header: Highlighted Starting Date & Price */}
                 <div className="flex items-center justify-between gap-3">
                   <div className="relative inline-flex items-center" suppressHydrationWarning>
-                    <span className="absolute -inset-0.5 rounded-xl bg-gradient-to-r from-orange-500 via-amber-500 to-orange-600 opacity-70 blur-xs animate-pulse" />
+                    <div className="relative inline-flex items-center gap-2 px-3 sm:px-3.5 py-1.5 rounded-xl bg-gradient-to-r from-[#C2410C] via-[#B83A00] to-[#9A3412] text-white shadow-md shadow-orange-900/20 border border-white/25 select-none">
+                      <span className="inline-flex rounded-full h-2 w-2 bg-white flex-shrink-0" aria-hidden="true" />
 
-                    <div className="relative inline-flex items-center gap-2 px-3 sm:px-3.5 py-1.5 rounded-xl bg-gradient-to-r from-[#FF5722] via-[#FF7A00] to-[#E64A19] text-white shadow-md shadow-orange-500/25 border border-white/30 select-none">
-                      <span className="relative flex h-2 w-2 flex-shrink-0">
-                        <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-90" />
-                        <span className="relative inline-flex rounded-full h-2 w-2 bg-white" />
-                      </span>
-
-                      <span className="text-[11px] sm:text-xs font-black uppercase tracking-wider text-white drop-shadow-xs" suppressHydrationWarning>
+                      <span className="text-[11px] sm:text-xs font-black uppercase tracking-wider text-white" suppressHydrationWarning>
                         {isStarted ? 'In Session' : `Starting ${formattedStartDate}`}
                       </span>
                     </div>
@@ -202,7 +199,7 @@ export default function HomeHeroBatchCard({ initialBatches }: HomeHeroBatchCardP
                         {batch.originalPrice}
                       </span>
                     )}
-                    <span className="text-xs sm:text-sm font-black text-secondary bg-secondary/10 px-3 py-1 rounded-xl border border-secondary/20 shadow-2xs">
+                    <span className="text-xs sm:text-sm font-black text-[#B83A00] bg-[#B83A00]/10 px-3 py-1 rounded-xl border border-[#B83A00]/20 shadow-2xs">
                       {batch.price || '₹2,999'}
                     </span>
                   </div>
@@ -230,38 +227,44 @@ export default function HomeHeroBatchCard({ initialBatches }: HomeHeroBatchCardP
                     <span className="font-bold text-primary flex items-center gap-1.5">
                       <span
                         className={`w-2 h-2 rounded-full ${
-                          isStarted ? 'bg-emerald-500' : 'bg-secondary animate-ping'
+                          isStarted ? 'bg-emerald-600' : 'bg-[#C2410C]'
                         }`}
                       />
                       {isStarted ? 'Batch In Progress:' : 'Batch Starts In:'}
                     </span>
-                    <span className="text-[11px] font-semibold text-secondary">
+                    <span className="text-[11px] font-semibold text-[#B83A00]">
                       {isStarted ? 'Limited Late Seats' : 'Admissions Open'}
                     </span>
                   </div>
-                  <CountdownTimer
-                    targetDate={countdownDateString}
-                    onComplete={handleBatchExpire}
-                  />
+                  {isActiveSlide ? (
+                    <CountdownTimer
+                      targetDate={countdownDateString}
+                      onComplete={handleBatchExpire}
+                    />
+                  ) : (
+                    <div className="h-[52px] flex items-center justify-center text-xs font-semibold text-text-muted">
+                      Starting {formattedStartDate}
+                    </div>
+                  )}
                 </div>
 
                 {/* Instructor & Schedule Info */}
                 <div className="flex items-center gap-3 pt-3 border-t border-border-subtle">
                   {batch.instructorPicture ? (
                     <div className="relative flex-shrink-0">
-                      {/* eslint-disable-next-line @next/next/no-img-element */}
-                      <img
+                      <Image
                         src={batch.instructorPicture}
                         alt={batch.instructor || 'Instructor'}
                         width={44}
                         height={44}
-                        decoding="async"
-                        className="w-11 h-11 rounded-full object-cover border-2 border-secondary shadow-xs"
+                        sizes="44px"
+                        loading={idx === 0 ? 'eager' : 'lazy'}
+                        className="w-11 h-11 rounded-full object-cover border-2 border-[#C2410C] shadow-xs"
                       />
-                      <span className="absolute bottom-0 right-0 w-3 h-3 rounded-full bg-green-500 border border-white" />
+                      <span className="absolute bottom-0 right-0 w-3 h-3 rounded-full bg-emerald-600 border border-white" />
                     </div>
                   ) : (
-                    <div className="w-11 h-11 rounded-full bg-secondary/10 text-secondary flex items-center justify-center font-black text-sm flex-shrink-0">
+                    <div className="w-11 h-11 rounded-full bg-[#B83A00]/10 text-[#B83A00] flex items-center justify-center font-black text-sm flex-shrink-0">
                       {batch.instructor?.[0] || 'S'}
                     </div>
                   )}
@@ -280,14 +283,14 @@ export default function HomeHeroBatchCard({ initialBatches }: HomeHeroBatchCardP
 
                 {/* Urgency & Primary CTA Button */}
                 <div className="flex flex-col sm:flex-row items-center justify-between pt-3 border-t border-border-subtle gap-3">
-                  <span className="text-xs text-red-500 font-bold flex items-center gap-1.5 animate-pulse">
-                    <span className="w-2 h-2 rounded-full bg-red-500" />
+                  <span className="text-xs text-red-700 font-bold flex items-center gap-1.5">
+                    <span className="w-2 h-2 rounded-full bg-red-600" />
                     Only {batch.leftSeats || 4} of {batch.totalSeats || 20} Seats Left
                   </span>
 
                   <Link
                     href={`/live-batches/${batch.id}`}
-                    className="w-full sm:w-auto inline-flex items-center justify-center gap-1.5 px-5 py-2.5 bg-secondary hover:bg-secondary-light text-white font-bold text-xs rounded-xl shadow-md hover:shadow-lg transition-all text-center cursor-pointer flex-shrink-0"
+                    className="w-full sm:w-auto inline-flex items-center justify-center gap-1.5 px-5 py-2.5 bg-[#C2410C] hover:bg-[#9A3412] text-white font-bold text-xs rounded-xl shadow-md hover:shadow-lg transition-all text-center cursor-pointer flex-shrink-0"
                   >
                     <span>View Live Batch Details</span>
                     <span className="text-sm">➔</span>

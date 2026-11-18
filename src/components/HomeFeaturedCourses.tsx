@@ -2,7 +2,8 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { Clock, ArrowRight, Sparkles, BookOpen, Laptop, CheckCircle2, ChevronRight } from 'lucide-react';
+import Image from 'next/image';
+import { Clock, ArrowRight, Sparkles } from 'lucide-react';
 export interface FeaturedCourseCardData {
   id: string;
   slug: string;
@@ -73,21 +74,19 @@ export default function HomeFeaturedCourses({ categorizedCourses, totalCoursesCo
             >
               {/* Thumbnail Header */}
               <div className="relative h-48 w-full bg-gray-100 overflow-hidden">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
+                <Image
                   src={course.featuredImageUrl}
                   alt={`${course.title} at MSK Institute`}
-                  width={600}
-                  height={340}
+                  fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   loading="lazy"
-                  decoding="async"
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  className="object-cover group-hover:scale-105 transition-transform duration-300"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-60" />
 
                 {/* Popular Ribbon for Longest Duration Programs */}
                 {isPopular && (
-                  <span className="absolute top-3.5 left-3.5 bg-secondary text-white text-[10px] font-black uppercase tracking-wider px-2 py-0.5 rounded shadow-sm flex items-center gap-1 z-10 backdrop-blur-xs">
+                  <span className="absolute top-3.5 left-3.5 bg-[#C2410C] text-white text-[10px] font-black uppercase tracking-wider px-2 py-0.5 rounded shadow-sm flex items-center gap-1 z-10 backdrop-blur-xs">
                     <Sparkles className="w-3 h-3" />
                     Popular
                   </span>
@@ -98,7 +97,7 @@ export default function HomeFeaturedCourses({ categorizedCourses, totalCoursesCo
                 </span>
 
                 {course.certificate && (
-                  <span className="absolute bottom-3 left-3 bg-secondary text-white text-[10px] font-black uppercase tracking-wider px-2 py-0.5 rounded shadow-xs">
+                  <span className="absolute bottom-3 left-3 bg-[#C2410C] text-white text-[10px] font-black uppercase tracking-wider px-2 py-0.5 rounded shadow-xs">
                     ★ Certified Course
                   </span>
                 )}
@@ -153,7 +152,7 @@ export default function HomeFeaturedCourses({ categorizedCourses, totalCoursesCo
                   </Link>
                   <Link
                     href={`/courses/${course.slug}`}
-                    className="text-center py-2 px-2 bg-secondary hover:bg-secondary-light text-white font-bold text-xs rounded-xl shadow-xs transition-colors block"
+                    className="text-center py-2 px-2 bg-[#C2410C] hover:bg-[#9A3412] text-white font-bold text-xs rounded-xl shadow-xs transition-colors block"
                   >
                     View Syllabus ➔
                   </Link>

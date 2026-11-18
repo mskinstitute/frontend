@@ -11,17 +11,16 @@ import { getBranchSummaries } from '@/lib/branches';
 import HomeHeroBatchCard from '@/components/HomeHeroBatchCard';
 import HomeDemoBookingSection from '@/components/HomeDemoBookingSection';
 import HomeFeaturedCourses, { FeaturedCourseCardData } from '@/components/HomeFeaturedCourses';
-import { parseBatchStartTimestamp } from '@/lib/batchUtils';
-import CountdownTimer from '@/components/CountdownTimer';
 import HomeFaqAccordion from '@/components/HomeFaqAccordion';
 import { SocialCommunitySection } from '@/components/SocialLinks';
+import LazyGoogleMap from '@/components/LazyGoogleMap';
 import { Course, LiveBatch } from '@/types';
 
-export const revalidate = 60; // Refresh live batch schedules every 60s
+export const revalidate = 300; // Refresh live batch schedules every 5 minutes
 
 export const metadata: Metadata = {
-  title: 'MSK Institute | Computer Training & Coding Academy (Shikohabad & Global Live Online)',
-  description: 'Learn Python, Full-Stack MERN Web Development, Data Analytics, NIELIT CCC, and ADCA via offline computer labs in Shikohabad or live online classes worldwide in Hindi & English with Er. Sumit Kumar.',
+  title: 'MSK Institute | Coding & Computer Academy (Shikohabad)',
+  description: 'Learn Python, MERN Web Dev, Data Analytics, CCC & ADCA via practical offline labs in Shikohabad or live online classes worldwide in Hindi & English.',
   keywords: [
     'MSK Institute',
     'Computer Institute Shikohabad',
@@ -166,16 +165,9 @@ export default async function HomePage() {
       .map(toCardData),
   };
 
-  const now = Date.now();
-  const upcomingBatches = [...allBatches]
-    .filter((b) => parseBatchStartTimestamp(b) > now)
-    .sort((a, b) => parseBatchStartTimestamp(a) - parseBatchStartTimestamp(b));
-
   const hasLiveBatches = allBatches.length > 0;
-  const upcomingBatch = upcomingBatches[0] || (hasLiveBatches ? allBatches[0] : null);
-  const countdownDateString = upcomingBatch
-    ? upcomingBatch.startDateTime || (parseBatchStartTimestamp(upcomingBatch) ? new Date(parseBatchStartTimestamp(upcomingBatch)).toISOString() : `${upcomingBatch.startDate}T09:00:00`)
-    : '';
+  // Strip unused heavy nested instructorData before serializing batches to client carousel
+  const lightweightBatches: LiveBatch[] = allBatches.map(({ instructorData: _unused, ...rest }) => rest);
 
   const stats = [
     { id: 1, name: 'Students Trained', value: '1,200+', icon: Users },
@@ -274,81 +266,11 @@ export default async function HomePage() {
     }
   ];
 
-  // Comprehensive JSON-LD Schema Graph for AI Agents, Perplexity, Google, ChatGPT & Search Crawlers
+  // Page-specific JSON-LD Schema Graph referencing the canonical #organization node in layout.tsx
   const jsonLd = {
     "@context": "https://schema.org",
     "@graph": [
-      // 1. Root Organization Entity
-      {
-        "@type": ["EducationalOrganization", "LocalBusiness"],
-        "@id": "https://www.mskinstitute.in/#organization",
-        "name": "MSK Institute",
-        "alternateName": ["MSK Computer Institute", "MSK Institute Shikohabad", "MSK Coding Academy"],
-        "url": "https://www.mskinstitute.in",
-        "logo": "https://www.mskinstitute.in/logo.jpg",
-        "image": "https://www.mskinstitute.in/brand/og-banner.png",
-        "description": "Premier Computer & Coding Training Institute in Shikohabad providing practical offline lab training plus live interactive online coding classes worldwide in Hindi & English.",
-        "telephone": "+91-8393042166",
-        "email": "mskshikohabad@gmail.com",
-        "priceRange": "₹₹",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "Gali No. 3, Near Gyan Jyoti Public School",
-          "addressLocality": "Shikohabad",
-          "addressRegion": "Uttar Pradesh",
-          "postalCode": "283135",
-          "addressCountry": "IN"
-        },
-        "geo": {
-          "@type": "GeoCoordinates",
-          "latitude": 27.1157743,
-          "longitude": 78.5829716
-        },
-        "hasMap": "https://maps.google.com/?cid=12440673232057670688",
-        "openingHoursSpecification": [
-          {
-            "@type": "OpeningHoursSpecification",
-            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-            "opens": "08:00",
-            "closes": "19:00"
-          },
-          {
-            "@type": "OpeningHoursSpecification",
-            "dayOfWeek": "Sunday",
-            "opens": "10:00",
-            "closes": "14:00"
-          }
-        ],
-        "aggregateRating": {
-          "@type": "AggregateRating",
-          "ratingValue": "4.9",
-          "reviewCount": "128",
-          "bestRating": "5",
-          "worstRating": "1"
-        },
-        "review": [
-          {
-            "@type": "Review",
-            "author": { "@type": "Person", "name": "Aman Sharma" },
-            "datePublished": "2026-08-15",
-            "reviewBody": "Learned Python programming from basics to building real automation projects in the offline lab. The 1-on-1 mentor guidance by Sumit Sir helped me build true confidence in coding.",
-            "reviewRating": { "@type": "Rating", "ratingValue": "5" }
-          },
-          {
-            "@type": "Review",
-            "author": { "@type": "Person", "name": "Priya Yadav" },
-            "datePublished": "2026-08-28",
-            "reviewBody": "Cleared NIELIT CCC with Grade A in my first attempt! The mock test series and practical LibreOffice sessions were exact to exam pattern.",
-            "reviewRating": { "@type": "Rating", "ratingValue": "5" }
-          }
-        ],
-        "founder": {
-          "@type": "Person",
-          "name": "Er. Sumit Kumar",
-          "jobTitle": "Lead Instructor & Software Engineer"
-        }
-      },
-      // 2. WebSite Entity with SearchAction
+      // 1. WebSite Entity with SearchAction
       {
         "@type": "WebSite",
         "@id": "https://www.mskinstitute.in/#website",
@@ -363,13 +285,13 @@ export default async function HomePage() {
           "query-input": "required name=search_term_string"
         }
       },
-      // 3. WebPage Entity
+      // 2. WebPage Entity
       {
         "@type": "WebPage",
         "@id": "https://www.mskinstitute.in/#webpage",
         "url": "https://www.mskinstitute.in",
-        "name": "MSK Institute | Premier Computer Training & Coding Academy in Shikohabad",
-        "description": "Learn Python programming, Full-Stack MERN Web Development, NIELIT CCC, and ADCA with hands-on lab training at MSK Institute Shikohabad.",
+        "name": "MSK Institute | Coding & Computer Academy (Shikohabad)",
+        "description": "Learn Python, MERN Web Dev, Data Analytics, CCC & ADCA via practical offline labs in Shikohabad or live online classes worldwide in Hindi & English.",
         "isPartOf": {
           "@id": "https://www.mskinstitute.in/#website"
         },
@@ -385,7 +307,7 @@ export default async function HomePage() {
           "cssSelector": ["h1", ".home-hero-desc", ".home-faq-answer", ".home-about-summary"]
         }
       },
-      // 4. Featured Course List
+      // 3. Featured Course List
       {
         "@type": "ItemList",
         "name": "Popular Courses at MSK Institute",
@@ -403,7 +325,7 @@ export default async function HomePage() {
           }
         }))
       },
-      // 5. FAQPage Schema for AI Engines
+      // 4. FAQPage Schema for AI Engines
       {
         "@type": "FAQPage",
         "@id": "https://www.mskinstitute.in/#faq",
@@ -429,7 +351,7 @@ export default async function HomePage() {
       <div className="space-y-16 pb-16">
         {/* 1. Hero Section */}
         <section className="relative bg-gradient-to-br from-surface to-white border-b border-border-subtle overflow-hidden">
-          <div className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 pb-12 sm:pt-8 sm:pb-14 lg:pt-8 lg:pb-16 ${hasLiveBatches ? 'grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12 items-center' : 'max-w-4xl mx-auto flex flex-col items-center text-center space-y-6'}`}>
+          <div className={`max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 pb-12 sm:pt-8 sm:pb-14 lg:pt-8 lg:pb-16 ${hasLiveBatches ? 'grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12 items-start' : 'max-w-4xl mx-auto flex flex-col items-center text-center space-y-6'}`}>
             <header className={`space-y-6 ${hasLiveBatches ? '' : 'flex flex-col items-center text-center'}`}>
               <div className={`flex flex-wrap items-center gap-2 ${hasLiveBatches ? '' : 'justify-center'}`}>
                 <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-extrabold tracking-wider bg-[#B83A00]/10 text-[#B83A00]">
@@ -446,7 +368,7 @@ export default async function HomePage() {
               </div>
               
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black text-primary leading-tight">
-                Empower Your Career with <span className="text-secondary">Practical Coding</span> Skills
+                Empower Your Career with <span className="text-[#C2410C]">Practical Coding</span> Skills
               </h1>
               <p className={`home-hero-desc text-base sm:text-lg text-text-muted ${hasLiveBatches ? 'max-w-xl' : 'max-w-2xl'} leading-relaxed`}>
                 Join <strong>MSK Institute</strong> in Shikohabad to learn Python, Full-Stack Web Development, and essential computer concepts with hands-on lab projects and direct mentorship by <strong>Er. Sumit Kumar</strong>.
@@ -454,7 +376,7 @@ export default async function HomePage() {
               <div className={`flex flex-wrap gap-3 pt-2 ${hasLiveBatches ? '' : 'justify-center'}`}>
                 <Link
                   href="/book-demo"
-                  className="inline-flex items-center justify-center px-6 py-3.5 bg-secondary hover:bg-secondary-light text-white font-black text-sm rounded-xl shadow-md hover:shadow-lg transition-all duration-200 hover:-translate-y-0.5 gap-2 cursor-pointer"
+                  className="inline-flex items-center justify-center px-6 py-3.5 bg-[#C2410C] hover:bg-[#9A3412] text-white font-black text-sm rounded-xl shadow-md hover:shadow-lg transition-all duration-200 hover:-translate-y-0.5 gap-2 cursor-pointer"
                 >
                   <Sparkles className="w-4 h-4" />
                   <span>Book Free Demo Class</span>
@@ -469,7 +391,7 @@ export default async function HomePage() {
                 </Link>
                 <Link
                   href="/playground"
-                  className="inline-flex items-center justify-center px-4 py-3.5 border border-secondary/30 bg-secondary/5 hover:bg-secondary/10 text-secondary font-bold rounded-xl transition-all duration-200 gap-1.5 text-sm"
+                  className="inline-flex items-center justify-center px-4 py-3.5 border border-[#B83A00]/30 bg-[#B83A00]/5 hover:bg-[#B83A00]/10 text-[#B83A00] font-bold rounded-xl transition-all duration-200 gap-1.5 text-sm"
                 >
                   <Code2 className="w-4 h-4" />
                   <span>Try Playground</span>
@@ -479,28 +401,26 @@ export default async function HomePage() {
               {/* High-Trust Social Proof Strip */}
               <div className={`pt-2 flex flex-wrap items-center gap-y-2 gap-x-4 text-xs font-semibold text-text-muted ${hasLiveBatches ? '' : 'justify-center'}`}>
                 <div className="flex items-center gap-1">
-                  <div className="flex items-center text-amber-400">
-                    {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="w-3.5 h-3.5 fill-amber-400 text-amber-400" />
-                    ))}
-                  </div>
+                  <span className="text-amber-500 tracking-tight text-sm leading-none" aria-label="5 out of 5 stars">
+                    ★★★★★
+                  </span>
                   <span className="font-bold text-primary ml-1">4.9/5</span>
                   <span className="text-text-muted font-normal">(128+ Reviews)</span>
                 </div>
                 <span className="hidden sm:inline text-gray-300">•</span>
                 <div className="flex items-center gap-1.5 text-text-muted">
-                  <Users className="w-3.5 h-3.5 text-secondary" />
+                  <Users className="w-3.5 h-3.5 text-[#B83A00]" />
                   <span>1,200+ Students Mentored</span>
                 </div>
                 <span className="hidden sm:inline text-gray-300">•</span>
-                <div className="flex items-center gap-1.5 text-emerald-600 font-bold">
-                  <CheckCircle2 className="w-3.5 h-3.5 text-emerald-500" />
+                <div className="flex items-center gap-1.5 text-emerald-700 font-bold">
+                  <CheckCircle2 className="w-3.5 h-3.5 text-emerald-700" />
                   <span>100% Practical Labs</span>
                 </div>
               </div>
             </header>
 
-            {hasLiveBatches && <HomeHeroBatchCard initialBatches={allBatches} />}
+            {hasLiveBatches && <HomeHeroBatchCard initialBatches={lightweightBatches} />}
           </div>
         </section>
 
@@ -524,13 +444,14 @@ export default async function HomePage() {
 
         {/* 2.5 Viral Interactive Tools: CCC Mock Test & Career Finder */}
         <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="sr-only">Free Student Assessment & Career Tools</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {/* Card 1: CCC Online Mock Test */}
             <div className="relative bg-gradient-to-br from-white via-surface/40 to-white p-6 sm:p-8 rounded-3xl border-2 border-secondary/20 shadow-xs hover:shadow-md transition-all flex flex-col justify-between group">
               <div className="space-y-4">
                 <div className="flex items-center justify-between">
                   <span className="px-3 py-1 rounded-full text-[11px] font-black uppercase tracking-wider bg-[#B83A00]/10 text-[#B83A00] flex items-center gap-1.5">
-                    <span className="w-2 h-2 rounded-full bg-red-500 animate-pulse" />
+                    <span className="w-2 h-2 rounded-full bg-red-600" />
                     Free Practice Simulator
                   </span>
                   <span className="text-xs font-bold text-emerald-700 flex items-center gap-1">
@@ -540,7 +461,7 @@ export default async function HomePage() {
                 </div>
 
                 <div className="space-y-2">
-                  <h3 className="text-xl sm:text-2xl font-black text-primary group-hover:text-secondary transition-colors">
+                  <h3 className="text-xl sm:text-2xl font-black text-primary group-hover:text-[#B83A00] transition-colors">
                     NIELIT CCC Online Mock Test 2026
                   </h3>
                   <p className="text-xs sm:text-sm text-text-muted leading-relaxed">
@@ -559,7 +480,7 @@ export default async function HomePage() {
                 <span className="text-xs font-bold text-text-muted">Zero Registration Required</span>
                 <Link
                   href="/mock-test/ccc"
-                  className="inline-flex items-center gap-1.5 px-4 py-2 bg-secondary hover:bg-secondary-light text-white text-xs font-bold rounded-xl shadow-xs transition-colors"
+                  className="inline-flex items-center gap-1.5 px-4 py-2 bg-[#C2410C] hover:bg-[#9A3412] text-white text-xs font-bold rounded-xl shadow-xs transition-colors"
                 >
                   <span>Start Free Test</span>
                   <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
@@ -571,7 +492,7 @@ export default async function HomePage() {
             <div className="relative bg-gradient-to-br from-white via-surface/40 to-white p-6 sm:p-8 rounded-3xl border-2 border-secondary/20 shadow-xs hover:shadow-md transition-all flex flex-col justify-between group">
               <div className="space-y-4">
                 <div className="flex items-center justify-between">
-                  <span className="px-3 py-1 rounded-full text-[11px] font-black uppercase tracking-wider bg-secondary/10 text-secondary flex items-center gap-1.5">
+                  <span className="px-3 py-1 rounded-full text-[11px] font-black uppercase tracking-wider bg-[#B83A00]/10 text-[#B83A00] flex items-center gap-1.5">
                     <Compass className="w-3.5 h-3.5" />
                     60-Second Quiz
                   </span>
@@ -581,7 +502,7 @@ export default async function HomePage() {
                 </div>
 
                 <div className="space-y-2">
-                  <h3 className="text-xl sm:text-2xl font-black text-primary group-hover:text-secondary transition-colors">
+                  <h3 className="text-xl sm:text-2xl font-black text-primary group-hover:text-[#B83A00] transition-colors">
                     Find Your Ideal Course in 60s
                   </h3>
                   <p className="text-xs sm:text-sm text-text-muted leading-relaxed">
@@ -616,7 +537,7 @@ export default async function HomePage() {
         {/* 4. Course Highlights & Interactive Category Tabs */}
         <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
           <div className="text-center max-w-3xl mx-auto space-y-3">
-            <span className="text-xs font-bold uppercase tracking-wider text-secondary">
+            <span className="text-xs font-bold uppercase tracking-wider text-[#B83A00]">
               Career-Ready Tracks
             </span>
             <h2 className="text-3xl font-extrabold text-primary">Our Popular Programs</h2>
@@ -632,7 +553,7 @@ export default async function HomePage() {
         <section className="bg-surface border-y border-border-subtle py-16">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
             <div className="text-center max-w-3xl mx-auto space-y-3">
-              <span className="text-xs font-bold uppercase tracking-wider text-secondary">
+              <span className="text-xs font-bold uppercase tracking-wider text-[#B83A00]">
                 The MSK Advantage
               </span>
               <h2 className="text-3xl font-extrabold text-primary">Why Study at MSK Institute?</h2>
@@ -646,7 +567,7 @@ export default async function HomePage() {
                 const Icon = feature.icon;
                 return (
                   <div key={i} className="flex gap-4 p-6 bg-white rounded-2xl border border-border-subtle shadow-xs">
-                    <div className="p-3 bg-secondary/10 rounded-xl text-secondary flex-shrink-0 h-fit">
+                    <div className="p-3 bg-[#B83A00]/10 rounded-xl text-[#B83A00] flex-shrink-0 h-fit">
                       <Icon className="w-6 h-6" />
                     </div>
                     <div className="space-y-1.5 flex-1">
@@ -655,7 +576,7 @@ export default async function HomePage() {
                       {feature.href && (
                         <Link
                           href={feature.href}
-                          className="inline-flex items-center gap-1 text-xs font-bold text-secondary hover:text-secondary-light transition-colors pt-1"
+                          className="inline-flex items-center gap-1 text-xs font-bold text-[#B83A00] hover:text-[#9A3412] transition-colors pt-1"
                         >
                           Browse Study Material Hub
                           <ChevronRight className="w-3.5 h-3.5" />
@@ -670,7 +591,7 @@ export default async function HomePage() {
             {/* Comparison Distinction Card */}
             <div className="bg-white rounded-3xl border border-border-subtle p-6 sm:p-8 shadow-xs">
               <div className="text-center max-w-xl mx-auto space-y-2 mb-6">
-                <span className="text-xs font-bold uppercase tracking-wider text-secondary">
+                <span className="text-xs font-bold uppercase tracking-wider text-[#B83A00]">
                   The MSK Standard
                 </span>
                 <h3 className="text-xl sm:text-2xl font-black text-primary">
@@ -758,10 +679,8 @@ export default async function HomePage() {
               >
                 <div className="space-y-4">
                   {/* Rating Stars */}
-                  <div className="flex items-center gap-1 text-amber-400">
-                    {[...Array(rev.rating)].map((_, sIdx) => (
-                      <Star key={sIdx} className="w-4 h-4 fill-amber-400 text-amber-400" />
-                    ))}
+                  <div className="text-amber-500 tracking-wide text-sm leading-none" aria-label={`${rev.rating} out of 5 stars`}>
+                    {'★'.repeat(rev.rating)}
                   </div>
 
                   {/* Feedback Quote */}
@@ -773,7 +692,7 @@ export default async function HomePage() {
                 {/* Author Card with Achievement Badge */}
                 <div className="pt-4 mt-4 border-t border-border-subtle space-y-2">
                   <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-full bg-secondary/10 text-secondary font-bold flex items-center justify-center text-xs flex-shrink-0">
+                    <div className="w-10 h-10 rounded-full bg-[#B83A00]/10 text-[#B83A00] font-bold flex items-center justify-center text-xs flex-shrink-0">
                       {rev.initials}
                     </div>
                     <div className="overflow-hidden">
@@ -796,7 +715,7 @@ export default async function HomePage() {
               href="https://maps.app.goo.gl/MyER29LFmibVkPe47"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-xs sm:text-sm font-bold text-secondary hover:text-secondary-light transition-colors"
+              className="inline-flex items-center gap-2 text-xs sm:text-sm font-bold text-[#B83A00] hover:text-[#9A3412] transition-colors"
             >
               <span>Read 120+ Verified Reviews on Google Maps</span>
               <ChevronRight className="w-4 h-4" />
@@ -815,7 +734,7 @@ export default async function HomePage() {
         {/* 8. Frequently Asked Questions & Academic Counseling */}
         <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
           <div className="text-center space-y-3">
-            <span className="text-xs font-bold uppercase tracking-wider text-secondary">
+            <span className="text-xs font-bold uppercase tracking-wider text-[#B83A00]">
               Got Questions?
             </span>
             <h2 className="text-3xl font-extrabold text-primary">Frequently Asked Questions</h2>
@@ -829,7 +748,7 @@ export default async function HomePage() {
           {/* Academic Counseling Banner */}
           <div className="bg-surface rounded-2xl border border-border-subtle p-6 sm:p-8 flex flex-col sm:flex-row items-center justify-between gap-6 text-center sm:text-left mt-8">
             <div className="space-y-1.5 max-w-lg">
-              <div className="inline-flex items-center gap-1.5 text-xs font-bold text-secondary uppercase tracking-wider">
+              <div className="inline-flex items-center gap-1.5 text-xs font-bold text-[#B83A00] uppercase tracking-wider">
                 <HelpCircle className="w-4 h-4" />
                 <span>Still Have Questions?</span>
               </div>
@@ -845,7 +764,7 @@ export default async function HomePage() {
                 href="https://wa.me/918393042166?text=Hello%20MSK%20Institute%2C%20I%20need%20academic%20counseling%20regarding%20courses."
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#25D366] hover:bg-[#20ba59] text-white font-bold text-xs rounded-xl shadow-xs transition-colors"
+                className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#15803D] hover:bg-[#166534] text-white font-bold text-xs rounded-xl shadow-xs transition-colors"
               >
                 <MessageSquare className="w-4 h-4" />
                 <span>Chat on WhatsApp</span>
@@ -865,7 +784,7 @@ export default async function HomePage() {
         <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-6">
-              <div className="inline-flex items-center gap-1.5 text-secondary font-bold text-sm">
+              <div className="inline-flex items-center gap-1.5 text-[#B83A00] font-bold text-sm">
                 <MapPin className="w-4.5 h-4.5" />
                 Physical Campus Location
               </div>
@@ -914,7 +833,7 @@ export default async function HomePage() {
               <div className="flex flex-wrap gap-3 pt-2">
                 <a
                   href="tel:+918393042166"
-                  className="inline-flex items-center gap-2 px-5 py-3 bg-secondary hover:bg-secondary-light text-white font-bold text-xs rounded-xl shadow transition-colors"
+                  className="inline-flex items-center gap-2 px-5 py-3 bg-[#C2410C] hover:bg-[#9A3412] text-white font-bold text-xs rounded-xl shadow transition-colors"
                 >
                   <PhoneCall className="w-4 h-4" />
                   <span>Call Us: +91 83930 42166</span>
@@ -925,32 +844,24 @@ export default async function HomePage() {
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2 px-5 py-3 border border-border-subtle hover:bg-surface text-primary font-bold text-xs rounded-xl transition-colors"
                 >
-                  <MapPin className="w-4 h-4 text-secondary" />
+                  <MapPin className="w-4 h-4 text-[#B83A00]" />
                   <span>Open in Google Maps</span>
                 </a>
                 <Link
                   href="/locations"
                   className="inline-flex items-center gap-2 px-5 py-3 bg-surface hover:bg-border-subtle text-primary font-bold text-xs rounded-xl border border-border-subtle transition-colors"
                 >
-                  <Building2 className="w-4 h-4 text-secondary" />
+                  <Building2 className="w-4 h-4 text-[#B83A00]" />
                   <span>View All Campuses ({branchCount})</span>
                 </Link>
               </div>
             </div>
 
             <div className="space-y-4">
-              <div className="h-96 w-full rounded-2xl overflow-hidden border border-border-subtle shadow-sm">
-                <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3551.2868286012636!2d78.5829716!3d27.1157743!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39744bce0745fc55%3A0xaca626641b821c20!2sMSK%20Institute!5e0!3m2!1sen!2sin!4v1787736706091!5m2!1sen!2sin"
-                  width="100%"
-                  height="100%"
-                  style={{ border: 0 }}
-                  allowFullScreen
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                  title="MSK Institute Location Map Shikohabad"
-                />
-              </div>
+              <LazyGoogleMap
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3551.2868286012636!2d78.5829716!3d27.1157743!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39744bce0745fc55%3A0xaca626641b821c20!2sMSK%20Institute!5e0!3m2!1sen!2sin!4v1787736706091!5m2!1sen!2sin"
+                title="MSK Institute Location Map Shikohabad"
+              />
             </div>
           </div>
         </section>

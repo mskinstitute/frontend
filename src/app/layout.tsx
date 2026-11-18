@@ -31,9 +31,9 @@ export const viewport: Viewport = {
 };
 
 export const metadata: Metadata = {
-  title: "MSK Institute | Coding & Computer Training (Shikohabad & Global Live Online)",
+  title: 'MSK Institute | Coding & Computer Academy (Shikohabad)',
   applicationName: 'MSK Institute',
-  description: 'Learn Python programming, Full-Stack Web Development, Data Analytics, NIELIT CCC, and ADCA with practical offline labs in Shikohabad and live online classes worldwide in Hindi & English.',
+  description: 'Learn Python, MERN Web Dev, Data Analytics, CCC & ADCA via practical offline labs in Shikohabad or live online classes worldwide in Hindi & English.',
   keywords: [
     'MSK Institute',
     'Computer Center Shikohabad',
@@ -128,8 +128,9 @@ export default function RootLayout({
             __html: JSON.stringify({
               '@context': 'https://schema.org',
               '@type': ['EducationalOrganization', 'LocalBusiness'],
+              '@id': 'https://www.mskinstitute.in/#organization',
               name: 'MSK Institute',
-              alternateName: 'MSK Computer Training & Coding Academy',
+              alternateName: ['MSK Computer Training & Coding Academy', 'MSK Computer Institute', 'MSK Institute Shikohabad'],
               url: 'https://www.mskinstitute.in',
               logo: 'https://www.mskinstitute.in/logo.jpg',
               image: 'https://www.mskinstitute.in/brand/og-banner.png',
@@ -137,6 +138,13 @@ export default function RootLayout({
               telephone: '+918393042166',
               email: 'mskshikohabad@gmail.com',
               priceRange: '₹₹',
+              aggregateRating: {
+                '@type': 'AggregateRating',
+                ratingValue: '4.9',
+                reviewCount: '128',
+                bestRating: '5',
+                worstRating: '1',
+              },
               address: {
                 '@type': 'PostalAddress',
                 streetAddress: 'Gali No. 3, Near Gyan Jyoti Public School',

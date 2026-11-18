@@ -155,7 +155,7 @@ export function SocialIconPills({
           target="_blank"
           rel="noopener noreferrer"
           title={`MSK Institute on Google Maps (${rating} ★ Rating)`}
-          aria-label="View MSK Institute Reviews on Google Maps"
+          aria-label={`${rating} star Google Maps reviews for MSK Institute`}
           className={`px-2.5 h-8 rounded-lg flex items-center gap-1.5 transition-all duration-200 border text-xs font-bold ${
             variant === 'light'
               ? 'bg-white/10 text-white/90 border-white/15 hover:bg-white hover:text-primary hover:scale-105'
@@ -163,8 +163,8 @@ export function SocialIconPills({
           }`}
         >
           <GoogleGIcon className="w-3.5 h-3.5" />
-          <span className="flex items-center gap-0.5 text-amber-400">
-            <Star className="w-3 h-3 fill-amber-400" />
+          <span className={`flex items-center gap-0.5 ${variant === 'light' ? 'text-amber-300' : 'text-amber-700'}`}>
+            <Star className="w-3 h-3 fill-amber-400 text-amber-400" />
             <span>{rating}</span>
           </span>
         </a>
@@ -227,7 +227,7 @@ export function SocialCommunitySection({
     <section className="bg-surface/50 rounded-3xl border border-border-subtle p-6 sm:p-10 space-y-8">
       <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 border-b border-border-subtle pb-6">
         <div className="space-y-2 max-w-2xl">
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-extrabold tracking-wider bg-secondary/10 text-secondary uppercase">
+          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-extrabold tracking-wider bg-[#B83A00]/10 text-[#B83A00] uppercase">
             <Users className="w-3.5 h-3.5" />
             Active Student Community
           </div>
@@ -259,14 +259,14 @@ export function SocialCommunitySection({
                   <div className="w-10 h-10 rounded-xl bg-surface flex items-center justify-center group-hover:scale-110 transition-transform">
                     <Icon className="w-5 h-5 text-primary group-hover:text-secondary transition-colors" />
                   </div>
-                  <span className="text-[11px] font-extrabold px-2.5 py-0.5 rounded-full bg-secondary/10 text-secondary">
+                  <span className="text-[11px] font-extrabold px-2.5 py-0.5 rounded-full bg-[#B83A00]/10 text-[#B83A00]">
                     {channel.badge}
                   </span>
                 </div>
 
                 <div className="space-y-1">
                   <div className="flex items-center gap-1.5">
-                    <h3 className="text-base font-extrabold text-primary group-hover:text-secondary transition-colors">
+                    <h3 className="text-base font-extrabold text-primary group-hover:text-[#B83A00] transition-colors">
                       {channel.name}
                     </h3>
                     <CheckCircle2 className="w-3.5 h-3.5 text-blue-500" />
@@ -285,7 +285,7 @@ export function SocialCommunitySection({
                   href={channel.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1 text-xs font-bold text-secondary hover:text-secondary-light group-hover:translate-x-0.5 transition-all"
+                  className="inline-flex items-center gap-1 text-xs font-bold text-[#B83A00] hover:text-[#9A3412] group-hover:translate-x-0.5 transition-all"
                 >
                   <span>Connect</span>
                   <ExternalLink className="w-3.5 h-3.5" />

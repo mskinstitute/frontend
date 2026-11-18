@@ -136,7 +136,7 @@ export default function HomeDemoBookingSection() {
               <div className="space-y-2 pt-1">
                 <Link
                   href="/book-demo"
-                  className="w-full py-4 px-6 bg-secondary hover:bg-secondary-light text-white font-black text-xs uppercase tracking-wider rounded-2xl shadow-md hover:shadow-lg transition-all duration-200 flex items-center justify-center gap-2 group cursor-pointer"
+                  className="w-full py-4 px-6 bg-[#C2410C] hover:bg-[#9A3412] text-white font-black text-xs uppercase tracking-wider rounded-2xl shadow-md hover:shadow-lg transition-all duration-200 flex items-center justify-center gap-2 group cursor-pointer"
                 >
                   <span>Book Free Demo Class Now</span>
                   <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
@@ -147,7 +147,7 @@ export default function HomeDemoBookingSection() {
                     href="https://wa.me/918393042166?text=Hi%20Er.%20Sumit%20Kumar,%20I%20want%20to%20inquire%20about%20the%20Free%20Demo%20Class."
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 text-[#25D366] hover:underline font-bold"
+                    className="inline-flex items-center gap-1.5 text-[#15803D] hover:underline font-bold"
                   >
                     <MessageCircle className="w-3.5 h-3.5" />
                     <span>WhatsApp Us Directly</span>
