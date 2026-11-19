@@ -66,7 +66,16 @@ function collectCanonicalUrls() {
       });
   }
 
-  // Blogs
+  // Blogs (from GitHub blogs manifest or local content/blogs)
+  const blogManifestPath = path.join(process.cwd(), 'src', 'data', 'githubBlogsManifest.json');
+  if (fs.existsSync(blogManifestPath)) {
+    try {
+      const manifest = JSON.parse(fs.readFileSync(blogManifestPath, 'utf8'));
+      if (manifest && Array.isArray(manifest.posts)) {
+        manifest.posts.forEach((p) => urls.add(`${BASE_URL}/blogs/${p.slug}`));
+      }
+    } catch {}
+  }
   const blogDir = path.join(process.cwd(), 'content', 'blogs');
   if (fs.existsSync(blogDir)) {
     fs.readdirSync(blogDir)

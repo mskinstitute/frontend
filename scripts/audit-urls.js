@@ -64,7 +64,19 @@ courses.forEach(c => {
 // Add batch routes
 liveBatches.forEach(b => validRoutes.add(`/live-batches/${b.id}`));
 
-// Add blog routes
+// Add blog routes (from GitHub blogs manifest and/or local content/blogs)
+const blogManifestPath = path.join(process.cwd(), 'src', 'data', 'githubBlogsManifest.json');
+let blogManifestPosts = [];
+if (fs.existsSync(blogManifestPath)) {
+  try {
+    const bManifest = JSON.parse(fs.readFileSync(blogManifestPath, 'utf8'));
+    if (bManifest && Array.isArray(bManifest.posts)) {
+      blogManifestPosts = bManifest.posts;
+      bManifest.posts.forEach(p => validRoutes.add(`/blogs/${p.slug}`));
+    }
+  } catch {}
+}
+
 const blogDir = path.join(process.cwd(), 'content', 'blogs');
 if (fs.existsSync(blogDir)) {
   fs.readdirSync(blogDir).filter(f => f.endsWith('.md')).forEach(f => {
@@ -145,7 +157,7 @@ function scanMarkdownLinks(filePath, content) {
   }
 }
 
-// Scan blogs
+// Scan blogs (from local dir if present, otherwise from GitHub blogs manifest)
 if (fs.existsSync(blogDir)) {
   for (const file of fs.readdirSync(blogDir).filter(f => f.endsWith('.md'))) {
     const fullPath = path.join(blogDir, file);
@@ -163,6 +175,20 @@ if (fs.existsSync(blogDir)) {
             console.error(`[ERROR] ${file}: relatedCourses slug '${s}' does not exist in all-courses.json`);
             errors++;
           }
+        }
+      }
+    }
+  }
+} else if (blogManifestPosts.length > 0) {
+  for (const post of blogManifestPosts) {
+    if (typeof post.content === 'string') {
+      scanMarkdownLinks(`${post.slug}.md`, post.content);
+    }
+    if (Array.isArray(post.relatedCourseSlugs)) {
+      for (const s of post.relatedCourseSlugs) {
+        if (!courses.some(c => c.slug === s || c.id === s)) {
+          console.error(`[ERROR] ${post.slug}.md: relatedCourses slug '${s}' does not exist in all-courses.json`);
+          errors++;
         }
       }
     }

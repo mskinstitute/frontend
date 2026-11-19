@@ -390,14 +390,14 @@ export async function fetchStudyMaterialById(idOrSlug: string): Promise<StudyMat
 }
 
 export async function fetchBlogs(): Promise<BlogPost[]> {
-  // If running on server (SSR/SSG/ISR), read directly from content/blogs/*.md
+  // If running on server (SSR/SSG/ISR), read directly from GitHub repo via server-blogs
   if (typeof window === 'undefined') {
     try {
       const { getAllBlogPosts } = await import('@/lib/server-blogs');
       const posts = await getAllBlogPosts();
       if (posts && posts.length > 0) return posts;
     } catch (serverErr) {
-      console.warn('Server fetch blogs from content/blogs failed:', serverErr);
+      console.warn('Server fetch blogs from GitHub failed:', serverErr);
     }
   }
 
@@ -427,14 +427,14 @@ export async function fetchBlogs(): Promise<BlogPost[]> {
 export async function fetchBlogBySlug(slug: string): Promise<BlogPost | null> {
   const normalized = slug.trim().toLowerCase();
 
-  // If running on server, lookup directly from content/blogs markdown files
+  // If running on server, lookup directly from GitHub repo via server-blogs
   if (typeof window === 'undefined') {
     try {
       const { getBlogPostBySlug } = await import('@/lib/server-blogs');
       const post = await getBlogPostBySlug(normalized);
       if (post) return post;
     } catch (serverErr) {
-      console.warn('Server fetch blog by slug failed:', serverErr);
+      console.warn('Server fetch blog by slug from GitHub failed:', serverErr);
     }
   }
 
