@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import { Award, BookOpen, Clock, ShieldCheck, CheckCircle2, Languages, HelpCircle } from 'lucide-react';
 import CccExamSimulator from '@/components/CccExamSimulator';
+import LocalToolCtaBanner from '@/components/LocalToolCtaBanner';
 
 export const metadata: Metadata = {
   title: "Free NIELIT CCC Mock Test 2026 (Bilingual Hindi/English) | MSK Institute",
@@ -149,6 +150,9 @@ export default function CccMockTestPage() {
 
         {/* The Live Interactive Exam Simulator */}
         <CccExamSimulator />
+
+        {/* Local Admissions & Offline Demo CTA Banner */}
+        <LocalToolCtaBanner toolName="the Free NIELIT CCC Mock Test" variant="light" />
 
         {/* Informational Guidance Section */}
         <section className="bg-surface/50 rounded-3xl border border-border-subtle p-6 sm:p-10 space-y-8">

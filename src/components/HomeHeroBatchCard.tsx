@@ -5,41 +5,14 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { LiveBatch } from '@/types';
 import CountdownTimer from '@/components/CountdownTimer';
-import { parseBatchStartTimestamp } from '@/lib/batchUtils';
+import { parseBatchStartTimestamp, getUpcomingCohortDate } from '@/lib/batchUtils';
 
 interface HomeHeroBatchCardProps {
   initialBatches: LiveBatch[];
 }
 
-const MONTH_NAMES = [
-  'January', 'February', 'March', 'April', 'May', 'June',
-  'July', 'August', 'September', 'October', 'November', 'December'
-];
-
-/**
- * Deterministic date formatter to guarantee 100% SSR-Client HTML parity
- * (prevents React Hydration Error #418 caused by locale differences)
- */
 function formatBatchStartDate(dateStr: string | undefined, startTs: number): string {
-  if (!dateStr && !startTs) return 'Upcoming Cohort';
-  try {
-    if (dateStr && dateStr.includes('-')) {
-      const parts = dateStr.split('-');
-      if (parts.length >= 3) {
-        const year = parseInt(parts[0], 10);
-        const monthIndex = parseInt(parts[1], 10) - 1;
-        const day = parseInt(parts[2].slice(0, 2), 10);
-        if (!isNaN(year) && !isNaN(monthIndex) && !isNaN(day) && monthIndex >= 0 && monthIndex < 12) {
-          return `${day} ${MONTH_NAMES[monthIndex]} ${year}`;
-        }
-      }
-    }
-    if (startTs > 0) {
-      const d = new Date(startTs);
-      return `${d.getUTCDate()} ${MONTH_NAMES[d.getUTCMonth()]} ${d.getUTCFullYear()}`;
-    }
-  } catch {}
-  return dateStr || 'Upcoming Cohort';
+  return getUpcomingCohortDate(dateStr, startTs);
 }
 
 export default function HomeHeroBatchCard({ initialBatches }: HomeHeroBatchCardProps) {
@@ -226,9 +199,8 @@ export default function HomeHeroBatchCard({ initialBatches }: HomeHeroBatchCardP
                   <div className="flex items-center justify-between text-xs text-text-muted px-1" suppressHydrationWarning>
                     <span className="font-bold text-primary flex items-center gap-1.5">
                       <span
-                        className={`w-2 h-2 rounded-full ${
-                          isStarted ? 'bg-emerald-600' : 'bg-[#C2410C]'
-                        }`}
+                        className={`w-2 h-2 rounded-full ${isStarted ? 'bg-emerald-600' : 'bg-[#C2410C]'
+                          }`}
                       />
                       {isStarted ? 'Batch In Progress:' : 'Batch Starts In:'}
                     </span>
@@ -310,11 +282,10 @@ export default function HomeHeroBatchCard({ initialBatches }: HomeHeroBatchCardP
             {scheduledBatches.map((_, idx) => (
               <span
                 key={idx}
-                className={`h-1.5 rounded-full transition-all duration-500 ${
-                  idx === currentIndex
-                    ? 'w-6 bg-secondary shadow-xs'
-                    : 'w-1.5 bg-gray-200'
-                }`}
+                className={`h-1.5 rounded-full transition-all duration-500 ${idx === currentIndex
+                  ? 'w-6 bg-secondary shadow-xs'
+                  : 'w-1.5 bg-gray-200'
+                  }`}
               />
             ))}
           </div>

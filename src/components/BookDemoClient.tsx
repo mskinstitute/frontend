@@ -1654,7 +1654,7 @@ function BookDemoFormContent({ courses = [], batches = [] }: BookDemoClientProps
             },
             {
               q: 'Where are the Offline Lab sessions held?',
-              a: 'Offline lab sessions are held at our main campus: MSK Institute of Technology & Coding, Gali No. 3, Near Gyan Jyoti Public School, Station Road, Shikohabad (Firozabad, UP). Every student gets an individual computer.'
+              a: 'Offline lab sessions are held at our main campus: MSK Institute of Technology & Coding, Gali No 3, Near Gyan Jyoti Public School, Adarsh Nagar, Station Road Area, Shikohabad (Firozabad, UP 283135). Every student gets an individual computer.'
             },
             {
               q: 'I am a complete beginner with zero coding background. Can I join?',

@@ -174,9 +174,8 @@ function NavigationLoaderContent() {
     <>
       {/* Top Fixed Gradient Progress Bar */}
       <div
-        className={`fixed top-0 left-0 right-0 h-[3.5px] z-[99999] pointer-events-none transition-opacity duration-300 ${
-          isLoading ? 'opacity-100' : 'opacity-0'
-        }`}
+        className={`fixed top-0 left-0 right-0 h-[3.5px] z-[99999] pointer-events-none transition-opacity duration-300 ${isLoading ? 'opacity-100' : 'opacity-0'
+          }`}
         aria-hidden="true"
       >
         <div
@@ -191,19 +190,19 @@ function NavigationLoaderContent() {
         </div>
       </div>
 
-      {/* Floating Pill Badge: Informs student that loading is underway so they don't click again */}
-      <div
-        className={`fixed top-4 right-4 sm:right-6 z-[99999] pointer-events-none transition-all duration-300 ${
-          isLoading
-            ? 'opacity-100 translate-y-0 scale-100'
-            : 'opacity-0 -translate-y-2 scale-95 pointer-events-none'
-        }`}
-      >
-        <div className="flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-slate-900/90 text-white text-xs font-semibold shadow-2xl border border-white/15 backdrop-blur-md">
-          <div className="w-3.5 h-3.5 border-2 border-secondary/40 border-t-secondary rounded-full animate-spin" />
-          <span>{loadingMessage}</span>
+      {/* Floating Pill Badge: Only rendered in DOM when client-side navigation is active */}
+      {isLoading && (
+        <div
+          className="fixed top-4 right-4 sm:right-6 z-[99999] pointer-events-none transition-all duration-300 opacity-100 translate-y-0 scale-100"
+          role="status"
+          aria-live="polite"
+        >
+          <div className="flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-slate-900/90 text-white text-xs font-semibold shadow-2xl border border-white/15 backdrop-blur-md">
+            <div className="w-3.5 h-3.5 border-2 border-secondary/40 border-t-secondary rounded-full animate-spin" />
+            <span>{loadingMessage}</span>
+          </div>
         </div>
-      </div>
+      )}
     </>
   );
 }

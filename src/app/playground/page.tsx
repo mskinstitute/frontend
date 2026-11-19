@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { ArrowLeft, Sparkles, Terminal, Code2, Database } from 'lucide-react';
 import PlaygroundApp from '@/features/playground';
 import PlaygroundSeoContent from '@/features/playground/PlaygroundSeoContent';
+import LocalToolCtaBanner from '@/components/LocalToolCtaBanner';
 
 export const metadata: Metadata = {
   title: 'Online Code Playground & Multi-Language Compiler | Python, Web, C++, SQL | MSK Institute',
@@ -233,6 +234,9 @@ export default function PlaygroundPage() {
             <PlaygroundApp />
           </Suspense>
         </div>
+
+        {/* Local Offline & Hybrid Demo Admissions Banner */}
+        <LocalToolCtaBanner toolName="MSK Code Playground" variant="dark" className="my-8" />
 
         {/* Crawlable SEO & Knowledge Base Content */}
         <PlaygroundSeoContent />

@@ -61,13 +61,13 @@ export default function AboutPage() {
       },
       address: {
         '@type': 'PostalAddress',
-        streetAddress: 'Gali No. 3, Near Gyan Jyoti Public School',
+        streetAddress: 'Gali No 3, Near Gyan Jyoti Public School, Adarsh Nagar',
         addressLocality: 'Shikohabad',
         addressRegion: 'Uttar Pradesh',
         postalCode: '283135',
         addressCountry: 'IN',
       },
-      telephone: '+91-8393042166',
+      telephone: '+918393042166',
       email: 'mskshikohabad@gmail.com',
     },
     breadcrumb: {
@@ -338,11 +338,11 @@ export default function AboutPage() {
               <div className="space-y-1 text-xs text-text-muted pt-1">
                 <p className="flex items-center gap-2 justify-center md:justify-start">
                   <MapPin className="w-4 h-4 text-secondary flex-shrink-0" />
-                  <span>Gali No. 3, Near Gyan Jyoti Public School, Shikohabad, UP - 283135</span>
+                  <span>Gali No 3, Near Gyan Jyoti Public School, Adarsh Nagar, Shikohabad, UP - 283135</span>
                 </p>
                 <p className="flex items-center gap-2 justify-center md:justify-start">
                   <Phone className="w-4 h-4 text-secondary flex-shrink-0" />
-                  <span>Helpline: +91 83930 42166 (Mon-Sat 8:00 AM - 7:00 PM)</span>
+                  <span>Helpline: +91 83930 42166 (Mon–Sat 8:00 AM – 7:00 PM | Sun 10:00 AM – 2:00 PM)</span>
                 </p>
               </div>
             </div>
@@ -355,7 +355,7 @@ export default function AboutPage() {
                 Contact Admissions
               </Link>
               <a
-                href="https://maps.google.com/?q=MSK+Institute+Shikohabad"
+                href="https://maps.google.com/maps?cid=12440673232057670688"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-5 py-3.5 bg-surface hover:bg-white border border-border-subtle text-primary font-bold text-center rounded-xl transition-colors inline-flex items-center justify-center gap-1.5"

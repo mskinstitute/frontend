@@ -3,6 +3,7 @@ import { Suspense } from 'react';
 import Link from 'next/link';
 import { ArrowLeft } from 'lucide-react';
 import TypeQuestApp from '@/features/typequest';
+import LocalToolCtaBanner from '@/components/LocalToolCtaBanner';
 import { constructMetadata } from '@/lib/seo';
 
 export const metadata: Metadata = constructMetadata({
@@ -119,6 +120,9 @@ export default function TypingPage() {
         >
           <TypeQuestApp />
         </Suspense>
+
+        {/* Local Offline & Hybrid Demo Admissions Banner */}
+        <LocalToolCtaBanner toolName="TypeQuest Typing Lab" variant="dark" className="mt-8" />
 
         {/* Indexable SEO Guide Section for Organic Search & AI Answer Engines */}
         <section className="mt-10 rounded-2xl border border-slate-800 bg-slate-900/50 p-6 sm:p-8 space-y-4 text-slate-300">

@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import ContactClient from '@/components/ContactClient';
+import { BUSINESS_CONFIG, getCanonicalBusinessSchema } from '@/config/business';
 
 export const metadata: Metadata = {
   title: 'Contact Us | MSK Institute of Technology Shikohabad',
@@ -44,18 +45,20 @@ export const metadata: Metadata = {
 export default function ContactPage() {
   const jsonLd = {
     '@context': 'https://schema.org',
-    '@type': 'EducationalOrganization',
-    name: 'MSK Institute of Technology & Coding',
-    alternateName: 'MSK Institute Shikohabad',
-    url: 'https://www.mskinstitute.in',
-    logo: 'https://www.mskinstitute.in/logo.jpg',
-    image: 'https://www.mskinstitute.in/logo.jpg',
-    description: 'Leading computer training academy in Shikohabad offering Python, Full Stack Web Development, CCC, and Data Analytics courses.',
-    telephone: '+91-8393042166',
+    '@type': ['EducationalOrganization', 'LocalBusiness'],
+    '@id': `${BUSINESS_CONFIG.websiteUrl}/#organization`,
+    name: BUSINESS_CONFIG.name,
+    alternateName: BUSINESS_CONFIG.alternateNames,
+    url: BUSINESS_CONFIG.websiteUrl,
+    logo: BUSINESS_CONFIG.logoUrl,
+    image: `${BUSINESS_CONFIG.websiteUrl}/brand/og-banner.png`,
+    description: BUSINESS_CONFIG.description,
+    telephone: '+918393042166',
     email: 'mskshikohabad@gmail.com',
+    priceRange: BUSINESS_CONFIG.priceRange,
     address: {
       '@type': 'PostalAddress',
-      streetAddress: 'Gali No. 3, Near Gyan Jyoti Public School',
+      streetAddress: 'Gali No 3, Near Gyan Jyoti Public School, Adarsh Nagar',
       addressLocality: 'Shikohabad',
       addressRegion: 'Uttar Pradesh',
       postalCode: '283135',
@@ -63,9 +66,10 @@ export default function ContactPage() {
     },
     geo: {
       '@type': 'GeoCoordinates',
-      latitude: 27.1157743,
-      longitude: 78.5829716,
+      latitude: 27.1157334,
+      longitude: 78.582971,
     },
+    hasMap: BUSINESS_CONFIG.contact.mapsUrl,
     openingHoursSpecification: [
       {
         '@type': 'OpeningHoursSpecification',
@@ -81,8 +85,20 @@ export default function ContactPage() {
       },
     ],
     sameAs: [
-      'https://maps.google.com/?q=MSK+Institute+Shikohabad',
+      BUSINESS_CONFIG.socialLinks.youtube,
+      BUSINESS_CONFIG.socialLinks.instagram,
+      BUSINESS_CONFIG.socialLinks.linkedin,
+      BUSINESS_CONFIG.socialLinks.maps,
+      BUSINESS_CONFIG.socialLinks.facebook,
+      BUSINESS_CONFIG.socialLinks.github,
     ],
+    aggregateRating: {
+      '@type': 'AggregateRating',
+      ratingValue: '4.9',
+      reviewCount: '38',
+      bestRating: '5',
+      worstRating: '1',
+    },
   };
 
   return (

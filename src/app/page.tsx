@@ -15,6 +15,7 @@ import HomeFaqAccordion from '@/components/HomeFaqAccordion';
 import { SocialCommunitySection } from '@/components/SocialLinks';
 import LazyGoogleMap from '@/components/LazyGoogleMap';
 import { Course, LiveBatch } from '@/types';
+import { BUSINESS_CONFIG, getCanonicalBusinessSchema } from '@/config/business';
 
 export const revalidate = 300; // Refresh live batch schedules every 5 minutes
 
@@ -270,7 +271,9 @@ export default async function HomePage() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@graph": [
-      // 1. WebSite Entity with SearchAction
+      // 1. Canonical EducationalOrganization + LocalBusiness
+      getCanonicalBusinessSchema(),
+      // 2. WebSite Entity with SearchAction
       {
         "@type": "WebSite",
         "@id": "https://www.mskinstitute.in/#website",
@@ -404,8 +407,8 @@ export default async function HomePage() {
                   <span className="text-amber-500 tracking-tight text-sm leading-none" aria-label="5 out of 5 stars">
                     ★★★★★
                   </span>
-                  <span className="font-bold text-primary ml-1">4.9/5</span>
-                  <span className="text-text-muted font-normal">(128+ Reviews)</span>
+                  <span className="font-bold text-primary ml-1">{BUSINESS_CONFIG.stats.rating}</span>
+                  <span className="text-text-muted font-normal">({BUSINESS_CONFIG.stats.reviewCount} Reviews)</span>
                 </div>
                 <span className="hidden sm:inline text-gray-300">•</span>
                 <div className="flex items-center gap-1.5 text-text-muted">
@@ -792,7 +795,7 @@ export default async function HomePage() {
                 Visit our Offline Training Lab
               </h2>
               <p className="home-about-summary text-text-muted leading-relaxed">
-                We are located in Shikohabad at <strong>Gali No. 3, Near Gyan Jyoti Public School, Station Road Area</strong>. Our campus is open Monday through Saturday from 8:00 AM to 7:00 PM (Sunday 10:00 AM to 2:00 PM for counseling & demos) for practical lab training, mentorship, and admissions.
+                We are located in Shikohabad at <strong>Gali No 3, Near Gyan Jyoti Public School, Adarsh Nagar, Station Road Area</strong>. Our campus is open Monday through Saturday from 8:00 AM to 7:00 PM (Sunday 10:00 AM to 2:00 PM for counseling & demos) for practical lab training, mentorship, and admissions.
               </p>
               
               {/* Campus Infrastructure Highlights */}
@@ -859,7 +862,7 @@ export default async function HomePage() {
 
             <div className="space-y-4">
               <LazyGoogleMap
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3551.2868286012636!2d78.5829716!3d27.1157743!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39744bce0745fc55%3A0xaca626641b821c20!2sMSK%20Institute!5e0!3m2!1sen!2sin!4v1787736706091!5m2!1sen!2sin"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3551.2868286012636!2d78.582971!3d27.1157334!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39744bce0745fc55%3A0xaca626641b821c20!2sMSK%20Institute!5e0!3m2!1sen!2sin!4v1787736706091!5m2!1sen!2sin"
                 title="MSK Institute Location Map Shikohabad"
               />
             </div>

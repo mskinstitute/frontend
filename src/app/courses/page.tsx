@@ -137,11 +137,11 @@ export default async function CoursesPage() {
         "logo": "https://www.mskinstitute.in/logo.jpg",
         "image": "https://www.mskinstitute.in/logo.jpg",
         "description": "Premier Computer Institute in Shikohabad offering career-oriented programming bootcamps, web development tracks, and government certified computer courses.",
-        "telephone": "+91-8393042166",
+        "telephone": "+918393042166",
         "email": "mskshikohabad@gmail.com",
         "address": {
           "@type": "PostalAddress",
-          "streetAddress": "Near Arya Samaj Mandir, Station Road",
+          "streetAddress": "Gali No 3, Near Gyan Jyoti Public School, Adarsh Nagar",
           "addressLocality": "Shikohabad",
           "addressRegion": "Uttar Pradesh",
           "postalCode": "283135",
@@ -149,8 +149,8 @@ export default async function CoursesPage() {
         },
         "geo": {
           "@type": "GeoCoordinates",
-          "latitude": 27.1157743,
-          "longitude": 78.5829716
+          "latitude": 27.1157334,
+          "longitude": 78.582971
         },
         "founder": {
           "@type": "Person",

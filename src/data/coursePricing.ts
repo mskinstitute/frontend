@@ -35,15 +35,15 @@ export const COURSE_PRICE_CATALOG: Record<string, CoursePriceDefinition> = {
   // 1. Flagship 18-Month Multi-Stack & Security Programs
   'course-cyber-security-ethical-hacking': {
     marketPrice: 48000,
-    ourPrice: 24999,
-    installments: { downPayment: 4999, monthly: 1500, tenureMonths: 15 },
+    ourPrice: 28499,
+    installments: { downPayment: 5499, monthly: 1700, tenureMonths: 15 },
     badge: 'High Industry Demand',
     isPopular: true,
   },
   'course-full-stack-development': {
     marketPrice: 45000,
-    ourPrice: 22999,
-    installments: { downPayment: 4999, monthly: 1400, tenureMonths: 15 },
+    ourPrice: 24999,
+    installments: { downPayment: 4999, monthly: 1500, tenureMonths: 15 },
     badge: 'Flagship Architect Track',
     isPopular: true,
   },
@@ -51,8 +51,8 @@ export const COURSE_PRICE_CATALOG: Record<string, CoursePriceDefinition> = {
   // 2. 12-Month Diplomas & Professional Masteries
   'course-adca': {
     marketPrice: 15000,
-    ourPrice: 9999,
-    installments: { downPayment: 1999, monthly: 900, tenureMonths: 10 },
+    ourPrice: 8500,
+    installments: { downPayment: 1700, monthly: 850, tenureMonths: 9 },
     badge: 'Govt Job Eligible',
     isPopular: true,
   },
@@ -79,8 +79,8 @@ export const COURSE_PRICE_CATALOG: Record<string, CoursePriceDefinition> = {
   },
   'course-data-analysis-mastery-combo-course--12-months': {
     marketPrice: 32000,
-    ourPrice: 16999,
-    installments: { downPayment: 3499, monthly: 1500, tenureMonths: 10 },
+    ourPrice: 19999,
+    installments: { downPayment: 3999, monthly: 1800, tenureMonths: 10 },
     badge: 'Data Analyst Specialization',
     isPopular: true,
   },
@@ -128,16 +128,16 @@ export const COURSE_PRICE_CATALOG: Record<string, CoursePriceDefinition> = {
 
   // 5. 3-Month Fast-Track & Certification Masteries
   'course-ccc-nielit': {
-    marketPrice: 4000,
-    ourPrice: 2499,
-    installments: { downPayment: 999, monthly: 800, tenureMonths: 2 },
+    marketPrice: 5000,
+    ourPrice: 3500,
+    installments: { downPayment: 1500, monthly: 1000, tenureMonths: 2 },
     badge: 'Mandatory UP Govt Exams',
     isPopular: true,
   },
   'course-python-mastery': {
     marketPrice: 9000,
-    ourPrice: 4999,
-    installments: { downPayment: 1499, monthly: 1750, tenureMonths: 2 },
+    ourPrice: 3999,
+    installments: { downPayment: 999, monthly: 1500, tenureMonths: 2 },
     badge: 'Top Rated Coding',
     isPopular: true,
   },

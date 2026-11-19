@@ -168,7 +168,7 @@ export default async function CourseDetailPage({ params }: { params: Params }) {
     }] : []),
     {
       question: `Where are the offline classes held and what are the timings?`,
-      answer: `Offline practical lab training is conducted at Gali No. 3, Near Gyan Jyoti Public School, Shikohabad, UP, alongside live interactive online batches across India. Flexible morning and evening batches are available with 1-on-1 mentor guidance.`,
+      answer: `Offline practical lab training is conducted at Gali No 3, Near Gyan Jyoti Public School, Adarsh Nagar, Station Road Area, Shikohabad, UP 283135, alongside live interactive online batches across India. Flexible morning and evening batches are available with 1-on-1 mentor guidance.`,
     },
     {
       question: `What are the prerequisites to join ${course.title}?`,
@@ -311,24 +311,29 @@ export default async function CourseDetailPage({ params }: { params: Params }) {
           'ratingValue': '4.9',
           'bestRating': '5',
           'worstRating': '1',
-          'ratingCount': '128',
-          'reviewCount': '128',
+          'ratingCount': '38',
+          'reviewCount': '38',
         },
         'provider': {
           '@type': 'EducationalOrganization',
           '@id': 'https://www.mskinstitute.in/#organization',
           'name': 'MSK Institute',
           'url': 'https://www.mskinstitute.in',
-          'sameAs': 'https://www.mskinstitute.in',
+          'sameAs': 'https://maps.google.com/maps?cid=12440673232057670688',
           'logo': 'https://www.mskinstitute.in/logo.jpg',
           'telephone': '+918393042166',
           'address': {
             '@type': 'PostalAddress',
-            'streetAddress': 'Gali No. 3, Near Gyan Jyoti Public School',
+            'streetAddress': 'Gali No 3, Near Gyan Jyoti Public School, Adarsh Nagar',
             'addressLocality': 'Shikohabad',
             'addressRegion': 'Uttar Pradesh',
             'postalCode': '283135',
             'addressCountry': 'IN',
+          },
+          'geo': {
+            '@type': 'GeoCoordinates',
+            'latitude': 27.1157334,
+            'longitude': 78.582971,
           },
         },
         'instructor': {
@@ -351,7 +356,7 @@ export default async function CourseDetailPage({ params }: { params: Params }) {
             'name': 'MSK Institute Shikohabad Campus',
             'address': {
               '@type': 'PostalAddress',
-              'streetAddress': 'Gali No. 3, Near Gyan Jyoti Public School',
+              'streetAddress': 'Gali No 3, Near Gyan Jyoti Public School, Adarsh Nagar',
               'addressLocality': 'Shikohabad',
               'addressRegion': 'Uttar Pradesh',
               'postalCode': '283135',
@@ -777,12 +782,12 @@ export default async function CourseDetailPage({ params }: { params: Params }) {
                     4.9/5 Rating
                   </span>
                   <a
-                    href="https://maps.google.com/?q=MSK+Institute+Shikohabad"
+                    href="https://maps.google.com/maps?cid=12440673232057670688"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-secondary hover:underline font-semibold"
                   >
-                    128+ Google Reviews &rarr;
+                    38 Google Reviews &rarr;
                   </a>
                 </div>
               </div>

@@ -6,20 +6,14 @@ import {
 } from 'lucide-react';
 import { toast } from 'react-hot-toast';
 import { LiveBatch } from '@/types';
+import { getUpcomingCohortDate } from '@/lib/batchUtils';
 
 interface LiveBatchesClientProps {
   batches: LiveBatch[];
 }
 
 function formatBatchStartDate(dateStr?: string): string {
-  if (!dateStr) return 'Upcoming Cohort';
-  try {
-    const d = new Date(dateStr);
-    if (!isNaN(d.getTime())) {
-      return d.toLocaleDateString('en-IN', { day: 'numeric', month: 'long', year: 'numeric' });
-    }
-  } catch {}
-  return dateStr;
+  return getUpcomingCohortDate(dateStr);
 }
 
 export default function LiveBatchesClient({ batches }: LiveBatchesClientProps) {

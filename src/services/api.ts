@@ -462,6 +462,117 @@ export async function fetchInstructorById(id: string): Promise<Instructor | null
 export const DEFAULT_GOOGLE_SHEET_LIVE_BATCHES_URL =
   'https://docs.google.com/spreadsheets/d/1IMLDtXqnuM1A35xpboR_IrcYh5563ZCy55dzl1vGW1A/edit?gid=1194716609#gid=1194716609';
 
+export const FALLBACK_LIVE_BATCHES: LiveBatch[] = [
+  {
+    id: 'batch-full-stack-web-dev',
+    title: 'Full-Stack Web Development Architect Track',
+    courseId: 'course-full-stack-development',
+    courseTitle: 'Full-Stack Web Development',
+    courseSlug: 'full-stack-development',
+    startDate: '2026-12-01',
+    startDateTime: '2026-12-01T16:00:00+05:30',
+    schedule: 'Mon - Fri, 04:00 PM - 06:00 PM',
+    price: '₹24,999',
+    totalSeats: 15,
+    leftSeats: 4,
+    status: 'UPCOMING',
+    instructor: 'Er. Sumit Kumar',
+    instructorId: 'inst-sumit-kumar',
+    instructorPicture: '/assets/img/instructors/sumit-kumar.webp',
+    mode: 'BOTH',
+  },
+  {
+    id: 'batch-python-programming-mastery',
+    title: 'Python Programming Mastery (Beginner to Advanced)',
+    courseId: 'course-python-mastery',
+    courseTitle: 'Python Programming Mastery',
+    courseSlug: 'python-mastery',
+    startDate: '2026-12-01',
+    startDateTime: '2026-12-01T10:00:00+05:30',
+    schedule: 'Mon - Fri, 10:00 AM - 11:30 AM',
+    price: '₹3,999',
+    totalSeats: 15,
+    leftSeats: 6,
+    status: 'UPCOMING',
+    instructor: 'Er. Sumit Kumar',
+    instructorId: 'inst-sumit-kumar',
+    instructorPicture: '/assets/img/instructors/sumit-kumar.webp',
+    mode: 'BOTH',
+  },
+  {
+    id: 'batch-data-analytics-power-bi',
+    title: 'Data Analytics & Power BI Mastery Cohort',
+    courseId: 'course-data-analysis-mastery-combo-course--12-months',
+    courseTitle: 'Data Analytics & Power BI',
+    courseSlug: 'data-analysis-mastery-combo-course--12-months',
+    startDate: '2026-12-01',
+    startDateTime: '2026-12-01T14:00:00+05:30',
+    schedule: 'Mon - Fri, 02:00 PM - 03:30 PM',
+    price: '₹19,999',
+    totalSeats: 12,
+    leftSeats: 3,
+    status: 'UPCOMING',
+    instructor: 'Er. Sumit Kumar',
+    instructorId: 'inst-sumit-kumar',
+    instructorPicture: '/assets/img/instructors/sumit-kumar.webp',
+    mode: 'BOTH',
+  },
+  {
+    id: 'batch-cyber-security-ethical-hacking',
+    title: 'Cybersecurity & Ethical Hacking Professional Track',
+    courseId: 'course-cyber-security-ethical-hacking',
+    courseTitle: 'Cybersecurity & Ethical Hacking',
+    courseSlug: 'cyber-security-ethical-hacking-professional-program',
+    startDate: '2026-12-01',
+    startDateTime: '2026-12-01T18:00:00+05:30',
+    schedule: 'Mon - Fri, 06:00 PM - 07:30 PM',
+    price: '₹28,499',
+    totalSeats: 10,
+    leftSeats: 3,
+    status: 'UPCOMING',
+    instructor: 'Er. Sumit Kumar',
+    instructorId: 'inst-sumit-kumar',
+    instructorPicture: '/assets/img/instructors/sumit-kumar.webp',
+    mode: 'BOTH',
+  },
+  {
+    id: 'batch-nielit-ccc',
+    title: 'NIELIT CCC Certification Crash Course & Mock Series',
+    courseId: 'course-ccc-nielit',
+    courseTitle: 'NIELIT CCC Certification',
+    courseSlug: 'ccc',
+    startDate: '2026-12-01',
+    startDateTime: '2026-12-01T08:30:00+05:30',
+    schedule: 'Mon - Sat, 08:30 AM - 09:30 AM',
+    price: '₹3,500',
+    totalSeats: 20,
+    leftSeats: 7,
+    status: 'UPCOMING',
+    instructor: 'Er. Sumit Kumar',
+    instructorId: 'inst-sumit-kumar',
+    instructorPicture: '/assets/img/instructors/sumit-kumar.webp',
+    mode: 'BOTH',
+  },
+  {
+    id: 'batch-adca-diploma',
+    title: 'ADCA Advanced Diploma in Computer Applications',
+    courseId: 'course-adca',
+    courseTitle: 'ADCA 1-Year Diploma',
+    courseSlug: 'adca',
+    startDate: '2026-12-01',
+    startDateTime: '2026-12-01T11:30:00+05:30',
+    schedule: 'Mon - Fri, 11:30 AM - 01:00 PM',
+    price: '₹8,500',
+    totalSeats: 15,
+    leftSeats: 5,
+    status: 'UPCOMING',
+    instructor: 'Er. Sumit Kumar',
+    instructorId: 'inst-sumit-kumar',
+    instructorPicture: '/assets/img/instructors/sumit-kumar.webp',
+    mode: 'BOTH',
+  },
+];
+
 // In-memory cache to ensure sub-millisecond response & resilience if Google Sheets is briefly unreachable
 let cachedBatches: LiveBatch[] = [];
 let lastBatchesFetchTime = 0;
@@ -514,9 +625,12 @@ export async function fetchLiveBatches(): Promise<LiveBatch[]> {
     }
   }
 
-  // 3. Fallback to existing memory cache if current network fetch failed
-  if (rawBatches.length === 0 && cachedBatches.length > 0) {
-    return cachedBatches;
+  // 3. Fallback to existing memory cache or static fallback if current network fetch failed
+  if (rawBatches.length === 0) {
+    if (cachedBatches.length > 0) {
+      return cachedBatches;
+    }
+    rawBatches = FALLBACK_LIVE_BATCHES;
   }
 
   // 4. Enrich batches with course data, instructor data, and calculated lifecycle status
@@ -1223,8 +1337,8 @@ export async function fetchSocialLinks(): Promise<SocialLinksRegistry> {
       channels: [],
       googleReviews: {
         rating: '4.9',
-        reviewCount: '128+',
-        mapsUrl: 'https://maps.app.goo.gl/MyER29LFmibVkPe47',
+        reviewCount: '38',
+        mapsUrl: 'https://maps.google.com/maps?cid=12440673232057670688',
         enabled: true,
       },
       whatsAppSupport: {

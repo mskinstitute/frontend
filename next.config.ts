@@ -24,6 +24,17 @@ const nextConfig: NextConfig = {
   async redirects() {
     return [
       {
+        source: '/:path*',
+        has: [
+          {
+            type: 'host',
+            value: 'mskinstitute.in',
+          },
+        ],
+        destination: 'https://www.mskinstitute.in/:path*',
+        permanent: true,
+      },
+      {
         source: '/campuses',
         destination: '/locations',
         permanent: true,

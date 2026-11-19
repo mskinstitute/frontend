@@ -4,6 +4,7 @@ import MockTestHubClient from '@/components/MockTestHubClient';
 import { constructMetadata } from '@/lib/seo';
 import { Award, BookOpen, Clock, ShieldCheck, Sparkles } from 'lucide-react';
 import Link from 'next/link';
+import LocalToolCtaBanner from '@/components/LocalToolCtaBanner';
 
 export const revalidate = 3600; // ISR cache for 1 hour
 
@@ -102,6 +103,9 @@ export default async function MockTestHubPage() {
 
         {/* The Client Filter & Catalog Showcase */}
         <MockTestHubClient courses={courses} />
+
+        {/* Local Offline & Hybrid Demo Admissions Banner */}
+        <LocalToolCtaBanner toolName="Free Online Mock Tests" variant="light" />
 
         {/* Offline Center Bottom Callout */}
         <section className="bg-white rounded-3xl border border-border-subtle p-6 sm:p-10 flex flex-col md:flex-row items-center justify-between gap-6 shadow-xs">

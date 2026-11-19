@@ -105,7 +105,7 @@ export default async function LivePage() {
     },
     {
       q: "How do I enroll in new upcoming live batches?",
-      a: "Review the 'Upcoming Live Batches' section on the Live page, select your desired batch, and click 'View Details' to submit your registration. You can also visit our Shikohabad centre at Gali No. 3, Near Gyan Jyoti Public School, Station Road Area, or call our coordinator at +91 83930 42166."
+      a: "Review the 'Upcoming Live Batches' section on the Live page, select your desired batch, and click 'View Details' to submit your registration. You can also visit our Shikohabad centre at Gali No 3, Near Gyan Jyoti Public School, Adarsh Nagar, Station Road Area, or call our coordinator at +91 83930 42166."
     }
   ];
 

@@ -12,6 +12,7 @@ import {
 import { LiveClass, LiveBatch } from '@/types';
 import WebShareButton from '@/components/WebShareButton';
 import { parseISTTimeToEpoch } from '@/context/LiveStatusContext';
+import { getUpcomingCohortDate } from '@/lib/batchUtils';
 
 interface LiveScheduleClientProps {
   initialClasses: LiveClass[];
@@ -1010,13 +1011,7 @@ export default function LiveScheduleClient({ initialClasses, initialBatches }: L
               </thead>
               <tbody className="divide-y divide-border-subtle text-sm">
                 {initialBatches.map((b) => {
-                  const startDateStr = b.startDate ? (() => {
-                    try {
-                      const d = new Date(b.startDate);
-                      if (!isNaN(d.getTime())) return d.toLocaleDateString('en-IN', { day: 'numeric', month: 'long', year: 'numeric' });
-                    } catch {}
-                    return b.startDate;
-                  })() : 'Upcoming Batch';
+                  const startDateStr = getUpcomingCohortDate(b.startDate);
                   
                   const remainingSeats = b.leftSeats ?? 5;
                   const total = b.totalSeats || 20;
@@ -1152,13 +1147,7 @@ export default function LiveScheduleClient({ initialClasses, initialBatches }: L
         {/* Mobile / Smartphone Card View */}
         <div className="block md:hidden space-y-4">
           {initialBatches.map((b) => {
-            const startDateStr = b.startDate ? (() => {
-              try {
-                const d = new Date(b.startDate);
-                if (!isNaN(d.getTime())) return d.toLocaleDateString('en-IN', { day: 'numeric', month: 'long', year: 'numeric' });
-              } catch {}
-              return b.startDate;
-            })() : 'Upcoming Batch';
+            const startDateStr = getUpcomingCohortDate(b.startDate);
             
             const remainingSeats = b.leftSeats ?? 5;
             const total = b.totalSeats || 20;

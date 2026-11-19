@@ -23,12 +23,14 @@ import {
 import { toast } from 'react-hot-toast';
 import { trackContactClick, trackFormSubmit, trackGenerateLead } from '@/lib/tracking';
 import { SocialIconPills, GoogleRatingTrustBadge, SocialCommunitySection } from '@/components/SocialLinks';
+import { BUSINESS_CONFIG } from '@/config/business';
 
-const PHONE_NUMBER = '+91 83930 42166';
-const CLEAN_PHONE = '918393042166';
+const PHONE_NUMBER = BUSINESS_CONFIG.contact.phone;
+const CLEAN_PHONE = BUSINESS_CONFIG.contact.cleanWhatsApp;
 const EMAIL_ADDRESS = 'mskshikohabad@gmail.com';
-const ADDRESS_TEXT = 'Gali No. 3, Near Gyan Jyoti Public School, Shikohabad, Firozabad, UP - 283135';
-const MAPS_URL = 'https://maps.app.goo.gl/MyER29LFmibVkPe47';
+const ADDRESS_TEXT = BUSINESS_CONFIG.address.displayAddress;
+const MAPS_URL = BUSINESS_CONFIG.contact.mapsUrl;
+const SHORT_MAPS_URL = 'https://maps.app.goo.gl/MyER29LFmibVkPe47';
 
 const COURSE_INTERESTS = [
   'General Enquiry & Counseling',
@@ -49,7 +51,7 @@ const FAQS = [
   },
   {
     q: 'Where is the MSK Institute campus located in Shikohabad?',
-    a: 'We are situated in Gali No. 3, Near Gyan Jyoti Public School, Shikohabad, Uttar Pradesh (PIN: 283135). It is just 5 minutes from Shikohabad main market and easily accessible by auto-rickshaw.',
+    a: 'We are situated in Gali No 3, Near Gyan Jyoti Public School, Adarsh Nagar, Station Road Area, Shikohabad, Uttar Pradesh (PIN: 283135). It is just 5 minutes from Shikohabad main market and easily accessible by auto-rickshaw.',
   },
   {
     q: 'Are courses available in both Online and Offline modes?',
@@ -451,11 +453,10 @@ export default function ContactClient() {
                         type="button"
                         key={m.id}
                         onClick={() => setLearningMode(m.id as any)}
-                        className={`py-2 px-2 text-xs font-semibold rounded-lg border text-center transition-all cursor-pointer ${
-                          learningMode === m.id
-                            ? 'bg-primary text-white border-primary shadow-xs'
-                            : 'bg-surface text-text-muted border-border-subtle hover:bg-slate-100 hover:text-primary'
-                        }`}
+                        className={`py-2 px-2 text-xs font-semibold rounded-lg border text-center transition-all cursor-pointer ${learningMode === m.id
+                          ? 'bg-primary text-white border-primary shadow-xs'
+                          : 'bg-surface text-text-muted border-border-subtle hover:bg-slate-100 hover:text-primary'
+                          }`}
                       >
                         {m.label}
                       </button>
@@ -575,7 +576,7 @@ export default function ContactClient() {
                 {isMapLoaded ? (
                   <iframe
                     title="MSK Institute Shikohabad Location Map"
-                    src="https://maps.google.com/maps?q=MSK%20Institute%2C%20Gali%20No.%203%2C%20Near%20Gyan%20Jyoti%20Public%20School%2C%20Shikohabad%2C%20Uttar%20Pradesh%20283135&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                    src="https://maps.google.com/maps?q=MSK%20Institute%2C%20Gali%20No%203%2C%20Near%20Gyan%20Jyoti%20Public%20School%2C%20Adarsh%20Nagar%2C%20Shikohabad%2C%20Uttar%20Pradesh%20283135&t=&z=15&ie=UTF8&iwloc=&output=embed"
                     className="w-full h-full border-0"
                     allowFullScreen
                     referrerPolicy="no-referrer-when-downgrade"
@@ -642,7 +643,7 @@ export default function ContactClient() {
 
         {/* Social Media & Community Trust Section */}
         <div className="mb-14">
-          <SocialCommunitySection 
+          <SocialCommunitySection
             title="Connect with MSK Student Community on Social Media"
             subtitle="Follow our YouTube tutorials, Instagram campus lab moments, LinkedIn career updates, and chat directly on WhatsApp."
           />
@@ -680,9 +681,8 @@ export default function ContactClient() {
                       {faq.q}
                     </span>
                     <ChevronDown
-                      className={`w-4 h-4 text-text-muted transition-transform duration-200 flex-shrink-0 ${
-                        isOpen ? 'rotate-180 text-secondary' : ''
-                      }`}
+                      className={`w-4 h-4 text-text-muted transition-transform duration-200 flex-shrink-0 ${isOpen ? 'rotate-180 text-secondary' : ''
+                        }`}
                     />
                   </button>
                   {isOpen && (

@@ -51,7 +51,7 @@ export default function BranchCourses({ courses, branch }: BranchCoursesProps) {
             href="/courses"
             className="inline-flex items-center gap-1.5 text-sm font-semibold text-secondary hover:text-secondary-dark transition-colors self-start md:self-auto"
           >
-            <span>View Full 66+ Course Catalog</span>
+            <span>View Full 78+ Course Catalog</span>
             <ArrowRight className="w-4 h-4" />
           </Link>
         </div>

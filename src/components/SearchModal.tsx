@@ -381,7 +381,7 @@ export default function SearchModal({ isOpen, onClose }: SearchModalProps) {
       id: 'tool-mock-test-hub',
       type: 'course',
       title: 'Free Online Mock Tests & Skill Assessments Hub',
-      description: 'Practice timed mock exams with instant scorecard, grades S/A/B/C/D, and WhatsApp sharing across all 66+ courses.',
+      description: 'Practice timed mock exams with instant scorecard, grades S/A/B/C/D, and WhatsApp sharing across all 78+ courses.',
       category: 'Exam Simulator • All Courses',
       url: '/mock-test',
       badge: 'Mock Tests',
@@ -731,11 +731,10 @@ export default function SearchModal({ isOpen, onClose }: SearchModalProps) {
                 filterRefs.current[cat.id] = el;
               }}
               onClick={() => setActiveCategory(cat.id)}
-              className={`px-3 py-1 rounded-full text-xs font-semibold whitespace-nowrap transition-all duration-150 cursor-pointer ${
-                activeCategory === cat.id
-                  ? 'bg-secondary text-white shadow-sm'
-                  : 'bg-white text-text-muted border border-border-subtle hover:text-primary hover:border-slate-300'
-              }`}
+              className={`px-3 py-1 rounded-full text-xs font-semibold whitespace-nowrap transition-all duration-150 cursor-pointer ${activeCategory === cat.id
+                ? 'bg-secondary text-white shadow-sm'
+                : 'bg-white text-text-muted border border-border-subtle hover:text-primary hover:border-slate-300'
+                }`}
             >
               {cat.label}
             </button>
@@ -781,11 +780,10 @@ export default function SearchModal({ isOpen, onClose }: SearchModalProps) {
                     }}
                     onClick={() => handleSelect(item)}
                     onMouseEnter={() => setSelectedIndex(idx)}
-                    className={`w-full text-left p-3 rounded-xl transition-all duration-100 flex items-center justify-between gap-3 group cursor-pointer ${
-                      isSelected
-                        ? 'bg-secondary/10 border-l-4 border-l-secondary shadow-sm text-primary pl-3.5'
-                        : 'hover:bg-surface text-text-muted hover:text-primary border-l-4 border-l-transparent'
-                    }`}
+                    className={`w-full text-left p-3 rounded-xl transition-all duration-100 flex items-center justify-between gap-3 group cursor-pointer ${isSelected
+                      ? 'bg-secondary/10 border-l-4 border-l-secondary shadow-sm text-primary pl-3.5'
+                      : 'hover:bg-surface text-text-muted hover:text-primary border-l-4 border-l-transparent'
+                      }`}
                   >
                     <div className="flex items-start gap-3 min-w-0 flex-1">
                       <div className="p-2 rounded-lg bg-white border border-border-subtle shadow-2xs mt-0.5 flex-shrink-0">

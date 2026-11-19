@@ -203,35 +203,39 @@ export default function Footer() {
               <li className="pt-2 border-t border-white/10 flex items-start gap-2">
                 <MapPin className="w-4 h-4 text-secondary flex-shrink-0 mt-0.5" />
                 <span className="text-xs leading-relaxed">
-                  Gali No. 3, Near Gyan Jyoti School,<br />
-                  Shikohabad, UP-283135
+                  Gali No 3, Near Gyan Jyoti Public School,<br />
+                  Adarsh Nagar, Shikohabad, UP-283135
                 </span>
               </li>
               <li className="flex items-center gap-2">
                 <Phone className="w-3.5 h-3.5 text-secondary flex-shrink-0" />
                 <a href="tel:+918393042166" className="text-xs hover:text-white transition-colors">
-                  +91 83930 42166
+                  {BUSINESS_CONFIG.contact.phone}
                 </a>
               </li>
               <li className="flex items-center gap-2">
                 <Mail className="w-3.5 h-3.5 text-secondary flex-shrink-0" />
                 <a href="mailto:mskshikohabad@gmail.com" className="text-xs hover:text-white transition-colors truncate">
-                  mskshikohabad@gmail.com
+                  {BUSINESS_CONFIG.contact.email}
                 </a>
               </li>
-              <li className="pt-2">
+              <li className="text-[11px] text-gray-300">
+                <span className="block text-secondary-light font-semibold">Hours:</span>
+                Mon – Sat: 8:00 AM – 7:00 PM | Sun: 10:00 AM – 2:00 PM
+              </li>
+              <li className="pt-1">
                 <a
                   href={BUSINESS_CONFIG.socialLinks.maps}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-white/10 hover:bg-white/20 border border-white/15 text-xs text-amber-300 font-bold transition-all hover:scale-105"
-                  title="Verify 128+ student ratings on Google Reviews"
+                  title={`Verify ${BUSINESS_CONFIG.stats.reviewCount} student ratings on Google Reviews`}
                 >
                   <GoogleGIcon className="w-3.5 h-3.5" />
                   <span className="flex items-center gap-1">
                     <Star className="w-3 h-3 fill-amber-400 text-amber-400" />
-                    <span className="text-white">4.9 ★</span>
-                    <span className="text-gray-300 font-normal">(128+ Google Reviews)</span>
+                    <span className="text-white">{BUSINESS_CONFIG.stats.rating} ★</span>
+                    <span className="text-gray-300 font-normal">({BUSINESS_CONFIG.stats.reviewCount} Google Reviews)</span>
                   </span>
                   <ExternalLink className="w-3 h-3 text-secondary ml-0.5" />
                 </a>
