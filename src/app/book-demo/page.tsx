@@ -92,7 +92,7 @@ export default async function BookDemoPage() {
             name: 'MSK Institute Shikohabad Campus',
             address: {
               '@type': 'PostalAddress',
-              streetAddress: 'Gali No 3, Near Gyan Jyoti Public School, Adarsh Nagar',
+              streetAddress: 'Gali No. 3, Near Gyan Jyoti Public School, Adarsh Nagar',
               addressLocality: 'Shikohabad',
               addressRegion: 'Uttar Pradesh',
               postalCode: '283135',
@@ -155,7 +155,7 @@ export default async function BookDemoPage() {
             name: 'Where are the Offline Lab sessions held?',
             acceptedAnswer: {
               '@type': 'Answer',
-              text: 'Offline lab sessions are held at MSK Institute of Technology & Coding, Gali No 3, Near Gyan Jyoti Public School, Adarsh Nagar, Station Road Area, Shikohabad (Firozabad, UP). Dedicated computers are provided for every student.',
+              text: 'Offline lab sessions are held at MSK Institute of Technology & Coding, Gali No. 3, Near Gyan Jyoti Public School, Adarsh Nagar, Shikohabad, Uttar Pradesh 283135. Dedicated computers are provided for every student.',
             },
           },
         ],

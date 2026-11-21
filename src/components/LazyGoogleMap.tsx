@@ -19,7 +19,7 @@ export default function LazyGoogleMap({
   src,
   title,
   mapsUrl = 'https://maps.app.goo.gl/MyER29LFmibVkPe47',
-  addressLabel = 'Gali No. 3, Near Gyan Jyoti Public School, Shikohabad, UP 283135',
+  addressLabel = 'Gali No. 3, Near Gyan Jyoti Public School, Adarsh Nagar, Shikohabad, Uttar Pradesh 283135',
 }: LazyGoogleMapProps) {
   const [shouldLoad, setShouldLoad] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);

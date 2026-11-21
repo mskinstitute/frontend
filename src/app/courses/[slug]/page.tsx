@@ -168,7 +168,7 @@ export default async function CourseDetailPage({ params }: { params: Params }) {
     }] : []),
     {
       question: `Where are the offline classes held and what are the timings?`,
-      answer: `Offline practical lab training is conducted at Gali No 3, Near Gyan Jyoti Public School, Adarsh Nagar, Station Road Area, Shikohabad, UP 283135, alongside live interactive online batches across India. Flexible morning and evening batches are available with 1-on-1 mentor guidance.`,
+      answer: `Offline practical lab training is conducted at Gali No. 3, Near Gyan Jyoti Public School, Adarsh Nagar, Shikohabad, Uttar Pradesh 283135, alongside live interactive online batches across India. Flexible morning and evening batches are available with 1-on-1 mentor guidance.`,
     },
     {
       question: `What are the prerequisites to join ${course.title}?`,
@@ -324,7 +324,7 @@ export default async function CourseDetailPage({ params }: { params: Params }) {
           'telephone': '+918393042166',
           'address': {
             '@type': 'PostalAddress',
-            'streetAddress': 'Gali No 3, Near Gyan Jyoti Public School, Adarsh Nagar',
+            'streetAddress': 'Gali No. 3, Near Gyan Jyoti Public School, Adarsh Nagar',
             'addressLocality': 'Shikohabad',
             'addressRegion': 'Uttar Pradesh',
             'postalCode': '283135',
@@ -332,7 +332,7 @@ export default async function CourseDetailPage({ params }: { params: Params }) {
           },
           'geo': {
             '@type': 'GeoCoordinates',
-            'latitude': 27.1157334,
+            'latitude': 27.1157333,
             'longitude': 78.582971,
           },
         },
@@ -356,7 +356,7 @@ export default async function CourseDetailPage({ params }: { params: Params }) {
             'name': 'MSK Institute Shikohabad Campus',
             'address': {
               '@type': 'PostalAddress',
-              'streetAddress': 'Gali No 3, Near Gyan Jyoti Public School, Adarsh Nagar',
+              'streetAddress': 'Gali No. 3, Near Gyan Jyoti Public School, Adarsh Nagar',
               'addressLocality': 'Shikohabad',
               'addressRegion': 'Uttar Pradesh',
               'postalCode': '283135',

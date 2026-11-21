@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect, useMemo, useRef, Suspense } from 'react';
+import { useState, useEffect, useMemo, useRef, Suspense, useCallback } from 'react';
 import { useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 import { 
@@ -54,13 +54,40 @@ interface BookDemoClientProps {
   batches?: LiveBatch[];
 }
 
-function BookDemoFormContent({ courses = [], batches = [] }: BookDemoClientProps) {
+function SearchParamsSync({
+  onParams,
+}: {
+  onParams: (params: { course: string; mode: 'ONLINE' | 'OFFLINE'; batch: string }) => void;
+}) {
   const searchParams = useSearchParams();
+  useEffect(() => {
+    if (!searchParams) return;
+    const course = searchParams.get('course') || searchParams.get('c') || '';
+    const mode = searchParams.get('mode')?.toUpperCase() === 'OFFLINE' ? 'OFFLINE' : 'ONLINE';
+    const batch = searchParams.get('batch') || '';
+    onParams({ course, mode, batch });
+  }, [searchParams, onParams]);
+  return null;
+}
 
-  // Extract query params for pre-filling
-  const initialCourse = searchParams.get('course') || searchParams.get('c') || '';
-  const initialMode = searchParams.get('mode')?.toUpperCase() === 'OFFLINE' ? 'OFFLINE' : 'ONLINE';
-  const initialBatch = searchParams.get('batch') || '';
+function BookDemoFormContent({ courses = [], batches = [] }: BookDemoClientProps) {
+  const [urlParams, setUrlParams] = useState<{
+    course: string;
+    mode: 'ONLINE' | 'OFFLINE';
+    batch: string;
+  }>({
+    course: '',
+    mode: 'ONLINE',
+    batch: '',
+  });
+
+  const handleParams = useCallback((params: { course: string; mode: 'ONLINE' | 'OFFLINE'; batch: string }) => {
+    setUrlParams(params);
+  }, []);
+
+  const initialCourse = urlParams.course;
+  const initialMode = urlParams.mode;
+  const initialBatch = urlParams.batch;
 
   // Consolidate rich course list with duration
   const courseOptions: CourseOptionItem[] = useMemo(() => {
@@ -600,6 +627,9 @@ function BookDemoFormContent({ courses = [], batches = [] }: BookDemoClientProps
 
   return (
     <div className="space-y-16">
+      <Suspense fallback={null}>
+        <SearchParamsSync onParams={handleParams} />
+      </Suspense>
       {/* Hero Header Section */}
       <section className="relative rounded-3xl overflow-hidden bg-gradient-to-br from-[#071E3D] via-[#0F172A] to-[#1E293B] text-white p-6 sm:p-10 lg:p-14 border border-white/10 shadow-2xl">
         {/* Ambient background glows */}
@@ -1654,7 +1684,7 @@ function BookDemoFormContent({ courses = [], batches = [] }: BookDemoClientProps
             },
             {
               q: 'Where are the Offline Lab sessions held?',
-              a: 'Offline lab sessions are held at our main campus: MSK Institute of Technology & Coding, Gali No 3, Near Gyan Jyoti Public School, Adarsh Nagar, Station Road Area, Shikohabad (Firozabad, UP 283135). Every student gets an individual computer.'
+              a: 'Offline lab sessions are held at our main campus: MSK Institute of Technology & Coding, Gali No. 3, Near Gyan Jyoti Public School, Adarsh Nagar, Shikohabad, Uttar Pradesh 283135. Every student gets an individual computer.'
             },
             {
               q: 'I am a complete beginner with zero coding background. Can I join?',
@@ -1695,15 +1725,5 @@ function BookDemoFormContent({ courses = [], batches = [] }: BookDemoClientProps
 }
 
 export default function BookDemoClient(props: BookDemoClientProps) {
-  return (
-    <Suspense
-      fallback={
-        <div className="min-h-[400px] flex items-center justify-center">
-          <div className="animate-spin rounded-full h-10 w-10 border-t-2 border-b-2 border-[#FF6B00]" />
-        </div>
-      }
-    >
-      <BookDemoFormContent {...props} />
-    </Suspense>
-  );
+  return <BookDemoFormContent {...props} />;
 }

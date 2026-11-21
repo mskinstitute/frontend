@@ -75,7 +75,7 @@ export default async function LiveBatchesPage() {
     },
     {
       q: "Are MSK live batches conducted online, offline, or hybrid?",
-      a: "All batches operate in a dual hybrid model: students in Shikohabad attend in-person at our air-conditioned computer lab (Gali No 3, Near Gyan Jyoti Public School, Adarsh Nagar, Station Road Area), while students outside Shikohabad attend online live via interactive Google Meet sessions."
+      a: "All batches operate in a dual hybrid model: students in Shikohabad attend in-person at our air-conditioned computer lab (Gali No. 3, Near Gyan Jyoti Public School, Adarsh Nagar, Shikohabad, Uttar Pradesh 283135), while students outside Shikohabad attend online live via interactive Google Meet sessions."
     },
     {
       q: "What is included with each live batch enrollment?",

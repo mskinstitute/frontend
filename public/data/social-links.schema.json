@@ -66,7 +66,7 @@
         },
         "reviewCount": {
           "type": "string",
-          "description": "Total count of reviews (e.g. '128+')"
+          "description": "Total count of reviews (e.g. '38+')"
         },
         "mapsUrl": {
           "type": "string",

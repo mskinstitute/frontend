@@ -160,7 +160,7 @@ export default function DisclaimerPage() {
             <p className="font-semibold text-white">MSK Institute of Technology & Coding</p>
             <p>Email: <a href="mailto:mskshikohabad@gmail.com" className="text-secondary hover:underline">mskshikohabad@gmail.com</a></p>
             <p>Phone: <a href="tel:+918393042166" className="text-secondary hover:underline">+91 83930 42166</a></p>
-            <p>Address: Gali No. 3, Near Gyan Jyoti Public School, Shikohabad, Firozabad, UP - 283135</p>
+            <p>Address: Gali No. 3, Near Gyan Jyoti Public School, Adarsh Nagar, Shikohabad, Uttar Pradesh 283135</p>
           </div>
         </section>
       </div>

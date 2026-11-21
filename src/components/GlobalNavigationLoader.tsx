@@ -196,10 +196,12 @@ function NavigationLoaderContent() {
           className="fixed top-4 right-4 sm:right-6 z-[99999] pointer-events-none transition-all duration-300 opacity-100 translate-y-0 scale-100"
           role="status"
           aria-live="polite"
+          aria-busy="true"
+          data-nosnippet="true"
         >
           <div className="flex items-center gap-2.5 px-3.5 py-1.5 rounded-full bg-slate-900/90 text-white text-xs font-semibold shadow-2xl border border-white/15 backdrop-blur-md">
             <div className="w-3.5 h-3.5 border-2 border-secondary/40 border-t-secondary rounded-full animate-spin" />
-            <span>{loadingMessage}</span>
+            <span data-nosnippet="true">{loadingMessage}</span>
           </div>
         </div>
       )}

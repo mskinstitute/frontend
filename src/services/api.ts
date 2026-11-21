@@ -488,8 +488,9 @@ export const FALLBACK_LIVE_BATCHES: LiveBatch[] = [
     courseTitle: 'Python Programming Mastery',
     courseSlug: 'python-mastery',
     startDate: '2026-12-01',
-    startDateTime: '2026-12-01T10:00:00+05:30',
-    schedule: 'Mon - Fri, 10:00 AM - 11:30 AM',
+    startDateTime: '2026-12-01T17:00:00+05:30',
+    // TODO: Owner to finalize exact batch slot timing (currently placeholder 05:00 PM - 06:00 PM)
+    schedule: 'Mon - Sat, 05:00 PM - 06:00 PM',
     price: '₹3,999',
     totalSeats: 15,
     leftSeats: 6,
@@ -501,16 +502,36 @@ export const FALLBACK_LIVE_BATCHES: LiveBatch[] = [
   },
   {
     id: 'batch-data-analytics-power-bi',
-    title: 'Data Analytics & Power BI Mastery Cohort',
+    title: 'Data Analysis Mastery (Excel, SQL & Power BI)',
     courseId: 'course-data-analysis-mastery-combo-course--12-months',
-    courseTitle: 'Data Analytics & Power BI',
+    courseTitle: 'Data Analysis Mastery',
     courseSlug: 'data-analysis-mastery-combo-course--12-months',
     startDate: '2026-12-01',
-    startDateTime: '2026-12-01T14:00:00+05:30',
-    schedule: 'Mon - Fri, 02:00 PM - 03:30 PM',
+    startDateTime: '2026-12-01T18:00:00+05:30',
+    // TODO: Owner to finalize exact batch slot timing (currently placeholder 06:00 PM - 07:00 PM, separated from Python at 5:00 PM)
+    schedule: 'Mon - Sat, 06:00 PM - 07:00 PM',
     price: '₹19,999',
     totalSeats: 12,
     leftSeats: 3,
+    status: 'UPCOMING',
+    instructor: 'Er. Sumit Kumar',
+    instructorId: 'inst-sumit-kumar',
+    instructorPicture: '/assets/img/instructors/sumit-kumar.webp',
+    mode: 'BOTH',
+  },
+  {
+    id: 'batch-excel-mastery',
+    title: 'Excel Mastery Course (Beginner to Advanced)',
+    courseId: 'course-excel-mastery',
+    courseTitle: 'Excel Mastery',
+    courseSlug: 'excel-mastery',
+    startDate: '2026-12-01',
+    startDateTime: '2026-12-01T16:00:00+05:30',
+    // TODO: Owner to finalize exact batch slot timing (currently placeholder 04:00 PM - 05:00 PM, separated from Python at 5:00 PM and Data Analysis at 6:00 PM)
+    schedule: 'Mon - Sat, 04:00 PM - 05:00 PM',
+    price: '₹4,999',
+    totalSeats: 20,
+    leftSeats: 7,
     status: 'UPCOMING',
     instructor: 'Er. Sumit Kumar',
     instructorId: 'inst-sumit-kumar',
@@ -1057,6 +1078,21 @@ export function parseGoogleSheetBatchesCsv(csvText: string): LiveBatch[] {
       return val.startsWith('₹') ? val : `₹${val}`;
     };
 
+    // Provide course-specific schedule fallbacks if Google Sheet schedule cell is empty
+    let resolvedSchedule = schedule;
+    if (!resolvedSchedule) {
+      const lowerKey = (courseId || title || '').toLowerCase();
+      if (lowerKey.includes('python')) {
+        resolvedSchedule = 'Mon - Sat, 05:00 PM - 06:00 PM';
+      } else if (lowerKey.includes('data') || lowerKey.includes('power-bi')) {
+        resolvedSchedule = 'Mon - Sat, 06:00 PM - 07:00 PM';
+      } else if (lowerKey.includes('excel')) {
+        resolvedSchedule = 'Mon - Sat, 04:00 PM - 05:00 PM';
+      } else {
+        resolvedSchedule = 'Mon - Sat (05:00 PM - 06:30 PM)';
+      }
+    }
+
     parsedBatches.push({
       id: batchId,
       courseSlug: courseId || '',
@@ -1066,7 +1102,7 @@ export function parseGoogleSheetBatchesCsv(csvText: string): LiveBatch[] {
       startDate: parsedDT.dateStr,
       endDate: endDateRaw || undefined,
       startDateTime: parsedDT.isoString,
-      schedule: schedule || 'Mon - Sat (05:00 PM - 06:30 PM)',
+      schedule: resolvedSchedule,
       mode,
       branchId: branchId || 'branch-shikohabad-001',
       branchSlug: branchSlug || 'shikohabad',

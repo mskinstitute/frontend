@@ -203,8 +203,8 @@ export default function Footer() {
               <li className="pt-2 border-t border-white/10 flex items-start gap-2">
                 <MapPin className="w-4 h-4 text-secondary flex-shrink-0 mt-0.5" />
                 <span className="text-xs leading-relaxed">
-                  Gali No 3, Near Gyan Jyoti Public School,<br />
-                  Adarsh Nagar, Shikohabad, UP-283135
+                  Gali No. 3, Near Gyan Jyoti Public School,<br />
+                  Adarsh Nagar, Shikohabad, Uttar Pradesh 283135
                 </span>
               </li>
               <li className="flex items-center gap-2">

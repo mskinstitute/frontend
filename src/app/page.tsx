@@ -15,7 +15,7 @@ import HomeFaqAccordion from '@/components/HomeFaqAccordion';
 import { SocialCommunitySection } from '@/components/SocialLinks';
 import LazyGoogleMap from '@/components/LazyGoogleMap';
 import { Course, LiveBatch } from '@/types';
-import { BUSINESS_CONFIG, getCanonicalBusinessSchema } from '@/config/business';
+import { BUSINESS_CONFIG, getCanonicalBusinessSchema, getFlagshipCoursesSchema } from '@/config/business';
 
 export const revalidate = 300; // Refresh live batch schedules every 5 minutes
 
@@ -204,7 +204,7 @@ export default async function HomePage() {
   const homeFaqs = [
     {
       q: "What is MSK Institute and where is it located in Shikohabad?",
-      a: "MSK Institute is Shikohabad's premier computer training and software coding academy. It is located at Gali No. 3, Near Gyan Jyoti Public School, Station Road Area, Shikohabad (Firozabad District, Uttar Pradesh 283135). We offer modern air-conditioned computer labs with high-speed internet and power backup."
+      a: "MSK Institute is Shikohabad's premier computer training and software coding academy. It is located at Gali No. 3, Near Gyan Jyoti Public School, Adarsh Nagar, Shikohabad, Uttar Pradesh 283135. We offer modern air-conditioned computer labs with high-speed internet and power backup."
     },
     {
       q: "What computer and coding courses are offered at MSK Institute?",
@@ -310,25 +310,9 @@ export default async function HomePage() {
           "cssSelector": ["h1", ".home-hero-desc", ".home-faq-answer", ".home-about-summary"]
         }
       },
-      // 3. Featured Course List
-      {
-        "@type": "ItemList",
-        "name": "Popular Courses at MSK Institute",
-        "itemListElement": featuredCourses.map((c, index) => ({
-          "@type": "ListItem",
-          "position": index + 1,
-          "item": {
-            "@type": "Course",
-            "@id": `https://www.mskinstitute.in/courses/${c.slug}`,
-            "name": c.title,
-            "description": c.shortDescription,
-            "provider": {
-              "@id": "https://www.mskinstitute.in/#organization"
-            }
-          }
-        }))
-      },
-      // 4. FAQPage Schema for AI Engines
+      // 3. Featured Flagship Courses with Structured Pricing Offers
+      ...getFlagshipCoursesSchema(),
+      // 4. FAQPage Schema for AI Engines & Rich Snippets (Exact visible Q&A match)
       {
         "@type": "FAQPage",
         "@id": "https://www.mskinstitute.in/#faq",
@@ -715,12 +699,12 @@ export default async function HomePage() {
 
           <div className="text-center pt-2">
             <a
-              href="https://maps.app.goo.gl/MyER29LFmibVkPe47"
+              href={BUSINESS_CONFIG.urls.maps}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 text-xs sm:text-sm font-bold text-[#B83A00] hover:text-[#9A3412] transition-colors"
             >
-              <span>Read 120+ Verified Reviews on Google Maps</span>
+              <span>Read {BUSINESS_CONFIG.stats.reviewCount}+ Verified Reviews on Google Maps</span>
               <ChevronRight className="w-4 h-4" />
             </a>
           </div>
@@ -795,7 +779,7 @@ export default async function HomePage() {
                 Visit our Offline Training Lab
               </h2>
               <p className="home-about-summary text-text-muted leading-relaxed">
-                We are located in Shikohabad at <strong>Gali No 3, Near Gyan Jyoti Public School, Adarsh Nagar, Station Road Area</strong>. Our campus is open Monday through Saturday from 8:00 AM to 7:00 PM (Sunday 10:00 AM to 2:00 PM for counseling & demos) for practical lab training, mentorship, and admissions.
+                We are located in Shikohabad at <strong>{BUSINESS_CONFIG.address.fullAddress}</strong>. Our campus is open {BUSINESS_CONFIG.hours.display} for practical lab training, mentorship, and admissions.
               </p>
               
               {/* Campus Infrastructure Highlights */}

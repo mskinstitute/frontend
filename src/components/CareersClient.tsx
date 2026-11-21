@@ -167,7 +167,7 @@ ${skillsList ? `\n🛠 *Key Skills:* ${skillsList}\n` : ''}
 👉 *Apply Online & View Full Details:*
 ${jobUrl}
 
-📍 *Campus Address:* Gali No. 3, Near Gyan Jyoti Public School, Shikohabad
+📍 *Campus Address:* Gali No. 3, Near Gyan Jyoti Public School, Adarsh Nagar, Shikohabad (UP 283135)
 📞 *Contact / WhatsApp:* +91 83930 42166`;
   };
 

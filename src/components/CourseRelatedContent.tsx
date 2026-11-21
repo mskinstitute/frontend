@@ -175,7 +175,7 @@ export default function CourseRelatedContent({ course, batches = [] }: CourseRel
                 <div className="p-3 bg-white/10 rounded-xl space-y-2 border border-white/10 text-xs">
                   <div className="flex items-start gap-2">
                     <MapPin className="w-4 h-4 text-secondary shrink-0 mt-0.5" />
-                    <span>Gali No. 3, Near Gyan Jyoti Public School, Shikohabad (UP)</span>
+                    <span>Gali No. 3, Near Gyan Jyoti Public School, Adarsh Nagar, Shikohabad, UP - 283135</span>
                   </div>
                   <div className="flex items-center gap-2 text-emerald-300 font-semibold">
                     <CheckCircle2 className="w-4 h-4 shrink-0" />

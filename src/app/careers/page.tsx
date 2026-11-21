@@ -76,7 +76,7 @@ export default async function CareersPage() {
           '@type': 'Place',
           address: {
             '@type': 'PostalAddress',
-            streetAddress: 'Gali No. 3, Near Gyan Jyoti Public School',
+            streetAddress: 'Gali No. 3, Near Gyan Jyoti Public School, Adarsh Nagar',
             addressLocality: 'Shikohabad',
             addressRegion: 'Uttar Pradesh',
             postalCode: '283135',

@@ -11,7 +11,9 @@ export default function Loading() {
     <div
       role="status"
       aria-label="Loading content"
-      className="min-h-[50vh] flex flex-col items-center justify-center p-6 bg-gradient-to-b from-white via-slate-50/50 to-white select-none"
+      aria-busy="true"
+      data-nosnippet="true"
+      className="min-h-[50vh] flex flex-col items-center justify-center p-6 bg-gradient-to-b from-white via-slate-50/50 to-white select-none pointer-events-none"
     >
       <div className="relative z-10 max-w-sm w-full bg-white/90 backdrop-blur-md rounded-3xl p-8 border border-slate-200/80 shadow-lg text-center space-y-6">
         {/* Animated Brand Emblem with Dual Spinning Rings */}

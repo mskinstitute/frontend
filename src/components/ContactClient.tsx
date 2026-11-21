@@ -51,7 +51,7 @@ const FAQS = [
   },
   {
     q: 'Where is the MSK Institute campus located in Shikohabad?',
-    a: 'We are situated in Gali No 3, Near Gyan Jyoti Public School, Adarsh Nagar, Station Road Area, Shikohabad, Uttar Pradesh (PIN: 283135). It is just 5 minutes from Shikohabad main market and easily accessible by auto-rickshaw.',
+    a: 'We are situated in Gali No. 3, Near Gyan Jyoti Public School, Adarsh Nagar, Shikohabad, Uttar Pradesh 283135. It is just 5 minutes from Shikohabad main market and easily accessible by auto-rickshaw.',
   },
   {
     q: 'Are courses available in both Online and Offline modes?',
@@ -588,7 +588,7 @@ export default function ContactClient() {
                     </div>
                     <div>
                       <p className="text-xs font-bold text-primary">MSK Institute Campus • Shikohabad</p>
-                      <p className="text-[11px] text-text-muted">Gali No. 3, Near Gyan Jyoti Public School (PIN: 283135)</p>
+                      <p className="text-[11px] text-text-muted">Gali No. 3, Near Gyan Jyoti Public School, Adarsh Nagar, Shikohabad (PIN: 283135)</p>
                     </div>
                     <button
                       type="button"

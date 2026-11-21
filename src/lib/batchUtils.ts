@@ -31,11 +31,15 @@ export function parseBatchStartTimestamp(batch: LiveBatch): number {
       const istOffsetMs = (5 * 60 + 30) * 60 * 1000;
       return Date.UTC(year, month - 1, day, hours, minutes, 0) - istOffsetMs;
     }
+    const parsedDate = new Date(`${batch.startDate} ${timePart}`).getTime();
+    if (!isNaN(parsedDate)) return parsedDate;
+
     const d = new Date(batch.startDate).getTime();
     if (!isNaN(d)) return d;
   }
 
-  return 0;
+  // Deterministic fallback: Next cohort December 1, 2026 at 10:00 AM IST
+  return new Date('2026-12-01T10:00:00+05:30').getTime();
 }
 
 const MONTH_NAMES = [

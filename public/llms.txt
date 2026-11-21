@@ -49,7 +49,7 @@ MSK Institute provides over 1,600+ structured, interactive programming tutorials
 - [SQL Studio](https://www.mskinstitute.in/tools/sql-studio) & [Database Viewer](https://www.mskinstitute.in/tools/db-viewer): Browser-based SQL and schema inspection labs.
 
 ## Institute Details & Verification
-- **Location:** Gali No. 3, Near Gyan Jyoti Public School, Shikohabad, Uttar Pradesh, 283135, India ([Google Maps / Verified GBP](https://maps.app.goo.gl/MyER29LFmibVkPe47))
+- **Location:** Gali No. 3, Near Gyan Jyoti Public School, Adarsh Nagar, Shikohabad, Uttar Pradesh, 283135, India ([Google Maps / Verified GBP](https://maps.app.goo.gl/MyER29LFmibVkPe47))
 - **Lead Mentor:** Er. Sumit Kumar (Founder, Full-Stack Developer & Lead Technical Trainer)
 - **Learning Modes:** 100% Practical Offline Computer Labs (Shikohabad) & Live Interactive Online Classes Worldwide in Hindi & English (India, UAE, UK, USA, Canada, Australia)
 - **Certificate Verification:** [https://www.mskinstitute.in/verify-certificate](https://www.mskinstitute.in/verify-certificate) (Instant public validation of student credentials)

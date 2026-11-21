@@ -76,6 +76,27 @@ export function generateBranchMetadata(branch: Branch): Metadata {
 export function generateBranchSchema(branch: Branch) {
   const branchUrl = `${SITE_URL}/locations/${branch.slug}`;
 
+  // Keep upcoming branches clearly labeled without conflicting LocalBusiness operational schema until launch
+  if (branch.status === 'COMING_SOON') {
+    return {
+      '@context': 'https://schema.org',
+      '@type': 'EducationalOrganization',
+      '@id': `${branchUrl}#branch`,
+      name: `${branch.name} (Coming Soon)`,
+      description: branch.localDescription,
+      url: branchUrl,
+      logo: `${SITE_URL}/logo.jpg`,
+      parentOrganization: {
+        '@type': 'EducationalOrganization',
+        '@id': `${SITE_URL}/#organization`,
+        name: 'MSK Institute',
+        alternateName: 'Mastering Software Knowledge',
+        url: SITE_URL,
+        logo: `${SITE_URL}/logo.jpg`,
+      },
+    };
+  }
+
   const schema: Record<string, unknown> = {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',

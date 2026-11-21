@@ -147,7 +147,7 @@ export default function RootLayout({
               },
               address: {
                 '@type': 'PostalAddress',
-                streetAddress: 'Gali No 3, Near Gyan Jyoti Public School, Adarsh Nagar',
+                streetAddress: 'Gali No. 3, Near Gyan Jyoti Public School, Adarsh Nagar',
                 addressLocality: 'Shikohabad',
                 addressRegion: 'Uttar Pradesh',
                 postalCode: '283135',
@@ -155,7 +155,7 @@ export default function RootLayout({
               },
               geo: {
                 '@type': 'GeoCoordinates',
-                latitude: 27.1157334,
+                latitude: 27.1157333,
                 longitude: 78.582971,
               },
               openingHoursSpecification: [

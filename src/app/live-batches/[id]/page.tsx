@@ -8,6 +8,7 @@ import {
   Check, ArrowRight, Video, Flame, HelpCircle 
 } from 'lucide-react';
 import { fetchLiveBatches, fetchLiveBatchById } from '@/services/api';
+import { BUSINESS_CONFIG } from '@/config/business';
 import CourseCurriculumAccordion from '@/components/CourseCurriculumAccordion';
 import BatchDemoCard from '@/components/BatchDemoCard';
 import BatchViewTracker from '@/components/BatchViewTracker';
@@ -129,11 +130,11 @@ export default async function LiveBatchDetailPage({ params }: { params: Params }
           'name': 'MSK Institute Shikohabad Campus',
           'address': {
             '@type': 'PostalAddress',
-            'streetAddress': 'Gali No. 3, Near Gyan Jyoti Public School',
-            'addressLocality': 'Shikohabad',
-            'addressRegion': 'Uttar Pradesh',
-            'postalCode': '283135',
-            'addressCountry': 'IN',
+            'streetAddress': BUSINESS_CONFIG.address.streetAddress,
+            'addressLocality': BUSINESS_CONFIG.address.addressLocality,
+            'addressRegion': BUSINESS_CONFIG.address.addressRegion,
+            'postalCode': BUSINESS_CONFIG.address.postalCode,
+            'addressCountry': BUSINESS_CONFIG.address.addressCountry,
           },
         },
         'organizer': {
@@ -499,7 +500,9 @@ export default async function LiveBatchDetailPage({ params }: { params: Params }
                   <Star className="w-6 h-6 text-amber-500 fill-amber-500" />
                   What Our Students Say
                 </h2>
-                <span className="text-xs font-bold text-text-muted">4.9/5 (120+ Reviews)</span>
+                <span className="text-xs font-bold text-text-muted">
+                  {BUSINESS_CONFIG.stats.rating}/5 ({BUSINESS_CONFIG.stats.reviewCount}+ Verified Reviews)
+                </span>
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -551,7 +554,7 @@ export default async function LiveBatchDetailPage({ params }: { params: Params }
                   },
                   {
                     q: 'Where is the offline training center located?',
-                    a: 'Our physical center is at Gali No. 3, Near Gyan Jyoti Public School, Shikohabad (Firozabad, UP). Students can also join online from home.',
+                    a: `Our physical center is at ${BUSINESS_CONFIG.address.fullAddress}. Students can also join online from home.`,
                   },
                   {
                     q: 'Will I get an official verifiable certificate?',
@@ -609,7 +612,7 @@ export default async function LiveBatchDetailPage({ params }: { params: Params }
                 <span>Offline Training Center:</span>
               </div>
               <p className="leading-relaxed">
-                MSK Institute, Gali No. 3, Near Gyan Jyoti Public School, Shikohabad (Firozabad, UP) - 283135.
+                {BUSINESS_CONFIG.address.fullAddress}
               </p>
             </div>
           </div>

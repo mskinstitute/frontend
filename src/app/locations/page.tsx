@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 import { MapPin, Sparkles, Building2 } from 'lucide-react';
 import { getBranchSummaries } from '@/lib/branches';
+import { getCanonicalBusinessSchema } from '@/config/business';
 import LocationsDirectoryClient from '@/components/branches/LocationsDirectoryClient';
 
 export const metadata: Metadata = {
@@ -50,33 +51,39 @@ export default async function LocationsPage() {
 
   const jsonLd = {
     '@context': 'https://schema.org',
-    '@type': 'ItemList',
-    name: 'MSK Institute Physical Campuses & Learning Centers',
-    description: 'Directory of verified MSK Institute physical campuses and regional learning centers.',
-    url: 'https://www.mskinstitute.in/locations',
-    itemListElement: branches.map((b, index) => ({
-      '@type': 'ListItem',
-      position: index + 1,
-      name: b.name,
-      url: `https://www.mskinstitute.in/locations/${b.slug}`,
-    })),
-  };
-
-  const breadcrumbJsonLd = {
-    '@context': 'https://schema.org',
-    '@type': 'BreadcrumbList',
-    itemListElement: [
+    '@graph': [
+      // 1. Canonical EducationalOrganization / LocalBusiness
+      getCanonicalBusinessSchema(),
+      // 2. Physical Campus Directory ItemList
       {
-        '@type': 'ListItem',
-        position: 1,
-        name: 'Home',
-        item: 'https://www.mskinstitute.in',
+        '@type': 'ItemList',
+        name: 'MSK Institute Physical Campuses & Learning Centers',
+        description: 'Directory of verified MSK Institute physical campuses and regional learning centers.',
+        url: 'https://www.mskinstitute.in/locations',
+        itemListElement: branches.map((b, index) => ({
+          '@type': 'ListItem',
+          position: index + 1,
+          name: b.name,
+          url: `https://www.mskinstitute.in/locations/${b.slug}`,
+        })),
       },
+      // 3. BreadcrumbList
       {
-        '@type': 'ListItem',
-        position: 2,
-        name: 'Locations',
-        item: 'https://www.mskinstitute.in/locations',
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          {
+            '@type': 'ListItem',
+            position: 1,
+            name: 'Home',
+            item: 'https://www.mskinstitute.in',
+          },
+          {
+            '@type': 'ListItem',
+            position: 2,
+            name: 'Locations',
+            item: 'https://www.mskinstitute.in/locations',
+          },
+        ],
       },
     ],
   };
@@ -86,10 +93,6 @@ export default async function LocationsPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
 
       <div className="min-h-screen bg-background">

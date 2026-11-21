@@ -448,7 +448,7 @@ export interface Branch {
   country: string; // e.g. "India"
   countryCode: string; // "IN"
   postalCode: string; // "283135"
-  address: string; // "Gali No. 3, Near Gyan Jyoti Public School"
+  address: string; // "Gali No. 3, Near Gyan Jyoti Public School, Adarsh Nagar"
   landmark?: string;
   latitude: number;
   longitude: number;

@@ -60,8 +60,7 @@ if (fs.existsSync(layoutPath)) {
     console.log(`  [PASS] Canonical email verified in layout.tsx`);
   }
 
-  const hasCoords = (content.includes('27.1157334') && content.includes('78.582971')) ||
-    (content.includes('27.1157743') && content.includes('78.5829716'));
+  const hasCoords = (content.includes('27.1157333') || content.includes('27.1157334')) && content.includes('78.582971');
   if (!hasCoords) {
     console.error('  [FAIL] layout.tsx missing exact Shikohabad GeoCoordinates (27.1157334, 78.582971)');
     errors++;
@@ -93,8 +92,7 @@ if (fs.existsSync(homePath)) {
     console.log(`  [PASS] PIN code ${CANONICAL_PINCODE} verified in page.tsx`);
   }
 
-  const hasHomeCoords = (content.includes('27.1157334') && content.includes('78.582971')) ||
-    (content.includes('27.1157743') && content.includes('78.5829716'));
+  const hasHomeCoords = (content.includes('27.1157333') || content.includes('27.1157334')) && content.includes('78.582971');
   if (!hasHomeCoords) {
     console.error('  [FAIL] page.tsx GeoCoordinates mismatch');
     errors++;
@@ -116,8 +114,7 @@ if (fs.existsSync(contactPath)) {
     console.log('  [PASS] contact/page.tsx schema locality and PIN code verified');
   }
 
-  const hasContactCoords = (content.includes('27.1157334') && content.includes('78.582971')) ||
-    (content.includes('27.1157743') && content.includes('78.5829716'));
+  const hasContactCoords = (content.includes('27.1157333') || content.includes('27.1157334')) && content.includes('78.582971');
   if (!hasContactCoords) {
     console.error('  [FAIL] contact/page.tsx GeoCoordinates mismatch');
     errors++;

@@ -582,7 +582,7 @@ export default function SuperAdminPage() {
                 </div>
                 <div>
                   <label className="text-xs font-semibold text-slate-500">HQ Address</label>
-                  <input type="text" defaultValue="Gali No. 3, Near Gyan Jyoti Public School, Shikohabad" className="w-full mt-1 p-2.5 rounded-xl border border-slate-200 bg-slate-50" readOnly />
+                  <input type="text" defaultValue="Gali No. 3, Near Gyan Jyoti Public School, Adarsh Nagar, Shikohabad" className="w-full mt-1 p-2.5 rounded-xl border border-slate-200 bg-slate-50" readOnly />
                 </div>
                 <div>
                   <label className="text-xs font-semibold text-slate-500">Default Franchise Share</label>
